@@ -1,4 +1,4 @@
-package com.hrsystem.demo;
+package com.hrsystem;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.RepositoryService;
