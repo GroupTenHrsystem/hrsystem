@@ -1,3 +1,4 @@
+package com.hrsystem;
 //package com.example.demo;
 //
 //import org.springframework.context.annotation.Bean;
