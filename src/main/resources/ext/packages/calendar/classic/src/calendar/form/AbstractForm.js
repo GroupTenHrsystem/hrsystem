@@ -31,6 +31,7 @@ Ext.define('Ext.calendar.form.AbstractForm', {
             xtype: 'textfield',
             fieldLabel: '序号',
             name: 'id',
+            hidden: true
           //  allowBlank: false
         },
         calendarField: {
@@ -283,6 +284,7 @@ Ext.define('Ext.calendar.form.AbstractForm', {
         onSaveTap: function() {
             var form = this.form,
                 values = form.getForm().getFieldValues();
+            var id = values.id;
                 if (!form.isValid()) {
                     return;
                 }
@@ -292,53 +294,47 @@ Ext.define('Ext.calendar.form.AbstractForm', {
                  var stime = Ext.util.Format.date(values.startDate,'Y-m-d') + 'T00:00:00.000Z';
                  var etime = Ext.util.Format.date(values.endDate,'Y-m-d') + 'T24:00:00.000Z';
             }else{
-                 var stime = Ext.util.Format.date(values.startDate,'Y-m-d') + 'T' + Ext.util.Format.date(values.startTime,'h:i:s')+'.000Z';
-                 var etime = Ext.util.Format.date(values.endDate,'Y-m-d') + 'T' + Ext.util.Format.date(values.endTime,'h:i:s')+'.000Z';
+                 var stime = Ext.util.Format.date(values.startDate,'Y-m-d') + 'T' + Ext.util.Format.date(values.startTime,'H:i:s')+'.000Z';
+                 var etime = Ext.util.Format.date(values.endDate,'Y-m-d') + 'T' + Ext.util.Format.date(values.endTime,'H:i:s')+'.000Z';
             }
           //  form.lookupReference('title').setValue("465346");
             var me = this;
-            var id = values.id;
+            
 
             if(id.search("Ext") != -1){
-                Ext.Ajax.request({ 
-                            url : '/calendar', 
-                            method : 'post', 
-                            headers: {'Content-Type':'application/json'},
 
-                            params : JSON.stringify({
+             var data =  JSON.stringify({
                                     startDate : stime,
                                     endDate :   etime,
                                     calendarId : values.calendarId,
                                     title : values.title,
                                     description : values.description,
-                                    allDay : 0
-                            }), 
-                            success: function(response, options) {
-                                    values.id=response.responseText; 
-                                    me.fireSave(me.produceEventData(values));
-                            }
-                        });
-            }else{
-                Ext.Ajax.request({ 
-                            url : '/calendar', 
-                            method : 'post', 
-                            headers: {'Content-Type':'application/json'},
+                                    allDay : values.allDay
+                            });
 
-                            params : JSON.stringify({
+               
+            }else{
+                var data = JSON.stringify({
                                     id : id,
                                     startDate : stime,
                                     endDate :   etime,
                                     calendarId : values.calendarId,
                                     title : values.title,
                                     description : values.description,
-                                    allDay : 0
-                            }), 
+                                    allDay : values.allDay
+                            });
+            }
+
+             Ext.Ajax.request({ 
+                            url : '/calendar', 
+                            method : 'post', 
+                            headers: {'Content-Type':'application/json'},
+                            params : data,
                             success: function(response, options) {
                                     values.id=response.responseText; 
                                     me.fireSave(me.produceEventData(values));
                             }
                         });
-            }
 
         }
     }

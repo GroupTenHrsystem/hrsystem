@@ -23,7 +23,7 @@
                 viewType: 'user',
                 leaf: true
             },{
-               text: '不知道什么模块',
+               text: '日程安排',
                 iconCls: 'x-fa fa-address-card',
                 rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'scheduling',
