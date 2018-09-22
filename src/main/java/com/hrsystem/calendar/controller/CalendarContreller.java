@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.calendar.entity.Calendar;
 import com.hrsystem.calendar.entity.Event;
 import com.hrsystem.calendar.entity.DTO.EventQueryDTO;
-import com.hrsystem.calendar.entity.common.ExtResultJson;
 import com.hrsystem.calendar.service.EventService;
+import com.hrsystem.common.ExtResultJson;
 
 
 @RestController
