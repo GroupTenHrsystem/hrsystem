@@ -52,6 +52,9 @@ public class PerformanceService implements IPerformanceService{
 		// TODO Auto-generated method stub
 		return performanceRepository.findAll(spec, pageable);
 	}
-
-
+	
+	@Override
+	 public List<Performance> getPerformanceByPerformanceTempletId(Long id){
+		return performanceRepository.getPerformanceByPerformanceTempletId(id);
+	 }
 }

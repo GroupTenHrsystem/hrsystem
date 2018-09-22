@@ -1,5 +1,6 @@
 package com.hrsystem.performance.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -19,4 +20,6 @@ public interface IPerformanceService {
 	 public void deleteAll(Long[] ids);
 	 
 	 public Page<Performance> findAll(Specification<Performance> spec, Pageable pageable);
+	 
+	 public List<Performance> getPerformanceByPerformanceTempletId(Long id);
 }

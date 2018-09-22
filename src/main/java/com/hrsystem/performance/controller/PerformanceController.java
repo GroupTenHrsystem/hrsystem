@@ -45,9 +45,9 @@ public class PerformanceController {
 	public String insertPerformance(Performance Performance) {		
 		try {
 			performanceService.insertPerformance(Performance);
-			return "success:true";
+			return "success:添加成功";
 		} catch (Exception e) {
-			return "success:false";
+			return "success:添加失败";
 		}
 	}
 
@@ -60,9 +60,9 @@ public class PerformanceController {
 	public String deletePerformanceById(@PathVariable Long id) {
 		try {
 			performanceService.deletePerformance(id);
-			return "success:true";
+			return "success:删除成功";
 		} catch (Exception e) {
-			return "success:false";
+			return "success:删除失败";
 		}
 	}
 
