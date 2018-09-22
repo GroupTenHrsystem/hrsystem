@@ -18,9 +18,13 @@ import com.hrsystem.performance.repository.PerformanceTempletRepository;
 public class PerformanceTempletService  implements IPerformanceTempletService{
 	@Autowired
 	PerformanceTempletRepository performanceTempletRepository;
-	public Optional<PerformanceTemplet> findPerformanceTempletById(Long id) {
+	public PerformanceTemplet findPerformanceTempletById(Long id) {
 		// TODO Auto-generated method stub
-		return  performanceTempletRepository.findById(id);
+		 Optional<PerformanceTemplet> performanceTemplet = performanceTempletRepository.findById(id);
+		    if (!performanceTemplet.isPresent()) {
+		        return null;
+		    }
+		    return performanceTemplet.get();
 	}
 
 	@Override

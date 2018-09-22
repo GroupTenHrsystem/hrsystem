@@ -9,7 +9,7 @@ import org.springframework.data.jpa.domain.Specification;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 
 public interface IPerformanceTempletService {
-	public Optional<PerformanceTemplet> findPerformanceTempletById(Long id);
+	public PerformanceTemplet findPerformanceTempletById(Long id);
 	 
 	 public void insertPerformanceTemplet(PerformanceTemplet performanceTemplet) ;
 	 

@@ -10,7 +10,7 @@ import com.hrsystem.performance.entity.Performance;
 
 
 public interface IPerformanceService {
-	public Optional<Performance> findPerformanceById(Long id);
+	public Performance findPerformanceById(Long id);
 	 
 	 public void insertPerformance(Performance performance) ;
 	 

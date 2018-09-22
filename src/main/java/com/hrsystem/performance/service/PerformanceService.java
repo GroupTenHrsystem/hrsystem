@@ -17,9 +17,13 @@ import com.hrsystem.performance.repository.PerformanceRepository;
 public class PerformanceService implements IPerformanceService{
 	@Autowired
 	PerformanceRepository performanceRepository;
-	public Optional<Performance> findPerformanceById(Long id) {
+	public Performance findPerformanceById(Long id) {
 		// TODO Auto-generated method stub
-		return  performanceRepository.findById(id);
+		 Optional<Performance> performance = performanceRepository.findById(id);
+		    if (!performance.isPresent()) {
+		        return null;
+		    }
+		    return performance.get();
 	}
 
 	@Override
