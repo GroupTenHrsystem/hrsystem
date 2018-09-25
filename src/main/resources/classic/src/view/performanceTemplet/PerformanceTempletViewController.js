@@ -71,7 +71,11 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletViewController', {
 					name:"",
 					kind:"",
 					performanceIndex:"",
-					weighting:""
+					weighting:"",
+					startTimeStart:"",
+					startTimeEnd:"",
+					endTimeStart:"",
+					endTimeEnd:""
 			});
 		
 		if(searchField==='name'){
@@ -117,17 +121,17 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletViewController', {
 					name:"",
 					kind:"",
 					performanceIndex:"",
-					weighting:""
+					weighting:"",
+					startTimeStart:"",
+					startTimeEnd:"",
+					endTimeStart:"",
+					endTimeEnd:""
 			});
 		Ext.apply(store.proxy.extraParams,{
 			name:values.name,
 			kind:values.kind,
 			performanceIndex:values.performanceIndex,
-			weighting:values.weighting,
-			// startTimeStart:Ext.util.Format.date(values.startTimeStart, 'Y/m/d H:i:s'),
-			// startTimeEnd:Ext.util.Format.date(values.startTimeEnd, 'Y/m/d H:i:s'),
-			// endTimeStart:Ext.util.Format.date(values.endTimeStart, 'Y/m/d H:i:s'),
-			// endTimeEnd:Ext.util.Format.date(values.endTimeEnd, 'Y/m/d H:i:s')
+			weighting:values.weighting
 		});
 		if(values.startTimeStart!=""){
 			Ext.apply(store.proxy.extraParams,{

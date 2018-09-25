@@ -54,7 +54,7 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletPanel', {
 				}),
 	            displayField: 'name',
 	            valueField:'value',
-	            value:'绩效模板名字',
+	            value:'请选择',
 	            editable: false,
 	            queryMode: 'local',
 	            triggerAction: 'all',

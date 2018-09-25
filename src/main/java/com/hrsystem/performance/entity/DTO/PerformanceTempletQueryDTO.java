@@ -21,13 +21,13 @@ public class PerformanceTempletQueryDTO
 {
 	private String kind;
 	private String name;
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss")  
 	private Date startTimeStart; 
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss")  
 	private Date startTimeEnd; 
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss")  
 	private Date endTimeStart;  
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss")  
 	private Date endTimeEnd;  
 	private String performanceIndex;
 	private String  weighting;

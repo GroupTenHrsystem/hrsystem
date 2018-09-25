@@ -41,8 +41,7 @@ public class PerformanceService implements IPerformanceService{
 	@Override
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
-		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
+		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));	
 		List<Performance> Performances = (List<Performance>) performanceRepository.findAllById(idLists);
 		performanceRepository.deleteAll(Performances);
 	}
