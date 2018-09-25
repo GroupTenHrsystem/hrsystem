@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +26,7 @@ public class Performance implements Serializable {
 		private Date endTime;  
 		private Long cycle;
 		private Boolean status=false;
-		@ManyToOne
+		@ManyToOne(cascade=CascadeType.ALL)
 		PerformanceTemplet performanceTemplet;
 		
 			public Long getId() { 

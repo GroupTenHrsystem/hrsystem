@@ -11,10 +11,14 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.hrsystem.common.BeanUtils;
+import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
@@ -34,10 +38,10 @@ public class PerformanceTempletController {
 	 * @param id
 	 * @return
 	 */
-	@GetMapping("/get/{id}")
-	public PerformanceTemplet getPerformanceById(@PathVariable Long id) {
-		return performanceTempletService.findPerformanceTempletById(id);
-	}
+//	@GetMapping("/get/{id}")
+//	public PerformanceTemplet getPerformanceById(@PathVariable Long id) {
+//		return performanceTempletService.findPerformanceTempletById(id);
+//	}
 
 	/**
 	 * 2、增
@@ -45,8 +49,9 @@ public class PerformanceTempletController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String insertPerformance(PerformanceTemplet performanceTemplet) {		
+	public String insertPerformance(@RequestBody PerformanceTemplet performanceTemplet) {		
 		try {
+			System.out.println(performanceTemplet.getName());
 			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			return "success:添加成功";
 		} catch (Exception e) {
@@ -54,12 +59,24 @@ public class PerformanceTempletController {
 		}
 	}
 
+	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
+	public String update(@PathVariable("id") Long myId,@RequestBody PerformanceTemplet dto) 
+	{
+		try {
+			PerformanceTemplet entity = performanceTempletService.findPerformanceTempletById(myId);
+			BeanUtils.copyProperties(dto, entity);//使用自定义的BeanUtils
+			performanceTempletService.insertPerformanceTemplet(entity);
+			return "success:true";
+		} catch (Exception e) {
+			return "success:false";
+		}
+}
 	/**
 	 * 3、删
 	 * @param id
 	 * @return
 	 */
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping(value="{id}")
 	public String deletePerformanceById(@PathVariable Long id) {
 			List<Performance> performanceByPerformanceTempletId = performanceService.getPerformanceByPerformanceTempletId(id);
 			if (performanceByPerformanceTempletId.size() == 0) {
@@ -70,6 +87,19 @@ public class PerformanceTempletController {
 			}
 	}
 
+	 @PostMapping("/deletes")
+		public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
+		{
+			try {
+				if(ids!=null) {
+					performanceTempletService.deleteAll(ids);
+				}
+				return new ExtAjaxResponse(true,"批量删除成功！");
+			} catch (Exception e) {
+				return new ExtAjaxResponse(true,"批量删除失败！");
+			}
+		}
+	 
 	@GetMapping
 	public Page<PerformanceTemplet> getPage(ExtjsPageRequest pageRequest) 
 	{

@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "performance_templet")
 public class PerformanceTemplet implements Serializable {
@@ -17,8 +19,11 @@ public class PerformanceTemplet implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String kind;	
+	private String kind;
+	private String name;
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date startTime; 
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date endTime;  
 	private String performanceIndex;
 	private String  weighting;
@@ -31,6 +36,12 @@ public class PerformanceTemplet implements Serializable {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getKind() {
 		return kind;
