@@ -25,7 +25,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "performance")
+@Table(name = "t_performance")
 public class Performance implements Serializable {
 		@Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)

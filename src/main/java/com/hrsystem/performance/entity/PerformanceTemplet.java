@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 @Data
 @Entity
-@Table(name = "performance_templet")
+@Table(name = "t_performancetemplet")
 public class PerformanceTemplet implements Serializable {
 	//种类 	考评内容 	考评指标 	考评分值 	
 	@Id

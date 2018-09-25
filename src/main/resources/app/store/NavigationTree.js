@@ -29,6 +29,12 @@
                 viewType: 'performanceTemplet',
                 leaf: true
             },{
+               text: '绩效考核',
+                iconCls: 'x-fa fa-address-card',
+                rowCls: 'nav-tree-badge nav-tree-badge-new',
+                viewType: 'performance',
+                leaf: true
+            },{
                text: '日程安排',
                 iconCls: 'x-fa fa-address-card',
                 rowCls: 'nav-tree-badge nav-tree-badge-new',

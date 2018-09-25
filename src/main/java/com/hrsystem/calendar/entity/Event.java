@@ -23,7 +23,7 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
-@Table(name = "event")
+@Table(name = "t_event")
 public class Event implements Serializable{
 	private Long id;
 	private String title;
