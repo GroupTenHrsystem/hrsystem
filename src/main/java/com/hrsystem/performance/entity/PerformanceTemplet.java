@@ -1,5 +1,12 @@
 package com.hrsystem.performance.entity;
-
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: PerformanceTemplet.java
+  *@Date: 2018年9月25日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +19,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import lombok.Data;
+@Data
 @Entity
 @Table(name = "performance_templet")
 public class PerformanceTemplet implements Serializable {
@@ -28,67 +37,4 @@ public class PerformanceTemplet implements Serializable {
 	private String performanceIndex;
 	private String  weighting;
 	private Boolean status;
-//	private List<Performance> performances = new ArrayList<Performance>();
-
-
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getKind() {
-		return kind;
-	}
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
-	public Date getStartTime() {
-		return startTime;
-	}
-	public void setStartTime(Date startTime) {
-		this.startTime = startTime;
-	}
-	public Date getEndTime() {
-		return endTime;
-	}
-	public void setEndTime(Date endTime) {
-		this.endTime = endTime;
-	}
-	public String getPerformanceIndex() {
-		return performanceIndex;
-	}
-	public void setPerformanceIndex(String performanceIndex) {
-		this.performanceIndex = performanceIndex;
-	}
-	public String getWeighting() {
-		return weighting;
-	}
-	public void setWeighting(String weighting) {
-		this.weighting = weighting;
-	}
-	public Boolean getStatus() {
-		return status;
-	}
-	public void setStatus(Boolean status) {
-		this.status = status;
-	}
-	//@OneToMany(cascade=CascadeType.REFRESH,mappedBy="performanceTemplet")
-//	public List<Performance> getPerformances() {
-//		return performances;
-//	}
-//	public void setPerformances(List<Performance> performances) {
-//		this.performances = performances;
-//	}
-
-
-
-	
-	
 }

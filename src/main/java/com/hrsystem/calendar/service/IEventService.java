@@ -1,5 +1,12 @@
 package com.hrsystem.calendar.service;
-
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: IEventService.java
+  *@Date: 2018年9月25日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;

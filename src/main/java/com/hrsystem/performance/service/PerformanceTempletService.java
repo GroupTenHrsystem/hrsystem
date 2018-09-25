@@ -1,5 +1,12 @@
 package com.hrsystem.performance.service;
-
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: PerformanceTempletService.java
+  *@Date: 2018年9月25日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

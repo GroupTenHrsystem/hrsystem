@@ -1,5 +1,12 @@
 package com.hrsystem.performance.entity;
-
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: Performance.java
+  *@Date: 2018年9月25日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
@@ -14,7 +21,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "performance")
 public class Performance implements Serializable {
@@ -28,49 +37,4 @@ public class Performance implements Serializable {
 		private Boolean status=false;
 		@ManyToOne(cascade=CascadeType.ALL)
 		PerformanceTemplet performanceTemplet;
-		
-			public Long getId() { 
-			return id;
-		}
-		public void setId(Long id) {
-			this.id = id;
-		}
-		public String getPerformanceName() {
-			return performanceName;
-		}
-		public void setPerformanceName(String performanceName) {
-			this.performanceName = performanceName;
-		}
-		public Date getStartTime() {
-			return startTime;
-		}
-		public void setStartTime(Date startTime) {
-			this.startTime = startTime;
-		}
-		public Date getEndTime() {
-			return endTime;
-		}
-		public void setEndTime(Date endTime) {
-			this.endTime = endTime;
-		}
-		public Long getCycle() {
-			return cycle;
-		}
-		public void setCycle(Long cycle) {
-			this.cycle = cycle;
-		}
-		public Boolean getStatus() {
-			return status;
-		}
-		public void setStatus(Boolean status) {
-			this.status = status;
-		}
-	
-		public PerformanceTemplet getPerformanceTemplet() {
-			return performanceTemplet;
-		}
-		public void setPerformanceTemplet(PerformanceTemplet performanceTemplet) {
-			this.performanceTemplet = performanceTemplet;
-		}
-		
 }

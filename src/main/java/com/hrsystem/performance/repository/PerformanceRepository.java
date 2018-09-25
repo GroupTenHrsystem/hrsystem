@@ -1,5 +1,12 @@
 package com.hrsystem.performance.repository;
-
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: PerformanceRepository.java
+  *@Date: 2018年9月25日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
