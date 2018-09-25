@@ -20,11 +20,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.performance.entity.Performance;
+import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 
 @RestController
@@ -38,32 +41,43 @@ public class PerformanceController {
 	 * @param id
 	 * @return
 	 */
-	@GetMapping("/get/{id}")
-	public Performance getPerformanceById(@PathVariable Long id) {
-		return performanceService.findPerformanceById(id);
-	}
-
+//	@GetMapping("/get/{id}")
+//	public Performance getPerformanceById(@PathVariable Long id) {
+//		return performanceService.findPerformanceById(id);
+//	}
 	/**
 	 * 2、增
 	 * @param Performance
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String insertPerformance(Performance Performance) {		
+	public String insertPerformance(@RequestBody Performance performance) {		
 		try {
-			performanceService.insertPerformance(Performance);
+			System.out.println(performance.getPerformanceName());
+			performanceService.insertPerformance(performance);
 			return "success:添加成功";
 		} catch (Exception e) {
 			return "success:添加失败";
 		}
 	}
-
+	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
+	public String update(@PathVariable("id") Long myId,@RequestBody Performance dto) 
+	{
+		try {
+			Performance entity = performanceService.findPerformanceById(myId);
+			BeanUtils.copyProperties(dto, entity);//使用自定义的BeanUtils
+			performanceService.insertPerformance(entity);
+			return "success:true";
+		} catch (Exception e) {
+			return "success:false";
+		}
+	}
 	/**
-	 * 3、删
+	 * 3、删 
 	 * @param id
 	 * @return
 	 */
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping(value="{id}")
 	public String deletePerformanceById(@PathVariable Long id) {
 		try {
 			performanceService.deletePerformance(id);
@@ -74,8 +88,8 @@ public class PerformanceController {
 	}
 
 	@GetMapping
-	public Page<Performance> getPage(ExtjsPageRequest pageRequest) 
+	public Page<Performance> getPage(PerformanceQueryDTO performanceQueryDTO,ExtjsPageRequest pageRequest) 
 	{
-		return performanceService.findAll(null, pageRequest.getPageable());
+		return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
 	}
 }

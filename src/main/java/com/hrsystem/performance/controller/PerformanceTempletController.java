@@ -59,7 +59,6 @@ public class PerformanceTempletController {
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String insertPerformance(@RequestBody PerformanceTemplet performanceTemplet) {		
 		try {
-			System.out.println(performanceTemplet.getName());
 			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			return "success:添加成功";
 		} catch (Exception e) {
@@ -78,7 +77,7 @@ public class PerformanceTempletController {
 		} catch (Exception e) {
 			return "success:false";
 		}
-}
+	}
 	/**
 	 * 3、删
 	 * @param id

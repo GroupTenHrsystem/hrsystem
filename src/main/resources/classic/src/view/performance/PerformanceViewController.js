@@ -14,7 +14,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
            	record.set(values);
           	record.save();
           	setTimeout(store.load(),"500");
-          //	Ext.data.StoreManager.lookup('performanceTempletGridStore').load();
+          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
           	win.close();
 	},
 	/* Clear Text */
@@ -78,11 +78,11 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 		
 		if(searchField==='performanceName'){
 			var fieldValue = searchField.getValue;
-			Ext.apply(store.proxy.extraParams, {name:searchValue});
+			Ext.apply(store.proxy.extraParams, {performanceName:searchValue});
 		}
 		if(searchField==='cycle'){
 			var fieldValue = searchField.getValue;
-			Ext.apply(store.proxy.extraParams, {kind:searchValue});
+			Ext.apply(store.proxy.extraParams, {cycle:searchValue});
 		}
 		if(searchField==='startTime'){
 			Ext.apply(store.proxy.extraParams,{
@@ -100,10 +100,10 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	/*Search More*/	
 	openSearchWindow:function(toolbar, rowIndex, colIndex){
-		toolbar.up('grid').up('container').add(Ext.widget('performanceTempletSearchWindow')).show();
+		toolbar.up('grid').up('container').add(Ext.widget('performanceSearchWindow')).show();
 	},
 	submitSearchForm:function(btn){
-		var store =	Ext.data.StoreManager.lookup('performanceTempletGridStroe');
+		var store =	Ext.data.StoreManager.lookup('performanceGridStroe');
 		var win = btn.up('window');
 		var form = win.down('form');
 		var values  = form.getValues();

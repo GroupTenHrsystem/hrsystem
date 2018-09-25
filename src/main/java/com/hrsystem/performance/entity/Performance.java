@@ -8,7 +8,9 @@ package com.hrsystem.performance.entity;
  
 */
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -20,6 +22,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.jpa.domain.Specification;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 
@@ -31,10 +41,15 @@ public class Performance implements Serializable {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 		private String performanceName;	
+		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date startTime; 
+		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date endTime;  
 		private Long cycle;
 		private Boolean status=false;
 		@ManyToOne(cascade=CascadeType.ALL)
 		PerformanceTemplet performanceTemplet;
+		
+		
+	
 }

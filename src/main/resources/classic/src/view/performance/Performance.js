@@ -1,4 +1,4 @@
-Ext.define('Admin.view.performance.PerformanceTemplet', {
+Ext.define('Admin.view.performance.Performance', {
     extend: 'Ext.container.Container',
     xtype: 'performance',
     //requires: [],

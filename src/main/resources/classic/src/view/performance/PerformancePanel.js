@@ -10,8 +10,6 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.form.field.Date',
         'Ext.grid.column.Date'
     ],
-    //controller: 'searchresults',
-   // viewModel: {type: 'orderViewModel'},
     layout: 'fit',
     items: [{
             xtype: 'gridpanel',
@@ -43,7 +41,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '绩效模板名字', value: 'performanceName' },
+				      	{ name: '绩效考核名字', value: 'performanceName' },
 						{ name: '开始时间', value: 'startTime' },
                         { name: '结束时间', value: 'endTime' },
                         { name: '考核周期', value: 'cycle' }
@@ -63,7 +61,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
 	        }, '-',{
             	xtype:'textfield',
                 reference:'searchFieldValue',
-            	name:'performanceTempletPanelSearchField'
+            	name:'performancePanelSearchField'
 		    }, '-',{
                 xtype: 'datefield',
                 hideLabel: true,
@@ -72,9 +70,6 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 reference:'searchDataFieldValue',
                 fieldLabel: 'From',
                 name: 'from_date'
-                //,id:'from_date',
-                //vtype: 'daterange',
-                //endDateField: 'to_date'
             }, {
                 xtype: 'datefield',
                 hideLabel: true,
@@ -83,9 +78,6 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 reference:'searchDataFieldValue2',
                 fieldLabel: 'To',
                 name: 'to_date'
-                //,id:'to_date',
-                //vtype: 'daterange',
-                //startDateField: 'from_date'
          },'-',{
 		        text: 'Search',
 		        iconCls: 'fa fa-search',
