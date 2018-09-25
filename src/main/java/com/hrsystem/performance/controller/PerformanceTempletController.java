@@ -22,6 +22,7 @@ import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
+import com.hrsystem.performance.entity.DTO.PerformanceTempletQueryDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
 
@@ -101,8 +102,8 @@ public class PerformanceTempletController {
 		}
 	 
 	@GetMapping
-	public Page<PerformanceTemplet> getPage(ExtjsPageRequest pageRequest) 
+	public Page<PerformanceTemplet> getPage(PerformanceTempletQueryDTO performanceTempletQueryDTO,ExtjsPageRequest pageRequest) 
 	{
-		return performanceTempletService.findAll(null, pageRequest.getPageable());
+		return performanceTempletService.findAll(PerformanceTempletQueryDTO.getWhereClause(performanceTempletQueryDTO), pageRequest.getPageable());
 	}
 }

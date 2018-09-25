@@ -44,13 +44,17 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletPanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '用户名', value: 'name' },
-						{ name: '创建时间', value: 'createTime' }
+				      	{ name: '绩效模板名字', value: 'name' },
+						{ name: '开始时间', value: 'startTime' },
+                        { name: '结束时间', value: 'endTime' },
+                        { name: '种类', value: 'kind' },
+                        { name: '考评指标', value: 'performanceIndex' },
+                        { name: '考评分值', value: 'weighting' },
 				    ]
 				}),
 	            displayField: 'name',
 	            valueField:'value',
-	            value:'用户名',
+	            value:'绩效模板名字',
 	            editable: false,
 	            queryMode: 'local',
 	            triggerAction: 'all',

@@ -47,7 +47,7 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletViewController', {
 	searchComboboxSelectChuang:function(combo,record,index){
 		//alert(record.data.name);
 		var searchField = this.lookupReference('searchFieldName').getValue();
-		if(searchField==='createTime'){
+		if(searchField==='startTime' || searchField==='endTime'){
 			this.lookupReference('searchFieldValue').hide();
 			this.lookupReference('searchDataFieldValue').show();
 			this.lookupReference('searchDataFieldValue2').show();
@@ -66,15 +66,40 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletViewController', {
 		
 		var store =	btn.up('gridpanel').getStore();
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
-		Ext.apply(store.proxy.extraParams, {name:"",createTimeStart:"",createTimeEnd:""});
+		Ext.apply(store.proxy.extraParams, 
+				{
+					name:"",
+					kind:"",
+					performanceIndex:"",
+					weighting:""
+			});
 		
 		if(searchField==='name'){
+			var fieldValue = searchField.getValue;
 			Ext.apply(store.proxy.extraParams, {name:searchValue});
 		}
-		if(searchField==='createTime'){
+		if(searchField==='kind'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {kind:searchValue});
+		}
+		if(searchField==='performanceIndex'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {performanceIndex:searchValue});
+		}
+		if(searchField==='weighting'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {weighting:searchValue});
+		}
+		if(searchField==='startTime'){
 			Ext.apply(store.proxy.extraParams,{
-				createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+				startTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+			});
+		}
+		if(searchField==='endTime'){
+			Ext.apply(store.proxy.extraParams,{
+				endTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+				endTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});
@@ -88,12 +113,42 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletViewController', {
 		var win = btn.up('window');
 		var form = win.down('form');
 		var values  = form.getValues();
-		Ext.apply(store.proxy.extraParams, {name:"",createTimeStart:"",createTimeEnd:""});
+		Ext.apply(store.proxy.extraParams, {
+					name:"",
+					kind:"",
+					performanceIndex:"",
+					weighting:""
+			});
 		Ext.apply(store.proxy.extraParams,{
 			name:values.name,
-			createTimeStart:Ext.util.Format.date(values.createTimeStart, 'Y/m/d H:i:s'),
-			createTimeEnd:Ext.util.Format.date(values.createTimeEnd, 'Y/m/d H:i:s')
+			kind:values.kind,
+			performanceIndex:values.performanceIndex,
+			weighting:values.weighting,
+			// startTimeStart:Ext.util.Format.date(values.startTimeStart, 'Y/m/d H:i:s'),
+			// startTimeEnd:Ext.util.Format.date(values.startTimeEnd, 'Y/m/d H:i:s'),
+			// endTimeStart:Ext.util.Format.date(values.endTimeStart, 'Y/m/d H:i:s'),
+			// endTimeEnd:Ext.util.Format.date(values.endTimeEnd, 'Y/m/d H:i:s')
 		});
+		if(values.startTimeStart!=""){
+			Ext.apply(store.proxy.extraParams,{
+				startTimeStart:Ext.util.Format.date(values.startTimeStart, 'Y/m/d H:i:s')
+			});
+		}
+		if(values.startTimeEnd!=""){
+			Ext.apply(store.proxy.extraParams,{
+				startTimeEnd:Ext.util.Format.date(values.startTimeEnd, 'Y/m/d H:i:s')
+			});
+		}
+		if(values.endTimeStart!=""){
+			Ext.apply(store.proxy.extraParams,{
+				endTimeStart:Ext.util.Format.date(values.endTimeStart, 'Y/m/d H:i:s')
+			});
+		}
+		if(values.endTimeEnd!=""){
+			Ext.apply(store.proxy.extraParams,{
+				endTimeEnd:Ext.util.Format.date(values.endTimeEnd, 'Y/m/d H:i:s')
+			});
+		}
 		store.load({params:{start:0, limit:20, page:1}});
 		win.close();
 	},
