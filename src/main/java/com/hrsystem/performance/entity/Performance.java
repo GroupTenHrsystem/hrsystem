@@ -49,7 +49,4 @@ public class Performance implements Serializable {
 		private Boolean status=false;
 		@ManyToOne(cascade=CascadeType.ALL)
 		PerformanceTemplet performanceTemplet;
-		
-		
-	
 }

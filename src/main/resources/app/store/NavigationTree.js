@@ -51,6 +51,11 @@
                 viewType: 'leaveCenterPanel',
                 leaf: true
             },{
+                text: '招聘模块',
+                iconCls: 'x-fa fa-address-card',
+                viewType: 'recruit',
+                leaf: true
+            },{
                 text: 'Login',
                 iconCls: 'x-fa fa-check',
                 viewType: 'login',
