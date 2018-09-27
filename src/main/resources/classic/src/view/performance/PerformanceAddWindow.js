@@ -76,7 +76,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             anchor: '0',
             queryMode: 'local',
             selectOnTab: false,
-            name: 'performanceTemplet',
+            name: 'performanceTempletId',
             emptyText:'请选择...',
           // blankText: '请选择', // 该项如果没有选择，则提示错误信息,
             onReplicate: function () {
