@@ -302,7 +302,6 @@ Ext.define('Ext.calendar.form.AbstractForm', {
             
 
             if(id.search("Ext") != -1){
-
              var data =  JSON.stringify({
                                     startDate : stime,
                                     endDate :   etime,
@@ -333,9 +332,9 @@ Ext.define('Ext.calendar.form.AbstractForm', {
                             success: function(response, options) {
                                     values.id=response.responseText; 
                                     me.fireSave(me.produceEventData(values));
+                                   // window.location.reload();
                             }
                         });
-
         }
     }
 });
