@@ -16,7 +16,7 @@ import com.hrsystem.user.entity.Role;
 import com.hrsystem.user.repository.RoleRepository;
 
 @Service
-public class RoleService implements RoleIService {
+public class RoleService implements IRoleService {
 
 	@Autowired
 	RoleRepository roleRepository;

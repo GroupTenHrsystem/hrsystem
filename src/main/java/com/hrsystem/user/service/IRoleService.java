@@ -9,7 +9,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 import com.hrsystem.user.entity.Role;
 
-public interface RoleIService {
+public interface IRoleService {
 
 	public Role findRoleById(Long id);
 	 

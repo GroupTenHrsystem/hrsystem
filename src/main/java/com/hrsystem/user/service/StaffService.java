@@ -15,7 +15,7 @@ import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.repository.StaffRepository;
 
 @Service
-public class StaffService implements StaffIService {
+public class StaffService implements IStaffService {
 
 	@Autowired
 	StaffRepository staffRepository;

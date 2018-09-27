@@ -20,6 +20,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -30,6 +32,7 @@ import javax.persistence.criteria.Root;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hrsystem.user.entity.Staff;
 
 import lombok.Data;
 
@@ -47,6 +50,11 @@ public class Performance implements Serializable {
 		private Date endTime;  
 		private Long cycle;
 		private Boolean status=false;
-		@ManyToOne(cascade=CascadeType.ALL)
+		@ManyToOne(cascade=CascadeType.ALL) 
 		PerformanceTemplet performanceTemplet;
+		@ManyToMany(cascade = CascadeType.ALL)
+		@JoinTable(name = "performance_staff",
+		joinColumns = {@JoinColumn(name = "performance_id")},
+		inverseJoinColumns = {@JoinColumn(name = "employee_id")}) 
+		private List<Staff> staff;
 }

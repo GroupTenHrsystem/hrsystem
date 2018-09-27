@@ -9,7 +9,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 import com.hrsystem.user.entity.Department;
 
-public interface DepartmentIService {
+public interface IDepartmentService {
 
 	public Optional<Department> findDepartmentById(Long id);
 	 

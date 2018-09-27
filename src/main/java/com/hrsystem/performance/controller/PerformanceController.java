@@ -27,8 +27,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.performance.entity.Performance;
+import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.service.IPerformanceService;
+import com.hrsystem.performance.service.IPerformanceTempletService;
 
 @RestController
 @RequestMapping("/performance")
@@ -36,6 +38,8 @@ public class PerformanceController {
 	@Autowired
 	private IPerformanceService performanceService;
 	
+	@Autowired
+	private IPerformanceTempletService performanceTempletService;
 	/**
 	 * 1、查
 	 * @param id
@@ -51,10 +55,12 @@ public class PerformanceController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String insertPerformance(@RequestBody Performance performance) {		
+	public String insertPerformance(@RequestBody PerformanceDTO performanceDTO) {		
 		try {
-			System.out.println(performance.getPerformanceName());
-			performanceService.insertPerformance(performance);
+			Performance entity = new Performance();
+			entity.setPerformanceTemplet(performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId()));
+			BeanUtils.copyProperties(performanceDTO, entity);	
+			performanceService.insertPerformance(entity);
 			return "success:添加成功";
 		} catch (Exception e) {
 			return "success:添加失败";

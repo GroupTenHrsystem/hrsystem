@@ -17,11 +17,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="department")
+@Table(name="t_department")
 public class Department {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long departmentId;
+	private Long id;
 	private String departmentName;
 	private String introduce;
 	@ManyToOne(cascade = CascadeType.REFRESH)

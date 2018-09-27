@@ -10,7 +10,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 import com.hrsystem.user.entity.Staff;
 
-public interface StaffIService {
+public interface IStaffService {
 
 	public Optional<Staff> findStaffById(Long id);
 	 

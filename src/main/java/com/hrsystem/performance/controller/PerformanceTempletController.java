@@ -1,4 +1,5 @@
 package com.hrsystem.performance.controller;
+import java.util.ArrayList;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
@@ -46,10 +47,10 @@ public class PerformanceTempletController {
 	 * @param id
 	 * @return
 	 */
-//	@GetMapping("/get/{id}")
-//	public PerformanceTemplet getPerformanceById(@PathVariable Long id) {
-//		return performanceTempletService.findPerformanceTempletById(id);
-//	}
+	@GetMapping("/get/{id}")
+	public PerformanceTemplet getPerformanceById(@PathVariable Long id) {
+		return performanceTempletService.findPerformanceTempletById(id);
+	}
 
 	/**
 	 * 2、增
@@ -112,4 +113,12 @@ public class PerformanceTempletController {
 	{
 		return performanceTempletService.findAll(PerformanceTempletQueryDTO.getWhereClause(performanceTempletQueryDTO), pageRequest.getPageable());
 	}
+	
+	
+//	@RequestMapping("/findAll")
+//	public List<PerformanceTemplet> findAll(){
+//		List<PerformanceTemplet> list = new ArrayList();
+//		list.add(performanceTempletService.findPerformanceTempletById(2L));
+//		return list;
+//	}
 }

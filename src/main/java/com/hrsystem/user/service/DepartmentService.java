@@ -16,7 +16,7 @@ import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.repository.DepartmentRepository;
 
 @Service
-public class DepartmentService implements DepartmentIService {
+public class DepartmentService implements IDepartmentService {
 
 	@Autowired
 	private DepartmentRepository departmentRepository;
