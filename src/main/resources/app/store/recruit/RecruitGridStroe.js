@@ -24,6 +24,6 @@
 
     sorters: {
         direction: 'DESC',
-        property: 'recruitId'
+        property: 'id'
     }
 });

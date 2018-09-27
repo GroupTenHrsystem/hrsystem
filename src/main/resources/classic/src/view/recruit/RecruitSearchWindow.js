@@ -19,23 +19,22 @@ Ext.define('Aria.view.recruit.recruitSearchWindow', {
         ariaLabel: 'Enter your name',
         items: [{
             xtype: 'textfield',
-            fieldLabel: 'Order Number',
-            name:'orderNumber'
+            fieldLabel: '部门名称',
+            name:'departmentname'
         }, {
             xtype: 'datefield',
-            fieldLabel: 'Create Time',
-            name:'createTime',
-            format: 'Y/m/d H:i:s'
+            fieldLabel: '职位',
+            name:'position'
         }]
     }],
    
     buttons: ['->',{
 	    xtype: 'button',
-	    text: 'Submit',
+	    text: '提交',
 	    handler: 'submitSearchForm'
 	},{
 	    xtype: 'button',
-	    text: 'Close',
+	    text: '取消',
 	    handler: function(btn) {
 	        btn.up('window').close();
    		 }
