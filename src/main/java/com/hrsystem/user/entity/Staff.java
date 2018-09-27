@@ -17,11 +17,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="staff")
+@Table(name="t_staff")
 public class Staff {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long employeeId;
+	private Long id;
 	private Long employeNum;
 	private String staffName;
 	private Boolean sex;

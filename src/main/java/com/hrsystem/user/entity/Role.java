@@ -11,11 +11,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="role_table")
+@Table(name="t_role")
 public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long positionId;
+	private Long id;
 	private String position;
 	private Long limite;	
 	@ManyToOne(cascade = CascadeType.REFRESH)

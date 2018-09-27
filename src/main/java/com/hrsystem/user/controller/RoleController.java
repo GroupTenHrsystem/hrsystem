@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.ExtResultJson;
 import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Role;
-import com.hrsystem.user.service.RoleIService;
+import com.hrsystem.user.service.IRoleService;
 
 @RestController
 @RequestMapping("/Role")
 public class RoleController {
 	
 	@Autowired
-	private RoleIService roleService;
+	private IRoleService roleService;
 	
 	//查
 	@GetMapping("/find/{id}")
