@@ -9,10 +9,15 @@
 	openEditWindow:function(grid, rowIndex, colIndex){
 		var record = grid.getStore().getAt(rowIndex);
 		//获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
+		
 		if (record ) {
-			var win = grid.up('container').add(Ext.widget('leaveEditWindow'));
-			win.show();
-			win.down('form').getForm().loadRecord(record);
+			if(record.data.processStatus=="NEW"){
+				var win = grid.up('container').add(Ext.widget('leaveEditWindow'));
+				win.show();
+				win.down('form').getForm().loadRecord(record);
+			}else{
+				Ext.Msg.alert('提示', "只可以修改'新建'状态的信息！");
+			}
 		}
 	},
 	/*Search More*/	
@@ -88,14 +93,17 @@
 	},
 	/*Delete One Row*/	
 	deleteOneRow:function(grid, rowIndex, colIndex){
-		Ext.MessageBox.confirm('提示', '确定要进行删除操作吗？数据将无法还原！',function(btn, text){
-			if(btn=='yes'){
-				var store = grid.getStore();
-				var record = store.getAt(rowIndex);
-				store.remove(record);//DELETE //http://localhost:8081/leave/112
-				//store.sync();
-			}
-		}, this);
+		var store = grid.getStore();
+		var record = store.getAt(rowIndex);
+		if(record.data.processStatus=="NEW"){
+			Ext.MessageBox.confirm('提示', '确定要进行删除操作吗？数据将无法还原！',function(btn, text){
+				if(btn=='yes'){
+					store.remove(record);
+				}
+			}, this);
+		}else{
+			Ext.Msg.alert('提示', "只可以删除'新建'状态的信息！");
+		}
 	},
 	/*Delete More Rows*/	
 	deleteMoreRows:function(btn, rowIndex, colIndex){
@@ -107,7 +115,9 @@
 					var rows = selModel.getSelection();
 					var selectIds = []; //要删除的id
 					Ext.each(rows, function (row) {
-						selectIds.push(row.data.id);
+						if(row.data.processStatus=="NEW"){
+							selectIds.push(row.data.id);
+						}
 					});
 					Ext.Ajax.request({ 
 						url : '/leave/deletes', 
@@ -133,8 +143,29 @@
 			Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
 		}
 	},
-	/*Disable*/	
-	onDisableButton:function(grid, rowIndex, colIndex){
-		Ext.Msg.alert("Title","Click Disable Button");
+	/*Star Leave Process*/	
+	starLeaveProcess:function(grid, rowIndex, colIndex){
+		var record = grid.getStore().getAt(rowIndex);
+		Ext.Ajax.request({ 
+			url : '/leave/start', 
+			method : 'post', 
+			params : {
+				id :record.get("id")
+			}, 
+			success: function(response, options) {
+				var json = Ext.util.JSON.decode(response.responseText);
+				if(json.success){
+					Ext.Msg.alert('操作成功', json.msg, function() {
+					grid.getStore().reload();
+				});
+				}else{
+					Ext.Msg.alert('操作失败', json.msg);
+				}
+			}
+		});
+	},	
+	/*Cancel Leave Process*/	
+	cancelLeaveProcess:function(grid, rowIndex, colIndex){
+		Ext.Msg.alert("Title","Cancel Leave Process");
 	}
 });
