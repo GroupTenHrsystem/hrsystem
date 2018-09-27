@@ -53,7 +53,7 @@ public class PerformanceController {
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String insertPerformance(@RequestBody Performance performance) {		
 		try {
-			System.out.println(performance.getPerformanceName());
+			System.out.println(performance.getPerformanceTemplet());
 			performanceService.insertPerformance(performance);
 			return "success:添加成功";
 		} catch (Exception e) {
