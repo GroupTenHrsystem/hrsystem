@@ -6,7 +6,7 @@
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: 'Add recruit Window',
+    title: '招聘发布',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -20,57 +20,57 @@
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'recruitId',
+            name:'id',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: 'department Name',
+            fieldLabel: '部门名称',
             name:'departmentname'
     	}, {
 		    xtype: 'textfield',
-		    fieldLabel: 'Position',
+		    fieldLabel: '职位',
 		    name:'position'
     	}, {
 		    xtype: 'textfield',
-		    fieldLabel: 'Plan Num',
+		    fieldLabel: '计划人数',
 		    name:'planNum'
     	}, {
 		    xtype: 'textfield',
-		    fieldLabel: 'Salary',
+		    fieldLabel: '薪资',
 		    name:'salary'
 		}, {
             xtype: 'datefield',
-            fieldLabel: 'Start Time',
+            fieldLabel: '开始时间',
             name:'startTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
-            fieldLabel: 'End Time',
+            fieldLabel: '截止时间',
             name:'endTime',
             format: 'Y/m/d H:i:s'
     	}, {
 		    xtype: 'textfield',
-		    fieldLabel: 'editName',
+		    fieldLabel: '发布人',
 		    name:'editName'
     	}, {
 		    xtype: 'textfield',
-		    fieldLabel: 'postdesc',
+		    fieldLabel: '职位描述',
 		    name:'postdesc'
         }, {
             xtype: 'textfield',
-            fieldLabel: 'Demand',
+            fieldLabel: '要求',
             name:'demand'
         }]
     }],
 
 	buttons: ['->',{
 	    xtype: 'button',
-	    text: 'Submit',
+	    text: '提交',
 	    handler: 'submitAddForm'
 	},{
 	    xtype: 'button',
-	    text: 'Close',
+	    text: '取消',
 	    handler: function(btn) {
 	        btn.up('window').close();
    		 }

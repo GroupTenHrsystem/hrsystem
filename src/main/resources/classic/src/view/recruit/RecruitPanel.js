@@ -19,7 +19,7 @@
             scrollable: false,
             selModel:{type:'checkboxmodel',checkOnly:true},
             columns: [
-                {xtype: 'gridcolumn',width: 40,dataIndex: 'recruitId',text: 'key',hidden:true},
+                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'key',hidden:true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'departmentname',text: '部门名称',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'position',text: '职位'},
                 {xtype: 'gridcolumn',width: 100,dataIndex: 'planNum',text: '计划人数'},
@@ -88,7 +88,7 @@
 		        iconCls: 'fa fa-search-plus',
 		        handler: 'openSearchWindow'	
 			    }, '->',{
-		        text: 'Add',
+		        text: '新增',
 		        tooltip: 'Add a new row',
 		        iconCls: 'fa fa-plus',
 				handler: 'openAddWindow'	

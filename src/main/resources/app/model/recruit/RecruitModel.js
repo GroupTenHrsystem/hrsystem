@@ -4,7 +4,7 @@
 		'Ext.data.proxy.Rest'
 	],
     fields: [
-	    {type: 'int',name: 'recruitId'},
+	    {type: 'int',name: 'id'},
 	    {type: 'string',name: 'departmentname'},
 	    {type: 'string',name: 'position'},
 	    {type: 'int',name: 'planNum'},

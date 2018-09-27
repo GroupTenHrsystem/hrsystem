@@ -29,13 +29,11 @@
 	submitEditForm:function(btn){
 		var win    = btn.up('window');
 		var store = Ext.data.StoreManager.lookup('recruitGridStroe');
-		console.log(store);
 		var values = win.down('form').getValues();
-		console.log(values); 
-		var record = store.getById(values.recruitId);
-		console.log(record);
-		record.set(values);  
-		store.load();
+		//console.log(values); 
+		var record = store.getById(values.id);
+		//console.log(record);
+		record.set(values);  	//store.load();
 		win.close();
 	},
 			
