@@ -12,6 +12,7 @@
 		,{type:'date',name:'realityEndTime',dateFormat:'Y/m/d H:i:s'}
 		,{type:'date',name:'applyTime',dateFormat:'Y/m/d H:i:s'}
 		,{type:'string',name:'leaveType'}
+		,{type:'string',name:'processStatus'}
 		,{type:'string',name:'reason'}
 		,{type:'string',name:'processInstanceId'}
 	],

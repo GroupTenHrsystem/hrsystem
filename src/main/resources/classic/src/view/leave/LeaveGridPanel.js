@@ -19,7 +19,21 @@
 		selModel: {type: 'checkboxmodel'},
 		columns: [
 			 {header: 'id',dataIndex:'id',width: 60,sortable: true,hidden:true}
-			,{header: 'userId',dataIndex: 'userId',width: 180,sortable: true}
+			,{header: 'processStatus',dataIndex: 'processStatus',width: 60,sortable: true,
+	            renderer: function(val) {
+		            if (val =='NEW') {
+			            return '<span style="color:green;">新建</span>';
+			        } else if (val =='APPROVAL') {
+			            return '<span style="color:blue;">审批中...</span>';
+			        } else if (val =='COMPLETE') {
+			            return '<span style="color:orange;">完成审批</span>';
+			        }else{
+			        	return '<span style="color:red;">取消申请</span>';
+			        }
+			        return val;
+	            }
+			}
+			,{header: 'userId',dataIndex: 'userId',width: 60,sortable: true}
 			,{header: 'startTime',dataIndex: 'startTime',width: 180,sortable: true,renderer:Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
 			,{header: 'endTime',dataIndex: 'endTime',width: 180,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
 			,{header: 'leaveType',dataIndex: 'leaveType',width: 120,sortable: true,
@@ -43,7 +57,25 @@
 				items: [
 					{xtype: 'button', iconCls: 'x-fa fa-pencil',handler: 'openEditWindow'},
 					{xtype: 'button',iconCls: 'x-fa fa-close',handler: 'deleteOneRow'},
-					{xtype: 'button',iconCls: 'x-fa fa-ban',handler: 'onDisableButton'}
+					{
+		                xtype: 'button',iconCls: 'x-fa fa-star',tooltip: '发起请假',
+		                getClass: function(v, meta, rec) {
+		                    if (rec.get('processInstanceId')!="") {
+		                        return 'x-hidden';
+		                    }
+		                    return 'x-fa fa-star';
+		                },
+		                handler: 'starLeaveProcess'
+		            },{
+		                xtype: 'button',iconCls: 'x-fa fa-ban',tooltip: '取消请假',
+		                getClass: function(v, meta, rec) {
+		                    if (rec.get('processInstanceId')=="") {
+		                        return 'x-hidden';
+		                    }
+		                    return 'x-fa fa-ban';
+		                },
+		                handler: 'cancelLeaveProcess'
+		            }
 				]
 			}
 		],

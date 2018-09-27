@@ -24,6 +24,13 @@
             hidden: true,
             readOnly: true
         },{
+            xtype: 'textfield',
+            fieldLabel: 'processStatus',
+            name:'processStatus',
+            value:'NEW',
+            hidden: true,
+            readOnly: true
+        },{
 			xtype: 'textfield',
 			name: 'userId',
 			fieldLabel: '请假人',

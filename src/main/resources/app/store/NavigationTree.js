@@ -225,6 +225,29 @@
                 viewType: 'scheduling',
                 leaf: true
             },{
+<<<<<<< HEAD
+=======
+                text: '流程定义模块',
+                iconCls: 'x-fa fa-address-card',
+                viewType: 'processDefinitionCenterPanel',
+                leaf: true
+            },{
+                text: '请假管理模块',
+                iconCls: 'x-fa fa-address-card',
+                viewType: 'leaveCenterPanel',
+                leaf: true
+            },{
+                text: '请假审批模块',
+                iconCls: 'x-fa fa-address-card',
+                viewType: 'leaveApproveCenterPanel',
+                leaf: true
+            },{
+                text: '招聘模块',
+                iconCls: 'x-fa fa-address-card',
+                viewType: 'recruit',
+                leaf: true
+            },{
+>>>>>>> branch 'master' of https://github.com/GroupTenHrsystem/hrsystem.git
                 text: 'Login',
                 iconCls: 'x-fa fa-check',
                 viewType: 'login',
