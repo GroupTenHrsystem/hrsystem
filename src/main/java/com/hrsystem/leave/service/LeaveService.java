@@ -6,6 +6,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.hrsystem.activiti.domain.ProcessStatus;
+import com.hrsystem.activiti.domain.WorkflowDTO;
+import com.hrsystem.activiti.service.IWorkflowService;
+import com.hrsystem.leave.entity.Leave;
+import com.hrsystem.leave.entity.LeaveDTO;
+import com.hrsystem.leave.repository.LeaveRepository;
+import com.hrsystem.leave.service.ILeaveService;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,23 +23,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hrsystem.activiti.domain.ProcessStatus;
-import com.hrsystem.activiti.domain.WorkflowDTO;
-import com.hrsystem.activiti.service.IWorkflowService;
-import com.hrsystem.leave.entity.Leave;
-import com.hrsystem.leave.entity.LeaveDTO;
-import com.hrsystem.leave.repository.LeaveRepository;
 
-
-
-/**
-*@项目名称: hrsystem
-*@作者: HyperMuteki
-*@文件名称: LeaveService.java
-  *@Date: 2018年9月27日
-*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
- 
-*/
 @Service
 @Transactional
 public class LeaveService implements ILeaveService {
@@ -42,10 +33,10 @@ public class LeaveService implements ILeaveService {
 	 */
 	@Autowired
 	private LeaveRepository leaveRepository;
-	
-	@Autowired 
+
+	@Autowired
 	private IWorkflowService workflowService;
-	
+
 	/*----------------------------------------------系统业务--------------------------------------------*/
 	@Override
 	public void save(Leave leave) {
@@ -63,13 +54,13 @@ public class LeaveService implements ILeaveService {
 	@Override
 	public void deleteAll(Long[] ids) {
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
+
 		List<Leave> leaves = (List<Leave>) leaveRepository.findAllById(idLists);
 		if(leaves!=null) {
 			leaveRepository.deleteAll(leaves);
 		}
 	}
-	
+
 	@Override
 	@Transactional(readOnly=true)
 	public Leave findOne(Long id) {
@@ -79,19 +70,19 @@ public class LeaveService implements ILeaveService {
 	@Override
 	@Transactional(readOnly=true)
 	public Page<Leave> findAll(Specification<Leave> spec, Pageable pageable) {
-		
+
 		return leaveRepository.findAll(spec, pageable);
 	}
 	/*----------------------------------------------流程业务--------------------------------------------*/
-	 /**
-     * 开始请假流程
-     *
-     * @param userId 用户ID
-     * @param pageable 分页条件
-     * @return
-     */
+	/**
+	 * 开始请假流程
+	 *
+	 * @param userId 用户ID
+	 * @param pageable 分页条件
+	 * @return
+	 */
 	@Override
-	public void startWorkflow(String userId ,Long leaveId, Map<String, Object> variables) 
+	public void startWorkflow(String userId ,Long leaveId, Map<String, Object> variables)
 	{
 		//1.声明流程实例
 		ProcessInstance processInstance = null;
@@ -109,58 +100,57 @@ public class LeaveService implements ILeaveService {
 			}
 		}
 	}
-	 /**
-     * 查询待办任务
-     *
-     * @param userId 用户ID
-     * @param pageable 分页条件
-     * @return
-     */
+	/**
+	 * 查询待办任务
+	 *
+	 * @param userId 用户ID
+	 * @param pageable 分页条件
+	 * @return
+	 */
 	@Override
-	public Page<LeaveDTO> findTodoTasks(String userId, Pageable pageable) 
+	public Page<LeaveDTO> findTodoTasks(String userId, Pageable pageable)
 	{
 		List<LeaveDTO> results = null;
 		List<WorkflowDTO> workflowLists = workflowService.findTodoTasks(userId);
-        // 根据流程的业务ID查询实体并关联
+		// 根据流程的业务ID查询实体并关联
 		if(null!=workflowLists) {
 			results = new ArrayList<LeaveDTO>();
 			for (WorkflowDTO workflow : workflowLists) {
-	        	Long businessKey = new Long(workflow.getBusinessKey());
-	            if (workflow.getBusinessKey() == null) {
-	                continue;
-	            }
-	            Leave leave = leaveRepository.findById(businessKey).get();
-	            if(leave!=null){
-	            	LeaveDTO leaveDTO = new LeaveDTO();
-	            	BeanUtils.copyProperties(leave, leaveDTO);
-	            	BeanUtils.copyProperties(workflow, leaveDTO);
-	            	results.add(leaveDTO);
-	            }
-	        }
+				Long businessKey = new Long(workflow.getBusinessKey());
+				if (workflow.getBusinessKey() == null) {
+					continue;
+				}
+				Leave leave = leaveRepository.findById(businessKey).get();
+				if(leave!=null){
+					LeaveDTO leaveDTO = new LeaveDTO();
+					BeanUtils.copyProperties(leave, leaveDTO);
+					BeanUtils.copyProperties(workflow, leaveDTO);
+					results.add(leaveDTO);
+				}
+			}
 		}
 		return new PageImpl<LeaveDTO> (results, pageable, null!=results?results.size():0);
 	}
 
-    /**
-     * 签收流程任务
-     *
-     * @param taskId 任务ID
-     * @param userId 签收人用户ID
-     * @return
-     */
+	/**
+	 * 签收流程任务
+	 *
+	 * @param taskId 任务ID
+	 * @param userId 签收人用户ID
+	 * @return
+	 */
 	public void claim(String taskId, String userId) {
 		workflowService.claim(taskId, userId);
 	}
 
-	 /**
-     * 完成流程任务
-     *
-     * @param taskId 任务ID
-     * @param variables 流程变量
-     * @return
-     */
+	/**
+	 * 完成流程任务
+	 *
+	 * @param taskId 任务ID
+	 * @param variables 流程变量
+	 * @return
+	 */
 	public void complete(String taskId, Map<String, Object> variables) {
 		workflowService.complete(taskId, variables);
 	}
 }
-
