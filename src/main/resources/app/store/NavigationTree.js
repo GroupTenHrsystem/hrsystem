@@ -151,13 +151,13 @@
 	                {
 	                    text: '薪资标准管理',
 		                iconCls: 'x-fa fa-address-card',
-                		//viewType: '',
+                		viewType: 'salaryStandard',
 		                leaf: true
 	                },
 	                {
-	                    text: '薪资计算',
+	                    text: '薪资查询',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
+	                    viewType: 'salary',
 	                    leaf: true
 	                },
 	                {

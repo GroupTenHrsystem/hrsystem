@@ -25,16 +25,16 @@ public class SalaryStandard {
 			@Id
 		    @GeneratedValue(strategy = GenerationType.IDENTITY)
 			private Long id;
-			private Double basis;
-			private Double subsidy;
-			private Double overtime;
-			private Double pensionBenefits;
-			private Double medicareBenefits;
-			private Double unemploymentBenefits;
-			private Double injuryBenefits;
-			private Double maternityBenefits;
-			private Double houseFund;
-			private Double kpi;
-			private Double absence;
-			private Boolean status = false;
+			private Double basis;					//基本工资
+			private Double subsidy;					//补贴
+			private Double overtime;				//加班费/天
+			private Double pensionBenefits;			//养老保险比例
+			private Double medicareBenefits;		//医疗保险比例
+			private Double unemploymentBenefits;	//失业保险比例
+			private Double injuryBenefits;			//工伤保险比例
+			private Double maternityBenefits;		//生育保险比例
+			private Double houseFund;				//住房公积金比例
+			private Double kpi;						//绩效比例
+			private Double absence;					//缺勤比例
+			private Boolean status = false;			//状态
 }
