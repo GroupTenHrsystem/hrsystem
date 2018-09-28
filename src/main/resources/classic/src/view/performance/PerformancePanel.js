@@ -8,7 +8,8 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.form.field.ComboBox',
         'Ext.selection.CheckboxModel',
         'Ext.form.field.Date',
-        'Ext.grid.column.Date'
+        'Ext.grid.column.Date',
+        'Ext.view.MultiSelector'
     ],
     layout: 'fit',
     items: [{

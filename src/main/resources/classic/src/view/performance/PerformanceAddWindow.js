@@ -82,7 +82,9 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             onReplicate: function () {
                 this.getStore().clearFilter();
             }
-        },{
+        },
+
+        {
             xtype: 'combo',
             store: {
                 type: 'array',
@@ -117,7 +119,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             anchor: '0',
             queryMode: 'local',
             selectOnTab: false,
-            name: 'staffId',
+            name: 'departmentId',
             emptyText:'请选择...',
             listeners:{
             select:function(combo,record,index){
@@ -136,19 +138,16 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             onReplicate: function () {
                 this.getStore().clearFilter();
             }
-        }
-        ,{
-            xtype: 'combo',
-            id: 'staff',
+        },
+
+        {
+            xtype: 'tagfield',
+            fieldLabel: 'Select a state',
+            id:'staff',
             store: {
                 type: 'array',
                 fields: [ 'id' ,'staffName'],
-                data: [
-                    // ['test@example.com','name'],         //假数据
-                    // ['someone@example.com','name'],
-                    // ['someone-else@example.com','name']
-                ],
-            //    autoLoad: true, //启动自动加载
+           //     autoLoad: true, //启动自动加载
                 proxy: {
                             type: 'rest',
                             url: '/staff',
@@ -162,24 +161,16 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
                             },
                             simpleSortMode: true    //简单排序模式
                     },
-           //     autoSync: true
+             //   autoSync: true
             },
-            mode:'local' ,
-            editable: false,
             valueField:'id',
-            displayField: 'staffName', //显示的field
-         //   plugins: 'fieldreplicator',   //选中后追加文本框
-            fieldLabel: '选择人员',
-            anchor: '0',
+            displayField: 'staffName',
+            name:'staffIds',
+            filterPickList: true,
             queryMode: 'local',
-            selectOnTab: false,
-            name: 'staffIdOther',
-            emptyText:'请选择...',
-          // blankText: '请选择', // 该项如果没有选择，则提示错误信息,
-            onReplicate: function () {
-                this.getStore().clearFilter();
-            }
+            publishes: 'value'
         }
+        
         ]
     }],
    

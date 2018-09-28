@@ -49,7 +49,7 @@ public class Performance implements Serializable {
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date endTime;  
 		private Long cycle;
-		private Boolean status=false;
+		private Boolean status=false;				//false显示，true不显示
 		@ManyToOne(cascade=CascadeType.ALL) 
 		PerformanceTemplet performanceTemplet;
 		@ManyToMany(cascade = CascadeType.ALL)
