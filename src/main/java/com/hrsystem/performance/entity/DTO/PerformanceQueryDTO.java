@@ -15,7 +15,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hrsystem.performance.entity.Performance;
-import com.hrsystem.performance.entity.HrUser;
 
 
 import lombok.Data;

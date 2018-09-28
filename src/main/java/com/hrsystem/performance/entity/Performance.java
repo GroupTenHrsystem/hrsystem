@@ -16,6 +16,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -49,10 +50,10 @@ public class Performance implements Serializable {
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date endTime;  
 		private Long cycle;
-		private Boolean status=false;				//false显示，true不显示
+		private Boolean status = false;				//false显示，true不显示
 		@ManyToOne(cascade=CascadeType.ALL) 
 		PerformanceTemplet performanceTemplet;
-		@ManyToMany(cascade = CascadeType.ALL)
+		@ManyToMany(cascade={CascadeType.REFRESH,CascadeType.MERGE},fetch=FetchType.LAZY)
 		@JoinTable(name = "performance_staff",
 		joinColumns = {@JoinColumn(name = "performance_id")},
 		inverseJoinColumns = {@JoinColumn(name = "employee_id")}) 
