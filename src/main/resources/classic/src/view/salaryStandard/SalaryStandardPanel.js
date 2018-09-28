@@ -12,19 +12,31 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
         'Ext.view.MultiSelector'
     ],
     layout: 'fit',
+   // minWidth:1600,
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: 'salaryStandardGrid Results',
+            title: '薪资标准管理',
             //routeId: 'user',
+            // bodyStyle:'overflow-x:auto;overflow-y:hidden;',
             selModel: {type: 'checkboxmodel'},
             bind: '{salaryStandardLists}',
             scrollable: false,
             columns: [
-                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发钱日',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '钱数',flex: 1},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
+                {xtype: 'gridcolumn',width: 40, dataIndex: 'id',text: 'Key',hidden:true},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'creatTime',text: '创建日期',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'basis',text: '基本工资',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'subsidy',text: '补贴',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'overtime',text: '加班费/天',flex: 1},
+                {xtype: 'gridcolumn',width: 100, cls: 'content-column',dataIndex: 'pensionBenefits',text: '养老保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 100, cls: 'content-column',dataIndex: 'medicareBenefits',text: '医疗保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 100, cls: 'content-column',dataIndex: 'unemploymentBenefits',text: '失业保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 100, cls: 'content-column',dataIndex: 'injuryBenefits',text: '工伤保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 100, cls: 'content-column',dataIndex: 'maternityBenefits',text: '生育保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 100, cls: 'content-column',dataIndex: 'houseFund',text: '住房公积金比例',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'kpi',text: '绩效比例',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'absence',text: '缺勤比例',flex: 1},
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '操作',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
@@ -39,8 +51,8 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '发钱日', value: 'salaryTime' },
-						{ name: '钱数', value: 'salarySum' }
+				      	{ name: '创建日期', value: 'creatTime' },
+						{ name: '基本工资', value: 'basis' }
 				    ]
 				}),
 	            displayField: 'name',

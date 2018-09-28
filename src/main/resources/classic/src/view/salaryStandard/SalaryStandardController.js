@@ -9,15 +9,20 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardViewController', {
 		var win    = btn.up('window');
 		var form = win.down('form');
 		var record = Ext.create('Admin.model.salaryStandard.SalaryStandardModel');
-
-		var values  =form.getValues();//获取form数据
-		var store = Ext.data.StoreManager.lookup('salaryStandardGridStroe');
+		if(form.isValid()){
+			var values  =form.getValues();//获取form数据
+			var store = Ext.data.StoreManager.lookup('salaryStandardGridStroe');
            	record.set(values);
           	record.save();
 
           	setTimeout(store.load(),"500");
           //	Ext.data.StoreManager.lookup('performanceGridStore').load();
           	win.close();
+		}else{
+			Ext.Msg.alert("等死","cnm，建议等死，叫你瞎几把乱填");  
+			//alert("cnm，建议等死，叫你瞎几把乱填");
+		}
+		
 	},
 	/* Clear Text */
 	clearText:function(btn){

@@ -15,7 +15,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: 'performanceGrid Results',
+            title: '薪资管理',
             //routeId: 'user',
             selModel: {type: 'checkboxmodel'},
             bind: '{salaryLists}',

@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
 
 /**
@@ -36,5 +38,7 @@ public class SalaryStandard {
 			private Double houseFund;				//住房公积金比例
 			private Double kpi;						//绩效比例
 			private Double absence;					//缺勤比例
+			@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+			private Date creatTime;					//创建时间
 			private Boolean status = false;			//状态
 }

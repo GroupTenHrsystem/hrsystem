@@ -51,7 +51,7 @@ public class Performance implements Serializable {
 		private Date endTime;  
 		private Long cycle;
 		private Boolean status = false;				//false显示，true不显示
-		@ManyToOne(cascade=CascadeType.ALL) 
+		@ManyToOne(cascade=CascadeType.ALL)
 		PerformanceTemplet performanceTemplet;
 		@ManyToMany(cascade={CascadeType.REFRESH,CascadeType.MERGE},fetch=FetchType.LAZY)
 		@JoinTable(name = "performance_staff",

@@ -15,7 +15,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: 'performanceGrid Results',
+            title: '绩效管理',
             //routeId: 'user',
             selModel: {type: 'checkboxmodel'},
             bind: '{performanceLists}',
