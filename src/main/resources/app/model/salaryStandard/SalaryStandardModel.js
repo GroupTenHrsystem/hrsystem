@@ -15,7 +15,7 @@ Ext.define('Admin.model.salaryStandard.SalaryStandardModel', {
 	    {type: 'float',name: 'houseFund'},
 	    {type: 'float',name: 'kpi'},
 	    {type: 'float',name: 'absence'},
-	    {type: 'date', name: 'creatTime', dateFormat:'Y/m/d H:i:s'},
+	    {type: 'date', name: 'createTime', dateFormat:'Y/m/d H:i:s'},
 	    // {type: 'float',name: 'maternityBenefits'},
 	],
 	proxy: {

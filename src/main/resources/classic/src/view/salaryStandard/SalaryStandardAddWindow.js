@@ -20,28 +20,38 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
         padding: '10px',
         ariaLabel: 'Enter your name',
         items: [
-        { 
-             xtype:"textfield", 
-             fieldLabel:"你的姓名" , 
-             allowBlank:false, 
-             blankText :'姓名不能为空', 
-             minLength :2 , 
-             minLengthText : "姓名最少2个字符", 
-             maxLength : 4 , 
-             maxLengthText :"姓名至多4个字符", 
-             width : 80, 
-             regex : /^[abc]{2,4}$/, 
-             regexText : "只能输入abc" 
-         },{
-            xtype: 'textfield',
+        // { 
+        //      xtype:"textfield", 
+        //      fieldLabel:"你的姓名" , 
+        //      allowBlank:false, 
+        //      blankText :'姓名不能为空', 
+        //      minLength :2 , 
+        //      minLengthText : "姓名最少2个字符", 
+        //      maxLength : 4 , 
+        //      maxLengthText :"姓名至多4个字符", 
+        //      width : 80, 
+        //      regex : /^[abc]{2,4}$/, 
+        //      regexText : "只能输入abc" 
+        //  },
+         {
+            xtype: 'datefield',
             fieldLabel: 'id',
             name:'id',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
+            fieldLabel: 'id',
+            name:'createTime',
+            format: 'Y/m/d H:i:s',
+            hidden: true,
+            readOnly: true
+        }, {
+            xtype: 'textfield',
             fieldLabel: '基本工资',
-            name:'basis'
+            name:'basis',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
         },  {
             xtype: 'textfield',
             fieldLabel: '补贴',

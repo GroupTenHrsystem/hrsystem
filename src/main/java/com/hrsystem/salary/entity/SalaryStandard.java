@@ -39,6 +39,6 @@ public class SalaryStandard {
 			private Double kpi;						//绩效比例
 			private Double absence;					//缺勤比例
 			@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-			private Date creatTime;					//创建时间
+			private Date createTime;					//创建时间
 			private Boolean status = false;			//状态
 }
