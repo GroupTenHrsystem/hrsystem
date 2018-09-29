@@ -195,8 +195,34 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
         }
 	},
 	/*Disable*/	
-	onDisableButton:function(grid, rowIndex, colIndex){
-		Ext.Msg.alert("Title","Click Disable Button");
+	// onDisableButton:function(grid, rowIndex, colIndex){
+	// 	Ext.Msg.alert("Title","Click Disable Button");
+	// }
+	
+	/*Star Leave Process*/	
+	starLeaveProcess:function(grid, rowIndex, colIndex){
+		var record = grid.getStore().getAt(rowIndex);
+		Ext.Ajax.request({ 
+			url : '/performance/start', 
+			method : 'post', 
+			params : {
+				id :record.get("id")
+			}, 
+			success: function(response, options) {
+				var json = Ext.util.JSON.decode(response.responseText);
+				if(json.success){
+					Ext.Msg.alert('操作成功', json.msg, function() {
+					grid.getStore().reload();
+				});
+				}else{
+					Ext.Msg.alert('操作失败', json.msg);
+				}
+			}
+		});
+	},	
+	/*Cancel Leave Process*/	
+	cancelLeaveProcess:function(grid, rowIndex, colIndex){
+		Ext.Msg.alert("Title","Cancel Leave Process");
 	}
 	
 });

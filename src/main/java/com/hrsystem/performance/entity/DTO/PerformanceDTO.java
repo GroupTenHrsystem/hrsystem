@@ -30,4 +30,22 @@ public class PerformanceDTO {
 	private Boolean status=false;
 	private Long performanceTempletId;
 	private Long staffIds[];
+	
+	 /*销假*/
+    private Date realityStartTime;
+    private Date realityEndTime;
+    /**------------流程数据--------------**/
+    /*任务*/
+    private String taskId;
+    private String taskName;
+    @JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+    private Date   taskCreateTime;
+    private String assignee;
+    private String taskDefinitionKey;
+    /*流程实例*/
+    private String processInstanceId;
+    /*流程图定义*/
+    private String processDefinitionId;
+    private boolean suspended;
+    private int version;
 }

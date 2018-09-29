@@ -168,10 +168,17 @@
 		                leaf: true
 	                },
 	                {
-	                    text: '绩效考核',
+	                    text: '绩效考核管理',
 		                iconCls: 'x-fa fa-address-card',
 		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performance',
+		                leaf: true
+	                },
+	                {
+	                	text: '待考核',
+		                iconCls: 'x-fa fa-address-card',
+		                rowCls: 'nav-tree-badge nav-tree-badge-new',
+		                viewType: 'performanceApproveCenterPanel',
 		                leaf: true
 	                },
 	                {

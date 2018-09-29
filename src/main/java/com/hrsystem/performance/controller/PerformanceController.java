@@ -1,20 +1,16 @@
 package com.hrsystem.performance.controller;
 import java.io.IOException;
 import java.util.ArrayList;
-/**
-*@项目名称: hrsystem
-*@作者: HyperMuteki
-*@文件名称: PerformanceController.java
-  *@Date: 2018年9月25日
-*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
- 
-*/
+import java.util.HashMap;
+
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -28,6 +24,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
@@ -39,10 +36,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hrsystem.activiti.util.WorkflowVariable;
 import com.hrsystem.common.BeanUtils;
+import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
+import com.hrsystem.common.SessionUtil;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
@@ -50,7 +52,14 @@ import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IStaffService;
-
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: PerformanceController.java
+  *@Date: 2018年9月25日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 @RestController
 @RequestMapping("/performance")
 public class PerformanceController {
@@ -194,4 +203,77 @@ public class PerformanceController {
 		response.flushBuffer();
 		wb.write(response.getOutputStream());
 	}
+	
+	
+/*-------------------------------------流程引擎web层------------------------------------------*/
+	
+	/**
+	 * 启动流程
+	 * @param leaveId	请假信息Id
+	 * @param session	通过会话获取登录用户(请假人)
+	 * @return
+	 */
+	@RequestMapping(value = "/start")
+    public @ResponseBody ExtAjaxResponse start(@RequestParam(name="id") Long performanceId,HttpSession session) {
+    	try {
+    		String userId = SessionUtil.getUserName(session);
+    		Map<String, Object> variables = new HashMap<String, Object>();
+    		variables.put("deptLeader", "financeManager");
+    		variables.put("applyUserId", userId);
+    		performanceService.startWorkflow(userId,performanceId, variables);
+    		return new ExtAjaxResponse(true,"操作成功!");
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	        return new ExtAjaxResponse(false,"操作失败!");
+	    }
+    }
+	
+	/**
+	 * 查询待处理流程任务
+	 * @param pageable	分页对象
+	 * @param session	通过会话获取登录用户(请假人)
+	 * @return
+	 */
+	@RequestMapping(value = "/tasks")
+    public @ResponseBody Page<PerformanceDTO> findTodoTasks(HttpSession session,ExtjsPageRequest pageable) {
+		Page<PerformanceDTO> page = new PageImpl<PerformanceDTO>(new ArrayList<PerformanceDTO>(), pageable.getPageable(), 0);
+    	try {
+    		page = performanceService.findTodoTasks(SessionUtil.getUserName(session), pageable.getPageable());
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	    }
+    	
+    	return page;
+    }
+	
+	/**
+     * 签收任务
+     */
+    @RequestMapping(value = "claim/{id}")
+    public @ResponseBody ExtAjaxResponse claim(@PathVariable("id") String taskId, HttpSession session) {
+    	try{
+    		performanceService.claim(taskId, SessionUtil.getUserName(session));
+	    	return new ExtAjaxResponse(true,"任务签收成功!");
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	        return new ExtAjaxResponse(false,"任务签收失败!");
+	    }
+    }
+    
+    /**
+     * 完成任务
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "complete/{id}")
+    public @ResponseBody ExtAjaxResponse complete(@PathVariable("id") String taskId, WorkflowVariable var) {
+    	try{
+    		Map<String, Object> variables = var.getVariableMap();
+    		performanceService.complete(taskId, variables);
+	    	return new ExtAjaxResponse(true,"审批成功!");
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	        return new ExtAjaxResponse(false,"审批失败!");
+	    }
+    }
 }
