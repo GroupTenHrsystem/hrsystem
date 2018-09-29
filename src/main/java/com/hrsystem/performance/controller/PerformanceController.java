@@ -1,4 +1,5 @@
 package com.hrsystem.performance.controller;
+import java.util.ArrayList;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
@@ -8,6 +9,7 @@ package com.hrsystem.performance.controller;
  
 */
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -31,6 +33,8 @@ import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
+import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.service.IStaffService;
 
 @RestController
 @RequestMapping("/performance")
@@ -40,6 +44,9 @@ public class PerformanceController {
 	
 	@Autowired
 	private IPerformanceTempletService performanceTempletService;
+	
+	@Autowired
+	private IStaffService staffService;
 	/**
 	 * 1、查
 	 * @param id
@@ -57,9 +64,17 @@ public class PerformanceController {
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String insertPerformance(@RequestBody PerformanceDTO performanceDTO) {		
 		try {
+			List<Staff> staff = new ArrayList();
+			for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
+				Optional<Staff> optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
+				if(optional.isPresent()) {
+					staff.add(optional.get());
+				}
+			}				
 			Performance entity = new Performance();
 			entity.setPerformanceTemplet(performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId()));
-			BeanUtils.copyProperties(performanceDTO, entity);	
+			BeanUtils.copyProperties(performanceDTO, entity);
+			entity.setStaff(staff);
 			performanceService.insertPerformance(entity);
 			return "success:添加成功";
 		} catch (Exception e) {

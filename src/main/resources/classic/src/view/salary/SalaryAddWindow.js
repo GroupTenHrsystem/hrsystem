@@ -1,6 +1,6 @@
-Ext.define('Aria.view.performance.PerformanceAddWindow', {
+Ext.define('Aria.view.salary.SalaryAddWindow', {
     extend: 'Ext.window.Window',
-    alias: 'widget.performanceAddWindow',
+    alias: 'widget.salaryAddWindow',
     height: 400,
     minHeight: 100,
     minWidth: 300,

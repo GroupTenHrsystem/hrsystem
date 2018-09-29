@@ -1,6 +1,6 @@
-Ext.define('Admin.view.performance.PerformancePanel', {
+Ext.define('Admin.view.salary.SalaryPanel', {
     extend: 'Ext.panel.Panel',
-    xtype: 'performancePanel',
+    xtype: 'salaryPanel',
 
     requires: [
         'Ext.grid.Panel',
@@ -15,18 +15,15 @@ Ext.define('Admin.view.performance.PerformancePanel', {
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: '绩效管理',
+            title: '薪资管理',
             //routeId: 'user',
             selModel: {type: 'checkboxmodel'},
-            bind: '{performanceLists}',
+            bind: '{salaryLists}',
             scrollable: false,
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',flex: 1},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'startTime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'cycle',text: '考核周期',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceCount',text: '待归档人数',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发钱日',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '钱数',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
@@ -42,10 +39,8 @@ Ext.define('Admin.view.performance.PerformancePanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '绩效考核名字', value: 'performanceName' },
-						{ name: '开始时间', value: 'startTime' },
-                        { name: '结束时间', value: 'endTime' },
-                        { name: '考核周期', value: 'cycle' }
+				      	{ name: '发钱日', value: 'salaryTime' },
+						{ name: '钱数', value: 'salarySum' }
 				    ]
 				}),
 	            displayField: 'name',
@@ -106,7 +101,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',
                 displayInfo: true,
-                bind: '{performanceLists}'
+                bind: '{salaryLists}'
             }]
         }]
 });

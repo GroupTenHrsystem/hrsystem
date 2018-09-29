@@ -16,7 +16,7 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletPanel', {
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: 'PerformanceTempletGrid Results',
+            title: '绩效模板管理',
             //routeId: 'user',
             selModel: {type: 'checkboxmodel'},
             bind: '{performanceTempletLists}',

@@ -1,7 +1,6 @@
-Ext.define('Admin.view.performance.PerformancePanel', {
+Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
     extend: 'Ext.panel.Panel',
-    xtype: 'performancePanel',
-
+    xtype: 'salaryStandardPanel',
     requires: [
         'Ext.grid.Panel',
         'Ext.toolbar.Paging',
@@ -12,22 +11,29 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.view.MultiSelector'
     ],
     layout: 'fit',
+    //bodyStyle :'overflow-x:scroll;overflow-y:scroll',
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: '绩效管理',
-            //routeId: 'user',
+            title: '薪资标准管理',
             selModel: {type: 'checkboxmodel'},
-            bind: '{performanceLists}',
-            scrollable: false,
+            bind: '{salaryStandardLists}',
+            //bodyStyle :'overflow-x:scroll;overflow-y:scroll',
             columns: [
-                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',flex: 1},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'startTime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'cycle',text: '考核周期',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceCount',text: '待归档人数',flex: 1},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
+                {xtype: 'gridcolumn',width: 40, dataIndex: 'id',text: 'Key',hidden:true},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'createTime',text: '创建日期',flex: 1,formatter: 'date("Y/m/d H:i:s")'},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'basis',text: '基本工资',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'subsidy',text: '补贴',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'overtime',text: '加班费/天',flex: 1},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'pensionBenefits',text: '养老保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'medicareBenefits',text: '医疗保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'unemploymentBenefits',text: '失业保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'injuryBenefits',text: '工伤保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'maternityBenefits',text: '生育保险比例',flex: 1},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'houseFund',text: '住房公积金比例',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'kpi',text: '绩效比例',flex: 1},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'absence',text: '缺勤比例',flex: 1},
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '操作',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
@@ -42,10 +48,8 @@ Ext.define('Admin.view.performance.PerformancePanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '绩效考核名字', value: 'performanceName' },
-						{ name: '开始时间', value: 'startTime' },
-                        { name: '结束时间', value: 'endTime' },
-                        { name: '考核周期', value: 'cycle' }
+				      	{ name: '创建日期', value: 'creatTime' },
+						{ name: '基本工资', value: 'basis' }
 				    ]
 				}),
 	            displayField: 'name',
@@ -106,7 +110,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',
                 displayInfo: true,
-                bind: '{performanceLists}'
+                bind: '{salaryStandardLists}'
             }]
         }]
 });

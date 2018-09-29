@@ -29,4 +29,5 @@ public class PerformanceDTO {
 	private Long cycle;
 	private Boolean status=false;
 	private Long performanceTempletId;
+	private Long staffIds[];
 }
