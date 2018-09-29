@@ -92,11 +92,18 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 iconCls: 'fa fa-eraser',
                 handler: 'clearText' 
             }, '->',{
-		        text: 'Add',
-		        tooltip: 'Add a new row',
+		        text: 'excel',
+		        tooltip: 'excel',
 		        iconCls: 'fa fa-plus',
-		        handler: 'openAddWindow'	
+                href:'/performance/downloadExcel',
+                hrefTarget:'_self'
+		        //handler:  'gridExcel' 
 		    },'-',{
+                text: 'Add',
+                tooltip: 'Add a new row',
+                iconCls: 'fa fa-plus',
+                handler: 'openAddWindow'    
+            },'-',{
 		        text: 'Removes',
 		        tooltip: 'Remove the selected item',
 		        iconCls:'fa fa-trash',

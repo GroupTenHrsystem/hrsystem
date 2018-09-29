@@ -198,4 +198,5 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	onDisableButton:function(grid, rowIndex, colIndex){
 		Ext.Msg.alert("Title","Click Disable Button");
 	}
+	
 });
