@@ -3,6 +3,7 @@
     fields: [	//需要修改
 		 {type: 'int' ,name: 'id'}
         ,{type: 'string' ,name: 'userId'}
+        ,{type: 'string' ,name: 'performanceName'}
 		,{type: 'date' 	 ,name: 'startTime'}
 		,{type: 'date'	 ,name: 'endTime'}
         ,{type: 'date'   ,name: 'realityStartTime'}

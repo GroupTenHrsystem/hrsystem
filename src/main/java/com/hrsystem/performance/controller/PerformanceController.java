@@ -40,6 +40,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
+import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.activiti.util.WorkflowVariable;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
@@ -86,21 +88,26 @@ public class PerformanceController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String insertPerformance(@RequestBody PerformanceDTO performanceDTO) {		
+	public String insertPerformance(HttpSession session,@RequestBody PerformanceDTO performanceDTO) {		
 		try {
-			List<Staff> staff = new ArrayList();
-			for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
-				Optional<Staff> optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
-				if(optional.isPresent()) {
-					staff.add(optional.get());
-				}
-			}				
-			Performance entity = new Performance();
-			entity.setPerformanceTemplet(performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId()));
-			BeanUtils.copyProperties(performanceDTO, entity);
-			entity.setStaff(staff);
-			performanceService.insertPerformance(entity);
-			return "success:添加成功";
+			String userId = SessionUtil.getUserName(session);
+    		if(userId!=null) {
+    				performanceDTO.setUserId(userId);    			
+					List<Staff> staff = new ArrayList();
+					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
+						Optional<Staff> optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
+						if(optional.isPresent()) {
+							staff.add(optional.get());
+						}
+					}				
+					Performance entity = new Performance();
+					entity.setPerformanceTemplet(performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId()));
+					BeanUtils.copyProperties(performanceDTO, entity);
+					entity.setStaff(staff);
+					entity.setProcessStatus(ProcessStatus.NEW);
+					performanceService.insertPerformance(entity);
+    		}
+					return "success:添加成功";
 		} catch (Exception e) {
 			return "success:添加失败";
 		}
@@ -133,9 +140,18 @@ public class PerformanceController {
 	}
 
 	@GetMapping
-	public Page<Performance> getPage(PerformanceQueryDTO performanceQueryDTO,ExtjsPageRequest pageRequest) 
+	public Page<Performance> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest) 
 	{
-		return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
+		Page<Performance> page;
+		String userId = SessionUtil.getUserName(session);
+		if(userId!=null) {
+			performanceQueryDTO.setUserId(SessionUtil.getUserName(session));
+			page = performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
+		}else {
+			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
+		}
+		return page;
+		//return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
 	}
 
 	/*导出excel文档*/

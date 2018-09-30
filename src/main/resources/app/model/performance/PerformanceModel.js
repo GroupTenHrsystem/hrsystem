@@ -9,6 +9,7 @@ Ext.define('Admin.model.performance.PerformanceModel', {
 	    {type: 'date', name: 'startTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'date', name: 'endTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'int',name: 'cycle'},
+	    {type:'string',name:'processInstanceId'}
 	    // {type: 'string',name: 'performanceIndex'},
 	    // {type: 'string',name: 'weighting'},
 	],

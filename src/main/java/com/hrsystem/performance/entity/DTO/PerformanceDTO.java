@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 
 import lombok.Data;
@@ -21,15 +22,19 @@ import lombok.Data;
 @Data
 public class PerformanceDTO {
 	private Long id;
+	private String userId;
 	private String performanceName;	
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date startTime; 
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date endTime;  
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	private Date applyTime;
 	private Long cycle;
 	private Boolean status=false;
 	private Long performanceTempletId;
 	private Long staffIds[];
+	private ProcessStatus processStatus;//流程状态
 	
 	 /*销假*/
     private Date realityStartTime;

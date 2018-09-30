@@ -30,6 +30,7 @@ import lombok.Data;
 @Data
 public class PerformanceQueryDTO {
 	private Long id;
+	private String userId;
 	private String performanceName;	
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date startTimeStart; 
@@ -50,6 +51,12 @@ public class PerformanceQueryDTO {
 			public Predicate toPredicate(Root<Performance> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
 			
 				List<Predicate> predicate = new ArrayList<>();
+				
+				if (null!=performanceQueryDTO.getUserId()) {
+					predicate.add(criteriaBuilder.equal(root.get("userId").as(String.class),
+							performanceQueryDTO.getUserId()));
+				}
+				
 				if (StringUtils.isNotBlank(performanceQueryDTO.getPerformanceName())) {
 					predicate.add(criteriaBuilder.like(root.get("performanceName").as(String.class),
 							"%" + performanceQueryDTO.getPerformanceName() + "%"));

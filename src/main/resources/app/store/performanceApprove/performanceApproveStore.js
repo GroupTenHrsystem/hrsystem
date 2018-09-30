@@ -6,7 +6,7 @@
     //pageSize: 25,
     proxy: {
         type: 'ajax',
-        url: 'leave/tasks', 			//需要修改
+        url: 'performance/tasks', 			//需要修改
         reader : new Ext.data.JsonReader({  
             type : 'json',  
             rootProperty  : 'content',

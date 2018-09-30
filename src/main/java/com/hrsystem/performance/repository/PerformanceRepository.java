@@ -19,6 +19,6 @@ import com.hrsystem.performance.entity.Performance;
 
 @Repository
 public interface PerformanceRepository extends PagingAndSortingRepository<Performance, Long>,JpaSpecificationExecutor<Performance>{
-	@Query(value="select * from performance where performance_templet_id=?1",nativeQuery=true)
+	@Query(value="select * from t_performance where performance_templet_id=?1",nativeQuery=true)
 	List<Performance> getPerformanceByPerformanceTempletId(Long id);
 }

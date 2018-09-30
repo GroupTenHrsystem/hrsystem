@@ -96,7 +96,7 @@ public class PerformanceService implements IPerformanceService{
 				performance.setProcessStatus(ProcessStatus.APPROVAL);
 				performance.setProcessInstanceId(processInstance.getId());
 				performance.setApplyTime(new Date());
-				//leaveRepository.save(leave);
+				performanceRepository.save(performance);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

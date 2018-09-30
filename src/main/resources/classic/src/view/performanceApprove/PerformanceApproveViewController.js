@@ -2,9 +2,9 @@
     extend: Ext.app.ViewController,
     alias: 'controller.performanceApproveViewController',
     //1.签收任务
-    onClickLeaveApproveClaimButton: function(view, recIndex, cellIndex, item, e, record) {
+    onClickPerformanceApproveClaimButton: function(view, recIndex, cellIndex, item, e, record) {
         Ext.Ajax.request({
-            url: 'leave/claim/' + record.get('taskId'),
+            url: 'performance/claim/' + record.get('taskId'),
             method: 'post',
             success: function(response, options) {
                 var json = Ext.util.JSON.decode(response.responseText);
@@ -30,7 +30,7 @@
         view.up('panel').up('container').add(win);
         return win;
     },
-    onClickLeaveApproveCompleteWindowButton: function(view, recIndex, cellIndex, item, e, record) {
+    onClickPerformanceApproveCompleteWindowButton: function(view, recIndex, cellIndex, item, e, record) {
     	//选中点击的行
         var taskDefinitionKey = record.get('taskDefinitionKey');
         if (taskDefinitionKey == 'deptLeaderAudit') {
@@ -95,7 +95,7 @@
     onClickDeptleaderAuditFormSubmitButton: function(btn) {
     	var form = btn.up('form');
     	var values = form.getValues();
-    	var url = 'leave/complete/' + values.taskId;
+    	var url = 'performance/complete/' + values.taskId;
     	var variables = [{
 			key: 'deptLeaderPass',
 			value: values.deptLeaderPass,//获取表单选择的value
@@ -111,7 +111,7 @@
     onClickHrAuditFormSubmitButton: function(btn) {
         var form = btn.up('form');
     	var values = form.getValues();
-    	var url = 'leave/complete/' + values.taskId;
+    	var url = 'performance/complete/' + values.taskId;
     	var variables = [{
 			key: 'hrPass',
 			value: values.hrPass,//获取表单选择的value
@@ -127,7 +127,7 @@
     onClickReportBackFormSubmitButton: function(btn) {
     	var form = btn.up('form');
      	var values = form.getValues();
-     	var url = 'leave/complete/' + values.taskId;
+     	var url = 'performance/complete/' + values.taskId;
      	var variables = [{
  			key: 'realityStartTime',
  			value: values.realityStartTime,//获取表单选择的value
@@ -143,7 +143,7 @@
     onClickModifyApplyFormSubmitButton: function(btn) {
         var form = btn.up('form');
     	var values = form.getValues();
-    	var url = 'leave/complete/' + values.taskId;
+    	var url = 'performance/complete/' + values.taskId;
     	var variables = [{
 			key: 'reApply',
 			value: values.reApply,//获取表单选择的value

@@ -56,6 +56,7 @@
             }
 		}
 		,{header: 'userId'  		,dataIndex: 'userId',width: 60,sortable: true}
+		,{header: 'performanceName' ,dataIndex: 'performanceName',width: 80,sortable: true}	
 		,{header: 'startTime' 	,dataIndex: 'startTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
 		,{header: 'endTime' 			,dataIndex: 'endTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
 		,{header: 'realityStartTime' 	,dataIndex: 'realityStartTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
