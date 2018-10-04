@@ -9,6 +9,8 @@ package com.hrsystem.performance.repository;
 */
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -21,4 +23,7 @@ import com.hrsystem.performance.entity.Performance;
 public interface PerformanceRepository extends PagingAndSortingRepository<Performance, Long>,JpaSpecificationExecutor<Performance>{
 	@Query(value="select * from t_performance where performance_templet_id=?1",nativeQuery=true)
 	List<Performance> getPerformanceByPerformanceTempletId(Long id);
+	
+	@Query(value="SELECT * FROM hrsystem.t_performance where staff_id in (SELECT id FROM hrsystem.t_staff where staff_name=?1)",nativeQuery=true)
+	Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable);
 }

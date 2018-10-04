@@ -6,7 +6,7 @@ Ext.define('Admin.view.performance.Performance', {
     //viewModel: {type: 'orderlist'},	//viewModel：配置Stote数据源。多个视图共享Store。
     
     controller: 'performanceViewController',
-    viewModel: {type: 'performanceViewModel'},
+   
     	
     layout: 'fit',
     items: [{xtype:'performancePanel'}]

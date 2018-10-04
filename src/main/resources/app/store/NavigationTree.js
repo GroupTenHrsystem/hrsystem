@@ -159,8 +159,22 @@
 	                    iconCls: 'x-fa fa-lightbulb-o',
 	                    viewType: 'salary',
 	                    leaf: true
-	                },
-	                {
+	                }
+	            ]
+            },{
+            	text: '绩效管理模块',
+                iconCls: 'x-fa fa-address-card',
+                expanded: false,
+                selectable: false,
+            	children: [
+            		// {
+            		//  	text: '我的绩效',
+		            //     iconCls: 'x-fa fa-address-card',
+		            //     rowCls: 'nav-tree-badge nav-tree-badge-new',
+		            //   //  viewType: 'performanceTemplet',
+		            //     leaf: true
+		            // },
+            		{
 	                    text: '绩效模板',
 		                iconCls: 'x-fa fa-address-card',
 		                rowCls: 'nav-tree-badge nav-tree-badge-new',
@@ -168,7 +182,7 @@
 		                leaf: true
 	                },
 	                {
-	                    text: '绩效考核管理',
+	                    text: '绩效考核',
 		                iconCls: 'x-fa fa-address-card',
 		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performance',
@@ -187,7 +201,7 @@
 		                viewType: 'processDefinitionCenterPanel',
 		                leaf: true
 	                }		
-	            ]
+            	]
             },{
             	text: '考勤管理模块',
                 iconCls: 'x-fa fa-address-card',

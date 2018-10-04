@@ -75,6 +75,10 @@ public class PerformanceService implements IPerformanceService{
 		return performanceRepository.getPerformanceByPerformanceTempletId(id);
 	 }
 	
+	@Override
+	public Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable){
+		return performanceRepository.getMyPerformanceByStaffName(userId, pageable);
+	}
 	/*----------------------------------------------流程业务--------------------------------------------*/
 	 /**
     * 开始请假流程

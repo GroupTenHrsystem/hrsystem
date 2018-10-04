@@ -1,6 +1,12 @@
 Ext.define('Admin.view.performance.PerformanceViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.performanceViewController',
+    onTabChange: function(tabs, newTab, oldTab) {
+        Ext.suspendLayouts();
+        newTab.setTitle('绩效管理');
+        oldTab.setTitle('参与的绩效');
+        Ext.resumeLayouts(true);
+    },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('performance').add(Ext.widget('performanceAddWindow')).show();

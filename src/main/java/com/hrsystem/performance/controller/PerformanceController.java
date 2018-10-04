@@ -48,6 +48,7 @@ import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.common.SessionUtil;
 import com.hrsystem.performance.entity.Performance;
+import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.service.IPerformanceService;
@@ -94,18 +95,19 @@ public class PerformanceController {
     		if(userId!=null) {
     				performanceDTO.setUserId(userId);    			
 					List<Staff> staff = new ArrayList();
+					PerformanceTemplet performanceTemplet = performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId());
 					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
 						Optional<Staff> optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
 						if(optional.isPresent()) {
-							staff.add(optional.get());
+							Performance entity = new Performance();
+							entity.setPerformanceTemplet(performanceTemplet);
+							BeanUtils.copyProperties(performanceDTO, entity);
+							entity.setStaff(optional.get());
+							entity.setProcessStatus(ProcessStatus.NEW);
+							performanceService.insertPerformance(entity);
 						}
 					}				
-					Performance entity = new Performance();
-					entity.setPerformanceTemplet(performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId()));
-					BeanUtils.copyProperties(performanceDTO, entity);
-					entity.setStaff(staff);
-					entity.setProcessStatus(ProcessStatus.NEW);
-					performanceService.insertPerformance(entity);
+				
     		}
 					return "success:添加成功";
 		} catch (Exception e) {
@@ -154,6 +156,19 @@ public class PerformanceController {
 		//return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
 	}
 
+	/*查看参与的绩效考核*/
+	@RequestMapping("/myPage")
+	public Page<Performance> getMyPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
+	{
+		Page<Performance> page;
+		String userId = SessionUtil.getUserName(session);
+		if(userId!=null) {
+			page = performanceService.getMyPerformanceByStaffName(userId, pageRequest.getPageable());
+		}else {
+			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
+		}
+		return page;
+	}
 	/*导出excel文档*/
 	@RequestMapping("/downloadExcel")
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response)throws IOException
@@ -212,7 +227,7 @@ public class PerformanceController {
 			currentRow.getCell(3).setCellStyle(cellStyle);
 			currentRow.getCell(3).setCellValue(result.getEndTime());
 			currentRow.getCell(4).setCellValue(result.getCycle());
-			currentRow.getCell(5).setCellValue(result.getStaff().size());
+		//	currentRow.getCell(5).setCellValue(result.getStaff().size());
             ++i;
         }
 		response.setHeader("Content-disposition", "attachment; filename=" + java.net.URLEncoder.encode("等死.xlsx", "UTF-8"));//默认Excel名称
@@ -234,8 +249,9 @@ public class PerformanceController {
     	try {
     		String userId = SessionUtil.getUserName(session);
     		Map<String, Object> variables = new HashMap<String, Object>();
+    		Performance performance = performanceService.findPerformanceById(performanceId);
     		variables.put("deptLeader", "financeManager");
-    		variables.put("applyUserId", userId);
+    		variables.put("applyUserId", performance.getStaff().getStaffName());
     		performanceService.startWorkflow(userId,performanceId, variables);
     		return new ExtAjaxResponse(true,"操作成功!");
 	    } catch (Exception e) {

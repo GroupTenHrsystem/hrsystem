@@ -1,2 +1,2 @@
 // @tag full-page
-// @require D:\workspace-sts\hrsystem\src\main\resources\app.js
+// @require E:\STSworkspace\hrsystem\src\main\resources\app.js

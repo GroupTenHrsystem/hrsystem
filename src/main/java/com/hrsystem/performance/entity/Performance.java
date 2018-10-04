@@ -73,9 +73,6 @@ public class Performance implements Serializable {
 	    
 		@ManyToOne(cascade=CascadeType.ALL)
 		PerformanceTemplet performanceTemplet;
-		@ManyToMany(cascade={CascadeType.REFRESH,CascadeType.MERGE},fetch=FetchType.LAZY)
-		@JoinTable(name = "performance_staff",
-		joinColumns = {@JoinColumn(name = "performance_id")},
-		inverseJoinColumns = {@JoinColumn(name = "employee_id")}) 
-		private List<Staff> staff;
+		@ManyToOne(cascade=CascadeType.ALL)
+		private Staff staff;
 }

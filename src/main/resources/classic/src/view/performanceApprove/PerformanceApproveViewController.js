@@ -30,10 +30,16 @@
         view.up('panel').up('container').add(win);
         return win;
     },
+
     onClickPerformanceApproveCompleteWindowButton: function(view, recIndex, cellIndex, item, e, record) {
     	//选中点击的行
         var taskDefinitionKey = record.get('taskDefinitionKey');
-        if (taskDefinitionKey == 'deptLeaderAudit') {
+        if(taskDefinitionKey == 'selfAudit'){
+            //自评
+            var win = this.setCurrentView(view,taskDefinitionKey, '自评');
+            win.down('form').getForm().loadRecord(record);
+        }
+        else if (taskDefinitionKey == 'deptLeaderAudit') {
             //部门领导审批
             var win = this.setCurrentView(view,taskDefinitionKey, '部门领导审批');
             win.down('form').getForm().loadRecord(record);
@@ -91,6 +97,22 @@
             }
         });
 	},
+    //自评
+    onClickSelfAuditFormSubmitButton: function(btn) {
+        var form = btn.up('form');
+        var values = form.getValues();
+        var url = 'performance/complete/' + values.taskId;
+        var variables = [{
+            key: 'selfPass',
+            value: values.selfPass,//获取表单选择的value
+            type: 'B'
+        },{
+            key: 'selfBackReason',
+            value: values.selfBackReason,//获取表单选择的value
+            type: 'S'
+        }];
+        this.complete(url,variables,form);
+    },
 	//部门经理审批
     onClickDeptleaderAuditFormSubmitButton: function(btn) {
     	var form = btn.up('form');

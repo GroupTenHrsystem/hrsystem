@@ -32,7 +32,7 @@ public interface IPerformanceService {
 	 
 	 public List<Performance> getPerformanceByPerformanceTempletId(Long id);
 	 
-	 
+	 public Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable);
 	//流程业务
 	//1.启动流程
 	public void startWorkflow(String userId,Long performanceId, Map<String, Object> variables);//findOne(Long id);

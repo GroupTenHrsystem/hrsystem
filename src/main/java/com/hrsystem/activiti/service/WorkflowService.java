@@ -59,6 +59,7 @@ public class WorkflowService implements IWorkflowService {
 	{
 		List<WorkflowDTO> results=null;
         // 根据当前人的ID查询
+		System.out.println(userId);
         TaskQuery taskQuery = taskService.createTaskQuery().taskCandidateOrAssigned(userId);
         List<Task> tasks = taskQuery.list();
         if(null!=tasks) {

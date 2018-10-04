@@ -7,6 +7,14 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: InitUsersAndGroupsDB.java
+  *@Date: 2018年10月04日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 //@Component
 public class InitUsersAndGroupsDB {
 

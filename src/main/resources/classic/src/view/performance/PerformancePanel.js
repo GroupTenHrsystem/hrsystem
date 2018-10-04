@@ -1,5 +1,5 @@
 Ext.define('Admin.view.performance.PerformancePanel', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.tab.Panel',
     xtype: 'performancePanel',
 
     requires: [
@@ -12,11 +12,14 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.view.MultiSelector'
     ],
     layout: 'fit',
-    items: [{
+    deferredRender: false,
+    items: [
+    {
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '绩效管理',
             //routeId: 'user',
+            viewModel: {type: 'performanceViewModel'},
             selModel: {type: 'checkboxmodel'},
             bind: '{performanceLists}',
             scrollable: false,
@@ -148,5 +151,44 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 displayInfo: true,
                 bind: '{performanceLists}'
             }]
-        }]
+        },
+        {
+            xtype: 'gridpanel',
+            cls: 'user-grid',
+            title: 'Active Tab',
+            // html: 'KitchenSink.DummyText.longText'
+            viewModel: {type: 'myPerformanceViewModel'},
+            selModel: {type: 'checkboxmodel'},
+            bind: '{myPerformanceLists}',
+            scrollable: false,
+            columns: [
+                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
+                {header: '进度',dataIndex: 'processStatus',width: 60,sortable: true,
+                renderer: function(val) {
+                            if (val =='NEW') {
+                                return '<span style="color:green;">新建</span>';
+                            } else if (val =='APPROVAL') {
+                                return '<span style="color:blue;">审批中...</span>';
+                            } else if (val =='COMPLETE') {
+                                return '<span style="color:orange;">完成审批</span>';
+                            }else{
+                                return '<span style="color:red;">取消申请</span>';
+                            }
+                            return val;
+                        }
+                },
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',flex: 1},
+                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'startTime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
+                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'cycle',text: '考核周期',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceCount',text: '待归档人数',flex: 1}
+            ],
+             dockedItems: [{
+                xtype: 'pagingtoolbar',
+                dock: 'bottom',
+                displayInfo: true,
+                bind: '{myPerformanceLists}'
+            }]
+        }
+        ]
 });
