@@ -17,7 +17,8 @@
         "charts",
         "font-awesome",
         "ux",
-        "calendar"
+        "calendar",
+        "exporter"
     ],
 
     /**

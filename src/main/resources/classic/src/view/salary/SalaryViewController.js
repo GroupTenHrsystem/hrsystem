@@ -1,6 +1,36 @@
 Ext.define('Admin.view.salary.SalaryViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.salaryViewController',
+    requires: [
+        'Ext.exporter.text.CSV',
+        'Ext.exporter.text.TSV',
+        'Ext.exporter.text.Html',
+        'Ext.exporter.excel.Xml',
+        'Ext.exporter.excel.Xlsx'
+    ],
+
+    exportTo: function(btn){
+        var cfg = Ext.merge({
+            title: 'Grid export demo',
+            fileName: 'GridExport' + '.' + (btn.cfg.ext || btn.cfg.type)
+        }, btn.cfg);
+
+        this.getView().saveDocumentAs(cfg);
+    },
+ onBeforeDocumentSave: function(view){
+        this.timeStarted = Date.now();
+        view.mask('Document is prepared for export. Please wait ...');
+        Ext.log('export started');
+    },
+
+    onDocumentSave: function(view){
+        view.unmask();
+        Ext.log('export finished; time passed = ' + (Date.now() - this.timeStarted));
+    },
+
+    onDataReady: function(){
+        Ext.log('data ready; time passed = ' + (Date.now() - this.timeStarted));
+    },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('salary').add(Ext.widget('salaryAddWindow')).show();

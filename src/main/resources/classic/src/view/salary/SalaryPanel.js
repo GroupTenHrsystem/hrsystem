@@ -1,107 +1,140 @@
 Ext.define('Admin.view.salary.SalaryPanel', {
-    extend: 'Ext.panel.Panel',
-    xtype: 'salaryPanel',
+    extend: 'Ext.grid.Panel',
+    xtype: 'grid-exporter',
+    controller: 'salaryViewController',
 
     requires: [
-        'Ext.grid.Panel',
-        'Ext.toolbar.Paging',
-        'Ext.form.field.ComboBox',
-        'Ext.selection.CheckboxModel',
-        'Ext.form.field.Date',
-        'Ext.grid.column.Date',
-        'Ext.view.MultiSelector'
+        // 'KitchenSink.view.grid.ExporterController',
+        // 'KitchenSink.store.Products',
+        'Ext.grid.plugin.Exporter'
     ],
-    layout: 'fit',
-    items: [{
-            xtype: 'gridpanel',
-            cls: 'user-grid',
-            title: '薪资管理',
-            //routeId: 'user',
-            selModel: {type: 'checkboxmodel'},
-            bind: '{salaryLists}',
-            scrollable: false,
-            columns: [
+
+    title: 'Export grid content',
+    collapsible: true,
+   layout: 'fit',
+
+    profiles: {
+        classic: {
+            width: 700,
+            priceWidth: 90
+        },
+        neptune: {
+            width: 700,
+            priceWidth: 90
+        },
+        graphite: {
+            width: 900,
+            priceWidth: 120
+        }
+    },
+    resizable: true,
+
+    loadMask: true,
+    plugins: {
+        gridexporter: true
+    },
+
+    // store: {
+    //     type: 'products',
+    //     url: 'data/grid/grid-filter.json',
+    //     autoLoad: true,
+    //     autoDestroy: true,
+    //     grouper: {
+    //         property: 'size'
+    //     }
+    // },
+    bind: '{salaryLists}',
+    features: [{
+        ftype : 'groupingsummary',
+        groupHeaderTpl : '{name}',
+        hideGroupedHeader : false,
+        enableGroupingMenu : false
+    }, {
+        ftype: 'summary',
+        dock: 'bottom'
+    }],
+
+    listeners: {
+        // this event notifies us when the document was saved
+        documentsave: 'onDocumentSave',
+        beforedocumentsave: 'onBeforeDocumentSave',
+        dataready: 'onDataReady'
+    },
+
+    columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发钱日',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '钱数',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'}
+                        {xtype: 'button',iconCls: 'x-fa fa-close'   ,handler: 'deleteOneRow'},
+                        {xtype: 'button',iconCls: 'x-fa fa-ban'     ,handler: 'onDisableButton'}
                     ]
                 }
             ],
-            tbar: [{
-	            xtype: 'combobox',
-                reference:'searchFieldName',
-	            hideLabel: true,
-	            store:Ext.create("Ext.data.Store", {
-				    fields: ["name", "value"],
-				    data: [
-				      	{ name: '发钱日', value: 'salaryTime' },
-						{ name: '钱数', value: 'salarySum' }
-				    ]
-				}),
-	            displayField: 'name',
-	            valueField:'value',
-	            value:'请选择',
-	            editable: false,
-	            queryMode: 'local',
-	            triggerAction: 'all',
-	            emptyText: 'Select a state...',
-	            width: 135,
-                listeners:{
-                    select: 'searchComboboxSelectChuang'
-                }
-	        }, '-',{
-            	xtype:'textfield',
-                reference:'searchFieldValue',
-            	name:'performancePanelSearchField'
-		    }, '-',{
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue',
-                fieldLabel: 'From',
-                name: 'from_date'
-            }, {
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue2',
-                fieldLabel: 'To',
-                name: 'to_date'
-         },'-',{
-		        text: 'Search',
-		        iconCls: 'fa fa-search',
-		        handler: 'quickSearch'
-		    }, '-',{
-		        text: 'Search More',
-		        iconCls: 'fa fa-search-plus',
-		        handler: 'openSearchWindow'	
-			},'-',{
-                text: 'Clear Text',
-                iconCls: 'fa fa-eraser',
-                handler: 'clearText' 
-            }, '->',{
-		        text: 'Add',
-		        tooltip: 'Add a new row',
-		        iconCls: 'fa fa-plus',
-		        handler: 'openAddWindow'	
-		    },'-',{
-		        text: 'Removes',
-		        tooltip: 'Remove the selected item',
-		        iconCls:'fa fa-trash',
-		        handler: 'deleteMoreRows'	
-		    }],			
-            dockedItems: [{
-                xtype: 'pagingtoolbar',
-                dock: 'bottom',
-                displayInfo: true,
-                bind: '{salaryLists}'
-            }]
+
+    header: {
+        itemPosition: 1, // after title before collapse tool
+        items: [{
+            ui: 'default-toolbar',
+            xtype: 'button',
+            text: 'Export to ...',
+            menu: {
+                defaults: {
+                    handler: 'exportTo'
+                },
+                items: [{
+                    text:   'Excel xlsx',
+                    cfg: {
+                        type: 'excel07',
+                        ext: 'xlsx'
+                    }
+                },{
+                    text:   'Excel xlsx (include groups)',
+                    cfg: {
+                        type: 'excel07',
+                        ext: 'xlsx',
+                        includeGroups: true,
+                        includeSummary: true
+                    }
+                },{
+                    text: 'Excel xml',
+                    cfg: {
+                        type: 'excel03',
+                        ext: 'xml'
+                    }
+                },{
+                    text: 'Excel xml (include groups)',
+                    cfg: {
+                        includeGroups: true,
+                        includeSummary: true
+                    }
+                },{
+                    text:   'CSV',
+                    cfg: {
+                        type: 'csv'
+                    }
+                },{
+                    text:   'TSV',
+                    cfg: {
+                        type: 'tsv',
+                        ext: 'csv'
+                    }
+                },{
+                    text:   'HTML',
+                    cfg: {
+                        type: 'html'
+                    }
+                },{
+                    text:   'HTML (include groups)',
+                    cfg: {
+                        type: 'html',
+                        includeGroups: true,
+                        includeSummary: true
+                    }
+                }]
+            }
         }]
+    }
 });

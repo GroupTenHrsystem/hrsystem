@@ -9,7 +9,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.selection.CheckboxModel',
         'Ext.form.field.Date',
         'Ext.grid.column.Date',
-        'Ext.view.MultiSelector'
+        'Ext.view.MultiSelector',
     ],
     layout: 'fit',
     deferredRender: false,
@@ -17,7 +17,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
     {
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: '绩效管理',
+            title: '发起的绩效',
             //routeId: 'user',
             viewModel: {type: 'performanceViewModel'},
             selModel: {type: 'checkboxmodel'},
@@ -127,6 +127,8 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 text: 'Clear Text',
                 iconCls: 'fa fa-eraser',
                 handler: 'clearText' 
+               
+                           
             }, '->',{
 		        text: 'excel',
 		        tooltip: 'excel',
@@ -155,7 +157,8 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         {
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: 'Active Tab',
+            title: '参与的绩效',
+            collapsible: true,
             // html: 'KitchenSink.DummyText.longText'
             viewModel: {type: 'myPerformanceViewModel'},
             selModel: {type: 'checkboxmodel'},
@@ -188,7 +191,10 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 dock: 'bottom',
                 displayInfo: true,
                 bind: '{myPerformanceLists}'
-            }]
-        }
-        ]
+            }],
+            // header: {
+            //             itemPosition: 1, // after title before collapse tool
+                        
+            //         }
+        }]
 });
