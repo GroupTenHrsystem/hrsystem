@@ -11,17 +11,17 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 
     exportTo: function(btn){
         var cfg = Ext.merge({
-            title: 'Grid export demo',
-            fileName: 'GridExport' + '.' + (btn.cfg.ext || btn.cfg.type)
+           // title: '数钱',
+            fileName: '等死' + '.' + (btn.cfg.ext || btn.cfg.type)
         }, btn.cfg);
 
         this.getView().saveDocumentAs(cfg);
     },
- onBeforeDocumentSave: function(view){
-        this.timeStarted = Date.now();
-        view.mask('Document is prepared for export. Please wait ...');
-        Ext.log('export started');
-    },
+	 onBeforeDocumentSave: function(view){
+	        this.timeStarted = Date.now();
+	        view.mask('Document is prepared for export. Please wait ...');
+	        Ext.log('export started');
+	},
 
     onDocumentSave: function(view){
         view.unmask();
@@ -30,6 +30,16 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 
     onDataReady: function(){
         Ext.log('data ready; time passed = ' + (Date.now() - this.timeStarted));
+    },
+     onToggleExpanded: function (btn, pressed) {
+        var view = this.getView(),
+            plugin = view.findPlugin('preview'),
+            vm = this.getViewModel();
+
+        plugin.toggleExpanded(pressed);
+        vm.set({
+            expanded: pressed
+        });
     },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){

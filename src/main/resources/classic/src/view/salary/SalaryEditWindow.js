@@ -29,18 +29,13 @@ Ext.define('Aria.view.salary.SalaryEditWindow', {
             name:'performanceName'
         }, {
             xtype: 'datefield',
-            fieldLabel: '考核开始时间',
-            name:'startTime',
-            format: 'Y/m/d H:i:s'
-        }, {
-            xtype: 'datefield',
-            fieldLabel: '考核结束时间',
-            name:'endTime',
+            fieldLabel: '发钱日',
+            name:'salaryTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'textfield',
-            fieldLabel: '考核周期',
-            name:'cycle'
+            fieldLabel: '钱数',
+            name:'salarySum'
         }]
     }],
    
