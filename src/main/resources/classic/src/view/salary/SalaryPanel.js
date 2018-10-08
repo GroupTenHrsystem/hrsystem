@@ -179,56 +179,144 @@ Ext.define('Admin.view.salary.SalaryPanel', {
         // }]
     },
 
-    header: {
-        itemPosition: 1, // after title before collapse tool
+     tbar: {
+        overflowHandler: 'menu',
         items: [{
-                xtype: 'combobox',
-                reference:'searchFieldName',
-                hideLabel: true,
-                store:Ext.create("Ext.data.Store", {
-                    fields: ["name", "value"],
-                    data: [
-                        { name: '发钱日', value: 'salaryTime' },
-                        { name: '钱数', value: 'salarySum' }
-                    ]
-                }),
-                displayField: 'name',
-                valueField:'value',
-                value:'请选择',
-                editable: false,
-                queryMode: 'local',
-                triggerAction: 'all',
-                emptyText: 'Select a state...',
-                width: 135,
-                listeners:{
-                    select: 'searchComboboxSelectChuang'
-                }
-            }, {
-                xtype:'textfield',
-                reference:'searchFieldValue',
-                name:'salaryPanelSearchField'
-            }, {
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue',
-                fieldLabel: 'From',
-                name: 'from_date'
-            }, {
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue2',
-                fieldLabel: 'To',
-                name: 'to_date'
-            },{
+            text:'快速查询',
+            iconCls: 'x-fa fa-th',
+            menu: {
+                id: 'mainMenu',
+                showSeparator: true,
+                items: [{
+                    xtype: 'combobox',
+                    hideLabel: true,
+                    // store: {
+                    //     type: 'states'
+                    // },
+                    displayField: 'state',
+                    typeAhead: true,
+                    queryMode: 'local',
+                    triggerAction: 'all',
+                    emptyText: 'Select a state...',
+                    selectOnFocus: true,
+                    width: 135,
+                    indent: true
+                }, {
+                    text: '钱数',
+                    id: 'salarySumCheck',
+                    checked: false,       // when checked has a boolean value, it is assumed to be a CheckItem
+                    menu: {
+                        items: [{ 
+                                hideOnClick : false,
+                                xtype: 'textfield',
+                                reference:'searchFieldValue',
+                            //    handler: 'onDateSelect'
+                            }]
+                    },
+                   // checkHandler: 'onItemCheck'
+                }, {
+                    text: '发钱日',
+                    id: 'salaryTimeCheck',
+                    checked: false, 
+                    menu: {
+                            id: 'dateMainMenu',
+                            showSeparator: true,
+                            items: [{
+                                text: '范围开始',
+                                id: 'salaryTimeStartCheck',
+                                checked: false,      
+                                menu: {
+                                    hideOnClick : false,
+                                    xtype: 'datemenu',
+                                    reference:'searchDataFieldValue',
+                                    handler: 'onDateSelect'
+                                }
+                            },{
+                                text: '范围结束',
+                                id: 'salaryTimeEndCheck',
+                                checked: false, 
+                                menu: {
+                                    hideOnClick : false,
+                                    xtype: 'datemenu',
+                                    reference:'searchDataFieldValue2',
+                                //    handler: 'onDateSelect'
+                                }
+                            },'-', {
+                                text: '具体日期',
+                                checked: false, 
+                                menu: {
+                                    hideOnClick : false,
+                                    xtype: 'datemenu',
+                                //    handler: 'onDateSelect'
+                                }
+                            }]
+                    }
+                },  {
+                    text: 'Disabled Item',
+                    disabled: true
+                }]
+            }
+        },{
              //   text: 'Search',
                 xtype: 'button',
                 iconCls: 'fa fa-search',
                 handler: 'quickSearch'
-            },{
+        }]
+    },
+
+
+    header: {
+        itemPosition: 1, // after title before collapse tool
+        items: [
+            // {
+            //     xtype: 'combobox',
+            //     reference:'searchFieldName',
+            //     hideLabel: true,
+            //     store:Ext.create("Ext.data.Store", {
+            //         fields: ["name", "value"],
+            //         data: [
+            //             { name: '发钱日', value: 'salaryTime' },
+            //             { name: '钱数', value: 'salarySum' }
+            //         ]
+            //     }),
+            //     displayField: 'name',
+            //     valueField:'value',
+            //     value:'请选择',
+            //     editable: false,
+            //     queryMode: 'local',
+            //     triggerAction: 'all',
+            //     emptyText: 'Select a state...',
+            //     width: 135,
+            //     listeners:{
+            //         select: 'searchComboboxSelectChuang'
+            //     }
+            // }, {
+            //     xtype:'textfield',
+            //     reference:'searchFieldValue',
+            //     name:'salaryPanelSearchField'
+            // }, {
+            //     xtype: 'datefield',
+            //     hideLabel: true,
+            //     hidden:true,
+            //     format: 'Y/m/d H:i:s',
+            //     reference:'searchDataFieldValue',
+            //     fieldLabel: 'From',
+            //     name: 'from_date'
+            // }, {
+            //     xtype: 'datefield',
+            //     hideLabel: true,
+            //     hidden:true,
+            //     format: 'Y/m/d H:i:s',
+            //     reference:'searchDataFieldValue2',
+            //     fieldLabel: 'To',
+            //     name: 'to_date'
+            // },{
+            //  //   text: 'Search',
+            //     xtype: 'button',
+            //     iconCls: 'fa fa-search',
+            //     handler: 'quickSearch'
+            // },
+            {
              //   text: 'Search More',
                 xtype: 'button',
                 iconCls: 'fa fa-search-plus',

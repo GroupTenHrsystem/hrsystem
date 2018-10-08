@@ -88,25 +88,25 @@ Ext.define('Admin.view.salary.SalaryViewController', {
         win.close();
 	},
 	/*combobox选中后控制对应输入（文本框和日期框）框显示隐藏*/
-	searchComboboxSelectChuang:function(combo,record,index){
-		//alert(record.data.name);
-		var searchField = this.lookupReference('searchFieldName').getValue();
-		if(searchField==='salaryTime'){
-			this.lookupReference('searchFieldValue').hide();
-			this.lookupReference('searchDataFieldValue').show();
-			this.lookupReference('searchDataFieldValue2').show();
-		}else{
-			this.lookupReference('searchFieldValue').show();
-			this.lookupReference('searchDataFieldValue').hide();
-			this.lookupReference('searchDataFieldValue2').hide();
-		}
-	},
+	// searchComboboxSelectChuang:function(combo,record,index){
+	// 	//alert(record.data.name);
+	// 	var searchField = this.lookupReference('searchFieldName').getValue();
+	// 	if(searchField==='salaryTime'){
+	// 		this.lookupReference('searchFieldValue').hide();
+	// 		this.lookupReference('searchDataFieldValue').show();
+	// 		this.lookupReference('searchDataFieldValue2').show();
+	// 	}else{
+	// 		this.lookupReference('searchFieldValue').show();
+	// 		this.lookupReference('searchDataFieldValue').hide();
+	// 		this.lookupReference('searchDataFieldValue2').hide();
+	// 	}
+	// },
 	/*Quick Search*/
 	quickSearch:function(btn){
-	var searchField = this.lookupReference('searchFieldName').getValue();
+//	var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
-		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
-		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();		
+		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').query('datepicker')[0].getValue();
+		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').query('datepicker')[0].getValue();		
 		var store =	btn.up('gridpanel').getStore();
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
 		Ext.apply(store.proxy.extraParams, 
@@ -115,16 +115,24 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 					salaryTimeStart:"",
 					salaryTimeEnd:""
 			});
-		
-		if(searchField==='salarySum'){
-			var fieldValue = searchField.getValue;
+		// console.log(salaryTimeEndCheck.checked);
+		// console.log(searchDataFieldValue);
+		// console.log(searchDataFieldValue2);
+		if(Ext.getCmp('salarySumCheck').checked){
 			Ext.apply(store.proxy.extraParams, {salarySum:searchValue});
 		}
-		if(searchField==='salaryTime'){
-			Ext.apply(store.proxy.extraParams,{
-				salaryTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				salaryTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
-			});
+		if(Ext.getCmp('salaryTimeCheck').checked){
+			if(Ext.getCmp('salaryTimeStartCheck').checked){
+				Ext.apply(store.proxy.extraParams,{
+					salaryTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s')
+				});
+			}
+			if(Ext.getCmp('salaryTimeEndCheck').checked){
+				Ext.apply(store.proxy.extraParams,{
+					salaryTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+				});
+			}
+			
 		}
 		store.load({params:{start:0, limit:20, page:1}});
 	},
