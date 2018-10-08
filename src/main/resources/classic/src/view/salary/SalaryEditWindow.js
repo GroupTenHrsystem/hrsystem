@@ -6,7 +6,7 @@ Ext.define('Aria.view.salary.SalaryEditWindow', {
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: 'Edit salary Window',
+    title: '修改薪资信息',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -23,10 +23,6 @@ Ext.define('Aria.view.salary.SalaryEditWindow', {
             name:'id',
             hidden: true,
             readOnly: true
-        }, {
-            xtype: 'textfield',
-            fieldLabel: '绩效考核名称',
-            name:'performanceName'
         }, {
             xtype: 'datefield',
             fieldLabel: '发钱日',

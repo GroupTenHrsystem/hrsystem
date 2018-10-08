@@ -4,6 +4,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     controller: 'salaryViewController',
 
     requires: [
+        'Ext.grid.filters.Filters',
         'Ext.grid.plugin.Exporter'
     ],
 
@@ -29,7 +30,8 @@ Ext.define('Admin.view.salary.SalaryPanel', {
 
     loadMask: true,
     plugins: {
-        gridexporter: true
+        gridexporter: true,
+        gridfilters: true
     },
 
     bind: '{salaryLists}',
@@ -53,9 +55,16 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     },
     selModel: {type: 'checkboxmodel'},
     columns: [
-                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发钱日',flex: 1,formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '钱数',flex: 1},
+                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true,filter: 'number'},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发钱日',flex: 1,formatter: 'date("Y/m/d H:i:s")',filter: true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '钱数',flex: 1,
+                     filter: {
+                        type: 'string',
+                        itemDefaults: {
+                            emptyText: 'Search for...'
+                        }
+                    }
+                },
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
@@ -65,14 +74,114 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                 }
             ],
 
-    plugins: {
-        preview: {
-            expanded: true,
-            bodyField: 'salaryTime',
-        }
+    // plugins: {
+    //     preview: {
+    //         expanded: true,
+    //         bodyField: 'salaryTime',
+    //     }
+    // },
+
+    // plugins: {
+    //     rowexpander: {
+    //         rowBodyTpl: new Ext.XTemplate(
+    //             '<p><b>Company:</b> {salarySum}</p>',
+    //             '<p><b>Change:</b> {salarySum}</p>',
+    //             {
+    //                 formatChange: function (v) {
+    //                     var color = v >= 0 ? 'green' : 'red';
+    //                     return '<span style="color: ' + color + ';">' +
+    //                         Ext.util.Format.usMoney(v) + '</span>';
+    //                 }
+    //             })
+    //     }
+    // },
+
+    // tbar: [
+    //         {
+    //             xtype: 'combobox',
+    //             reference:'searchFieldName',
+    //             hideLabel: true,
+    //             store:Ext.create("Ext.data.Store", {
+    //                 fields: ["name", "value"],
+    //                 data: [
+    //                     { name: '发钱日', value: 'salaryTime' },
+    //                     { name: '钱数', value: 'salarySum' }
+    //                 ]
+    //             }),
+    //             displayField: 'name',
+    //             valueField:'value',
+    //             value:'请选择',
+    //             editable: false,
+    //             queryMode: 'local',
+    //             triggerAction: 'all',
+    //             emptyText: 'Select a state...',
+    //             width: 135,
+    //             listeners:{
+    //                 select: 'searchComboboxSelectChuang'
+    //             }
+    //         }, '-',{
+    //             xtype:'textfield',
+    //             reference:'searchFieldValue',
+    //             name:'salaryPanelSearchField'
+    //         }, '-',{
+    //             xtype: 'datefield',
+    //             hideLabel: true,
+    //             hidden:true,
+    //             format: 'Y/m/d H:i:s',
+    //             reference:'searchDataFieldValue',
+    //             fieldLabel: 'From',
+    //             name: 'from_date'
+    //         }, {
+    //             xtype: 'datefield',
+    //             hideLabel: true,
+    //             hidden:true,
+    //             format: 'Y/m/d H:i:s',
+    //             reference:'searchDataFieldValue2',
+    //             fieldLabel: 'To',
+    //             name: 'to_date'
+    //      },'-',{
+    //             text: 'Search',
+    //             iconCls: 'fa fa-search',
+    //             handler: 'quickSearch'
+    //         }, '-',{
+    //             text: 'Search More',
+    //             iconCls: 'fa fa-search-plus',
+    //             handler: 'openSearchWindow' 
+    //         },'-',{
+    //             text: 'Clear Text',
+    //             iconCls: 'fa fa-eraser',
+    //             handler: 'clearText'          
+    //         }, 
+
+    //         '->',{
+    //             text: 'Add',
+    //             tooltip: 'Add a new row',
+    //             iconCls: 'fa fa-plus',
+    //             handler: 'openAddWindow'    
+    //         },'-',{
+    //             text: 'Removes',
+    //             tooltip: 'Remove the selected item',
+    //             iconCls:'fa fa-trash',
+    //             handler: 'deleteMoreRows'   
+    //         }],     
+
+    bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true,
+        displayMsg: '本页显示 {0} - {1} 条, 总数 {2} 条',
+        emptyMsg: "No topics to display",
+
+        // items: ['-', {
+        //     bind: '{salaryLists ? "隐藏理由" : "显示理由"}',
+        //     pressed: '{salaryLists}',
+        //     enableToggle: true,
+        //     toggleHandler: 'onToggleExpanded'
+        // }]
     },
 
-    tbar: [{
+    header: {
+        itemPosition: 1, // after title before collapse tool
+        items: [{
                 xtype: 'combobox',
                 reference:'searchFieldName',
                 hideLabel: true,
@@ -94,11 +203,11 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                 listeners:{
                     select: 'searchComboboxSelectChuang'
                 }
-            }, '-',{
+            }, {
                 xtype:'textfield',
                 reference:'searchFieldValue',
-                name:'performancePanelSearchField'
-            }, '-',{
+                name:'salaryPanelSearchField'
+            }, {
                 xtype: 'datefield',
                 hideLabel: true,
                 hidden:true,
@@ -114,48 +223,34 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                 reference:'searchDataFieldValue2',
                 fieldLabel: 'To',
                 name: 'to_date'
-         },'-',{
-                text: 'Search',
+            },{
+             //   text: 'Search',
+                xtype: 'button',
                 iconCls: 'fa fa-search',
                 handler: 'quickSearch'
-            }, '-',{
-                text: 'Search More',
+            },{
+             //   text: 'Search More',
+                xtype: 'button',
                 iconCls: 'fa fa-search-plus',
                 handler: 'openSearchWindow' 
-            },'-',{
-                text: 'Clear Text',
+            },{
+             //   text: 'Clear Text',
+                xtype: 'button',
                 iconCls: 'fa fa-eraser',
-                handler: 'clearText' 
-                       
-            }, '->',{
-                text: 'Add',
+                handler: 'clearText'          
+            }, {
+              //  text: 'Add',
+                xtype: 'button',
                 tooltip: 'Add a new row',
                 iconCls: 'fa fa-plus',
                 handler: 'openAddWindow'    
-            },'-',{
-                text: 'Removes',
+            },{
+             //   text: 'Removes',
+                xtype: 'button',
                 tooltip: 'Remove the selected item',
                 iconCls:'fa fa-trash',
                 handler: 'deleteMoreRows'   
-            }],     
-
-    bbar: {
-        xtype: 'pagingtoolbar',
-        displayInfo: true,
-        displayMsg: '本页显示 {0} - {1} 条, 总数 {2} 条',
-        emptyMsg: "No topics to display",
-
-        items: ['-', {
-            bind: '{salaryLists ? "隐藏理由" : "显示理由"}',
-            pressed: '{salaryLists}',
-            enableToggle: true,
-            toggleHandler: 'onToggleExpanded'
-        }]
-    },
-
-    header: {
-        itemPosition: 1, // after title before collapse tool
-        items: [{
+            },{
             ui: 'default-toolbar',
             xtype: 'button',
             text: '导出到...',

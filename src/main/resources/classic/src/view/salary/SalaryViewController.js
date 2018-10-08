@@ -14,7 +14,9 @@ Ext.define('Admin.view.salary.SalaryViewController', {
            // title: '数钱',
             fileName: '等死' + '.' + (btn.cfg.ext || btn.cfg.type)
         }, btn.cfg);
-
+  //       var view = this.getView(),
+  //       plugin = view.findPlugin('rowexpander');
+		// view.remove(plugin);
         this.getView().saveDocumentAs(cfg);
     },
 	 onBeforeDocumentSave: function(view){
@@ -31,16 +33,16 @@ Ext.define('Admin.view.salary.SalaryViewController', {
     onDataReady: function(){
         Ext.log('data ready; time passed = ' + (Date.now() - this.timeStarted));
     },
-     onToggleExpanded: function (btn, pressed) {
-        var view = this.getView(),
-            plugin = view.findPlugin('preview'),
-            vm = this.getViewModel();
+    //  onToggleExpanded: function (btn, pressed) {
+    //     var view = this.getView(),
+    //         plugin = view.findPlugin('preview'),
+    //         vm = this.getViewModel();
 
-        plugin.toggleExpanded(pressed);
-        vm.set({
-            expanded: pressed
-        });
-    },
+    //     plugin.toggleExpanded(pressed);
+    //     vm.set({
+    //         expanded: pressed
+    //     });
+    // },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('salary').add(Ext.widget('salaryAddWindow')).show();
@@ -80,7 +82,7 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		var store = Ext.data.StoreManager.lookup('salaryGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	console.log(record);
+    	console.log(values);
     	record.set(values);   	
     	setTimeout(store.load(),"500");
         win.close();
@@ -109,32 +111,19 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
 		Ext.apply(store.proxy.extraParams, 
 				{
-					performanceName:"",
-					cycle:"",
-					startTimeStart:"",
-					startTimeEnd:"",
-					endTimeStart:"",
-					endTimeEnd:""
+					salarySum:"",
+					salaryTimeStart:"",
+					salaryTimeEnd:""
 			});
 		
-		if(searchField==='performanceName'){
+		if(searchField==='salarySum'){
 			var fieldValue = searchField.getValue;
-			Ext.apply(store.proxy.extraParams, {performanceName:searchValue});
+			Ext.apply(store.proxy.extraParams, {salarySum:searchValue});
 		}
-		if(searchField==='cycle'){
-			var fieldValue = searchField.getValue;
-			Ext.apply(store.proxy.extraParams, {cycle:searchValue});
-		}
-		if(searchField==='startTime'){
+		if(searchField==='salaryTime'){
 			Ext.apply(store.proxy.extraParams,{
-				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				startTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
-			});
-		}
-		if(searchField==='endTime'){
-			Ext.apply(store.proxy.extraParams,{
-				endTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				endTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+				salaryTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+				salaryTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});
@@ -149,35 +138,21 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		var form = win.down('form');
 		var values  = form.getValues();
 		Ext.apply(store.proxy.extraParams, {
-					performanceName:"",
-					cycle:"",
-					startTimeStart:"",
-					startTimeEnd:"",
-					endTimeStart:"",
-					endTimeEnd:""
+					salarySum:"",
+					salaryTimeStart:"",
+					salaryTimeEnd:""
 			});
 		Ext.apply(store.proxy.extraParams,{
-			performanceName:values.performanceName,
-			cycle:values.cycle
+			salarySum:values.performanceName
 		});
-		if(values.startTimeStart!=""){
+		if(values.salaryTimeStart!=""){
 			Ext.apply(store.proxy.extraParams,{
-				startTimeStart:Ext.util.Format.date(values.startTimeStart, 'Y/m/d H:i:s')
+				salaryTimeStart:Ext.util.Format.date(values.salaryTimeStart, 'Y/m/d H:i:s')
 			});
 		}
-		if(values.startTimeEnd!=""){
+		if(values.salaryTimeEnd!=""){
 			Ext.apply(store.proxy.extraParams,{
-				startTimeEnd:Ext.util.Format.date(values.startTimeEnd, 'Y/m/d H:i:s')
-			});
-		}
-		if(values.endTimeStart!=""){
-			Ext.apply(store.proxy.extraParams,{
-				endTimeStart:Ext.util.Format.date(values.endTimeStart, 'Y/m/d H:i:s')
-			});
-		}
-		if(values.endTimeEnd!=""){
-			Ext.apply(store.proxy.extraParams,{
-				endTimeEnd:Ext.util.Format.date(values.endTimeEnd, 'Y/m/d H:i:s')
+				salaryTimeEnd:Ext.util.Format.date(values.salaryTimeEnd, 'Y/m/d H:i:s')
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});

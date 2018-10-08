@@ -46,7 +46,7 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardViewController', {
 		var store = Ext.data.StoreManager.lookup('salaryStandardGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	console.log(record);
+    	console.log(values);
     	record.set(values);   	
     	setTimeout(store.load(),"500");
         win.close();

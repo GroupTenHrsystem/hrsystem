@@ -2,6 +2,7 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
     extend: 'Ext.panel.Panel',
     xtype: 'salaryStandardPanel',
     requires: [
+        'Ext.grid.filters.Filters',
         'Ext.grid.Panel',
         'Ext.toolbar.Paging',
         'Ext.form.field.ComboBox',

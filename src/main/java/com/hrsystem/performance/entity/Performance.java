@@ -72,7 +72,7 @@ public class Performance implements Serializable {
 	    private String processInstanceId;
 	    
 		@ManyToOne(cascade=CascadeType.ALL)
-		PerformanceTemplet performanceTemplet;
+		private PerformanceTemplet performanceTemplet;
 		@ManyToOne(cascade=CascadeType.ALL)
 		private Staff staff;
 }

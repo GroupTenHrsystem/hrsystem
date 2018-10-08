@@ -1,5 +1,7 @@
 package com.hrsystem.activiti.config;
 
+import java.util.Date;
+
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
@@ -8,12 +10,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import com.hrsystem.salary.entity.Salary;
+import com.hrsystem.salary.service.ISalaryService;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IStaffService;
 //@Component
 public class HrSystemInitUsersAndGroupsDB {
 		@Autowired
 		private IStaffService staffService;
+		@Autowired
+		private ISalaryService salaryService;
 		
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
@@ -79,7 +85,13 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.createMembership("user6", "marketingClerk");
 		        		identityService.createMembership("user7", "financeManager");
 		        		identityService.createMembership("user8", "financeClerk");
-
+		        		
+		        		 for (int i = 1; i <=100; i++) {
+		        			 Salary salary = new Salary();
+		        			 salary.setSalarySum(i*20.0);
+		        			 salary.setSalaryTime(new Date());
+		        			 salaryService.insertSalary(salary);
+		        		}
 		            }
 		        };
 		    }

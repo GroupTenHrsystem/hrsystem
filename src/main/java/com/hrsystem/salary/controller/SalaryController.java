@@ -19,6 +19,7 @@ import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.salary.entity.Salary;
+import com.hrsystem.salary.entity.DTO.SalaryQueryDTO;
 import com.hrsystem.salary.service.ISalaryService;
 
 
@@ -101,8 +102,8 @@ public class SalaryController {
 		}
 	 
 	@GetMapping
-	public Page<Salary> getPage(ExtjsPageRequest pageRequest) 
+	public Page<Salary> getPage(SalaryQueryDTO salaryQueryDTO,ExtjsPageRequest pageRequest) 
 	{
-		return salaryService.findAll(null, pageRequest.getPageable());
+		return salaryService.findAll(SalaryQueryDTO.getWhereClause(salaryQueryDTO), pageRequest.getPageable());
 	}
 }

@@ -3,15 +3,15 @@ package com.hrsystem.salary.entity;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.hrsystem.performance.entity.Performance;
-import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.user.entity.Staff;
 
 import lombok.Data;
@@ -34,4 +34,9 @@ public class Salary {
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date salaryTime; 
 	private Double salarySum;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	private SalaryStandard salaryStandard;
+	@ManyToOne(cascade=CascadeType.ALL)
+	private Staff staff;
 }

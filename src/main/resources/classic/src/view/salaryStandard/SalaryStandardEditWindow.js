@@ -17,7 +17,8 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardEditWindow', {
         layout: 'form',
         padding: '10px',
         ariaLabel: 'Enter your name',
-        items:[{
+        items: [
+         {
             xtype: 'textfield',
             fieldLabel: 'id',
             name:'id',
@@ -25,22 +26,70 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardEditWindow', {
             readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: '绩效考核名称',
-            name:'performanceName'
-        }, {
-            xtype: 'datefield',
-            fieldLabel: '考核开始时间',
-            name:'startTime',
-            format: 'Y/m/d H:i:s'
-        }, {
-            xtype: 'datefield',
-            fieldLabel: '考核结束时间',
-            name:'endTime',
-            format: 'Y/m/d H:i:s'
+            fieldLabel: '基本工资',
+            name:'basis',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        },  {
+            xtype: 'textfield',
+            fieldLabel: '补贴',
+            name:'subsidy',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        },  {
+            xtype: 'textfield',
+            fieldLabel: '加班费/天',
+            name:'overtime',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        },  {
+            xtype: 'textfield',
+            fieldLabel: '养老保险比例',
+            name:'pensionBenefits',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        },  {
+            xtype: 'textfield',
+            fieldLabel: '医疗保险比例',
+            name:'medicareBenefits',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        },  {
+            xtype: 'textfield',
+            fieldLabel: '失业保险比例',
+            name:'unemploymentBenefits',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        },  {
+            xtype: 'textfield',
+            fieldLabel: '工伤保险比例',
+            name:'injuryBenefits',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
         }, {
             xtype: 'textfield',
-            fieldLabel: '考核周期',
-            name:'cycle'
+            fieldLabel: '生育保险比例',
+            name:'maternityBenefits',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        }, {
+            xtype: 'textfield',
+            fieldLabel: '住房公积金比例',
+            name:'houseFund',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        }, {
+            xtype: 'textfield',
+            fieldLabel: '绩效比例',
+            name:'kpi',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
+        }, {
+            xtype: 'textfield',
+            fieldLabel: '缺勤比例',
+            name:'absence',
+            regex: /^\d+(\.\d{1,2})?$/,
+            regexText: '请输入正确的整数或小数'
         }]
     }],
    
