@@ -33,6 +33,8 @@ public class PerformanceQueryDTO {
 	private String userId;
 	private String performanceName;	
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	private Date startTime;
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date startTimeStart; 
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date startTimeEnd; 
@@ -64,6 +66,10 @@ public class PerformanceQueryDTO {
 				if (null !=performanceQueryDTO.getCycle()) {
 					predicate.add(criteriaBuilder.equal(root.get("cycle").as(Long.class),
 								performanceQueryDTO.getCycle()));
+				}
+				if (null !=performanceQueryDTO.getStartTime()) {
+					predicate.add(criteriaBuilder.equal(root.get("startTime").as(Date.class),
+								performanceQueryDTO.getStartTime()));
 				}
 				if (null!=performanceQueryDTO.getStartTimeStart()) {
 					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("startTime").as(Date.class),

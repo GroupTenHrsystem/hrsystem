@@ -182,80 +182,68 @@ Ext.define('Admin.view.salary.SalaryPanel', {
      tbar: {
         overflowHandler: 'menu',
         items: [{
-            text:'快速查询',
-            iconCls: 'x-fa fa-th',
-            menu: {
-                id: 'mainMenu',
-                showSeparator: true,
-                items: [{
-                    xtype: 'combobox',
-                    hideLabel: true,
-                    // store: {
-                    //     type: 'states'
-                    // },
-                    displayField: 'state',
-                    typeAhead: true,
-                    queryMode: 'local',
-                    triggerAction: 'all',
-                    emptyText: 'Select a state...',
-                    selectOnFocus: true,
-                    width: 135,
-                    indent: true
-                }, {
-                    text: '钱数',
-                    id: 'salarySumCheck',
-                    checked: false,       // when checked has a boolean value, it is assumed to be a CheckItem
-                    menu: {
-                        items: [{ 
-                                hideOnClick : false,
-                                xtype: 'textfield',
-                                reference:'searchFieldValue',
-                            //    handler: 'onDateSelect'
-                            }]
-                    },
-                   // checkHandler: 'onItemCheck'
-                }, {
-                    text: '发钱日',
-                    id: 'salaryTimeCheck',
-                    checked: false, 
-                    menu: {
-                            id: 'dateMainMenu',
-                            showSeparator: true,
-                            items: [{
-                                text: '范围开始',
-                                id: 'salaryTimeStartCheck',
-                                checked: false,      
-                                menu: {
-                                    hideOnClick : false,
-                                    xtype: 'datemenu',
-                                    reference:'searchDataFieldValue',
-                                    handler: 'onDateSelect'
-                                }
-                            },{
-                                text: '范围结束',
-                                id: 'salaryTimeEndCheck',
-                                checked: false, 
-                                menu: {
-                                    hideOnClick : false,
-                                    xtype: 'datemenu',
-                                    reference:'searchDataFieldValue2',
-                                //    handler: 'onDateSelect'
-                                }
-                            },'-', {
-                                text: '具体日期',
-                                checked: false, 
-                                menu: {
-                                    hideOnClick : false,
-                                    xtype: 'datemenu',
-                                //    handler: 'onDateSelect'
-                                }
-                            }]
-                    }
-                },  {
-                    text: 'Disabled Item',
-                    disabled: true
-                }]
-            }
+                text:'快速查询',
+                iconCls: 'x-fa fa-th',              
+                menu: {
+                    id: 'mainMenu',
+                    showSeparator: true,
+                    items: [{
+                            text:'重置',     
+                            handler:  'clearText'     
+                        },'-',{
+                            text: '钱数',
+                            id: 'salarySumCheck',
+                            checked: false,       // when checked has a boolean value, it is assumed to be a CheckItem
+                            menu: {
+                                items: [{ 
+                                        hideOnClick : false,
+                                        xtype: 'textfield',
+                                        reference:'searchFieldValue',
+                                    //    handler: 'onDateSelect'
+                                    }]
+                            },
+                           // checkHandler: 'onItemCheck'
+                        }, {
+                            text: '发钱日',
+                            id: 'salaryTimeCheck',
+                            checked: false, 
+                            menu: {
+                                    id: 'dateMainMenu',
+                                    showSeparator: true,
+                                    items: [{
+                                        text: '范围开始',
+                                        id: 'salaryTimeStartCheck',
+                                        checked: false,      
+                                        menu: {
+                                            hideOnClick : false,
+                                            xtype: 'datemenu',
+                                            reference:'searchDataFieldValue',
+                                          //  handler: 'onDateSelect'
+                                        }
+                                    },{
+                                        text: '范围结束',
+                                        id: 'salaryTimeEndCheck',
+                                        checked: false, 
+                                        menu: {
+                                            hideOnClick : false,
+                                            xtype: 'datemenu',
+                                            reference:'searchDataFieldValue2',
+                                        //    handler: 'onDateSelect'
+                                        }
+                                    },'-', {
+                                        text: '具体日期',
+                                        id: 'salaryTimeDetailCheck',
+                                        checked: false, 
+                                        menu: {
+                                            hideOnClick : false,
+                                            xtype: 'datemenu',
+                                            reference:'searchDataFieldValue3',
+                                        //    handler: 'onDateSelect'
+                                        }
+                                    }]
+                            }
+                        }]
+                 }
         },{
              //   text: 'Search',
                 xtype: 'button',

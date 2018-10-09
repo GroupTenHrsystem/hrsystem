@@ -64,8 +64,14 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 	/* Clear Text */
 	clearText:function(btn){
 		this.lookupReference('searchFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue2').setValue("");		
+		this.lookupReference('searchDataFieldValue').query('datepicker')[0].setValue("");
+		this.lookupReference('searchDataFieldValue2').query('datepicker')[0].setValue("");		
+		this.lookupReference('searchDataFieldValue3').query('datepicker')[0].setValue("");
+		Ext.getCmp('salarySumCheck').setChecked(false);
+		Ext.getCmp('salaryTimeCheck').setChecked(false);
+		Ext.getCmp('salaryTimeDetailCheck').setChecked(false);
+		Ext.getCmp('salaryTimeStartCheck').setChecked(false);
+		Ext.getCmp('salaryTimeEndCheck').setChecked(false);
 	},
     /*Edit*/
 	openEditWindow:function(grid, rowIndex, colIndex){
@@ -107,13 +113,15 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
 		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').query('datepicker')[0].getValue();
 		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').query('datepicker')[0].getValue();		
+		var searchDataFieldValue3 = this.lookupReference('searchDataFieldValue3').query('datepicker')[0].getValue();
 		var store =	btn.up('gridpanel').getStore();
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
 		Ext.apply(store.proxy.extraParams, 
 				{
 					salarySum:"",
 					salaryTimeStart:"",
-					salaryTimeEnd:""
+					salaryTimeEnd:"",
+					salaryTime:""
 			});
 		// console.log(salaryTimeEndCheck.checked);
 		// console.log(searchDataFieldValue);
@@ -122,17 +130,22 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 			Ext.apply(store.proxy.extraParams, {salarySum:searchValue});
 		}
 		if(Ext.getCmp('salaryTimeCheck').checked){
-			if(Ext.getCmp('salaryTimeStartCheck').checked){
+			if(Ext.getCmp('salaryTimeDetailCheck').checked){
 				Ext.apply(store.proxy.extraParams,{
-					salaryTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s')
+					salaryTime:Ext.util.Format.date(searchDataFieldValue3, 'Y/m/d H:i:s')
 				});
-			}
-			if(Ext.getCmp('salaryTimeEndCheck').checked){
-				Ext.apply(store.proxy.extraParams,{
-					salaryTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
-				});
-			}
-			
+			}else{
+				if(Ext.getCmp('salaryTimeStartCheck').checked){
+					Ext.apply(store.proxy.extraParams,{
+						salaryTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s')
+					});
+				}
+				if(Ext.getCmp('salaryTimeEndCheck').checked){
+					Ext.apply(store.proxy.extraParams,{
+						salaryTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+					});
+				}	
+			}				
 		}
 		store.load({params:{start:0, limit:20, page:1}});
 	},

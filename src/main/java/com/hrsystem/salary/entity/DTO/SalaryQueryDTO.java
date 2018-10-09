@@ -48,11 +48,11 @@ public class SalaryQueryDTO {
 							salaryQueryDTO.getSalarySum()));
 				}
 				if (null!=salaryQueryDTO.getSalaryTimeStart()) {
-					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("salaryTimeStart").as(Date.class),
+					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("salaryTime").as(Date.class),
 							salaryQueryDTO.getSalaryTimeStart()));
 				}
 				if (null!=salaryQueryDTO.getSalaryTimeEnd()) {
-					predicate.add(criteriaBuilder.lessThanOrEqualTo(root.get("salaryTimeEnd").as(Date.class),
+					predicate.add(criteriaBuilder.lessThanOrEqualTo(root.get("salaryTime").as(Date.class),
 							salaryQueryDTO.getSalaryTimeEnd()));
 				}
 				Predicate[] pre = new Predicate[predicate.size()];
