@@ -22,6 +22,12 @@ Ext.define('Admin.view.performance.PerformancePanel', {
             viewModel: {type: 'performanceViewModel'},
             selModel: {type: 'checkboxmodel'},
             bind: '{performanceLists}',
+
+            collapsible: true,
+            collapseFirst: false,
+            frame: true,
+            minHeight: 200,
+
             scrollable: false,
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
@@ -43,7 +49,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'startTime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'cycle',text: '考核周期',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceCount',text: '待归档人数',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
@@ -71,6 +77,13 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                     ]
                 }
             ],
+
+            features: [{
+                ftype: 'grouping',
+                startCollapsed: true,
+                groupHeaderTpl: '{columnName}: {name} ({rows.length} 条记录{[values.rows.length > 1 ? "s" : ""]})'
+            }],
+
             tbar: [{
 	            xtype: 'combobox',
                 reference:'searchFieldName',

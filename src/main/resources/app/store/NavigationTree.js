@@ -6,7 +6,7 @@
     fields: [{
         name: 'text'
     }],
-
+    
     root: {
         expanded: true,
         children: [

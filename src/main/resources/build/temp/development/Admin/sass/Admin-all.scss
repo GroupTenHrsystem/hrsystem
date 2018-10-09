@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-$image-search-path: 'E:/STSworkspace/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -706,6 +706,7 @@ $include-ext-exporter-data-column: dynamic(true);;
 $include-ext-exporter-data-group: dynamic(true);;
 $include-ext-exporter-data-row: dynamic(true);;
 $include-ext-exporter-data-table: dynamic(true);;
+$include-ext-exporter-excel-pivotxlsx: dynamic(true);;
 $include-ext-exporter-excel-xlsx: dynamic(true);;
 $include-ext-exporter-excel-xml: dynamic(true);;
 $include-ext-exporter-file-base: dynamic(true);;
@@ -1125,6 +1126,48 @@ $include-ext-picker-color: dynamic(true);;
 $include-ext-picker-date: dynamic(true);;
 $include-ext-picker-month: dynamic(true);;
 $include-ext-picker-time: dynamic(true);;
+$include-ext-pivot-aggregators: dynamic(true);;
+$include-ext-pivot-grid: dynamic(true);;
+$include-ext-pivot-mixedcollection: dynamic(true);;
+$include-ext-pivot-axis-base: dynamic(true);;
+$include-ext-pivot-axis-item: dynamic(true);;
+$include-ext-pivot-axis-local: dynamic(true);;
+$include-ext-pivot-dimension-item: dynamic(true);;
+$include-ext-pivot-feature-pivotevents: dynamic(true);;
+$include-ext-pivot-feature-pivotstore: dynamic(true);;
+$include-ext-pivot-feature-pivotview: dynamic(true);;
+$include-ext-pivot-filter-base: dynamic(true);;
+$include-ext-pivot-filter-label: dynamic(true);;
+$include-ext-pivot-filter-value: dynamic(true);;
+$include-ext-pivot-matrix-base: dynamic(true);;
+$include-ext-pivot-matrix-local: dynamic(true);;
+$include-ext-pivot-matrix-remote: dynamic(true);;
+$include-ext-pivot-plugin-cellediting: dynamic(true);;
+$include-ext-pivot-plugin-configurator: dynamic(true);;
+$include-ext-pivot-plugin-drilldown: dynamic(true);;
+$include-ext-pivot-plugin-exporter: dynamic(true);;
+$include-ext-pivot-plugin-rangeeditor: dynamic(true);;
+$include-ext-pivot-plugin-configurator-column: dynamic(true);;
+$include-ext-pivot-plugin-configurator-container: dynamic(true);;
+$include-ext-pivot-plugin-configurator-dragzone: dynamic(true);;
+$include-ext-pivot-plugin-configurator-dropzone: dynamic(true);;
+$include-ext-pivot-plugin-configurator-field: dynamic(true);;
+$include-ext-pivot-plugin-configurator-fieldsettings: dynamic(true);;
+$include-ext-pivot-plugin-configurator-panel: dynamic(true);;
+$include-ext-pivot-plugin-configurator-window-fieldsettings: dynamic(true);;
+$include-ext-pivot-plugin-configurator-window-filterlabel: dynamic(true);;
+$include-ext-pivot-plugin-configurator-window-filtertop: dynamic(true);;
+$include-ext-pivot-plugin-configurator-window-filtervalue: dynamic(true);;
+$include-ext-pivot-plugin-configurator-window-settings: dynamic(true);;
+$include-ext-pivot-plugin-configurator-window-window: dynamic(true);;
+$include-ext-pivot-result-base: dynamic(true);;
+$include-ext-pivot-result-collection: dynamic(true);;
+$include-ext-pivot-result-local: dynamic(true);;
+$include-ext-pivot-update-base: dynamic(true);;
+$include-ext-pivot-update-increment: dynamic(true);;
+$include-ext-pivot-update-overwrite: dynamic(true);;
+$include-ext-pivot-update-percentage: dynamic(true);;
+$include-ext-pivot-update-uniform: dynamic(true);;
 $include-ext-plugin-abstract: dynamic(true);;
 $include-ext-plugin-abstractclipboard: dynamic(true);;
 $include-ext-plugin-lazyitems: dynamic(true);;
@@ -1452,6 +1495,27 @@ $include-ext-view-view: dynamic(true);;
 $include-ext-window-messagebox: dynamic(true);;
 $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
+$include-mz-aggregate-aggregators: dynamic(true);;
+$include-mz-aggregate-mixedcollection: dynamic(true);;
+$include-mz-aggregate-axis-abstract: dynamic(true);;
+$include-mz-aggregate-axis-item: dynamic(true);;
+$include-mz-aggregate-axis-local: dynamic(true);;
+$include-mz-aggregate-dimension-item: dynamic(true);;
+$include-mz-aggregate-filter-abstract: dynamic(true);;
+$include-mz-aggregate-filter-label: dynamic(true);;
+$include-mz-aggregate-filter-value: dynamic(true);;
+$include-mz-aggregate-matrix-abstract: dynamic(true);;
+$include-mz-aggregate-matrix-local: dynamic(true);;
+$include-mz-aggregate-matrix-remote: dynamic(true);;
+$include-mz-aggregate-matrix-result: dynamic(true);;
+$include-mz-aggregate-matrix-results: dynamic(true);;
+$include-mz-pivot-grid: dynamic(true);;
+$include-mz-pivot-table: dynamic(true);;
+$include-mz-pivot-feature-pivotevents: dynamic(true);;
+$include-mz-pivot-plugin-configurator: dynamic(true);;
+$include-mz-pivot-plugin-drilldown: dynamic(true);;
+$include-mz-pivot-plugin-excelexport: dynamic(true);;
+$include-mz-pivot-plugin-rangeeditor: dynamic(true);;
 $output-paths: ("path": "../../classic/resources", "shared": "../../resources");
 
 /* ======================== ETC ======================== */
@@ -1527,6 +1591,14 @@ $current-package: 'calendar';
 $current-resource-root: $calendar-resource-root;
 $relative-image-path-for-uis: $calendar-resource-path;
 @import '../../../../../ext/packages/calendar/sass/etc/all';
+
+/* including package pivot */
+$pivot-resource-root: 'pivot' !default;
+$pivot-resource-path: 'pivot/images' !default;
+$current-package: 'pivot';
+$current-resource-root: $pivot-resource-root;
+$relative-image-path-for-uis: $pivot-resource-path;
+@import '../../../../../ext/packages/pivot/sass/etc/all';
 
 
 /* ======================== VAR ======================== */
@@ -1623,6 +1695,9 @@ $relative-image-path-for-uis: $theme-neutral-resource-path;
 @import '../../../../../ext/classic/theme-neutral/sass/var/window/Toast';
 @import '../../../../../ext/classic/theme-neutral/sass/var/calendar/List';
 @import '../../../../../ext/classic/theme-neutral/sass/var/calendar/panel/Panel';
+@import '../../../../../ext/classic/theme-neutral/sass/var/pivot/Grid';
+@import '../../../../../ext/classic/theme-neutral/sass/var/pivot/plugin/configurator/Column';
+@import '../../../../../ext/classic/theme-neutral/sass/var/pivot/plugin/configurator/Container';
 
 /* including package theme-neptune */
 $theme-neptune-resource-root: '' !default;
@@ -2052,6 +2127,16 @@ $relative-image-path-for-uis: $calendar-resource-path;
 @import '../../../../../ext/packages/calendar/classic/sass/src/calendar/form/CalendarPicker';
 @import '../../../../../ext/packages/calendar/classic/sass/src/calendar/view/Base';
 @import '../../../../../ext/packages/calendar/classic/sass/src/calendar/panel/Panel';
+
+/* including package pivot */
+$pivot-resource-root: 'pivot' !default;
+$pivot-resource-path: 'pivot/images' !default;
+$current-package: 'pivot';
+$current-resource-root: $pivot-resource-root;
+$relative-image-path-for-uis: $pivot-resource-path;
+@import '../../../../../ext/packages/pivot/classic/sass/src/pivot/Grid';
+@import '../../../../../ext/packages/pivot/classic/sass/src/pivot/plugin/configurator/Column';
+@import '../../../../../ext/packages/pivot/classic/sass/src/pivot/plugin/configurator/Container';
 
 /* including scss file adjacent to ..\..\..\..\..\classic\src\view\main\Main.js */
 $default-resource-root: '' !default;

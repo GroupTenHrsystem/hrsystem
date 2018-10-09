@@ -14,11 +14,14 @@ Ext.define('Admin.view.salary.SalaryViewController', {
            // title: '数钱',
             fileName: '等死' + '.' + (btn.cfg.ext || btn.cfg.type)
         }, btn.cfg);
-  //       var view = this.getView(),
-  //       plugin = view.findPlugin('rowexpander');
-		// view.remove(plugin);
-        this.getView().saveDocumentAs(cfg);
+        this.doExport(cfg);
+        //this.getView().saveDocumentAs(cfg);
     },
+    
+    doExport: function (config) {
+        this.getView().saveDocumentAs(config).then(null, this.onError);
+    },
+
 	 onBeforeDocumentSave: function(view){
 	        this.timeStarted = Date.now();
 	        view.mask('Document is prepared for export. Please wait ...');

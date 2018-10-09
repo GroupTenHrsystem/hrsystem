@@ -9,7 +9,6 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     ],
 
     title: '薪资查询',
-   // collapsible: true,
    layout: 'fit',
 
     profiles: {
@@ -40,15 +39,9 @@ Ext.define('Admin.view.salary.SalaryPanel', {
         groupHeaderTpl : '{name}',
         hideGroupedHeader : false,
         enableGroupingMenu : false
-    }
-    // , {
-    //     ftype: 'summary',
-    //     dock: 'bottom'
-    // }
-    ],
+    }],
 
     listeners: {
-        // this event notifies us when the document was saved
         documentsave: 'onDocumentSave',
         beforedocumentsave: 'onBeforeDocumentSave',
         dataready: 'onDataReady'
@@ -56,8 +49,9 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     selModel: {type: 'checkboxmodel'},
     columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true,filter: 'number'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发钱日',flex: 1,formatter: 'date("Y/m/d H:i:s")',filter: true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '钱数',flex: 1,
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'createTime',text: '创建日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发放日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '工资',flex: 1,
                      filter: {
                         type: 'string',
                         itemDefaults: {
@@ -74,109 +68,13 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                 }
             ],
 
-    // plugins: {
-    //     preview: {
-    //         expanded: true,
-    //         bodyField: 'salaryTime',
-    //     }
-    // },
 
-    // plugins: {
-    //     rowexpander: {
-    //         rowBodyTpl: new Ext.XTemplate(
-    //             '<p><b>Company:</b> {salarySum}</p>',
-    //             '<p><b>Change:</b> {salarySum}</p>',
-    //             {
-    //                 formatChange: function (v) {
-    //                     var color = v >= 0 ? 'green' : 'red';
-    //                     return '<span style="color: ' + color + ';">' +
-    //                         Ext.util.Format.usMoney(v) + '</span>';
-    //                 }
-    //             })
-    //     }
-    // },
-
-    // tbar: [
-    //         {
-    //             xtype: 'combobox',
-    //             reference:'searchFieldName',
-    //             hideLabel: true,
-    //             store:Ext.create("Ext.data.Store", {
-    //                 fields: ["name", "value"],
-    //                 data: [
-    //                     { name: '发钱日', value: 'salaryTime' },
-    //                     { name: '钱数', value: 'salarySum' }
-    //                 ]
-    //             }),
-    //             displayField: 'name',
-    //             valueField:'value',
-    //             value:'请选择',
-    //             editable: false,
-    //             queryMode: 'local',
-    //             triggerAction: 'all',
-    //             emptyText: 'Select a state...',
-    //             width: 135,
-    //             listeners:{
-    //                 select: 'searchComboboxSelectChuang'
-    //             }
-    //         }, '-',{
-    //             xtype:'textfield',
-    //             reference:'searchFieldValue',
-    //             name:'salaryPanelSearchField'
-    //         }, '-',{
-    //             xtype: 'datefield',
-    //             hideLabel: true,
-    //             hidden:true,
-    //             format: 'Y/m/d H:i:s',
-    //             reference:'searchDataFieldValue',
-    //             fieldLabel: 'From',
-    //             name: 'from_date'
-    //         }, {
-    //             xtype: 'datefield',
-    //             hideLabel: true,
-    //             hidden:true,
-    //             format: 'Y/m/d H:i:s',
-    //             reference:'searchDataFieldValue2',
-    //             fieldLabel: 'To',
-    //             name: 'to_date'
-    //      },'-',{
-    //             text: 'Search',
-    //             iconCls: 'fa fa-search',
-    //             handler: 'quickSearch'
-    //         }, '-',{
-    //             text: 'Search More',
-    //             iconCls: 'fa fa-search-plus',
-    //             handler: 'openSearchWindow' 
-    //         },'-',{
-    //             text: 'Clear Text',
-    //             iconCls: 'fa fa-eraser',
-    //             handler: 'clearText'          
-    //         }, 
-
-    //         '->',{
-    //             text: 'Add',
-    //             tooltip: 'Add a new row',
-    //             iconCls: 'fa fa-plus',
-    //             handler: 'openAddWindow'    
-    //         },'-',{
-    //             text: 'Removes',
-    //             tooltip: 'Remove the selected item',
-    //             iconCls:'fa fa-trash',
-    //             handler: 'deleteMoreRows'   
-    //         }],     
 
     bbar: {
         xtype: 'pagingtoolbar',
         displayInfo: true,
         displayMsg: '本页显示 {0} - {1} 条, 总数 {2} 条',
         emptyMsg: "No topics to display",
-
-        // items: ['-', {
-        //     bind: '{salaryLists ? "隐藏理由" : "显示理由"}',
-        //     pressed: '{salaryLists}',
-        //     enableToggle: true,
-        //     toggleHandler: 'onToggleExpanded'
-        // }]
     },
 
      tbar: {
@@ -191,20 +89,18 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                             text:'重置',     
                             handler:  'clearText'     
                         },'-',{
-                            text: '钱数',
+                            text: '工资',
                             id: 'salarySumCheck',
-                            checked: false,       // when checked has a boolean value, it is assumed to be a CheckItem
+                            checked: false,       
                             menu: {
                                 items: [{ 
                                         hideOnClick : false,
                                         xtype: 'textfield',
                                         reference:'searchFieldValue',
-                                    //    handler: 'onDateSelect'
                                     }]
                             },
-                           // checkHandler: 'onItemCheck'
                         }, {
-                            text: '发钱日',
+                            text: '发放日期',
                             id: 'salaryTimeCheck',
                             checked: false, 
                             menu: {
@@ -218,7 +114,6 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                             hideOnClick : false,
                                             xtype: 'datemenu',
                                             reference:'searchDataFieldValue',
-                                          //  handler: 'onDateSelect'
                                         }
                                     },{
                                         text: '范围结束',
@@ -228,7 +123,6 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                             hideOnClick : false,
                                             xtype: 'datemenu',
                                             reference:'searchDataFieldValue2',
-                                        //    handler: 'onDateSelect'
                                         }
                                     },'-', {
                                         text: '具体日期',
@@ -238,14 +132,12 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                             hideOnClick : false,
                                             xtype: 'datemenu',
                                             reference:'searchDataFieldValue3',
-                                        //    handler: 'onDateSelect'
                                         }
                                     }]
                             }
                         }]
                  }
         },{
-             //   text: 'Search',
                 xtype: 'button',
                 iconCls: 'fa fa-search',
                 handler: 'quickSearch'
@@ -254,137 +146,81 @@ Ext.define('Admin.view.salary.SalaryPanel', {
 
 
     header: {
-        itemPosition: 1, // after title before collapse tool
+        itemPosition: 1, 
         items: [
-            // {
-            //     xtype: 'combobox',
-            //     reference:'searchFieldName',
-            //     hideLabel: true,
-            //     store:Ext.create("Ext.data.Store", {
-            //         fields: ["name", "value"],
-            //         data: [
-            //             { name: '发钱日', value: 'salaryTime' },
-            //             { name: '钱数', value: 'salarySum' }
-            //         ]
-            //     }),
-            //     displayField: 'name',
-            //     valueField:'value',
-            //     value:'请选择',
-            //     editable: false,
-            //     queryMode: 'local',
-            //     triggerAction: 'all',
-            //     emptyText: 'Select a state...',
-            //     width: 135,
-            //     listeners:{
-            //         select: 'searchComboboxSelectChuang'
-            //     }
-            // }, {
-            //     xtype:'textfield',
-            //     reference:'searchFieldValue',
-            //     name:'salaryPanelSearchField'
-            // }, {
-            //     xtype: 'datefield',
-            //     hideLabel: true,
-            //     hidden:true,
-            //     format: 'Y/m/d H:i:s',
-            //     reference:'searchDataFieldValue',
-            //     fieldLabel: 'From',
-            //     name: 'from_date'
-            // }, {
-            //     xtype: 'datefield',
-            //     hideLabel: true,
-            //     hidden:true,
-            //     format: 'Y/m/d H:i:s',
-            //     reference:'searchDataFieldValue2',
-            //     fieldLabel: 'To',
-            //     name: 'to_date'
-            // },{
-            //  //   text: 'Search',
-            //     xtype: 'button',
-            //     iconCls: 'fa fa-search',
-            //     handler: 'quickSearch'
-            // },
             {
-             //   text: 'Search More',
                 xtype: 'button',
                 iconCls: 'fa fa-search-plus',
                 handler: 'openSearchWindow' 
-            },{
-             //   text: 'Clear Text',
-                xtype: 'button',
-                iconCls: 'fa fa-eraser',
-                handler: 'clearText'          
             }, {
-              //  text: 'Add',
                 xtype: 'button',
                 tooltip: 'Add a new row',
                 iconCls: 'fa fa-plus',
                 handler: 'openAddWindow'    
-            },{
-             //   text: 'Removes',
+            }, {
                 xtype: 'button',
                 tooltip: 'Remove the selected item',
                 iconCls:'fa fa-trash',
                 handler: 'deleteMoreRows'   
-            },{
-            ui: 'default-toolbar',
-            xtype: 'button',
-            text: '导出到...',
-            menu: {
-                defaults: {
-                    handler: 'exportTo'
-                },
-                items: [{
-                    text:   'xlsx文件',
-                    cfg: {
-                        type: 'excel07',
-                        ext: 'xlsx'
-                    }
-                },{
-                    text:   'xlsx(include groups)文件',
-                    cfg: {
-                        type: 'excel07',
-                        ext: 'xlsx',
-                        includeGroups: true,
-                        includeSummary: true
-                    }
-                },{
-                    text: 'xml文件',
-                    cfg: {
-                        type: 'excel03',
-                        ext: 'xml'
-                    }
-                },{
-                    text: 'xml(include groups)文件',
-                    cfg: {
-                        includeGroups: true,
-                        includeSummary: true
-                    }
-                },{
-                    text:   'CSV文件',
-                    cfg: {
-                        type: 'csv'
-                    }
-                },{
-                    text:   'TSV文件',
-                    cfg: {
-                        type: 'tsv',
-                        ext: 'csv'
-                    }
-                },{
-                    text:   'HTML文件',
-                    cfg: {
-                        type: 'html'
-                    }
-                },{
-                    text:   'HTML(include groups)文件',
-                    cfg: {
-                        type: 'html',
-                        includeGroups: true,
-                        includeSummary: true
-                    }
-                }]
-            }
-        }]
+            }, {
+                ui: 'default-toolbar',
+                xtype: 'button',
+                text: '导出本页',
+                menu: {
+                    defaults: {
+                        handler: 'exportTo'
+                    },
+                    items: [{
+                        text:   'xlsx文件',
+                        cfg: {
+                            type: 'excel07',
+                            ext: 'xlsx'
+                        }
+                    },{
+                        text:   'xlsx(include groups)文件',
+                        cfg: {
+                            type: 'excel07',
+                            ext: 'xlsx',
+                            includeGroups: true,
+                            includeSummary: true
+                        }
+                    },{
+                        text: 'xml文件',
+                        cfg: {
+                            type: 'excel03',
+                            ext: 'xml'
+                        }
+                    },{
+                        text: 'xml(include groups)文件',
+                        cfg: {
+                            includeGroups: true,
+                            includeSummary: true
+                        }
+                    },{
+                        text:   'CSV文件',
+                        cfg: {
+                            type: 'csv'
+                        }
+                    },{
+                        text:   'TSV文件',
+                        cfg: {
+                            type: 'tsv',
+                            ext: 'csv'
+                        }
+                    },{
+                        text:   'HTML文件',
+                        cfg: {
+                            type: 'html'
+                        }
+                    },{
+                        text:   'HTML(include groups)文件',
+                        cfg: {
+                            type: 'html',
+                            includeGroups: true,
+                            includeSummary: true
+                        }
+                    }]
+                }
+            }]
     }
 });
