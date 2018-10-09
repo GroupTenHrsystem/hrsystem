@@ -27,6 +27,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -47,6 +48,7 @@ import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.common.SessionUtil;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
@@ -93,8 +95,8 @@ public class PerformanceController {
 		try {
 			String userId = SessionUtil.getUserName(session);
     		if(userId!=null) {
-    				performanceDTO.setUserId(userId);    			
-					List<Staff> staff = new ArrayList();
+    				performanceDTO.setUserId(userId);    		
+					List<Staff> staff = new ArrayList<Staff>();
 					PerformanceTemplet performanceTemplet = performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId());
 					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
 						Optional<Staff> optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
@@ -148,7 +150,8 @@ public class PerformanceController {
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
 			performanceQueryDTO.setUserId(SessionUtil.getUserName(session));
-			page = performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
+			Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceQueryDTO);
+			page = performanceService.findAll(buildSpecification, pageRequest.getPageable());
 		}else {
 			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
 		}
