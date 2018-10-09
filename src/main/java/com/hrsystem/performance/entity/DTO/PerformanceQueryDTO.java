@@ -64,6 +64,6 @@ public class PerformanceQueryDTO {
 	private Date endTimeEnd;  
 	
 	private Long cycle;
-	private Boolean status=false;
+	private Boolean status=true;
 	private Long performanceTempletId;
 }

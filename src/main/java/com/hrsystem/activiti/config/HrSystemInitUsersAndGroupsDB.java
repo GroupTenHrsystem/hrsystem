@@ -1,5 +1,8 @@
 package com.hrsystem.activiti.config;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.activiti.engine.IdentityService;
@@ -10,22 +13,47 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import com.hrsystem.performance.entity.PerformanceTemplet;
+import com.hrsystem.performance.service.IPerformanceService;
+import com.hrsystem.performance.service.IPerformanceTempletService;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.service.ISalaryService;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IStaffService;
+/**
+*@项目名称: hrsystem
+*@作者: HyperMuteki
+*@文件名称: SalaryController.java
+  *@Date: 2018年10月09日
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
+ 
+*/
 //@Component
 public class HrSystemInitUsersAndGroupsDB {
 		@Autowired
 		private IStaffService staffService;
 		@Autowired
 		private ISalaryService salaryService;
+		@Autowired
+		private IPerformanceTempletService performanceTempletService;	
+		@Autowired
+		private IPerformanceService performanceService;
 		
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
 		        return new InitializingBean() {
 		            public void afterPropertiesSet() throws Exception {
-
+		            	
+		            	Date now = new Date();
+		    			LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		    			Date newDate=java.sql.Date.valueOf(localDate);
+		            	
+		    			Calendar rightNow = Calendar.getInstance();
+		    	        rightNow.setTime(newDate);
+		    	        rightNow.add(Calendar.MONTH,3);//日期加3个月
+		    	        rightNow.add(Calendar.DAY_OF_YEAR,10);//日期加10天
+		    	        Date newDateEnd=rightNow.getTime();
+		    	        
 		        		Group group =identityService.newGroup("admin"); // 实例化组实体
 		        		group.setType("security-role");
 		        		group.setName("管理员");
@@ -86,12 +114,27 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.createMembership("user7", "financeManager");
 		        		identityService.createMembership("user8", "financeClerk");
 		        		
+		        		
 		        		 for (int i = 1; i <=100; i++) {
 		        			 Salary salary = new Salary();
 		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryTime(new Date());
+		        			 salary.setSalaryTime(newDate);
+		        			 salary.setCreateTime(newDate);
 		        			 salaryService.insertSalary(salary);
 		        		}
+		        		 
+		        		 for (int i = 1; i <=8; i++) {
+			        			PerformanceTemplet performanceTemplet = new PerformanceTemplet();
+			        			performanceTemplet.setStartTime(newDate);
+			        			performanceTemplet.setEndTime(newDateEnd);
+			        			performanceTemplet.setKind("种类");
+			        			performanceTemplet.setName("考核模板"+i);
+			        			performanceTemplet.setPerformanceIndex("工作量");
+			        			performanceTemplet.setWeighting("30%");
+			        			performanceTemplet.setStatus(true);
+			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
+			        	}
+		        		
 		            }
 		        };
 		    }

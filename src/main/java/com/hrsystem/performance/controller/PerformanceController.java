@@ -106,6 +106,7 @@ public class PerformanceController {
 							BeanUtils.copyProperties(performanceDTO, entity);
 							entity.setStaff(optional.get());
 							entity.setProcessStatus(ProcessStatus.NEW);
+							entity.setStatus(true);
 							performanceService.insertPerformance(entity);
 						}
 					}				
@@ -136,7 +137,10 @@ public class PerformanceController {
 	@DeleteMapping(value="{id}")
 	public String deletePerformanceById(@PathVariable Long id) {
 		try {
-			performanceService.deletePerformance(id);
+			//performanceService.deletePerformance(id);
+			Performance entity = performanceService.findPerformanceById(id);	//删除为status置false
+			entity.setStatus(false);
+			performanceService.insertPerformance(entity);
 			return "success:删除成功";
 		} catch (Exception e) {
 			return "success:删除失败";

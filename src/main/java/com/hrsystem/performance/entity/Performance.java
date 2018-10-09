@@ -61,7 +61,7 @@ public class Performance implements Serializable {
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date applyTime;
 		private Long cycle;
-		private Boolean status = false;				//false显示，true不显示
+		private Boolean status = false;				//true显示，flase不显示
 		
 		//工作流
 		@Enumerated(EnumType.STRING)

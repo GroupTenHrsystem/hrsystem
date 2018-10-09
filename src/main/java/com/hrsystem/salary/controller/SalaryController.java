@@ -1,5 +1,8 @@
 package com.hrsystem.salary.controller;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +47,7 @@ public class SalaryController {
 	 * @return
 	 */
 	@GetMapping("/get/{id}")
-	public Salary getPerformanceById(@PathVariable Long id) {
+	public Salary getSalaryById(@PathVariable Long id) {
 		return salaryService.findSalaryById(id);
 	}
 
@@ -54,8 +57,12 @@ public class SalaryController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String insertPerformance(@RequestBody Salary salary) {		
+	public String insertSalary(@RequestBody Salary salary) {		
 		try {
+			Date now = new Date();
+			LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+			Date newDate=java.sql.Date.valueOf(localDate);
+			salary.setCreateTime(newDate);
 			salaryService.insertSalary(salary);
 			return "success:添加成功";
 		} catch (Exception e) {
@@ -81,7 +88,7 @@ public class SalaryController {
 	 * @return
 	 */
 	@DeleteMapping(value="{id}")
-	public String deletePerformanceById(@PathVariable Long id) {
+	public String deleteSalaryById(@PathVariable Long id) {
 			try {
 				salaryService.deleteSalary(id);
 				return "success:删除成功";
@@ -91,8 +98,8 @@ public class SalaryController {
 	}
 
 	 @PostMapping("/deletes")
-		public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
-		{
+	public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
+	{
 			try {
 				if(ids!=null) {
 					salaryService.deleteAll(ids);
@@ -101,7 +108,7 @@ public class SalaryController {
 			} catch (Exception e) {
 				return new ExtAjaxResponse(true,"批量删除失败！");
 			}
-		}
+	}
 	 
 	@GetMapping
 	public Page<Salary> getPage(SalaryQueryDTO salaryQueryDTO,ExtjsPageRequest pageRequest) 

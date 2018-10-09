@@ -18,7 +18,8 @@
         "font-awesome",
         "ux",
         "calendar",
-        "exporter"
+        "exporter",
+        "pivot"
     ],
 
     /**

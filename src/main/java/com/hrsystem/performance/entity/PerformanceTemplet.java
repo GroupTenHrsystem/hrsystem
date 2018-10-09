@@ -36,5 +36,5 @@ public class PerformanceTemplet implements Serializable {
 	private Date endTime;  
 	private String performanceIndex;
 	private String  weighting;
-	private Boolean status;
+	private Boolean status;			//true显示，flase不显示
 }

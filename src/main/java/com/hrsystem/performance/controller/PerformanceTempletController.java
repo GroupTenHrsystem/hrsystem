@@ -14,6 +14,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.performance.entity.DTO.PerformanceTempletQueryDTO;
@@ -60,6 +62,7 @@ public class PerformanceTempletController {
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String insertPerformance(@RequestBody PerformanceTemplet performanceTemplet) {		
 		try {
+			performanceTemplet.setStatus(true);
 			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			return "success:添加成功";
 		} catch (Exception e) {
@@ -88,7 +91,10 @@ public class PerformanceTempletController {
 	public String deletePerformanceById(@PathVariable Long id) {
 			List<Performance> performanceByPerformanceTempletId = performanceService.getPerformanceByPerformanceTempletId(id);
 			if (performanceByPerformanceTempletId.size() == 0) {
-				performanceTempletService.deletePerformanceTemplet(id);
+				//performanceTempletService.deletePerformanceTemplet(id);
+				PerformanceTemplet entity = performanceTempletService.findPerformanceTempletById(id);
+				entity.setStatus(false);
+				performanceTempletService.insertPerformanceTemplet(entity);
 				return "success:删除成功";
 			}else {
 				return "success:不能被删除，模板正在被使用";
@@ -111,7 +117,8 @@ public class PerformanceTempletController {
 	@GetMapping
 	public Page<PerformanceTemplet> getPage(PerformanceTempletQueryDTO performanceTempletQueryDTO,ExtjsPageRequest pageRequest) 
 	{
-		return performanceTempletService.findAll(PerformanceTempletQueryDTO.getWhereClause(performanceTempletQueryDTO), pageRequest.getPageable());
+		Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceTempletQueryDTO);
+		return performanceTempletService.findAll(buildSpecification, pageRequest.getPageable());
 	}
 	
 	
