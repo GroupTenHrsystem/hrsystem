@@ -14,6 +14,10 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hrsystem.common.sign.GreaterThanEqual;
+import com.hrsystem.common.sign.LessThanEqual;
+import com.hrsystem.common.sign.Like;
+import com.hrsystem.common.sign.Name;
 import com.hrsystem.performance.entity.Performance;
 
 
@@ -30,66 +34,36 @@ import lombok.Data;
 @Data
 public class PerformanceQueryDTO {
 	private Long id;
+	
 	private String userId;
+	
+	@Like
 	private String performanceName;	
+	
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date startTime;
+	
+	@Name("startTime")
+	@GreaterThanEqual 
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date startTimeStart; 
+	
+	@Name("startTime")
+	@LessThanEqual 
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date startTimeEnd; 
+	
+	@Name("endTime")
+	@GreaterThanEqual 
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date endTimeStart;  
+	
+	@Name("endTime")
+	@LessThanEqual 
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date endTimeEnd;  
+	
 	private Long cycle;
 	private Boolean status=false;
 	private Long performanceTempletId;
-	
-	@SuppressWarnings({ "serial"})
-	public static Specification<Performance> getWhereClause(final PerformanceQueryDTO performanceQueryDTO) {
-		return new Specification<Performance>() {
-			@Override
-			public Predicate toPredicate(Root<Performance> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
-			
-				List<Predicate> predicate = new ArrayList<>();
-				
-				if (null!=performanceQueryDTO.getUserId()) {
-					predicate.add(criteriaBuilder.equal(root.get("userId").as(String.class),
-							performanceQueryDTO.getUserId()));
-				}
-				
-				if (StringUtils.isNotBlank(performanceQueryDTO.getPerformanceName())) {
-					predicate.add(criteriaBuilder.like(root.get("performanceName").as(String.class),
-							"%" + performanceQueryDTO.getPerformanceName() + "%"));
-				}
-				if (null !=performanceQueryDTO.getCycle()) {
-					predicate.add(criteriaBuilder.equal(root.get("cycle").as(Long.class),
-								performanceQueryDTO.getCycle()));
-				}
-				if (null !=performanceQueryDTO.getStartTime()) {
-					predicate.add(criteriaBuilder.equal(root.get("startTime").as(Date.class),
-								performanceQueryDTO.getStartTime()));
-				}
-				if (null!=performanceQueryDTO.getStartTimeStart()) {
-					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("startTime").as(Date.class),
-							performanceQueryDTO.getStartTimeStart()));
-				}
-				if (null!=performanceQueryDTO.getStartTimeEnd()) {
-					predicate.add(criteriaBuilder.lessThanOrEqualTo(root.get("startTime").as(Date.class),
-							performanceQueryDTO.getStartTimeEnd()));
-				}
-				if (null!=performanceQueryDTO.getEndTimeStart()) {
-					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("endTime").as(Date.class),
-							performanceQueryDTO.getEndTimeStart()));
-				}
-				if (null!=performanceQueryDTO.getEndTimeEnd()) {
-					predicate.add(criteriaBuilder.lessThanOrEqualTo(root.get("endTime").as(Date.class),
-							performanceQueryDTO.getEndTimeEnd()));
-				}
-				Predicate[] pre = new Predicate[predicate.size()];
-				return query.where(predicate.toArray(pre)).getRestriction();
-			}
-		};
-	}
 }
