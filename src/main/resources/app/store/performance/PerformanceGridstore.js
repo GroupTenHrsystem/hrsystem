@@ -3,6 +3,8 @@ Ext.define('Admin.store.performance.PerformanceGridStroe', {
     storeId:'performanceGridStroe',
     alias: 'store.performanceGridStore',
     model:'Admin.model.performance.PerformanceModel',
+    groupField: 'performanceName',
+    sorters: ['performanceName','id'],
     proxy: {
         type: 'rest',
         url: '/performance',

@@ -9,7 +9,7 @@ Ext.define('Admin.model.performanceTemplet.PerformanceTempletModel', {
 	    {type: 'date', name: 'startTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'date', name: 'endTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'string',name: 'performanceIndex'},
-	    {type: 'string',name: 'weighting'},
+	    {type: 'float',name: 'weighting'},
 	],
 	proxy: {
 		type: 'rest',

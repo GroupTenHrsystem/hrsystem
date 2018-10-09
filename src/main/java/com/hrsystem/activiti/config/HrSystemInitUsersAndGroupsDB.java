@@ -23,10 +23,9 @@ import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
-*@文件名称: SalaryController.java
+*@文件名称: HrSystemInitUsersAndGroupsDB.java
   *@Date: 2018年10月09日
-*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
- 
+*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved. 
 */
 //@Component
 public class HrSystemInitUsersAndGroupsDB {
@@ -130,7 +129,7 @@ public class HrSystemInitUsersAndGroupsDB {
 			        			performanceTemplet.setKind("种类");
 			        			performanceTemplet.setName("考核模板"+i);
 			        			performanceTemplet.setPerformanceIndex("工作量");
-			        			performanceTemplet.setWeighting("30%");
+			        			performanceTemplet.setWeighting(0.3);
 			        			performanceTemplet.setStatus(true);
 			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			        	}
