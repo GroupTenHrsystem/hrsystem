@@ -44,11 +44,16 @@ Ext.define('Admin.view.performanceApprove.task.SelfAudit', {
 			boxLabel: '不同意'
 		}]
     },{
-        xtype     : 'textareafield',
+        xtype     : 'numberfield',
         grow      : true,
-        name      : 'selfBackReason',//修改
-        fieldLabel: '驳回理由',
-        anchor    : '100%'
+        name      : 'selfScore',
+        fieldLabel: '评分',
+        //anchor    : '100%'
+        minValue: 0,
+        maxValue: 100,
+        allowDecimals: true,
+        decimalPrecision: 1,
+        step: 5
     }],
 
    	bbar: [{

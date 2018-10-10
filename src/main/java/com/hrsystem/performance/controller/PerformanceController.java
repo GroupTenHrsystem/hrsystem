@@ -308,6 +308,8 @@ public class PerformanceController {
     public @ResponseBody ExtAjaxResponse complete(@PathVariable("id") String taskId, WorkflowVariable var) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
+    		System.out.println(taskId);
+    		System.out.println(variables);
     		performanceService.complete(taskId, variables);
 	    	return new ExtAjaxResponse(true,"审批成功!");
 	    } catch (Exception e) {

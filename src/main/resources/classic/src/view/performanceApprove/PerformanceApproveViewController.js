@@ -102,14 +102,16 @@
         var form = btn.up('form');
         var values = form.getValues();
         var url = 'performance/complete/' + values.taskId;
+        console.log(values.id);
+        console.log(values.processStatus);
         var variables = [{
             key: 'selfPass',
             value: values.selfPass,//获取表单选择的value
             type: 'B'
         },{
-            key: 'selfBackReason',
-            value: values.selfBackReason,//获取表单选择的value
-            type: 'S'
+            key: 'selfScore',
+            value: values.selfScore,//获取表单选择的value
+            type: 'F'
         }];
         this.complete(url,variables,form);
     },
@@ -123,9 +125,9 @@
 			value: values.deptLeaderPass,//获取表单选择的value
 			type: 'B'
 		},{
-			key: 'deptLeaderBackReason',
-			value: values.deptLeaderBackReason,//获取表单选择的value
-			type: 'S'
+			key: 'deptLeaderScore',
+			value: values.deptLeaderScore,//获取表单选择的value
+			type: 'F'
 		}];
         this.complete(url,variables,form);
     },

@@ -58,8 +58,11 @@ public class PerformanceQueryDTO {
 	@Name("endTime")
 	@LessThanEqual 
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
-	private Date endTimeEnd;  
-	
+	private Date endTimeEnd;
+
+	private Double selfScore;
+	private Double deptLeaderScore;
+
 	private Long cycle;
 	private Boolean status=true;
 

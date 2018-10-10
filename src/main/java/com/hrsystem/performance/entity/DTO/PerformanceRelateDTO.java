@@ -37,6 +37,8 @@ public class PerformanceRelateDTO {
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Long cycle;
 	private ProcessStatus processStatus;
+	private Double selfScore;
+	private Double deptLeaderScore;
 	private String staffName;	
 	private String performanceTempletName;	
 	

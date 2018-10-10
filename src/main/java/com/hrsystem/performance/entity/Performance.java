@@ -49,6 +49,8 @@ public class Performance implements Serializable {
 	    private Date realityEndTime;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date applyTime;
+		private Double selfScore;
+		private Double deptLeaderScore;
 		private Long cycle;
 		private Boolean status = false;				//true显示，flase不显示
 
