@@ -1,7 +1,7 @@
 Ext.define('Aria.view.user.UserSearchWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.userSearchWindow',
-    height: 200,
+    height: 270,
     minHeight: 100,
     minWidth: 300,
     width: 500,
@@ -19,13 +19,18 @@ Ext.define('Aria.view.user.UserSearchWindow', {
         ariaLabel: 'Enter your name',
         items: [{
             xtype: 'textfield',
-            fieldLabel: 'User Name',
-            name:'name'
+            fieldLabel: 'Staff Name',
+            name:'staffName'
         }, {
             xtype: 'datefield',
-            fieldLabel: 'Create Time',
-            name:'createTime',
-            format: 'Y/m/d H:i:s'
+            fieldLabel: 'Create Time Start',
+            name:'createTimeStart',
+            format: 'Y/m/d'
+        },{
+            xtype: 'datefield',
+            fieldLabel: 'Create Time End',
+            name:'createTimeEnd',
+            format: 'Y/m/d'
         }]
     }],
    

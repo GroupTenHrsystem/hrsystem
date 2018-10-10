@@ -1,11 +1,11 @@
-Ext.define('Admin.store.user.UserGridStroe', {
+Ext.define('Admin.store.user.UserGridStore', {
     extend: 'Ext.data.Store',
-    storeId:'userGridStroe',
+    storeId:'userGridStore',
     alias: 'store.userGridStore',
     model:'Admin.model.user.UserModel',
     proxy: {
         type: 'rest',
-        url: '/user',
+        url: '/Staff',
         reader:{
             type:'json',
             rootProperty:'content',//对应后台返回的结果集名称

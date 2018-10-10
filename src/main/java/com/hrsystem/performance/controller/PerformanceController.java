@@ -99,12 +99,12 @@ public class PerformanceController {
 					List<Staff> staff = new ArrayList<Staff>();
 					PerformanceTemplet performanceTemplet = performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId());
 					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
-						Optional<Staff> optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
-						if(optional.isPresent()) {
+						Staff optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
+						if(optional!=null) {
 							Performance entity = new Performance();
 							entity.setPerformanceTemplet(performanceTemplet);
 							BeanUtils.copyProperties(performanceDTO, entity);
-							entity.setStaff(optional.get());
+							entity.setStaff(optional);
 							entity.setProcessStatus(ProcessStatus.NEW);
 							entity.setStatus(true);
 							performanceService.insertPerformance(entity);
