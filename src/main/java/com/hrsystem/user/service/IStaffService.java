@@ -12,7 +12,7 @@ import com.hrsystem.user.entity.Staff;
 
 public interface IStaffService {
 
-	public Optional<Staff> findStaffById(Long id);
+	public Staff findStaffById(Long id);
 	 
 	 public void insertStaff(Staff staff) ;
 	 
