@@ -165,16 +165,16 @@ public class PerformanceController {
 	}
 	/*查看参与的绩效考核*/
 	@RequestMapping("/myPage")
-	public Page<Performance> getMyPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
+	public Page<PerformanceRelateDTO> getMyPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{
 		Page<Performance> page;
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
 			page = performanceService.getMyPerformanceByStaffName(userId, pageRequest.getPageable());
+			return PerformanceRelateDTO.toPerformanceRelateDTO(page, pageRequest.getPageable());
 		}else {
-			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
+			return new PageImpl<PerformanceRelateDTO>(new ArrayList<PerformanceRelateDTO>(),pageRequest.getPageable(),0);
 		}
-		return page;
 	}
 	/*导出excel文档*/
 	@RequestMapping("/downloadExcel")

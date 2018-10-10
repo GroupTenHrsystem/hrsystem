@@ -51,8 +51,6 @@ public class PerformanceRelateDTO {
 	         performanceRelateDTO.setStaffName(performance.getStaff().getStaffName());
 	         performanceRelateDTO.setPerformanceTempletName(performance.getPerformanceTemplet().getName());
 	         results.add(performanceRelateDTO);
-	         System.out.println(performanceRelateDTO);
-
 	      }
 	      return new PageImpl<PerformanceRelateDTO> (results, pageable, null!=results?results.size():0);
 	}
