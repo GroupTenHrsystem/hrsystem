@@ -14,7 +14,7 @@
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
-            title: '简历发布',
+            title: '招聘发布',
             bind: '{recruitLists}',
             scrollable: false,
             selModel:{type:'checkboxmodel',checkOnly:true},
@@ -45,7 +45,9 @@
 				    fields: ["name", "value"],
 				    data: [
 				      	{ name: '部门名称', value: 'departmentname' },
-						{ name: '职位', value: 'position' }
+						{ name: '职位', value: 'position' },
+						{ name: '创建时间', value: 'startTime' },
+						{ name: '结束时间', value: 'endTime' }
 				    ]
 				}),
 	            displayField: 'name',//展示的字段
@@ -62,7 +64,7 @@
 	        }, '-',{
             	xtype:'textfield',
             	reference:'searchFieldValue',
-            	name:'orderPanelSearchField'
+            	name:'recruitPanelSearchField'
             }, '-', {
 	   	 	    xtype:'datefield',
 	        	format: 'Y/m/d H:i:s',
@@ -87,7 +89,7 @@
 		        text: 'Search More',
 		        iconCls: 'fa fa-search-plus',
 		        handler: 'openSearchWindow'	
-			    }, '->',{
+			}, '->',{
 		        text: '新增',
 		        tooltip: 'Add a new row',
 		        iconCls: 'fa fa-plus',

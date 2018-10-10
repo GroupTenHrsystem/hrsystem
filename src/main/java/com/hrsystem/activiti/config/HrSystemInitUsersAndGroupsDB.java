@@ -13,9 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import com.hrsystem.interview.entity.Interview;
 import com.hrsystem.performance.entity.PerformanceTemplet;
-import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
+import com.hrsystem.recruit.entity.Recruit;
+import com.hrsystem.recruit.service.IRecruitService;
+import com.hrsystem.resume.entity.Resume;
+import com.hrsystem.resume.service.IResumeService;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.service.ISalaryService;
 import com.hrsystem.user.entity.Staff;
@@ -36,7 +40,9 @@ public class HrSystemInitUsersAndGroupsDB {
 		@Autowired
 		private IPerformanceTempletService performanceTempletService;	
 		@Autowired
-		private IPerformanceService performanceService;
+		private IResumeService resumeService;
+		@Autowired
+		private IRecruitService recruitService;
 		
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
@@ -133,7 +139,58 @@ public class HrSystemInitUsersAndGroupsDB {
 			        			performanceTemplet.setStatus(true);
 			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			        	}
-		        		
+		        		 
+		        		//招聘模块
+		        		Interview interview = new Interview();
+		     			interview.setInterviewer("Alica Hong");
+		     			interview.setFaceResult("pass");
+		     			interview.setEstimate("优秀");
+		     			interview.setFaceDate(new Date());
+		     			interview.setInterviewStatus("一面");
+		     			
+		     			Resume resume = new Resume();
+		    			resume.setName("miette");
+		    			resume.setSex("女");
+		    			resume.setEmail("819934639@qq.com");
+		    			resume.setNativePlace("茂名");
+		    			resume.setGraduateSchool("东莞理工");
+		    			resume.setEmployBranch("技术部");
+		    			resume.setExperience("2年");
+		    			resume.setReferer("Jony jk");
+		    			
+		    			resume.setInterview(interview);
+		    			resumeService.save(resume);
+		    			
+
+		    			Interview interview2 = new Interview();
+		     			interview2.setInterviewer("Yamy");
+		     			interview2.setFaceResult("unpass");
+		     			interview2.setEstimate("语言表达不好");
+		     			interview2.setFaceDate(new Date());
+		     			interview2.setInterviewStatus("二面");
+		     			
+		     			Resume resume2 = new Resume();
+		    			resume2.setName("Avichk");
+		    			resume2.setSex("男");
+		    			resume2.setEmail("15651869456@163.com");
+		    			resume2.setNativePlace("东莞");
+		    			resume2.setGraduateSchool("华南理工");
+		    			resume2.setEmployBranch("宣传部");
+		    			resume2.setExperience("1年的ps工作");
+		    			
+		    			resume2.setInterview(interview2);
+		    			resumeService.save(resume2);
+		    			
+		    			//招聘信息
+		    			Recruit recruit = new Recruit();
+		    			recruit.setDepartmentname("人事部");
+		    			recruit.setPosition("经理");
+		    			recruit.setPlanNum(3L);
+		    			recruit.setStartTime(new Date());
+		    			recruit.setEditName("Miette");
+		    			
+		    			recruitService.save(recruit);
+
 		            }
 		        };
 		    }

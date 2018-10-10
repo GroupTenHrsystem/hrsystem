@@ -1,9 +1,8 @@
 package com.hrsystem.recruit.controller;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.recruit.entity.Recruit;
 import com.hrsystem.recruit.entity.RecruitQueryDTO;
 import com.hrsystem.recruit.service.IRecruitService;
@@ -31,7 +31,9 @@ public class RecruitController {
 	
 	@GetMapping
 	public Page<Recruit> getPage(RecruitQueryDTO recruitQueryDTO,ExtjsPageRequest pageRequest){
-		return recruitService.findAll(RecruitQueryDTO.getWhereClause(recruitQueryDTO), pageRequest.getPageable());
+		Specification buildSpecification = SpecificationBuilder.buildSpecification(recruitQueryDTO);
+		return recruitService.findAll(buildSpecification, pageRequest.getPageable());
+		//return recruitService.findAll(RecruitQueryDTO.getWhereClause(recruitQueryDTO), pageRequest.getPageable());
 	}
 	
 	@GetMapping(value="{id}")
@@ -91,21 +93,5 @@ public class RecruitController {
 			return new ExtAjaxResponse(true,"保存失败！");
 		}
 	}	
-	
-	@RequestMapping(value="testRecruit")
-	public void testRecruit() {
-		try {
-			Recruit recruit = new Recruit();
-			recruit.setDepartmentname("人事部");
-			recruit.setPosition("经理");
-			recruit.setPlanNum(3L);
-			recruit.setStartTime(new Date());
-			recruit.setEditName("Miette");
-			
-			recruitService.save(recruit);
-	
-		} catch (Exception e) {
-		}
-	}
 	
 }

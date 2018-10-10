@@ -89,7 +89,31 @@
 	
 	/*quickSearch*/
 	quickSearch:function(btn){
-		alert("quickSearch");
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchValue = this.lookupReference('searchFieldValue').getValue();
+		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
+		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();
+		var store =	btn.up('gridpanel').getStore();
+		Ext.apply(store.proxy.extraParams, {departmentname:"",position:"",startTimeStart:"",startTimeEnd:"",endTimeStart:"",endTimeEnd:""});
+		if(searchField==='departmentname'){
+			Ext.apply(store.proxy.extraParams, {departmentname:searchValue});
+		}
+		if(searchField==='position'){
+			Ext.apply(store.proxy.extraParams, {position:searchValue});
+		}
+		if(searchField==='startTime'){
+			Ext.apply(store.proxy.extraParams,{
+				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+				startTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+			});
+		}
+		if(searchField==='endTime'){
+			Ext.apply(store.proxy.extraParams,{
+				endTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+				endTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+			});
+		}
+		store.load({params:{start:0, limit:20, page:1}});
 	},
 		
 	/* Search More*/
