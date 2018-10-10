@@ -12,6 +12,7 @@ Ext.define('Admin.store.performance.PerformanceGridStroe', {
             type:'json',
             rootProperty:'content',//对应后台返回的结果集名称
             totalProperty: 'totalElements'//分页需要知道总记录数
+           // groupRootProperty :'staff'
         },
         writer: {
             type: 'json'
