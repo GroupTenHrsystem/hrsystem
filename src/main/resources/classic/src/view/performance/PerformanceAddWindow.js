@@ -25,6 +25,13 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             readOnly: true
         }, {
             xtype: 'textfield',
+            fieldLabel: 'processStatus',
+            name:'processStatus',
+            value:'NEW',
+            hidden: true,
+            readOnly: true
+        }, {
+            xtype: 'textfield',
             fieldLabel: '绩效考核名称',
             name:'performanceName'
         }, {

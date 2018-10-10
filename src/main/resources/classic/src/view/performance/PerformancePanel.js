@@ -50,6 +50,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'cycle',text: '考核周期',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},

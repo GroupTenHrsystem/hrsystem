@@ -53,6 +53,7 @@ import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
+import com.hrsystem.performance.entity.DTO.PerformanceRelateDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
 import com.hrsystem.user.entity.Staff;
@@ -148,19 +149,19 @@ public class PerformanceController {
 	}
 
 	@GetMapping
-	public Page<Performance> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest) 
+	public Page<PerformanceRelateDTO> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{
-		Page<Performance> page;
-		String userId = SessionUtil.getUserName(session);
-		if(userId!=null) {
-			performanceQueryDTO.setUserId(SessionUtil.getUserName(session));
-			Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceQueryDTO);
-			page = performanceService.findAll(buildSpecification, pageRequest.getPageable());
-		}else {
-			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
-		}
-		return page;
-		//return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
+	   Page<Performance> page;
+	   String userId = SessionUtil.getUserName(session);
+	   if(userId!=null) {
+	      performanceQueryDTO.setUserId(SessionUtil.getUserName(session));
+	      Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceQueryDTO);
+	      page = performanceService.findAll(buildSpecification, pageRequest.getPageable());
+	      return PerformanceRelateDTO.toPerformanceRelateDTO(page, pageRequest.getPageable());
+	   }else {
+	      return new PageImpl<PerformanceRelateDTO>(new ArrayList<PerformanceRelateDTO>(),pageRequest.getPageable(),0);
+	   }
+	   //return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
 	}
 	/*查看参与的绩效考核*/
 	@RequestMapping("/myPage")
