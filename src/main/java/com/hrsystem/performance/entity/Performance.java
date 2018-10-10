@@ -8,11 +8,38 @@ package com.hrsystem.performance.entity;
  
 */
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.jpa.domain.Specification;
+
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.user.entity.Staff;
+
 import lombok.Data;
 
 @Data
@@ -44,8 +71,8 @@ public class Performance implements Serializable {
 	    //流程实例Id：用于关联流程引擎相关数据没有启动流程之前为""
 	    private String processInstanceId;
 	    
-		@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+		@ManyToOne(cascade=CascadeType.ALL)
 		private PerformanceTemplet performanceTemplet;
-		@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+		@ManyToOne(cascade=CascadeType.ALL)
 		private Staff staff;
 }
