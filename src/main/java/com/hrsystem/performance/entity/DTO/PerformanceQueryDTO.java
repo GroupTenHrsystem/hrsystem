@@ -9,15 +9,12 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.hrsystem.common.sign.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.hrsystem.common.sign.GreaterThanEqual;
-import com.hrsystem.common.sign.LessThanEqual;
-import com.hrsystem.common.sign.Like;
-import com.hrsystem.common.sign.Name;
 import com.hrsystem.performance.entity.Performance;
 
 
@@ -65,5 +62,6 @@ public class PerformanceQueryDTO {
 	
 	private Long cycle;
 	private Boolean status=true;
+
 	private Long performanceTempletId;
 }
