@@ -163,7 +163,22 @@ public class PerformanceService implements IPerformanceService{
     * @param variables 流程变量
     * @return
     */
-	public void complete(String taskId, Map<String, Object> variables) {
+	public void complete(String taskId, Map<String, Object> variables, Long id) {
+		
+		Performance performance = performanceRepository.findById(id).get();
+		if(variables.containsKey("selfScore")) {
+			performance.setSelfScore(Double.parseDouble(String.valueOf(variables.get("selfScore"))));
+		}else if(variables.containsKey("deptLeaderScore")) {
+			performance.setDeptLeaderScore(Double.parseDouble(String.valueOf(variables.get("deptLeaderScore"))));
+		}
+		if(variables.containsKey("confirmResult")) {
+    		Date now = new Date();
+			LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+			Date completeTime=java.sql.Date.valueOf(localDate);
+			performance.setCompleteTime(completeTime);
+		}
+		performanceRepository.save(performance);
+		
 		workflowService.complete(taskId, variables);
 	}
 }

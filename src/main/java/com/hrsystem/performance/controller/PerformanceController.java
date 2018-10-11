@@ -311,20 +311,7 @@ public class PerformanceController {
     public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, Long id, WorkflowVariable var) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
-    		performanceService.complete(taskId, variables);
-    		Performance performance = performanceService.findPerformanceById(id);
-    		if(variables.containsKey("selfScore")) {
-    			performance.setSelfScore(Double.parseDouble(String.valueOf(variables.get("selfScore"))));
-    		}else if(variables.containsKey("deptLeaderScore")) {
-    			performance.setDeptLeaderScore(Double.parseDouble(String.valueOf(variables.get("deptLeaderScore"))));
-    		}
-    		if(variables.containsKey("confirmResult")) {
-	    		Date now = new Date();
-				LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-				Date completeTime=java.sql.Date.valueOf(localDate);
-				performance.setCompleteTime(completeTime);
-    		}
-    		performanceService.insertPerformance(performance);
+    		performanceService.complete(taskId, variables, id);   		
 	    	return new ExtAjaxResponse(true,"审批成功!");
 	    } catch (Exception e) {
 	    	e.printStackTrace();
