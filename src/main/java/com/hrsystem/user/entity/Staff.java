@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -40,7 +41,7 @@ public class Staff {
 	private Date employmentDate;
 	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
 	private Date leaveDate;
-	@OneToOne(cascade = CascadeType.REFRESH)
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "positionId")
 	private Role role;
 }

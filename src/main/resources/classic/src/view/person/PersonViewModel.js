@@ -13,6 +13,6 @@ Ext.define('Admin.view.person.PersonViewModel', {
     ],
 
     stores: {
-		personLists: {type: 'PersonGridStore'}
+		personLists: {type: 'personGridStore'}
     }
 });
