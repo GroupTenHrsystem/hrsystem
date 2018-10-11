@@ -104,11 +104,7 @@ public class PerformanceController {
 					PerformanceTemplet performanceTemplet = performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId());
 					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
 						Staff optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
-<<<<<<< HEAD
-						if(optional!=null) {
-=======
 						if(optional != null) {
->>>>>>> refs/remotes/origin/master
 							Performance entity = new Performance();
 							entity.setPerformanceTemplet(performanceTemplet);
 							BeanUtils.copyProperties(performanceDTO, entity);

@@ -37,17 +37,11 @@ public class Staff {
 	private String address;
 	private String nativePlace;
 	private String status;
-<<<<<<< HEAD
-	private String employmentDate;
-	private String leaveDate;
-	@ManyToOne(cascade = CascadeType.REFRESH)	//ManyToOne
-=======
 	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
 	private Date employmentDate;
 	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
 	private Date leaveDate;
 	@ManyToOne(cascade = CascadeType.REFRESH)
->>>>>>> refs/remotes/origin/master
 	@JoinColumn(name = "positionId")
 	private Role role;
 }
