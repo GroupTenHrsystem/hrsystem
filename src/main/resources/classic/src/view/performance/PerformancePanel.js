@@ -54,7 +54,16 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
+                        {
+                            xtype: 'button', iconCls: 'x-fa fa-pencil' ,
+                            getClass: function(v, meta, rec) {
+                                if (rec.get('processStatus')!="NEW") {
+                                    return 'x-hidden';
+                                }
+                                return 'x-fa fa-pencil';
+                            },
+                            handler: 'openEditWindow'
+                        },
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
                       //  {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'},
                         {

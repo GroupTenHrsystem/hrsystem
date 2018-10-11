@@ -106,7 +106,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
                 autoLoad: true, //启动自动加载
                 proxy: {
                             type: 'rest',
-                            url: '/staff',
+                            url: '/Staff',
                             reader:{
                                 type:'json',
                                 rootProperty:'content',//对应后台返回的结果集名称
@@ -159,7 +159,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
            //     autoLoad: true, //启动自动加载
                 proxy: {
                             type: 'rest',
-                            url: '/staff',
+                            url: '/Staff',
                             reader:{
                                 type:'json',
                                 rootProperty:'content',//对应后台返回的结果集名称

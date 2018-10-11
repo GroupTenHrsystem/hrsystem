@@ -30,21 +30,39 @@ Ext.define('Admin.view.performanceApprove.task.ReportBack', {
         readOnly: true
     },{
 		xtype: 'radiogroup',
-		fieldLabel: '结果：',
+		id: 'result',
+		fieldLabel: '结果',
 		defaults: {
 			flex: 1
 		},
 		items: [{
-			name: 'confirmResult',
-			inputValue: true,
-			boxLabel: '确认',
-			checked: true
-		}, {
-			name: 'confirmResult',
-			inputValue: false,
-			boxLabel: '申诉'
-		}]
-    }],
+				name: 'confirmResult',
+				inputValue: true,
+				boxLabel: '确认',
+				checked: true
+			}, {
+				name: 'confirmResult',
+				boxLabel: '申诉',
+				inputValue: false				
+			}],
+		    listeners:{  
+			          'change':function(){  
+					      	if (Ext.getCmp("result").getValue().confirmResult == true) {  
+									Ext.getCmp("resultReason").setVisible(false);  
+							} else {  
+									Ext.getCmp("resultReason").setVisible(true);  
+							} 
+			          	}  
+		   			} 
+	    },{
+	        xtype: 'textareafield',
+	        id:'resultReason',
+	        hidden: true,
+	        grow: true,
+	        name: 'resultReason',
+	        fieldLabel: '理由',
+	        anchor: '100%'
+	   }],
    	bbar: [{
 		xtype: 'button',
 		ui: 'soft-green',

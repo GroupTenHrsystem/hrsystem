@@ -168,14 +168,20 @@ public class PerformanceService implements IPerformanceService{
 		Performance performance = performanceRepository.findById(id).get();
 		if(variables.containsKey("selfScore")) {
 			performance.setSelfScore(Double.parseDouble(String.valueOf(variables.get("selfScore"))));
+			performance.setSelfScoreReason(String.valueOf(variables.get("selfScoreReason")));
 		}else if(variables.containsKey("deptLeaderScore")) {
 			performance.setDeptLeaderScore(Double.parseDouble(String.valueOf(variables.get("deptLeaderScore"))));
+			performance.setDeptLeaderScoreReason(String.valueOf(variables.get("deptLeaderScoreReason")));
 		}
 		if(variables.containsKey("confirmResult")) {
-    		Date now = new Date();
-			LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-			Date completeTime=java.sql.Date.valueOf(localDate);
-			performance.setCompleteTime(completeTime);
+			if((boolean)variables.get("confirmResult")) {
+				Date now = new Date();
+				LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+				Date completeTime=java.sql.Date.valueOf(localDate);
+				performance.setCompleteTime(completeTime);
+			}else {
+				performance.setConfirmResult(String.valueOf(variables.get("resultReason")));
+			}    		
 		}
 		performanceRepository.save(performance);
 		

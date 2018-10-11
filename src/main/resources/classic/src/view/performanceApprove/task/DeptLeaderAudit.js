@@ -35,7 +35,7 @@ Ext.define('Admin.view.performanceApprove.task.DeptLeaderAudit', {
         readOnly: true
     },{
 		xtype: 'radiogroup',
-		fieldLabel: '部门经理审批',
+		fieldLabel: '领导评分',
         hidden: true,
 		defaults: {
 			flex: 1

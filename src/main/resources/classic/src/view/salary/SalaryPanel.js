@@ -64,7 +64,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'   ,handler: 'deleteOneRow'},
                         {xtype: 'button',iconCls: 'x-fa fa-ban'     ,handler: 'onDisableButton'},
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openDetail'}
+                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openDetailWindow'}
                     ]
                 }
             ],

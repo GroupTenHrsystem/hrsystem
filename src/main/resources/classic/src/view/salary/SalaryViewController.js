@@ -95,9 +95,14 @@ Ext.define('Admin.view.salary.SalaryViewController', {
     	setTimeout(store.load(),"500");
         win.close();
 	},
-	openDetail:function(grid, rowIndex, colIndex){
+	openDetailWindow:function(grid, rowIndex, colIndex){
 		var record = grid.getStore().getAt(rowIndex);
 		//获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
+		console.log(record.get('id'));
+		//rocord.data.staff.setValue(333);
+		// var obj = {"id":1,"salarySum":2};
+		//record.data['salarySum'] = 2;
+		console.log(record);
 		if (record ) {
 			var win = grid.up('salary').add(Ext.widget('salaryDetailWindow'));
 			win.show();

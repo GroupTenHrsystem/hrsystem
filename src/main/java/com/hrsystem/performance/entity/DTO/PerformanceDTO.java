@@ -33,14 +33,14 @@ public class PerformanceDTO {
 	//private Long cycle;
     private Double selfScore;
     private Double deptLeaderScore;
+	private String selfScoreReason;
+	private String deptLeaderScoreReason;
+	private String confirmResult;
 	private Boolean status=false;
 	private Long performanceTempletId;
-	private Long staffIds[];
+	private Long staffIds[];	
 	private ProcessStatus processStatus;//流程状态
 	
-	 /*销假*/
-    private Date realityStartTime;
-    private Date realityEndTime;
     /**------------流程数据--------------**/
     /*任务*/
     private String taskId;
