@@ -138,6 +138,7 @@ public class PerformanceService implements IPerformanceService{
 	            	PerformanceDTO performanceDTO = new PerformanceDTO();
 	            	BeanUtils.copyProperties(performance, performanceDTO);
 	            	BeanUtils.copyProperties(workflow, performanceDTO);
+	            	performanceDTO.setStaffName(performance.getStaff().getStaffName());
 	            	results.add(performanceDTO);
 	            }
 	        }

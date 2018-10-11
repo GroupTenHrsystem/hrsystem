@@ -30,7 +30,16 @@
         view.up('panel').up('container').add(win);
         return win;
     },
-
+    openDetailWindow:function(grid, rowIndex, colIndex){
+        var record = grid.getStore().getAt(rowIndex);
+        // console.log(record.get('id'));
+        // console.log(record);
+        if (record ) {
+            var win = grid.up('performanceApproveCenterPanel').add(Ext.widget('performanceApproveDetailWindow'));
+            win.show();
+            win.down('form').getForm().loadRecord(record);
+        }
+    },
     onClickPerformanceApproveCompleteWindowButton: function(view, recIndex, cellIndex, item, e, record) {
     	//选中点击的行
         var taskDefinitionKey = record.get('taskDefinitionKey');

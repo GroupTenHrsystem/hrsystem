@@ -26,5 +26,6 @@
         ,{type: 'string' ,name: 'selfScoreReason'}
         ,{type: 'string' ,name: 'deptLeaderScoreReason'}
         ,{type: 'string' ,name: 'confirmResult'}
+        ,{type: 'string' ,name: 'staffName'}
     ]
 });

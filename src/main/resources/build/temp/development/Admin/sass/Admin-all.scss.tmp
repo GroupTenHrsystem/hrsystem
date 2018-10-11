@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+$image-search-path: 'D:/hrsystem/src/main/resources/build/development/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -64,6 +64,7 @@ $include-admin-view-performance-performancepanel: dynamic(true);;
 $include-admin-view-performance-performanceviewcontroller: dynamic(true);;
 $include-admin-view-performance-performanceviewmodel: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapprovecenterpanel: dynamic(true);;
+$include-admin-view-performanceapprove-performanceapprovedetailwindow: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapprovegrid: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapproveviewcontroller: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapproveviewmodel: dynamic(true);;

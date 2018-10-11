@@ -33,6 +33,9 @@
 				iconCls: 'x-fa fa-object-group',
 				tooltip: '任务跟踪',
 				handler: 'onClickGraphTraceButton'	//流程跟踪
+			},{	xtype: 'button', 
+				iconCls: 'x-fa fa-pencil' ,
+				handler: 'openDetailWindow'
 			}],
 			cls: 'content-column',
 			width: 120,
@@ -55,16 +58,16 @@
 		        return val;
             }
 		}
-		,{header: '发起人'  		,dataIndex: 'userId',width: 60,sortable: true}
+		,{header: '被考核人'  		,dataIndex: 'staffName',width: 60,sortable: true}		
 		,{header: '绩效名字' ,dataIndex: 'performanceName',width: 80,sortable: true}	
 		,{header: '考核开始时间' 	,dataIndex: 'startTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d')}
 		,{header: '考核结束时间' 			,dataIndex: 'endTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d')}
 		,{header: '发起时间' 	,dataIndex: 'applyTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d')}
-		
+		,{header: '发起人'  		,dataIndex: 'userId',width: 60,sortable: true}
 		,{header: '自评分数' ,dataIndex: 'selfScore',width: 80,sortable: true}	
-		,{header: '自评细节' ,dataIndex: 'selfScoreReason',width: 80,sortable: true}	
-		,{header: '领导评分' ,dataIndex: 'deptLeaderScore',width: 80,sortable: true}	
-		,{header: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',width: 80,sortable: true}	
+		,{header: '自评细节' ,dataIndex: 'selfScoreReason',width: 80,sortable: true,hidden:true}	
+		,{header: '领导评分' ,dataIndex: 'deptLeaderScore',width: 80,sortable: true}
+		,{header: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',width: 80,sortable: true,hidden:true}	
 		,{header: '申诉理由' ,dataIndex: 'confirmResult',width: 80,sortable: true}	
 
 

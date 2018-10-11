@@ -40,7 +40,7 @@ public class PerformanceDTO {
 	private Long performanceTempletId;
 	private Long staffIds[];	
 	private ProcessStatus processStatus;//流程状态
-	
+	private String staffName;
     /**------------流程数据--------------**/
     /*任务*/
     private String taskId;
