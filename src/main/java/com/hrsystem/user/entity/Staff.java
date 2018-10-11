@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
@@ -25,7 +27,7 @@ public class Staff {
 	private Long id;
 	private Long employeNum;
 	private String staffName;
-	private Boolean sex;
+	private String sex;
 	private String idcard;
 	private String password;
 	private String email;
@@ -35,9 +37,17 @@ public class Staff {
 	private String address;
 	private String nativePlace;
 	private String status;
+<<<<<<< HEAD
 	private String employmentDate;
 	private String leaveDate;
 	@ManyToOne(cascade = CascadeType.REFRESH)	//ManyToOne
+=======
+	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
+	private Date employmentDate;
+	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
+	private Date leaveDate;
+	@ManyToOne(cascade = CascadeType.REFRESH)
+>>>>>>> refs/remotes/origin/master
 	@JoinColumn(name = "positionId")
-	private Role positionId;
+	private Role role;
 }

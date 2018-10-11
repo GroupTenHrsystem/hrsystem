@@ -23,8 +23,19 @@ Ext.define('Admin.view.user.UserPanel', {
             scrollable: false,
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'name',text: 'User Name',flex: 1},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'createTime',text: 'Create Time',formatter: 'date("Y/m/d H:i:s")'},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'employeNum',text: 'Employe Num',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: 'Staff Name',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'sex',text: 'Sex',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'idcard',text: 'Id card',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'email',text: 'Email',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'phone',text: 'Phone',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'status',text: 'Status',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'password',text: 'Password',flex: 1,hidden:true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'address',text: 'Address',flex: 1,hidden:true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'nativePlace',text: 'NativePlace',flex: 1,hidden:true},
+                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'birthday',text: 'Birthday',formatter: 'date("Y/m/d")',hidden:true},
+                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'employmentDate',text: 'Employment Date',formatter: 'date("Y/m/d")'},
+                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'leaveDate',text: 'Leave Date',formatter: 'date("Y/m/d")'},
                 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
@@ -41,8 +52,8 @@ Ext.define('Admin.view.user.UserPanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '用户名', value: 'name' },
-						{ name: '创建时间', value: 'createTime' }
+				      	{ name: '用户名', value: 'staffName' },
+						{ name: '入职时间', value: 'employmentDate' }
 				    ]
 				}),
 	            displayField: 'name',

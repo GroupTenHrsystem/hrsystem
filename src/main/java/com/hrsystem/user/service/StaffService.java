@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.repository.StaffRepository;
 
@@ -22,11 +23,19 @@ public class StaffService implements IStaffService {
 	@Override
 	public Staff findStaffById(Long id) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
+		Optional<Staff> staff = staffRepository.findById(id);
+	    if (!staff.isPresent()) {
+	        return null;
+	    }
+	    return staff.get();
+=======
 		 Optional<Staff> staff = staffRepository.findById(id);
 		 if (!staff.isPresent()) {
 		        return null;
 		    }
 		    return staff.get();
+>>>>>>> refs/remotes/origin/master
 	}
 
 	@Override

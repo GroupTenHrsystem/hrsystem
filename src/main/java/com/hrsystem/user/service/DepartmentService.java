@@ -21,9 +21,9 @@ public class DepartmentService implements IDepartmentService {
 	@Autowired
 	private DepartmentRepository departmentRepository;
 	
-	public Optional<Department> findDepartmentById(Long id) {
+	public Department findDepartmentById(Long id) {
 		// TODO Auto-generated method stub
-		return departmentRepository.findById(id);
+		return departmentRepository.findById(id).get();
 	}
 
 	@Override

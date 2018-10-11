@@ -22,11 +22,18 @@
                 expanded: false,
                 selectable: false,
                 children: [
-                    {
+                     {
                         text: '用户管理',
 		                iconCls: 'x-fa fa-address-card',
 		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'user',
+		                leaf: true
+                    },
+                    {
+                        text: '个人信息管理',
+		                iconCls: 'x-fa fa-address-card',
+		                rowCls: 'nav-tree-badge nav-tree-badge-new',
+		                viewType: 'person',
 		                leaf: true
                     },
                     {

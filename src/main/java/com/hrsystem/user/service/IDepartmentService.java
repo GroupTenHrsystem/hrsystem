@@ -11,7 +11,7 @@ import com.hrsystem.user.entity.Department;
 
 public interface IDepartmentService {
 
-	public Optional<Department> findDepartmentById(Long id);
+	public Department findDepartmentById(Long id);
 	 
 	 public void insertDepartment(Department department) ;
 	 

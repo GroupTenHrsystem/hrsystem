@@ -28,7 +28,6 @@ public class Department {
 	private Department superId;
 	@OneToMany(cascade = CascadeType.REFRESH)
 	private List<Department> upId =new ArrayList<Department>();
-	@OneToMany(mappedBy="departmentId",cascade={CascadeType.REFRESH})
-	private List<Role> positionId=new ArrayList<Role>();
+
      
 }

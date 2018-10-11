@@ -12,7 +12,7 @@ Ext.define('Admin.view.user.UserViewController', {
 		var values  =form.getValues();//获取form数据
            	record.set(values);
           	record.save();
-          	Ext.data.StoreManager.lookup('userGridStroe').load();
+          	Ext.data.StoreManager.lookup('userGridStore').load();
           	win.close();
 	},
 	/* Clear Text */
@@ -34,7 +34,7 @@ Ext.define('Admin.view.user.UserViewController', {
 	},
 	submitEditForm:function(btn){
 		var win    = btn.up('window');
-		var store = Ext.data.StoreManager.lookup('userGridStroe');
+		var store = Ext.data.StoreManager.lookup('userGridStore');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
     	record.set(values);
@@ -46,7 +46,7 @@ Ext.define('Admin.view.user.UserViewController', {
 	searchComboboxSelectChuang:function(combo,record,index){
 		//alert(record.data.name);
 		var searchField = this.lookupReference('searchFieldName').getValue();
-		if(searchField==='createTime'){
+		if(searchField==='employmentDate'){
 			this.lookupReference('searchFieldValue').hide();
 			this.lookupReference('searchDataFieldValue').show();
 			this.lookupReference('searchDataFieldValue2').show();
@@ -57,23 +57,23 @@ Ext.define('Admin.view.user.UserViewController', {
 		}
 	},
 	/*Quick Search*/
-	quickSearch:function(btn){
-	var searchField = this.lookupReference('searchFieldName').getValue();
+	    quickSearch:function(btn){
+	    var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
 		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
 		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();
 		
 		var store =	btn.up('gridpanel').getStore();
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
-		Ext.apply(store.proxy.extraParams, {name:"",createTimeStart:"",createTimeEnd:""});
+		Ext.apply(store.proxy.extraParams, {staffName:"",createTimeStart:"",createTimeEnd:""});
 		
-		if(searchField==='name'){
-			Ext.apply(store.proxy.extraParams, {name:searchValue});
+		if(searchField==='staffName'){
+			Ext.apply(store.proxy.extraParams, {staffName:searchValue});
 		}
-		if(searchField==='createTime'){
+		if(searchField==='employmentDate'){
 			Ext.apply(store.proxy.extraParams,{
-				createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+				createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d'),
+				createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d')
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});
@@ -83,15 +83,15 @@ Ext.define('Admin.view.user.UserViewController', {
 		toolbar.up('grid').up('container').add(Ext.widget('userSearchWindow')).show();
 	},
 	submitSearchForm:function(btn){
-		var store =	Ext.data.StoreManager.lookup('userGridStroe');
+		var store =	Ext.data.StoreManager.lookup('userGridStore');
 		var win = btn.up('window');
 		var form = win.down('form');
 		var values  = form.getValues();
-		Ext.apply(store.proxy.extraParams, {name:"",createTimeStart:"",createTimeEnd:""});
+		Ext.apply(store.proxy.extraParams, {staffName:"",createTimeStart:"",createTimeEnd:""});
 		Ext.apply(store.proxy.extraParams,{
-			name:values.name,
-			createTimeStart:Ext.util.Format.date(values.createTimeStart, 'Y/m/d H:i:s'),
-			createTimeEnd:Ext.util.Format.date(values.createTimeEnd, 'Y/m/d H:i:s')
+			staffName:values.staffName,
+			createTimeStart:Ext.util.Format.date(values.createTimeStart, 'Y/m/d'),
+			createTimeEnd:Ext.util.Format.date(values.createTimeEnd, 'Y/m/d')
 		});
 		store.load({params:{start:0, limit:20, page:1}});
 		win.close();
@@ -134,7 +134,7 @@ Ext.define('Admin.view.user.UserViewController', {
                         selectIds.push(row.data.id);
                     });
                   	Ext.Ajax.request({ 
-						url : '/user/deletes', 
+						url : '/Staff/deletes', 
 						method : 'post', 
 						params : { 
 							//ids[] :selectIds
