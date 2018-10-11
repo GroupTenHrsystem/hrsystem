@@ -26,11 +26,19 @@ public class ResumeService implements IResumeService{
 
 	@Override
 	public Optional<Resume> findById(Long id) {
+		Optional<Resume> resume = resumeRepository.findById(id);
+		if(!resume.isPresent()) {
+			return null;
+		}
 		return resumeRepository.findById(id);
 	}
 
 	@Override
 	public boolean existsById(Long id) {
+		Optional<Resume> resume = resumeRepository.findById(id);
+		if(!resume.isPresent()) {
+			return false;
+		}
 		return resumeRepository.existsById(id);
 	}
 
@@ -53,5 +61,4 @@ public class ResumeService implements IResumeService{
 	public Page<Resume> findAll(Specification<Resume> spec, Pageable pageable) {
 		return resumeRepository.findAll(spec, pageable);
 	}
-
 }

@@ -75,13 +75,15 @@
 				types += item.type;
             });
 		}
+        var performanceId = form.getValues().id;
 		Ext.Ajax.request({
             url: url,
             method: 'post',
             params : { 
 			 	keys: keys,
 		        values: values,
-		        types: types
+		        types: types,
+                id: performanceId
 			}, 
             success: function(response, options) {
                 var json = Ext.util.JSON.decode(response.responseText);
@@ -101,14 +103,18 @@
     onClickSelfAuditFormSubmitButton: function(btn) {
         var form = btn.up('form');
         var values = form.getValues();
-        var url = 'performance/complete/' + values.taskId;
+        var url = 'performance/complete/' + values.taskId; 
         var variables = [{
             key: 'selfPass',
             value: values.selfPass,//获取表单选择的value
             type: 'B'
         },{
-            key: 'selfBackReason',
-            value: values.selfBackReason,//获取表单选择的value
+            key: 'selfScore',
+            value: values.selfScore,//获取表单选择的value
+            type: 'F'
+        },{
+            key: 'selfScoreReason',
+            value: values.selfScoreReason,//获取表单选择的value
             type: 'S'
         }];
         this.complete(url,variables,form);
@@ -123,10 +129,14 @@
 			value: values.deptLeaderPass,//获取表单选择的value
 			type: 'B'
 		},{
-			key: 'deptLeaderBackReason',
-			value: values.deptLeaderBackReason,//获取表单选择的value
-			type: 'S'
-		}];
+			key: 'deptLeaderScore',
+			value: values.deptLeaderScore,//获取表单选择的value
+			type: 'F'
+		},{
+            key: 'deptLeaderScoreReason',
+            value: values.deptLeaderScoreReason,//获取表单选择的value
+            type: 'S'
+        }];
         this.complete(url,variables,form);
     },
     //人事文员审批
@@ -151,13 +161,9 @@
      	var values = form.getValues();
      	var url = 'performance/complete/' + values.taskId;
      	var variables = [{
- 			key: 'realityStartTime',
- 			value: values.realityStartTime,//获取表单选择的value
- 			type: 'D'
- 		},{
- 			key: 'realityEndTime',
- 			value: values.realityEndTime,//获取表单选择的value
- 			type: 'D'
+ 			key: 'confirmResult',
+ 			value: values.confirmResult,//获取表单选择的value
+ 			type: 'B'
  		}];
         this.complete(url,variables,form);
     },

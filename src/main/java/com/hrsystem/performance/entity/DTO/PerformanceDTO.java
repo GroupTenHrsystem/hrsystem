@@ -30,7 +30,9 @@ public class PerformanceDTO {
 	private Date endTime;  
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date applyTime;
-	private Long cycle;
+	//private Long cycle;
+    private Double selfScore;
+    private Double deptLeaderScore;
 	private Boolean status=false;
 	private Long performanceTempletId;
 	private Long staffIds[];

@@ -1,6 +1,9 @@
 package com.hrsystem.performance.controller;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 import java.util.Iterator;
@@ -53,6 +56,7 @@ import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
+import com.hrsystem.performance.entity.DTO.PerformanceRelateDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
 import com.hrsystem.user.entity.Staff;
@@ -100,7 +104,11 @@ public class PerformanceController {
 					PerformanceTemplet performanceTemplet = performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId());
 					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
 						Staff optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);
+<<<<<<< HEAD
 						if(optional!=null) {
+=======
+						if(optional != null) {
+>>>>>>> refs/remotes/origin/master
 							Performance entity = new Performance();
 							entity.setPerformanceTemplet(performanceTemplet);
 							BeanUtils.copyProperties(performanceDTO, entity);
@@ -148,33 +156,32 @@ public class PerformanceController {
 	}
 
 	@GetMapping
-	public Page<Performance> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest) 
+	public Page<PerformanceRelateDTO> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{
-		Page<Performance> page;
-		String userId = SessionUtil.getUserName(session);
-		if(userId!=null) {
-			performanceQueryDTO.setUserId(SessionUtil.getUserName(session));
-			Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceQueryDTO);
-			page = performanceService.findAll(buildSpecification, pageRequest.getPageable());
-		}else {
-			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
-		}
-		return page;
-		//return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
+	   Page<Performance> page;
+	   String userId = SessionUtil.getUserName(session);
+	   if(userId!=null) {
+	      performanceQueryDTO.setUserId(SessionUtil.getUserName(session));
+	      Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceQueryDTO);
+	      page = performanceService.findAll(buildSpecification, pageRequest.getPageable());
+	      return PerformanceRelateDTO.toPerformanceRelateDTO(page, pageRequest.getPageable());
+	   }else {
+	      return new PageImpl<PerformanceRelateDTO>(new ArrayList<PerformanceRelateDTO>(),pageRequest.getPageable(),0);
+	   }
+	   //return performanceService.findAll(PerformanceQueryDTO.getWhereClause(performanceQueryDTO), pageRequest.getPageable());
 	}
-
 	/*查看参与的绩效考核*/
 	@RequestMapping("/myPage")
-	public Page<Performance> getMyPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
+	public Page<PerformanceRelateDTO> getMyPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{
 		Page<Performance> page;
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
 			page = performanceService.getMyPerformanceByStaffName(userId, pageRequest.getPageable());
+			return PerformanceRelateDTO.toPerformanceRelateDTO(page, pageRequest.getPageable());
 		}else {
-			page = new PageImpl<Performance>(new ArrayList<Performance>(),pageRequest.getPageable(),0);
+			return new PageImpl<PerformanceRelateDTO>(new ArrayList<PerformanceRelateDTO>(),pageRequest.getPageable(),0);
 		}
-		return page;
 	}
 	/*导出excel文档*/
 	@RequestMapping("/downloadExcel")
@@ -233,7 +240,7 @@ public class PerformanceController {
 			currentRow.getCell(2).setCellValue(result.getStartTime());
 			currentRow.getCell(3).setCellStyle(cellStyle);
 			currentRow.getCell(3).setCellValue(result.getEndTime());
-			currentRow.getCell(4).setCellValue(result.getCycle());
+			//currentRow.getCell(4).setCellValue(result.getCycle());
 		//	currentRow.getCell(5).setCellValue(result.getStaff().size());
             ++i;
         }
@@ -304,11 +311,11 @@ public class PerformanceController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "complete/{id}")
-    public @ResponseBody ExtAjaxResponse complete(@PathVariable("id") String taskId, WorkflowVariable var) {
+    @RequestMapping(value = "complete/{taskId}")
+    public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, Long id, WorkflowVariable var) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
-    		performanceService.complete(taskId, variables);
+    		performanceService.complete(taskId, variables, id);   		
 	    	return new ExtAjaxResponse(true,"审批成功!");
 	    } catch (Exception e) {
 	    	e.printStackTrace();

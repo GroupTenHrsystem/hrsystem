@@ -8,8 +8,13 @@ Ext.define('Admin.model.performance.PerformanceModel', {
 	    {type: 'string',name: 'performanceName'},
 	    {type: 'date', name: 'startTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'date', name: 'endTime', dateFormat:'Y/m/d H:i:s'},
-	    {type: 'int',name: 'cycle'},
-	    {type:'string',name:'processInstanceId'}
+	    {type: 'date', name: 'applyTime', dateFormat:'Y/m/d H:i:s'},
+	    {type: 'date', name: 'completeTime', dateFormat:'Y/m/d H:i:s'},
+	    //{type: 'int',name: 'cycle'},
+	    {type: 'string',name: 'processStatus'},
+	    {type: 'string',name: 'processInstanceId'},
+	  	{type:'string',name:'staffName'},
+	  	{type:'string',name:'performanceTempletName'}
 	    // {type: 'string',name: 'performanceIndex'},
 	    // {type: 'string',name: 'weighting'},
 	],
@@ -18,3 +23,5 @@ Ext.define('Admin.model.performance.PerformanceModel', {
 		url: '/performance',
 	}
 });
+
+//https://stackoverflow.com/questions/25516753/how-to-read-the-referenced-object-when-it-is-nested-in-extjs-5-0-0

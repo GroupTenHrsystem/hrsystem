@@ -23,11 +23,19 @@ public class StaffService implements IStaffService {
 	@Override
 	public Staff findStaffById(Long id) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		Optional<Staff> staff = staffRepository.findById(id);
 	    if (!staff.isPresent()) {
 	        return null;
 	    }
 	    return staff.get();
+=======
+		 Optional<Staff> staff = staffRepository.findById(id);
+		 if (!staff.isPresent()) {
+		        return null;
+		    }
+		    return staff.get();
+>>>>>>> refs/remotes/origin/master
 	}
 
 	@Override

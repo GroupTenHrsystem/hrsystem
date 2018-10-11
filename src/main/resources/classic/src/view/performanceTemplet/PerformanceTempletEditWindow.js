@@ -46,9 +46,14 @@ Ext.define('Aria.view.performanceTemplet.PerformanceTempletEditWindow', {
             fieldLabel: '考评指标',
             name:'performanceIndex'
         }, {
-            xtype: 'textfield',
-            fieldLabel: '考评分值',
-            name:'weighting'
+            xtype: 'numberfield',
+            fieldLabel: '考评分值(%)',
+            name: 'weighting',
+            minValue: 0,
+            maxValue: 1,
+            allowDecimals: true,
+            decimalPrecision: 2,
+            step: 0.01
         }]
     }],
    

@@ -1,13 +1,9 @@
 package com.hrsystem.resume.controller;
 
-import java.util.Date;
-
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,21 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
-import com.hrsystem.interview.entity.Interview;
-import com.hrsystem.interview.service.IInterviewService;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.entity.ResumeQueryDTO;
 import com.hrsystem.resume.service.IResumeService;
 
-@Component
+//@Component
 @RestController
 @RequestMapping("/resume")
 public class ResumeController {
 
 	@Autowired
 	private IResumeService resumeService;
-	@Autowired
-	private IInterviewService interviewService;
 	
 	@GetMapping
 	public Page<Resume> getPage(ResumeQueryDTO resumeQueryDTO,ExtjsPageRequest pageRequest){
@@ -100,30 +92,11 @@ public class ResumeController {
 		}
 	}	
 	
-	//@Test
-	@RequestMapping(value="/testResume")
+	@Test
 	public void testResume() {
 		try {
 			
-			Interview interview = new Interview();
-			interview.setInterviewer("Alica Hong");
-			interview.setFaceResult("pass");
-			interview.setEstimate("优秀");
-			interview.setFaceDate(new Date());
-			interview.setInterviewStatus("一面");
-			
-			Resume resume = new Resume();
-			resume.setName("miete");
-			resume.setIdCard("125635625586696596");
-			resume.setEmail("819934639@qq.com");
-			resume.setAddress("广东深圳");
-			resume.setNativePlace("茂名");
-			resume.setEducation("本科");
-			resume.setReferer("12");
-			
-			resume.setInterview(interview);
-			interviewService.save(interview);
-			resumeService.save(resume);
+			System.out.println(resumeService.count());
 	
 		} catch (Exception e) {
 		}

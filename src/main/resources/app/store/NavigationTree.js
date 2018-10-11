@@ -94,7 +94,7 @@
                 selectable: false,
             	children: [
 	                {
-	                    text: '职位发布',
+	                    text: '招聘信息发布',
 		                iconCls: 'x-fa fa-address-card',
                 		viewType: 'recruit',
 		                leaf: true
@@ -102,7 +102,7 @@
 	                {
 	                    text: '简历管理',
 	                    iconCls: 'x-fa fa-exclamation-triangle',
-	                    //viewType: 'page404',
+	                    viewType: 'resume',
 	                    leaf: true
 	                },
 	                {
@@ -251,11 +251,6 @@
                 iconCls: 'x-fa fa-address-card',
                 rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'scheduling',
-                leaf: true
-            },{
-                text: '招聘模块',
-                iconCls: 'x-fa fa-address-card',
-                viewType: 'recruit',
                 leaf: true
             },{
                 text: 'Login',

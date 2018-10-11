@@ -13,20 +13,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -45,24 +32,29 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "t_performance")
+@NamedEntityGraph(name = "Performance.withStaff", attributeNodes = {@NamedAttributeNode("staff"),@NamedAttributeNode("performanceTemplet")})
+//	使用了@NamedEntityGraph注解，findAll合为一条HQL，避免JPA N+1 问题
 public class Performance implements Serializable {
 		@Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
-		private String performanceName;	
+		private String performanceName;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-		private Date startTime; 
+		private Date startTime;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-		private Date endTime; 
+		private Date endTime;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date realityStartTime;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	    private Date realityEndTime;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date applyTime;
-		private Long cycle;
+		private Date completeTime;
+		private Double selfScore;
+		private Double deptLeaderScore;
+		//private Long cycle;
 		private Boolean status = false;				//true显示，flase不显示
-		
+
 		//工作流
 		@Enumerated(EnumType.STRING)
 		private ProcessStatus processStatus;//流程状态
@@ -70,9 +62,9 @@ public class Performance implements Serializable {
 	    private String userId;//启动流程的用户ID
 	    //流程实例Id：用于关联流程引擎相关数据没有启动流程之前为""
 	    private String processInstanceId;
-	    
-		@ManyToOne(cascade=CascadeType.ALL)
+
+		@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)			//	使用了@NamedEntityGraph注解，findAll合为一条HQL，避免JPA N+1 问题
 		private PerformanceTemplet performanceTemplet;
-		@ManyToOne(cascade=CascadeType.ALL)
+		@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)			//	使用了@NamedEntityGraph注解，findAll合为一条HQL，避免JPA N+1 问题
 		private Staff staff;
 }

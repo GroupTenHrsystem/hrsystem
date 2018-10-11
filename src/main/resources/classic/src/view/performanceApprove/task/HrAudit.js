@@ -28,6 +28,12 @@ Ext.define('Admin.view.performanceApprove.task.HrAudit', {
         hidden: true,
         readOnly: true
 	},{
+        xtype: 'textfield',
+        name: 'id',
+        fieldLabel: 'ID',
+        hidden: true,
+        readOnly: true
+    },{
 		xtype: 'radiogroup',
 		fieldLabel: '人事文员审批',
 		defaults: {
