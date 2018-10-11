@@ -23,16 +23,28 @@ Ext.define('Admin.view.performanceApprove.task.ReportBack', {
         hidden: true,
         readOnly: true
 	},{
-		xtype: 'datefield',
-		fieldLabel: '实际开始时间',
-		format: 'Y/m/d H:i:s', 
-		name: 'realityStartTime'
-	},{
-		xtype: 'datefield',
-		fieldLabel: '实际结束时间',
-		format: 'Y/m/d H:i:s', 
-		name: 'realityEndTime'
-	}],
+        xtype: 'textfield',
+        name: 'id',
+        fieldLabel: 'ID',
+        hidden: true,
+        readOnly: true
+    },{
+		xtype: 'radiogroup',
+		fieldLabel: '结果：',
+		defaults: {
+			flex: 1
+		},
+		items: [{
+			name: 'confirmResult',
+			inputValue: true,
+			boxLabel: '确认',
+			checked: true
+		}, {
+			name: 'confirmResult',
+			inputValue: false,
+			boxLabel: '申诉'
+		}]
+    }],
    	bbar: [{
 		xtype: 'button',
 		ui: 'soft-green',

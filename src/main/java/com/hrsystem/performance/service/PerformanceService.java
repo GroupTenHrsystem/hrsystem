@@ -1,4 +1,6 @@
 package com.hrsystem.performance.service;
+import java.time.LocalDate;
+import java.time.ZoneId;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
@@ -99,7 +101,12 @@ public class PerformanceService implements IPerformanceService{
 				processInstance = workflowService.startWorkflow(userId, "performance", performance.getId().toString(), variables);
 				performance.setProcessStatus(ProcessStatus.APPROVAL);
 				performance.setProcessInstanceId(processInstance.getId());
-				performance.setApplyTime(new Date());
+				
+				Date now = new Date();
+				LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+				Date applyTime=java.sql.Date.valueOf(localDate);
+				performance.setApplyTime(applyTime);
+				
 				performanceRepository.save(performance);
 			} catch (Exception e) {
 				e.printStackTrace();

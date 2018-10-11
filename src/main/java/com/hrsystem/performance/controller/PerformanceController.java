@@ -1,6 +1,9 @@
 package com.hrsystem.performance.controller;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 import java.util.Iterator;
@@ -233,7 +236,7 @@ public class PerformanceController {
 			currentRow.getCell(2).setCellValue(result.getStartTime());
 			currentRow.getCell(3).setCellStyle(cellStyle);
 			currentRow.getCell(3).setCellValue(result.getEndTime());
-			currentRow.getCell(4).setCellValue(result.getCycle());
+			//currentRow.getCell(4).setCellValue(result.getCycle());
 		//	currentRow.getCell(5).setCellValue(result.getStaff().size());
             ++i;
         }
@@ -304,13 +307,24 @@ public class PerformanceController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "complete/{id}")
-    public @ResponseBody ExtAjaxResponse complete(@PathVariable("id") String taskId, WorkflowVariable var) {
+    @RequestMapping(value = "complete/{taskId}")
+    public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, Long id, WorkflowVariable var) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
-    		System.out.println(taskId);
-    		System.out.println(variables);
     		performanceService.complete(taskId, variables);
+    		Performance performance = performanceService.findPerformanceById(id);
+    		if(variables.containsKey("selfScore")) {
+    			performance.setSelfScore(Double.parseDouble(String.valueOf(variables.get("selfScore"))));
+    		}else if(variables.containsKey("deptLeaderScore")) {
+    			performance.setDeptLeaderScore(Double.parseDouble(String.valueOf(variables.get("deptLeaderScore"))));
+    		}
+    		if(variables.containsKey("confirmResult")) {
+	    		Date now = new Date();
+				LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+				Date completeTime=java.sql.Date.valueOf(localDate);
+				performance.setCompleteTime(completeTime);
+    		}
+    		performanceService.insertPerformance(performance);
 	    	return new ExtAjaxResponse(true,"审批成功!");
 	    } catch (Exception e) {
 	    	e.printStackTrace();

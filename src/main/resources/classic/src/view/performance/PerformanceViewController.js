@@ -81,7 +81,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 		Ext.apply(store.proxy.extraParams, 
 				{
 					performanceName:"",
-					cycle:"",
+				//	cycle:"",
 					startTimeStart:"",
 					startTimeEnd:"",
 					endTimeStart:"",
@@ -92,10 +92,10 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 			var fieldValue = searchField.getValue;
 			Ext.apply(store.proxy.extraParams, {performanceName:searchValue});
 		}
-		if(searchField==='cycle'){
-			var fieldValue = searchField.getValue;
-			Ext.apply(store.proxy.extraParams, {cycle:searchValue});
-		}
+		// if(searchField==='cycle'){
+		// 	var fieldValue = searchField.getValue;
+		// 	Ext.apply(store.proxy.extraParams, {cycle:searchValue});
+		// }
 		if(searchField==='startTime'){
 			Ext.apply(store.proxy.extraParams,{
 				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
@@ -121,7 +121,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 		var values  = form.getValues();
 		Ext.apply(store.proxy.extraParams, {
 					performanceName:"",
-					cycle:"",
+					//cycle:"",
 					startTimeStart:"",
 					startTimeEnd:"",
 					endTimeStart:"",
@@ -129,7 +129,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 			});
 		Ext.apply(store.proxy.extraParams,{
 			performanceName:values.performanceName,
-			cycle:values.cycle
+			//cycle:values.cycle
 		});
 		if(values.startTimeStart!=""){
 			Ext.apply(store.proxy.extraParams,{

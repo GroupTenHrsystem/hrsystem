@@ -44,11 +44,13 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             fieldLabel: '考核结束时间',
             name:'endTime',
             format: 'Y/m/d H:i:s'
-        }, {
-            xtype: 'textfield',
-            fieldLabel: '考核周期',
-            name:'cycle'
-        },{
+        }, 
+        // {
+        //     xtype: 'textfield',
+        //     fieldLabel: '考核周期',
+        //     name:'cycle'
+        // },
+        {
             xtype: 'combo',
             store: {
                 type: 'array',
