@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -36,7 +37,7 @@ public class Staff {
 	private String status;
 	private String employmentDate;
 	private String leaveDate;
-	@OneToOne(cascade = CascadeType.REFRESH)
+	@ManyToOne(cascade = CascadeType.REFRESH)	//ManyToOne
 	@JoinColumn(name = "positionId")
 	private Role positionId;
 }

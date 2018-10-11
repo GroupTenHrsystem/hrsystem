@@ -91,10 +91,18 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		var store = Ext.data.StoreManager.lookup('salaryGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	console.log(values);
     	record.set(values);   	
     	setTimeout(store.load(),"500");
         win.close();
+	},
+	openDetail:function(grid, rowIndex, colIndex){
+		var record = grid.getStore().getAt(rowIndex);
+		//获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
+		if (record ) {
+			var win = grid.up('salary').add(Ext.widget('salaryDetailWindow'));
+			win.show();
+			win.down('form').getForm().loadRecord(record);
+		}
 	},
 	/*combobox选中后控制对应输入（文本框和日期框）框显示隐藏*/
 	// searchComboboxSelectChuang:function(combo,record,index){
