@@ -43,18 +43,19 @@ public class Performance implements Serializable {
 		private Date startTime;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date endTime;
-		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-		private Date realityStartTime;
-		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-	    private Date realityEndTime;
+
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 		private Date applyTime;
 		private Date completeTime;
 		private Double selfScore;
 		private Double deptLeaderScore;
-		//private Long cycle;
+		private String selfScoreReason;
+		private String deptLeaderScoreReason;
+		private String confirmResult;
 		private Boolean status = false;				//true显示，flase不显示
+//		private Long cycle;
 
+		
 		//工作流
 		@Enumerated(EnumType.STRING)
 		private ProcessStatus processStatus;//流程状态

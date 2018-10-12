@@ -30,7 +30,16 @@
         view.up('panel').up('container').add(win);
         return win;
     },
-
+    openDetailWindow:function(grid, rowIndex, colIndex){
+        var record = grid.getStore().getAt(rowIndex);
+        // console.log(record.get('id'));
+        // console.log(record);
+        if (record ) {
+            var win = grid.up('performanceApproveCenterPanel').add(Ext.widget('performanceApproveDetailWindow'));
+            win.show();
+            win.down('form').getForm().loadRecord(record);
+        }
+    },
     onClickPerformanceApproveCompleteWindowButton: function(view, recIndex, cellIndex, item, e, record) {
     	//选中点击的行
         var taskDefinitionKey = record.get('taskDefinitionKey');
@@ -41,21 +50,17 @@
         }
         else if (taskDefinitionKey == 'deptLeaderAudit') {
             //部门领导审批
-            var win = this.setCurrentView(view,taskDefinitionKey, '部门领导审批');
+            var win = this.setCurrentView(view,taskDefinitionKey, '领导评分');
             win.down('form').getForm().loadRecord(record);
-        } else if (taskDefinitionKey == 'hrAudit') {
-        	//人事审批
-        	var win = this.setCurrentView(view,taskDefinitionKey,'人事审批表单');
-        	win.down('form').getForm().loadRecord(record);
-        }
+        } 
         else if (taskDefinitionKey == 'reportBack') {
         	//申请人销假
-        	var win = this.setCurrentView(view,taskDefinitionKey,'销假表单');
+        	var win = this.setCurrentView(view,taskDefinitionKey,'结果确认');
         	win.down('form').getForm().loadRecord(record);
         }
         else if (taskDefinitionKey == 'modifyApply') {
         	//申请人调整申请：可以编写到工具类中
-        	var win = this.setCurrentView(view,taskDefinitionKey,'调整申请表单');
+        	var win = this.setCurrentView(view,taskDefinitionKey,'调整');
         	win.down('form').getForm().loadRecord(record);
         }
     },
@@ -119,7 +124,7 @@
         }];
         this.complete(url,variables,form);
     },
-	//部门经理审批
+	//领导评分
     onClickDeptleaderAuditFormSubmitButton: function(btn) {
     	var form = btn.up('form');
     	var values = form.getValues();
@@ -139,23 +144,7 @@
         }];
         this.complete(url,variables,form);
     },
-    //人事文员审批
-    onClickHrAuditFormSubmitButton: function(btn) {
-        var form = btn.up('form');
-    	var values = form.getValues();
-    	var url = 'performance/complete/' + values.taskId;
-    	var variables = [{
-			key: 'hrPass',
-			value: values.hrPass,//获取表单选择的value
-			type: 'B'
-		},{
-			key: 'hrBackReason',
-			value: values.hrBackReason,//获取表单选择的value
-			type: 'S'
-		}];
-        this.complete(url,variables,form);
-    },
-    //销假
+    //确认结果
     onClickReportBackFormSubmitButton: function(btn) {
     	var form = btn.up('form');
      	var values = form.getValues();
@@ -164,10 +153,14 @@
  			key: 'confirmResult',
  			value: values.confirmResult,//获取表单选择的value
  			type: 'B'
- 		}];
+ 		},{
+            key: 'resultReason',
+            value: values.resultReason,//获取表单选择的value
+            type: 'S'
+        }];
         this.complete(url,variables,form);
     },
-    //调整申请
+    //调整
     onClickModifyApplyFormSubmitButton: function(btn) {
         var form = btn.up('form');
     	var values = form.getValues();

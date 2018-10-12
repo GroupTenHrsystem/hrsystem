@@ -312,10 +312,10 @@ public class PerformanceController {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
     		performanceService.complete(taskId, variables, id);   		
-	    	return new ExtAjaxResponse(true,"审批成功!");
+	    	return new ExtAjaxResponse(true,"提交成功!");
 	    } catch (Exception e) {
 	    	e.printStackTrace();
-	        return new ExtAjaxResponse(false,"审批失败!");
+	        return new ExtAjaxResponse(false,"提交失败!");
 	    }
     }
 }
