@@ -44,4 +44,6 @@ public class Staff {
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "positionId")
 	private Role role;
+	
+	
 }
