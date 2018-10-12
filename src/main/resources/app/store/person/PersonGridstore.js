@@ -5,10 +5,10 @@ Ext.define('Admin.store.person.PersonGridStore', {
     model:'Admin.model.person.PersonModel',
     proxy: {
         type: 'rest',
-        url: '/Staff',
+        url: '/person',
         reader:{
             type:'json',
-            rootProperty:'content',//对应后台返回的结果集名称
+            rootProperty:'',//对应后台返回的结果集名称
             totalProperty: 'totalElements'//分页需要知道总记录数
         },
         writer: {

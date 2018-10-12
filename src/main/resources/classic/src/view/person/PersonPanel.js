@@ -13,116 +13,166 @@ Ext.define('Admin.view.person.PersonPanel', {
     //controller: 'searchresults',
    // viewModel: {type: 'orderViewModel'},
     layout: 'fit',
-    items: [{
-            xtype: 'gridpanel',
-            cls: 'user-grid',
-            title: 'personGrid Results',
-            //routeId: 'user',
-            selModel: {type: 'checkboxmodel'},
-            bind: '{personLists}',
-            scrollable: false,
-            columns: [
-                {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'employeNum',text: 'Employe Num',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: 'Staff Name',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'sex',text: 'Sex',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'idcard',text: 'Id card',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'email',text: 'Email',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'phone',text: 'Phone',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'status',text: 'Status',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'password',text: 'Password',flex: 1,hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'address',text: 'Address',flex: 1,hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'nativePlace',text: 'NativePlace',flex: 1,hidden:true},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'birthday',text: 'Birthday',formatter: 'date("Y/m/d")',hidden:true},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'employmentDate',text: 'Employment Date',formatter: 'date("Y/m/d")'},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'leaveDate',text: 'Leave Date',formatter: 'date("Y/m/d")'},
-                
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
-                    items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'}
-                    ]
+   width: 350,
+    
+
+            items: [{
+            xtype: 'container',
+            layout: 'hbox',
+            defaultType: 'textfield',
+            margin: '0 0 5 0',
+            {
+                xtype: 'propertygrid',
+                nameColumnWidth: 165,
+                source: {
+                    employeNum:  1,
+                    staffName: 1,
+                    sex: 1,
+                    idcard:1,
+                    email: 1,
+                    phone: 1,
+                    password: 1,
+                    address: 1,
+                    nativePlace: 1,
+                    status: 1,
+                    createTimeStart: 1,
+                    createTimeEnd:1,
+                    birthday: 1
+                },
+                sourceConfig: {
+                    borderWidth: {
+                        displayName: 'Border Width'
+                    },
+                    tested: {
+                        displayName: 'QA'
+                    }
                 }
-            ],
-            tbar: [{
-	            xtype: 'combobox',
-                reference:'searchFieldName',
-	            hideLabel: true,
-	            store:Ext.create("Ext.data.Store", {
-				    fields: ["name", "value"],
-				    data: [
-				      	{ name: '用户名', value: 'staffName' },
-						{ name: '入职时间', value: 'employmentDate' }
-				    ]
-				}),
-	            displayField: 'name',
-	            valueField:'value',
-	            value:'用户名',
-	            editable: false,
-	            queryMode: 'local',
-	            triggerAction: 'all',
-	            emptyText: 'Select a state...',
-	            width: 135,
-                listeners:{
-                    select: 'searchComboboxSelectChuang'
-                }
-	        }, '-',{
-            	xtype:'textfield',
-                reference:'searchFieldValue',
-            	name:'userPanelSearchField'
-		    }, '-',{
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue',
-                fieldLabel: 'From',
-                name: 'from_date'
-                //,id:'from_date',
-                //vtype: 'daterange',
-                //endDateField: 'to_date'
-            }, {
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue2',
-                fieldLabel: 'To',
-                name: 'to_date'
-                //,id:'to_date',
-                //vtype: 'daterange',
-                //startDateField: 'from_date'
-         },'-',{
-		        text: 'Search',
-		        iconCls: 'fa fa-search',
-		        handler: 'quickSearch'
-		    }, '-',{
-		        text: 'Search More',
-		        iconCls: 'fa fa-search-plus',
-		        handler: 'openSearchWindow'	
-			},'-',{
-                text: 'Clear Text',
-                iconCls: 'fa fa-eraser',
-                handler: 'clearText' 
-            }, '->',{
-		        text: 'Add',
-		        tooltip: 'Add a new row',
-		        iconCls: 'fa fa-plus',
-		        handler: 'openAddWindow'	
-		    },'-',{
-		        text: 'Removes',
-		        tooltip: 'Remove the selected item',
-		        iconCls:'fa fa-trash',
-		        //disabled: true,
-		        handler: 'deleteMoreRows'	
-		    }],			
-            dockedItems: [{
-                xtype: 'pagingtoolbar',
-                dock: 'bottom',
-                //itemId: 'userPaginationToolbar',
-                displayInfo: true,
-                bind: '{personLists}'
-            }]
-        }]
+            }
+        }]   
+
 });
+        //     items: [{
+        //         fieldLabel: 'Employe Num',
+        //         name: 'employeNum',
+        //         labelWidth: 110,
+        //         flex: 1,
+        //     }, {
+        //         fieldLabel: 'Staff Name',
+        //         name: 'staffName',
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'propertygrid',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+        //     items: [{
+        //         fieldLabel: 'Sex',
+        //         name: 'sex',
+        //         labelWidth: 110,
+        //         flex: 1,
+        //     }, {
+        //         fieldLabel: 'Phone',
+        //         name: 'phone',
+
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [{
+        //         fieldLabel: 'Idcard',
+        //         name: 'idcard',
+
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [{
+        //         fieldLabel: 'Password',
+        //         name: 'password',
+
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [{
+        //         fieldLabel: 'Birthday',
+        //         name: 'birthday',
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [ {
+        //         fieldLabel: 'Address',
+        //         name: 'address',
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [{
+        //         fieldLabel: 'Native Place',
+        //         name: 'nativePlace',
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [{
+        //         fieldLabel: 'Create Time Start',
+        //         name: 'createTimeStart',
+        //         labelWidth: 110,
+        //         flex: 1,
+        //     }, {
+        //         fieldLabel: 'Create Time End',
+        //         name: 'createTimeEnd',
+        //         labelWidth: 100,
+        //         width: 220,
+        //     }]
+        // },{
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     defaultType: 'textfield',
+        //     margin: '0 0 5 0',
+
+        //     items: [{
+        //         fieldLabel: 'Status',
+        //         name: 'status',
+        //         labelWidth: 110,
+        //         flex: 1,
+        //     }]
+        // }]
+        			
+//         }]   
+//         })
+//     }
+// });

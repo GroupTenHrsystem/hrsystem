@@ -21,6 +21,6 @@ Ext.define('Admin.model.person.PersonModel', {
 	],
 	proxy: {
 		type: 'rest',
-		url: '/Staff',
+		url: '/person'
 	}
 });
