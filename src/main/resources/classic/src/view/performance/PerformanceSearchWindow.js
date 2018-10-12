@@ -47,11 +47,13 @@ Ext.define('Aria.view.performance.PerformanceSearchWindow', {
             fieldLabel: '结束时间结束',
             name:'endTimeEnd',
             format: 'Y/m/d H:i:s'
-        }, {
-            xtype: 'textfield',
-            fieldLabel: '周期',
-            name:'cycle'
-        }]
+        }
+        // , {
+        //     xtype: 'textfield',
+        //     fieldLabel: '周期',
+        //     name:'cycle'
+        // }
+        ]
     }],
    
     dockedItems: {

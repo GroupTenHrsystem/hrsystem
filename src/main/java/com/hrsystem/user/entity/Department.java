@@ -26,9 +26,8 @@ public class Department {
 	private String introduce;
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Department superId;
-	@OneToMany(cascade = CascadeType.REFRESH)
-	private List<Department> upId =new ArrayList<Department>();
-	@OneToMany(mappedBy="departmentId",cascade={CascadeType.REFRESH})
-	private List<Role> positionId=new ArrayList<Role>();
+//	@OneToMany(cascade = CascadeType.REFRESH)
+//	private List<Department> upId =new ArrayList<Department>();
+
      
 }

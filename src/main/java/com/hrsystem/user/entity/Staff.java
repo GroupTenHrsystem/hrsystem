@@ -8,8 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -24,7 +27,7 @@ public class Staff {
 	private Long id;
 	private Long employeNum;
 	private String staffName;
-	private Boolean sex;
+	private String sex;
 	private String idcard;
 	private String password;
 	private String email;
@@ -34,9 +37,13 @@ public class Staff {
 	private String address;
 	private String nativePlace;
 	private String status;
-	private String employmentDate;
-	private String leaveDate;
-	@OneToOne(cascade = CascadeType.REFRESH)
+	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
+	private Date employmentDate;
+	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
+	private Date leaveDate;
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "positionId")
-	private Role positionId;
+	private Role role;
+	@ManyToOne(cascade = CascadeType.REFRESH)
+	private Department department;
 }

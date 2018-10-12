@@ -46,14 +46,24 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                         }
                 },
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',flex: 1},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'startTime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'cycle',text: '考核周期',flex: 1},
+                {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'startTime',text: '考核开始时间',formatter: 'date("Y/m/d")'},
+                {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'endTime',text: '考核结束时间',formatter: 'date("Y/m/d")'},
+                {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'applyTime',text: '发起时间',formatter: 'date("Y/m/d")'},
+                {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'completeTime',text: '完成时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
+                        {
+                            xtype: 'button', iconCls: 'x-fa fa-pencil' ,
+                            getClass: function(v, meta, rec) {
+                                if (rec.get('processStatus')!="NEW") {
+                                    return 'x-hidden';
+                                }
+                                return 'x-fa fa-pencil';
+                            },
+                            handler: 'openEditWindow'
+                        },
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
                       //  {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'},
                         {
@@ -95,7 +105,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
 				      	{ name: '绩效考核名字', value: 'performanceName' },
 						{ name: '开始时间', value: 'startTime' },
                         { name: '结束时间', value: 'endTime' },
-                        { name: '考核周期', value: 'cycle' }
+                      //  { name: '考核周期', value: 'cycle' }
 				    ]
 				}),
 	            displayField: 'name',

@@ -28,8 +28,15 @@ Ext.define('Admin.view.performanceApprove.task.DeptLeaderAudit', {
         hidden: true,
         readOnly: true
 	},{
+        xtype: 'textfield',
+        name: 'id',
+        fieldLabel: 'ID',
+        hidden: true,
+        readOnly: true
+    },{
 		xtype: 'radiogroup',
-		fieldLabel: '部门经理审批',
+		fieldLabel: '领导评分',
+        hidden: true,
 		defaults: {
 			flex: 1
 		},
@@ -44,10 +51,21 @@ Ext.define('Admin.view.performanceApprove.task.DeptLeaderAudit', {
 			boxLabel: '不同意'
 		}]
     },{
+        xtype     : 'numberfield',
+        grow      : true,
+        name      : 'deptLeaderScore',
+        fieldLabel: '评分',
+        //anchor    : '100%'
+        minValue: 0,
+        maxValue: 100,
+        allowDecimals: true,
+        decimalPrecision: 1,
+        step: 5
+    },{
         xtype     : 'textareafield',
         grow      : true,
-        name      : 'deptLeaderBackReason',//修改
-        fieldLabel: '驳回理由',
+        name      : 'deptLeaderScoreReason',
+        fieldLabel: '评分细节',
         anchor    : '100%'
     }],
 

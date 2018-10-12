@@ -1,4 +1,6 @@
 package com.hrsystem.performance.service;
+import java.time.LocalDate;
+import java.time.ZoneId;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
@@ -99,7 +101,12 @@ public class PerformanceService implements IPerformanceService{
 				processInstance = workflowService.startWorkflow(userId, "performance", performance.getId().toString(), variables);
 				performance.setProcessStatus(ProcessStatus.APPROVAL);
 				performance.setProcessInstanceId(processInstance.getId());
-				performance.setApplyTime(new Date());
+				
+				Date now = new Date();
+				LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+				Date applyTime=java.sql.Date.valueOf(localDate);
+				performance.setApplyTime(applyTime);
+				
 				performanceRepository.save(performance);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -131,6 +138,7 @@ public class PerformanceService implements IPerformanceService{
 	            	PerformanceDTO performanceDTO = new PerformanceDTO();
 	            	BeanUtils.copyProperties(performance, performanceDTO);
 	            	BeanUtils.copyProperties(workflow, performanceDTO);
+	            	performanceDTO.setStaffName(performance.getStaff().getStaffName());
 	            	results.add(performanceDTO);
 	            }
 	        }
@@ -156,7 +164,28 @@ public class PerformanceService implements IPerformanceService{
     * @param variables 流程变量
     * @return
     */
-	public void complete(String taskId, Map<String, Object> variables) {
+	public void complete(String taskId, Map<String, Object> variables, Long id) {
+		
+		Performance performance = performanceRepository.findById(id).get();
+		if(variables.containsKey("selfScore")) {
+			performance.setSelfScore(Double.parseDouble(String.valueOf(variables.get("selfScore"))));
+			performance.setSelfScoreReason(String.valueOf(variables.get("selfScoreReason")));
+		}else if(variables.containsKey("deptLeaderScore")) {
+			performance.setDeptLeaderScore(Double.parseDouble(String.valueOf(variables.get("deptLeaderScore"))));
+			performance.setDeptLeaderScoreReason(String.valueOf(variables.get("deptLeaderScoreReason")));
+		}
+		if(variables.containsKey("confirmResult")) {
+			if((boolean)variables.get("confirmResult")) {
+				Date now = new Date();
+				LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+				Date completeTime=java.sql.Date.valueOf(localDate);
+				performance.setCompleteTime(completeTime);
+			}else {
+				performance.setConfirmResult(String.valueOf(variables.get("resultReason")));
+			}    		
+		}
+		performanceRepository.save(performance);
+		
 		workflowService.complete(taskId, variables);
 	}
 }

@@ -30,15 +30,17 @@ public class PerformanceDTO {
 	private Date endTime;  
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date applyTime;
-	private Long cycle;
+	//private Long cycle;
+    private Double selfScore;
+    private Double deptLeaderScore;
+	private String selfScoreReason;
+	private String deptLeaderScoreReason;
+	private String confirmResult;
 	private Boolean status=false;
 	private Long performanceTempletId;
-	private Long staffIds[];
+	private Long staffIds[];	
 	private ProcessStatus processStatus;//流程状态
-	
-	 /*销假*/
-    private Date realityStartTime;
-    private Date realityEndTime;
+	private String staffName;
     /**------------流程数据--------------**/
     /*任务*/
     private String taskId;

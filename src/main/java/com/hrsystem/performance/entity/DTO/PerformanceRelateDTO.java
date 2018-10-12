@@ -35,8 +35,13 @@ public class PerformanceRelateDTO {
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date endTime;  
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-	private Long cycle;
+	private Date applyTime;
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	private Date completeTime;
+	//private Long cycle;
 	private ProcessStatus processStatus;
+	private Double selfScore;
+	private Double deptLeaderScore;
 	private String staffName;	
 	private String performanceTempletName;	
 	
@@ -52,6 +57,6 @@ public class PerformanceRelateDTO {
 	         performanceRelateDTO.setPerformanceTempletName(performance.getPerformanceTemplet().getName());
 	         results.add(performanceRelateDTO);
 	      }
-	      return new PageImpl<PerformanceRelateDTO> (results, pageable, null!=results?results.size():0);
+	      return new PageImpl<PerformanceRelateDTO> (results, pageable, null!=results?page.getTotalElements():0);
 	}
 }

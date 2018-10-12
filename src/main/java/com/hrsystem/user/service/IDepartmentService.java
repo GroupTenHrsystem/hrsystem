@@ -8,10 +8,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.hrsystem.user.entity.Department;
+import com.hrsystem.user.entity.Staff;
 
 public interface IDepartmentService {
 
-	public Optional<Department> findDepartmentById(Long id);
+	public Department findDepartmentById(Long id);
 	 
 	 public void insertDepartment(Department department) ;
 	 
@@ -21,5 +22,12 @@ public interface IDepartmentService {
 	 
 	 public Page<Department> findAll(Specification<Department> spec, Pageable pageable);
 	 
+	 public List<Department> getDepartmentList(Specification<Department> spec);
+	 
+	 public List<Department> findAllSubChildrens(List<Department> lists,Long parentId);
+	 
+	 public List<Long> findAllSubChildrensIds(List<Long> idLists,Long parentId);
+	 
+	 public List<Staff> findAllSubChildrensStaffs(List<Long> idLists,Long parentId);
 //	 public List<Department> getDepartmentByDepartmentTempletId(Long id);
 }

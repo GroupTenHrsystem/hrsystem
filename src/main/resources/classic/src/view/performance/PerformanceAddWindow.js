@@ -44,11 +44,13 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             fieldLabel: '考核结束时间',
             name:'endTime',
             format: 'Y/m/d H:i:s'
-        }, {
-            xtype: 'textfield',
-            fieldLabel: '考核周期',
-            name:'cycle'
-        },{
+        }, 
+        // {
+        //     xtype: 'textfield',
+        //     fieldLabel: '考核周期',
+        //     name:'cycle'
+        // },
+        {
             xtype: 'combo',
             store: {
                 type: 'array',
@@ -95,7 +97,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             xtype: 'combo',
             store: {
                 type: 'array',
-                fields: [ 'id' ,'staffName'],
+                fields: [ 'id' ,'departmentName'],
                 data: [
                     // ['test@example.com','name'],         //假数据
                     // ['someone@example.com','name'],
@@ -103,11 +105,11 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
                 ],
                 autoLoad: true, //启动自动加载
                 proxy: {
-                            type: 'rest',
-                            url: '/staff',
+                            type: 'ajax',
+                            url: '/performance/department',
                             reader:{
                                 type:'json',
-                                rootProperty:'content',//对应后台返回的结果集名称
+                                rootProperty:'',//对应后台返回的结果集名称
                                 totalProperty: 'totalElements'//分页需要知道总记录数
                             },
                             writer: {
@@ -120,7 +122,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             mode:'local' ,
             editable: false,
             valueField:'id',
-            displayField: 'staffName', //显示的field
+            displayField: 'departmentName', //显示的field
          //   plugins: 'fieldreplicator',   //选中后追加文本框
             fieldLabel: '选择部门',
             anchor: '0',
@@ -130,14 +132,14 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             emptyText:'请选择...',
             listeners:{
             select:function(combo,record,index){
-                    var staffId=record.get('id');
+                    var departmentId=record.get('id');
                     //testfunction()//对应的处理函数
-                    console.log(staffId);
+                    console.log(departmentId);
                     var staff = Ext.getCmp("staff");    //获取staff Combo组件
                     staff.getStore().removeAll(); // 清空已加载列表
                     staff.reset();    // 清空已存在结果
                     staff.getStore().load({
-                                     params: {'staffId': staffId}
+                                     params: {'departmentId': departmentId}
                                 });
                 }
             },
@@ -157,10 +159,10 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
            //     autoLoad: true, //启动自动加载
                 proxy: {
                             type: 'rest',
-                            url: '/staff',
+                            url: '/performance/departmentAllStaff',
                             reader:{
                                 type:'json',
-                                rootProperty:'content',//对应后台返回的结果集名称
+                                rootProperty:'',//对应后台返回的结果集名称
                                 totalProperty: 'totalElements'//分页需要知道总记录数
                             },
                             writer: {

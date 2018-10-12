@@ -22,7 +22,9 @@ import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.service.IResumeService;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.service.ISalaryService;
+import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
@@ -43,6 +45,8 @@ public class HrSystemInitUsersAndGroupsDB {
 		private IResumeService resumeService;
 		@Autowired
 		private IRecruitService recruitService;
+		@Autowired 
+		private IDepartmentService departmentService;
 		
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
@@ -93,6 +97,24 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.saveGroup(group8);
 		        		identityService.saveGroup(group9);
 		        		
+		        		Department department1 = new Department();
+		    			department1.setDepartmentName("财务部");
+		    			departmentService.insertDepartment(department1);
+		    			
+		    			Department department2 = new Department();
+		    			department2.setDepartmentName("java开发部");
+		    			departmentService.insertDepartment(department2);
+		    			
+		    			Department department3 = new Department();
+		    			department3.setDepartmentName("算法研发部");
+		    			department3.setSuperId(department2);
+		    			departmentService.insertDepartment(department3);
+		    			
+		    			Department department4 = new Department();
+		    			department4.setDepartmentName("测试部");
+		    			department4.setSuperId(department2);
+		    			departmentService.insertDepartment(department4);
+		        		
 		        		User admin = identityService.newUser("admin");
 		        		Staff adminStaff = new Staff();
 		        		adminStaff.setStaffName("admin");
@@ -100,24 +122,62 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		admin.setPassword("admin");
 		                identityService.saveUser(admin);
 		              
-		                for (int i = 1; i <=8; i++) {
+		                for (int i = 1; i <=4; i++) {
 		                	 User user = identityService.newUser("user"+i);
 		                	 user.setPassword("user"+i);
 		                	 Staff staff = new Staff();
 		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department1);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 		        		}
-		        		
+		                for (int i = 5; i <=10; i++) {
+		                	 User user = identityService.newUser("user"+i);
+		                	 user.setPassword("user"+i);
+		                	 Staff staff = new Staff();
+		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department2);
+		                	 staffService.insertStaff(staff);
+		                     identityService.saveUser(user);
+		        		}
+		                for (int i = 11; i <=13; i++) {
+		                	 User user = identityService.newUser("user"+i);
+		                	 user.setPassword("user"+i);
+		                	 Staff staff = new Staff();
+		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department3);
+		                	 staffService.insertStaff(staff);
+		                     identityService.saveUser(user);
+		        		}
+		                for (int i = 14; i <=16; i++) {
+		                	 User user = identityService.newUser("user"+i);
+		                	 user.setPassword("user"+i);
+		                	 Staff staff = new Staff();
+		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department4);
+		                	 staffService.insertStaff(staff);
+		                     identityService.saveUser(user);
+		        		}
 		        		identityService.createMembership("admin", "admin");
 		        		identityService.createMembership("user1", "generalManager");
 		        		identityService.createMembership("user2", "secretary");
-		        		identityService.createMembership("user3", "hrManager");
-		        		identityService.createMembership("user4", "hrClerk");
-		        		identityService.createMembership("user5", "marketingManager");
-		        		identityService.createMembership("user6", "marketingClerk");
-		        		identityService.createMembership("user7", "financeManager");
-		        		identityService.createMembership("user8", "financeClerk");
+		        		identityService.createMembership("user3", "secretary");
+		        		identityService.createMembership("user4", "secretary");
+		        		
+		        		identityService.createMembership("user5", "hrManager");
+		        		identityService.createMembership("user6", "hrClerk");
+		        		identityService.createMembership("user7", "hrClerk");
+		        		identityService.createMembership("user8", "hrClerk");
+		        		identityService.createMembership("user9", "hrClerk");
+		        		identityService.createMembership("user10", "hrClerk");
+		        		
+		        		identityService.createMembership("user11", "marketingManager");
+		        		identityService.createMembership("user12", "marketingClerk");
+		        		identityService.createMembership("user13", "marketingClerk");
+		        		
+		        		identityService.createMembership("user14", "financeManager");
+		        		identityService.createMembership("user15", "financeClerk");
+		        		identityService.createMembership("user16", "financeClerk");
 		        		
 		        		
 		        		 for (int i = 1; i <=100; i++) {
@@ -190,7 +250,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			recruit.setEditName("Miette");
 		    			
 		    			recruitService.save(recruit);
-
+		    			
 		            }
 		        };
 		    }

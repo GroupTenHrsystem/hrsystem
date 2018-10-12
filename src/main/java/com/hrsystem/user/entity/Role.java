@@ -19,6 +19,6 @@ public class Role {
 	private String position;
 	private Long limite;	
 	@ManyToOne(cascade = CascadeType.REFRESH)
-	private Department departmentId;
+	private Department department;
     
 }

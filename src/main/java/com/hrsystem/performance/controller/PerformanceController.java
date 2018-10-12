@@ -1,6 +1,9 @@
 package com.hrsystem.performance.controller;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 import java.util.Iterator;
@@ -56,7 +59,9 @@ import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceRelateDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
+import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
@@ -75,8 +80,6 @@ public class PerformanceController {
 	@Autowired
 	private IPerformanceTempletService performanceTempletService;
 	
-	@Autowired
-	private IStaffService staffService;
 	/**
 	 * 1、查
 	 * @param id
@@ -233,7 +236,7 @@ public class PerformanceController {
 			currentRow.getCell(2).setCellValue(result.getStartTime());
 			currentRow.getCell(3).setCellStyle(cellStyle);
 			currentRow.getCell(3).setCellValue(result.getEndTime());
-			currentRow.getCell(4).setCellValue(result.getCycle());
+			//currentRow.getCell(4).setCellValue(result.getCycle());
 		//	currentRow.getCell(5).setCellValue(result.getStaff().size());
             ++i;
         }
@@ -304,15 +307,53 @@ public class PerformanceController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "complete/{id}")
-    public @ResponseBody ExtAjaxResponse complete(@PathVariable("id") String taskId, WorkflowVariable var) {
+    @RequestMapping(value = "complete/{taskId}")
+    public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, Long id, WorkflowVariable var) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
-    		performanceService.complete(taskId, variables);
-	    	return new ExtAjaxResponse(true,"审批成功!");
+    		performanceService.complete(taskId, variables, id);   		
+	    	return new ExtAjaxResponse(true,"提交成功!");
 	    } catch (Exception e) {
 	    	e.printStackTrace();
-	        return new ExtAjaxResponse(false,"审批失败!");
+	        return new ExtAjaxResponse(false,"提交失败!");
 	    }
     }
+    
+    
+    
+    /**
+     * 下拉框选部门员工
+     * @param id
+     * @return
+     */
+    
+    @Autowired
+	private IStaffService  staffService;
+    @Autowired
+	private IDepartmentService  departmentService;
+    
+    @RequestMapping(value = "/staff")
+    public List<Staff> getStaffList(@RequestParam(name="departmentId") Long departmentId){
+		return staffService.getStaffList(departmentId);
+    }
+    
+    @RequestMapping(value = "/department")
+    public List<Department> getDepartmentList(){
+		return departmentService.getDepartmentList(null);
+    }
+    //所有子部门的ID
+    @RequestMapping(value = "/departmentAllId")
+    public List<Long> getDepartmentAllIdList(@RequestParam(name="departmentId") Long departmentId){
+    	List<Long> lists = new ArrayList<Long>();
+    	lists.add(departmentId);
+		return departmentService.findAllSubChildrensIds(lists,departmentId);
+    }
+    //部门的子部门的所有员工
+    @RequestMapping(value = "/departmentAllStaff")
+    public List<Staff> getDepartmentAllStaffList(@RequestParam(name="departmentId") Long departmentId){
+    	List<Long> lists = new ArrayList<Long>();
+    	lists.add(departmentId);
+		return departmentService.findAllSubChildrensStaffs(lists,departmentId);
+    }
+    
 }

@@ -16,11 +16,14 @@ public interface IStaffService {
 	 
 	 public void insertStaff(Staff staff) ;
 	 
+	 public Staff findStaffByName(String name);
+	 
 	 public void deleteStaff(Long id) ;
 	 
 	 public void deleteAll(Long[] ids);
 	 
 	 public Page<Staff> findAll(Specification<Staff> spec, Pageable pageable);
 	 
+	 public List<Staff> getStaffList(Long id);
 //	 public List<Staff> getStaffByStaffTempletId(Long id);
 }
