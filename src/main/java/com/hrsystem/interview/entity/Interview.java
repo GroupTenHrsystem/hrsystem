@@ -11,13 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.PostRemove;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.ResultCheckStyle;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLDeleteAll;
 import org.hibernate.annotations.Where;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="t_interview")
@@ -46,7 +45,7 @@ public class Interview {
 	public String getInterviewer() {
 		return interviewer;
 	}
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm")
 	public Date getFaceDate() {
 		return faceDate;
 	}

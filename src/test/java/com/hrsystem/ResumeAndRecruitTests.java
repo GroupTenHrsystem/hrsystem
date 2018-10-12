@@ -59,6 +59,7 @@ public class ResumeAndRecruitTests {
 				recruit.setPlanNum(3L);
 				recruit.setStartTime(new Date());
 				recruit.setEditName("Mi"+i);
+				recruit.setContact("电话：13652653652  邮箱：15486526@163.com");
 				
 				recruitService.save(recruit);
 			}

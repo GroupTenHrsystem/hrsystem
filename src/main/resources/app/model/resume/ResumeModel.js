@@ -19,7 +19,7 @@
 	    //{type: 'string',name: 'selfEvaluation'},
 	    //{type: 'string',name: 'referer'},
 	    //{type: 'string',name: 'attachment'},
-	    {type: 'date',name: 'applyTime', dateFormat:'Y/m/d H:i:s'},
+	    {type: 'date',name: 'applyTime', dateFormat:'Y/m/d'},
 	    {type: 'string',name: 'restatus'}
 	],
 	proxy: {

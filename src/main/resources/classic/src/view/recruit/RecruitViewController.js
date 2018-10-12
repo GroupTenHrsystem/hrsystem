@@ -9,7 +9,7 @@
 	submitAddForm:function(btn){
 		var form = btn.up('window').down('form');
 		var record = Ext.create('Admin.model.recruit.RecruitModel');
-		var values = form.getValues();//获取form数据
+		var values = form.getValues();
 		record.set(values);
 		record.save();
 		Ext.data.StoreManager.lookup('recruitGridStroe').load();
@@ -19,7 +19,6 @@
 	/*Edit*/
 	openEditWindow:function(grid, rowIndex, colIndex){
          var record = grid.getStore().getAt(rowIndex);
-		//获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
 		if (record ) {
 			var win = grid.up('container').add(Ext.widget('recruitEditWindow'));
 			win.show();
@@ -30,10 +29,9 @@
 		var win    = btn.up('window');
 		var store = Ext.data.StoreManager.lookup('recruitGridStroe');
 		var values = win.down('form').getValues();
-		//console.log(values); 
 		var record = store.getById(values.id);
 		//console.log(record);
-		record.set(values);  	//store.load();
+		record.set(values);  
 		win.close();
 	},
 			
@@ -44,8 +42,7 @@
             	if(btn=='yes'){
             		var store = grid.getStore();
 					var record = store.getAt(rowIndex);
-					store.remove(record);//DELETE//http://localhost:8081/order/112
-					//store.sync();
+					store.remove(record);
 				}
         	}
         , this);
@@ -58,7 +55,7 @@
             Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
                 if (button == "yes") {
                     var rows = selModel.getSelection();
-                    var selectIds = []; //要删除的id
+                    var selectIds = []; 
                     Ext.each(rows, function (row) {
                         selectIds.push(row.data.id);
                     });
@@ -66,7 +63,6 @@
 						url : '/recruit/deletes', 
 						method : 'post', 
 						params : { 
-							//ids[] :selectIds
 							ids :selectIds
 						}, 
 						success: function(response, options) {
@@ -103,42 +99,23 @@
 		}
 		if(searchField==='startTime'){
 			Ext.apply(store.proxy.extraParams,{
-				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				startTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d'),
+				startTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d')
 			});
 		}
 		if(searchField==='endTime'){
 			Ext.apply(store.proxy.extraParams,{
-				endTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				endTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+				endTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d'),
+				endTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d')
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});
 	},
-		
-	/* Search More*/
-	openSearchWindow:function(toolbar, rowIndex, colIndex){
-		toolbar.up('panel').up('container').add(Ext.widget('recruitSearchWindow')).show();
-	},	
-	submitSearchForm:function(btn){
-		var store =	Ext.data.StoreManager.lookup('recruitGridStroe');
-		var win = btn.up('window');
-		var form = win.down('form');
-		var values  = form.getValues();
-		Ext.apply(store.proxy.extraParams, {orderName:"",createrTimeStart:"",createrTimeEnd:""});
-		Ext.apply(store.proxy.extraParams,{
-			orderName:values.orderName,
-			createrTimeStart:Ext.util.Format.date(values.createrTimeStart, 'Y/m/d H:i:s'),
-			createrTimeEnd:Ext.util.Format.date(values.createrTimeEnd, 'Y/m/d H:i:s')
-		});
-		store.load({params:{start:0, limit:20, page:1}});
-		win.close();
-	},
-	
+
 	searchComboboxSelectChuang:function(combo,record,index){
 		//alert(record.data.name);
 		var searchField = this.lookupReference('searchFieldName').getValue();
-		if(searchField==='createrTime'){
+		if(searchField==='startTime' || searchField==='endTime'){
 			this.lookupReference('searchFieldValue').hide();
 			this.lookupReference('searchDataFieldValue').setValue(null);
 			this.lookupReference('searchDataFieldValue2').setValue(null);
@@ -150,6 +127,19 @@
 			this.lookupReference('searchDataFieldValue').hide();
 			this.lookupReference('searchDataFieldValue2').hide();
 		}
+	},
+		
+	/*Bigger*/
+	openBiggerWindow:function(grid,rowIndex, colIndex){
+		var record = grid.getStore().getAt(rowIndex);
+		if (record ) {
+			var win = grid.up('container').add(Ext.widget('recruitBiggerWindow'));
+			win.show();
+			win.down('form').getForm().loadRecord(record);
+		}
+	},
+	printInfo:function(btn){
+		alert("printInfo");
 	}	
 
 });

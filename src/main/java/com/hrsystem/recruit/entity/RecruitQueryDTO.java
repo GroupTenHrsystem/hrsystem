@@ -30,30 +30,30 @@ public class RecruitQueryDTO
 	@Like
 	private String position;
 	
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	@JsonFormat(pattern="yyyy/MM/dd") 
 	private Date startTime;
 	
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	@JsonFormat(pattern="yyyy/MM/dd") 
 	private Date endTime;
 
 	@Name("startTime")
 	@GreaterThanEqual 
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	@JsonFormat(pattern="yyyy/MM/dd") 
 	private Date startTimeStart; 
 	
 	@Name("startTime")
 	@LessThanEqual 
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	@JsonFormat(pattern="yyyy/MM/dd") 
 	private Date startTimeEnd; 
 	
 	@Name("endTime")
 	@GreaterThanEqual 
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	@JsonFormat(pattern="yyyy/MM/dd") 
 	private Date endTimeStart;  
 	
 	@Name("endTime")
 	@LessThanEqual 
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	@JsonFormat(pattern="yyyy/MM/dd") 
 	private Date endTimeEnd; 
 	
 

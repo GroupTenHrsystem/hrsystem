@@ -8365,6 +8365,12 @@
 .x-tool-wrench:before {
     content: "\f0ad";
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/recruit/RecruitBiggerWindow.scss:1 */
+.x-form-textfield-noborder .x-form-trigger-wrap-default {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #d0d0d0;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/sass/src/view/main/Main.scss:1 */
 .nav-tree-badge:after {
     position: absolute;

@@ -36,7 +36,7 @@ public class Resume {
 	
 	private String name;  
 	private String sex;  
-	@JsonFormat(pattern="yyyy/MM/dd",timezone="GMT+8")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date birthday;   //出生年月
 	private String nativePlace;   //籍贯
 	private String major;   //专业
@@ -51,7 +51,7 @@ public class Resume {
 	private String referer;   //推荐人
 	private String attachment;   //附件
 	
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date applyTime;  
 	private String restatus;     //简历状态
 	

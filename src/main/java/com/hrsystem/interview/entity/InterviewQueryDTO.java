@@ -11,6 +11,7 @@ import javax.persistence.criteria.Root;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -26,7 +27,7 @@ public class InterviewQueryDTO {
 	public String getInterviewer() {
 		return interviewer;
 	}
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm")
 	public Date getFaceDate() {
 		return faceDate;
 	}

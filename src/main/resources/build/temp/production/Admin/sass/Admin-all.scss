@@ -112,6 +112,7 @@ $include-aria-view-performancetemplet-performancetempletaddwindow: dynamic(true)
 $include-aria-view-performancetemplet-performancetempleteditwindow: dynamic(true);;
 $include-aria-view-performancetemplet-performancetempletsearchwindow: dynamic(true);;
 $include-aria-view-recruit-recruitaddwindow: dynamic(true);;
+$include-aria-view-recruit-recruitbiggerwindow: dynamic(true);;
 $include-aria-view-recruit-recruiteditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitsearchwindow: dynamic(true);;
 $include-aria-view-resume-resumeaddwindow: dynamic(true);;
@@ -2097,6 +2098,14 @@ $current-package: false;
 $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/dashboard/Dashboard';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\recruit\RecruitBiggerWindow.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/recruit/RecruitBiggerWindow';
 
 /* including package Admin */
 $Admin-resource-root: '' !default;

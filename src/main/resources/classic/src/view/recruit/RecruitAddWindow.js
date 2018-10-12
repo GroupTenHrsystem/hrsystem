@@ -43,16 +43,20 @@
             xtype: 'datefield',
             fieldLabel: '开始时间',
             name:'startTime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d'
         }, {
             xtype: 'datefield',
             fieldLabel: '截止时间',
             name:'endTime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d'
     	}, {
 		    xtype: 'textfield',
 		    fieldLabel: '发布人',
 		    name:'editName'
+    	}, {
+    		xtype: 'textfield',
+		    fieldLabel: '联系方式',
+		    name:'contact'
     	}, {
 		    xtype: 'textfield',
 		    fieldLabel: '职位描述',
