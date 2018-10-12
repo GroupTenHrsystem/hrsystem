@@ -33,7 +33,8 @@ public class Department {
 	@OneToMany(cascade=CascadeType.ALL,mappedBy="superId")
 	private List<Department> children =new ArrayList<Department>();
 	
-//	@Transient
-//	private Boolean leaf = false;
+	@Transient
+	private Boolean expanded = true;	//extjs下拉框展开
      
 }
+ 

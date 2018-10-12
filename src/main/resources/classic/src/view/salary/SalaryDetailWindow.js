@@ -16,7 +16,7 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
     },
     items: [{
         xtype: 'form',
-        ariaLabel: 'Enter your name',
+        //ariaLabel: 'Enter your name',
         // height: 600,
         // minHeight: 600,
         // maxHeight: 600,

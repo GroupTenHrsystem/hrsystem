@@ -1,22 +1,24 @@
 Ext.define('Aria.view.performance.PerformanceAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.performanceAddWindow',
-    height: 400,
-    minHeight: 100,
-    minWidth: 300,
-    width: 500,
+   y:50,
+    resizable : false,
+    minWidth: 480,
+    maxWidth: 480,
+    width: 520,
     scrollable: true,
-    title: '添加绩效考核信息',
-    closable: true,
-    constrain: true,
-    defaultFocus: 'textfield',
-    modal:true,
-    layout: 'fit',
+    title: '绩效考核',
+    width: 600,
+    bodyPadding: 10,
+    defaults: {
+        anchor: '100%',
+        labelWidth: 100
+    },
     items: [{
         xtype: 'form',
-        layout: 'form',
-        padding: '10px',
-        ariaLabel: 'Enter your name',
+        // layout: 'form',
+        // padding: '10px',
+        // ariaLabel: 'Enter your name',
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
@@ -33,16 +35,19 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
         }, {
             xtype: 'textfield',
             fieldLabel: '绩效考核名称',
+            width:400,
             name:'performanceName'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核开始时间',
             name:'startTime',
+            width:400,
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核结束时间',
             name:'endTime',
+            width:400,
             format: 'Y/m/d H:i:s'
         }, 
     
@@ -94,38 +99,42 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             xtype: 'treepicker',
             displayField: 'departmentName',
             autoScroll:true,
+            scrollable: true,
+            width:400,
+            minPickerHeight: 400,
+            fieldLabel: '选择部门',
+            flex: 1,
             //必须这样创建store
             store:Ext.create("Ext.data.TreeStore",{
-                   fields: ['id','departmentName'],
-                root: {
-                    departmentName: '部门',
-                    id:'-1',
-                    expanded: true,
-                    //id:'2',
-                    children: [{"id":4, "departmentName":"second",},
-
-                        {id:"0", departmentName: "School Friends", expanded: true, children: 
-                                    [
-                                        {
-                                            id:"1", departmentName: "Mike", leaf: true, name: "Mike", email: "mike@stackoverflow.com", phone: "345-2222"
-                                        },
-                                        {
-                                            id:"select", departmentName: "Laura", leaf: true, name: "Laura", email: "laura@stackoverflow.com", phone: "345-3333"
-                                        }
-                                    ] 
-
-                        }],
-                },
-                rootVisible: false,
-                proxy: {
-                    type: 'ajax',
-                    url: '/department/findNoParent',
-                    reader: {
-                        type: 'json'
+                    fields: ['id','departmentName'],
+                    root: {
+                        departmentName: '请选择员工',
+                        id:'-1',
+                        expanded: true
+                    },
+                    rootVisible: false,
+                    proxy: {
+                        type: 'ajax',
+                        url: '/department/findNoParent',
+                        reader: {
+                            type: 'json'
+                        }
                     }
+                }),
+            listeners:{
+            select:function(combo,record,index){
+                    var departmentId=record.get('id');
+                    //testfunction()//对应的处理函数
+                    console.log(departmentId);
+                    var staff = Ext.getCmp("staff");    //获取staff Combo组件
+                    staff.getStore().removeAll(); // 清空已加载列表
+                    staff.reset();    // 清空已存在结果
+                    staff.getStore().load({
+                                     params: {'departmentId': departmentId}
+                                });
                 }
-            })
-        }
+            },
+        },
 
         // ,{
         //     xtype: 'combo',
@@ -182,39 +191,54 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
         //         this.getStore().clearFilter();
         //     }
         // },
-
-        // {
-        //     xtype: 'tagfield',
-        //     fieldLabel: 'Select a state',
-        //     id:'staff',
-        //     store: {
-        //         type: 'array',
-        //         fields: [ 'id' ,'staffName'],
-        //    //     autoLoad: true, //启动自动加载
-        //         proxy: {
-        //                     type: 'rest',
-        //                     url: '/department/departmentAllStaff',
-        //                     reader:{
-        //                         type:'json',
-        //                         rootProperty:'',//对应后台返回的结果集名称
-        //                         totalProperty: 'totalElements'//分页需要知道总记录数
-        //                     },
-        //                     writer: {
-        //                         type: 'json',
-        //                     },
-        //                     simpleSortMode: true    //简单排序模式
-        //             },
-        //      //   autoSync: true
-        //     },
-        //     valueField:'id',
-        //     displayField: 'staffName',
-        //     name:'staffIds',
-        //     filterPickList: true,
-        //     queryMode: 'local',
-        //     publishes: 'value'
-        // }
-        
-        ]
+        // 
+        // 
+        {
+            xtype: 'fieldcontainer',
+            combineErrors: true,
+            layout: 'hbox',
+            items: [{
+                xtype: 'tagfield',
+                fieldLabel: '选择员工',
+                id:'staff',
+                width:350,
+                store: {
+                    type: 'array',
+                    fields: [ 'id' ,'staffName'],
+               //     autoLoad: true, //启动自动加载
+                    // data: [
+                    //     ['-1','全选']
+                    // ],
+                    proxy: {
+                                type: 'rest',
+                                url: '/department/departmentAllStaff',
+                                reader:{
+                                    type:'json',
+                                    rootProperty:'',//对应后台返回的结果集名称
+                                    totalProperty: 'totalElements'//分页需要知道总记录数
+                                },
+                                writer: {
+                                    type: 'json',
+                                },
+                                simpleSortMode: true    //简单排序模式
+                        },
+                 //   autoSync: true
+                },
+                valueField:'id',
+                displayField: 'staffName',
+                name:'staffIds',
+                filterPickList: true,
+                queryMode: 'local',
+                publishes: 'value'
+            },{
+                xtype: 'checkbox',
+                boxLabel: '全选',
+                margin: '0 0 0 10',
+                listeners: {
+                  //  change: 'toggleDisabled'  // see Controller
+                }
+            }]
+        }]
     }],
    
     dockedItems: {
