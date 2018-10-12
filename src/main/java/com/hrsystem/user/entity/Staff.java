@@ -44,11 +44,6 @@ public class Staff {
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "positionId")
 	private Role role;
-<<<<<<< HEAD
-	
-	
-=======
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Department department;
->>>>>>> refs/remotes/origin/master
 }
