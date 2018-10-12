@@ -16,6 +16,8 @@ public interface IStaffService {
 	 
 	 public void insertStaff(Staff staff) ;
 	 
+	 public Staff findStaffByName(String name);
+	 
 	 public void deleteStaff(Long id) ;
 	 
 	 public void deleteAll(Long[] ids);

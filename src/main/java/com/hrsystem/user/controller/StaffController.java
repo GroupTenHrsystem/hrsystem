@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
+import com.hrsystem.common.SessionUtil;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
@@ -57,19 +58,7 @@ public class StaffController {
 		return staffService.findStaffById(id);
 		
 	}
-	 @RequestMapping(value = "/check")
-	 public @ResponseBody ExtAjaxResponse check(HttpSession session) {
-		return null;
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-	 }
+	
 	//2、增
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String insertStaff(@RequestBody Staff staff) {		
