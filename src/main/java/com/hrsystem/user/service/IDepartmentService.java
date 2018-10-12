@@ -29,5 +29,8 @@ public interface IDepartmentService {
 	 public List<Long> findAllSubChildrensIds(List<Long> idLists,Long parentId);
 	 
 	 public List<Staff> findAllSubChildrensStaffs(List<Long> idLists,Long parentId);
+	 
 //	 public List<Department> getDepartmentByDepartmentTempletId(Long id);
+
+	public List<Department> findNoParent();
 }

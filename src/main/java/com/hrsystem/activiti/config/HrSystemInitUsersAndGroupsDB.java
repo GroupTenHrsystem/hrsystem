@@ -96,25 +96,40 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.saveGroup(group7);
 		        		identityService.saveGroup(group8);
 		        		identityService.saveGroup(group9);
-		        		
+		        		//创建部门，建立部门与部门的关联
+		        		Department department0 = new Department();
+		    			department0.setDepartmentName("总部");
+		    			
 		        		Department department1 = new Department();
 		    			department1.setDepartmentName("财务部");
-		    			departmentService.insertDepartment(department1);
+		    			
 		    			
 		    			Department department2 = new Department();
 		    			department2.setDepartmentName("java开发部");
-		    			departmentService.insertDepartment(department2);
+		    			
 		    			
 		    			Department department3 = new Department();
 		    			department3.setDepartmentName("算法研发部");
 		    			department3.setSuperId(department2);
-		    			departmentService.insertDepartment(department3);
+		    			
 		    			
 		    			Department department4 = new Department();
 		    			department4.setDepartmentName("测试部");
 		    			department4.setSuperId(department2);
+		    			
+		    			department0.getChildren().add(department1);
+		    			department2.getChildren().add(department3);
+		    			department2.getChildren().add(department4);
+		    			department0.getChildren().add(department2);
+		    			
+		    			departmentService.insertDepartment(department0);
+		    			departmentService.insertDepartment(department1);
+		    			departmentService.insertDepartment(department2);
+		    			departmentService.insertDepartment(department3);
 		    			departmentService.insertDepartment(department4);
-		        		
+		    			
+		    			
+		    			//插入用户
 		        		User admin = identityService.newUser("admin");
 		        		Staff adminStaff = new Staff();
 		        		adminStaff.setStaffName("admin");
@@ -179,7 +194,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.createMembership("user15", "financeClerk");
 		        		identityService.createMembership("user16", "financeClerk");
 		        		
-		        		
+		        		//插入工资
 		        		 for (int i = 1; i <=100; i++) {
 		        			 Salary salary = new Salary();
 		        			 salary.setSalarySum(i*20.0);
@@ -188,6 +203,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		        			 salaryService.insertSalary(salary);
 		        		}
 		        		 
+		        		 //插入绩效模板
 		        		 for (int i = 1; i <=8; i++) {
 			        			PerformanceTemplet performanceTemplet = new PerformanceTemplet();
 			        			performanceTemplet.setStartTime(newDate);

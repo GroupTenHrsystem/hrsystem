@@ -139,6 +139,11 @@ public class DepartmentService implements IDepartmentService {
 			return staffList;       
 		}
 	
+	@Override
+	public List<Department> findNoParent(){
+		return departmentRepository.findNoParent();
+		
+	}
 //	@Override
 //	public List<Department> getDepartmentByDepartmentTempletId(Long id) {
 //		// TODO Auto-generated method stub

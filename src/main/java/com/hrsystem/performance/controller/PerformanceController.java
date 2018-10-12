@@ -79,7 +79,8 @@ public class PerformanceController {
 	
 	@Autowired
 	private IPerformanceTempletService performanceTempletService;
-	
+	@Autowired
+	private IStaffService  staffService;
 	/**
 	 * 1、查
 	 * @param id
@@ -327,33 +328,33 @@ public class PerformanceController {
      * @return
      */
     
-    @Autowired
-	private IStaffService  staffService;
-    @Autowired
-	private IDepartmentService  departmentService;
-    
-    @RequestMapping(value = "/staff")
-    public List<Staff> getStaffList(@RequestParam(name="departmentId") Long departmentId){
-		return staffService.getStaffList(departmentId);
-    }
-    
-    @RequestMapping(value = "/department")
-    public List<Department> getDepartmentList(){
-		return departmentService.getDepartmentList(null);
-    }
-    //所有子部门的ID
-    @RequestMapping(value = "/departmentAllId")
-    public List<Long> getDepartmentAllIdList(@RequestParam(name="departmentId") Long departmentId){
-    	List<Long> lists = new ArrayList<Long>();
-    	lists.add(departmentId);
-		return departmentService.findAllSubChildrensIds(lists,departmentId);
-    }
-    //部门的子部门的所有员工
-    @RequestMapping(value = "/departmentAllStaff")
-    public List<Staff> getDepartmentAllStaffList(@RequestParam(name="departmentId") Long departmentId){
-    	List<Long> lists = new ArrayList<Long>();
-    	lists.add(departmentId);
-		return departmentService.findAllSubChildrensStaffs(lists,departmentId);
-    }
+//    @Autowired
+//	private IStaffService  staffService;
+//    @Autowired
+//	private IDepartmentService  departmentService;
+//    
+//    @RequestMapping(value = "/staff")
+//    public List<Staff> getStaffList(@RequestParam(name="departmentId") Long departmentId){
+//		return staffService.getStaffList(departmentId);
+//    }
+//    
+//    @RequestMapping(value = "/department")
+//    public List<Department> getDepartmentList(){
+//		return departmentService.getDepartmentList(null);
+//    }
+//    //所有子部门的ID
+//    @RequestMapping(value = "/departmentAllId")
+//    public List<Long> getDepartmentAllIdList(@RequestParam(name="departmentId") Long departmentId){
+//    	List<Long> lists = new ArrayList<Long>();
+//    	lists.add(departmentId);
+//		return departmentService.findAllSubChildrensIds(lists,departmentId);
+//    }
+//    //部门的子部门的所有员工
+//    @RequestMapping(value = "/departmentAllStaff")
+//    public List<Staff> getDepartmentAllStaffList(@RequestParam(name="departmentId") Long departmentId){
+//    	List<Long> lists = new ArrayList<Long>();
+//    	lists.add(departmentId);
+//		return departmentService.findAllSubChildrensStaffs(lists,departmentId);
+//    }
     
 }
