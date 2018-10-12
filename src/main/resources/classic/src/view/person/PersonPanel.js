@@ -17,37 +17,37 @@ Ext.define('Admin.view.person.PersonPanel', {
     
 
             items: [{
-            xtype: 'container',
-            layout: 'hbox',
-            defaultType: 'textfield',
-            margin: '0 0 5 0',
-            {
-                xtype: 'propertygrid',
-                nameColumnWidth: 165,
-                source: {
-                    employeNum:  1,
-                    staffName: 1,
-                    sex: 1,
-                    idcard:1,
-                    email: 1,
-                    phone: 1,
-                    password: 1,
-                    address: 1,
-                    nativePlace: 1,
-                    status: 1,
-                    createTimeStart: 1,
-                    createTimeEnd:1,
-                    birthday: 1
-                },
-                sourceConfig: {
-                    borderWidth: {
-                        displayName: 'Border Width'
+                xtype: 'container',
+                layout: 'hbox',
+                defaultType: 'textfield',
+                margin: '0 0 5 0',
+                items: [{
+                    xtype: 'propertygrid',
+                    nameColumnWidth: 165,
+                    source: {
+                        employeNum:  1,
+                        staffName: 1,
+                        sex: 1,
+                        idcard:1,
+                        email: 1,
+                        phone: 1,
+                        password: 1,
+                        address: 1,
+                        nativePlace: 1,
+                        status: 1,
+                        createTimeStart: 1,
+                        createTimeEnd:1,
+                        birthday: 1
                     },
-                    tested: {
-                        displayName: 'QA'
+                    sourceConfig: {
+                        borderWidth: {
+                            displayName: 'Border Width'
+                        },
+                        tested: {
+                            displayName: 'QA'
+                        }
                     }
-                }
-            }
+                }]
         }]   
 
 });

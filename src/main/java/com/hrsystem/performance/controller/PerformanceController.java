@@ -59,7 +59,9 @@ import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.entity.DTO.PerformanceRelateDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
+import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
@@ -78,8 +80,6 @@ public class PerformanceController {
 	@Autowired
 	private IPerformanceTempletService performanceTempletService;
 	
-	@Autowired
-	private IStaffService staffService;
 	/**
 	 * 1、查
 	 * @param id
@@ -318,4 +318,42 @@ public class PerformanceController {
 	        return new ExtAjaxResponse(false,"提交失败!");
 	    }
     }
+    
+    
+    
+    /**
+     * 下拉框选部门员工
+     * @param id
+     * @return
+     */
+    
+    @Autowired
+	private IStaffService  staffService;
+    @Autowired
+	private IDepartmentService  departmentService;
+    
+    @RequestMapping(value = "/staff")
+    public List<Staff> getStaffList(@RequestParam(name="departmentId") Long departmentId){
+		return staffService.getStaffList(departmentId);
+    }
+    
+    @RequestMapping(value = "/department")
+    public List<Department> getDepartmentList(){
+		return departmentService.getDepartmentList(null);
+    }
+    //所有子部门的ID
+    @RequestMapping(value = "/departmentAllId")
+    public List<Long> getDepartmentAllIdList(@RequestParam(name="departmentId") Long departmentId){
+    	List<Long> lists = new ArrayList<Long>();
+    	lists.add(departmentId);
+		return departmentService.findAllSubChildrensIds(lists,departmentId);
+    }
+    //部门的子部门的所有员工
+    @RequestMapping(value = "/departmentAllStaff")
+    public List<Staff> getDepartmentAllStaffList(@RequestParam(name="departmentId") Long departmentId){
+    	List<Long> lists = new ArrayList<Long>();
+    	lists.add(departmentId);
+		return departmentService.findAllSubChildrensStaffs(lists,departmentId);
+    }
+    
 }
