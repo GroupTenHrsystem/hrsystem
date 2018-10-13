@@ -25,8 +25,8 @@ Ext.define('Aria.view.salary.SalaryEditWindow', {
             readOnly: true
         }, {
             xtype: 'datefield',
-            fieldLabel: '发钱日',
-            name:'salaryTime',
+            fieldLabel: '开始日期',
+            name:'salaryStarTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'textfield',

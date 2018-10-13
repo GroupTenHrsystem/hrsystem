@@ -21,7 +21,9 @@ import com.hrsystem.recruit.service.IRecruitService;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.service.IResumeService;
 import com.hrsystem.salary.entity.Salary;
+import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.service.ISalaryService;
+import com.hrsystem.salary.service.ISalaryStandardService;
 import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IDepartmentService;
@@ -47,7 +49,8 @@ public class HrSystemInitUsersAndGroupsDB {
 		private IRecruitService recruitService;
 		@Autowired 
 		private IDepartmentService departmentService;
-		
+		@Autowired 
+		private ISalaryStandardService salaryStandardService;
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
 		        return new InitializingBean() {
@@ -58,10 +61,15 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			Date newDate=java.sql.Date.valueOf(localDate);
 		            	
 		    			Calendar rightNow = Calendar.getInstance();
-		    	        rightNow.setTime(newDate);
+		    	        rightNow.setTime(newDate);		    	 
 		    	        rightNow.add(Calendar.MONTH,3);//日期加3个月
 		    	        rightNow.add(Calendar.DAY_OF_YEAR,10);//日期加10天
 		    	        Date newDateEnd=rightNow.getTime();
+		    	        
+		    	        Calendar rightNow1 = Calendar.getInstance();
+		    	        rightNow1.setTime(newDate);
+		    	        rightNow1.add(Calendar.MONTH,1);//日期加1个月
+		    	        Date DateEnd=rightNow1.getTime();
 		    	        
 		        		Group group =identityService.newGroup("admin"); // 实例化组实体
 		        		group.setType("security-role");
@@ -198,7 +206,8 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		 for (int i = 1; i <=100; i++) {
 		        			 Salary salary = new Salary();
 		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryTime(newDate);
+		        			 salary.setSalaryStarTime(newDate);
+		        			 salary.setSalaryEndTime(DateEnd);
 		        			 salary.setCreateTime(newDate);
 		        			 salaryService.insertSalary(salary);
 		        		}
@@ -215,6 +224,22 @@ public class HrSystemInitUsersAndGroupsDB {
 			        			performanceTemplet.setDeptLeaderWeighting(0.7);
 			        			performanceTemplet.setStatus(true);
 			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
+			        	}
+		        		//插入工资模板
+		        		 for (int i = 1; i <=8; i++) {
+		        			 	SalaryStandard salaryStandard = new SalaryStandard();
+		        			 	salaryStandard.setBasis(3000D*i);			//基本工资
+		        			 	salaryStandard.setCreateTime(newDate);		//创建时间
+		        			 	salaryStandard.setSubsidy(300D);			//补贴
+		        			 	salaryStandard.setOvertime(50D);			//加班费
+		        			 	salaryStandard.setPensionBenefits(0.08);		//养老保险比例
+		        			 	salaryStandard.setMedicareBenefits(0.02);			//医疗保险比例
+		        			 	salaryStandard.setUnemploymentBenefits(0.01);		//失业保险比例
+		        			 	salaryStandard.setInjuryBenefits(0.0);			//工伤保险比例
+		        			 	salaryStandard.setMaternityBenefits(0.0);			//生育保险比例
+		        			 	salaryStandard.setHouseFund(0.07);					//住房公积金比例
+		        			 	salaryStandard.setKpi(i*10D); 						//kpi
+		        			 	salaryStandardService.insertSalaryStandard(salaryStandard);
 			        	}
 		        		 
 		        		//招聘模块

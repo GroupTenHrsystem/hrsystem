@@ -50,7 +50,8 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'Key',hidden:true,filter: 'number'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'createTime',text: '创建日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryTime',text: '发放日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryStarTime',text: '开始日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryEndTime',text: '结束日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '工资',flex: 1,
                      filter: {
                         type: 'string',
@@ -64,7 +65,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'   ,handler: 'deleteOneRow'},
                         {xtype: 'button',iconCls: 'x-fa fa-ban'     ,handler: 'onDisableButton'},
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openDetailWindow'}
+                        {xtype: 'button', iconCls: 'x-fa fa-file' ,handler: 'openDetailWindow'}
                     ]
                 }
             ],
@@ -101,15 +102,15 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                     }]
                             },
                         }, {
-                            text: '发放日期',
-                            id: 'salaryTimeCheck',
+                            text: '开始日期',
+                            id: 'salaryStarTimeCheck',
                             checked: false, 
                             menu: {
                                     id: 'dateMainMenu',
                                     showSeparator: true,
                                     items: [{
                                         text: '范围开始',
-                                        id: 'salaryTimeStartCheck',
+                                        id: 'salaryStarTimeStartCheck',
                                         checked: false,      
                                         menu: {
                                             hideOnClick : false,
@@ -118,7 +119,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                         }
                                     },{
                                         text: '范围结束',
-                                        id: 'salaryTimeEndCheck',
+                                        id: 'salaryStarTimeEndCheck',
                                         checked: false, 
                                         menu: {
                                             hideOnClick : false,
@@ -127,7 +128,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                         }
                                     },'-', {
                                         text: '具体日期',
-                                        id: 'salaryTimeDetailCheck',
+                                        id: 'salaryStarTimeDetailCheck',
                                         checked: false, 
                                         menu: {
                                             hideOnClick : false,
