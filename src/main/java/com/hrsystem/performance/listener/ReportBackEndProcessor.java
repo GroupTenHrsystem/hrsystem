@@ -46,6 +46,12 @@ public class ReportBackEndProcessor implements TaskListener
         Object confirmResult = delegateTask.getVariable("confirmResult");
         boolean flag = (boolean)confirmResult;
         if(flag) {
+        	Double selfScore = performance.getSelfScore();
+        	Double deptLeaderScore = performance.getDeptLeaderScore();
+        	Double selfWeight = performance.getPerformanceTemplet().getSelfWeighting();
+        	Double deptLeaderWeighting = performance.getPerformanceTemplet().getDeptLeaderWeighting();
+        	Double resultScore = selfScore * selfWeight + deptLeaderScore * deptLeaderWeighting;
+        	performance.setResultScore(resultScore);
             performance.setProcessStatus(ProcessStatus.COMPLETE);
         }
         //leaveService.save(leave);

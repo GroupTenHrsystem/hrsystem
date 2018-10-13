@@ -10,7 +10,16 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
         oldTab.setTitle('参与的绩效');
         Ext.resumeLayouts(true);
     },
-    
+    openDetailWindow:function(grid, rowIndex, colIndex){
+        var record = grid.getStore().getAt(rowIndex);
+        // console.log(record.get('id'));
+        console.log(record);
+        if (record ) {
+            var win = grid.up('performancePanel').add(Ext.widget('performanceApproveDetailWindow'));
+            win.show();
+            win.down('form').getForm().loadRecord(record);
+        }
+    },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('performance').add(Ext.widget('performanceAddWindow')).show();

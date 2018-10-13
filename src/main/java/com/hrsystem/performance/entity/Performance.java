@@ -49,6 +49,7 @@ public class Performance implements Serializable {
 		private Date completeTime;
 		private Double selfScore;
 		private Double deptLeaderScore;
+		private Double resultScore;
 		private String selfScoreReason;
 		private String deptLeaderScoreReason;
 		private String confirmResult;

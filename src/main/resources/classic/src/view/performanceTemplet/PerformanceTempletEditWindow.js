@@ -75,7 +75,7 @@ Ext.define('Aria.view.performanceTemplet.PerformanceTempletEditWindow', {
             allowDecimals: true,
             decimalPrecision: 2,
             step: 0.01,
-             listeners:{ 
+            listeners:{ 
                 change:function() 
                     {   
                         if( Ext.getCmp('deptLeaderWeighting').getValue!=""){

@@ -33,6 +33,7 @@ public class PerformanceDTO {
 	//private Long cycle;
     private Double selfScore;
     private Double deptLeaderScore;
+    private Double resultScore;
 	private String selfScoreReason;
 	private String deptLeaderScoreReason;
 	private String confirmResult;

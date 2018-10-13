@@ -62,7 +62,7 @@ public class PerformanceQueryDTO {
 
 	private Double selfScore;
 	private Double deptLeaderScore;
-
+	private Double resultScore;
 	//private Long cycle;
 	private Boolean status=true;
 
