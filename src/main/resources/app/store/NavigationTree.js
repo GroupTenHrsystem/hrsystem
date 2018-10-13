@@ -35,6 +35,8 @@
 		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'person',
 		                leaf: true
+		                
+		                
                     },
                     {
                         text: '组织架构管理',
