@@ -18,7 +18,6 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
         xtype: 'form',
         layout: 'form',
         padding: '10px',
-        ariaLabel: 'Enter your name',
         items: [
         // { 
         //      xtype:"textfield", 
@@ -47,6 +46,11 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
             hidden: true,
             readOnly: true
         }, {
+            xtype: 'textfield',
+            fieldLabel: '名字',
+            name:'name',
+            allowBlank:false, 
+        },{
             xtype: 'textfield',
             fieldLabel: '基本工资',
             name:'basis',

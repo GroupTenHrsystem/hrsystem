@@ -139,6 +139,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			//插入工资模板
 		        		 for (int i = 1; i <=8; i++) {
 		        			 	SalaryStandard salaryStandard = new SalaryStandard();
+		        			 	salaryStandard.setName("薪资标准"+i);
 		        			 	salaryStandard.setBasis(3000D*i);			//基本工资
 		        			 	salaryStandard.setCreateTime(newDate);		//创建时间
 		        			 	salaryStandard.setSubsidy(300D);			//补贴
@@ -169,14 +170,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department1);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
-		                     
-		                     Salary salary = new Salary();
-		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryStarTime(newDate);
-		        			 salary.setSalaryEndTime(DateEnd);
-		        			 salary.setCreateTime(newDate);
-		        			 salary.setStaff(staff);
-		        			 salaryService.insertSalary(salary);
+
 		        		}
 		                for (int i = 5; i <=10; i++) {
 		                	 User user = identityService.newUser("user"+i);
@@ -186,14 +180,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department2);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
-		                     
-		                     Salary salary = new Salary();
-		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryStarTime(newDate);
-		        			 salary.setSalaryEndTime(DateEnd);
-		        			 salary.setCreateTime(newDate);
-		        			 salary.setStaff(staff);
-		        			 salaryService.insertSalary(salary);
+
 		        		}
 		                for (int i = 11; i <=13; i++) {
 		                	 User user = identityService.newUser("user"+i);
@@ -204,13 +191,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 		                     
-		                     Salary salary = new Salary();
-		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryStarTime(newDate);
-		        			 salary.setSalaryEndTime(DateEnd);
-		        			 salary.setCreateTime(newDate);
-		        			 salary.setStaff(staff);
-		        			 salaryService.insertSalary(salary);
+
 		        		}
 		                for (int i = 14; i <=16; i++) {
 		                	 User user = identityService.newUser("user"+i);
@@ -220,14 +201,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department4);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
-		                     
-		                     Salary salary = new Salary();
-		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryStarTime(newDate);
-		        			 salary.setSalaryEndTime(DateEnd);
-		        			 salary.setCreateTime(newDate);
-		        			 salary.setStaff(staff);
-		        			 salaryService.insertSalary(salary);
+
 		        		}
 		        		identityService.createMembership("admin", "admin");
 		        		identityService.createMembership("user1", "generalManager");

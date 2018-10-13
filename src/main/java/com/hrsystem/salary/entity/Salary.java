@@ -3,13 +3,7 @@ package com.hrsystem.salary.entity;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hrsystem.user.entity.Staff;
@@ -27,6 +21,8 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "t_salary")
+@NamedEntityGraph(name = "Salary.withStaff", attributeNodes = {@NamedAttributeNode("staff"),@NamedAttributeNode("salaryStandard")})
+//	使用了@NamedEntityGraph注解，findAll合为一条HQL，避免JPA N+1 问题
 public class Salary {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,8 +35,8 @@ public class Salary {
 	private Date createTime; 
 	private Double salarySum;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private SalaryStandard salaryStandard;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private Staff staff;
 }

@@ -7,8 +7,10 @@ package com.hrsystem.performance.repository;
 *@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved.
  
 */
+import java.util.Date;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -29,7 +31,10 @@ public interface PerformanceRepository extends PagingAndSortingRepository<Perfor
 
 	@Query(value="SELECT * FROM hrsystem.t_performance where staff_id in (SELECT id FROM hrsystem.t_staff where staff_name=?1)",nativeQuery=true)
 	Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable);
-	
+
+	@Query(value = "SELECT * FROM hrsystem.t_performance where staff_id = ?1 AND end_time Between ?2 And ?3 AND start_time Between ?2 And ?3 ",nativeQuery=true)
+	List<Performance> getPerformanceByStaffAndTime(Long id,  Date startTime, Date endTime);
+
 	@Override
     @EntityGraph("Performance.withStaff")
 	Page<Performance> findAll(@Nullable Specification<Performance> spec, Pageable pageable);

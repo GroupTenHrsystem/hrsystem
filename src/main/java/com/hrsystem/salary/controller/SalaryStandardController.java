@@ -51,7 +51,7 @@ public class SalaryStandardController {
 			 * @return
 			 */
 			@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-			public String insertPerformance(@RequestBody SalaryStandard salaryStandard) {	
+			public String insertPerformance(@RequestBody SalaryStandard salaryStandard) {
 				System.out.println(salaryStandard.getCreateTime());
 				try {
 					salaryStandardService.insertSalaryStandard(salaryStandard);

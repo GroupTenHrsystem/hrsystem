@@ -79,6 +79,7 @@ public class PerformanceController {
 	
 	@Autowired
 	private IPerformanceTempletService performanceTempletService;
+
 	@Autowired
 	private IStaffService  staffService;
 	/**
@@ -100,8 +101,7 @@ public class PerformanceController {
 		try {
 			String userId = SessionUtil.getUserName(session);
     		if(userId!=null) {
-    				performanceDTO.setUserId(userId);    		
-					List<Staff> staff = new ArrayList<Staff>();
+    				performanceDTO.setUserId(userId);
 					PerformanceTemplet performanceTemplet = performanceTempletService.findPerformanceTempletById(performanceDTO.getPerformanceTempletId());
 					for(int i = 0; i < performanceDTO.getStaffIds().length; ++i) {
 						Staff optional = staffService.findStaffById(performanceDTO.getStaffIds()[i]);

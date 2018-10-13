@@ -9,6 +9,8 @@ Ext.define('Admin.model.salary.SalaryModel', {
 	    {type: 'date', name: 'salaryEndTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'date', name: 'createTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'float',name: 'salarySum'},
+	    {type: 'string',name: 'staffName'},
+	    {type: 'string',name: 'salaryStandardName'},
 	],
 	proxy: {
 		type: 'rest',

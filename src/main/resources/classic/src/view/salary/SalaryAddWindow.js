@@ -27,19 +27,53 @@ Ext.define('Aria.view.salary.SalaryAddWindow', {
             xtype: 'datefield',
             fieldLabel: '开始日期',
             name:'salaryStarTime',
+            allowBlank:false, 
             format: 'Y/m/d H:i:s'
         },{
             xtype: 'datefield',
             fieldLabel: '结束日期',
             name:'salaryEndTime',
+            allowBlank:false, 
             format: 'Y/m/d H:i:s'
         }, 
-        // {
-        //     xtype: 'textfield',
-        //     fieldLabel: '钱数',
-        //     name:'salarySum'
-        // }
-        
+        {
+            xtype: 'combo',
+            allowBlank:false, 
+            width:400,
+            store: {
+                type: 'array',
+                fields: [ 'id' ,'name'],
+                autoLoad: true, //启动自动加载
+                proxy: {
+                            type: 'rest',
+                            url: '/salaryStandard',
+                            reader:{
+                                type:'json',
+                                rootProperty:'content',//对应后台返回的结果集名称
+                                totalProperty: 'totalElements'//分页需要知道总记录数
+                            },
+                            writer: {
+                                type: 'json',
+                            },
+                            simpleSortMode: true    //简单排序模式
+                    },
+                autoSync: true
+            },
+            mode:'local' ,
+            editable: false,
+            valueField:'id',
+            displayField: 'name', //显示的field
+            fieldLabel: '薪资标准',
+            anchor: '0',
+            queryMode: 'local',
+            selectOnTab: false,
+            name: 'salaryStandardId',
+            emptyText:'请选择...',
+            onReplicate: function () {
+                this.getStore().clearFilter();
+            }
+        },
+
         {
             xtype: 'treepicker',
             allowBlank:false, 

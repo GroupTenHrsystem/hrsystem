@@ -1,10 +1,19 @@
 package com.hrsystem.salary.service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.*;
 
+import com.hrsystem.common.BeanUtils;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
+import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
+import com.hrsystem.performance.entity.Performance;
+import com.hrsystem.performance.repository.PerformanceRepository;
+import com.hrsystem.salary.entity.DTO.SalaryDTO;
+import com.hrsystem.salary.entity.SalaryStandard;
+import com.hrsystem.salary.repository.SalaryStandardRepository;
+import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.repository.StaffRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -28,6 +37,12 @@ import com.hrsystem.salary.repository.SalaryRepository;
 public class SalaryService implements ISalaryService{
 	@Autowired
 	SalaryRepository salaryRepository;
+	@Autowired
+	SalaryStandardRepository salaryStandardRepository;
+	@Autowired
+	StaffRepository staffRepository;
+	@Autowired
+	PerformanceRepository performanceRepository;
 	public Salary findSalaryById(Long id) {
 		// TODO Auto-generated method stub
 		 Optional<Salary> Salary = salaryRepository.findById(id);
@@ -36,11 +51,51 @@ public class SalaryService implements ISalaryService{
 		    }
 		    return Salary.get();
 	}
-
 	@Override
-	public void insertSalary(Salary Salary) {
+	public void insertSalary(SalaryDTO salaryDTO) {
 		// TODO Auto-generated method stub
-		salaryRepository.save(Salary);     
+		//批量插入，数据转换
+		Date now = new Date();
+		LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		Date newDate=java.sql.Date.valueOf(localDate);
+		SalaryStandard salaryStandard = salaryStandardRepository.findById(salaryDTO.getSalaryStandardId()).get();
+		for(int i = 0; i < salaryDTO.getStaffIds().length; ++i) {
+			Staff optional = staffRepository.findById(salaryDTO.getStaffIds()[i]).get();
+
+
+			/*
+			 *	计算绩效工资加成
+			 *
+			 */
+			List<Performance> performanceList = performanceRepository.getPerformanceByStaffAndTime(optional.getId(),salaryDTO.getSalaryStarTime(),salaryDTO.getSalaryEndTime());
+			Iterator iter = performanceList.iterator();
+			Double performancesSalary = 0.0;
+			while(iter.hasNext()) {
+				Performance performance=(Performance)iter.next();
+				if(performance.getResultScore()!=null)
+					performancesSalary += performance.getResultScore() * salaryStandard.getKpi();
+			}
+			Double salarySum = performancesSalary + salaryStandard.getBasis();
+
+
+			/*
+			 *	数据库插入工资
+			 */
+			if(optional != null) {
+				Salary salary = new Salary();
+				salary.setCreateTime(newDate);
+				salary.setStaff(optional);
+				salary.setSalaryStandard(salaryStandard);
+				BeanUtils.copyProperties(salaryDTO, salary);
+				salary.setSalarySum(salarySum);
+				salaryRepository.save(salary);
+			}
+		}
+	}
+	@Override
+	public void updataSalary(Salary Salary) {
+		// TODO Auto-generated method stub
+		salaryRepository.save(Salary);
 	}
 
 	@Override
