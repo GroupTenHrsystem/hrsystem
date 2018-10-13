@@ -7,7 +7,7 @@ Ext.define('Admin.view.performanceApprove.PerformanceApproveDetailWindow', {
     maxWidth: 520,
     width: 520,
     scrollable: true,
-    title: '薪资详情',
+    title: '绩效详情',
     width: 600,
     bodyPadding: 10,
     defaults: {
@@ -34,12 +34,16 @@ Ext.define('Admin.view.performanceApprove.PerformanceApproveDetailWindow', {
             readOnly: true
         }, {
             xtype: 'displayfield',
-            fieldLabel: '自评细节',
-            name:'selfScoreReason'
-        }, {
-            xtype: 'displayfield',
             fieldLabel: '领导评分',
             name:'deptLeaderScore'
+        },{
+            xtype: 'displayfield',
+            fieldLabel: '最终分数',
+            name:'resultScore'
+        }, {
+            xtype: 'displayfield',
+            fieldLabel: '自评细节',
+            name:'selfScoreReason'
         }, {
             xtype: 'displayfield',
             fieldLabel: '领导评分细节',

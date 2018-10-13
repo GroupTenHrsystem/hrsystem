@@ -21,8 +21,12 @@ import com.hrsystem.recruit.service.IRecruitService;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.service.IResumeService;
 import com.hrsystem.salary.entity.Salary;
+import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.service.ISalaryService;
+import com.hrsystem.salary.service.ISalaryStandardService;
+import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
@@ -43,7 +47,10 @@ public class HrSystemInitUsersAndGroupsDB {
 		private IResumeService resumeService;
 		@Autowired
 		private IRecruitService recruitService;
-		
+		@Autowired 
+		private IDepartmentService departmentService;
+		@Autowired 
+		private ISalaryStandardService salaryStandardService;
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
 		        return new InitializingBean() {
@@ -54,10 +61,15 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			Date newDate=java.sql.Date.valueOf(localDate);
 		            	
 		    			Calendar rightNow = Calendar.getInstance();
-		    	        rightNow.setTime(newDate);
+		    	        rightNow.setTime(newDate);		    	 
 		    	        rightNow.add(Calendar.MONTH,3);//日期加3个月
 		    	        rightNow.add(Calendar.DAY_OF_YEAR,10);//日期加10天
 		    	        Date newDateEnd=rightNow.getTime();
+		    	        
+		    	        Calendar rightNow1 = Calendar.getInstance();
+		    	        rightNow1.setTime(newDate);
+		    	        rightNow1.add(Calendar.MONTH,1);//日期加1个月
+		    	        Date DateEnd=rightNow1.getTime();
 		    	        
 		        		Group group =identityService.newGroup("admin"); // 实例化组实体
 		        		group.setType("security-role");
@@ -92,7 +104,40 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.saveGroup(group7);
 		        		identityService.saveGroup(group8);
 		        		identityService.saveGroup(group9);
-		        		
+		        		//创建部门，建立部门与部门的关联
+		        		Department department0 = new Department();
+		    			department0.setDepartmentName("总部");
+		    			
+		        		Department department1 = new Department();
+		    			department1.setDepartmentName("财务部");
+		    			
+		    			
+		    			Department department2 = new Department();
+		    			department2.setDepartmentName("java开发部");
+		    			
+		    			
+		    			Department department3 = new Department();
+		    			department3.setDepartmentName("算法研发部");
+		    			department3.setSuperId(department2);
+		    			
+		    			
+		    			Department department4 = new Department();
+		    			department4.setDepartmentName("测试部");
+		    			department4.setSuperId(department2);
+		    			
+		    			department0.getChildren().add(department1);
+		    			department2.getChildren().add(department3);
+		    			department2.getChildren().add(department4);
+		    			department0.getChildren().add(department2);
+		    			
+		    			departmentService.insertDepartment(department0);
+		    			departmentService.insertDepartment(department1);
+		    			departmentService.insertDepartment(department2);
+		    			departmentService.insertDepartment(department3);
+		    			departmentService.insertDepartment(department4);
+		    			
+		    			
+		    			//插入用户
 		        		User admin = identityService.newUser("admin");
 		        		Staff adminStaff = new Staff();
 		        		adminStaff.setStaffName("admin");
@@ -100,34 +145,74 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		admin.setPassword("admin");
 		                identityService.saveUser(admin);
 		              
-		                for (int i = 1; i <=8; i++) {
+		                for (int i = 1; i <=4; i++) {
 		                	 User user = identityService.newUser("user"+i);
 		                	 user.setPassword("user"+i);
 		                	 Staff staff = new Staff();
 		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department1);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 		        		}
-		        		
+		                for (int i = 5; i <=10; i++) {
+		                	 User user = identityService.newUser("user"+i);
+		                	 user.setPassword("user"+i);
+		                	 Staff staff = new Staff();
+		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department2);
+		                	 staffService.insertStaff(staff);
+		                     identityService.saveUser(user);
+		        		}
+		                for (int i = 11; i <=13; i++) {
+		                	 User user = identityService.newUser("user"+i);
+		                	 user.setPassword("user"+i);
+		                	 Staff staff = new Staff();
+		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department3);
+		                	 staffService.insertStaff(staff);
+		                     identityService.saveUser(user);
+		        		}
+		                for (int i = 14; i <=16; i++) {
+		                	 User user = identityService.newUser("user"+i);
+		                	 user.setPassword("user"+i);
+		                	 Staff staff = new Staff();
+		                	 staff.setStaffName("user"+i);
+		                	 staff.setDepartment(department4);
+		                	 staffService.insertStaff(staff);
+		                     identityService.saveUser(user);
+		        		}
 		        		identityService.createMembership("admin", "admin");
 		        		identityService.createMembership("user1", "generalManager");
 		        		identityService.createMembership("user2", "secretary");
-		        		identityService.createMembership("user3", "hrManager");
-		        		identityService.createMembership("user4", "hrClerk");
-		        		identityService.createMembership("user5", "marketingManager");
-		        		identityService.createMembership("user6", "marketingClerk");
-		        		identityService.createMembership("user7", "financeManager");
-		        		identityService.createMembership("user8", "financeClerk");
+		        		identityService.createMembership("user3", "secretary");
+		        		identityService.createMembership("user4", "secretary");
 		        		
+		        		identityService.createMembership("user5", "hrManager");
+		        		identityService.createMembership("user6", "hrClerk");
+		        		identityService.createMembership("user7", "hrClerk");
+		        		identityService.createMembership("user8", "hrClerk");
+		        		identityService.createMembership("user9", "hrClerk");
+		        		identityService.createMembership("user10", "hrClerk");
 		        		
+		        		identityService.createMembership("user11", "marketingManager");
+		        		identityService.createMembership("user12", "marketingClerk");
+		        		identityService.createMembership("user13", "marketingClerk");
+		        		
+		        		identityService.createMembership("user14", "financeManager");
+		        		identityService.createMembership("user15", "financeClerk");
+		        		identityService.createMembership("user16", "financeClerk");
+		        		
+		        		//插入工资
 		        		 for (int i = 1; i <=100; i++) {
 		        			 Salary salary = new Salary();
 		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryTime(newDate);
+		        			 salary.setSalaryStarTime(newDate);
+		        			 salary.setSalaryEndTime(DateEnd);
 		        			 salary.setCreateTime(newDate);
 		        			 salaryService.insertSalary(salary);
 		        		}
 		        		 
+		        		 //插入绩效模板
 		        		 for (int i = 1; i <=8; i++) {
 			        			PerformanceTemplet performanceTemplet = new PerformanceTemplet();
 			        			performanceTemplet.setStartTime(newDate);
@@ -135,9 +220,26 @@ public class HrSystemInitUsersAndGroupsDB {
 			        			performanceTemplet.setKind("种类");
 			        			performanceTemplet.setName("考核模板"+i);
 			        			performanceTemplet.setPerformanceIndex("工作量");
-			        			performanceTemplet.setWeighting(0.3);
+			        			performanceTemplet.setSelfWeighting(0.3);
+			        			performanceTemplet.setDeptLeaderWeighting(0.7);
 			        			performanceTemplet.setStatus(true);
 			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
+			        	}
+		        		//插入工资模板
+		        		 for (int i = 1; i <=8; i++) {
+		        			 	SalaryStandard salaryStandard = new SalaryStandard();
+		        			 	salaryStandard.setBasis(3000D*i);			//基本工资
+		        			 	salaryStandard.setCreateTime(newDate);		//创建时间
+		        			 	salaryStandard.setSubsidy(300D);			//补贴
+		        			 	salaryStandard.setOvertime(50D);			//加班费
+		        			 	salaryStandard.setPensionBenefits(0.08);		//养老保险比例
+		        			 	salaryStandard.setMedicareBenefits(0.02);			//医疗保险比例
+		        			 	salaryStandard.setUnemploymentBenefits(0.01);		//失业保险比例
+		        			 	salaryStandard.setInjuryBenefits(0.0);			//工伤保险比例
+		        			 	salaryStandard.setMaternityBenefits(0.0);			//生育保险比例
+		        			 	salaryStandard.setHouseFund(0.07);					//住房公积金比例
+		        			 	salaryStandard.setKpi(i*10D); 						//kpi
+		        			 	salaryStandardService.insertSalaryStandard(salaryStandard);
 			        	}
 		        		 
 		        		//招聘模块
@@ -190,7 +292,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			recruit.setEditName("Miette");
 		    			
 		    			recruitService.save(recruit);
-
+		    			
 		            }
 		        };
 		    }

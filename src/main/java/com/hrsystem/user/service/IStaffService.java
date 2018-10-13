@@ -24,5 +24,6 @@ public interface IStaffService {
 	 
 	 public Page<Staff> findAll(Specification<Staff> spec, Pageable pageable);
 	 
+	 public List<Staff> getStaffList(Long id);
 //	 public List<Staff> getStaffByStaffTempletId(Long id);
 }

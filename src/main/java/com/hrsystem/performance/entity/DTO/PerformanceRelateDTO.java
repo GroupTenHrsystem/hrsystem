@@ -42,6 +42,9 @@ public class PerformanceRelateDTO {
 	private ProcessStatus processStatus;
 	private Double selfScore;
 	private Double deptLeaderScore;
+	private Double resultScore;
+	private String selfScoreReason;
+	private String deptLeaderScoreReason;
 	private String staffName;	
 	private String performanceTempletName;	
 	

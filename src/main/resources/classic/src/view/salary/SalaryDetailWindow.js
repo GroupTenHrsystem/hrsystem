@@ -16,7 +16,7 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
     },
     items: [{
         xtype: 'form',
-        ariaLabel: 'Enter your name',
+        //ariaLabel: 'Enter your name',
         // height: 600,
         // minHeight: 600,
         // maxHeight: 600,
@@ -30,8 +30,8 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
         }, {
             xtype: 'datefield',
             fieldLabel: '发放日期',
-            name:'salaryTime',
-            format: 'Y/m/d H:i:s',
+            name:'salaryStarTime',
+            format: 'Y/m/d',
             readOnly: true
         }, {
             xtype: 'displayfield',

@@ -28,7 +28,8 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletPanel', {
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'endTime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'kind',text: '种类',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceIndex',text: '考评指标',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'weighting',text: '考评分值',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'selfWeighting',text: '自评占比',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'deptLeaderWeighting',text: '领导评分占比',flex: 1},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},

@@ -33,8 +33,10 @@
 				iconCls: 'x-fa fa-object-group',
 				tooltip: '任务跟踪',
 				handler: 'onClickGraphTraceButton'	//流程跟踪
-			},{	xtype: 'button', 
-				iconCls: 'x-fa fa-pencil' ,
+			},{	
+				xtype: 'button', 
+				iconCls: 'x-fa fa-file' ,
+				tooltip: '查看详情',
 				handler: 'openDetailWindow'
 			}],
 			cls: 'content-column',

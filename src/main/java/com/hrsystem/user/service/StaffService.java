@@ -64,6 +64,12 @@ public class StaffService implements IStaffService {
 		
 	}
 
+	@Override
+	public List<Staff> getStaffList(Long id) {
+		// TODO Auto-generated method stub
+		return staffRepository.findByDepartmentId(id);
+	}
+
 //	@Override
 //	public List<Staff> getStaffByStaffTempletId(Long id) {
 //		// TODO Auto-generated method stub

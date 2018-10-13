@@ -52,6 +52,12 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'completeTime',text: '完成时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',text: '自评分数' ,dataIndex: 'selfScore',sortable: true},  
+                {xtype: 'gridcolumn',cls: 'content-column',text: '自评细节' ,dataIndex: 'selfScoreReason',sortable: true,hidden:true},    
+                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分' ,dataIndex: 'deptLeaderScore',sortable: true},
+                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',sortable: true,hidden:true},  
+                {xtype: 'gridcolumn',cls: 'content-column',text: '最终分数' ,dataIndex: 'resultScore',sortable: true},  
+                {xtype: 'gridcolumn',cls: 'content-column',text: '申诉理由' ,dataIndex: 'confirmResult',width: 80,sortable: true}, 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
                         {
@@ -67,7 +73,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
                       //  {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'},
                         {
-                            xtype: 'button',iconCls: 'x-fa fa-star',tooltip: '发起请假',
+                            xtype: 'button',iconCls: 'x-fa fa-star',tooltip: '开始绩效考核',
                             getClass: function(v, meta, rec) {
                                 if (rec.get('processInstanceId')!="") {
                                     return 'x-hidden';
@@ -75,16 +81,22 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                                 return 'x-fa fa-star';
                             },
                             handler: 'starLeaveProcess'
-                        },{
-                            xtype: 'button',iconCls: 'x-fa fa-ban',tooltip: '取消请假',
-                            getClass: function(v, meta, rec) {
-                                if (rec.get('processInstanceId')=="") {
-                                    return 'x-hidden';
-                                }
-                                return 'x-fa fa-ban';
-                            },
-                            handler: 'cancelLeaveProcess'
-                        }
+                        },{ 
+                            xtype: 'button', 
+                            iconCls: 'x-fa fa-file' ,
+                            tooltip: '查看详情',
+                            handler: 'openDetailWindow'
+                       }
+                        // ,{
+                        //     xtype: 'button',iconCls: 'x-fa fa-ban',tooltip: '取消请假',
+                        //     getClass: function(v, meta, rec) {
+                        //         if (rec.get('processInstanceId')=="") {
+                        //             return 'x-hidden';
+                        //         }
+                        //         return 'x-fa fa-ban';
+                        //     },
+                        //     handler: 'cancelLeaveProcess'
+                        // }
                     ]
                 }
             ],

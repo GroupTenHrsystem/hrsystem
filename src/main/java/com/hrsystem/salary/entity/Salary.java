@@ -32,7 +32,9 @@ public class Salary {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-	private Date salaryTime; 
+	private Date salaryStarTime; 
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	private Date salaryEndTime; 
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date createTime; 
 	private Double salarySum;
