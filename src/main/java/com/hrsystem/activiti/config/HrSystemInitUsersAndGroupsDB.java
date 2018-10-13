@@ -136,7 +136,23 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			departmentService.insertDepartment(department3);
 		    			departmentService.insertDepartment(department4);
 		    			
-		    			
+		    			//插入工资模板
+		        		 for (int i = 1; i <=8; i++) {
+		        			 	SalaryStandard salaryStandard = new SalaryStandard();
+		        			 	salaryStandard.setBasis(3000D*i);			//基本工资
+		        			 	salaryStandard.setCreateTime(newDate);		//创建时间
+		        			 	salaryStandard.setSubsidy(300D);			//补贴
+		        			 	salaryStandard.setOvertime(50D);			//加班费
+		        			 	salaryStandard.setPensionBenefits(0.08);		//养老保险比例
+		        			 	salaryStandard.setMedicareBenefits(0.02);			//医疗保险比例
+		        			 	salaryStandard.setUnemploymentBenefits(0.01);		//失业保险比例
+		        			 	salaryStandard.setInjuryBenefits(0.0);			//工伤保险比例
+		        			 	salaryStandard.setMaternityBenefits(0.0);			//生育保险比例
+		        			 	salaryStandard.setHouseFund(0.07);					//住房公积金比例
+		        			 	salaryStandard.setKpi(i*10D); 						//kpi
+		        			 	salaryStandardService.insertSalaryStandard(salaryStandard);
+			        	}
+		        		 
 		    			//插入用户
 		        		User admin = identityService.newUser("admin");
 		        		Staff adminStaff = new Staff();
@@ -153,6 +169,14 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department1);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
+		                     
+		                     Salary salary = new Salary();
+		        			 salary.setSalarySum(i*20.0);
+		        			 salary.setSalaryStarTime(newDate);
+		        			 salary.setSalaryEndTime(DateEnd);
+		        			 salary.setCreateTime(newDate);
+		        			 salary.setStaff(staff);
+		        			 salaryService.insertSalary(salary);
 		        		}
 		                for (int i = 5; i <=10; i++) {
 		                	 User user = identityService.newUser("user"+i);
@@ -162,6 +186,14 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department2);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
+		                     
+		                     Salary salary = new Salary();
+		        			 salary.setSalarySum(i*20.0);
+		        			 salary.setSalaryStarTime(newDate);
+		        			 salary.setSalaryEndTime(DateEnd);
+		        			 salary.setCreateTime(newDate);
+		        			 salary.setStaff(staff);
+		        			 salaryService.insertSalary(salary);
 		        		}
 		                for (int i = 11; i <=13; i++) {
 		                	 User user = identityService.newUser("user"+i);
@@ -171,6 +203,14 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department3);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
+		                     
+		                     Salary salary = new Salary();
+		        			 salary.setSalarySum(i*20.0);
+		        			 salary.setSalaryStarTime(newDate);
+		        			 salary.setSalaryEndTime(DateEnd);
+		        			 salary.setCreateTime(newDate);
+		        			 salary.setStaff(staff);
+		        			 salaryService.insertSalary(salary);
 		        		}
 		                for (int i = 14; i <=16; i++) {
 		                	 User user = identityService.newUser("user"+i);
@@ -180,6 +220,14 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 staff.setDepartment(department4);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
+		                     
+		                     Salary salary = new Salary();
+		        			 salary.setSalarySum(i*20.0);
+		        			 salary.setSalaryStarTime(newDate);
+		        			 salary.setSalaryEndTime(DateEnd);
+		        			 salary.setCreateTime(newDate);
+		        			 salary.setStaff(staff);
+		        			 salaryService.insertSalary(salary);
 		        		}
 		        		identityService.createMembership("admin", "admin");
 		        		identityService.createMembership("user1", "generalManager");
@@ -202,15 +250,15 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.createMembership("user15", "financeClerk");
 		        		identityService.createMembership("user16", "financeClerk");
 		        		
-		        		//插入工资
-		        		 for (int i = 1; i <=100; i++) {
-		        			 Salary salary = new Salary();
-		        			 salary.setSalarySum(i*20.0);
-		        			 salary.setSalaryStarTime(newDate);
-		        			 salary.setSalaryEndTime(DateEnd);
-		        			 salary.setCreateTime(newDate);
-		        			 salaryService.insertSalary(salary);
-		        		}
+//		        		//插入工资
+//		        		 for (int i = 1; i <=16; i++) {
+//		        			 Salary salary = new Salary();
+//		        			 salary.setSalarySum(i*20.0);
+//		        			 salary.setSalaryStarTime(newDate);
+//		        			 salary.setSalaryEndTime(DateEnd);
+//		        			 salary.setCreateTime(newDate);
+//		        			 salaryService.insertSalary(salary);
+//		        		}
 		        		 
 		        		 //插入绩效模板
 		        		 for (int i = 1; i <=8; i++) {
@@ -225,22 +273,7 @@ public class HrSystemInitUsersAndGroupsDB {
 			        			performanceTemplet.setStatus(true);
 			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			        	}
-		        		//插入工资模板
-		        		 for (int i = 1; i <=8; i++) {
-		        			 	SalaryStandard salaryStandard = new SalaryStandard();
-		        			 	salaryStandard.setBasis(3000D*i);			//基本工资
-		        			 	salaryStandard.setCreateTime(newDate);		//创建时间
-		        			 	salaryStandard.setSubsidy(300D);			//补贴
-		        			 	salaryStandard.setOvertime(50D);			//加班费
-		        			 	salaryStandard.setPensionBenefits(0.08);		//养老保险比例
-		        			 	salaryStandard.setMedicareBenefits(0.02);			//医疗保险比例
-		        			 	salaryStandard.setUnemploymentBenefits(0.01);		//失业保险比例
-		        			 	salaryStandard.setInjuryBenefits(0.0);			//工伤保险比例
-		        			 	salaryStandard.setMaternityBenefits(0.0);			//生育保险比例
-		        			 	salaryStandard.setHouseFund(0.07);					//住房公积金比例
-		        			 	salaryStandard.setKpi(i*10D); 						//kpi
-		        			 	salaryStandardService.insertSalaryStandard(salaryStandard);
-			        	}
+		        	
 		        		 
 		        		//招聘模块
 		        		Interview interview = new Interview();
