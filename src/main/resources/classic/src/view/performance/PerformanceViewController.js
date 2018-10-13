@@ -15,6 +15,27 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('performance').add(Ext.widget('performanceAddWindow')).show();
 	},
+	toggleDisabled:function(checkbox, checked){
+		// var view = this.getView(),
+  //           stateFn = checked ? 'disable' : 'enable',
+  //           tagfields = view.query('tagfield');
+  // Ext.each(tagfields, function (btn) {	//停用tagfield
+        //     btn[stateFn]();
+        // });
+        // 
+        var staffTag = this.lookupReference('staffTag');    //获取下拉框组件
+        
+        var arrayObj = new Array();
+         	staffTag.reset();    // 清空已存在结果
+         	staffTag.getStore().each(function (record) {
+         		arrayObj.push(record.get('id'));	//全选下拉框的内容
+		    	//console.log(record.get('id'));
+			});
+			staffTag.setValue(arrayObj);
+
+      
+        
+	},
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');

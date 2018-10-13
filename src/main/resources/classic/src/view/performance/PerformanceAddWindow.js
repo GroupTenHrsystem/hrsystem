@@ -1,14 +1,15 @@
 Ext.define('Aria.view.performance.PerformanceAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.performanceAddWindow',
-   y:50,
+    y:50,
     resizable : false,
-    minWidth: 480,
-    maxWidth: 480,
+    minWidth: 425,
+    maxWidth: 425,
     width: 520,
     scrollable: true,
     title: '绩效考核',
     width: 600,
+    layout:'fit',
     bodyPadding: 10,
     defaults: {
         anchor: '100%',
@@ -52,48 +53,42 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
         }, 
     
 
-        // {
-        //     xtype: 'combo',
-        //     store: {
-        //         type: 'array',
-        //         fields: [ 'id' ,'name'],
-        //         data: [
-        //             // ['test@example.com','name'],         //假数据
-        //             // ['someone@example.com','name'],
-        //             // ['someone-else@example.com','name']
-        //         ],
-        //         autoLoad: true, //启动自动加载
-        //         proxy: {
-        //                     type: 'rest',
-        //                     url: '/performanceTemplet',
-        //                     reader:{
-        //                         type:'json',
-        //                         rootProperty:'content',//对应后台返回的结果集名称
-        //                         totalProperty: 'totalElements'//分页需要知道总记录数
-        //                     },
-        //                     writer: {
-        //                         type: 'json',
-        //                     },
-        //                     simpleSortMode: true    //简单排序模式
-        //             },
-        //         autoSync: true
-        //     },
-        //     mode:'local' ,
-        //     editable: false,
-        //     valueField:'id',
-        //     displayField: 'name', //显示的field
-        //  //   plugins: 'fieldreplicator',   //选中后追加文本框
-        //     fieldLabel: '绩效模板',
-        //     anchor: '0',
-        //     queryMode: 'local',
-        //     selectOnTab: false,
-        //     name: 'performanceTempletId',
-        //     emptyText:'请选择...',
-        //   // blankText: '请选择', // 该项如果没有选择，则提示错误信息,
-        //     onReplicate: function () {
-        //         this.getStore().clearFilter();
-        //     }
-        // },
+        {
+            xtype: 'combo',
+            width:400,
+            store: {
+                type: 'array',
+                fields: [ 'id' ,'name'],
+                autoLoad: true, //启动自动加载
+                proxy: {
+                            type: 'rest',
+                            url: '/performanceTemplet',
+                            reader:{
+                                type:'json',
+                                rootProperty:'content',//对应后台返回的结果集名称
+                                totalProperty: 'totalElements'//分页需要知道总记录数
+                            },
+                            writer: {
+                                type: 'json',
+                            },
+                            simpleSortMode: true    //简单排序模式
+                    },
+                autoSync: true
+            },
+            mode:'local' ,
+            editable: false,
+            valueField:'id',
+            displayField: 'name', //显示的field
+            fieldLabel: '绩效模板',
+            anchor: '0',
+            queryMode: 'local',
+            selectOnTab: false,
+            name: 'performanceTempletId',
+            emptyText:'请选择...',
+            onReplicate: function () {
+                this.getStore().clearFilter();
+            }
+        },
 
         {
             xtype: 'treepicker',
@@ -108,7 +103,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             store:Ext.create("Ext.data.TreeStore",{
                     fields: ['id','departmentName'],
                     root: {
-                        departmentName: '请选择员工',
+                        departmentName: '请选择部门',
                         id:'-1',
                         expanded: true
                     },
@@ -136,63 +131,6 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             },
         },
 
-        // ,{
-        //     xtype: 'combo',
-        //     store: {
-        //         type: 'array',
-        //         fields: [ 'id' ,'departmentName'],
-        //         data: [
-        //             // ['test@example.com','name'],         //假数据
-        //             // ['someone@example.com','name'],
-        //             // ['someone-else@example.com','name']
-        //         ],
-        //         autoLoad: true, //启动自动加载
-        //         proxy: {
-        //                     type: 'ajax',
-        //                     url: '/department/department',
-        //                     reader:{
-        //                         type:'json',
-        //                         rootProperty:'',//对应后台返回的结果集名称
-        //                         totalProperty: 'totalElements'//分页需要知道总记录数
-        //                     },
-        //                     writer: {
-        //                         type: 'json',
-        //                     },
-        //                     simpleSortMode: true    //简单排序模式
-        //             },
-        //         autoSync: true
-        //     },
-        //     mode:'local' ,
-        //     editable: false,
-        //     valueField:'id',
-        //     displayField: 'departmentName', //显示的field
-        //  //   plugins: 'fieldreplicator',   //选中后追加文本框
-        //     fieldLabel: '选择部门',
-        //     anchor: '0',
-        //     queryMode: 'local',
-        //     selectOnTab: false,
-        //     name: 'departmentId',
-        //     emptyText:'请选择...',
-        //     listeners:{
-        //     select:function(combo,record,index){
-        //             var departmentId=record.get('id');
-        //             //testfunction()//对应的处理函数
-        //             console.log(departmentId);
-        //             var staff = Ext.getCmp("staff");    //获取staff Combo组件
-        //             staff.getStore().removeAll(); // 清空已加载列表
-        //             staff.reset();    // 清空已存在结果
-        //             staff.getStore().load({
-        //                              params: {'departmentId': departmentId}
-        //                         });
-        //         }
-        //     },
-        //   // blankText: '请选择', // 该项如果没有选择，则提示错误信息,
-        //     onReplicate: function () {
-        //         this.getStore().clearFilter();
-        //     }
-        // },
-        // 
-        // 
         {
             xtype: 'fieldcontainer',
             combineErrors: true,
@@ -201,7 +139,9 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
                 xtype: 'tagfield',
                 fieldLabel: '选择员工',
                 id:'staff',
-                width:350,
+                reference:'staffTag',
+               // disabled:true,
+                width:340,
                 store: {
                     type: 'array',
                     fields: [ 'id' ,'staffName'],
@@ -235,7 +175,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
                 boxLabel: '全选',
                 margin: '0 0 0 10',
                 listeners: {
-                  //  change: 'toggleDisabled'  // see Controller
+                    change: 'toggleDisabled'  // see Controller
                 }
             }]
         }]

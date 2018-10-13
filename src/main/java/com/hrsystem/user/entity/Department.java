@@ -34,7 +34,7 @@ public class Department {
 	private List<Department> children =new ArrayList<Department>();
 	
 	@Transient
-	private Boolean expanded = true;	//extjs下拉框展开
+	private Boolean expanded = true;	//extjs下拉框展开属性
      
 }
  
