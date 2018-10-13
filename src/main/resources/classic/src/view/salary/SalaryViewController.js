@@ -50,6 +50,20 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('salary').add(Ext.widget('salaryAddWindow')).show();
 	},
+	toggleDisabled:function(checkbox, checked){
+        var staffTag = this.lookupReference('staffTag');    //获取下拉框组件
+        
+        var arrayObj = new Array();
+         	staffTag.reset();    // 清空已存在结果
+         	staffTag.getStore().each(function (record) {
+         		arrayObj.push(record.get('id'));	//全选下拉框的内容
+		    	//console.log(record.get('id'));
+			});
+			staffTag.setValue(arrayObj);
+
+      
+        
+	},
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
