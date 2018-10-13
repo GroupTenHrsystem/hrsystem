@@ -1,9 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-<<<<<<< HEAD
-$image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
-=======
 $image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
->>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -121,6 +117,7 @@ $include-aria-view-performance-performancesearchwindow: dynamic(true);;
 $include-aria-view-performancetemplet-performancetempletaddwindow: dynamic(true);;
 $include-aria-view-performancetemplet-performancetempleteditwindow: dynamic(true);;
 $include-aria-view-performancetemplet-performancetempletsearchwindow: dynamic(true);;
+$include-aria-view-person-personeditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitaddwindow: dynamic(true);;
 $include-aria-view-recruit-recruiteditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitsearchwindow: dynamic(true);;

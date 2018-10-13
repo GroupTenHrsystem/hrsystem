@@ -14,7 +14,7 @@ Ext.define('Admin.view.person.PersonPanel', {
         'Ext.form.field.Date',
         'Ext.grid.column.Date'
     ],
-<<<<<<< HEAD
+
   //  controller: 'searchresults',
  		viewModel: {type: 'personViewModel'},
         layout: 'fit',
@@ -44,9 +44,8 @@ Ext.define('Admin.view.person.PersonPanel', {
 		        handler: 'openUpdateWindow'	
 		    }
         ] 
-        }
-        ]
-=======
+        }],
+
     //controller: 'searchresults',
    // viewModel: {type: 'orderViewModel'},
     layout: 'fit',
@@ -86,7 +85,7 @@ Ext.define('Admin.view.person.PersonPanel', {
                     }
                 }]
         }]   
->>>>>>> refs/remotes/origin/master
+
 
 });
 
