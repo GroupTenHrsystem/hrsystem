@@ -36,17 +36,23 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
         }, {
             xtype: 'textfield',
             fieldLabel: '绩效考核名称',
+            allowBlank:false, 
+            regexText: '请填写',
             width:400,
             name:'performanceName'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核开始时间',
             name:'startTime',
+            allowBlank:false, 
+            regexText: '请选择日期',
             width:400,
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核结束时间',
+            allowBlank:false, 
+            regexText: '请选择日期',
             name:'endTime',
             width:400,
             format: 'Y/m/d H:i:s'
@@ -55,6 +61,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
 
         {
             xtype: 'combo',
+            allowBlank:false, 
             width:400,
             store: {
                 type: 'array',
@@ -92,6 +99,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
 
         {
             xtype: 'treepicker',
+            allowBlank:false, 
             displayField: 'departmentName',
             autoScroll:true,
             scrollable: true,
@@ -137,6 +145,7 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             layout: 'hbox',
             items: [{
                 xtype: 'tagfield',
+                allowBlank:false, 
                 fieldLabel: '选择员工',
                 id:'staff',
                 reference:'staffTag',

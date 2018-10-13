@@ -56,6 +56,7 @@ Ext.define('Admin.view.performanceApprove.task.SelfAudit', {
         xtype     : 'numberfield',
         grow      : true,
         name      : 'selfScore',
+        allowBlank:false, 
         fieldLabel: '评分',
         //anchor    : '100%'
         minValue: 0,
@@ -67,6 +68,7 @@ Ext.define('Admin.view.performanceApprove.task.SelfAudit', {
         xtype     : 'textareafield',
         grow      : true,
         name      : 'selfScoreReason',
+        allowBlank:false, 
         fieldLabel: '评分细节',
         anchor    : '100%'
     }],

@@ -35,6 +35,7 @@ public class PerformanceTemplet implements Serializable {
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date endTime;  
 	private String performanceIndex;
-	private Double  weighting;
+	private Double  selfWeighting;
+	private Double  deptLeaderWeighting;
 	private Boolean status;			//true显示，flase不显示
 }

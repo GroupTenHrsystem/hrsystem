@@ -20,7 +20,7 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardViewController', {
           //	Ext.data.StoreManager.lookup('performanceGridStore').load();
           	win.close();
 		}else{
-			Ext.Msg.alert("等死","cnm，建议等死，叫你瞎几把乱填");  
+			Ext.Msg.alert("错误", "请填写正确数据");
 			//alert("cnm，建议等死，叫你瞎几把乱填");
 		}
 		
@@ -43,13 +43,18 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardViewController', {
 	},
 	submitEditForm:function(btn){
 		var win    = btn.up('window');
-		var store = Ext.data.StoreManager.lookup('salaryStandardGridStroe');
-    	var values  = win.down('form').getValues();//获取form数据
-    	var record = store.getById(values.id);//获取id获取store中的数据
-    	console.log(values);
-    	record.set(values);   	
-    	setTimeout(store.load(),"500");
-        win.close();
+		var form = win.down('form');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var store = Ext.data.StoreManager.lookup('salaryStandardGridStroe');
+	    	var values  = win.down('form').getValues();//获取form数据
+	    	var record = store.getById(values.id);//获取id获取store中的数据
+	    	console.log(values);
+	    	record.set(values);   	
+	    	setTimeout(store.load(),"500");
+	        win.close();
+	    }
 	},
 	/*combobox选中后控制对应输入（文本框和日期框）框显示隐藏*/
 	searchComboboxSelectChuang:function(combo,record,index){

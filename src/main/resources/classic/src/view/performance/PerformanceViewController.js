@@ -39,16 +39,21 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.performance.PerformanceModel');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var record = Ext.create('Admin.model.performance.PerformanceModel');
 
-		var values  =form.getValues();//获取form数据
-		var store = Ext.data.StoreManager.lookup('performanceGridStroe');
-           	record.set(values);
-          	record.save();
+			var values  =form.getValues();//获取form数据
+			var store = Ext.data.StoreManager.lookup('performanceGridStroe');
+	           	record.set(values);
+	          	record.save();
 
-          	setTimeout(store.load(),"500");
-          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
-          	win.close();
+	          	setTimeout(store.load(),"500");
+	          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
+	          	win.close();
+		}
+
 	},
 	/* Clear Text */
 	clearText:function(btn){
@@ -68,13 +73,18 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	submitEditForm:function(btn){
 		var win    = btn.up('window');
-		var store = Ext.data.StoreManager.lookup('performanceGridStroe');
-    	var values  = win.down('form').getValues();//获取form数据
-    	var record = store.getById(values.id);//获取id获取store中的数据
-    	console.log(record);
-    	record.set(values);   	
-    	setTimeout(store.load(),"500");
-        win.close();
+		var form = win.down('form');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var store = Ext.data.StoreManager.lookup('performanceGridStroe');
+	    	var values  = win.down('form').getValues();//获取form数据
+	    	var record = store.getById(values.id);//获取id获取store中的数据
+	    	console.log(record);
+	    	record.set(values);   	
+	    	setTimeout(store.load(),"500");
+	        win.close();
+	    }
 	},
 	/*combobox选中后控制对应输入（文本框和日期框）框显示隐藏*/
 	searchComboboxSelectChuang:function(combo,record,index){

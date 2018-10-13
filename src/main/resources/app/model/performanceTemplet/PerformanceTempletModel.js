@@ -9,7 +9,8 @@ Ext.define('Admin.model.performanceTemplet.PerformanceTempletModel', {
 	    {type: 'date', name: 'startTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'date', name: 'endTime', dateFormat:'Y/m/d H:i:s'},
 	    {type: 'string',name: 'performanceIndex'},
-	    {type: 'float',name: 'weighting'},
+	    {type: 'float',name: 'selfWeighting'},
+	    {type: 'float',name: 'deptLeaderWeighting'},
 	],
 	proxy: {
 		type: 'rest',

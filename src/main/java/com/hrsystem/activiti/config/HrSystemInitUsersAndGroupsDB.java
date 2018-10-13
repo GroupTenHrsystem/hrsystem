@@ -211,7 +211,8 @@ public class HrSystemInitUsersAndGroupsDB {
 			        			performanceTemplet.setKind("种类");
 			        			performanceTemplet.setName("考核模板"+i);
 			        			performanceTemplet.setPerformanceIndex("工作量");
-			        			performanceTemplet.setWeighting(0.3);
+			        			performanceTemplet.setSelfWeighting(0.3);
+			        			performanceTemplet.setDeptLeaderWeighting(0.7);
 			        			performanceTemplet.setStatus(true);
 			        			performanceTempletService.insertPerformanceTemplet(performanceTemplet);
 			        	}

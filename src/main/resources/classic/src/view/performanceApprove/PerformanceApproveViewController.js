@@ -107,42 +107,50 @@
     //自评
     onClickSelfAuditFormSubmitButton: function(btn) {
         var form = btn.up('form');
-        var values = form.getValues();
-        var url = 'performance/complete/' + values.taskId; 
-        var variables = [{
-            key: 'selfPass',
-            value: values.selfPass,//获取表单选择的value
-            type: 'B'
-        },{
-            key: 'selfScore',
-            value: values.selfScore,//获取表单选择的value
-            type: 'F'
-        },{
-            key: 'selfScoreReason',
-            value: values.selfScoreReason,//获取表单选择的value
-            type: 'S'
-        }];
-        this.complete(url,variables,form);
+        if(!form.isValid()){
+            Ext.Msg.alert("错误", "请填写正确数据")
+        }else{
+            var values = form.getValues();
+            var url = 'performance/complete/' + values.taskId; 
+            var variables = [{
+                key: 'selfPass',
+                value: values.selfPass,//获取表单选择的value
+                type: 'B'
+            },{
+                key: 'selfScore',
+                value: values.selfScore,//获取表单选择的value
+                type: 'F'
+            },{
+                key: 'selfScoreReason',
+                value: values.selfScoreReason,//获取表单选择的value
+                type: 'S'
+            }];
+            this.complete(url,variables,form);
+        }
     },
 	//领导评分
     onClickDeptleaderAuditFormSubmitButton: function(btn) {
     	var form = btn.up('form');
-    	var values = form.getValues();
-    	var url = 'performance/complete/' + values.taskId;
-    	var variables = [{
-			key: 'deptLeaderPass',
-			value: values.deptLeaderPass,//获取表单选择的value
-			type: 'B'
-		},{
-			key: 'deptLeaderScore',
-			value: values.deptLeaderScore,//获取表单选择的value
-			type: 'F'
-		},{
-            key: 'deptLeaderScoreReason',
-            value: values.deptLeaderScoreReason,//获取表单选择的value
-            type: 'S'
-        }];
-        this.complete(url,variables,form);
+        if(!form.isValid()){
+            Ext.Msg.alert("错误", "请填写正确数据")
+        }else{
+        	var values = form.getValues();
+        	var url = 'performance/complete/' + values.taskId;
+        	var variables = [{
+    			key: 'deptLeaderPass',
+    			value: values.deptLeaderPass,//获取表单选择的value
+    			type: 'B'
+    		},{
+    			key: 'deptLeaderScore',
+    			value: values.deptLeaderScore,//获取表单选择的value
+    			type: 'F'
+    		},{
+                key: 'deptLeaderScoreReason',
+                value: values.deptLeaderScoreReason,//获取表单选择的value
+                type: 'S'
+            }];
+            this.complete(url,variables,form);
+        }
     },
     //确认结果
     onClickReportBackFormSubmitButton: function(btn) {

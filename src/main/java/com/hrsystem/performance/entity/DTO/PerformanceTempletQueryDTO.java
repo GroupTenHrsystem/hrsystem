@@ -62,8 +62,10 @@ public class PerformanceTempletQueryDTO
 	@Like
 	private String performanceIndex;
 	
-	private Double  weighting;
+	private Double  selfWeighting;
 
+	private Double  deptLeaderWeighting;
+	
 	private Boolean status=true;
 	
 }
