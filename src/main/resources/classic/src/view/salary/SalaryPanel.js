@@ -54,7 +54,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryStarTime',text: '开始日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryEndTime',text: '结束日期',flex: 1,formatter: 'date("Y/m/d")',filter: true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salaryStandardName',text: '薪资标准',flex: 1,filter: true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '工资',flex: 1,
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'salarySum',text: '工资',flex: 1, formatter: 'round(2)',
                      filter: {
                         type: 'string',
                         itemDefaults: {

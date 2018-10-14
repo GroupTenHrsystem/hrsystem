@@ -1,5 +1,6 @@
 package com.hrsystem.salary.service;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
@@ -58,7 +59,9 @@ public class SalaryService implements ISalaryService{
 		Date now = new Date();
 		LocalDate localDate=now.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		Date newDate=java.sql.Date.valueOf(localDate);
-		SalaryStandard salaryStandard = salaryStandardRepository.findById(salaryDTO.getSalaryStandardId()).get();
+		SalaryStandard salaryStandard = salaryStandardRepository.findById(salaryDTO.getSalaryStandardId()).get();	//查出薪资计算标准
+		//保留两位小数
+		DecimalFormat df = new DecimalFormat("#.00");
 		for(int i = 0; i < salaryDTO.getStaffIds().length; ++i) {
 			Staff optional = staffRepository.findById(salaryDTO.getStaffIds()[i]).get();
 
@@ -75,18 +78,56 @@ public class SalaryService implements ISalaryService{
 				if(performance.getResultScore()!=null)
 					performancesSalary += performance.getResultScore() * salaryStandard.getKpi();
 			}
-			Double salarySum = performancesSalary + salaryStandard.getBasis();
+			Double basis = salaryStandard.getBasis();
+			performancesSalary = Double.parseDouble(df.format(performancesSalary));
 
+			Double salarySum = performancesSalary + basis;
 
+			/*
+			 *	扣除五险一金
+			 *
+			 */
+			//养老保险
+			 Double pension 	= salarySum * salaryStandard.getPensionBenefits();
+			pension = Double.parseDouble(df.format(pension));
+
+			//生育保险比例
+			Double maternity 	= salarySum * salaryStandard.getMaternityBenefits();
+			maternity = Double.parseDouble(df.format(maternity));
+
+			//医疗保险
+			Double medicare		= salarySum * salaryStandard.getMedicareBenefits();
+			medicare = Double.parseDouble(df.format(medicare));
+
+			//失业保险
+			Double unemployment = salarySum * salaryStandard.getUnemploymentBenefits();
+			unemployment = Double.parseDouble(df.format(unemployment));
+
+			//工伤保险
+			Double injury 		= salarySum * salaryStandard.getInjuryBenefits();
+			injury = Double.parseDouble(df.format(injury));
+
+			//住房公积金
+			Double house 		= salarySum * salaryStandard.getHouseFund();
+			house = Double.parseDouble(df.format(house));
+
+			salarySum = salarySum - pension - medicare - maternity - unemployment - injury - house;
 			/*
 			 *	数据库插入工资
 			 */
 			if(optional != null) {
 				Salary salary = new Salary();
+				BeanUtils.copyProperties(salaryDTO, salary);
 				salary.setCreateTime(newDate);
 				salary.setStaff(optional);
 				salary.setSalaryStandard(salaryStandard);
-				BeanUtils.copyProperties(salaryDTO, salary);
+				salary.setPension(pension);
+				salary.setMedicare(medicare);
+				salary.setMaternity(maternity);
+				salary.setInjury(injury);
+				salary.setUnemployment(unemployment);
+				salary.setHouse(house);
+				salary.setPerformancesSalary(performancesSalary);
 				salary.setSalarySum(salarySum);
 				salaryRepository.save(salary);
 			}

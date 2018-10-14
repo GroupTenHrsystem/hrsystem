@@ -34,7 +34,22 @@ public class Salary {
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date createTime; 
 	private Double salarySum;
-	
+
+	//养老保险
+	private Double pension;
+	//生育保险
+	private Double maternity;
+	//医疗保险
+	private Double medicare;
+	//失业保险
+	private Double unemployment;
+	//工伤保险
+	private Double injury;
+	//住房公积金
+	private Double house;
+	//绩效
+	private Double performancesSalary;
+
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private SalaryStandard salaryStandard;
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
