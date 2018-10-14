@@ -9,6 +9,13 @@ Ext.define('Admin.view.salary.SalaryViewController', {
         'Ext.exporter.excel.Xlsx'
     ],
 
+    onTabChange: function(tabs, newTab, oldTab) {
+        Ext.suspendLayouts();
+        newTab.setTitle('薪资查询');
+        oldTab.setTitle('薪资分析');
+        Ext.resumeLayouts(true);
+    },
+
     exportTo: function(btn){
         var cfg = Ext.merge({
            // title: '数钱',

@@ -168,6 +168,12 @@
 	                    iconCls: 'x-fa fa-lightbulb-o',
 	                    viewType: 'salary',
 	                    leaf: true
+	                },
+	                {
+	                    text: '薪资分析',
+	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    viewType: 'salaryAnalysis',
+	                    leaf: true
 	                }
 	            ]
             },{
