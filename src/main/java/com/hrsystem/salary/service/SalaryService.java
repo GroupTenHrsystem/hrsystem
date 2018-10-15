@@ -170,7 +170,7 @@ public class SalaryService implements ISalaryService{
 	}
 
 	@Override
-	public Page<Salary> getSalaryByStaffName(String userId, Pageable pageable){
-		return salaryRepository.getSalaryByStaffName(userId, pageable);
+	public List<Salary> getSalaryByStaffName(String userId){
+		return salaryRepository.getSalaryByStaffName(userId);
 	}
 }

@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hrsystem.common.sign.Like;
 
 import lombok.Data;
 
@@ -23,6 +24,8 @@ import lombok.Data;
 @Data
 public class SalaryStandardQueryDTO {
 	private Long id;
+	@Like
+	private String name;
 	private Double basis;					//基本工资
 	private Double subsidy;					//补贴
 	private Double overtime;				//加班费/天

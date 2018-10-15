@@ -91,7 +91,12 @@ public final class SpecificationBuilder {
                 predicates.add(cb.lessThanOrEqualTo(root.get(fieldName), (Comparable) fieldObject));
             } else {
                 if (field.isAnnotationPresent(Join.class)) {
-                    predicates.add(cb.equal(root.get(field.getAnnotation(Join.class).value()).get(fieldName), fieldObject));
+                	//增加了Join模糊查询
+                	if (fieldObject instanceof String) {
+                		predicates.add(cb.like(root.get(field.getAnnotation(Join.class).value()).get(fieldName), PERCENT + fieldObject + PERCENT));
+                	}else {
+                		predicates.add(cb.equal(root.get(field.getAnnotation(Join.class).value()).get(fieldName), fieldObject));
+                	}  
                 } else {
                     predicates.add(cb.equal(root.get(fieldName), fieldObject));
                 }

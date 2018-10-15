@@ -137,12 +137,12 @@ public class SalaryController {
 	
 	
 	@RequestMapping("/getMyPage")
-	public Page<Salary> getMyPage(HttpSession session,ExtjsPageRequest pageRequest)
+	public List<Salary> getMyPage(HttpSession session,ExtjsPageRequest pageRequest)
 	{
 		Page<Salary> page;
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
-			return salaryService.getSalaryByStaffName(userId, pageRequest.getPageable());
+			return salaryService.getSalaryByStaffName(userId);
 		}else {
 			return null;
 		}

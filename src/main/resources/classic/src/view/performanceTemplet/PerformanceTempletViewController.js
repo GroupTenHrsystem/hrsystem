@@ -134,13 +134,17 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletViewController', {
 					startTimeStart:"",
 					startTimeEnd:"",
 					endTimeStart:"",
-					endTimeEnd:""
+					endTimeEnd:"",
+					selfWeighting:"",
+					deptLeaderWeighting:""
 			});
 		Ext.apply(store.proxy.extraParams,{
 			name:values.name,
 			kind:values.kind,
 			performanceIndex:values.performanceIndex,
-			weighting:values.weighting
+			weighting:values.weighting,
+			selfWeighting:values.selfWeighting,
+			deptLeaderWeighting:values.deptLeaderWeighting
 		});
 		if(values.startTimeStart!=""){
 			Ext.apply(store.proxy.extraParams,{

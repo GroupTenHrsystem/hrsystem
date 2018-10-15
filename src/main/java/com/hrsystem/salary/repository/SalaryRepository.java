@@ -37,5 +37,5 @@ public interface SalaryRepository extends PagingAndSortingRepository<Salary, Lon
 	public void updateAll(List<Long> ids);
     
     @Query(value="SELECT * FROM hrsystem.t_salary where staff_id in (SELECT id FROM hrsystem.t_staff where staff_name=?1)  order by salary_star_time ASC",nativeQuery=true)
-    Page<Salary> getSalaryByStaffName(String userId, Pageable pageable);
+    List<Salary> getSalaryByStaffName(String userId);
 }

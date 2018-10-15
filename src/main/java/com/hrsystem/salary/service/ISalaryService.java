@@ -32,5 +32,5 @@ public interface ISalaryService {
 	 
 	 public Page<Salary> findAll(Specification<Salary> spec, Pageable pageable);
 	 
-	 public Page<Salary> getSalaryByStaffName(String userId, Pageable pageable);
+	 public List<Salary> getSalaryByStaffName(String userId);
 }
