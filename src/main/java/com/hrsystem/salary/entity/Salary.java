@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hrsystem.user.entity.Staff;
 
 import lombok.Data;
@@ -49,9 +50,10 @@ public class Salary {
 	private Double house;
 	//绩效
 	private Double performancesSalary;
-
+	@JsonIgnore
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private SalaryStandard salaryStandard;
+	@JsonIgnore
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private Staff staff;
 }

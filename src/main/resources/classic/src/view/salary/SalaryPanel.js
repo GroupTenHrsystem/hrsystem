@@ -9,7 +9,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     ],
 
     title: '薪资查询',
-   layout: 'fit',
+    layout: 'fit',
 
     profiles: {
         classic: {

@@ -21,6 +21,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import org.springframework.data.domain.Sort;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.repository.SalaryRepository;
 
@@ -160,4 +161,8 @@ public class SalaryService implements ISalaryService{
 		return salaryRepository.findAll(spec, pageable);
 	}
 
+	@Override
+	public List<Salary> getSalaryByStaffName(String userId){
+		return salaryRepository.getSalaryByStaffName(userId);
+	}
 }

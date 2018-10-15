@@ -273,5 +273,15 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 	/*Disable*/	
 	onDisableButton:function(grid, rowIndex, colIndex){
 		Ext.Msg.alert("Title","Click Disable Button");
+	},
+	/*柱状图刷新数据*/
+	onReloadData:function(btn){
+		var analysisPanel = btn.up('salaryAnalysis');
+		var chart = Ext.getCmp("chart");
+       	chart.getStore().removeAll();
+       	setTimeout(function(){
+     			chart.getStore().load();
+		},1000);
+       
 	}
 });
