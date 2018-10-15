@@ -25,6 +25,7 @@
         {
             xtype: 'toolbar',
             cls: 'sencha-dash-dash-headerbar shadow',
+            style:'background-color: #D9FFFF',
             height: 64,
             itemId: 'headerBar',
             items: [
@@ -32,12 +33,13 @@
                     xtype: 'component',
                     reference: 'senchaLogo',
                     cls: 'sencha-logo',
-                    html: '<div class="main-logo"><img src="resources/images/company-logo.png">Hello Extjs</div>',
+                    html: '<div class="main-logo" style="background-color: white;color: black;"><img src="resources/images/icon_1.jpg">汇人事管理系统</div>',
                     width: 250
                 },
                 {
                     margin: '0 0 0 8',
                     ui: 'header',
+                    style:'background-color: #D9FFFF',
                     iconCls:'x-fa fa-navicon',
                     id: 'main-navigation-btn',
                     handler: 'onToggleNavigationSize'
@@ -45,6 +47,7 @@
                 '->',{
                     xtype: 'tbtext',
                     text: '用户名:Admin',
+                    style:'color: black',
                     id:'loginUserName',
                     cls: 'top-user-name'
                 },{
@@ -87,6 +90,7 @@
                     xtype: 'treelist',
                     reference: 'navigationTreeList',
                     itemId: 'navigationTreeList',
+                    style:'background-color: white',
                     ui: 'nav',
                     store: 'NavigationTree',
                     width: 250,

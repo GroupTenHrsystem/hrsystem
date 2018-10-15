@@ -151,7 +151,20 @@ public class PerformanceController {
 			return "success:删除失败";
 		}
 	}
-
+	
+	@PostMapping("/deletes")
+	public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
+	{
+		try {
+			if(ids!=null) {
+				performanceService.deleteAll(ids);
+			}
+			return new ExtAjaxResponse(true,"批量删除成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"批量删除失败！");
+		}
+	}
+	
 	@GetMapping
 	public Page<PerformanceRelateDTO> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{

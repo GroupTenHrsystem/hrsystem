@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.salary.entity.SalaryStandard;
+import com.hrsystem.salary.entity.DTO.SalaryStandardQueryDTO;
 import com.hrsystem.salary.service.ISalaryStandardService;
 
 
@@ -102,8 +105,9 @@ public class SalaryStandardController {
 				}
 			 
 			@GetMapping
-			public Page<SalaryStandard> getPage(ExtjsPageRequest pageRequest) 
+			public Page<SalaryStandard> getPage(SalaryStandardQueryDTO salaryStandardQueryDTO, ExtjsPageRequest pageRequest) 
 			{
-				return salaryStandardService.findAll(null, pageRequest.getPageable());
+				Specification buildSpecification = SpecificationBuilder.buildSpecification(salaryStandardQueryDTO);
+				return salaryStandardService.findAll(buildSpecification, pageRequest.getPageable());
 			}
 }

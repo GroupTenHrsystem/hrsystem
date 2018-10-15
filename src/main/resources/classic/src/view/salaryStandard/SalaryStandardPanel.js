@@ -23,6 +23,7 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
             columns: [
                 {xtype: 'gridcolumn',width: 40, dataIndex: 'id',text: 'Key',hidden:true},
                 {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'createTime',text: '创建日期',flex: 1,formatter: 'date("Y/m/d H:i:s")'},
+                {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'name',text: '名字',flex: 1},
                 {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'basis',text: '基本工资',flex: 1},
                 {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'subsidy',text: '补贴',flex: 1},
                 {xtype: 'gridcolumn',width: 60, cls: 'content-column',dataIndex: 'overtime',text: '加班费/天',flex: 1},

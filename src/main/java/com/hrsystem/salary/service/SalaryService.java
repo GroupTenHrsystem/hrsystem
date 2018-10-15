@@ -20,7 +20,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.domain.Sort;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.repository.SalaryRepository;
 
@@ -35,6 +36,7 @@ import com.hrsystem.salary.repository.SalaryRepository;
  
 */
 @Service
+@Transactional
 public class SalaryService implements ISalaryService{
 	@Autowired
 	SalaryRepository salaryRepository;
@@ -46,11 +48,11 @@ public class SalaryService implements ISalaryService{
 	PerformanceRepository performanceRepository;
 	public Salary findSalaryById(Long id) {
 		// TODO Auto-generated method stub
-		 Optional<Salary> Salary = salaryRepository.findById(id);
-		    if (!Salary.isPresent()) {
+		 Optional<Salary> salary = salaryRepository.findById(id);
+		    if (!salary.isPresent()) {
 		        return null;
 		    }
-		    return Salary.get();
+		    return salary.get();
 	}
 	@Override
 	public void insertSalary(SalaryDTO salaryDTO) {
@@ -112,6 +114,7 @@ public class SalaryService implements ISalaryService{
 			house = Double.parseDouble(df.format(house));
 
 			salarySum = salarySum - pension - medicare - maternity - unemployment - injury - house;
+			salarySum = Double.parseDouble(df.format(salarySum));
 			/*
 			 *	数据库插入工资
 			 */
@@ -142,16 +145,22 @@ public class SalaryService implements ISalaryService{
 	@Override
 	public void deleteSalary(Long id) {
 		// TODO Auto-generated method stub
-		salaryRepository.deleteById(id);
+		Optional<Salary> optional = salaryRepository.findById(id);
+		if(optional.isPresent()) {
+			Salary salary = optional.get();
+			salary.setStatus(false);
+			salaryRepository.save(salary);
+		}else {
+			return;
+		}
+		//salaryRepository.deleteById(id);
 	}
  
 	@Override
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
-		List<Salary> Salary = (List<Salary>) salaryRepository.findAllById(idLists);
-		salaryRepository.deleteAll(Salary);
+		salaryRepository.updateAll(idLists);
 	}
 
 	@Override
@@ -160,4 +169,8 @@ public class SalaryService implements ISalaryService{
 		return salaryRepository.findAll(spec, pageable);
 	}
 
+	@Override
+	public List<Salary> getSalaryByStaffName(String userId){
+		return salaryRepository.getSalaryByStaffName(userId);
+	}
 }

@@ -134,11 +134,11 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
         dock: 'bottom',
         items: [{
             xtype: 'button',
-            text: 'Submit',
+            text: '提交',
             handler: 'submitAddForm'
         },{
             xtype: 'button',
-            text: 'Close',
+            text: '关闭',
             handler: function(btn) {
                 btn.up('window').close();
             }

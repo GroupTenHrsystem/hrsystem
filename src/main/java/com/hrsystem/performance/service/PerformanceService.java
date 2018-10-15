@@ -24,6 +24,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.activiti.domain.WorkflowDTO;
@@ -32,6 +33,7 @@ import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.performance.repository.PerformanceRepository;
 @Service
+@Transactional
 public class PerformanceService implements IPerformanceService{
 	@Autowired
 	PerformanceRepository performanceRepository;
@@ -61,9 +63,8 @@ public class PerformanceService implements IPerformanceService{
 	@Override
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
-		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));	
-		List<Performance> Performances = (List<Performance>) performanceRepository.findAllById(idLists);
-		performanceRepository.deleteAll(Performances);
+		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
+		performanceRepository.updateAll(idLists);
 	}
 
 	@Override

@@ -1,6 +1,9 @@
 package com.hrsystem.salary.service;
 
 import com.hrsystem.salary.entity.DTO.SalaryDTO;
+
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -21,11 +24,13 @@ public interface ISalaryService {
 	 
 	 public void insertSalary(SalaryDTO salaryDTO) ;
 
-	public void updataSalary(Salary Salary);
-	 
+	 public void updataSalary(Salary Salary);
+	
 	 public void deleteSalary(Long id) ;
 	 
 	 public void deleteAll(Long[] ids);
 	 
 	 public Page<Salary> findAll(Specification<Salary> spec, Pageable pageable);
+	 
+	 public List<Salary> getSalaryByStaffName(String userId);
 }

@@ -10,7 +10,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.repository.SalaryStandardRepository;
 
@@ -24,6 +26,7 @@ import com.hrsystem.salary.repository.SalaryStandardRepository;
  
 */
 @Service
+@Transactional
 public class SalaryStandardService implements ISalaryStandardService{
 	@Autowired
 	SalaryStandardRepository salaryStandardRepository;
@@ -45,16 +48,23 @@ public class SalaryStandardService implements ISalaryStandardService{
 	@Override
 	public void deleteSalaryStandard(Long id) {
 		// TODO Auto-generated method stub
-		salaryStandardRepository.deleteById(id);
+		
+		Optional<SalaryStandard> optional = salaryStandardRepository.findById(id);
+		if(optional.isPresent()) {
+			SalaryStandard salaryStandard = optional.get();
+			salaryStandard.setStatus(false);
+			salaryStandardRepository.save(salaryStandard);
+		}else {
+			return;
+		}
+		//salaryStandardRepository.deleteById(id);
 	}
  
 	@Override
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
-		List<SalaryStandard> salaryStandard = (List<SalaryStandard>) salaryStandardRepository.findAllById(idLists);
-		salaryStandardRepository.deleteAll(salaryStandard);
+		salaryStandardRepository.updateAll(idLists);
 	}
 
 	@Override

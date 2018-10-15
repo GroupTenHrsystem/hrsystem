@@ -6,7 +6,7 @@ Ext.define('Aria.view.performance.PerformanceSearchWindow', {
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: 'Performance Search Window',
+    title: '绩效搜索',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',

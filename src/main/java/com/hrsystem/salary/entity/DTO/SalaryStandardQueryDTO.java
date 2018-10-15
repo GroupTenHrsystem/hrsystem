@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hrsystem.common.sign.Like;
 
 import lombok.Data;
 
@@ -23,6 +24,8 @@ import lombok.Data;
 @Data
 public class SalaryStandardQueryDTO {
 	private Long id;
+	@Like
+	private String name;
 	private Double basis;					//基本工资
 	private Double subsidy;					//补贴
 	private Double overtime;				//加班费/天
@@ -38,5 +41,5 @@ public class SalaryStandardQueryDTO {
 	private Date createTimeStart; 			//创建时间范围开始
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date createTimeEnd; 			//创建时间范围结束
-	private Boolean status = false;			//状态
+	private Boolean status = true;
 }

@@ -37,5 +37,5 @@ public class PerformanceTemplet implements Serializable {
 	private String performanceIndex;
 	private Double  selfWeighting;
 	private Double  deptLeaderWeighting;
-	private Boolean status;			//true显示，flase不显示
+	private Boolean status = true;			//true显示，flase不显示
 }

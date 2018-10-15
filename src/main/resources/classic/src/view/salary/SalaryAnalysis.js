@@ -1,12 +1,24 @@
 Ext.define('Admin.view.salary.SalaryAnalysis', {
-	extend: 'Ext.container.Container',
+	extend: 'Ext.panel.Panel',
 	xtype: 'salaryAnalysis',
-    width: 500,
-    height: 500,
+    controller: 'salaryViewController',
     layout: 'fit',
+    tbar: [
+        {
+            xtype: 'button',
+            text: '刷新数据',
+            handler: 'onReloadData'
+        },{
+            xtype: 'button',
+            text: '保存',
+            handler: 'onDownload'
+        }
+    ],
     items: [
         {
             xtype: 'chart',
+            lookupReference: 'chart',
+            id:'chart',
             insetPadding: { top: 60, bottom: 20, left: 20, right: 40 },
             store: Ext.create("Admin.store.salary.SalaryAnalysisStroe"),
             axes: [
@@ -25,7 +37,7 @@ Ext.define('Admin.view.salary.SalaryAnalysis', {
             series: [
                 {
                     type: 'bar3d',
-                    xField: 'month',
+                    xField: 'salaryStarTime',
                     yField: ['salarySum'],
                     label: {
 		                field: 'salarySum',
