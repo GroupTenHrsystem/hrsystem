@@ -27,41 +27,43 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
             name:'id',
             hidden: true,
             readOnly: true
-        }, {
-            xtype: 'datefield',
-            fieldLabel: '发放日期',
-            name:'salaryStarTime',
-            format: 'Y/m/d',
-            readOnly: true
-        }, {
+        }, 
+        // {
+        //     xtype: 'datefield',
+        //     fieldLabel: '发放日期',
+        //     name:'salaryStarTime',
+        //     format: 'Y/m/d',
+        //     readOnly: true
+        // }, 
+        {
             xtype: 'displayfield',
             fieldLabel: '基本工资',
-            name:'salarySum'
+            name:'basis'
         }, {
             xtype: 'displayfield',
             fieldLabel: '补贴',
-            name:'salarySum',
-            value: '300'
+            //name:'salarySum',
+            //value: '300'
         }, {
             xtype: 'displayfield',
-            fieldLabel: '加班费',
-            name:'salarySum',
-            value: '300'
+            fieldLabel: '加班',
+            //name:'salarySum',
+            //value: '300'
         }, {
             xtype: 'displayfield',
             fieldLabel: '绩效',
-            name:'salarySum',
-            value: '1000'
+            name:'performancesSalary',
+            //value: '1000'
         }, {
             xtype: 'displayfield',
             fieldLabel: '缺勤',
-            name:'salarySum',
-            value: '-50'
+            //name:'salarySum',
+            //value: '-50'
         }, {
             xtype: 'displayfield',
             fieldLabel: '合计',
             name:'salarySum',
-            value: '3540'
+            //value: '3540'
         }, {
             xtype: 'fieldset',
             title: '补充',
@@ -79,22 +81,15 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
                             fieldLabel: '养老保险',
                             labelWidth:80, 
                             labelAlign:'right',  
-                            name:'salarySum',
-                            value: '-10'
+                            name:'pension',
+                            //value: '-10'
                         }, {
                             xtype: 'displayfield',
                             fieldLabel: '医疗保险',
-                            name:'salarySum',
-                            value: '-10',
+                            name:'medicare',
+                            //value: '-10',
                             labelWidth:80,
                             labelAlign:'right'
-                        }, {
-                            xtype: 'displayfield',
-                            fieldLabel: '失业保险',
-                            labelWidth:80, 
-                            labelAlign:'right', 
-                            name:'salarySum',
-                            value: '-10'
                         }]
             },{
                     xtype: 'fieldcontainer',
@@ -105,22 +100,34 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
                             fieldLabel: '工伤保险',
                             labelWidth:185, 
                             labelAlign:'right', 
-                            name:'salarySum',
-                            value: '-10'
+                            name:'injury',
+                            //value: '-10'
                         }, {
                             xtype: 'displayfield',
-                            fieldLabel: '生育保险',
+                            fieldLabel: '失业保险',
                             labelWidth:80, 
                             labelAlign:'right', 
-                            name:'salarySum',
-                            value: '-10'
+                            name:'unemployment',
+                            //value: '-10'
+                        }]
+            },{
+                    xtype: 'fieldcontainer',
+                    combineErrors: true,
+                    layout: 'hbox',
+                    items: [{
+                            xtype: 'displayfield',
+                            fieldLabel: '生育保险',
+                            labelWidth:185, 
+                            labelAlign:'right', 
+                            name:'maternity',
+                            //value: '-10'
                         }, {
                             xtype: 'displayfield',
                             fieldLabel: '住房公积金',
                             labelWidth:80, 
                             labelAlign:'right', 
-                            name:'salarySum',
-                            value: '-10'
+                            name:'house',
+                            //value: '-10'
                         }]
             }]
         }]

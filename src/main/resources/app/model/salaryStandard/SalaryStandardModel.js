@@ -5,6 +5,7 @@ Ext.define('Admin.model.salaryStandard.SalaryStandardModel', {
 	],
     fields: [
 	    {type: 'int',name: 'id'},
+	    {type: 'string',name: 'name'},
 	    {type: 'float',name: 'basis'},
 	    {type: 'float',name: 'subsidy'},
 	    {type: 'float',name: 'overtime'},

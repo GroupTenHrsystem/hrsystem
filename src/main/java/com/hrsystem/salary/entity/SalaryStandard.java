@@ -27,6 +27,7 @@ public class SalaryStandard {
 			@Id
 		    @GeneratedValue(strategy = GenerationType.IDENTITY)
 			private Long id;
+			private String name;
 			private Double basis;					//基本工资
 			private Double subsidy;					//补贴
 			private Double overtime;				//加班费/天

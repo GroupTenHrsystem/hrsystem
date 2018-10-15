@@ -9,6 +9,13 @@ Ext.define('Admin.view.salary.SalaryViewController', {
         'Ext.exporter.excel.Xlsx'
     ],
 
+    onTabChange: function(tabs, newTab, oldTab) {
+        Ext.suspendLayouts();
+        newTab.setTitle('薪资查询');
+        oldTab.setTitle('薪资分析');
+        Ext.resumeLayouts(true);
+    },
+
     exportTo: function(btn){
         var cfg = Ext.merge({
            // title: '数钱',
@@ -50,19 +57,37 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('salary').add(Ext.widget('salaryAddWindow')).show();
 	},
+	toggleDisabled:function(checkbox, checked){
+        var staffTag = this.lookupReference('staffTag');    //获取下拉框组件
+        
+        var arrayObj = new Array();
+         	staffTag.reset();    // 清空已存在结果
+         	staffTag.getStore().each(function (record) {
+         		arrayObj.push(record.get('id'));	//全选下拉框的内容
+		    	//console.log(record.get('id'));
+			});
+			staffTag.setValue(arrayObj);
+
+      
+        
+	},
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.salary.SalaryModel');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var record = Ext.create('Admin.model.salary.SalaryModel');
 
-		var values  =form.getValues();//获取form数据
-		var store = Ext.data.StoreManager.lookup('salaryGridStroe');
-           	record.set(values);
-          	record.save();
+			var values  =form.getValues();//获取form数据
+			var store = Ext.data.StoreManager.lookup('salaryGridStroe');
+	           	record.set(values);
+	          	record.save();
 
-          	setTimeout(store.load(),"500");
-          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
-          	win.close();
+	          	setTimeout(store.load(),"500");
+	          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
+	          	win.close();
+	    }
 	},
 	/* Clear Text */
 	clearText:function(btn){

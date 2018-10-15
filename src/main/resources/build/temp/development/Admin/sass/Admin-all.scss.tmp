@@ -1,5 +1,9 @@
 $app-name:  dynamic( 'Admin' );
+<<<<<<< HEAD
 $image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+=======
+$image-search-path: 'D:/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+>>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -13,6 +17,7 @@ $include-admin-model-person-personmodel: dynamic(true);;
 $include-admin-model-process-definition-processdefinitionmodel: dynamic(true);;
 $include-admin-model-recruit-recruitmodel: dynamic(true);;
 $include-admin-model-resume-resumemodel: dynamic(true);;
+$include-admin-model-salary-salaryanalysismodel: dynamic(true);;
 $include-admin-model-salary-salarymodel: dynamic(true);;
 $include-admin-model-salarystandard-salarystandardmodel: dynamic(true);;
 $include-admin-model-user-usermodel: dynamic(true);;
@@ -29,6 +34,7 @@ $include-admin-store-person-persongridstore: dynamic(true);;
 $include-admin-store-process-definition-processdefinitionstroe: dynamic(true);;
 $include-admin-store-recruit-recruitgridstroe: dynamic(true);;
 $include-admin-store-resume-resumegridstroe: dynamic(true);;
+$include-admin-store-salary-salaryanalysisstroe: dynamic(true);;
 $include-admin-store-salary-salarygridstroe: dynamic(true);;
 $include-admin-store-salarystandard-salarystandardgridstroe: dynamic(true);;
 $include-admin-store-user-usergridstore: dynamic(true);;
@@ -94,6 +100,7 @@ $include-admin-view-resume-resumepanel: dynamic(true);;
 $include-admin-view-resume-resumeviewcontroller: dynamic(true);;
 $include-admin-view-resume-resumeviewmodel: dynamic(true);;
 $include-admin-view-salary-salary: dynamic(true);;
+$include-admin-view-salary-salaryanalysis: dynamic(true);;
 $include-admin-view-salary-salarypanel: dynamic(true);;
 $include-admin-view-salary-salaryviewcontroller: dynamic(true);;
 $include-admin-view-salary-salaryviewmodel: dynamic(true);;
