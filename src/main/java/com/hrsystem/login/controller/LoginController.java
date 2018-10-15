@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
+
+import com.hrsystem.log.ControllerLogs;
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
@@ -30,6 +32,7 @@ public class LoginController {
      * 登录系统
      **/
     @RequestMapping(value = "/login")
+    @ControllerLogs(description = "用户登录")
     public @ResponseBody ExtAjaxResponse logon(@RequestParam("userName") String userName, @RequestParam("password") String password, HttpSession session) {
     	logger.debug("logon request: {userName={}, password={}}", userName, password);
         boolean checkPassword = identityService.checkPassword(userName, password);
@@ -62,6 +65,7 @@ public class LoginController {
      * 退出登录
      */
     @RequestMapping(value = "/logout")
+    @ControllerLogs(description = "用户登出")
     public @ResponseBody ExtAjaxResponse logout(HttpSession session) 
     {
     	try {

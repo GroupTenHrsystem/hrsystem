@@ -7,6 +7,7 @@ import java.util.*;
 
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
+import com.hrsystem.log.ServiceLogs;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.repository.PerformanceRepository;
@@ -46,6 +47,8 @@ public class SalaryService implements ISalaryService{
 	StaffRepository staffRepository;
 	@Autowired
 	PerformanceRepository performanceRepository;
+
+	@ServiceLogs(description = "通过id找薪资")
 	public Salary findSalaryById(Long id) {
 		// TODO Auto-generated method stub
 		 Optional<Salary> salary = salaryRepository.findById(id);
@@ -55,6 +58,7 @@ public class SalaryService implements ISalaryService{
 		    return salary.get();
 	}
 	@Override
+	@ServiceLogs(description = "插入薪资")
 	public void insertSalary(SalaryDTO salaryDTO) {
 		// TODO Auto-generated method stub
 		//批量插入，数据转换
@@ -137,12 +141,14 @@ public class SalaryService implements ISalaryService{
 		}
 	}
 	@Override
+	@ServiceLogs(description = "更新薪资")
 	public void updataSalary(Salary Salary) {
 		// TODO Auto-generated method stub
 		salaryRepository.save(Salary);
 	}
 
 	@Override
+	@ServiceLogs(description = "删除薪资（单个")
 	public void deleteSalary(Long id) {
 		// TODO Auto-generated method stub
 		Optional<Salary> optional = salaryRepository.findById(id);
@@ -157,6 +163,7 @@ public class SalaryService implements ISalaryService{
 	}
  
 	@Override
+	@ServiceLogs(description = "删除薪资（全部")
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
@@ -164,12 +171,14 @@ public class SalaryService implements ISalaryService{
 	}
 
 	@Override
+	@ServiceLogs(description = "薪资找全部")
 	public Page<Salary> findAll(Specification<Salary> spec, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return salaryRepository.findAll(spec, pageable);
 	}
 
 	@Override
+	@ServiceLogs(description = "通过用户名查找薪资")
 	public List<Salary> getSalaryByStaffName(String userId){
 		return salaryRepository.getSalaryByStaffName(userId);
 	}

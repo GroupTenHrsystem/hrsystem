@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import com.hrsystem.log.ServiceLogs;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,9 @@ public class PerformanceService implements IPerformanceService{
 	PerformanceRepository performanceRepository;
 	@Autowired 
 	private IWorkflowService workflowService;
+
+
+	@ServiceLogs(description = "通过id查绩效")
 	public Performance findPerformanceById(Long id) {
 		// TODO Auto-generated method stub
 		 Optional<Performance> performance = performanceRepository.findById(id);
@@ -49,18 +53,21 @@ public class PerformanceService implements IPerformanceService{
 	}
 
 	@Override
+	@ServiceLogs(description = "插入绩效")
 	public void insertPerformance(Performance Performance) {
 		// TODO Auto-generated method stub
 		performanceRepository.save(Performance);     
 	}
 
 	@Override
+	@ServiceLogs(description = "删除绩效")
 	public void deletePerformance(Long id) {
 		// TODO Auto-generated method stub
 		performanceRepository.deleteById(id);
 	}
  
 	@Override
+	@ServiceLogs(description = "删除全部绩效")
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
@@ -68,17 +75,20 @@ public class PerformanceService implements IPerformanceService{
 	}
 
 	@Override
+	@ServiceLogs(description = "绩效找全部")
 	public Page<Performance> findAll(Specification<Performance> spec, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return performanceRepository.findAll(spec, pageable);
 	}
 	
 	@Override
+	@ServiceLogs(description = "通过模板id找绩效")
 	 public List<Performance> getPerformanceByPerformanceTempletId(Long id){
 		return performanceRepository.getPerformanceByPerformanceTempletId(id);
 	 }
 	
 	@Override
+	@ServiceLogs(description = "通过用户名找绩效")
 	public Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable){
 		return performanceRepository.getMyPerformanceByStaffName(userId, pageable);
 	}
@@ -91,6 +101,7 @@ public class PerformanceService implements IPerformanceService{
     * @return
     */
 	@Override
+	@ServiceLogs(description = "开始绩效的工作流")
 	public void startWorkflow(String userId ,Long performanceId, Map<String, Object> variables) 
 	{
 		//1.声明流程实例
@@ -122,6 +133,7 @@ public class PerformanceService implements IPerformanceService{
     * @return
     */
 	@Override
+	@ServiceLogs(description = "查询待办任务")
 	public Page<PerformanceDTO> findTodoTasks(String userId, Pageable pageable) 
 	{
 		List<PerformanceDTO> results = null;
@@ -154,6 +166,7 @@ public class PerformanceService implements IPerformanceService{
     * @param userId 签收人用户ID
     * @return
     */
+    @ServiceLogs(description = "签收绩效流程任务")
 	public void claim(String taskId, String userId) {
 		workflowService.claim(taskId, userId);
 	}
@@ -165,6 +178,7 @@ public class PerformanceService implements IPerformanceService{
     * @param variables 流程变量
     * @return
     */
+	 @ServiceLogs(description = "完成绩效流程任务")
 	public void complete(String taskId, Map<String, Object> variables, Long id) {
 		
 		Performance performance = performanceRepository.findById(id).get();
