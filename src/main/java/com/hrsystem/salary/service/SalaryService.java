@@ -20,7 +20,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.domain.Sort;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.repository.SalaryRepository;
@@ -36,6 +36,7 @@ import com.hrsystem.salary.repository.SalaryRepository;
  
 */
 @Service
+@Transactional
 public class SalaryService implements ISalaryService{
 	@Autowired
 	SalaryRepository salaryRepository;
@@ -113,6 +114,7 @@ public class SalaryService implements ISalaryService{
 			house = Double.parseDouble(df.format(house));
 
 			salarySum = salarySum - pension - medicare - maternity - unemployment - injury - house;
+			salarySum = Double.parseDouble(df.format(salarySum));
 			/*
 			 *	数据库插入工资
 			 */

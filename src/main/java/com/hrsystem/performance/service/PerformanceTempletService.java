@@ -17,11 +17,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.entity.PerformanceTemplet;
 import com.hrsystem.performance.repository.PerformanceTempletRepository;
 @Service
+@Transactional
 public class PerformanceTempletService  implements IPerformanceTempletService{
 	@Autowired
 	PerformanceTempletRepository performanceTempletRepository;

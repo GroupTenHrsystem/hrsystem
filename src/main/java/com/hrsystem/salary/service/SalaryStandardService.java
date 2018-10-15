@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.repository.SalaryStandardRepository;
@@ -24,6 +25,7 @@ import com.hrsystem.salary.repository.SalaryStandardRepository;
  
 */
 @Service
+@Transactional
 public class SalaryStandardService implements ISalaryStandardService{
 	@Autowired
 	SalaryStandardRepository salaryStandardRepository;

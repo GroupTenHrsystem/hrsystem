@@ -281,7 +281,21 @@ Ext.define('Admin.view.salary.SalaryViewController', {
        	chart.getStore().removeAll();
        	setTimeout(function(){
      			chart.getStore().load();
-		},1000);
-       
-	}
+		},1000);      
+	},
+	onDownload: function() {
+        if (Ext.isIE8) {
+            Ext.Msg.alert('Unsupported Operation', 'This operation requires a newer version of Internet Explorer.');
+            return;
+        }
+        var chart = Ext.getCmp("chart");
+        if (Ext.os.is.Desktop) {
+            chart.download({
+                filename: 'Redwood City Climate Data Chart'
+            });
+        } else {
+            chart.preview();
+        }
+    },
+
 });

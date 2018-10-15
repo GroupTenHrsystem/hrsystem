@@ -1,13 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-<<<<<<< HEAD
 $image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
-=======
-<<<<<<< HEAD
-$image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
-=======
-$image-search-path: 'D:/hrsystem/src/main/resources/build/development/Admin/classic/resources';
->>>>>>> refs/remotes/origin/master
->>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -88,6 +80,7 @@ $include-admin-view-performancetemplet-performancetempletpanel: dynamic(true);;
 $include-admin-view-performancetemplet-performancetempletviewcontroller: dynamic(true);;
 $include-admin-view-performancetemplet-performancetempletviewmodel: dynamic(true);;
 $include-admin-view-person-person: dynamic(true);;
+$include-admin-view-person-personpanel: dynamic(true);;
 $include-admin-view-person-personviewcontroller: dynamic(true);;
 $include-admin-view-person-personviewmodel: dynamic(true);;
 $include-admin-view-process-definition-processdefinitioncenterpanel: dynamic(true);;

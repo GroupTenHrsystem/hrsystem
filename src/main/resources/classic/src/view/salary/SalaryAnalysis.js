@@ -8,6 +8,10 @@ Ext.define('Admin.view.salary.SalaryAnalysis', {
             xtype: 'button',
             text: '刷新数据',
             handler: 'onReloadData'
+        },{
+            xtype: 'button',
+            text: '保存',
+            handler: 'onDownload'
         }
     ],
     items: [
