@@ -1,9 +1,9 @@
 ﻿Ext.define('Admin.view.performanceApprove.PerformanceApproveGrid', {
     extend: 'Ext.grid.Panel',
 	xtype:'performanceApproveGrid',
-	title: 'tiele',		//需要修改
+	title: '待考核',		
 	iconCls: 'fa-arrow-circle-o-up',
-	bind: '{performanceApproveStore}',//调用组件4
+	bind: '{performanceApproveStore}',
 	columns: [{
 			xtype: 'actioncolumn',
 			items: [{
@@ -42,7 +42,7 @@
 			cls: 'content-column',
 			width: 120,
 			dataIndex: 'bool',
-			text: 'Actions',
+			text: '操作',
 			tooltip: 'edit '
 		}
 		,{header: 'id' 			,dataIndex: 'id',width: 60,sortable: true	,hidden:true}
@@ -71,43 +71,12 @@
 		,{header: '领导评分' ,dataIndex: 'deptLeaderScore',width: 80,sortable: true}
 		,{header: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',width: 80,sortable: true,hidden:true}	
 		,{header: '申诉理由' ,dataIndex: 'confirmResult',width: 80,sortable: true}	
-
-
-
-		// ,{header: 'reason' 		,dataIndex: 'reason',width: 80,sortable: true}
-		// ,{header: 'processInstanceId' ,dataIndex: 'processInstanceId',width: 80,sortable: true}
-		 ,{header: 'taskId'  		,dataIndex: 'taskId',width: 80,sortable: true,hidden:true}
-		// ,{header: 'taskName'  		,dataIndex: 'taskName',width: 80,sortable: true}
-		// ,{header: 'taskCreateTime'  ,dataIndex: 'taskCreateTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
-		// ,{header: 'assignee'  		,dataIndex: 'assignee',width: 80,sortable: true}
-		// ,{header: 'taskDefinitionKey',dataIndex: 'taskDefinitionKey',width: 80,sortable: true}
-		// ,{header: 'processDefinitionId'	,dataIndex: 'processDefinitionId',width: 80,sortable: true}
-		// ,{header: 'suspended'  		,dataIndex: 'suspended',width: 80,sortable: true}
-		// ,{header: 'version'  		,dataIndex: 'version',width: 60,sortable: true}
+		,{header: 'taskId'  		,dataIndex: 'taskId',width: 80,sortable: true,hidden:true}
 	],
 	dockedItems: [{
 	    xtype: 'pagingtoolbar',
 	    dock: 'bottom',
 		bind: '{performanceApproveStore}',	//调用组件4
-	    displayInfo: true,
-	    items: ['-',{
-            text: 'Add',
-            iconCls: 'x-fa fa-plus',
-			listeners: {
-				click: 'onClickPerformanceApproveGridAddButton'
-            }
-        }, '-',{
-            text: 'Update',
-            iconCls: 'x-fa fa-pencil',
-            listeners: {
-				click: 'onClickPerformanceApproveGridUpdateButton'
-            }
-        }, '-', {
-            text: 'Delete',
-            iconCls: 'x-fa fa-close',
-			listeners: {
-				click: 'onClickPerformanceApproveGridDeleteButton'
-            }
-        }]
+	    displayInfo: true
 	}]
 });

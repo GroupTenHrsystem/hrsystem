@@ -52,9 +52,7 @@ public class PerformanceTempletService  implements IPerformanceTempletService{
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
-		List<PerformanceTemplet> performanceTemplet = (List<PerformanceTemplet>) performanceTempletRepository.findAllById(idLists);
-		performanceTempletRepository.deleteAll(performanceTemplet);
+		performanceTempletRepository.updateAll(idLists);
 	}
 
 	@Override

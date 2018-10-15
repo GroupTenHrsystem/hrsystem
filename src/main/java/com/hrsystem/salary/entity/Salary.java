@@ -50,6 +50,8 @@ public class Salary {
 	private Double house;
 	//绩效
 	private Double performancesSalary;
+	
+	private Boolean status = true;
 	@JsonIgnore
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private SalaryStandard salaryStandard;

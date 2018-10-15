@@ -213,7 +213,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 				var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
         if (selModel.hasSelection()) {
-            Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
+            Ext.Msg.confirm("警告", "不能删除审批中的任务,确定要删除吗？", function (button) {
                 if (button == "yes") {
                     var rows = selModel.getSelection();
                     var selectIds = []; //要删除的id

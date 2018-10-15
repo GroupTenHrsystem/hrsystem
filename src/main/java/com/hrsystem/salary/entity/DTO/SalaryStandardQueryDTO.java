@@ -38,5 +38,5 @@ public class SalaryStandardQueryDTO {
 	private Date createTimeStart; 			//创建时间范围开始
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date createTimeEnd; 			//创建时间范围结束
-	private Boolean status = false;			//状态
+	private Boolean status = true;
 }

@@ -48,11 +48,11 @@ public class SalaryService implements ISalaryService{
 	PerformanceRepository performanceRepository;
 	public Salary findSalaryById(Long id) {
 		// TODO Auto-generated method stub
-		 Optional<Salary> Salary = salaryRepository.findById(id);
-		    if (!Salary.isPresent()) {
+		 Optional<Salary> salary = salaryRepository.findById(id);
+		    if (!salary.isPresent()) {
 		        return null;
 		    }
-		    return Salary.get();
+		    return salary.get();
 	}
 	@Override
 	public void insertSalary(SalaryDTO salaryDTO) {
@@ -145,16 +145,22 @@ public class SalaryService implements ISalaryService{
 	@Override
 	public void deleteSalary(Long id) {
 		// TODO Auto-generated method stub
-		salaryRepository.deleteById(id);
+		Optional<Salary> optional = salaryRepository.findById(id);
+		if(optional.isPresent()) {
+			Salary salary = optional.get();
+			salary.setStatus(false);
+			salaryRepository.save(salary);
+		}else {
+			return;
+		}
+		//salaryRepository.deleteById(id);
 	}
  
 	@Override
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
-		List<Salary> Salary = (List<Salary>) salaryRepository.findAllById(idLists);
-		salaryRepository.deleteAll(Salary);
+		salaryRepository.updateAll(idLists);
 	}
 
 	@Override
@@ -164,7 +170,7 @@ public class SalaryService implements ISalaryService{
 	}
 
 	@Override
-	public List<Salary> getSalaryByStaffName(String userId){
-		return salaryRepository.getSalaryByStaffName(userId);
+	public Page<Salary> getSalaryByStaffName(String userId, Pageable pageable){
+		return salaryRepository.getSalaryByStaffName(userId, pageable);
 	}
 }

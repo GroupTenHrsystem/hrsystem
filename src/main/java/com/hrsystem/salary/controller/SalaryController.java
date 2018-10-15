@@ -125,19 +125,24 @@ public class SalaryController {
 	@GetMapping
 	public Page<SalaryDTO> getPage(SalaryQueryDTO salaryQueryDTO,ExtjsPageRequest pageRequest)
 	{
-		Specification buildSpecification = SpecificationBuilder.buildSpecification(salaryQueryDTO);
-		Page<Salary> page = salaryService.findAll(buildSpecification, pageRequest.getPageable());
-		return SalaryDTO.toSalaryDTO(page, pageRequest.getPageable());
+//		System.out.println(salaryQueryDTO);
+//		if(salaryQueryDTO.getStaffName() != null) {
+//			Page<Salary> page = salaryService.getSalaryByStaffName(salaryQueryDTO.getStaffName(), pageRequest.getPageable());
+//			return SalaryDTO.toSalaryDTO(page, pageRequest.getPageable());
+//		}else {
+			Page<Salary> page = salaryService.findAll(SpecificationBuilder.buildSpecification(salaryQueryDTO), pageRequest.getPageable());
+			return SalaryDTO.toSalaryDTO(page, pageRequest.getPageable());
+		//}	
 	}
 	
 	
 	@RequestMapping("/getMyPage")
-	public List<Salary> getMyPage(HttpSession session)
+	public Page<Salary> getMyPage(HttpSession session,ExtjsPageRequest pageRequest)
 	{
 		Page<Salary> page;
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
-			return salaryService.getSalaryByStaffName(userId);
+			return salaryService.getSalaryByStaffName(userId, pageRequest.getPageable());
 		}else {
 			return null;
 		}
