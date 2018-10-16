@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import com.hrsystem.log.ServiceLogs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +28,7 @@ import com.hrsystem.performance.repository.PerformanceTempletRepository;
 public class PerformanceTempletService  implements IPerformanceTempletService{
 	@Autowired
 	PerformanceTempletRepository performanceTempletRepository;
+	@ServiceLogs(description = "通过id找绩效模板")
 	public PerformanceTemplet findPerformanceTempletById(Long id) {
 		// TODO Auto-generated method stub
 		 Optional<PerformanceTemplet> performanceTemplet = performanceTempletRepository.findById(id);
@@ -37,18 +39,21 @@ public class PerformanceTempletService  implements IPerformanceTempletService{
 	}
 
 	@Override
+	@ServiceLogs(description = "插入绩效模板")
 	public void insertPerformanceTemplet(PerformanceTemplet performanceTemplet) {
 		// TODO Auto-generated method stub
 		performanceTempletRepository.save(performanceTemplet);     
 	}
 
 	@Override
+	@ServiceLogs(description = "删除绩效模板（单个）")
 	public void deletePerformanceTemplet(Long id) {
 		// TODO Auto-generated method stub
 		performanceTempletRepository.deleteById(id);
 	}
  
 	@Override
+	@ServiceLogs(description = "删除绩效模板（多个）")
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
@@ -56,6 +61,7 @@ public class PerformanceTempletService  implements IPerformanceTempletService{
 	}
 
 	@Override
+	@ServiceLogs(description = "绩效模板找全部")
 	public Page<PerformanceTemplet> findAll(Specification<PerformanceTemplet> spec, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return performanceTempletRepository.findAll(spec, pageable);

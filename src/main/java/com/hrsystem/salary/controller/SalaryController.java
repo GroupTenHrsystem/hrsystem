@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import com.hrsystem.log.ControllerLogs;
 import com.hrsystem.salary.entity.DTO.SalaryDTO;
 import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.service.ISalaryStandardService;
@@ -63,6 +64,7 @@ public class SalaryController {
 	 * @return
 	 */
 	@GetMapping("/get/{id}")
+	@ControllerLogs(description = "通过id查薪资")
 	public Salary getSalaryById(@PathVariable Long id) {
 		return salaryService.findSalaryById(id);
 	}
@@ -72,6 +74,7 @@ public class SalaryController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
+	@ControllerLogs(description = "插入薪资")
 	public String insertSalary(@RequestBody SalaryDTO salaryDTO) {
 		try {
 			//批量插入
@@ -83,6 +86,7 @@ public class SalaryController {
 	}
 
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
+	@ControllerLogs(description = "更新薪资")
 	public String update(@PathVariable("id") Long myId,@RequestBody Salary dto)
 	{
 		try {
@@ -100,6 +104,7 @@ public class SalaryController {
 	 * @return
 	 */
 	@DeleteMapping(value="{id}")
+	@ControllerLogs(description = "通过id删除薪资")
 	public String deleteSalaryById(@PathVariable Long id) {
 			try {
 				salaryService.deleteSalary(id);
@@ -110,6 +115,7 @@ public class SalaryController {
 	}
 
 	 @PostMapping("/deletes")
+	 @ControllerLogs(description = "批量删除薪资")
 	public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
 	{
 			try {
@@ -123,6 +129,7 @@ public class SalaryController {
 	}
 	 
 	@GetMapping
+	@ControllerLogs(description = "查看薪资")
 	public Page<SalaryDTO> getPage(SalaryQueryDTO salaryQueryDTO,ExtjsPageRequest pageRequest)
 	{
 //		System.out.println(salaryQueryDTO);
@@ -137,9 +144,9 @@ public class SalaryController {
 	
 	
 	@RequestMapping("/getMyPage")
-	public List<Salary> getMyPage(HttpSession session,ExtjsPageRequest pageRequest)
+	@ControllerLogs(description = "查看我的薪资")
+	public List<Salary> getMyPage(HttpSession session)
 	{
-		Page<Salary> page;
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
 			return salaryService.getSalaryByStaffName(userId);
