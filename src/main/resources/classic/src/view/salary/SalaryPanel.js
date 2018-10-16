@@ -10,7 +10,6 @@ Ext.define('Admin.view.salary.SalaryPanel', {
 
     title: '薪资查询',
     layout: 'fit',
-
     profiles: {
         classic: {
             width: 700,
@@ -185,20 +184,24 @@ Ext.define('Admin.view.salary.SalaryPanel', {
 
     header: {
         itemPosition: 1, 
+        style:"background-color:#FF8000;",
         items: [
             {
                 xtype: 'button',
                 iconCls: 'fa fa-search-plus',
+                style:"background-color:black;border-color: white;",
                 handler: 'openSearchWindow' 
             }, {
                 xtype: 'button',
                 tooltip: 'Add a new row',
                 iconCls: 'fa fa-plus',
+                style:"background-color:black;border-color: white;",
                 handler: 'openAddWindow'    
             }, {
                 xtype: 'button',
                 tooltip: 'Remove the selected item',
                 iconCls:'fa fa-trash',
+                style:"background-color:black;border-color: white;",
                 handler: 'deleteMoreRows'   
             }, {
                 ui: 'default-toolbar',

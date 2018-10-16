@@ -10,13 +10,6 @@
     root: {
         expanded: true,
         children: [
-            // {
-            // 	text: '订单管理模板',
-            //     iconCls: 'x-fa fa-address-card',
-            //     rowCls: 'nav-tree-badge nav-tree-badge-new',
-            //     viewType: 'order',
-            //     leaf: true
-            // },
             {
                 text: '系统管理模块',
                 iconCls: 'x-fa fa-address-card',
@@ -28,7 +21,6 @@
 		                iconCls: 'x-fa fa-address-card',
 		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'user',
-		                style:'background-color: black',
 		                leaf: true
                     },
                     {
@@ -257,7 +249,7 @@
 	                }
 	            ]
            	},{
-               text: '日程安排模块',
+               	text: '日程安排模块',
                 iconCls: 'x-fa fa-address-card',
                 rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'scheduling',
@@ -267,7 +259,7 @@
                 iconCls: 'x-fa fa-check',
                 viewType: 'login',
                 leaf: true
-           }
+           	}
         ]
     }
 });

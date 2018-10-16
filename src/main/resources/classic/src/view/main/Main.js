@@ -34,7 +34,7 @@
                     reference: 'senchaLogo',
                     cls: 'sencha-logo',
                     style:'background-color: #FF8000;margin-left: 5px!important;',
-                    html: '<div class="main-logo" style="background-color: #FF8000;color: black;font-size:16px"><img src="resources/images/icon_1.jpg">汇人事管理系统</div>',
+                    html: '<div class="main-logo" style="background-color: #FF8000;color: black;font-size:16px"><img src="resources/images/icon.png">汇人事管理系统</div>',
                     width: 240
                 },
                 {
@@ -48,7 +48,7 @@
                 '->',{
                     xtype: 'tbtext',
                     text: '用户名:Admin',
-                    style:'color: #FF8000;font-size:12px',
+                    style:'color: #FF8000;font-size:16px',
                     id:'loginUserName',
                     cls: 'top-user-name'
                 },{
