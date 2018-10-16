@@ -25,29 +25,30 @@
         {
             xtype: 'toolbar',
             cls: 'sencha-dash-dash-headerbar shadow',
-            style:'background-color: #D9FFFF',
-            height: 64,
+            style:'background-color: #272727',
+            height: 84,
             itemId: 'headerBar',
             items: [
                 {
                     xtype: 'component',
                     reference: 'senchaLogo',
                     cls: 'sencha-logo',
-                    html: '<div class="main-logo" style="background-color: white;color: black;"><img src="resources/images/icon_1.jpg">汇人事管理系统</div>',
-                    width: 250
+                    style:'background-color: #FF8000;margin-left: 5px!important;',
+                    html: '<div class="main-logo" style="background-color: #FF8000;color: black;font-size:16px"><img src="resources/images/icon_1.jpg">汇人事管理系统</div>',
+                    width: 240
                 },
                 {
                     margin: '0 0 0 8',
                     ui: 'header',
-                    style:'background-color: #D9FFFF',
-                    iconCls:'x-fa fa-navicon',
+                    style:'background-color: #272727;',
+                    iconCls:'x-fa fa-fast-backward',
                     id: 'main-navigation-btn',
                     handler: 'onToggleNavigationSize'
                 },
                 '->',{
                     xtype: 'tbtext',
                     text: '用户名:Admin',
-                    style:'color: black',
+                    style:'color: #FF8000;font-size:12px',
                     id:'loginUserName',
                     cls: 'top-user-name'
                 },{
@@ -90,7 +91,7 @@
                     xtype: 'treelist',
                     reference: 'navigationTreeList',
                     itemId: 'navigationTreeList',
-                    style:'background-color: white',
+                    style:'background-color: #272727',
                     ui: 'nav',
                     store: 'NavigationTree',
                     width: 250,
