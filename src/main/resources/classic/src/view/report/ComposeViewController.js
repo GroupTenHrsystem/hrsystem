@@ -13,8 +13,7 @@ Ext.define('Admin.view.email.ComposeViewController', {
     	var win    = bt.up('window');
     	var form = win.down('form');
     	var contentPanel = Ext.getCmp('contentPanel');
-    	var grid = contentPanel.down('grid')
-    	console.log(grid);
+    	var grid = contentPanel.down('grid');
 		if(!form.isValid()){
 			Ext.Msg.alert("错误", "请填写正确数据");
 		}else{

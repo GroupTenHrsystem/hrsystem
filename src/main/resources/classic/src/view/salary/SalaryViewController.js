@@ -29,7 +29,7 @@ Ext.define('Admin.view.salary.SalaryViewController', {
         this.getView().saveDocumentAs(config).then(null, this.onError);
     },
 
-	 onBeforeDocumentSave: function(view){
+	onBeforeDocumentSave: function(view){
 	        this.timeStarted = Date.now();
 	        view.mask('Document is prepared for export. Please wait ...');
 	        Ext.log('export started');

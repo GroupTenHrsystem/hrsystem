@@ -15,7 +15,9 @@ import com.hrsystem.report.entity.Report;
  
 */
 public interface IReportService {
-	public void saveReport(Report report);
+	public void saveReport(Report report,String userId);
 	
 	public Page<Report> findAll(Specification<Report> spec, Pageable pageable);
+
+	public void deleteAll(Long[] ids);
 }

@@ -38,16 +38,7 @@ Ext.define('Admin.view.email.Details', {
         },
         {
             iconCls: 'x-fa fa-trash'
-        },
-        // {
-        //     iconCls: 'x-fa fa-exclamation-circle'
-        // },
-        // {
-        //     iconCls:'x-fa fa-print'
-        // },
-        // {
-        //     iconCls: 'x-fa fa-forward'
-        // }
+        }
     ],
 
     bbar: {
@@ -59,7 +50,10 @@ Ext.define('Admin.view.email.Details', {
             '->',
             {
                 ui: 'soft-green',
-                text: 'Save'
+                text: 'Save',
+                listeners: {
+                    click: 'onSaveBtnClick'
+                }
             }
         ]
     },
@@ -67,14 +61,23 @@ Ext.define('Admin.view.email.Details', {
     items: [
         {
             xtype: 'textfield',
+            fieldLabel: 'id',
+            name:'id',
+            itemId: 'id',
+            allowBlank:false,
+            hidden:true
+        },{
+            xtype: 'textfield',
             fieldLabel: '标题',
             name:'title',
+            itemId: 'title',
             allowBlank:false, 
         },{
             xtype: 'datefield',
             fieldLabel: '日期',
             editable:false,
             name:'time',
+            itemId: 'time',
             allowBlank:false, 
             regexText: '请选择日期',
             width:400,
@@ -83,6 +86,7 @@ Ext.define('Admin.view.email.Details', {
         {
             xtype: 'htmleditor',
             name:'messages',
+            itemId: 'messages',
             // Make tips align neatly below buttons.
             buttonDefaults: {
                 tooltip: {
