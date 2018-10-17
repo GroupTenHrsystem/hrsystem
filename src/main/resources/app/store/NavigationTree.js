@@ -104,7 +104,7 @@
 	                {
 	                    text: '面试管理',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
+	                    viewType: 'resumeApprovePanel',
 	                    leaf: true
 	                },
 	                {
@@ -112,6 +112,12 @@
 	                    iconCls: 'x-fa fa-lightbulb-o',
 	                    //viewType: 'passwordreset',
 	                    leaf: true
+	                },
+	                {
+	                    text: '流程定义模块',
+		                iconCls: 'x-fa fa-address-card',
+		                viewType: 'processDefinitionCenterPanel',
+		                leaf: true
 	                }
 	            ]
             },{

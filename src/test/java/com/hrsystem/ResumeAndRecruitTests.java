@@ -29,20 +29,11 @@ public class ResumeAndRecruitTests {
 	public void testInterview() {
 		try {
 			for (int i = 0; i < 3; i++) {
-				Interview interview = new Interview();
-     			interview.setInterviewer("mo"+i);
-     			interview.setFaceResult("pass");
-     			interview.setEstimate("优秀");
-     			interview.setFaceDate(new Date());
-     			interview.setInterviewStatus("一面");
-     			
      			Resume resume = new Resume();
     			resume.setName("kk"+i);
     			resume.setSex("女");
     			resume.setEmail("819934639@qq.com");
     			resume.setReferer("Jony jk");
-    			
-    			resume.setInterview(interview);
     			resumeService.save(resume);
 			}
 		} catch (Exception e) {
@@ -59,6 +50,7 @@ public class ResumeAndRecruitTests {
 				recruit.setPlanNum(3L);
 				recruit.setStartTime(new Date());
 				recruit.setEditName("Mi"+i);
+				recruit.setContact("电话：13652653652  邮箱：15486526@163.com");
 				
 				recruitService.save(recruit);
 			}

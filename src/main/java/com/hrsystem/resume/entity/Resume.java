@@ -2,13 +2,13 @@ package com.hrsystem.resume.entity;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.PostRemove;
 import javax.persistence.Table;
 
@@ -18,7 +18,7 @@ import org.hibernate.annotations.SQLDeleteAll;
 import org.hibernate.annotations.Where;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.hrsystem.interview.entity.Interview;
+import com.hrsystem.activiti.domain.ProcessStatus;
 
 import lombok.Data;
 
@@ -36,13 +36,14 @@ public class Resume {
 	
 	private String name;  
 	private String sex;  
-	@JsonFormat(pattern="yyyy/MM/dd",timezone="GMT+8")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date birthday;   //出生年月
 	private String nativePlace;   //籍贯
 	private String major;   //专业
 	private String politicsStatus;  //政治面貌
 	private String graduateSchool;  //毕业学校
 	private String email;    //邮箱
+	private String picutre;   //照片
 	private String phone;    //手机
 	private String employBranch;  //求职意向
 	private String experience;   //工作经历
@@ -50,17 +51,25 @@ public class Resume {
 	private boolean ifrefer;   //是否推荐
 	private String referer;   //推荐人
 	private String attachment;   //附件
-	
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date applyTime;  
-	private String restatus;     //简历状态
+	
+	//工作流
+	@Enumerated(EnumType.STRING)
+	private ProcessStatus processStatus; //流程状态
+	private String userId;    //启动流程的用户ID
+	private String processInstanceId;  //流程实例ID
+	
+	private Date completeTime;
+	private String resumeBackReason;
+	private Double firstAuditScore;  //一面分数
+	private String firstBackReason;  //一面退回原因
+	private Double lastAuditScore;  //二面分数
+	private String lastBackReason;  //二面退回原因
 	
 	@Column(name="is_deleted_")
 	private boolean isDeleted;    //  默认为false   true为已删除
 
-	@OneToOne(cascade=CascadeType.ALL)
-	private Interview interview;  //单向一对一
-	
 	@PostRemove
 	public void delete() {
 		this.isDeleted = true;

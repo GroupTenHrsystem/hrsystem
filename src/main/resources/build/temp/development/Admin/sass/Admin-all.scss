@@ -13,7 +13,11 @@ $include-admin-model-person-personmodel: dynamic(true);;
 $include-admin-model-process-definition-processdefinitionmodel: dynamic(true);;
 $include-admin-model-recruit-recruitmodel: dynamic(true);;
 $include-admin-model-resume-resumemodel: dynamic(true);;
+<<<<<<< HEAD
+$include-admin-model-resumeapprove-resumeapprovemodel: dynamic(true);;
+=======
 $include-admin-model-salary-salaryanalysismodel: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-model-salary-salarymodel: dynamic(true);;
 $include-admin-model-salarystandard-salarystandardmodel: dynamic(true);;
 $include-admin-model-user-usermodel: dynamic(true);;
@@ -30,7 +34,11 @@ $include-admin-store-person-persongridstore: dynamic(true);;
 $include-admin-store-process-definition-processdefinitionstroe: dynamic(true);;
 $include-admin-store-recruit-recruitgridstroe: dynamic(true);;
 $include-admin-store-resume-resumegridstroe: dynamic(true);;
+<<<<<<< HEAD
+$include-admin-store-resumeapprove-resumeapprovestore: dynamic(true);;
+=======
 $include-admin-store-salary-salaryanalysisstroe: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-store-salary-salarygridstroe: dynamic(true);;
 $include-admin-store-salarystandard-salarystandardgridstroe: dynamic(true);;
 $include-admin-store-user-usergridstore: dynamic(true);;
@@ -61,6 +69,8 @@ $include-admin-view-leave-leavegridpanel: dynamic(true);;
 $include-admin-view-leave-leavesearchwindow: dynamic(true);;
 $include-admin-view-leave-leaveviewcontroller: dynamic(true);;
 $include-admin-view-leave-leaveviewmodel: dynamic(true);;
+$include-admin-view-leaveapprove-task-firstaudit: dynamic(true);;
+$include-admin-view-leaveapprove-task-lastaudit: dynamic(true);;
 $include-admin-view-main-main: dynamic(true);;
 $include-admin-view-main-maincontainerwrap: dynamic(true);;
 $include-admin-view-main-maincontroller: dynamic(true);;
@@ -107,6 +117,12 @@ $include-admin-view-resume-resume: dynamic(true);;
 $include-admin-view-resume-resumepanel: dynamic(true);;
 $include-admin-view-resume-resumeviewcontroller: dynamic(true);;
 $include-admin-view-resume-resumeviewmodel: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapprovepanel: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapproveviewmodel: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapprovewindow: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapprovegrid: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapproveviewcontroller: dynamic(true);;
+$include-admin-view-resumeapprove-task-resumechose: dynamic(true);;
 $include-admin-view-salary-salary: dynamic(true);;
 $include-admin-view-salary-salaryanalysis: dynamic(true);;
 $include-admin-view-salary-salarypanel: dynamic(true);;
@@ -133,8 +149,10 @@ $include-aria-view-performancetemplet-performancetempleteditwindow: dynamic(true
 $include-aria-view-performancetemplet-performancetempletsearchwindow: dynamic(true);;
 $include-aria-view-person-personeditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitaddwindow: dynamic(true);;
+$include-aria-view-recruit-recruitbiggerwindow: dynamic(true);;
 $include-aria-view-recruit-recruiteditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitsearchwindow: dynamic(true);;
+$include-aria-view-resume-checkwindow: dynamic(true);;
 $include-aria-view-resume-resumeaddwindow: dynamic(true);;
 $include-aria-view-resume-resumeeditwindow: dynamic(true);;
 $include-aria-view-resume-resumesearchwindow: dynamic(true);;
@@ -2209,6 +2227,15 @@ $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/dashboard/Dashboard';
 
+<<<<<<< HEAD
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\recruit\RecruitBiggerWindow.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/recruit/RecruitBiggerWindow';
+=======
 /* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Details.js */
 $default-resource-root: '' !default;
 $default-resource-path: 'images' !default;
@@ -2232,6 +2259,7 @@ $current-package: false;
 $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/report/Report';
+>>>>>>> refs/remotes/origin/master
 
 /* including package Admin */
 $Admin-resource-root: '' !default;
