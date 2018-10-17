@@ -3,15 +3,10 @@ package com.hrsystem.salary.entity;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hrsystem.user.entity.Staff;
 
 import lombok.Data;
@@ -27,18 +22,40 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "t_salary")
+@NamedEntityGraph(name = "Salary.withStaff", attributeNodes = {@NamedAttributeNode("staff"),@NamedAttributeNode("salaryStandard")})
+//	使用了@NamedEntityGraph注解，findAll合为一条HQL，避免JPA N+1 问题
 public class Salary {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
-	private Date salaryTime; 
+	private Date salaryStarTime; 
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	private Date salaryEndTime; 
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date createTime; 
 	private Double salarySum;
+
+	//养老保险
+	private Double pension;
+	//生育保险
+	private Double maternity;
+	//医疗保险
+	private Double medicare;
+	//失业保险
+	private Double unemployment;
+	//工伤保险
+	private Double injury;
+	//住房公积金
+	private Double house;
+	//绩效
+	private Double performancesSalary;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	private Boolean status = true;
+	@JsonIgnore
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private SalaryStandard salaryStandard;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonIgnore
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private Staff staff;
 }

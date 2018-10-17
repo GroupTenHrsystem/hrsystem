@@ -10,24 +10,59 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
         oldTab.setTitle('参与的绩效');
         Ext.resumeLayouts(true);
     },
-    
+    openDetailWindow:function(grid, rowIndex, colIndex){
+        var record = grid.getStore().getAt(rowIndex);
+        // console.log(record.get('id'));
+        console.log(record);
+        if (record ) {
+            var win = grid.up('performancePanel').add(Ext.widget('performanceApproveDetailWindow'));
+            win.show();
+            win.down('form').getForm().loadRecord(record);
+        }
+    },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('performance').add(Ext.widget('performanceAddWindow')).show();
 	},
+	toggleDisabled:function(checkbox, checked){
+		// var view = this.getView(),
+  //           stateFn = checked ? 'disable' : 'enable',
+  //           tagfields = view.query('tagfield');
+  // Ext.each(tagfields, function (btn) {	//停用tagfield
+        //     btn[stateFn]();
+        // });
+        // 
+        var staffTag = this.lookupReference('staffTag');    //获取下拉框组件
+        
+        var arrayObj = new Array();
+         	staffTag.reset();    // 清空已存在结果
+         	staffTag.getStore().each(function (record) {
+         		arrayObj.push(record.get('id'));	//全选下拉框的内容
+		    	//console.log(record.get('id'));
+			});
+			staffTag.setValue(arrayObj);
+
+      
+        
+	},
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.performance.PerformanceModel');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var record = Ext.create('Admin.model.performance.PerformanceModel');
 
-		var values  =form.getValues();//获取form数据
-		var store = Ext.data.StoreManager.lookup('performanceGridStroe');
-           	record.set(values);
-          	record.save();
+			var values  =form.getValues();//获取form数据
+			var store = Ext.data.StoreManager.lookup('performanceGridStroe');
+	           	record.set(values);
+	          	record.save();
 
-          	setTimeout(store.load(),"500");
-          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
-          	win.close();
+	          	setTimeout(store.load(),"500");
+	          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
+	          	win.close();
+		}
+
 	},
 	/* Clear Text */
 	clearText:function(btn){
@@ -47,13 +82,18 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	submitEditForm:function(btn){
 		var win    = btn.up('window');
-		var store = Ext.data.StoreManager.lookup('performanceGridStroe');
-    	var values  = win.down('form').getValues();//获取form数据
-    	var record = store.getById(values.id);//获取id获取store中的数据
-    	console.log(record);
-    	record.set(values);   	
-    	setTimeout(store.load(),"500");
-        win.close();
+		var form = win.down('form');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var store = Ext.data.StoreManager.lookup('performanceGridStroe');
+	    	var values  = win.down('form').getValues();//获取form数据
+	    	var record = store.getById(values.id);//获取id获取store中的数据
+	    	console.log(record);
+	    	record.set(values);   	
+	    	setTimeout(store.load(),"500");
+	        win.close();
+	    }
 	},
 	/*combobox选中后控制对应输入（文本框和日期框）框显示隐藏*/
 	searchComboboxSelectChuang:function(combo,record,index){
@@ -173,7 +213,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 				var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
         if (selModel.hasSelection()) {
-            Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
+            Ext.Msg.confirm("警告", "不能删除审批中的任务,确定要删除吗？", function (button) {
                 if (button == "yes") {
                     var rows = selModel.getSelection();
                     var selectIds = []; //要删除的id

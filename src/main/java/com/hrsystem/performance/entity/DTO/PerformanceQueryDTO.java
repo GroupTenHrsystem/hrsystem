@@ -10,6 +10,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import com.hrsystem.common.sign.*;
+import com.hrsystem.user.entity.Staff;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -62,7 +63,7 @@ public class PerformanceQueryDTO {
 
 	private Double selfScore;
 	private Double deptLeaderScore;
-
+	private Double resultScore;
 	//private Long cycle;
 	private Boolean status=true;
 

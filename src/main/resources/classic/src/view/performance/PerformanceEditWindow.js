@@ -26,15 +26,20 @@ Ext.define('Aria.view.performance.PerformanceEditWindow', {
         }, {
             xtype: 'textfield',
             fieldLabel: '绩效考核名称',
+            allowBlank:false, 
             name:'performanceName'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核开始时间',
+            allowBlank:false, 
+            editable:false,
             name:'startTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核结束时间',
+            allowBlank:false, 
+            editable:false,
             name:'endTime',
             format: 'Y/m/d H:i:s'
         }

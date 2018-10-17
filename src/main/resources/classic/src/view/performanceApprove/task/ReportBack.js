@@ -47,17 +47,17 @@ Ext.define('Admin.view.performanceApprove.task.ReportBack', {
 			}],
 		    listeners:{  
 			          'change':function(){  
-					      	if (Ext.getCmp("result").getValue().confirmResult == true) {  
-									Ext.getCmp("resultReason").setVisible(false);  
+					      	if (Ext.getCmp("result").getValue().confirmResult == false) {  
+					      		Ext.getCmp("resultReason").setVisible(true);   
 							} else {  
-									Ext.getCmp("resultReason").setVisible(true);  
+								Ext.getCmp("resultReason").setVisible(false); 	
 							} 
 			          	}  
 		   			} 
 	    },{
 	        xtype: 'textareafield',
 	        id:'resultReason',
-	        hidden: true,
+	        //hidden: true,
 	        grow: true,
 	        name: 'resultReason',
 	        fieldLabel: '理由',

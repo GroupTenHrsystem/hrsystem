@@ -1,3 +1,363 @@
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-resizable-handle-east-over:before,
+.x-resizable-handle-west-over:before,
+.x-resizable-pinned > .x-resizable-handle-east:before,
+.x-resizable-pinned > .x-resizable-handle-west:before {
+    content: "\f142";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:198 */
+.x-resizable-handle-south-over,
+.x-resizable-handle-north-over,
+.x-resizable-pinned > .x-resizable-handle-south,
+.x-resizable-pinned > .x-resizable-handle-north {
+    font: 16px/10px FontAwesome;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-resizable-handle-south-over:before,
+.x-resizable-handle-north-over:before,
+.x-resizable-pinned > .x-resizable-handle-south:before,
+.x-resizable-pinned > .x-resizable-handle-north:before {
+    content: "\f141";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:210 */
+.x-resizable-handle-southeast-over,
+.x-resizable-pinned > .x-resizable-handle-southeast {
+    font: 16px/1 ExtJS;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-resizable-handle-southeast-over:before,
+.x-resizable-pinned > .x-resizable-handle-southeast:before {
+    content: "\e60c";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:220 */
+.x-resizable-handle-northwest-over,
+.x-resizable-pinned > .x-resizable-handle-northwest {
+    font: 16px/1 ExtJS;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-resizable-handle-northwest-over:before,
+.x-resizable-pinned > .x-resizable-handle-northwest:before {
+    content: "\e609";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:230 */
+.x-resizable-handle-northeast-over,
+.x-resizable-pinned > .x-resizable-handle-northeast {
+    font: 16px/1 ExtJS;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-resizable-handle-northeast-over:before,
+.x-resizable-pinned > .x-resizable-handle-northeast:before {
+    content: "\e60a";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:240 */
+.x-resizable-handle-southwest-over,
+.x-resizable-pinned > .x-resizable-handle-southwest {
+    font: 16px/1 ExtJS;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-resizable-handle-southwest-over:before,
+.x-resizable-pinned > .x-resizable-handle-southwest:before {
+    content: "\e60b";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:2 */
+.x-slider:before {
+    border: 1px solid #d0d0d0;
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    background-color: #eee;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:20 */
+.x-slider-thumb {
+    background-color: #f6f6f6;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:28 */
+.x-slider-thumb:before {
+    color: #d0d0d0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:33 */
+.x-slider-thumb-over {
+    background-color: #fcfcfc;
+    border-color: #d5cbc0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:36 */
+.x-slider-thumb-over:before {
+    color: #d0d0d0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:42 */
+.x-keyboard-mode .x-slider-focus .x-slider-thumb {
+    background-color: #f6f6f6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:45 */
+.x-keyboard-mode .x-slider-focus .x-slider-thumb:before {
+    color: #f6b676;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:52 */
+.x-keyboard-mode .x-slider-focus .x-slider-thumb-over {
+    background-color: #fcfcfc;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:57 */
+.x-slider-thumb-drag {
+    background-color: #f1f1f1;
+    border-color: #d3c4b5;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:60 */
+.x-slider-thumb-drag:before {
+    color: #d0d0d0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:66 */
+.x-keyboard-mode .x-slider-focus .x-slider-thumb-drag {
+    background-color: #f1f1f1;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:79 */
+.x-slider-horz {
+    padding-left: 10px;
+    background: no-repeat 0 -20px;
+    margin: 6px 0 6px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:86 */
+.x-slider-horz .x-slider-end {
+    padding-right: 10px;
+    background: no-repeat right -40px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:91 */
+.x-slider-horz .x-slider-inner {
+    height: 20px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:96 */
+.x-slider-horz:before {
+    height: 10px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:106 */
+.x-slider-horz .x-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    font: 12px/1 ExtJS;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-slider-horz .x-slider-thumb:before {
+    content: "\e612";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:148 */
+.x-rtl.x-slider-horz {
+    padding-left: 0;
+    padding-right: 10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:155 */
+.x-rtl.x-slider-horz .x-slider-end {
+    padding-right: 0;
+    padding-left: 10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:163 */
+.x-rtl.x-slider-horz .x-slider-thumb {
+    margin-right: -10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:170 */
+.x-slider-ct-vert {
+    /* Vertical styles */
+    height: 100%;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:174 */
+.x-slider-vert {
+    padding-top: 10px;
+    height: 100%;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:181 */
+.x-slider-vert > .x-slider-end {
+    height: 100%;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:183 */
+.x-slider-vert > .x-slider-end > .x-slider-inner {
+    height: 100%;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:189 */
+.x-slider-vert:before {
+    width: 10px;
+    height: 100%;
+    left: 10px;
+    top: 0;
+    margin-left: -5px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:199 */
+.x-slider-vert .x-slider-end {
+    padding-bottom: 10px;
+    background: no-repeat -20px bottom;
+    width: 20px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:205 */
+.x-slider-vert .x-slider-inner {
+    width: 20px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:209 */
+.x-slider-vert .x-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -10px;
+    font: 12px/1 ExtJS;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
+.x-slider-vert .x-slider-thumb:before {
+    content: "\e605";
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:262 */
+.x-slider-default-cell > .x-grid-cell-inner,
+.x-sliderwidget-default-cell > .x-grid-cell-inner {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
+.x-tab-default-top {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    padding: 8px 10px 8px 10px;
+    border-width: 0;
+    border-style: solid;
+    background-color: transparent;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
+.x-tab-default-top-mc {
+    background-color: transparent;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
+.x-nbr .x-tab-default-top {
+    padding: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:281 */
+.x-tab-default-top-frameInfo {
+    font-family: th-0-0-0-0-0-0-0-0-8-10-8-10;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:347 */
+.x-tab-default-top-tl {
+    background-position: 0 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:351 */
+.x-tab-default-top-tr {
+    background-position: right 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:355 */
+.x-tab-default-top-bl {
+    background-position: 0 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:359 */
+.x-tab-default-top-br {
+    background-position: right 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:363 */
+.x-tab-default-top-ml {
+    background-position: 0 top;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:371 */
+.x-tab-default-top-mr {
+    background-position: right top;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:379 */
+.x-tab-default-top-tc {
+    background-position: 0 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:383 */
+.x-tab-default-top-bc {
+    background-position: 0 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:388 */
+.x-tab-default-top-tr,
+.x-tab-default-top-br,
+.x-tab-default-top-mr {
+    padding-right: 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:394 */
+.x-tab-default-top-tl,
+.x-tab-default-top-bl,
+.x-tab-default-top-ml {
+    padding-left: 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:400 */
+.x-tab-default-top-tc {
+    height: 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:403 */
+.x-tab-default-top-bc {
+    height: 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
+.x-tab-default-top-mc {
+    padding: 8px 10px 8px 10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
+.x-tab-default-bottom {
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px 10px 8px 10px;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    background-color: transparent;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
+.x-tab-default-bottom-mc {
+    background-color: transparent;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
+.x-nbr .x-tab-default-bottom {
+    padding: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:281 */
+.x-tab-default-bottom-frameInfo {
+    font-family: th-0-0-0-0-0-0-0-0-8-10-8-10;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:347 */
+.x-tab-default-bottom-tl {
+    background-position: 0 0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:351 */
+.x-tab-default-bottom-tr {
+    background-position: right 0;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:355 */
 .x-tab-default-bottom-bl {
     background-position: 0 0;
@@ -45,6 +405,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-tab-default-bottom-mc {
     padding: 8px 10px 8px 10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tab-default-left {
@@ -141,6 +507,12 @@
 .x-tab-default-left-mc {
     padding: 8px 10px 8px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tab-default-right {
     -moz-border-radius-topleft: 0;
@@ -235,6 +607,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-tab-default-right-mc {
     padding: 8px 10px 8px 10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:2672 */
 .x-tab-default {
@@ -452,7 +830,7 @@
 .x-keyboard-mode .x-tab-focus.x-tab-default {
     border-color: transparent;
     background-color: transparent;
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: -3px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -471,7 +849,7 @@
     right: 2px;
     bottom: 2px;
     left: 2px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:3398 */
@@ -543,7 +921,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:3741 */
 .x-tab.x-tab-active.x-tab-default .x-tab-inner-default {
-    color: #2a95c5;
+    color: #c60;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:3746 */
 .x-tab-bar-plain .x-tab.x-tab-active.x-tab-default .x-tab-inner-default {
@@ -551,11 +929,11 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:3761 */
 .x-tab.x-tab-active.x-tab-default .x-tab-icon-el {
-    color: #2a95c5;
+    color: #c60;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:3769 */
 .x-ie8 .x-tab.x-tab-active.x-tab-default .x-tab-icon-el {
-    color: #6ab5d6;
+    color: #db944d;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Tab.scss:3775 */
 .x-tab-bar-plain .x-tab.x-tab-active.x-tab-default .x-tab-icon-el {
@@ -1153,9 +1531,153 @@
     padding-right: 0px;
     padding-left: 16px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-focus-corners.gif), sides:url(images/tab/tab-default-top-focus-sides.gif), frame-bg:url(images/tab/tab-default-top-focus-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-focus-corners.gif), sides:url(images/tab/tab-default-right-focus-sides.gif), frame-bg:url(images/tab/tab-default-right-focus-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-focus-corners.gif), sides:url(images/tab/tab-default-bottom-focus-sides.gif), frame-bg:url(images/tab/tab-default-bottom-focus-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-focus-corners.gif), sides:url(images/tab/tab-default-left-focus-sides.gif), frame-bg:url(images/tab/tab-default-left-focus-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-over-corners.gif), sides:url(images/tab/tab-default-top-over-sides.gif), frame-bg:url(images/tab/tab-default-top-over-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-over-corners.gif), sides:url(images/tab/tab-default-right-over-sides.gif), frame-bg:url(images/tab/tab-default-right-over-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-over-corners.gif), sides:url(images/tab/tab-default-bottom-over-sides.gif), frame-bg:url(images/tab/tab-default-bottom-over-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-over-corners.gif), sides:url(images/tab/tab-default-left-over-sides.gif), frame-bg:url(images/tab/tab-default-left-over-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-active-corners.gif), sides:url(images/tab/tab-default-top-active-sides.gif), frame-bg:url(images/tab/tab-default-top-active-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-active-corners.gif), sides:url(images/tab/tab-default-right-active-sides.gif), frame-bg:url(images/tab/tab-default-right-active-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-active-corners.gif), sides:url(images/tab/tab-default-bottom-active-sides.gif), frame-bg:url(images/tab/tab-default-bottom-active-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-active-corners.gif), sides:url(images/tab/tab-default-left-active-sides.gif), frame-bg:url(images/tab/tab-default-left-active-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-focus-over-corners.gif), sides:url(images/tab/tab-default-top-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-top-focus-over-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-focus-over-corners.gif), sides:url(images/tab/tab-default-right-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-right-focus-over-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-focus-over-corners.gif), sides:url(images/tab/tab-default-bottom-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-bottom-focus-over-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-focus-over-corners.gif), sides:url(images/tab/tab-default-left-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-left-focus-over-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-focus-active-corners.gif), sides:url(images/tab/tab-default-top-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-top-focus-active-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-focus-active-corners.gif), sides:url(images/tab/tab-default-right-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-right-focus-active-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-focus-active-corners.gif), sides:url(images/tab/tab-default-bottom-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-bottom-focus-active-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-focus-active-corners.gif), sides:url(images/tab/tab-default-left-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-left-focus-active-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-disabled-corners.gif), sides:url(images/tab/tab-default-top-disabled-sides.gif), frame-bg:url(images/tab/tab-default-top-disabled-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-disabled-corners.gif), sides:url(images/tab/tab-default-right-disabled-sides.gif), frame-bg:url(images/tab/tab-default-right-disabled-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-disabled-corners.gif), sides:url(images/tab/tab-default-bottom-disabled-sides.gif), frame-bg:url(images/tab/tab-default-bottom-disabled-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-disabled-corners.gif), sides:url(images/tab/tab-default-left-disabled-sides.gif), frame-bg:url(images/tab/tab-default-left-disabled-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Bar.scss:389 */
 .x-tab-bar-default {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Bar.scss:428 */
 .x-tab-bar-default-top > .x-tab-bar-body-default {
@@ -1370,11 +1892,35 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Bar.scss:801 */
 .x-box-scroller-tab-bar-default {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tab/Bar.scss:807 */
 .x-box-scroller-tab-bar-default .x-ie8 .x-box-scroller-plain {
     background-color: #fff;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Breadcrumb.scss:406 */
 .x-breadcrumb-btn-default {
@@ -1510,7 +2056,7 @@
 .x-tree-arrows .x-tree-expander {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-arrows .x-tree-expander:before {
@@ -1529,7 +2075,7 @@
 .x-tree-arrows .x-grid-tree-node-expanded .x-tree-expander {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-arrows .x-grid-tree-node-expanded .x-tree-expander:before {
@@ -1540,7 +2086,7 @@
 .x-tree-elbow-end-plus {
     font-size: 14px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-elbow-plus:before,
@@ -1552,7 +2098,7 @@
 .x-grid-tree-node-expanded .x-tree-elbow-end-plus {
     font-size: 14px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-grid-tree-node-expanded .x-tree-elbow-plus:before,
@@ -1564,7 +2110,7 @@
     width: 16px;
     height: 32px;
     line-height: 32px;
-    color: #35baf6;
+    color: #ff8000;
     font-size: 16px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/tree/View.scss:165 */
@@ -1590,7 +2136,7 @@
 .x-tree-icon-leaf {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-icon-leaf:before {
@@ -1600,7 +2146,7 @@
 .x-tree-icon-parent {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-icon-parent:before {
@@ -1610,7 +2156,7 @@
 .x-tree-icon-parent-expanded {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-icon-parent-expanded:before {
@@ -1635,7 +2181,7 @@
     width: 18px;
     height: 18px;
     font: 18px/1 ExtJS;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
 .x-tree-checkbox:before {
@@ -1731,11 +2277,11 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/window/Toast.scss:17 */
 .x-toast-light .x-window-header {
     /* Custom styling */
-    background-color: #5dc8f8;
+    background-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/window/Toast.scss:21 */
 .x-toast-light .x-tool-img {
-    background-color: #5dc8f8;
+    background-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/window/Toast.scss:25 */
 .x-toast-light {
@@ -1834,6 +2380,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-plain-toolbar-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-plain-toolbar-small {
@@ -1996,9 +2548,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-plain-toolbar-small {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-plain-toolbar-small .x-btn-arrow-el {
@@ -2016,7 +2568,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-plain-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-plain-toolbar-small {
@@ -2026,9 +2578,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-plain-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-plain-toolbar-small,
@@ -2040,9 +2592,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-plain-toolbar-small {
@@ -2266,18 +2818,54 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-plain-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-plain-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-small-focus-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-small-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-small-focus-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-small-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-small-focus-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-small-disabled-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-plain-toolbar-small-cell > .x-grid-cell-inner {
@@ -2375,6 +2963,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-plain-toolbar-medium-mc {
     padding: 8px 8px 8px 8px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-plain-toolbar-medium {
@@ -2537,9 +3131,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-plain-toolbar-medium {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-plain-toolbar-medium .x-btn-arrow-el {
@@ -2557,7 +3151,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-plain-toolbar-medium.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-plain-toolbar-medium {
@@ -2567,9 +3161,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-plain-toolbar-medium {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-plain-toolbar-medium,
@@ -2581,9 +3175,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-medium,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-medium {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-plain-toolbar-medium {
@@ -2807,18 +3401,54 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-plain-toolbar-medium:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-plain-toolbar-medium:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-medium:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-medium:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-medium-focus-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-medium-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-medium-focus-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-medium-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-medium-focus-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-medium-disabled-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-plain-toolbar-medium-cell > .x-grid-cell-inner {
@@ -2916,6 +3546,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-plain-toolbar-large-mc {
     padding: 9px 9px 9px 9px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-plain-toolbar-large {
@@ -3078,9 +3714,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-plain-toolbar-large {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-plain-toolbar-large .x-btn-arrow-el {
@@ -3098,7 +3734,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-plain-toolbar-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-plain-toolbar-large {
@@ -3108,9 +3744,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-plain-toolbar-large {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-plain-toolbar-large,
@@ -3122,9 +3758,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-plain-toolbar-large {
@@ -3348,18 +3984,54 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-plain-toolbar-large:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-plain-toolbar-large:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-large-focus-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-large-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-large-focus-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-large-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-large-focus-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-plain-toolbar-large-disabled-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-plain-toolbar-large-cell > .x-grid-cell-inner {
@@ -3469,7 +4141,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:929 */
 .x-keyboard-mode .x-panel-header-title-light.x-title-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -3488,7 +4160,7 @@
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:950 */
@@ -3580,6 +4252,30 @@
 .x-panel .x-panel-header-light-collapsed-border-left {
     border-right-width: 1px !important;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1336 */
 .x-panel-header-light-horizontal .x-tool-after-title {
     margin: 0 0 0 6px;
@@ -3614,7 +4310,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1381 */
 .x-keyboard-mode .x-panel-header-light .x-tool-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -3633,7 +4329,7 @@
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1412 */
@@ -3838,7 +4534,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:929 */
 .x-keyboard-mode .x-panel-header-title-light-framed.x-title-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -3857,7 +4553,7 @@
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:950 */
@@ -4030,6 +4726,12 @@
 .x-panel-light-framed-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-light-framed:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel/panel-light-framed-corners.gif), sides:url(images/panel/panel-light-framed-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-top {
     -moz-border-radius-topleft: 0;
@@ -4141,6 +4843,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-top-mc {
     padding: 10px 14px 10px 14px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 0 2px, corners:url(images/panel-header/panel-header-light-framed-top-corners.gif), sides:url(images/panel-header/panel-header-light-framed-top-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-right {
@@ -4268,6 +4976,12 @@
 .x-panel-header-light-framed-right-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 0, corners:url(images/panel-header/panel-header-light-framed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-right-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-bottom {
     -moz-border-radius-topleft: 0;
@@ -4379,6 +5093,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-bottom-mc {
     padding: 10px 14px 10px 14px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 2px 2px 2px, corners:url(images/panel-header/panel-header-light-framed-bottom-corners.gif), sides:url(images/panel-header/panel-header-light-framed-bottom-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-left {
@@ -4506,6 +5226,12 @@
 .x-panel-header-light-framed-left-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 0 2px 2px, corners:url(images/panel-header/panel-header-light-framed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-left-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-top {
     -moz-border-radius-topleft: 0;
@@ -4617,6 +5343,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-collapsed-top-mc {
     padding: 10px 14px 10px 14px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-light-framed-collapsed-top-corners.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-top-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-right {
@@ -4744,6 +5476,12 @@
 .x-panel-header-light-framed-collapsed-right-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-light-framed-collapsed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-collapsed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-right-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-bottom {
     -moz-border-radius-topleft: 0;
@@ -4855,6 +5593,12 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-collapsed-bottom-mc {
     padding: 10px 14px 10px 14px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-light-framed-collapsed-bottom-corners.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-bottom-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-left {
@@ -4982,6 +5726,12 @@
 .x-panel-header-light-framed-collapsed-left-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-light-framed-collapsed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-collapsed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-left-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1188 */
 .x-panel .x-panel-header-light-framed-top {
     border-bottom-width: 2px !important;
@@ -5048,7 +5798,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1381 */
 .x-keyboard-mode .x-panel-header-light-framed .x-tool-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -5067,7 +5817,7 @@
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1412 */
@@ -5211,7 +5961,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neptune/sass/src/grid/column/Column.scss:6 */
 .x-column-header-trigger {
-    background-color: #e6f1f6;
+    background-color: #f7ece2;
     border-left: 1px solid #d0d0d0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neptune/sass/src/grid/column/Column.scss:12 */
@@ -9866,10 +10616,16 @@ tr.x-grid-subtable-row {
 .x-tip-calendar-overflow-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tip-calendar-overflow:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(calendar/images/tip/tip-calendar-overflow-corners.gif), sides:url(calendar/images/tip/tip-calendar-overflow-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:318 */
 .x-tip-calendar-overflow {
     background-color: #fff;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:328 */
 .x-tip-calendar-overflow .x-tool-img {
@@ -9930,25 +10686,25 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:415 */
 .x-tip-calendar-overflow .x-tip-anchor-top {
     border-top-width: 0;
-    border-bottom: 10px solid #1db2f5;
+    border-bottom: 10px solid #e67300;
     top: -10px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:421 */
 .x-tip-calendar-overflow .x-tip-anchor-bottom {
     border-bottom-width: 0;
-    border-top: 10px solid #1db2f5;
+    border-top: 10px solid #e67300;
     bottom: -10px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:427 */
 .x-tip-calendar-overflow .x-tip-anchor-left {
     border-left-width: 0;
-    border-right: 10px solid #1db2f5;
+    border-right: 10px solid #e67300;
     left: -10px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:433 */
 .x-tip-calendar-overflow .x-tip-anchor-right {
     border-right-width: 0;
-    border-left: 10px solid #1db2f5;
+    border-left: 10px solid #e67300;
     right: -10px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:439 */
@@ -10026,7 +10782,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/Grid.scss:81 */
 .x-pivot-grid-group-title {
-    color: #06374f;
+    color: #281501;
     font: bold 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/Grid.scss:87 */
@@ -10037,7 +10793,7 @@ tr.x-grid-subtable-row {
 .x-pivot-grid-group-total .x-grid-cell-inner,
 .x-pivot-grid-group-total .x-column-header-inner {
     font: bold 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
-    color: #06374f;
+    color: #281501;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/Grid.scss:100 */
 .x-pivot-grid-group-total .x-grid-cell {
@@ -10049,7 +10805,7 @@ tr.x-grid-subtable-row {
 .x-pivot-grid-grand-total .x-grid-cell-inner,
 .x-pivot-grid-grand-total .x-column-header-inner {
     font: bold 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
-    color: #06374f;
+    color: #281501;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/Grid.scss:120 */
 .x-pivot-grid-grand-total .x-grid-cell {
@@ -10101,12 +10857,12 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/plugin/configurator/Column.scss:20 */
 .x-pivot-grid-config-column.x-focus .x-pivot-grid-config-column-inner {
-    border: 1px solid #5dc8f8;
+    border: 1px solid #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/plugin/configurator/Column.scss:25 */
 .x-pivot-grid-config-column-over {
     background-image: none;
-    background-color: #e6f1f6;
+    background-color: #f7ece2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/pivot/classic/sass/src/pivot/plugin/configurator/Column.scss:29 */
 .x-pivot-grid-config-column-inner {
@@ -10175,66 +10931,66 @@ tr.x-grid-subtable-row {
     color: darkgray;
     padding: 5px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:48 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:49 */
 .big-100 {
     width: calc(100% - 20px);
     background-position: 100% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:52 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:53 */
 .big-60 {
     width: calc(60% - 20px);
     background-position: 60% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:56 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:57 */
 .big-50 {
     width: calc(50% - 20px);
     background-position: 50% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:60 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:61 */
 .big-40 {
     width: calc(40% - 20px);
     background-position: 40% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:64 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:65 */
 .big-33 {
     width: calc(33.33% - 20px);
     background-position: 33.33% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:68 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:69 */
 .big-20 {
     width: calc(20% - 20px);
     background-position: 20% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:76 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:77 */
 .x-responsivecolumn-small > .small-100 {
     width: calc(100% - 20px);
     background-position: 100% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:80 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:81 */
 .x-responsivecolumn-small > .small-50 {
     width: calc(50% - 20px);
     background-position: 50% 20px !important;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:87 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:88 */
 .sencha-logo {
-    background-color: #35baf6;
-    height: 65px;
+    background-color: #ff8000;
+    height: 60px;
     font-size: 16px;
     color: #fff;
     margin-left: 17px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:95 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:96 */
 .sencha-logo .main-logo {
-    line-height: 65px;
+    line-height: 30px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:98 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:99 */
 .sencha-logo .main-logo img {
     margin-left: 22px;
     margin-right: 22px;
     top: 8px;
     position: relative;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:107 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:108 */
 .sencha-dash-dash-headerbar {
     padding: 0 30px 0 0;
     position: fixed;
@@ -10242,45 +10998,45 @@ tr.x-grid-subtable-row {
     z-index: 10;
     border: none;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:114 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:115 */
 .sencha-dash-dash-headerbar .header-right-profile-image {
     border-radius: 20px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:119 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:120 */
 .top-english-button .x-btn-icon-el {
     width: 21px;
     height: 14px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:126 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:127 */
 .collapsed .hot-icon:after,
 .collapsed .new-icon:after {
     display: none;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:130 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:131 */
 .collapsed .x-tree-elbow-img {
     display: none;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:134 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:135 */
 .collapsed .x-tree-node-text {
     display: none;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:138 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:139 */
 .x-grid-cell {
     position: relative;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:142 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:143 */
 .hot-icon.hot-icon:after,
 .new-icon.hot-icon:after {
     content: "HOT";
     background: #e3495a;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:147 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:148 */
 .hot-icon.new-icon:after,
 .new-icon.new-icon:after {
     content: "NEW";
-    background: #35baf6;
+    background: #ff8000;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:152 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:153 */
 .hot-icon:after,
 .new-icon:after {
     height: 18px;
@@ -10295,17 +11051,17 @@ tr.x-grid-subtable-row {
     font-size: 10px;
     line-height: 18px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:167 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:168 */
 .x-treelist-item-tool {
     height: 64px;
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:170 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:171 */
 .x-treelist-item-tool.hot-icon:after,
 .x-treelist-item-tool.new-icon:after {
-    background: #35baf6;
+    background: #ff8000;
     content: '';
 }
-/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:178 */
+/* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/main/Main.scss:179 */
 .x-html-editor-input {
     border: 1px solid #ccc;
 }
@@ -10413,6 +11169,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-soft-blue-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-soft-blue-small-corners.gif), sides:url(images/btn/btn-soft-blue-small-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-soft-blue-small {
@@ -10575,9 +11337,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-soft-blue-small {
     background-image: none;
     background-color: #2eadf5;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-blue-small .x-btn-arrow-el {
@@ -10595,7 +11357,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-blue-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-blue-small {
@@ -10605,9 +11367,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-blue-small {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-blue-small,
@@ -10619,9 +11381,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-blue-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-blue-small {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-blue-small {
@@ -10845,18 +11607,54 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-blue-small:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-blue-small:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-blue-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-blue-small:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-small-focus-corners.gif), sides:url(images/btn/btn-soft-blue-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-small-over-corners.gif), sides:url(images/btn/btn-soft-blue-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-small-focus-over-corners.gif), sides:url(images/btn/btn-soft-blue-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-small-pressed-corners.gif), sides:url(images/btn/btn-soft-blue-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-small-focus-pressed-corners.gif), sides:url(images/btn/btn-soft-blue-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-soft-blue-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-small-disabled-corners.gif), sides:url(images/btn/btn-soft-blue-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-blue-small-cell > .x-grid-cell-inner {
@@ -10971,6 +11769,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-soft-blue-large-mc {
     padding: 9px 9px 9px 9px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-soft-blue-large-corners.gif), sides:url(images/btn/btn-soft-blue-large-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-soft-blue-large {
@@ -11133,9 +11937,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-soft-blue-large {
     background-image: none;
     background-color: #2eadf5;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-blue-large .x-btn-arrow-el {
@@ -11153,7 +11957,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-blue-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-blue-large {
@@ -11163,9 +11967,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-blue-large {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-blue-large,
@@ -11177,9 +11981,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-blue-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-blue-large {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-blue-large {
@@ -11403,18 +12207,54 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-blue-large:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-blue-large:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-blue-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-blue-large:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-large-focus-corners.gif), sides:url(images/btn/btn-soft-blue-large-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-large-over-corners.gif), sides:url(images/btn/btn-soft-blue-large-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-large-focus-over-corners.gif), sides:url(images/btn/btn-soft-blue-large-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-large-pressed-corners.gif), sides:url(images/btn/btn-soft-blue-large-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-large-focus-pressed-corners.gif), sides:url(images/btn/btn-soft-blue-large-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-soft-blue-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-large-disabled-corners.gif), sides:url(images/btn/btn-soft-blue-large-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-blue-large-cell > .x-grid-cell-inner {
@@ -11529,6 +12369,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-soft-blue-toolbar-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-soft-blue-toolbar-small-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-soft-blue-toolbar-small {
@@ -11691,9 +12537,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-soft-blue-toolbar-small {
     background-image: none;
     background-color: #2eadf5;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-blue-toolbar-small .x-btn-arrow-el {
@@ -11711,7 +12557,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-blue-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-blue-toolbar-small {
@@ -11721,9 +12567,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-blue-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-blue-toolbar-small,
@@ -11735,9 +12581,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-blue-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-blue-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-blue-toolbar-small {
@@ -11961,18 +12807,54 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-blue-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-blue-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-blue-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-blue-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-toolbar-small-focus-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-toolbar-small-over-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-toolbar-small-focus-over-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-toolbar-small-pressed-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-toolbar-small-focus-pressed-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-soft-blue-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-blue-toolbar-small-disabled-corners.gif), sides:url(images/btn/btn-soft-blue-toolbar-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-blue-toolbar-small-cell > .x-grid-cell-inner {
@@ -12087,6 +12969,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-facebook-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-facebook-small-corners.gif), sides:url(images/btn/btn-facebook-small-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-facebook-small {
@@ -12249,9 +13137,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-facebook-small {
     background-image: none;
     background-color: #167abc;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-facebook-small .x-btn-arrow-el {
@@ -12269,7 +13157,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-facebook-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-facebook-small {
@@ -12279,9 +13167,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-facebook-small {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-facebook-small,
@@ -12293,9 +13181,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-facebook-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-facebook-small {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-facebook-small {
@@ -12519,18 +13407,54 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-facebook-small:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-facebook-small:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-facebook-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-facebook-small:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-small-focus-corners.gif), sides:url(images/btn/btn-facebook-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-small-over-corners.gif), sides:url(images/btn/btn-facebook-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-small-focus-over-corners.gif), sides:url(images/btn/btn-facebook-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-small-pressed-corners.gif), sides:url(images/btn/btn-facebook-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-small-focus-pressed-corners.gif), sides:url(images/btn/btn-facebook-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-facebook-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-small-disabled-corners.gif), sides:url(images/btn/btn-facebook-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-facebook-small-cell > .x-grid-cell-inner {
@@ -12645,6 +13569,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-facebook-large-mc {
     padding: 9px 9px 9px 9px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-facebook-large-corners.gif), sides:url(images/btn/btn-facebook-large-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-facebook-large {
@@ -12807,9 +13737,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-facebook-large {
     background-image: none;
     background-color: #167abc;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-facebook-large .x-btn-arrow-el {
@@ -12827,7 +13757,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-facebook-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-facebook-large {
@@ -12837,9 +13767,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-facebook-large {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-facebook-large,
@@ -12851,9 +13781,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-facebook-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-facebook-large {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-facebook-large {
@@ -13077,18 +14007,54 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-facebook-large:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-facebook-large:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-facebook-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-facebook-large:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-large-focus-corners.gif), sides:url(images/btn/btn-facebook-large-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-large-over-corners.gif), sides:url(images/btn/btn-facebook-large-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-large-focus-over-corners.gif), sides:url(images/btn/btn-facebook-large-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-large-pressed-corners.gif), sides:url(images/btn/btn-facebook-large-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-large-focus-pressed-corners.gif), sides:url(images/btn/btn-facebook-large-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-facebook-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-facebook-large-disabled-corners.gif), sides:url(images/btn/btn-facebook-large-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-facebook-large-cell > .x-grid-cell-inner {
@@ -13203,6 +14169,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-soft-cyan-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-soft-cyan-small-corners.gif), sides:url(images/btn/btn-soft-cyan-small-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-soft-cyan-small {
@@ -13365,9 +14337,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-soft-cyan-small {
     background-image: none;
     background-color: #03b4d5;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-cyan-small .x-btn-arrow-el {
@@ -13385,7 +14357,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-cyan-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-cyan-small {
@@ -13395,9 +14367,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-cyan-small {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-cyan-small,
@@ -13409,9 +14381,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-cyan-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-cyan-small {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-cyan-small {
@@ -13635,18 +14607,54 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-cyan-small:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-cyan-small:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-cyan-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-cyan-small:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-cyan-small-focus-corners.gif), sides:url(images/btn/btn-soft-cyan-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-cyan-small-over-corners.gif), sides:url(images/btn/btn-soft-cyan-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-cyan-small-focus-over-corners.gif), sides:url(images/btn/btn-soft-cyan-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-cyan-small-pressed-corners.gif), sides:url(images/btn/btn-soft-cyan-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-cyan-small-focus-pressed-corners.gif), sides:url(images/btn/btn-soft-cyan-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-soft-cyan-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-soft-cyan-small-disabled-corners.gif), sides:url(images/btn/btn-soft-cyan-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-cyan-small-cell > .x-grid-cell-inner {
@@ -13761,6 +14769,12 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-soft-cyan-toolbar-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-soft-cyan-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-soft-cyan-toolbar-small-corners.gif), sides:url(images/btn/btn-soft-cyan-toolbar-small-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-soft-cyan-toolbar-small {
@@ -13923,9 +14937,9 @@ tr.x-grid-subtable-row {
 .x-keyboard-mode .x-btn-focus.x-btn-soft-cyan-toolbar-small {
     background-image: none;
     background-color: #03b4d5;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-cyan-toolbar-small .x-btn-arrow-el {
@@ -13943,7 +14957,7 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-cyan-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-cyan-toolbar-small {
@@ -13953,9 +14967,9 @@ tr.x-grid-subtable-row {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-cyan-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-cyan-toolbar-small,
@@ -13967,9 +14981,9 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-cyan-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-cyan-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-cyan-toolbar-small {
@@ -14011,595 +15025,4 @@ tr.x-grid-subtable-row {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3003 */
 .x-btn-over .x-btn-soft-cyan-toolbar-small-mc {
     background-color: #03adcc;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3016 */
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-tl,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-bl,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-tr,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-br,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-tc,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-bc {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-focus-over-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3024 */
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-ml,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-mr {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-focus-over-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3028 */
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-cyan-toolbar-small-mc {
-    background-color: #03adcc;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3043 */
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-tl,
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-bl,
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-tr,
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-br,
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-tc,
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-bc,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-tl,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-bl,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-tr,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-br,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-tc,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-bc {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-pressed-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3051 */
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-ml,
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-mr,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-ml,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-mr {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-pressed-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3055 */
-.x-btn.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-mc,
-.x-btn.x-btn-pressed .x-btn-soft-cyan-toolbar-small-mc {
-    background-color: #03a6c4;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3069 */
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-tl,
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-bl,
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-tr,
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-br,
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-tc,
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-bc,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-tl,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-bl,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-tr,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-br,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-tc,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-bc {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-focus-pressed-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3077 */
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-ml,
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-mr,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-ml,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-mr {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-focus-pressed-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3081 */
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-soft-cyan-toolbar-small-mc,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-soft-cyan-toolbar-small-mc {
-    background-color: #03a6c4;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3095 */
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-tl,
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-bl,
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-tr,
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-br,
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-tc,
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-bc {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-disabled-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3103 */
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-ml,
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-mr {
-    background-image: url(images/btn/btn-soft-cyan-toolbar-small-disabled-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3107 */
-.x-btn.x-btn-disabled .x-btn-soft-cyan-toolbar-small-mc {
-    background-color: #03b4d5;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3117 */
-.x-nbr .x-btn-soft-cyan-toolbar-small {
-    background-image: none;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3123 */
-.x-btn-disabled.x-btn-soft-cyan-toolbar-small {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    opacity: 0.5;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3142 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-first {
-    border-right-width: 1px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3144 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-first .x-btn-soft-cyan-toolbar-small-mc {
-    padding-right: 7px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3148 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-middle {
-    border-right-width: 1px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3150 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-middle .x-btn-soft-cyan-toolbar-small-mc {
-    padding-right: 7px !important;
-    padding-left: 7px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3156 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-last .x-btn-soft-cyan-toolbar-small-mc {
-    padding-left: 7px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3163 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-first {
-    border-bottom-width: 1px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3165 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-first .x-btn-soft-cyan-toolbar-small-mc {
-    padding-bottom: 7px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3169 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-middle {
-    border-bottom-width: 1px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3171 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-middle .x-btn-soft-cyan-toolbar-small-mc {
-    padding-top: 7px !important;
-    padding-bottom: 7px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3177 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-last .x-btn-soft-cyan-toolbar-small-mc {
-    padding-top: 7px !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3183 */
-.x-nbr .x-segmented-button-item.x-btn-soft-cyan-toolbar-small:after {
-    content: ' ';
-    border-style: solid;
-    border-width: 0;
-    position: absolute;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3201 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small:after {
-    top: 1px;
-    right: 0;
-    bottom: 1px;
-    left: 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3207 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-first:after {
-    left: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3210 */
-.x-nbr .x-segmented-button-item-horizontal.x-btn-soft-cyan-toolbar-small.x-segmented-button-last:after {
-    right: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3216 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small:after {
-    top: 0;
-    right: 1px;
-    bottom: 0;
-    left: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3222 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-first:after {
-    top: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3225 */
-.x-nbr .x-segmented-button-item-vertical.x-btn-soft-cyan-toolbar-small.x-segmented-button-last:after {
-    bottom: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
-.x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-cyan-toolbar-small:after {
-    border-width: 1px;
-    border-color: #35baf6;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
-.x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-cyan-toolbar-small:after {
-    border-width: 1px;
-    border-color: #35baf6;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
-.x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-cyan-toolbar-small:after,
-.x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-cyan-toolbar-small:after {
-    border-width: 1px;
-    border-color: #35baf6;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
-.x-button-soft-cyan-toolbar-small-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3299 */
-.x-button-soft-cyan-toolbar-small-cell > .x-grid-cell-inner >.x-btn-soft-cyan-toolbar-small {
-    vertical-align: top;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
-.x-btn-soft-green-small {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    padding: 7px 7px 7px 7px;
-    border-width: 1px;
-    border-style: solid;
-    background-color: #9cc96b;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
-.x-btn-soft-green-small-mc {
-    background-color: #9cc96b;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
-.x-nbr .x-btn-soft-green-small {
-    padding: 0 !important;
-    border-width: 0 !important;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:281 */
-.x-btn-soft-green-small-frameInfo {
-    font-family: th-1-1-1-1-1-1-1-1-7-7-7-7;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:347 */
-.x-btn-soft-green-small-tl {
-    background-position: 0 -2px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:351 */
-.x-btn-soft-green-small-tr {
-    background-position: right -3px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:355 */
-.x-btn-soft-green-small-bl {
-    background-position: 0 -4px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:359 */
-.x-btn-soft-green-small-br {
-    background-position: right -5px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:363 */
-.x-btn-soft-green-small-ml {
-    background-position: 0 top;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:371 */
-.x-btn-soft-green-small-mr {
-    background-position: right top;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:379 */
-.x-btn-soft-green-small-tc {
-    background-position: 0 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:383 */
-.x-btn-soft-green-small-bc {
-    background-position: 0 -1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:388 */
-.x-btn-soft-green-small-tr,
-.x-btn-soft-green-small-br,
-.x-btn-soft-green-small-mr {
-    padding-right: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:394 */
-.x-btn-soft-green-small-tl,
-.x-btn-soft-green-small-bl,
-.x-btn-soft-green-small-ml {
-    padding-left: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:400 */
-.x-btn-soft-green-small-tc {
-    height: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:403 */
-.x-btn-soft-green-small-bc {
-    height: 1px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:407 */
-.x-btn-soft-green-small-tl,
-.x-btn-soft-green-small-bl,
-.x-btn-soft-green-small-tr,
-.x-btn-soft-green-small-br,
-.x-btn-soft-green-small-tc,
-.x-btn-soft-green-small-bc,
-.x-btn-soft-green-small-ml,
-.x-btn-soft-green-small-mr {
-    background-image: url(images/btn/btn-soft-green-small-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:453 */
-.x-btn-soft-green-small-ml,
-.x-btn-soft-green-small-mr {
-    background-image: url(images/btn/btn-soft-green-small-sides.gif);
-    background-repeat: repeat-y;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
-.x-btn-soft-green-small-mc {
-    padding: 7px 7px 7px 7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
-.x-btn-soft-green-small {
-    border-color: #90c258;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2470 */
-.x-btn-button-soft-green-small {
-    min-height: 16px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2475 */
-.x-ie9m .x-btn-button-soft-green-small {
-    min-height: auto;
-    height: 16px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2482 */
-.x-btn-inner-soft-green-small {
-    font: 500 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
-    color: #f0f0f0;
-    padding: 0 5px;
-    max-width: 100%;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2502 */
-.x-ie9 .x-btn-icon-right > .x-btn-inner-soft-green-small,
-.x-ie9 .x-btn-icon-left > .x-btn-inner-soft-green-small {
-    max-width: calc(100% - 16px);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2510 */
-.x-safari8m .x-btn-icon-right > .x-btn-inner-soft-green-small,
-.x-safari8m .x-btn-icon-left > .x-btn-inner-soft-green-small {
-    max-width: calc(100% - 15px);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2516 */
-.x-ie10p .x-btn-inner-soft-green-small {
-    max-width: none;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2521 */
-.x-btn-icon-el-soft-green-small {
-    font-size: 16px;
-    height: 16px;
-    color: #f0f0f0;
-    line-height: 16px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2527 */
-.x-btn-icon-left > .x-btn-icon-el-soft-green-small,
-.x-btn-icon-right > .x-btn-icon-el-soft-green-small {
-    width: 16px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2532 */
-.x-btn-icon-top > .x-btn-icon-el-soft-green-small,
-.x-btn-icon-bottom > .x-btn-icon-el-soft-green-small {
-    min-width: 16px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2554 */
-.x-ie8 .x-btn-icon-el-soft-green-small.x-btn-glyph {
-    color: #f0f0f0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2561 */
-.x-btn-text.x-btn-icon-left > .x-btn-icon-el-soft-green-small {
-    margin-right: 3px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2565 */
-.x-btn-text.x-btn-icon-left > .x-btn-icon-el-soft-green-small.x-rtl {
-    margin-right: 0;
-    margin-left: 3px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2572 */
-.x-btn-text.x-btn-icon-right > .x-btn-icon-el-soft-green-small {
-    margin-left: 3px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2576 */
-.x-btn-text.x-btn-icon-right > .x-btn-icon-el-soft-green-small.x-rtl {
-    margin-left: 0;
-    margin-right: 3px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2583 */
-.x-btn-text.x-btn-icon-top > .x-btn-icon-el-soft-green-small {
-    margin-bottom: 8px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2587 */
-.x-btn-text.x-btn-icon-bottom > .x-btn-icon-el-soft-green-small {
-    margin-top: 8px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2593 */
-.x-btn-arrow-right > .x-btn-icon.x-btn-no-text.x-btn-button-soft-green-small {
-    padding-right: 8px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2596 */
-.x-btn-arrow-right > .x-btn-text.x-btn-icon-right > .x-btn-icon-el-soft-green-small {
-    margin-right: 5px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2603 */
-.x-btn-arrow-bottom > .x-btn-button-soft-green-small,
-.x-btn-split-bottom > .x-btn-button-soft-green-small {
-    padding-bottom: 7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2609 */
-.x-btn-wrap-soft-green-small.x-btn-arrow-right:after {
-    width: 18px;
-    content: "\f0d7";
-    font: 16px/1 FontAwesome;
-    color: #f0f0f0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2636 */
-.x-btn-wrap-soft-green-small.x-btn-arrow-bottom:after {
-    height: 12px;
-    content: "\f0d7";
-    font: 16px/12px FontAwesome;
-    color: #f0f0f0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2663 */
-.x-btn-wrap-soft-green-small.x-btn-split-right > .x-btn-button {
-    padding-right: 7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2666 */
-.x-btn-wrap-soft-green-small.x-btn-split-right > .x-btn-button.x-rtl {
-    padding-right: 0;
-    padding-left: 7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2671 */
-.x-btn-wrap-soft-green-small.x-btn-split-right > .x-btn-button:after {
-    border-right: 1px solid #f0f0f0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2676 */
-.x-btn-wrap-soft-green-small.x-btn-split-right:after {
-    width: 20px;
-    content: "\f0d7";
-    font: 16px/1 FontAwesome;
-    color: #f0f0f0;
-    padding-left: 7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2692 */
-.x-btn-wrap-soft-green-small.x-rtl.x-btn-split-right:after {
-    padding-left: 0;
-    padding-right: 7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2702 */
-.x-btn-wrap-soft-green-small.x-btn-split-bottom {
-    margin-bottom: -7px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2704 */
-.x-btn-wrap-soft-green-small.x-btn-split-bottom > .x-btn-button:after {
-    border-bottom: 1px solid #f0f0f0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2715 */
-.x-btn-wrap-soft-green-small.x-btn-split-bottom:after {
-    height: 20px;
-    content: "\f0d7";
-    font: 16px/20px FontAwesome;
-    color: #f0f0f0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2748 */
-.x-btn-split-right > .x-btn-icon.x-btn-no-text.x-btn-button-soft-green-small {
-    padding-right: 8px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2751 */
-.x-btn-split-right > .x-btn-text.x-btn-icon-right > .x-btn-icon-el-soft-green-small {
-    margin-right: 5px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2757 */
-.x-keyboard-mode .x-btn-focus.x-btn-soft-green-small {
-    background-image: none;
-    background-color: #9cc96b;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
-.x-btn-soft-green-small .x-btn-arrow-el {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 27px;
-    pointer-events: none;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2802 */
-.x-btn-soft-green-small .x-btn-arrow-el.x-rtl {
-    right: inherit;
-    left: 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
-.x-keyboard-mode .x-btn-soft-green-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
-.x-btn-over.x-btn-soft-green-small {
-    border-color: #84b351;
-    background-image: none;
-    background-color: #90b962;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
-.x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-green-small {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
-.x-btn.x-btn-menu-active.x-btn-soft-green-small,
-.x-btn.x-btn-pressed.x-btn-soft-green-small {
-    border-color: #6c9242;
-    background-image: none;
-    background-color: #759750;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
-.x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-green-small,
-.x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-green-small {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
-.x-btn.x-btn-disabled.x-btn-soft-green-small {
-    background-image: none;
-    background-color: #9cc96b;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2966 */
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-tl,
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-bl,
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-tr,
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-br,
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-tc,
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-bc {
-    background-image: url(images/btn/btn-soft-green-small-focus-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2974 */
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-ml,
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-mr {
-    background-image: url(images/btn/btn-soft-green-small-focus-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2978 */
-.x-keyboard-mode .x-btn-focus .x-btn-soft-green-small-mc {
-    background-color: #9cc96b;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2991 */
-.x-btn-over .x-btn-soft-green-small-tl,
-.x-btn-over .x-btn-soft-green-small-bl,
-.x-btn-over .x-btn-soft-green-small-tr,
-.x-btn-over .x-btn-soft-green-small-br,
-.x-btn-over .x-btn-soft-green-small-tc,
-.x-btn-over .x-btn-soft-green-small-bc {
-    background-image: url(images/btn/btn-soft-green-small-over-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2999 */
-.x-btn-over .x-btn-soft-green-small-ml,
-.x-btn-over .x-btn-soft-green-small-mr {
-    background-image: url(images/btn/btn-soft-green-small-over-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3003 */
-.x-btn-over .x-btn-soft-green-small-mc {
-    background-color: #90b962;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3016 */
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-tl,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-bl,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-tr,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-br,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-tc,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-bc {
-    background-image: url(images/btn/btn-soft-green-small-focus-over-corners.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3024 */
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-ml,
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-mr {
-    background-image: url(images/btn/btn-soft-green-small-focus-over-sides.gif);
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3028 */
-.x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-soft-green-small-mc {
-    background-color: #90b962;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3043 */
-.x-btn.x-btn-menu-active .x-btn-soft-green-small-tl,
-.x-btn.x-btn-menu-active .x-btn-soft-green-small-bl,
-.x-btn.x-btn-menu-active .x-btn-soft-green-small-tr,
-.x-btn.x-btn-menu-active .x-btn-soft-green-small-br,
-.x-btn.x-btn-menu-active .x-btn-soft-green-small-tc,
-.x-btn.x-btn-menu-active .x-btn-soft-green-small-bc,
-.x-btn.x-btn-pressed .x-btn-soft-green-small-tl,
-.x-btn.x-btn-pressed .x-btn-soft-green-small-bl,
-.x-btn.x-btn-pressed .x-btn-soft-green-small-tr,
-.x-btn.x-btn-pressed .x-btn-soft-green-small-br,
-.x-btn.x-btn-pressed .x-btn-soft-green-small-tc,
-.x-btn.x-btn-pressed .x-btn-soft-green-small-bc {
-    background-image: url(images/btn/btn-soft-green-small-pressed-corners.gif);
 }

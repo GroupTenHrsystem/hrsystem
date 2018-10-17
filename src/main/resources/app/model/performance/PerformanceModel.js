@@ -14,7 +14,15 @@ Ext.define('Admin.model.performance.PerformanceModel', {
 	    {type: 'string',name: 'processStatus'},
 	    {type: 'string',name: 'processInstanceId'},
 	  	{type:'string',name:'staffName'},
-	  	{type:'string',name:'performanceTempletName'}
+	  	{type:'string',name:'performanceTempletName'},
+
+	  	{type: 'float' ,name: 'selfScore'},
+        {type: 'float' ,name: 'deptLeaderScore'},
+        {type: 'string' ,name: 'selfScoreReason'},
+        {type: 'string' ,name: 'deptLeaderScoreReason'},
+        {type: 'string' ,name: 'confirmResult'},
+	  	//{type:'float',name:'resultScore'},
+	  	
 	    // {type: 'string',name: 'performanceIndex'},
 	    // {type: 'string',name: 'weighting'},
 	],
@@ -23,5 +31,3 @@ Ext.define('Admin.model.performance.PerformanceModel', {
 		url: '/performance',
 	}
 });
-
-//https://stackoverflow.com/questions/25516753/how-to-read-the-referenced-object-when-it-is-nested-in-extjs-5-0-0

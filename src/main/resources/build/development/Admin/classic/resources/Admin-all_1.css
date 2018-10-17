@@ -569,7 +569,7 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:193 */
 .x-treelist-item-icon,
 .x-treelist-item-tool {
-    color: #35baf6;
+    color: #ff8000;
     font-size: 16px;
     width: 16px;
 }
@@ -579,7 +579,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:216 */
 .x-treelist-item-expander {
-    color: #35baf6;
+    color: #ff8000;
     font-size: 16px;
     width: 18px;
 }
@@ -656,7 +656,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:357 */
 .x-treelist-highlight-path .x-treelist-item-over > * > * > .x-treelist-item-icon {
-    color: #35baf6;
+    color: #ff8000;
     transition: color 0.5s;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:361 */
@@ -666,16 +666,16 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:365 */
 .x-treelist-highlight-path .x-treelist-item-over > * > * > .x-treelist-item-expander {
-    color: #35baf6;
+    color: #ff8000;
     transition: color 0.5s;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:372 */
 .x-treelist-row-over {
-    background-color: #e6f1f6;
+    background-color: #f7ece2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:376 */
 .x-treelist-row-over > * > .x-treelist-item-icon {
-    color: #35baf6;
+    color: #ff8000;
     transition: color 0.5s;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:380 */
@@ -685,7 +685,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:384 */
 .x-treelist-row-over > * > .x-treelist-item-expander {
-    color: #35baf6;
+    color: #ff8000;
     transition: color 0.5s;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:391 */
@@ -707,17 +707,17 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:495 */
 .x-treelist-nav {
-    background-color: #32404e;
+    background-color: #272727;
     background-position: 44px 0%;
     padding: 0 0 0 0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:103 */
 .x-treelist-nav .x-treelist-toolstrip {
-    background-color: #32404e;
+    background-color: #272727;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:112 */
 .x-treelist-nav .x-treelist-item-selected.x-treelist-item-tool {
-    background-color: #475360;
+    background-color: #3d3d3d;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:117 */
 .x-treelist-nav .x-treelist-item-selected.x-treelist-item-tool:after {
@@ -727,11 +727,11 @@
     left: 0;
     content: " ";
     width: 5px;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:134 */
 .x-treelist-nav .x-treelist-item-selected > .x-treelist-row {
-    background-color: #475360;
+    background-color: #3d3d3d;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:143 */
 .x-treelist-nav .x-treelist-item-tool {
@@ -746,7 +746,7 @@
     left: 0;
     content: " ";
     width: 5px;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:166 */
 .x-treelist-nav .x-treelist-item-icon:before,
@@ -814,11 +814,11 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:291 */
 .x-treelist-nav .x-treelist-item-selected > .x-treelist-row-over:before {
-    background-color: #57c6f8;
+    background-color: #ff9224;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:295 */
 .x-treelist-nav .x-treelist-item-selected > .x-treelist-row:before {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:301 */
 .x-treelist-nav .x-treelist-item-floated .x-treelist-container {
@@ -826,7 +826,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:304 */
 .x-treelist-nav .x-treelist-item-floated > .x-treelist-row {
-    background-color: #32404e;
+    background-color: #272727;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:308 */
 .x-treelist-nav .x-treelist-item-floated > .x-treelist-container {
@@ -851,7 +851,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:330 */
 .x-treelist-nav .x-treelist-item-floated > .x-treelist-row-over {
-    background-color: #32404e;
+    background-color: #272727;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:333 */
 .x-treelist-nav .x-treelist-item-floated > .x-treelist-row-over > * > .x-treelist-item-text {
@@ -859,7 +859,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:339 */
 .x-treelist-nav .x-treelist-item-expanded {
-    background-color: #2c3845;
+    background-color: #272727;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:357 */
 .x-treelist-nav .x-treelist-highlight-path .x-treelist-item-over > * > * > .x-treelist-item-icon {
@@ -875,7 +875,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:372 */
 .x-treelist-nav .x-treelist-row-over {
-    background-color: #3c4a57;
+    background-color: #323232;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/packages/core/sass/src/list/TreeItem.scss:376 */
 .x-treelist-nav .x-treelist-row-over > * > .x-treelist-item-icon {
@@ -2394,7 +2394,7 @@ the height of a multi-line element */
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/view/View.scss:2 */
 .x-keyboard-mode .x-view-item-focused {
-    outline: 1px dashed #35baf6 !important;
+    outline: 1px dashed #ff8000 !important;
     outline-offset: -1px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/view/BoundList.scss:8 */
@@ -2854,7 +2854,7 @@ the height of a multi-line element */
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/grid/column/Action.scss:6 */
 .x-keyboard-mode .x-grid-cell-inner-action-col :focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/grid/column/Action.scss:12 */
 .x-action-col-icon {
@@ -2875,7 +2875,7 @@ the height of a multi-line element */
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/grid/column/Check.scss:19 */
 .x-keyboard-mode .x-grid-checkcolumn-cell-inner :focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/grid/feature/Grouping.scss:1 */
 .x-group-hd-container {
@@ -3105,7 +3105,7 @@ the height of a multi-line element */
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/grid/plugin/RowExpander.scss:8 */
 .x-keyboard-mode .x-grid-row-expander:focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/src/grid/plugin/RowExpander.scss:13 */
 .x-grid-hide-row-expander-spacer .x-grid-row-expander-spacer {
@@ -3600,7 +3600,7 @@ body > .x-mask {
 .x-keyboard-mode .x-mask.x-focus {
     border-style: solid;
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/LoadMask.scss:31 */
 .x-mask-msg {
@@ -3630,7 +3630,7 @@ body > .x-mask {
     background-color: #ececec;
     border-width: 0;
     height: 24px;
-    border-color: #35baf6;
+    border-color: #ff8000;
     border-style: solid;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/ProgressBar.scss:234 */
@@ -3660,8 +3660,14 @@ body > .x-mask {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 0 solid #35baf6;
+    border: 0 solid #ff8000;
     pointer-events: none;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-progress-bar-default:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/ProgressBar.scss:285 */
 .x-progressbar-default-cell > .x-grid-cell-inner,
@@ -3686,11 +3692,11 @@ body > .x-mask {
     padding: 7px 7px 7px 7px;
     border-width: 1px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-btn-default-small-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-btn-default-small {
@@ -3781,9 +3787,15 @@ body > .x-mask {
 .x-btn-default-small-mc {
     padding: 7px 7px 7px 7px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-default-small-corners.gif), sides:url(images/btn/btn-default-small-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-default-small {
-    border-color: #31ade5;
+    border-color: #ed7700;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2470 */
 .x-btn-button-default-small {
@@ -3941,10 +3953,10 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2757 */
 .x-keyboard-mode .x-btn-focus.x-btn-default-small {
     background-image: none;
-    background-color: #35baf6;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    background-color: #ff8000;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-default-small .x-btn-arrow-el {
@@ -3962,38 +3974,38 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-default-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-default-small {
-    border-color: #2d9fd2;
+    border-color: #da6e00;
     background-image: none;
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-default-small {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-default-small,
 .x-btn.x-btn-pressed.x-btn-default-small {
-    border-color: #2582ac;
+    border-color: #b25900;
     background-image: none;
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-default-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-default-small {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-default-small {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2966 */
 .x-keyboard-mode .x-btn-focus .x-btn-default-small-tl,
@@ -4011,7 +4023,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2978 */
 .x-keyboard-mode .x-btn-focus .x-btn-default-small-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2991 */
 .x-btn-over .x-btn-default-small-tl,
@@ -4029,7 +4041,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3003 */
 .x-btn-over .x-btn-default-small-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3016 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-default-small-tl,
@@ -4047,7 +4059,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3028 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-default-small-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3043 */
 .x-btn.x-btn-menu-active .x-btn-default-small-tl,
@@ -4074,7 +4086,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3055 */
 .x-btn.x-btn-menu-active .x-btn-default-small-mc,
 .x-btn.x-btn-pressed .x-btn-default-small-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3069 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-default-small-tl,
@@ -4101,7 +4113,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3081 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-default-small-mc,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-default-small-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3095 */
 .x-btn.x-btn-disabled .x-btn-default-small-tl,
@@ -4119,7 +4131,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3107 */
 .x-btn.x-btn-disabled .x-btn-default-small-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3117 */
 .x-nbr .x-btn-default-small {
@@ -4212,18 +4224,54 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-default-small:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-default-small:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-default-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-default-small:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-small-focus-corners.gif), sides:url(images/btn/btn-default-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-small-over-corners.gif), sides:url(images/btn/btn-default-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-small-focus-over-corners.gif), sides:url(images/btn/btn-default-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-small-pressed-corners.gif), sides:url(images/btn/btn-default-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-small-focus-pressed-corners.gif), sides:url(images/btn/btn-default-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-default-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-small-disabled-corners.gif), sides:url(images/btn/btn-default-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-default-small-cell > .x-grid-cell-inner {
@@ -4244,11 +4292,11 @@ body > .x-mask {
     padding: 8px 8px 8px 8px;
     border-width: 1px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-btn-default-medium-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-btn-default-medium {
@@ -4339,9 +4387,15 @@ body > .x-mask {
 .x-btn-default-medium-mc {
     padding: 8px 8px 8px 8px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-default-medium-corners.gif), sides:url(images/btn/btn-default-medium-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-default-medium {
-    border-color: #31ade5;
+    border-color: #ed7700;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2470 */
 .x-btn-button-default-medium {
@@ -4499,10 +4553,10 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2757 */
 .x-keyboard-mode .x-btn-focus.x-btn-default-medium {
     background-image: none;
-    background-color: #35baf6;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    background-color: #ff8000;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-default-medium .x-btn-arrow-el {
@@ -4520,38 +4574,38 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-default-medium.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-default-medium {
-    border-color: #2d9fd2;
+    border-color: #da6e00;
     background-image: none;
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-default-medium {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-default-medium,
 .x-btn.x-btn-pressed.x-btn-default-medium {
-    border-color: #2582ac;
+    border-color: #b25900;
     background-image: none;
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-default-medium,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-default-medium {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-default-medium {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2966 */
 .x-keyboard-mode .x-btn-focus .x-btn-default-medium-tl,
@@ -4569,7 +4623,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2978 */
 .x-keyboard-mode .x-btn-focus .x-btn-default-medium-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2991 */
 .x-btn-over .x-btn-default-medium-tl,
@@ -4587,7 +4641,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3003 */
 .x-btn-over .x-btn-default-medium-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3016 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-default-medium-tl,
@@ -4605,7 +4659,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3028 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-default-medium-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3043 */
 .x-btn.x-btn-menu-active .x-btn-default-medium-tl,
@@ -4632,7 +4686,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3055 */
 .x-btn.x-btn-menu-active .x-btn-default-medium-mc,
 .x-btn.x-btn-pressed .x-btn-default-medium-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3069 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-default-medium-tl,
@@ -4659,7 +4713,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3081 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-default-medium-mc,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-default-medium-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3095 */
 .x-btn.x-btn-disabled .x-btn-default-medium-tl,
@@ -4677,7 +4731,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3107 */
 .x-btn.x-btn-disabled .x-btn-default-medium-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3117 */
 .x-nbr .x-btn-default-medium {
@@ -4770,18 +4824,54 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-default-medium:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-default-medium:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-default-medium:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-default-medium:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-medium-focus-corners.gif), sides:url(images/btn/btn-default-medium-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-medium-over-corners.gif), sides:url(images/btn/btn-default-medium-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-medium-focus-over-corners.gif), sides:url(images/btn/btn-default-medium-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-medium-pressed-corners.gif), sides:url(images/btn/btn-default-medium-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-medium-focus-pressed-corners.gif), sides:url(images/btn/btn-default-medium-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-default-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-medium-disabled-corners.gif), sides:url(images/btn/btn-default-medium-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-default-medium-cell > .x-grid-cell-inner {
@@ -4802,11 +4892,11 @@ body > .x-mask {
     padding: 9px 9px 9px 9px;
     border-width: 1px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-btn-default-large-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-btn-default-large {
@@ -4897,9 +4987,15 @@ body > .x-mask {
 .x-btn-default-large-mc {
     padding: 9px 9px 9px 9px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-default-large-corners.gif), sides:url(images/btn/btn-default-large-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-default-large {
-    border-color: #31ade5;
+    border-color: #ed7700;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2470 */
 .x-btn-button-default-large {
@@ -5057,10 +5153,10 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2757 */
 .x-keyboard-mode .x-btn-focus.x-btn-default-large {
     background-image: none;
-    background-color: #35baf6;
-    -webkit-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    -moz-box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
-    box-shadow: #cbe5f1 0 1px 0px 0 inset, #cbe5f1 0 -1px 0px 0 inset, #cbe5f1 -1px 0 0px 0 inset, #cbe5f1 1px 0 0px 0 inset;
+    background-color: #ff8000;
+    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-default-large .x-btn-arrow-el {
@@ -5078,38 +5174,38 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-default-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #cbe5f1;
+    border: 1px solid #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-default-large {
-    border-color: #2d9fd2;
+    border-color: #da6e00;
     background-image: none;
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-default-large {
-    -webkit-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    -moz-box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
-    box-shadow: #cae2ed 0 1px 0px 0 inset, #cae2ed 0 -1px 0px 0 inset, #cae2ed -1px 0 0px 0 inset, #cae2ed 1px 0 0px 0 inset;
+    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-default-large,
 .x-btn.x-btn-pressed.x-btn-default-large {
-    border-color: #2582ac;
+    border-color: #b25900;
     background-image: none;
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-default-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-default-large {
-    -webkit-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    -moz-box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
-    box-shadow: #c8dce5 0 1px 0px 0 inset, #c8dce5 0 -1px 0px 0 inset, #c8dce5 -1px 0 0px 0 inset, #c8dce5 1px 0 0px 0 inset;
+    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-default-large {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2966 */
 .x-keyboard-mode .x-btn-focus .x-btn-default-large-tl,
@@ -5127,7 +5223,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2978 */
 .x-keyboard-mode .x-btn-focus .x-btn-default-large-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2991 */
 .x-btn-over .x-btn-default-large-tl,
@@ -5145,7 +5241,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3003 */
 .x-btn-over .x-btn-default-large-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3016 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-default-large-tl,
@@ -5163,7 +5259,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3028 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-default-large-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3043 */
 .x-btn.x-btn-menu-active .x-btn-default-large-tl,
@@ -5190,7 +5286,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3055 */
 .x-btn.x-btn-menu-active .x-btn-default-large-mc,
 .x-btn.x-btn-pressed .x-btn-default-large-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3069 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-default-large-tl,
@@ -5217,7 +5313,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3081 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-default-large-mc,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-default-large-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3095 */
 .x-btn.x-btn-disabled .x-btn-default-large-tl,
@@ -5235,7 +5331,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3107 */
 .x-btn.x-btn-disabled .x-btn-default-large-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3117 */
 .x-nbr .x-btn-default-large {
@@ -5328,18 +5424,54 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-default-large:after {
     border-width: 1px;
-    border-color: #cbe5f1;
+    border-color: #f3dac0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-default-large:after {
     border-width: 1px;
-    border-color: #cae2ed;
+    border-color: #efd8c0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-default-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-default-large:after {
     border-width: 1px;
-    border-color: #c8dce5;
+    border-color: #e6d3c0;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-large-focus-corners.gif), sides:url(images/btn/btn-default-large-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-large-over-corners.gif), sides:url(images/btn/btn-default-large-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-large-focus-over-corners.gif), sides:url(images/btn/btn-default-large-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-large-pressed-corners.gif), sides:url(images/btn/btn-default-large-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-large-focus-pressed-corners.gif), sides:url(images/btn/btn-default-large-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-default-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-large-disabled-corners.gif), sides:url(images/btn/btn-default-large-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-default-large-cell > .x-grid-cell-inner {
@@ -5454,6 +5586,12 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-default-toolbar-small-mc {
     padding: 7px 7px 7px 7px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-default-toolbar-small-corners.gif), sides:url(images/btn/btn-default-toolbar-small-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-default-toolbar-small {
@@ -5616,9 +5754,9 @@ body > .x-mask {
 .x-keyboard-mode .x-btn-focus.x-btn-default-toolbar-small {
     background-image: none;
     background-color: #f6f6f6;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-default-toolbar-small .x-btn-arrow-el {
@@ -5636,7 +5774,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-default-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-default-toolbar-small {
@@ -5646,9 +5784,9 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-default-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-default-toolbar-small,
@@ -5660,9 +5798,9 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-default-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-default-toolbar-small {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-default-toolbar-small {
@@ -5886,18 +6024,54 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-default-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-default-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-default-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-default-toolbar-small:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-small-focus-corners.gif), sides:url(images/btn/btn-default-toolbar-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-small-over-corners.gif), sides:url(images/btn/btn-default-toolbar-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-small-focus-over-corners.gif), sides:url(images/btn/btn-default-toolbar-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-small-pressed-corners.gif), sides:url(images/btn/btn-default-toolbar-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-small-focus-pressed-corners.gif), sides:url(images/btn/btn-default-toolbar-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-default-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-small-disabled-corners.gif), sides:url(images/btn/btn-default-toolbar-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-default-toolbar-small-cell > .x-grid-cell-inner {
@@ -6012,6 +6186,12 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-default-toolbar-medium-mc {
     padding: 8px 8px 8px 8px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-default-toolbar-medium-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-default-toolbar-medium {
@@ -6174,9 +6354,9 @@ body > .x-mask {
 .x-keyboard-mode .x-btn-focus.x-btn-default-toolbar-medium {
     background-image: none;
     background-color: #f6f6f6;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-default-toolbar-medium .x-btn-arrow-el {
@@ -6194,7 +6374,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-default-toolbar-medium.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-default-toolbar-medium {
@@ -6204,9 +6384,9 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-default-toolbar-medium {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-default-toolbar-medium,
@@ -6218,9 +6398,9 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-default-toolbar-medium,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-default-toolbar-medium {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-default-toolbar-medium {
@@ -6444,18 +6624,54 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-default-toolbar-medium:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-default-toolbar-medium:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-default-toolbar-medium:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-default-toolbar-medium:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-medium-focus-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-medium-over-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-medium-focus-over-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-medium-pressed-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-medium-focus-pressed-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-default-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-medium-disabled-corners.gif), sides:url(images/btn/btn-default-toolbar-medium-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-default-toolbar-medium-cell > .x-grid-cell-inner {
@@ -6570,6 +6786,12 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-default-toolbar-large-mc {
     padding: 9px 9px 9px 9px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-default-toolbar-large-corners.gif), sides:url(images/btn/btn-default-toolbar-large-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-default-toolbar-large {
@@ -6732,9 +6954,9 @@ body > .x-mask {
 .x-keyboard-mode .x-btn-focus.x-btn-default-toolbar-large {
     background-image: none;
     background-color: #f6f6f6;
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-default-toolbar-large .x-btn-arrow-el {
@@ -6752,7 +6974,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-default-toolbar-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-default-toolbar-large {
@@ -6762,9 +6984,9 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-default-toolbar-large {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-default-toolbar-large,
@@ -6776,9 +6998,9 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-default-toolbar-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-default-toolbar-large {
-    -webkit-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    -moz-box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
-    box-shadow: #35baf6 0 1px 0px 0 inset, #35baf6 0 -1px 0px 0 inset, #35baf6 -1px 0 0px 0 inset, #35baf6 1px 0 0px 0 inset;
+    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-default-toolbar-large {
@@ -7002,18 +7224,54 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-default-toolbar-large:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-default-toolbar-large:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-default-toolbar-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-default-toolbar-large:after {
     border-width: 1px;
-    border-color: #35baf6;
+    border-color: #ff8000;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-large-focus-corners.gif), sides:url(images/btn/btn-default-toolbar-large-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-large-over-corners.gif), sides:url(images/btn/btn-default-toolbar-large-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-large-focus-over-corners.gif), sides:url(images/btn/btn-default-toolbar-large-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-large-pressed-corners.gif), sides:url(images/btn/btn-default-toolbar-large-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-large-focus-pressed-corners.gif), sides:url(images/btn/btn-default-toolbar-large-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-default-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:2px 2px 2px 2px, corners:url(images/btn/btn-default-toolbar-large-disabled-corners.gif), sides:url(images/btn/btn-default-toolbar-large-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-default-toolbar-large-cell > .x-grid-cell-inner {
@@ -7051,7 +7309,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/panel/Tool.scss:30 */
 .x-keyboard-mode .x-tool-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -7070,7 +7328,7 @@ body > .x-mask {
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/panel/Tool.scss:40 */
@@ -7589,7 +7847,7 @@ body > .x-mask {
     right: 1px;
     bottom: 1px;
     left: 1px;
-    border: 1px solid #2a95c5;
+    border: 1px solid #c60;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Toolbar.scss:598 */
@@ -7662,7 +7920,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Toolbar.scss:694 */
 .x-toolbar-text-default {
     padding: 0 4px;
-    color: #464a4c;
+    color: #4c4339;
     font: 400 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Toolbar.scss:700 */
@@ -7778,6 +8036,12 @@ body > .x-mask {
 .x-toolbar-more-icon:before {
     content: "\f0c9";
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-toolbar-default:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Toolbar.scss:598 */
 .x-toolbar-footer {
     padding: 6px 0 6px 6px;
@@ -7848,7 +8112,7 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Toolbar.scss:694 */
 .x-toolbar-text-footer {
     padding: 0 4px;
-    color: #464a4c;
+    color: #4c4339;
     font: 400 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/toolbar/Toolbar.scss:700 */
@@ -7934,6 +8198,12 @@ body > .x-mask {
 .x-toolbar-more-icon:before {
     content: "\f0c9";
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-toolbar-footer:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/dd/StatusProxy.scss:1 */
 .x-dd-drag-proxy {
     color: #404040;
@@ -7994,21 +8264,21 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:799 */
 .x-panel-default {
-    border-color: #35baf6;
+    border-color: #ff8000;
     padding: 0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:802 */
 .x-panel-default.x-masked {
-    border-color: #9addfb;
+    border-color: #ffc080;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:810 */
 .x-panel-header-default {
     font-size: 16px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:836 */
 .x-panel-header-default .x-tool-tool-el {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:842 */
 .x-panel-header-default-horizontal {
@@ -8157,17 +8427,17 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1226 */
 .x-panel-header-default {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1230 */
 .x-panel-header-default-vertical {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1235 */
 .x-rtl.x-panel-header-default-vertical {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1288 */
 .x-panel .x-panel-header-default-collapsed-border-top {
@@ -8184,6 +8454,30 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1300 */
 .x-panel .x-panel-header-default-collapsed-border-left {
     border-right-width: 1px !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1336 */
 .x-panel-header-default-horizontal .x-tool-after-title {
@@ -8256,124 +8550,124 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:2 */
 .x-panel-default-outer-border-l {
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:6 */
 .x-panel-default-outer-border-b {
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:10 */
 .x-panel-default-outer-border-bl {
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:16 */
 .x-panel-default-outer-border-r {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:20 */
 .x-panel-default-outer-border-rl {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:26 */
 .x-panel-default-outer-border-rb {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:32 */
 .x-panel-default-outer-border-rbl {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:40 */
 .x-panel-default-outer-border-t {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:44 */
 .x-panel-default-outer-border-tl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:50 */
 .x-panel-default-outer-border-tb {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:56 */
 .x-panel-default-outer-border-tbl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:64 */
 .x-panel-default-outer-border-tr {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:70 */
 .x-panel-default-outer-border-trl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:78 */
 .x-panel-default-outer-border-trb {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:86 */
 .x-panel-default-outer-border-trbl {
-    border-color: #35baf6 !important;
+    border-color: #ff8000 !important;
     border-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:799 */
 .x-panel-default-framed {
-    border-color: #35baf6;
+    border-color: #ff8000;
     padding: 0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:802 */
 .x-panel-default-framed.x-masked {
-    border-color: #9addfb;
+    border-color: #ffc080;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:810 */
 .x-panel-header-default-framed {
     font-size: 16px;
-    border: 2px solid #35baf6;
+    border: 2px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:836 */
 .x-panel-header-default-framed .x-tool-tool-el {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:842 */
 .x-panel-header-default-framed-horizontal {
@@ -8631,6 +8925,12 @@ body > .x-mask {
 .x-panel-default-framed-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-default-framed:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel/panel-default-framed-corners.gif), sides:url(images/panel/panel-default-framed-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-top {
     -moz-border-radius-topleft: 0;
@@ -8648,11 +8948,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px 2px 0 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-top-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-top {
@@ -8743,6 +9043,12 @@ body > .x-mask {
 .x-panel-header-default-framed-top-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 0 2px, corners:url(images/panel-header/panel-header-default-framed-top-corners.gif), sides:url(images/panel-header/panel-header-default-framed-top-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-right {
     -moz-border-radius-topleft: 0;
@@ -8760,16 +9066,16 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px 2px 2px 0;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:226 */
 .x-rtl.x-panel-header-default-framed-right {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-right-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-right {
@@ -8869,6 +9175,12 @@ body > .x-mask {
 .x-panel-header-default-framed-right-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 0, corners:url(images/panel-header/panel-header-default-framed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-default-framed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-default-framed-right-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-bottom {
     -moz-border-radius-topleft: 0;
@@ -8886,11 +9198,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 0 2px 2px 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-bottom-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-bottom {
@@ -8981,6 +9293,12 @@ body > .x-mask {
 .x-panel-header-default-framed-bottom-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 2px 2px 2px, corners:url(images/panel-header/panel-header-default-framed-bottom-corners.gif), sides:url(images/panel-header/panel-header-default-framed-bottom-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-left {
     -moz-border-radius-topleft: 0;
@@ -8998,16 +9316,16 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px 0 2px 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:226 */
 .x-rtl.x-panel-header-default-framed-left {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-left-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-left {
@@ -9107,6 +9425,12 @@ body > .x-mask {
 .x-panel-header-default-framed-left-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 0 2px 2px, corners:url(images/panel-header/panel-header-default-framed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-default-framed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-default-framed-left-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-collapsed-top {
     -moz-border-radius-topleft: 0;
@@ -9124,11 +9448,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-collapsed-top-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-collapsed-top {
@@ -9219,6 +9543,12 @@ body > .x-mask {
 .x-panel-header-default-framed-collapsed-top-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-collapsed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-default-framed-collapsed-top-corners.gif), sides:url(images/panel-header/panel-header-default-framed-collapsed-top-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-collapsed-right {
     -moz-border-radius-topleft: 0;
@@ -9236,16 +9566,16 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:226 */
 .x-rtl.x-panel-header-default-framed-collapsed-right {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-collapsed-right-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-collapsed-right {
@@ -9345,6 +9675,12 @@ body > .x-mask {
 .x-panel-header-default-framed-collapsed-right-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-collapsed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-default-framed-collapsed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-default-framed-collapsed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-default-framed-collapsed-right-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-collapsed-bottom {
     -moz-border-radius-topleft: 0;
@@ -9362,11 +9698,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-collapsed-bottom-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-collapsed-bottom {
@@ -9457,6 +9793,12 @@ body > .x-mask {
 .x-panel-header-default-framed-collapsed-bottom-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-collapsed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-default-framed-collapsed-bottom-corners.gif), sides:url(images/panel-header/panel-header-default-framed-collapsed-bottom-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-default-framed-collapsed-left {
     -moz-border-radius-topleft: 0;
@@ -9474,16 +9816,16 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:226 */
 .x-rtl.x-panel-header-default-framed-collapsed-left {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-panel-header-default-framed-collapsed-left-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-panel-header-default-framed-collapsed-left {
@@ -9582,6 +9924,12 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-default-framed-collapsed-left-mc {
     padding: 14px 10px 14px 10px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-default-framed-collapsed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/panel-header/panel-header-default-framed-collapsed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-default-framed-collapsed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-default-framed-collapsed-left-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/panel/Panel.scss:1188 */
 .x-panel .x-panel-header-default-framed-top {
@@ -9686,105 +10034,105 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:2 */
 .x-panel-default-framed-outer-border-l {
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:6 */
 .x-panel-default-framed-outer-border-b {
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:10 */
 .x-panel-default-framed-outer-border-bl {
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:16 */
 .x-panel-default-framed-outer-border-r {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:20 */
 .x-panel-default-framed-outer-border-rl {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:26 */
 .x-panel-default-framed-outer-border-rb {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:32 */
 .x-panel-default-framed-outer-border-rbl {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:40 */
 .x-panel-default-framed-outer-border-t {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:44 */
 .x-panel-default-framed-outer-border-tl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:50 */
 .x-panel-default-framed-outer-border-tb {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:56 */
 .x-panel-default-framed-outer-border-tbl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:64 */
 .x-panel-default-framed-outer-border-tr {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:70 */
 .x-panel-default-framed-outer-border-trl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:78 */
 .x-panel-default-framed-outer-border-trb {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:86 */
 .x-panel-default-framed-outer-border-trbl {
-    border-color: #35baf6 !important;
+    border-color: #ff8000 !important;
     border-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/container/ButtonGroup.scss:243 */
@@ -9930,6 +10278,12 @@ body > .x-mask {
 .x-btn-group-default-framed-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-group-default-framed:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/btn-group/btn-group-default-framed-corners.gif), sides:url(images/btn-group/btn-group-default-framed-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-btn-group-default-framed-notitle {
     -webkit-border-radius: 2px;
@@ -10035,6 +10389,12 @@ body > .x-mask {
 .x-btn-group-default-framed-notitle-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-group-default-framed-notitle:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/btn-group/btn-group-default-framed-notitle-corners.gif), sides:url(images/btn-group/btn-group-default-framed-notitle-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/container/ButtonGroup.scss:243 */
 .x-btn-group-default-framed {
     border-color: #d0d0d0;
@@ -10109,7 +10469,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/window/Window.scss:545 */
 .x-window-default {
-    border-color: #35baf6;
+    border-color: #ff8000;
     -webkit-border-radius: 0 0 0 0;
     -moz-border-radius: 0 0 0 0;
     -ms-border-radius: 0 0 0 0;
@@ -10228,9 +10588,15 @@ body > .x-mask {
 .x-window-default-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-default:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window/window-default-corners.gif), sides:url(images/window/window-default-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/window/Window.scss:567 */
 .x-window-body-default {
-    border-color: #35baf6;
+    border-color: #ff8000;
     border-width: 1px;
     border-style: solid;
     background: #fff;
@@ -10242,12 +10608,12 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/window/Window.scss:581 */
 .x-window-header-default {
     font-size: 16px;
-    border-color: #35baf6;
-    background-color: #35baf6;
+    border-color: #ff8000;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/window/Window.scss:586 */
 .x-window-header-default .x-tool-img {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/window/Window.scss:599 */
 .x-window-header-default-horizontal .x-window-header-default-tab-bar {
@@ -10336,11 +10702,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px 2px 2px 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-top-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-top {
@@ -10431,6 +10797,12 @@ body > .x-mask {
 .x-window-header-default-top-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-top-corners.gif), sides:url(images/window-header/window-header-default-top-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-right {
     -moz-border-radius-topleft: 0;
@@ -10448,11 +10820,11 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px 2px 2px 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-right-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-right {
@@ -10552,6 +10924,12 @@ body > .x-mask {
 .x-window-header-default-right-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-right-corners.gif), corners-rtl:url(images/window-header/window-header-default-right-corners-rtl.gif), sides:url(images/window-header/window-header-default-right-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-bottom {
     -moz-border-radius-topleft: 0;
@@ -10569,11 +10947,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px 2px 2px 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-bottom-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-bottom {
@@ -10664,6 +11042,12 @@ body > .x-mask {
 .x-window-header-default-bottom-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-bottom-corners.gif), sides:url(images/window-header/window-header-default-bottom-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-left {
     -moz-border-radius-topleft: 0;
@@ -10681,11 +11065,11 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px 2px 2px 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-left-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-left {
@@ -10785,6 +11169,12 @@ body > .x-mask {
 .x-window-header-default-left-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-left-corners.gif), corners-rtl:url(images/window-header/window-header-default-left-corners-rtl.gif), sides:url(images/window-header/window-header-default-left-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-collapsed-top {
     -moz-border-radius-topleft: 0;
@@ -10802,11 +11192,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-collapsed-top-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-collapsed-top {
@@ -10897,6 +11287,12 @@ body > .x-mask {
 .x-window-header-default-collapsed-top-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-collapsed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-collapsed-top-corners.gif), sides:url(images/window-header/window-header-default-collapsed-top-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-collapsed-right {
     -moz-border-radius-topleft: 0;
@@ -10914,11 +11310,11 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-collapsed-right-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-collapsed-right {
@@ -11018,6 +11414,12 @@ body > .x-mask {
 .x-window-header-default-collapsed-right-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-collapsed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-collapsed-right-corners.gif), corners-rtl:url(images/window-header/window-header-default-collapsed-right-corners-rtl.gif), sides:url(images/window-header/window-header-default-collapsed-right-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-collapsed-bottom {
     -moz-border-radius-topleft: 0;
@@ -11035,11 +11437,11 @@ body > .x-mask {
     padding: 10px 14px 10px 14px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-collapsed-bottom-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-collapsed-bottom {
@@ -11130,6 +11532,12 @@ body > .x-mask {
 .x-window-header-default-collapsed-bottom-mc {
     padding: 10px 14px 10px 14px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-collapsed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-collapsed-bottom-corners.gif), sides:url(images/window-header/window-header-default-collapsed-bottom-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-default-collapsed-left {
     -moz-border-radius-topleft: 0;
@@ -11147,11 +11555,11 @@ body > .x-mask {
     padding: 14px 10px 14px 10px;
     border-width: 2px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-window-header-default-collapsed-left-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-window-header-default-collapsed-left {
@@ -11251,6 +11659,12 @@ body > .x-mask {
 .x-window-header-default-collapsed-left-mc {
     padding: 14px 10px 14px 10px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-default-collapsed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/window-header/window-header-default-collapsed-left-corners.gif), corners-rtl:url(images/window-header/window-header-default-collapsed-left-corners-rtl.gif), sides:url(images/window-header/window-header-default-collapsed-left-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/window/Window.scss:857 */
 .x-window-header-default .x-window-header-icon {
     width: 16px;
@@ -11336,105 +11750,105 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:2 */
 .x-window-default-outer-border-l {
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:6 */
 .x-window-default-outer-border-b {
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:10 */
 .x-window-default-outer-border-bl {
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:16 */
 .x-window-default-outer-border-r {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:20 */
 .x-window-default-outer-border-rl {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:26 */
 .x-window-default-outer-border-rb {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:32 */
 .x-window-default-outer-border-rbl {
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:40 */
 .x-window-default-outer-border-t {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:44 */
 .x-window-default-outer-border-tl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:50 */
 .x-window-default-outer-border-tb {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:56 */
 .x-window-default-outer-border-tbl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:64 */
 .x-window-default-outer-border-tr {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:70 */
 .x-window-default-outer-border-trl {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-left-color: #35baf6 !important;
+    border-left-color: #ff8000 !important;
     border-left-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:78 */
 .x-window-default-outer-border-trb {
-    border-top-color: #35baf6 !important;
+    border-top-color: #ff8000 !important;
     border-top-width: 1px !important;
-    border-right-color: #35baf6 !important;
+    border-right-color: #ff8000 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #35baf6 !important;
+    border-bottom-color: #ff8000 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/border-management.scss:86 */
 .x-window-default-outer-border-trbl {
-    border-color: #35baf6 !important;
+    border-color: #ff8000 !important;
     border-width: 1px !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/window/Window.scss:11 */
@@ -11519,7 +11933,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Text.scss:229 */
 .x-form-trigger-wrap-default.x-form-trigger-wrap-focus {
-    border-color: #53c4f7;
+    border-color: #ff9326;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Text.scss:233 */
 .x-form-trigger-wrap-default.x-form-trigger-wrap-invalid {
@@ -11733,19 +12147,19 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:145 */
 .x-keyboard-mode .x-form-checkbox-focus.x-form-radio-default {
-    color: #53c4f7;
+    color: #ff9326;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:154 */
 .x-keyboard-mode .x-form-checkbox-focus.x-form-checkbox-default {
-    color: #53c4f7;
+    color: #ff9326;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:165 */
 .x-keyboard-mode .x-form-cb-checked .x-form-checkbox-focus.x-form-radio-default {
-    color: #53c4f7;
+    color: #ff9326;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:174 */
 .x-keyboard-mode .x-form-cb-checked .x-form-checkbox-focus.x-form-checkbox-default {
-    color: #53c4f7;
+    color: #ff9326;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:185 */
 .x-form-cb-label-default {
@@ -11857,7 +12271,7 @@ body > .x-mask {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/FieldSet.scss:373 */
 .x-keyboard-mode .x-fieldset-header-tool-default.x-focus {
-    outline: 1px solid #53c4f7;
+    outline: 1px solid #ff9326;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/FieldSet.scss:380 */
 .x-fieldset-default.x-fieldset-collapsed {
@@ -12049,14 +12463,14 @@ body > .x-mask {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/BoundList.scss:25 */
 .x-boundlist-selected {
     color: #fff;
-    background: #35baf6;
-    border-color: #35baf6;
+    background: #ff8000;
+    border-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/BoundList.scss:33 */
 .x-boundlist-item-over {
     color: #fff;
-    background: #5dc8f8;
-    border-color: #5dc8f8;
+    background: #f93;
+    border-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/BoundList.scss:42 */
 .x-boundlist-floating {
@@ -12201,11 +12615,11 @@ div.x-datepicker-date:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/picker/Date.scss:178 */
 .x-datepicker-selected {
     border-style: solid;
-    border-color: #5dc8f8;
+    border-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/picker/Date.scss:181 */
 .x-datepicker-selected div.x-datepicker-date {
-    background-color: #35baf6;
+    background-color: #ff8000;
     color: #fff;
     font-weight: 400;
 }
@@ -12213,7 +12627,7 @@ div.x-datepicker-date:hover {
 .x-datepicker-today {
     border-color: darkred;
     border-style: solid;
-    background-color: #aee3fb;
+    background-color: #fc9;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/picker/Date.scss:199 */
 .x-datepicker-prevday .x-datepicker-date,
@@ -12291,10 +12705,10 @@ a.x-monthpicker-item-inner:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/picker/Date.scss:301 */
 .x-monthpicker-item a.x-monthpicker-selected {
-    background-color: #35baf6;
+    background-color: #ff8000;
     color: #fff;
     border-style: solid;
-    border-color: #5dc8f8;
+    border-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/picker/Date.scss:308 */
 .x-monthpicker-yearnav {
@@ -12353,6 +12767,18 @@ a.x-monthpicker-yearnav-button:hover {
 .x-monthpicker-small .x-monthpicker-yearnav-button {
     margin-top: 12px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-datepicker-header:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-datepicker-footer:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/form/field/Date.scss:2 */
 .x-form-field-date .x-form-date-trigger {
     font-size: 16px;
@@ -12371,7 +12797,7 @@ a.x-monthpicker-yearnav-button:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Display.scss:60 */
 .x-keyboard-mode .x-form-display-field-default.x-field-form-focus {
-    outline: 1px solid #53c4f7;
+    outline: 1px solid #ff9326;
     outline-offset: -1px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -12390,7 +12816,7 @@ a.x-monthpicker-yearnav-button:hover {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    border: 1px solid #53c4f7;
+    border: 1px solid #ff9326;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Display.scss:71 */
@@ -12501,6 +12927,12 @@ a.x-monthpicker-yearnav-button:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-tip-default-mc {
     padding: 0px 0px 0px 0px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tip-default:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/tip/tip-default-corners.gif), sides:url(images/tip/tip-default-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:318 */
 .x-tip-default {
@@ -12683,6 +13115,12 @@ a.x-monthpicker-yearnav-button:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-tip-form-invalid-mc {
     padding: 0px 0px 0px 0px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tip-form-invalid:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:2px 2px 2px 2px, corners:url(images/tip/tip-form-invalid-corners.gif), sides:url(images/tip/tip-form-invalid-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/tip/Tip.scss:318 */
 .x-tip-form-invalid {
@@ -13024,8 +13462,8 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:352 */
 .x-form-text-default .x-tagfield-item.x-tagfield-item-selected {
-    background-color: #5dc8f8;
-    border-color: #5dc8f8;
+    background-color: #f93;
+    border-color: #f93;
     color: #fff;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:361 */
@@ -13107,7 +13545,7 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:40 */
 .x-grid-item-over {
     color: #404040;
-    background-color: #e6f1f6;
+    background-color: #f7ece2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:47 */
 .x-grid-item-focused {
@@ -13131,7 +13569,7 @@ a.x-color-picker-item:hover {
     bottom: 0px;
     left: 0px;
     pointer-events: none;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:83 */
 .x-grid-item-selected {
@@ -13151,12 +13589,12 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:101 */
 .x-grid-with-row-lines .x-grid-item.x-grid-item-over {
     border-style: solid;
-    border-color: #dbe5ea;
+    border-color: #eae1d7;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:106 */
 .x-grid-with-row-lines .x-grid-item-over + .x-grid-item {
     border-top-style: solid;
-    border-top-color: #dbe5ea;
+    border-top-color: #eae1d7;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:111 */
 .x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
@@ -13226,7 +13664,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:251 */
 .x-grid-with-col-lines .x-grid-item-over .x-grid-cell {
-    border-color: #dbe5ea;
+    border-color: #eae1d7;
     border-style: solid;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/view/Table.scss:256 */
@@ -13370,7 +13808,7 @@ a.x-color-picker-item:hover {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    border: 1px solid #5dc8f8;
+    border: 1px solid #f93;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Column.scss:65 */
@@ -13380,7 +13818,7 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Column.scss:79 */
 .x-column-header-over {
     background-image: none;
-    background-color: #e6f1f6;
+    background-color: #f7ece2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Column.scss:83 */
 .x-column-header-sort-ASC,
@@ -13390,11 +13828,11 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Column.scss:111 */
 .x-column-header-open {
-    background-color: #e6f1f6;
+    background-color: #f7ece2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Column.scss:114 */
 .x-column-header-open .x-column-header-trigger {
-    background-color: #dbe5ea;
+    background-color: #eae1d7;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Column.scss:119 */
 .x-column-header-over .x-column-header-trigger,
@@ -13475,6 +13913,18 @@ a.x-color-picker-item:hover {
 .x-no-header-borders .x-column-header .x-column-header-inner {
     padding-top: 7px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-column-header:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-column-header-over:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/column/Action.scss:1 */
 .x-grid-cell-inner-action-col {
     padding: 7px 4px 7px 4px;
@@ -13554,11 +14004,11 @@ a.x-color-picker-item:hover {
     padding: 7px 7px 7px 7px;
     border-width: 1px;
     border-style: solid;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-btn-grid-cell-small-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-btn-grid-cell-small {
@@ -13649,9 +14099,15 @@ a.x-color-picker-item:hover {
 .x-btn-grid-cell-small-mc {
     padding: 7px 7px 7px 7px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-corners.gif), sides:url(images/btn/btn-grid-cell-small-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-grid-cell-small {
-    border-color: #31ade5;
+    border-color: #ed7700;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2470 */
 .x-btn-button-grid-cell-small {
@@ -13809,7 +14265,7 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2757 */
 .x-keyboard-mode .x-btn-focus.x-btn-grid-cell-small {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-grid-cell-small .x-btn-arrow-el {
@@ -13827,21 +14283,21 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-grid-cell-small {
-    border-color: #2d9fd2;
+    border-color: #da6e00;
     background-image: none;
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-grid-cell-small,
 .x-btn.x-btn-pressed.x-btn-grid-cell-small {
-    border-color: #2582ac;
+    border-color: #b25900;
     background-image: none;
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-grid-cell-small {
     background-image: none;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2966 */
 .x-keyboard-mode .x-btn-focus .x-btn-grid-cell-small-tl,
@@ -13859,7 +14315,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2978 */
 .x-keyboard-mode .x-btn-focus .x-btn-grid-cell-small-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2991 */
 .x-btn-over .x-btn-grid-cell-small-tl,
@@ -13877,7 +14333,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3003 */
 .x-btn-over .x-btn-grid-cell-small-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3016 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-grid-cell-small-tl,
@@ -13895,7 +14351,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3028 */
 .x-keyboard-mode .x-btn-focus.x-btn-over .x-btn-grid-cell-small-mc {
-    background-color: #31abe2;
+    background-color: #eb7600;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3043 */
 .x-btn.x-btn-menu-active .x-btn-grid-cell-small-tl,
@@ -13922,7 +14378,7 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3055 */
 .x-btn.x-btn-menu-active .x-btn-grid-cell-small-mc,
 .x-btn.x-btn-pressed .x-btn-grid-cell-small-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3069 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-grid-cell-small-tl,
@@ -13949,7 +14405,7 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3081 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-grid-cell-small-mc,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-grid-cell-small-mc {
-    background-color: #288cb9;
+    background-color: #bf6000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3095 */
 .x-btn.x-btn-disabled .x-btn-grid-cell-small-tl,
@@ -13967,7 +14423,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3107 */
 .x-btn.x-btn-disabled .x-btn-grid-cell-small-mc {
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3117 */
 .x-nbr .x-btn-grid-cell-small {
@@ -14056,6 +14512,42 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3225 */
 .x-nbr .x-segmented-button-item-vertical.x-btn-grid-cell-small.x-segmented-button-last:after {
     bottom: 1px;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-focus-corners.gif), sides:url(images/btn/btn-grid-cell-small-focus-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-over-corners.gif), sides:url(images/btn/btn-grid-cell-small-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-focus-over-corners.gif), sides:url(images/btn/btn-grid-cell-small-focus-over-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-pressed-corners.gif), sides:url(images/btn/btn-grid-cell-small-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-focus-pressed-corners.gif), sides:url(images/btn/btn-grid-cell-small-focus-pressed-sides.gif)" !important;
+}
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-grid-cell-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:1px 1px 1px 1px, corners:url(images/btn/btn-grid-cell-small-disabled-corners.gif), sides:url(images/btn/btn-grid-cell-small-disabled-sides.gif)" !important;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-grid-cell-small-cell > .x-grid-cell-inner {
@@ -14190,12 +14682,12 @@ a.x-color-picker-item:hover {
 .x-menu-item-default.x-menu-item-focus,
 .x-menu-item-default.x-menu-item-active {
     background-image: none;
-    background-color: #5dc8f8;
+    background-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/menu/Menu.scss:862 */
 .x-nlg .x-menu-item-default.x-menu-item-focus,
 .x-nlg .x-menu-item-default.x-menu-item-active {
-    background: #5dc8f8 repeat-x left top;
+    background: #f93 repeat-x left top;
     background-image: url(images/menu/menu-item-default-active-bg.gif);
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/menu/Menu.scss:869 */
@@ -14543,12 +15035,12 @@ a.x-color-picker-item:hover {
 .x-menu-item-default-menubar.x-menu-item-focus,
 .x-menu-item-default-menubar.x-menu-item-active {
     background-image: none;
-    background-color: #5dc8f8;
+    background-color: #f93;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/menu/Menu.scss:862 */
 .x-nlg .x-menu-item-default-menubar.x-menu-item-focus,
 .x-nlg .x-menu-item-default-menubar.x-menu-item-active {
-    background: #5dc8f8 repeat-x left top;
+    background: #f93 repeat-x left top;
     background-image: url(images/menu/menu-item-default-menubar-active-bg.gif);
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/menu/Menu.scss:869 */
@@ -14956,7 +15448,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/locking/Lockable.scss:59 */
 .x-rtl.x-grid-inner-locked {
-    border-right-color: #35baf6;
+    border-right-color: #ff8000;
     border-left-color: #d0d0d0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/locking/Lockable.scss:61 */
@@ -15061,7 +15553,7 @@ a.x-color-picker-item:hover {
     border-top: 1px solid #d0d0d0 !important;
     border-bottom: 1px solid #d0d0d0 !important;
     padding: 5px 0 5px 0;
-    background-color: #e0f0f7;
+    background-color: #f8e9da;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/plugin/RowEditing.scss:60 */
 .x-grid-with-col-lines .x-grid-row-editor .x-form-cb {
@@ -15089,11 +15581,11 @@ a.x-color-picker-item:hover {
     padding: 5px 5px 5px 5px;
     border-width: 0 1px 1px 1px;
     border-style: solid;
-    background-color: #e0f0f7;
+    background-color: #f8e9da;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-grid-row-editor-buttons-default-bottom-mc {
-    background-color: #e0f0f7;
+    background-color: #f8e9da;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-grid-row-editor-buttons-default-bottom {
@@ -15184,6 +15676,12 @@ a.x-color-picker-item:hover {
 .x-grid-row-editor-buttons-default-bottom-mc {
     padding: 5px 1px 1px 1px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-grid-row-editor-buttons-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 5px 5px 5px, corners:url(images/grid-row-editor-buttons/grid-row-editor-buttons-default-bottom-corners.gif), sides:url(images/grid-row-editor-buttons/grid-row-editor-buttons-default-bottom-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-grid-row-editor-buttons-default-top {
     -moz-border-radius-topleft: 5px;
@@ -15201,11 +15699,11 @@ a.x-color-picker-item:hover {
     padding: 5px 5px 5px 5px;
     border-width: 1px 1px 0 1px;
     border-style: solid;
-    background-color: #e0f0f7;
+    background-color: #f8e9da;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
 .x-grid-row-editor-buttons-default-top-mc {
-    background-color: #e0f0f7;
+    background-color: #f8e9da;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
 .x-nbr .x-grid-row-editor-buttons-default-top {
@@ -15296,6 +15794,12 @@ a.x-color-picker-item:hover {
 .x-grid-row-editor-buttons-default-top-mc {
     padding: 1px 1px 5px 1px;
 }
+/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-grid-row-editor-buttons-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 0 5px, corners:url(images/grid-row-editor-buttons/grid-row-editor-buttons-default-top-corners.gif), sides:url(images/grid-row-editor-buttons/grid-row-editor-buttons-default-top-sides.gif)" !important;
+}
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/plugin/RowEditing.scss:108 */
 .x-grid-row-editor-buttons {
     border-color: #d0d0d0;
@@ -15372,11 +15876,11 @@ a.x-color-picker-item:hover {
 .x-ssm-extender-drag-handle {
     height: 7px;
     width: 7px;
-    background-color: #35baf6;
+    background-color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/grid/selection/SpreadsheetModel.scss:22 */
 .x-ssm-extender-mask {
-    border: 1px dotted #35baf6;
+    border: 1px dotted #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:1 */
 .x-accordion-layout-ct {
@@ -15392,7 +15896,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:13 */
 .x-keyboard-mode .x-accordion-hd .x-panel-header-title.x-title-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -15411,7 +15915,7 @@ a.x-color-picker-item:hover {
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:34 */
@@ -15422,7 +15926,7 @@ a.x-color-picker-item:hover {
 .x-accordion-item .x-accordion-hd {
     background: #fff;
     border-width: 0;
-    border-color: #35baf6;
+    border-color: #ff8000;
     padding: 12px 10px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:45 */
@@ -15435,7 +15939,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:54 */
 .x-accordion-item .x-accordion-hd-sibling-expanded {
-    border-top-color: #35baf6;
+    border-top-color: #ff8000;
     border-top-width: 0;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:59 */
@@ -15449,7 +15953,7 @@ a.x-color-picker-item:hover {
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:72 */
 .x-accordion-hd .x-tool-tool-el {
     background-color: #fff;
-    color: #35baf6;
+    color: #ff8000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:77 */
 .x-accordion-hd .x-tool-img {
@@ -15480,7 +15984,7 @@ a.x-color-picker-item:hover {
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:126 */
 .x-keyboard-mode .x-accordion-hd .x-tool-focus {
-    outline: 1px solid #35baf6;
+    outline: 1px solid #ff8000;
     outline-offset: 2px;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:63 */
@@ -15499,7 +16003,7 @@ a.x-color-picker-item:hover {
     right: -3px;
     bottom: -3px;
     left: -3px;
-    border: 1px solid #35baf6;
+    border: 1px solid #ff8000;
     pointer-events: none;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/layout/container/Border.scss:5 */
@@ -15686,358 +16190,4 @@ div.x-border-layout-ct {
 .x-resizable-pinned > .x-resizable-handle-east,
 .x-resizable-pinned > .x-resizable-handle-west {
     font: 16px/1 FontAwesome;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-resizable-handle-east-over:before,
-.x-resizable-handle-west-over:before,
-.x-resizable-pinned > .x-resizable-handle-east:before,
-.x-resizable-pinned > .x-resizable-handle-west:before {
-    content: "\f142";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:198 */
-.x-resizable-handle-south-over,
-.x-resizable-handle-north-over,
-.x-resizable-pinned > .x-resizable-handle-south,
-.x-resizable-pinned > .x-resizable-handle-north {
-    font: 16px/10px FontAwesome;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-resizable-handle-south-over:before,
-.x-resizable-handle-north-over:before,
-.x-resizable-pinned > .x-resizable-handle-south:before,
-.x-resizable-pinned > .x-resizable-handle-north:before {
-    content: "\f141";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:210 */
-.x-resizable-handle-southeast-over,
-.x-resizable-pinned > .x-resizable-handle-southeast {
-    font: 16px/1 ExtJS;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-resizable-handle-southeast-over:before,
-.x-resizable-pinned > .x-resizable-handle-southeast:before {
-    content: "\e60c";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:220 */
-.x-resizable-handle-northwest-over,
-.x-resizable-pinned > .x-resizable-handle-northwest {
-    font: 16px/1 ExtJS;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-resizable-handle-northwest-over:before,
-.x-resizable-pinned > .x-resizable-handle-northwest:before {
-    content: "\e609";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:230 */
-.x-resizable-handle-northeast-over,
-.x-resizable-pinned > .x-resizable-handle-northeast {
-    font: 16px/1 ExtJS;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-resizable-handle-northeast-over:before,
-.x-resizable-pinned > .x-resizable-handle-northeast:before {
-    content: "\e60a";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/resizer/Resizer.scss:240 */
-.x-resizable-handle-southwest-over,
-.x-resizable-pinned > .x-resizable-handle-southwest {
-    font: 16px/1 ExtJS;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-resizable-handle-southwest-over:before,
-.x-resizable-pinned > .x-resizable-handle-southwest:before {
-    content: "\e60b";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:2 */
-.x-slider:before {
-    border: 1px solid #d0d0d0;
-    content: '';
-    position: absolute;
-    border-radius: 2px;
-    background-color: #eee;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:20 */
-.x-slider-thumb {
-    background-color: #f6f6f6;
-    border: 1px solid #d0d0d0;
-    border-radius: 2px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:28 */
-.x-slider-thumb:before {
-    color: #d0d0d0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:33 */
-.x-slider-thumb-over {
-    background-color: #fcfcfc;
-    border-color: #c5cfd4;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:36 */
-.x-slider-thumb-over:before {
-    color: #d0d0d0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:42 */
-.x-keyboard-mode .x-slider-focus .x-slider-thumb {
-    background-color: #f6f6f6;
-    border-color: #35baf6;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:45 */
-.x-keyboard-mode .x-slider-focus .x-slider-thumb:before {
-    color: #91d3f1;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:52 */
-.x-keyboard-mode .x-slider-focus .x-slider-thumb-over {
-    background-color: #fcfcfc;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:57 */
-.x-slider-thumb-drag {
-    background-color: #f1f1f1;
-    border-color: #bbcbd2;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:60 */
-.x-slider-thumb-drag:before {
-    color: #d0d0d0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:66 */
-.x-keyboard-mode .x-slider-focus .x-slider-thumb-drag {
-    background-color: #f1f1f1;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:79 */
-.x-slider-horz {
-    padding-left: 10px;
-    background: no-repeat 0 -20px;
-    margin: 6px 0 6px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:86 */
-.x-slider-horz .x-slider-end {
-    padding-right: 10px;
-    background: no-repeat right -40px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:91 */
-.x-slider-horz .x-slider-inner {
-    height: 20px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:96 */
-.x-slider-horz:before {
-    height: 10px;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -5px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:106 */
-.x-slider-horz .x-slider-thumb {
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
-    font: 12px/1 ExtJS;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-slider-horz .x-slider-thumb:before {
-    content: "\e612";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:148 */
-.x-rtl.x-slider-horz {
-    padding-left: 0;
-    padding-right: 10px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:155 */
-.x-rtl.x-slider-horz .x-slider-end {
-    padding-right: 0;
-    padding-left: 10px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:163 */
-.x-rtl.x-slider-horz .x-slider-thumb {
-    margin-right: -10px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:170 */
-.x-slider-ct-vert {
-    /* Vertical styles */
-    height: 100%;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:174 */
-.x-slider-vert {
-    padding-top: 10px;
-    height: 100%;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:181 */
-.x-slider-vert > .x-slider-end {
-    height: 100%;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:183 */
-.x-slider-vert > .x-slider-end > .x-slider-inner {
-    height: 100%;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:189 */
-.x-slider-vert:before {
-    width: 10px;
-    height: 100%;
-    left: 10px;
-    top: 0;
-    margin-left: -5px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:199 */
-.x-slider-vert .x-slider-end {
-    padding-bottom: 10px;
-    background: no-repeat -20px bottom;
-    width: 20px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:205 */
-.x-slider-vert .x-slider-inner {
-    width: 20px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:209 */
-.x-slider-vert .x-slider-thumb {
-    width: 20px;
-    height: 20px;
-    margin-bottom: -10px;
-    font: 12px/1 ExtJS;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:132 */
-.x-slider-vert .x-slider-thumb:before {
-    content: "\e605";
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/src/slider/Multi.scss:262 */
-.x-slider-default-cell > .x-grid-cell-inner,
-.x-sliderwidget-default-cell > .x-grid-cell-inner {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
-.x-tab-default-top {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    padding: 8px 10px 8px 10px;
-    border-width: 0;
-    border-style: solid;
-    background-color: transparent;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
-.x-tab-default-top-mc {
-    background-color: transparent;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
-.x-nbr .x-tab-default-top {
-    padding: 0 !important;
-    border-width: 0 !important;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:281 */
-.x-tab-default-top-frameInfo {
-    font-family: th-0-0-0-0-0-0-0-0-8-10-8-10;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:347 */
-.x-tab-default-top-tl {
-    background-position: 0 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:351 */
-.x-tab-default-top-tr {
-    background-position: right 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:355 */
-.x-tab-default-top-bl {
-    background-position: 0 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:359 */
-.x-tab-default-top-br {
-    background-position: right 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:363 */
-.x-tab-default-top-ml {
-    background-position: 0 top;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:371 */
-.x-tab-default-top-mr {
-    background-position: right top;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:379 */
-.x-tab-default-top-tc {
-    background-position: 0 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:383 */
-.x-tab-default-top-bc {
-    background-position: 0 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:388 */
-.x-tab-default-top-tr,
-.x-tab-default-top-br,
-.x-tab-default-top-mr {
-    padding-right: 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:394 */
-.x-tab-default-top-tl,
-.x-tab-default-top-bl,
-.x-tab-default-top-ml {
-    padding-left: 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:400 */
-.x-tab-default-top-tc {
-    height: 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:403 */
-.x-tab-default-top-bc {
-    height: 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
-.x-tab-default-top-mc {
-    padding: 8px 10px 8px 10px;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
-.x-tab-default-bottom {
-    -moz-border-radius-topleft: 0;
-    -webkit-border-top-left-radius: 0;
-    border-top-left-radius: 0;
-    -moz-border-radius-topright: 0;
-    -webkit-border-top-right-radius: 0;
-    border-top-right-radius: 0;
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-    -moz-border-radius-bottomleft: 0;
-    -webkit-border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding: 8px 10px 8px 10px;
-    border-width: 0 0 0 0;
-    border-style: solid;
-    background-color: transparent;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:237 */
-.x-tab-default-bottom-mc {
-    background-color: transparent;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:264 */
-.x-nbr .x-tab-default-bottom {
-    padding: 0 !important;
-    border-width: 0 !important;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:281 */
-.x-tab-default-bottom-frameInfo {
-    font-family: th-0-0-0-0-0-0-0-0-8-10-8-10;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:347 */
-.x-tab-default-bottom-tl {
-    background-position: 0 0;
-}
-/* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-base/sass/etc/mixins/frame.scss:351 */
-.x-tab-default-bottom-tr {
-    background-position: right 0;
 }

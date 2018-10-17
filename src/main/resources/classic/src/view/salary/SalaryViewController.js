@@ -9,10 +9,17 @@ Ext.define('Admin.view.salary.SalaryViewController', {
         'Ext.exporter.excel.Xlsx'
     ],
 
+    onTabChange: function(tabs, newTab, oldTab) {
+        Ext.suspendLayouts();
+        newTab.setTitle('薪资查询');
+        oldTab.setTitle('薪资分析');
+        Ext.resumeLayouts(true);
+    },
+
     exportTo: function(btn){
         var cfg = Ext.merge({
            // title: '数钱',
-            fileName: '等死' + '.' + (btn.cfg.ext || btn.cfg.type)
+            fileName: '薪资' + '.' + (btn.cfg.ext || btn.cfg.type)
         }, btn.cfg);
         this.doExport(cfg);
         //this.getView().saveDocumentAs(cfg);
@@ -36,45 +43,63 @@ Ext.define('Admin.view.salary.SalaryViewController', {
     onDataReady: function(){
         Ext.log('data ready; time passed = ' + (Date.now() - this.timeStarted));
     },
-    //  onToggleExpanded: function (btn, pressed) {
-    //     var view = this.getView(),
-    //         plugin = view.findPlugin('preview'),
-    //         vm = this.getViewModel();
-
-    //     plugin.toggleExpanded(pressed);
-    //     vm.set({
-    //         expanded: pressed
-    //     });
-    // },
     /*Add*/
 	openAddWindow:function(grid, rowIndex, colIndex){
 			grid.up('salary').add(Ext.widget('salaryAddWindow')).show();
 	},
+	toggleDisabled:function(checkbox, checked){
+        var staffTag = this.lookupReference('staffTag');    //获取下拉框组件
+        
+        var arrayObj = new Array();
+         	staffTag.reset();    // 清空已存在结果
+         	staffTag.getStore().each(function (record) {
+         		arrayObj.push(record.get('id'));	//全选下拉框的内容
+		    	//console.log(record.get('id'));
+			});
+			staffTag.setValue(arrayObj);
+
+      
+        
+	},
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.salary.SalaryModel');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据")
+		}else{
+			var record = Ext.create('Admin.model.salary.SalaryModel');
 
-		var values  =form.getValues();//获取form数据
-		var store = Ext.data.StoreManager.lookup('salaryGridStroe');
-           	record.set(values);
-          	record.save();
+			var values  =form.getValues();//获取form数据
+			var store = Ext.data.StoreManager.lookup('salaryGridStroe');
+	           	record.set(values);
+	          	record.save();
 
-          	setTimeout(store.load(),"500");
-          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
-          	win.close();
+	          	setTimeout(store.load(),"500");
+	          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
+	          	win.close();
+	    }
 	},
 	/* Clear Text */
 	clearText:function(btn){
 		this.lookupReference('searchFieldValue').setValue("");
+		this.lookupReference('staffNameValue').setValue("");
+		this.lookupReference('salaryStandardValue').setValue("");
 		this.lookupReference('searchDataFieldValue').query('datepicker')[0].setValue("");
 		this.lookupReference('searchDataFieldValue2').query('datepicker')[0].setValue("");		
 		this.lookupReference('searchDataFieldValue3').query('datepicker')[0].setValue("");
+		this.lookupReference('searchDataFieldValue4').query('datepicker')[0].setValue("");
+		this.lookupReference('searchDataFieldValue5').query('datepicker')[0].setValue("");		
+		this.lookupReference('searchDataFieldValue6').query('datepicker')[0].setValue("");
 		Ext.getCmp('salarySumCheck').setChecked(false);
-		Ext.getCmp('salaryTimeCheck').setChecked(false);
-		Ext.getCmp('salaryTimeDetailCheck').setChecked(false);
-		Ext.getCmp('salaryTimeStartCheck').setChecked(false);
-		Ext.getCmp('salaryTimeEndCheck').setChecked(false);
+		Ext.getCmp('staffNameCheck').setChecked(false);
+		Ext.getCmp('salaryStandardCheck').setChecked(false);
+		Ext.getCmp('salaryStarTimeCheck').setChecked(false);
+		Ext.getCmp('salaryStarTimeDetailCheck').setChecked(false);
+		Ext.getCmp('salaryStarTimeStartCheck').setChecked(false);
+		Ext.getCmp('salaryStarTimeEndCheck').setChecked(false);
+		Ext.getCmp('salaryEndTimeDetailCheck').setChecked(false);
+		Ext.getCmp('salaryEndTimeStartCheck').setChecked(false);
+		Ext.getCmp('salaryEndTimeEndCheck').setChecked(false);
 	},
     /*Edit*/
 	openEditWindow:function(grid, rowIndex, colIndex){
@@ -109,60 +134,77 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 			win.down('form').getForm().loadRecord(record);
 		}
 	},
-	/*combobox选中后控制对应输入（文本框和日期框）框显示隐藏*/
-	// searchComboboxSelectChuang:function(combo,record,index){
-	// 	//alert(record.data.name);
-	// 	var searchField = this.lookupReference('searchFieldName').getValue();
-	// 	if(searchField==='salaryTime'){
-	// 		this.lookupReference('searchFieldValue').hide();
-	// 		this.lookupReference('searchDataFieldValue').show();
-	// 		this.lookupReference('searchDataFieldValue2').show();
-	// 	}else{
-	// 		this.lookupReference('searchFieldValue').show();
-	// 		this.lookupReference('searchDataFieldValue').hide();
-	// 		this.lookupReference('searchDataFieldValue2').hide();
-	// 	}
-	// },
+
 	/*Quick Search*/
 	quickSearch:function(btn){
-//	var searchField = this.lookupReference('searchFieldName').getValue();
+//	var searchField = this.lookupReference('searchFieldName').getValue();	
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
+		var staffNameValue = this.lookupReference('staffNameValue').getValue();
+		var salaryStandardValue = this.lookupReference('salaryStandardValue').getValue();
+		//开始时间
 		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').query('datepicker')[0].getValue();
 		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').query('datepicker')[0].getValue();		
 		var searchDataFieldValue3 = this.lookupReference('searchDataFieldValue3').query('datepicker')[0].getValue();
+		//结束时间
+		var searchDataFieldValue4 = this.lookupReference('searchDataFieldValue4').query('datepicker')[0].getValue();
+		var searchDataFieldValue5 = this.lookupReference('searchDataFieldValue5').query('datepicker')[0].getValue();		
+		var searchDataFieldValue6 = this.lookupReference('searchDataFieldValue6').query('datepicker')[0].getValue();
 		var store =	btn.up('gridpanel').getStore();
+		store.getProxy().setExtraParams({});
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
 		Ext.apply(store.proxy.extraParams, 
 				{
 					salarySum:"",
-					salaryTimeStart:"",
-					salaryTimeEnd:"",
-					salaryTime:""
+					//staffName:"",name:"",
+					salaryStarTimeStart:"",salaryStarTimeEnd:"",salaryStarTime:"",
+					salaryEndTimeStart:"",salaryEndTimeEnd:"",salaryEndTime:""
 			});
-		// console.log(salaryTimeEndCheck.checked);
-		// console.log(searchDataFieldValue);
-		// console.log(searchDataFieldValue2);
 		if(Ext.getCmp('salarySumCheck').checked){
 			Ext.apply(store.proxy.extraParams, {salarySum:searchValue});
 		}
-		if(Ext.getCmp('salaryTimeCheck').checked){
-			if(Ext.getCmp('salaryTimeDetailCheck').checked){
+		if(Ext.getCmp('staffNameCheck').checked){
+			Ext.apply(store.proxy.extraParams, {staffName:staffNameValue});
+		}
+		if(Ext.getCmp('salaryStandardCheck').checked){
+			Ext.apply(store.proxy.extraParams, {name:salaryStandardValue});
+		}
+		if(Ext.getCmp('salaryStarTimeCheck').checked){	//开始时间
+			if(Ext.getCmp('salaryStarTimeDetailCheck').checked){
 				Ext.apply(store.proxy.extraParams,{
-					salaryTime:Ext.util.Format.date(searchDataFieldValue3, 'Y/m/d H:i:s')
+					salaryStarTime:Ext.util.Format.date(searchDataFieldValue3, 'Y/m/d H:i:s')
 				});
 			}else{
-				if(Ext.getCmp('salaryTimeStartCheck').checked){
+				if(Ext.getCmp('salaryStarTimeStartCheck').checked){
 					Ext.apply(store.proxy.extraParams,{
-						salaryTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s')
+						salaryStarTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s')
 					});
 				}
-				if(Ext.getCmp('salaryTimeEndCheck').checked){
+				if(Ext.getCmp('salaryStarTimeEndCheck').checked){
 					Ext.apply(store.proxy.extraParams,{
-						salaryTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+						salaryStarTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
 					});
 				}	
 			}				
 		}
+		if(Ext.getCmp('salaryEndTimeCheck').checked){	//结束时间
+			if(Ext.getCmp('salaryEndTimeDetailCheck').checked){
+				Ext.apply(store.proxy.extraParams,{
+					salaryEndTime:Ext.util.Format.date(searchDataFieldValue6, 'Y/m/d H:i:s')
+				});
+			}else{
+				if(Ext.getCmp('salaryEndTimeStartCheck').checked){
+					Ext.apply(store.proxy.extraParams,{
+						salaryEndTimeStart:Ext.util.Format.date(searchDataFieldValue4, 'Y/m/d H:i:s')
+					});
+				}
+				if(Ext.getCmp('salaryEndTimeEndCheck').checked){
+					Ext.apply(store.proxy.extraParams,{
+						salaryEndTimeEnd:Ext.util.Format.date(searchDataFieldValue5, 'Y/m/d H:i:s')
+					});
+				}	
+			}				
+		}
+		console.log(store.proxy);
 		store.load({params:{start:0, limit:20, page:1}});
 	},
 	/*Search More*/	
@@ -176,20 +218,20 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		var values  = form.getValues();
 		Ext.apply(store.proxy.extraParams, {
 					salarySum:"",
-					salaryTimeStart:"",
-					salaryTimeEnd:""
+					salaryStarTimeStart:"",
+					salaryStarTimeEnd:""
 			});
 		Ext.apply(store.proxy.extraParams,{
 			salarySum:values.performanceName
 		});
-		if(values.salaryTimeStart!=""){
+		if(values.salaryStarTimeStart!=""){
 			Ext.apply(store.proxy.extraParams,{
-				salaryTimeStart:Ext.util.Format.date(values.salaryTimeStart, 'Y/m/d H:i:s')
+				salaryStarTimeStart:Ext.util.Format.date(values.salaryStarTimeStart, 'Y/m/d H:i:s')
 			});
 		}
-		if(values.salaryTimeEnd!=""){
+		if(values.salaryStarTimeEnd!=""){
 			Ext.apply(store.proxy.extraParams,{
-				salaryTimeEnd:Ext.util.Format.date(values.salaryTimeEnd, 'Y/m/d H:i:s')
+				salaryStarTimeEnd:Ext.util.Format.date(values.salaryStarTimeEnd, 'Y/m/d H:i:s')
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});
@@ -248,5 +290,29 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 	/*Disable*/	
 	onDisableButton:function(grid, rowIndex, colIndex){
 		Ext.Msg.alert("Title","Click Disable Button");
-	}
+	},
+	/*柱状图刷新数据*/
+	onReloadData:function(btn){
+		var analysisPanel = btn.up('salaryAnalysis');
+		var chart = Ext.getCmp("chart");
+       	chart.getStore().removeAll();
+       	setTimeout(function(){
+     			chart.getStore().load();
+		},1000);      
+	},
+	onDownload: function() {
+        if (Ext.isIE8) {
+            Ext.Msg.alert('Unsupported Operation', 'This operation requires a newer version of Internet Explorer.');
+            return;
+        }
+        var chart = Ext.getCmp("chart");
+        if (Ext.os.is.Desktop) {
+            chart.download({
+                filename: 'Redwood City Climate Data Chart'
+            });
+        } else {
+            chart.preview();
+        }
+    },
+
 });

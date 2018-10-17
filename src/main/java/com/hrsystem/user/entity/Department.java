@@ -12,6 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
@@ -24,10 +27,22 @@ public class Department {
 	private Long id;
 	private String departmentName;
 	private String introduce;
-	@ManyToOne(cascade = CascadeType.REFRESH)
+	@JsonIgnore
+	@ManyToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
 	private Department superId;
-//	@OneToMany(cascade = CascadeType.REFRESH)
-//	private List<Department> upId =new ArrayList<Department>();
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="superId")
+	private List<Department> children =new ArrayList<Department>();
+	
+	@Transient
+	private Boolean expanded = true;	//extjs下拉框展开属性
 
-     
+	@Override
+	public String toString() {
+		return "Department [id=" + id + ", departmentName=" + departmentName + ", introduce=" + introduce
+				+ ", expanded=" + expanded + "]";
+	}
+    
+	
+	
 }
+ 

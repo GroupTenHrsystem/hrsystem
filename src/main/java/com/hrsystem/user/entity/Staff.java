@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -41,9 +42,11 @@ public class Staff {
 	private Date employmentDate;
 	@JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
 	private Date leaveDate;
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "positionId")
 	private Role role;
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Department department;
 }

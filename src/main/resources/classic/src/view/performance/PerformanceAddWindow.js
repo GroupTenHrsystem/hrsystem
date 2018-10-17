@@ -1,22 +1,25 @@
 Ext.define('Aria.view.performance.PerformanceAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.performanceAddWindow',
-    height: 400,
-    minHeight: 100,
-    minWidth: 300,
-    width: 500,
+    y:50,
+    resizable : false,
+    minWidth: 425,
+    maxWidth: 425,
+    width: 520,
     scrollable: true,
-    title: '添加绩效考核信息',
-    closable: true,
-    constrain: true,
-    defaultFocus: 'textfield',
-    modal:true,
-    layout: 'fit',
+    title: '绩效考核',
+    width: 600,
+    layout:'fit',
+    bodyPadding: 10,
+    defaults: {
+        anchor: '100%',
+        labelWidth: 100
+    },
     items: [{
         xtype: 'form',
-        layout: 'form',
-        padding: '10px',
-        ariaLabel: 'Enter your name',
+        // layout: 'form',
+        // padding: '10px',
+        // ariaLabel: 'Enter your name',
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
@@ -33,33 +36,38 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
         }, {
             xtype: 'textfield',
             fieldLabel: '绩效考核名称',
+            allowBlank:false, 
+            regexText: '请填写',
+            width:400,
             name:'performanceName'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核开始时间',
             name:'startTime',
+            editable:false,
+            allowBlank:false, 
+            regexText: '请选择日期',
+            width:400,
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '考核结束时间',
+            allowBlank:false, 
+            editable:false,
+            regexText: '请选择日期',
             name:'endTime',
+            width:400,
             format: 'Y/m/d H:i:s'
         }, 
-        // {
-        //     xtype: 'textfield',
-        //     fieldLabel: '考核周期',
-        //     name:'cycle'
-        // },
+    
+
         {
             xtype: 'combo',
+            allowBlank:false, 
+            width:400,
             store: {
                 type: 'array',
                 fields: [ 'id' ,'name'],
-                data: [
-                    // ['test@example.com','name'],         //假数据
-                    // ['someone@example.com','name'],
-                    // ['someone-else@example.com','name']
-                ],
                 autoLoad: true, //启动自动加载
                 proxy: {
                             type: 'rest',
@@ -80,56 +88,44 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             editable: false,
             valueField:'id',
             displayField: 'name', //显示的field
-         //   plugins: 'fieldreplicator',   //选中后追加文本框
             fieldLabel: '绩效模板',
             anchor: '0',
             queryMode: 'local',
             selectOnTab: false,
             name: 'performanceTempletId',
             emptyText:'请选择...',
-          // blankText: '请选择', // 该项如果没有选择，则提示错误信息,
             onReplicate: function () {
                 this.getStore().clearFilter();
             }
         },
 
         {
-            xtype: 'combo',
-            store: {
-                type: 'array',
-                fields: [ 'id' ,'departmentName'],
-                data: [
-                    // ['test@example.com','name'],         //假数据
-                    // ['someone@example.com','name'],
-                    // ['someone-else@example.com','name']
-                ],
-                autoLoad: true, //启动自动加载
-                proxy: {
-                            type: 'ajax',
-                            url: '/performance/department',
-                            reader:{
-                                type:'json',
-                                rootProperty:'',//对应后台返回的结果集名称
-                                totalProperty: 'totalElements'//分页需要知道总记录数
-                            },
-                            writer: {
-                                type: 'json',
-                            },
-                            simpleSortMode: true    //简单排序模式
-                    },
-                autoSync: true
-            },
-            mode:'local' ,
-            editable: false,
-            valueField:'id',
-            displayField: 'departmentName', //显示的field
-         //   plugins: 'fieldreplicator',   //选中后追加文本框
+            xtype: 'treepicker',
+            allowBlank:false, 
+            displayField: 'departmentName',
+            autoScroll:true,
+            scrollable: true,
+            width:400,
+            minPickerHeight: 400,
             fieldLabel: '选择部门',
-            anchor: '0',
-            queryMode: 'local',
-            selectOnTab: false,
-            name: 'departmentId',
-            emptyText:'请选择...',
+            flex: 1,
+            //必须这样创建store
+            store:Ext.create("Ext.data.TreeStore",{
+                    fields: ['id','departmentName'],
+                    root: {
+                        departmentName: '请选择部门',
+                        id:'-1',
+                        expanded: true
+                    },
+                    rootVisible: false,
+                    proxy: {
+                        type: 'ajax',
+                        url: '/department/findNoParent',
+                        reader: {
+                            type: 'json'
+                        }
+                    }
+                }),
             listeners:{
             select:function(combo,record,index){
                     var departmentId=record.get('id');
@@ -143,44 +139,57 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
                                 });
                 }
             },
-          // blankText: '请选择', // 该项如果没有选择，则提示错误信息,
-            onReplicate: function () {
-                this.getStore().clearFilter();
-            }
         },
 
         {
-            xtype: 'tagfield',
-            fieldLabel: 'Select a state',
-            id:'staff',
-            store: {
-                type: 'array',
-                fields: [ 'id' ,'staffName'],
-           //     autoLoad: true, //启动自动加载
-                proxy: {
-                            type: 'rest',
-                            url: '/performance/departmentAllStaff',
-                            reader:{
-                                type:'json',
-                                rootProperty:'',//对应后台返回的结果集名称
-                                totalProperty: 'totalElements'//分页需要知道总记录数
-                            },
-                            writer: {
-                                type: 'json',
-                            },
-                            simpleSortMode: true    //简单排序模式
-                    },
-             //   autoSync: true
-            },
-            valueField:'id',
-            displayField: 'staffName',
-            name:'staffIds',
-            filterPickList: true,
-            queryMode: 'local',
-            publishes: 'value'
-        }
-        
-        ]
+            xtype: 'fieldcontainer',
+            combineErrors: true,
+            layout: 'hbox',
+            items: [{
+                xtype: 'tagfield',
+                allowBlank:false, 
+                fieldLabel: '选择员工',
+                id:'staff',
+                reference:'staffTag',
+               // disabled:true,
+                width:340,
+                store: {
+                    type: 'array',
+                    fields: [ 'id' ,'staffName'],
+               //     autoLoad: true, //启动自动加载
+                    // data: [
+                    //     ['-1','全选']
+                    // ],
+                    proxy: {
+                                type: 'rest',
+                                url: '/department/departmentAllStaff',
+                                reader:{
+                                    type:'json',
+                                    rootProperty:'',//对应后台返回的结果集名称
+                                    totalProperty: 'totalElements'//分页需要知道总记录数
+                                },
+                                writer: {
+                                    type: 'json',
+                                },
+                                simpleSortMode: true    //简单排序模式
+                        },
+                 //   autoSync: true
+                },
+                valueField:'id',
+                displayField: 'staffName',
+                name:'staffIds',
+                filterPickList: true,
+                queryMode: 'local',
+                publishes: 'value'
+            },{
+                xtype: 'checkbox',
+                boxLabel: '全选',
+                margin: '0 0 0 10',
+                listeners: {
+                    change: 'toggleDisabled'  // see Controller
+                }
+            }]
+        }]
     }],
    
     dockedItems: {
