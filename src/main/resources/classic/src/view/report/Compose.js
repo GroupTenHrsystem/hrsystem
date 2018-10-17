@@ -39,7 +39,7 @@ Ext.define('Admin.view.report.Compose', {
             xtype: 'datefield',
             fieldLabel: '日期',
             editable:false,
-            name:'dateTime',
+            name:'time',
             allowBlank:false, 
             regexText: '请选择日期',
             width:400,

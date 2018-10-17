@@ -1,6 +1,9 @@
 package com.hrsystem.report.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,6 +30,12 @@ public class ReportService implements IReportService{
 	public void saveReport(Report report) {
 		// TODO Auto-generated method stub
 		reportRepository.save(report);
+	}
+
+	@Override
+	public Page<Report> findAll(Specification<Report> spec, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return reportRepository.findAll(spec, pageable);
 	}
 
 }

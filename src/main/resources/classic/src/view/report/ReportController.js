@@ -33,7 +33,7 @@ Ext.define('Admin.view.email.ReportController', {
                 xtype: 'emailwindow',
                 items: [
                     Ext.apply({
-                        xtype: view
+                        xtype: view,
                     }, params.targetCfg)
                 ]
             }, params.windowCfg);
@@ -55,6 +55,7 @@ Ext.define('Admin.view.email.ReportController', {
 
     onGridCellItemClick: function(view, td, cellIndex, record){
         if(cellIndex > 1){
+            console.log(record);
             this.setCurrentView('emaildetails', {record: record});
         } else if (cellIndex === 1) {
             //Invert selection
@@ -65,9 +66,9 @@ Ext.define('Admin.view.email.ReportController', {
     beforeDetailsRender: function(view) {
         var record = view.record ? view.record : {};
 
-        view.down('#mailBody').setHtml(record.get('contents'));
-        view.down('#attachments').setData(record.get('attachments'));
-        view.down('#emailSubjectContainer').setData(record.data? record.data: {});
-        view.down('#userImage').setSrc('resources/images/user-profile/'+ record.get('user_id') + '.png');
+        // view.down('#mailBody').setHtml(record.get('contents'));
+        // view.down('#attachments').setData(record.get('attachments'));
+        // view.down('#emailSubjectContainer').setData(record.data? record.data: {});
+        // view.down('#userImage').setSrc('resources/images/user-profile/'+ record.get('user_id') + '.png');
     }
 });

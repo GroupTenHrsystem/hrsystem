@@ -1,5 +1,9 @@
 package com.hrsystem.report.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+
 import com.hrsystem.report.entity.Report;
 
 /**
@@ -12,4 +16,6 @@ import com.hrsystem.report.entity.Report;
 */
 public interface IReportService {
 	public void saveReport(Report report);
+	
+	public Page<Report> findAll(Specification<Report> spec, Pageable pageable);
 }

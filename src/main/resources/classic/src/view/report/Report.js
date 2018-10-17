@@ -5,9 +5,9 @@ Ext.define('Admin.view.email.Report', {
 
     controller: 'report',
 
-    // viewModel: {
-    //     type: 'email'
-    // },
+    viewModel: {
+        type: 'reportViewModel'
+    },
 
     itemId: 'emailMainContainer',
 
@@ -19,7 +19,18 @@ Ext.define('Admin.view.email.Report', {
     margin: '20 0 0 20',
 
     items: [
+       
         {
+            xtype: 'container',
+            id:'contentPanel',
+            itemId: 'contentPanel',
+            margin: '0 20 20 0',
+            flex: 1,
+            layout: {
+                type : 'anchor',
+                anchor : '100%'
+            }
+        }, {
             xtype: 'container',
 
             itemId: 'navigationPanel',
@@ -49,16 +60,6 @@ Ext.define('Admin.view.email.Report', {
                 //     xtype: 'emailfriendslist'
                 // }
             ]
-        },
-        {
-            xtype: 'container',
-            itemId: 'contentPanel',
-            margin: '0 20 20 0',
-            flex: 1,
-            layout: {
-                type : 'anchor',
-                anchor : '100%'
-            }
         }
     ]
 });
