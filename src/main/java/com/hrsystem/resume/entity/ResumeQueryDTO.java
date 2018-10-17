@@ -13,7 +13,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hrsystem.activiti.domain.ProcessStatus;
 
+import lombok.Data;
+
+@Data
 public class ResumeQueryDTO {
 
 	private String name;  
@@ -37,143 +41,6 @@ public class ResumeQueryDTO {
 	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date applyTime;  
 	private String restatus;   
-	
-	public String getName() {
-		return name;
-	}
-
-	public String getSex() {
-		return sex;
-	}
-
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public String getNativePlace() {
-		return nativePlace;
-	}
-
-	public String getMajor() {
-		return major;
-	}
-
-	public String getPoliticsStatus() {
-		return politicsStatus;
-	}
-
-	public String getGraduateSchool() {
-		return graduateSchool;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public String getEmployBranch() {
-		return employBranch;
-	}
-
-	public String getExperience() {
-		return experience;
-	}
-
-	public String getSelfEvaluation() {
-		return selfEvaluation;
-	}
-
-	public boolean isIfrefer() {
-		return ifrefer;
-	}
-
-	public String getReferer() {
-		return referer;
-	}
-
-	public String getAttachment() {
-		return attachment;
-	}
-
-	public Date getApplyTime() {
-		return applyTime;
-	}
-
-	public String getRestatus() {
-		return restatus;
-	}
-	
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
-
-	public void setNativePlace(String nativePlace) {
-		this.nativePlace = nativePlace;
-	}
-
-	public void setMajor(String major) {
-		this.major = major;
-	}
-
-	public void setPoliticsStatus(String politicsStatus) {
-		this.politicsStatus = politicsStatus;
-	}
-
-	public void setGraduateSchool(String graduateSchool) {
-		this.graduateSchool = graduateSchool;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public void setEmployBranch(String employBranch) {
-		this.employBranch = employBranch;
-	}
-
-	public void setExperience(String experience) {
-		this.experience = experience;
-	}
-
-	public void setSelfEvaluation(String selfEvaluation) {
-		this.selfEvaluation = selfEvaluation;
-	}
-
-	public void setIfrefer(boolean ifrefer) {
-		this.ifrefer = ifrefer;
-	}
-
-	public void setReferer(String referer) {
-		this.referer = referer;
-	}
-
-	public void setAttachment(String attachment) {
-		this.attachment = attachment;
-	}
-
-	public void setApplyTime(Date applyTime) {
-		this.applyTime = applyTime;
-	}
-
-	public void setRestatus(String restatus) {
-		this.restatus = restatus;
-	}
 
 	@SuppressWarnings({ "serial"})
 	public static Specification<Resume> getWhereClause(final ResumeQueryDTO resumeQueryDTO) {
