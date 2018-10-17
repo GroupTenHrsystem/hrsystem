@@ -255,9 +255,16 @@
                 viewType: 'scheduling',
                 leaf: true
             },{
+               	text: '工作汇报',
+                iconCls: 'x-fa fa-address-card',
+                rowCls: 'nav-tree-badge nav-tree-badge-new',
+                viewType: 'report',
+                leaf: true
+            },{
                 text: 'Login',
                 iconCls: 'x-fa fa-check',
                 viewType: 'login',
+                visible:false,
                 leaf: true
            	}
         ]

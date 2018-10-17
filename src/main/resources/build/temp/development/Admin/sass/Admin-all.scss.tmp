@@ -45,6 +45,15 @@ $include-admin-view-authentication-register: dynamic(true);;
 $include-admin-view-dashboard-dashboard: dynamic(true);;
 $include-admin-view-dashboard-dashboardcontroller: dynamic(true);;
 $include-admin-view-dashboard-dashboardmodel: dynamic(true);;
+$include-admin-view-email-composeviewcontroller: dynamic(true);;
+$include-admin-view-email-composeviewmodel: dynamic(true);;
+$include-admin-view-email-details: dynamic(true);;
+$include-admin-view-email-detailsviewmodel: dynamic(true);;
+$include-admin-view-email-inbox: dynamic(true);;
+$include-admin-view-email-menu: dynamic(true);;
+$include-admin-view-email-menuviewmodel: dynamic(true);;
+$include-admin-view-email-report: dynamic(true);;
+$include-admin-view-email-reportcontroller: dynamic(true);;
 $include-admin-view-leave-leaveaddwindow: dynamic(true);;
 $include-admin-view-leave-leavecenterpanel: dynamic(true);;
 $include-admin-view-leave-leaveeditwindow: dynamic(true);;
@@ -92,6 +101,8 @@ $include-admin-view-recruit-recruit: dynamic(true);;
 $include-admin-view-recruit-recruitpanel: dynamic(true);;
 $include-admin-view-recruit-recruitviewcontroller: dynamic(true);;
 $include-admin-view-recruit-recruitviewmodel: dynamic(true);;
+$include-admin-view-report-compose: dynamic(true);;
+$include-admin-view-report-window: dynamic(true);;
 $include-admin-view-resume-resume: dynamic(true);;
 $include-admin-view-resume-resumepanel: dynamic(true);;
 $include-admin-view-resume-resumeviewcontroller: dynamic(true);;
@@ -2197,6 +2208,30 @@ $current-package: false;
 $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/dashboard/Dashboard';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Details.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/report/Details';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Inbox.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/report/Inbox';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Report.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/report/Report';
 
 /* including package Admin */
 $Admin-resource-root: '' !default;

@@ -25,8 +25,8 @@
         {
             xtype: 'toolbar',
             cls: 'sencha-dash-dash-headerbar shadow',
-            style:'background-color: #272727',
-            height: 84,
+            style:'background-color: #272727;top: 93%;',
+            height: 74,
             itemId: 'headerBar',
             items: [
                 {

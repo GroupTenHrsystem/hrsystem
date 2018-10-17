@@ -31,12 +31,14 @@ Ext.define('Aria.view.performanceTemplet.PerformanceTempletAddWindow', {
         }, {
             xtype: 'datefield',
             fieldLabel: '开始时间',
+            editable:false,
             allowBlank:false, 
             name:'startTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '结束时间',
+            editable:false,
             allowBlank:false, 
             name:'endTime',
             format: 'Y/m/d H:i:s'

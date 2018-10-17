@@ -33,16 +33,17 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
         //      regexText : "只能输入abc" 
         //  },
          {
-            xtype: 'datefield',
+            xtype: 'textfield',
             fieldLabel: 'id',
             name:'id',
             hidden: true,
             readOnly: true
         }, {
-            xtype: 'textfield',
+            xtype: 'datefield',
             fieldLabel: 'id',
             name:'createTime',
             format: 'Y/m/d H:i:s',
+            editable:false,
             hidden: true,
             readOnly: true
         }, {
