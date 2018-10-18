@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.hrsystem.user.entity.Role;
+import com.hrsystem.user.entity.DTO.RoleDTO;
 
 public interface IRoleService {
 
@@ -22,4 +23,5 @@ public interface IRoleService {
 	 public Page<Role> findAll(Specification<Role> spec, Pageable pageable);
 	 
 //	 public List<Role> getRoleByRoleTempletId(Long id);
+	 public List<RoleDTO> findDepartmentAndRole();
 }

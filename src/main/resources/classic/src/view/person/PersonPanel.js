@@ -14,7 +14,6 @@ Ext.define('Admin.view.person.PersonPanel', {
         'Ext.form.field.Date',
         'Ext.grid.column.Date'
     ],
-
   //  controller: 'searchresults',
  		viewModel: {type: 'personViewModel'},
         layout: 'fit',
@@ -44,48 +43,8 @@ Ext.define('Admin.view.person.PersonPanel', {
 		        handler: 'openUpdateWindow'	
 		    }
         ] 
-        }],
-
-    //controller: 'searchresults',
-   // viewModel: {type: 'orderViewModel'},
-    layout: 'fit',
-   width: 350,
-    
-
-            items: [{
-                xtype: 'container',
-                layout: 'hbox',
-                defaultType: 'textfield',
-                margin: '0 0 5 0',
-                items: [{
-                    xtype: 'propertygrid',
-                    nameColumnWidth: 165,
-                    source: {
-                        employeNum:  1,
-                        staffName: 1,
-                        sex: 1,
-                        idcard:1,
-                        email: 1,
-                        phone: 1,
-                        password: 1,
-                        address: 1,
-                        nativePlace: 1,
-                        status: 1,
-                        createTimeStart: 1,
-                        createTimeEnd:1,
-                        birthday: 1
-                    },
-                    sourceConfig: {
-                        borderWidth: {
-                            displayName: 'Border Width'
-                        },
-                        tested: {
-                            displayName: 'QA'
-                        }
-                    }
-                }]
-        }]   
-
+        }
+        ]
 
 });
 

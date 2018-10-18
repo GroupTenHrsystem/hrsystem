@@ -19,5 +19,8 @@ public interface DepartmentRepository extends PagingAndSortingRepository<Departm
 	//找出所有子部门
 	@Query(value="SELECT * FROM hrsystem.t_department WHERE super_id_id is NULL",nativeQuery=true)
 	public List<Department> findNoParent();
-	
+	//找出子部门员工数
+//	@Query(value="SELECT COUNT(d.id) FROM Department d where d.superId=?1")
+//	public long count(Long parentId);
+//	
 }
