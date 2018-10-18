@@ -41,13 +41,13 @@
                     {
                         text: '组织架构管理',
                         iconCls: 'x-fa fa-exclamation-triangle',
-                        viewType: 'page404',
+                        viewType: 'department',
                         leaf: true
                     },
                     {
                         text: '职位管理',
                         iconCls: 'x-fa fa-lightbulb-o',
-                        viewType: 'passwordreset',
+                        viewType: 'role',
                         leaf: true
                     }
                 ]

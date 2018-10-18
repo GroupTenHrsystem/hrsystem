@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hrsystem.common.BeanUtils;
+import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IDepartmentService;
@@ -58,4 +63,51 @@ public class DepartmentController {
     	lists.add(departmentId);
 		return departmentService.findAllSubChildrensStaffs(lists,departmentId);
     }
+    //更新
+    @RequestMapping(value="/update")
+	public ExtAjaxResponse update(@RequestParam(name="id") Long myId,@RequestParam(name="departmentName") String departmentName,@RequestParam(name="introduce") String introduce) 
+	{
+		try {
+			Department entity = departmentService.findDepartmentById(myId);
+			if(entity!=null) {
+				entity.setDepartmentName(departmentName);
+				entity.setIntroduce(introduce);
+				departmentService.insertDepartment(entity);
+			}
+			return new ExtAjaxResponse(true,"更新成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"更新失败！");
+		}
+	}
+    @RequestMapping(value="/save")
+	public ExtAjaxResponse save(@RequestParam(name="departmentName") String departmentName,@RequestParam(name="introduce") String introduce,@RequestParam(name="superId") Department superId) 
+	{
+		try {
+			System.out.println(superId);
+			System.out.println("111111111111");
+            Department entity = new Department();
+				entity.setDepartmentName(departmentName);
+				entity.setIntroduce(introduce);
+				entity.setSuperId(superId);
+				departmentService.insertDepartment(entity);
+			return new ExtAjaxResponse(true,"添加成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"添加失败！");
+		}
+	}
+    @RequestMapping(value="/delete")
+	public ExtAjaxResponse update(@RequestParam(name="id") Long id) 
+	{
+		try {
+			Department entity = departmentService.findDepartmentById(id);
+			entity.setSuperId(null);
+			if(entity!=null) {
+				departmentService.deleteDepartment(id);
+			}
+			return new ExtAjaxResponse(true,"删除成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"删除失败！");
+		}
+	}
+    
 }

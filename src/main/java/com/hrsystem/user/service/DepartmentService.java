@@ -150,4 +150,10 @@ public class DepartmentService implements IDepartmentService {
 //		return null;
 //	}
 
+//	@Override
+//	public long count(Long parentId) {
+//		// TODO Auto-generated method stub
+//		return departmentRepository.count(parentId);
+//	}
+
 }

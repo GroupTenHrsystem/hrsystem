@@ -35,6 +35,15 @@ public class Department {
 	
 	@Transient
 	private Boolean expanded = true;	//extjs下拉框展开属性
+
+	@Override
+	public String toString() {
+		return "Department [id=" + id + ", departmentName=" + departmentName + ", introduce=" + introduce
+				+ ", expanded=" + expanded + "]";
+	}
+	
+	
+	
      
 }
  
