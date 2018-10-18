@@ -8,10 +8,12 @@ Ext.define('Admin.view.scheduling.schedulingPanel', {
         'Ext.form.field.Time'
     ],
 
-    width: 1200,
-    height: 600,
+    width: 1100,
+    height: 710,
 
-  viewModel: {
+    title: '日程安排',
+
+    viewModel: {
         data: {
             value: new Date()
         },
