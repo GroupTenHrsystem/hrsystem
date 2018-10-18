@@ -38,15 +38,6 @@ Ext.define('Admin.view.email.Details', {
         },
         {
             iconCls: 'x-fa fa-trash'
-        },
-        {
-            iconCls: 'x-fa fa-exclamation-circle'
-        },
-        {
-            iconCls:'x-fa fa-print'
-        },
-        {
-            iconCls: 'x-fa fa-forward'
         }
     ],
 
@@ -58,70 +49,56 @@ Ext.define('Admin.view.email.Details', {
         items: [
             '->',
             {
-                ui: 'gray',
-                text: 'Save'
-            },
-            {
                 ui: 'soft-green',
-                text: 'Send'
+                text: 'Save',
+                listeners: {
+                    click: 'onSaveBtnClick'
+                }
             }
         ]
     },
 
     items: [
         {
-            xtype: 'container',
-            height: 82,
-            layout: {
-                type: 'hbox',
-                align: 'stretch'
-            },
-            items: [
-                {
-                    xtype: 'image',
-                    itemId: 'userImage',
-                    cls: 'email-sender-img',
-                    alt: 'profileImage',
-                    height: 80,
-                    width: 80
-                },
-                {
-                    xtype: 'component',
-                    flex: 1,
-                    cls: 'single-mail-email-subject',
-                    data: {},
-                    itemId: 'emailSubjectContainer',
-                    padding: 10,
-                    tpl: [
-                        '<div class="user-name">{from}</div>',
-                        '<div class="user-info">{title}</div>'
-                    ]
-                }
-            ]
-        },
-        {
-            xtype: 'box',
-            cls: 'mail-body',
-            itemId: 'mailBody'
-        },
-        {
-            xtype: 'box',
-            itemId: 'attachments',
-            cls:'attachment-container',
-            data: null,
-            tpl: [
-                '<tpl for=".">',
-                    '<img class="single-mail-attachment" src="resources/images/{.}" ',
-                          'alt="profile image">',
-                '</tpl>'
-            ]
+            xtype: 'textfield',
+            fieldLabel: 'id',
+            name:'id',
+            itemId: 'id',
+            allowBlank:false,
+            hidden:true
+        },{
+            xtype: 'textfield',
+            fieldLabel: '标题',
+            name:'title',
+            itemId: 'title',
+            allowBlank:false, 
+        },{
+            xtype: 'datefield',
+            fieldLabel: '日期',
+            editable:false,
+            name:'time',
+            itemId: 'time',
+            allowBlank:false, 
+            regexText: '请选择日期',
+            width:400,
+            format: 'Y/m/d'
         },
         {
             xtype: 'htmleditor',
-            height: 250,
-            fieldLabel: 'Reply',
+            name:'messages',
+            itemId: 'messages',
+            // Make tips align neatly below buttons.
+            buttonDefaults: {
+                tooltip: {
+                    align: 't-b',
+                    anchor: true
+                }
+            },
+            flex: 1,
+            minHeight: 100,
             labelAlign: 'top',
-            labelSeparator: ''
+            fieldLabel: '内容',
+            allowBlank:false
         }
-    ]
+    ],
 });

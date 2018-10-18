@@ -33,7 +33,7 @@ Ext.define('Admin.view.email.ReportController', {
                 xtype: 'emailwindow',
                 items: [
                     Ext.apply({
-                        xtype: view
+                        xtype: view,
                     }, params.targetCfg)
                 ]
             }, params.windowCfg);
@@ -55,6 +55,7 @@ Ext.define('Admin.view.email.ReportController', {
 
     onGridCellItemClick: function(view, td, cellIndex, record){
         if(cellIndex > 1){
+            console.log(record);
             this.setCurrentView('emaildetails', {record: record});
         } else if (cellIndex === 1) {
             //Invert selection
@@ -64,10 +65,85 @@ Ext.define('Admin.view.email.ReportController', {
 
     beforeDetailsRender: function(view) {
         var record = view.record ? view.record : {};
+        view.down('#id').setValue(record.data.id);
+        view.down('#title').setValue(record.data.title);
+        view.down('#time').setValue(record.data.time);
+        view.down('#messages').setValue(record.data.messages);
+    },
+    /*    添加  */
+    onSaveBtnClick:function(bt) {
+        var form    = bt.up('form');
+        if(!form.isValid()){
+            Ext.Msg.alert("错误", "请填写正确数据");
+        }else{
+            var values  =form.getValues();
+            var editor = form.down('htmleditor');
+            Ext.Ajax.request({ 
+                        url : '/report/save', 
+                        method : 'post', 
+                        params : { 
+                            id :values.id,
+                            title: values.title,
+                            time: values.time,
+                            messages: editor.getValue()
+                        }, 
+                        success: function(response, options) {
+                            var json = Ext.util.JSON.decode(response.responseText);
+                            if(json.success){
+                                Ext.Msg.alert('操作成功', json.msg, function() {
+                                    var contentPanel = Ext.getCmp('contentPanel');
+                                    var grid = contentPanel.down('grid');
+                                    grid.getStore().reload();
+                                    //store.reload();
+                                });
+                            }else{
+                                 Ext.Msg.alert('操作失败', json.msg);
+                            }
+                        }
+                    });
 
-        view.down('#mailBody').setHtml(record.get('contents'));
-        view.down('#attachments').setData(record.get('attachments'));
-        view.down('#emailSubjectContainer').setData(record.data? record.data: {});
-        view.down('#userImage').setSrc('resources/images/user-profile/'+ record.get('user_id') + '.png');
+
+          this.onBackBtnClick();
+        }
+    },
+
+    onDeleteBtnClick:function(bt) {
+        var form    = bt.up('form');
+        var contentPanel = Ext.getCmp('contentPanel');
+        var grid = contentPanel.down('grid');
+        var selModel = grid.getSelectionModel();
+
+        if (selModel.hasSelection()) {
+            Ext.Msg.confirm("提示", "确定要删除吗？", function (button) {
+                if (button == "yes") {
+                    var rows = selModel.getSelection();
+                    var selectIds = []; //要删除的id
+                    Ext.each(rows, function (row) {
+                        selectIds.push(row.data.id);
+                    });
+                    Ext.Ajax.request({ 
+                        url : '/report/deletes', 
+                        method : 'post', 
+                        params : { 
+                            //ids[] :selectIds
+                            ids :selectIds
+                        }, 
+                        success: function(response, options) {
+                            var json = Ext.util.JSON.decode(response.responseText);
+                            if(json.success){
+                                Ext.Msg.alert('操作成功', json.msg, function() {
+                                    grid.getStore().reload();
+                                });
+                            }else{
+                                 Ext.Msg.alert('操作失败', json.msg);
+                            }
+                        }
+                    });
+                }
+            });
+        }else {
+            Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
+        }
+        
     }
 });

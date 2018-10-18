@@ -4,9 +4,9 @@ Ext.define('Admin.view.email.Inbox', {
 
     cls: 'email-inbox-panel shadow',
 
-    bind: {
-        store: '{inbox}'
-    },
+    bind: '{reportLists}',
+
+    autoLoad: true,
 
     viewConfig: {
         preserveScrollOnRefresh: true,
@@ -28,30 +28,35 @@ Ext.define('Admin.view.email.Inbox', {
     scrollable: false,
 
     columns: [
-        
         {
-            dataIndex: 'from',
-            text: '时间',
-            width: 140
+            xtype: 'gridcolumn',
+            dataIndex: 'id',
+            text: 'id',
+            hidden:true
         },
         {
+            xtype: 'gridcolumn',
             dataIndex: 'title',
             text: '标题',
             flex: 1
         },
         {
-            dataIndex: 'has_attachments',
-            text: '<span class="x-fa fa-paperclip"></span>',
-            width: 40,
-            renderer: function(value) {
-                return value ? '<span class="x-fa fa-paperclip"></span>' : '';
-            }
+            xtype: 'gridcolumn',
+            cls: 'content-column',
+            dataIndex: 'time',
+            text: '时间',
+            flex: 1,
+            formatter: 'date("Y/m/d")',
+            filter: true
         }
-        // ,{
-        //     xtype: 'datecolumn',
-        //     dataIndex: 'received_on',
-        //     width: 90,
-        //     text: 'Received'
+        // ,
+        // {
+        //     dataIndex: 'has_attachments',
+        //     text: '<span class="x-fa fa-paperclip"></span>',
+        //     width: 40,
+        //     renderer: function(value) {
+        //         return value ? '<span class="x-fa fa-paperclip"></span>' : '';
+        //     }
         // }
     ],
     dockedItems: [{
@@ -59,6 +64,6 @@ Ext.define('Admin.view.email.Inbox', {
         dock: 'bottom',
         itemId: 'userPaginationToolbar',
         displayInfo: true,
-        bind: '{userLists}'
+        bind: '{reportLists}'
     }]
 });

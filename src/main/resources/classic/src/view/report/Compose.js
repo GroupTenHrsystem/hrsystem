@@ -32,12 +32,14 @@ Ext.define('Admin.view.report.Compose', {
     items: [
         {
             xtype: 'textfield',
-            fieldLabel: '标题'
+            fieldLabel: '标题',
+            name:'title',
+            allowBlank:false, 
         },{
             xtype: 'datefield',
             fieldLabel: '日期',
             editable:false,
-            name:'dateTime',
+            name:'time',
             allowBlank:false, 
             regexText: '请选择日期',
             width:400,
@@ -45,7 +47,7 @@ Ext.define('Admin.view.report.Compose', {
         },
         {
             xtype: 'htmleditor',
-            
+            name:'messages',
             // Make tips align neatly below buttons.
             buttonDefaults: {
                 tooltip: {
@@ -56,7 +58,8 @@ Ext.define('Admin.view.report.Compose', {
             flex: 1,
             minHeight: 100,
             labelAlign: 'top',
-            fieldLabel: '内容'
+            fieldLabel: '内容',
+            allowBlank:false
         }
     ],
 
@@ -87,7 +90,8 @@ Ext.define('Admin.view.report.Compose', {
             {
                 xtype: 'button',
                 ui: 'soft-green',
-                text: 'Save'
+                text: '保存',
+                handler:'onSaveComposeClick'
             }
         ]
     }
