@@ -33,5 +33,7 @@ public class Payment {
 	private ProcessStatus processStatus;
     private String userId;
     private String processInstanceId;
+    
+    private Boolean status = true;
 	
 }

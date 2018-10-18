@@ -32,4 +32,6 @@ public class PaymentQueryDTO {
 	
 	@Like
 	private String reason;
+	
+	private Boolean status = true;
 }

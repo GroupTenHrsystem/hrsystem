@@ -96,7 +96,7 @@
 		var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
 		if (selModel.hasSelection()) {
-			Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
+			Ext.Msg.confirm("警告", "确定要删除吗？将只能删除新建的任务", function (button) {
 				if (button == "yes") {
 					var rows = selModel.getSelection();
 					var selectIds = []; //要删除的id
