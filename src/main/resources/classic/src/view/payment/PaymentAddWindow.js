@@ -31,17 +31,20 @@
             value:'NEW',
             hidden: true,
             readOnly: true
-        },{
-			xtype: 'textfield',
-			name: 'userId',
-			fieldLabel: '发起人',
-			//value:loginUser,
-			allowBlank: false
-		},{
+        },
+  //       {
+		// 	xtype: 'textfield',
+		// 	name: 'userId',
+		// 	fieldLabel: '发起人',
+		// 	//value:loginUser,
+		// 	allowBlank: false
+		// },
+        {
 			xtype     : 'numberfield',
 	        grow      : true,
 	        name      : 'price',
 	        fieldLabel: '报销金额',
+            allowBlank:false, 
 	        minValue: 0,
 	        allowDecimals: true,
 	        decimalPrecision: 1,
@@ -49,6 +52,7 @@
 		},{
 			xtype     : 'textareafield',
 			grow      : true,
+            allowBlank:false, 
 			name      : 'reason',
 			fieldLabel: '报销用途',
 			anchor    : '100%'

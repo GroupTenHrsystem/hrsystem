@@ -192,21 +192,18 @@
             		{
 	                    text: '绩效模板',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performanceTemplet',
 		                leaf: true
 	                },
 	                {
 	                    text: '绩效考核',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performance',
 		                leaf: true
 	                },
 	                {
 	                	text: '待考核',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performanceApproveCenterPanel',
 		                leaf: true
 	                },
@@ -257,7 +254,6 @@
            	},{
                	text: '日程安排模块',
                 iconCls: 'x-fa fa-address-card',
-                rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'scheduling',
                 leaf: true
             },{
@@ -288,7 +284,6 @@
             },{
                	text: '工作汇报',
                 iconCls: 'x-fa fa-address-card',
-                rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'report',
                 leaf: true
             },{

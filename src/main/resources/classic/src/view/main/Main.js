@@ -49,7 +49,7 @@
                     text: '  ',
                 },{
                     xtype: 'component',
-                    html:'<div style="pointer-events: none;background-color: #707B7C;"><iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1" width="310" height="25" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>',
+                    html:'<div style="pointer-events: none;background-color: #ADADAD;"><iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1" width="310" height="25" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>',
                 },
                 '->',{
                     xtype: 'tbtext',

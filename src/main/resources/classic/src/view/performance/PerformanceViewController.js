@@ -110,7 +110,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	/*Quick Search*/
 	quickSearch:function(btn){
-	var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
 		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
 		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();

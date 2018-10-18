@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.hrsystem.common.SessionUtil;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.payment.entity.Payment;
 import com.hrsystem.payment.entity.PaymentDTO;
 import com.hrsystem.payment.entity.PaymentQueryDTO;
@@ -108,7 +109,7 @@ public class PaymentController {
 		String userId = SessionUtil.getUserName(session);
 		if(userId!=null) {
 			paymentQueryDTO.setUserId(SessionUtil.getUserName(session));
-			page = paymentService.findAll(PaymentQueryDTO.getWhereClause(paymentQueryDTO), pageable.getPageable());
+			page = paymentService.findAll(SpecificationBuilder.buildSpecification(paymentQueryDTO), pageable.getPageable());
 		}else {
 			page = new PageImpl<Payment>(new ArrayList<Payment>(),pageable.getPageable(),0);
 		}
@@ -149,7 +150,7 @@ public class PaymentController {
     	return page;
     }
 	
-	 @RequestMapping(value = "claim/{id}")
+	@RequestMapping(value = "claim/{id}")
     public @ResponseBody ExtAjaxResponse claim(@PathVariable("id") String taskId, HttpSession session) {
     	try{
     		paymentService.claim(taskId, SessionUtil.getUserName(session));
@@ -160,7 +161,7 @@ public class PaymentController {
 	    }
     }
 	 
-	 @RequestMapping(value = "complete/{taskId}")
+	@RequestMapping(value = "complete/{taskId}")
     public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, WorkflowVariable var,Long id) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();

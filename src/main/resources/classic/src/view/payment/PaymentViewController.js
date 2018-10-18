@@ -45,10 +45,37 @@
 	},
 	/*Quick Search*/	
 	quickSearch:function(btn){
-		
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
+		var store =	btn.up('gridpanel').getStore();
+		Ext.apply(store.proxy.extraParams, 
+				{
+					processStatus:"",
+				//	cycle:"",
+					price:"",
+					reason:""
+			});		
+		if(searchField==='processStatus'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {processStatus:searchDataFieldValue});
+		}
+		if(searchField==='price'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {price:searchDataFieldValue});
+		}
+		if(searchField==='reason'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {reason:searchDataFieldValue});
+		}
+		store.load({params:{start:0, limit:20, page:1}});
 	},
+
+	clearText:function(btn){
+		this.lookupReference('searchDataFieldValue').setValue("");	
+	},
+
 	submitSearchForm:function(btn){
-	
+
 	},
 	/*Delete One Row*/	
 	deleteOneRow:function(grid, rowIndex, colIndex){
