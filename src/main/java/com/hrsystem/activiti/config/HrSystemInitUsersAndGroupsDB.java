@@ -250,13 +250,6 @@ public class HrSystemInitUsersAndGroupsDB {
 		        	
 		        		 
 		        		//招聘模块
-		        		Interview interview = new Interview();
-		     			interview.setInterviewer("Alica Hong");
-		     			interview.setFaceResult("pass");
-		     			interview.setEstimate("优秀");
-		     			interview.setFaceDate(new Date());
-		     			interview.setInterviewStatus("一面");
-		     			
 		     			Resume resume = new Resume();
 		    			resume.setName("miette");
 		    			resume.setSex("女");
@@ -266,17 +259,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			resume.setEmployBranch("技术部");
 		    			resume.setExperience("2年");
 		    			resume.setReferer("Jony jk");
-		    			
-		    			resume.setInterview(interview);
 		    			resumeService.save(resume);
-		    			
-
-		    			Interview interview2 = new Interview();
-		     			interview2.setInterviewer("Yamy");
-		     			interview2.setFaceResult("unpass");
-		     			interview2.setEstimate("语言表达不好");
-		     			interview2.setFaceDate(new Date());
-		     			interview2.setInterviewStatus("二面");
 		     			
 		     			Resume resume2 = new Resume();
 		    			resume2.setName("Avichk");
@@ -286,8 +269,6 @@ public class HrSystemInitUsersAndGroupsDB {
 		    			resume2.setGraduateSchool("华南理工");
 		    			resume2.setEmployBranch("宣传部");
 		    			resume2.setExperience("1年的ps工作");
-		    			
-		    			resume2.setInterview(interview2);
 		    			resumeService.save(resume2);
 		    			
 		    			//招聘信息

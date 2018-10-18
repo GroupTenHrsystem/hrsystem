@@ -12,6 +12,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import com.hrsystem.log.ControllerLogs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
@@ -50,6 +51,7 @@ public class PerformanceTempletController {
 	 * @return
 	 */
 	@GetMapping("/get/{id}")
+	@ControllerLogs(description = "通过ID查绩效模板")
 	public PerformanceTemplet getPerformanceById(@PathVariable Long id) {
 		return performanceTempletService.findPerformanceTempletById(id);
 	}
@@ -60,6 +62,7 @@ public class PerformanceTempletController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
+	@ControllerLogs(description = "插入绩效模板")
 	public String insertPerformance(@RequestBody PerformanceTemplet performanceTemplet) {		
 		try {
 			performanceTemplet.setStatus(true);
@@ -71,6 +74,7 @@ public class PerformanceTempletController {
 	}
 
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
+	@ControllerLogs(description = "更新绩效模板")
 	public String update(@PathVariable("id") Long myId,@RequestBody PerformanceTemplet dto) 
 	{
 		try {
@@ -88,6 +92,7 @@ public class PerformanceTempletController {
 	 * @return
 	 */
 	@DeleteMapping(value="{id}")
+	@ControllerLogs(description = "通过id删除绩效模板")
 	public String deletePerformanceById(@PathVariable Long id) {
 			List<Performance> performanceByPerformanceTempletId = performanceService.getPerformanceByPerformanceTempletId(id);
 			if (performanceByPerformanceTempletId.size() == 0) {
@@ -101,20 +106,22 @@ public class PerformanceTempletController {
 			}
 	}
 
-	 @PostMapping("/deletes")
-		public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
-		{
-			try {
-				if(ids!=null) {
-					performanceTempletService.deleteAll(ids);
-				}
-				return new ExtAjaxResponse(true,"批量删除成功！");
-			} catch (Exception e) {
-				return new ExtAjaxResponse(true,"批量删除失败！");
+	@PostMapping("/deletes")
+	@ControllerLogs(description = "批量删除绩效模板")
+	public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
+	{
+		try {
+			if(ids!=null) {
+				performanceTempletService.deleteAll(ids);
 			}
+			return new ExtAjaxResponse(true,"批量删除成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"批量删除失败！");
 		}
+	}
 	 
 	@GetMapping
+	@ControllerLogs(description = "查询绩效模板")
 	public Page<PerformanceTemplet> getPage(PerformanceTempletQueryDTO performanceTempletQueryDTO,ExtjsPageRequest pageRequest) 
 	{
 		Specification buildSpecification = SpecificationBuilder.buildSpecification(performanceTempletQueryDTO);

@@ -20,7 +20,7 @@
             success: function(response, options) {
             	var json = Ext.util.JSON.decode(response.responseText);
 	            if(json.success){
-	            	me.redirectTo('dashboard', true);
+	            	me.redirectTo('report', true);
 	            	Ext.getCmp('loginUserName').setText(json.map.userName);
 	            	//Ext.getCmp('loginUserImage').getEl().dom.src = json.map.loginUserImage;
 	            

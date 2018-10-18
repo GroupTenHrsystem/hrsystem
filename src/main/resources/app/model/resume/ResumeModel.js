@@ -16,11 +16,13 @@
 	    {type: 'string',name: 'phone'},
 	    {type: 'string',name: 'employBranch'},
 	    {type: 'string',name: 'experience'},
-	    //{type: 'string',name: 'selfEvaluation'},
-	    //{type: 'string',name: 'referer'},
-	    //{type: 'string',name: 'attachment'},
-	    {type: 'date',name: 'applyTime', dateFormat:'Y/m/d H:i:s'},
-	    {type: 'string',name: 'restatus'}
+	    {type: 'string',name: 'selfEvaluation'},
+	    {type: 'string',name: 'referer'},
+	    {type: 'string',name: 'attachment'},
+	    {type: 'date',name: 'applyTime', dateFormat:'Y/m/d'},
+	    {type:'string',name:'userId'},
+	    {type:'string',name:'processStatus'},
+	    {type:'string',name:'processInstanceId'}
 	],
 	proxy: {
 		type: 'rest',

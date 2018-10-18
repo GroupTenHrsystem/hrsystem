@@ -7,6 +7,7 @@ import java.util.*;
 
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
+import com.hrsystem.log.ServiceLogs;
 import com.hrsystem.performance.entity.DTO.PerformanceQueryDTO;
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.performance.repository.PerformanceRepository;
@@ -20,7 +21,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.domain.Sort;
 import com.hrsystem.salary.entity.Salary;
 import com.hrsystem.salary.repository.SalaryRepository;
 
@@ -35,6 +37,7 @@ import com.hrsystem.salary.repository.SalaryRepository;
  
 */
 @Service
+@Transactional
 public class SalaryService implements ISalaryService{
 	@Autowired
 	SalaryRepository salaryRepository;
@@ -44,15 +47,18 @@ public class SalaryService implements ISalaryService{
 	StaffRepository staffRepository;
 	@Autowired
 	PerformanceRepository performanceRepository;
+
+	@ServiceLogs(description = "通过id找薪资")
 	public Salary findSalaryById(Long id) {
 		// TODO Auto-generated method stub
-		 Optional<Salary> Salary = salaryRepository.findById(id);
-		    if (!Salary.isPresent()) {
+		 Optional<Salary> salary = salaryRepository.findById(id);
+		    if (!salary.isPresent()) {
 		        return null;
 		    }
-		    return Salary.get();
+		    return salary.get();
 	}
 	@Override
+	@ServiceLogs(description = "插入薪资")
 	public void insertSalary(SalaryDTO salaryDTO) {
 		// TODO Auto-generated method stub
 		//批量插入，数据转换
@@ -112,6 +118,7 @@ public class SalaryService implements ISalaryService{
 			house = Double.parseDouble(df.format(house));
 
 			salarySum = salarySum - pension - medicare - maternity - unemployment - injury - house;
+			salarySum = Double.parseDouble(df.format(salarySum));
 			/*
 			 *	数据库插入工资
 			 */
@@ -134,30 +141,45 @@ public class SalaryService implements ISalaryService{
 		}
 	}
 	@Override
+	@ServiceLogs(description = "更新薪资")
 	public void updataSalary(Salary Salary) {
 		// TODO Auto-generated method stub
 		salaryRepository.save(Salary);
 	}
 
 	@Override
+	@ServiceLogs(description = "删除薪资（单个")
 	public void deleteSalary(Long id) {
 		// TODO Auto-generated method stub
-		salaryRepository.deleteById(id);
+		Optional<Salary> optional = salaryRepository.findById(id);
+		if(optional.isPresent()) {
+			Salary salary = optional.get();
+			salary.setStatus(false);
+			salaryRepository.save(salary);
+		}else {
+			return;
+		}
+		//salaryRepository.deleteById(id);
 	}
  
 	@Override
+	@ServiceLogs(description = "删除薪资（全部")
 	public void deleteAll(Long[] ids) {
 		// TODO Auto-generated method stub
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
-		List<Salary> Salary = (List<Salary>) salaryRepository.findAllById(idLists);
-		salaryRepository.deleteAll(Salary);
+		salaryRepository.updateAll(idLists);
 	}
 
 	@Override
+	@ServiceLogs(description = "薪资找全部")
 	public Page<Salary> findAll(Specification<Salary> spec, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return salaryRepository.findAll(spec, pageable);
 	}
 
+	@Override
+	@ServiceLogs(description = "通过用户名查找薪资")
+	public List<Salary> getSalaryByStaffName(String userId){
+		return salaryRepository.getSalaryByStaffName(userId);
+	}
 }

@@ -25,26 +25,36 @@
         {
             xtype: 'toolbar',
             cls: 'sencha-dash-dash-headerbar shadow',
-            height: 64,
+            style:'background-color: #272727;top: 93%;',
+            height: 74,
             itemId: 'headerBar',
             items: [
                 {
                     xtype: 'component',
                     reference: 'senchaLogo',
                     cls: 'sencha-logo',
-                    html: '<div class="main-logo"><img src="resources/images/company-logo.png">Hello Extjs</div>',
-                    width: 250
+                    style:'background-color: #FF8000;margin-left: 5px!important;',
+                    html: '<div class="main-logo" style="background-color: #FF8000;color: black;font-size:16px"><img src="resources/images/icon.png">汇人事管理系统</div>',
+                    width: 240
                 },
                 {
                     margin: '0 0 0 8',
                     ui: 'header',
-                    iconCls:'x-fa fa-navicon',
+                    style:'background-color: #272727;',
+                    iconCls:'x-fa fa-fast-backward',
                     id: 'main-navigation-btn',
                     handler: 'onToggleNavigationSize'
+                },{
+                    xtype: 'tbtext',
+                    text: '  ',
+                },{
+                    xtype: 'component',
+                    html:'<div style="pointer-events: none;background-color: #ADADAD;"><iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1" width="310" height="25" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>',
                 },
                 '->',{
                     xtype: 'tbtext',
                     text: '用户名:Admin',
+                    style:'color: #FF8000;font-size:16px',
                     id:'loginUserName',
                     cls: 'top-user-name'
                 },{
@@ -87,6 +97,7 @@
                     xtype: 'treelist',
                     reference: 'navigationTreeList',
                     itemId: 'navigationTreeList',
+                    style:'background-color: #272727',
                     ui: 'nav',
                     store: 'NavigationTree',
                     width: 250,

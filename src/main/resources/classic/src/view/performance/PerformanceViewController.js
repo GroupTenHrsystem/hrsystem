@@ -89,7 +89,6 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 			var store = Ext.data.StoreManager.lookup('performanceGridStroe');
 	    	var values  = win.down('form').getValues();//获取form数据
 	    	var record = store.getById(values.id);//获取id获取store中的数据
-	    	console.log(record);
 	    	record.set(values);   	
 	    	setTimeout(store.load(),"500");
 	        win.close();
@@ -111,7 +110,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	/*Quick Search*/
 	quickSearch:function(btn){
-	var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
 		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
 		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();
@@ -213,7 +212,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 				var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
         if (selModel.hasSelection()) {
-            Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
+            Ext.Msg.confirm("警告", "不能删除审批中的任务,确定要删除吗？", function (button) {
                 if (button == "yes") {
                     var rows = selModel.getSelection();
                     var selectIds = []; //要删除的id

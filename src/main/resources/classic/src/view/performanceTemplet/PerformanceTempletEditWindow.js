@@ -31,12 +31,14 @@ Ext.define('Aria.view.performanceTemplet.PerformanceTempletEditWindow', {
         }, {
             xtype: 'datefield',
             fieldLabel: '开始时间',
+            editable:false,
             allowBlank:false, 
             name:'startTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '结束时间',
+            editable:false,
             allowBlank:false, 
             name:'endTime',
             format: 'Y/m/d H:i:s'
@@ -90,11 +92,11 @@ Ext.define('Aria.view.performanceTemplet.PerformanceTempletEditWindow', {
         dock: 'bottom',
         items: [{
             xtype: 'button',
-            text: 'Submit',
+            text: '提交',
             handler: 'submitEditForm'
         },{
             xtype: 'button',
-            text: 'Close',
+            text: '关闭',
             handler: function(btn) {
                 btn.up('window').close();
             }

@@ -33,16 +33,17 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
         //      regexText : "只能输入abc" 
         //  },
          {
-            xtype: 'datefield',
+            xtype: 'textfield',
             fieldLabel: 'id',
             name:'id',
             hidden: true,
             readOnly: true
         }, {
-            xtype: 'textfield',
+            xtype: 'datefield',
             fieldLabel: 'id',
             name:'createTime',
             format: 'Y/m/d H:i:s',
+            editable:false,
             hidden: true,
             readOnly: true
         }, {
@@ -134,11 +135,11 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
         dock: 'bottom',
         items: [{
             xtype: 'button',
-            text: 'Submit',
+            text: '提交',
             handler: 'submitAddForm'
         },{
             xtype: 'button',
-            text: 'Close',
+            text: '关闭',
             handler: function(btn) {
                 btn.up('window').close();
             }

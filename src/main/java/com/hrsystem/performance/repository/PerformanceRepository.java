@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.lang.Nullable;
@@ -35,6 +36,10 @@ public interface PerformanceRepository extends PagingAndSortingRepository<Perfor
 	@Query(value = "SELECT * FROM hrsystem.t_performance where staff_id = ?1 AND end_time Between ?2 And ?3 AND start_time Between ?2 And ?3 ",nativeQuery=true)
 	List<Performance> getPerformanceByStaffAndTime(Long id,  Date startTime, Date endTime);
 
+	@Modifying
+	@Query(value="UPDATE hrsystem.t_performance SET status = false WHERE id IN ?1 AND process_status != 'APPROVAL'",nativeQuery=true) 
+	public void updateAll(List<Long> ids);
+	 
 	@Override
     @EntityGraph("Performance.withStaff")
 	Page<Performance> findAll(@Nullable Specification<Performance> spec, Pageable pageable);

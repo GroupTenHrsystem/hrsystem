@@ -25,6 +25,13 @@
             readOnly: true
         }, {
             xtype: 'textfield',
+            fieldLabel: 'processStatus',
+            name:'processStatus',
+            value:'NEW',
+            hidden:true,
+            readOnly:true
+        }, {
+            xtype: 'textfield',
             fieldLabel: '姓名',
             name:'name'
     	}, {
@@ -73,10 +80,6 @@
             fieldLabel: '应聘时间',
             name:'applyTime',
             format: 'Y/m/d H:i:s'
-		}, {
-		    xtype: 'textfield',
-		    fieldLabel: '简历状态',
-		    name:'restatus'
         }]
     }],
    

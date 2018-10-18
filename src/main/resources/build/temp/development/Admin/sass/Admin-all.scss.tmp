@@ -1,10 +1,16 @@
 $app-name:  dynamic( 'Admin' );
+<<<<<<< HEAD
 $image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+=======
+$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+>>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
 $include-admin-model-leave-leavemodel: dynamic(true);;
 $include-admin-model-order-ordermodel: dynamic(true);;
+$include-admin-model-payment-paymentmodel: dynamic(true);;
+$include-admin-model-paymentapprove-paymentapprovemodel: dynamic(true);;
 $include-admin-model-performance-myperformancemodel: dynamic(true);;
 $include-admin-model-performance-performancemodel: dynamic(true);;
 $include-admin-model-performanceapprove-performanceapprovemodel: dynamic(true);;
@@ -12,7 +18,13 @@ $include-admin-model-performancetemplet-performancetempletmodel: dynamic(true);;
 $include-admin-model-person-personmodel: dynamic(true);;
 $include-admin-model-process-definition-processdefinitionmodel: dynamic(true);;
 $include-admin-model-recruit-recruitmodel: dynamic(true);;
+$include-admin-model-report-reportmodel: dynamic(true);;
 $include-admin-model-resume-resumemodel: dynamic(true);;
+<<<<<<< HEAD
+=======
+$include-admin-model-resumeapprove-resumeapprovemodel: dynamic(true);;
+$include-admin-model-salary-salaryanalysismodel: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-model-salary-salarymodel: dynamic(true);;
 $include-admin-model-salarystandard-salarystandardmodel: dynamic(true);;
 $include-admin-model-user-usermodel: dynamic(true);;
@@ -22,6 +34,8 @@ $include-admin-store-navigationtree: dynamic(true);;
 $include-admin-store-department-departmentgridstore: dynamic(true);;
 $include-admin-store-leave-leavestroe: dynamic(true);;
 $include-admin-store-order-ordergridstroe: dynamic(true);;
+$include-admin-store-payment-paymentstroe: dynamic(true);;
+$include-admin-store-paymentapprove-paymentapprovestore: dynamic(true);;
 $include-admin-store-performance-myperformancegridstroe: dynamic(true);;
 $include-admin-store-performance-performancegridstroe: dynamic(true);;
 $include-admin-store-performanceapprove-performanceapprovestore: dynamic(true);;
@@ -29,7 +43,13 @@ $include-admin-store-performancetemplet-performancetempletgridstroe: dynamic(tru
 $include-admin-store-person-persongridstore: dynamic(true);;
 $include-admin-store-process-definition-processdefinitionstroe: dynamic(true);;
 $include-admin-store-recruit-recruitgridstroe: dynamic(true);;
+$include-admin-store-report-reportgridstroe: dynamic(true);;
 $include-admin-store-resume-resumegridstroe: dynamic(true);;
+<<<<<<< HEAD
+=======
+$include-admin-store-resumeapprove-resumeapprovestore: dynamic(true);;
+$include-admin-store-salary-salaryanalysisstroe: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-store-salary-salarygridstroe: dynamic(true);;
 $include-admin-store-salarystandard-salarystandardgridstroe: dynamic(true);;
 $include-admin-store-user-usergridstore: dynamic(true);;
@@ -44,10 +64,22 @@ $include-admin-view-authentication-register: dynamic(true);;
 $include-admin-view-dashboard-dashboard: dynamic(true);;
 $include-admin-view-dashboard-dashboardcontroller: dynamic(true);;
 $include-admin-view-dashboard-dashboardmodel: dynamic(true);;
+<<<<<<< HEAD
 $include-admin-view-department-department: dynamic(true);;
 $include-admin-view-department-departmentpanel: dynamic(true);;
 $include-admin-view-department-departmentviewcontroller: dynamic(true);;
 $include-admin-view-department-departmentviewmodel: dynamic(true);;
+=======
+$include-admin-view-email-composeviewcontroller: dynamic(true);;
+$include-admin-view-email-composeviewmodel: dynamic(true);;
+$include-admin-view-email-details: dynamic(true);;
+$include-admin-view-email-detailsviewmodel: dynamic(true);;
+$include-admin-view-email-inbox: dynamic(true);;
+$include-admin-view-email-menu: dynamic(true);;
+$include-admin-view-email-menuviewmodel: dynamic(true);;
+$include-admin-view-email-report: dynamic(true);;
+$include-admin-view-email-reportcontroller: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-view-leave-leaveaddwindow: dynamic(true);;
 $include-admin-view-leave-leavecenterpanel: dynamic(true);;
 $include-admin-view-leave-leaveeditwindow: dynamic(true);;
@@ -55,6 +87,8 @@ $include-admin-view-leave-leavegridpanel: dynamic(true);;
 $include-admin-view-leave-leavesearchwindow: dynamic(true);;
 $include-admin-view-leave-leaveviewcontroller: dynamic(true);;
 $include-admin-view-leave-leaveviewmodel: dynamic(true);;
+$include-admin-view-leaveapprove-task-firstaudit: dynamic(true);;
+$include-admin-view-leaveapprove-task-lastaudit: dynamic(true);;
 $include-admin-view-main-main: dynamic(true);;
 $include-admin-view-main-maincontainerwrap: dynamic(true);;
 $include-admin-view-main-maincontroller: dynamic(true);;
@@ -63,6 +97,18 @@ $include-admin-view-order-order: dynamic(true);;
 $include-admin-view-order-orderpanel: dynamic(true);;
 $include-admin-view-order-orderviewcontroller: dynamic(true);;
 $include-admin-view-order-orderviewmodel: dynamic(true);;
+$include-admin-view-payment-paymentaddwindow: dynamic(true);;
+$include-admin-view-payment-paymentcenterpanel: dynamic(true);;
+$include-admin-view-payment-paymentgridpanel: dynamic(true);;
+$include-admin-view-payment-paymentviewcontroller: dynamic(true);;
+$include-admin-view-payment-paymentviewmodel: dynamic(true);;
+$include-admin-view-paymentapprove-paymentapprovecenterpanel: dynamic(true);;
+$include-admin-view-paymentapprove-paymentapprovegrid: dynamic(true);;
+$include-admin-view-paymentapprove-paymentapproveviewcontroller: dynamic(true);;
+$include-admin-view-paymentapprove-paymentapproveviewmodel: dynamic(true);;
+$include-admin-view-paymentapprove-paymentapprovewindow: dynamic(true);;
+$include-admin-view-paymentapprove-task-paymentaudit: dynamic(true);;
+$include-admin-view-paymentapprove-task-paymentmanageraudit: dynamic(true);;
 $include-admin-view-performance-myperformanceviewmodel: dynamic(true);;
 $include-admin-view-performance-performance: dynamic(true);;
 $include-admin-view-performance-performancepanel: dynamic(true);;
@@ -75,7 +121,6 @@ $include-admin-view-performanceapprove-performanceapproveviewcontroller: dynamic
 $include-admin-view-performanceapprove-performanceapproveviewmodel: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapprovewindow: dynamic(true);;
 $include-admin-view-performanceapprove-task-deptleaderaudit: dynamic(true);;
-$include-admin-view-performanceapprove-task-modifyapply: dynamic(true);;
 $include-admin-view-performanceapprove-task-reportback: dynamic(true);;
 $include-admin-view-performanceapprove-task-selfaudit: dynamic(true);;
 $include-admin-view-performancetemplet-performancetemplet: dynamic(true);;
@@ -95,14 +140,26 @@ $include-admin-view-recruit-recruit: dynamic(true);;
 $include-admin-view-recruit-recruitpanel: dynamic(true);;
 $include-admin-view-recruit-recruitviewcontroller: dynamic(true);;
 $include-admin-view-recruit-recruitviewmodel: dynamic(true);;
+$include-admin-view-report-compose: dynamic(true);;
+$include-admin-view-report-window: dynamic(true);;
+$include-admin-view-report-reportviewmodel: dynamic(true);;
 $include-admin-view-resume-resume: dynamic(true);;
 $include-admin-view-resume-resumepanel: dynamic(true);;
 $include-admin-view-resume-resumeviewcontroller: dynamic(true);;
 $include-admin-view-resume-resumeviewmodel: dynamic(true);;
+<<<<<<< HEAD
 $include-admin-view-role-role: dynamic(true);;
 $include-admin-view-role-rolepanel: dynamic(true);;
 $include-admin-view-role-roleviewcontroller: dynamic(true);;
 $include-admin-view-role-roleviewmodel: dynamic(true);;
+=======
+$include-admin-view-resumeapprove-resumeapprovepanel: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapproveviewmodel: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapprovewindow: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapprovegrid: dynamic(true);;
+$include-admin-view-resumeapprove-resumeapproveviewcontroller: dynamic(true);;
+$include-admin-view-resumeapprove-task-resumechose: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-view-salary-salary: dynamic(true);;
 $include-admin-view-salary-salarypanel: dynamic(true);;
 $include-admin-view-salary-salaryviewcontroller: dynamic(true);;
@@ -130,8 +187,10 @@ $include-aria-view-performancetemplet-performancetempleteditwindow: dynamic(true
 $include-aria-view-performancetemplet-performancetempletsearchwindow: dynamic(true);;
 $include-aria-view-person-personeditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitaddwindow: dynamic(true);;
+$include-aria-view-recruit-recruitbiggerwindow: dynamic(true);;
 $include-aria-view-recruit-recruiteditwindow: dynamic(true);;
 $include-aria-view-recruit-recruitsearchwindow: dynamic(true);;
+$include-aria-view-resume-checkwindow: dynamic(true);;
 $include-aria-view-resume-resumeaddwindow: dynamic(true);;
 $include-aria-view-resume-resumeeditwindow: dynamic(true);;
 $include-aria-view-resume-resumesearchwindow: dynamic(true);;
@@ -2207,6 +2266,38 @@ $current-package: false;
 $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/dashboard/Dashboard';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\recruit\RecruitBiggerWindow.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/recruit/RecruitBiggerWindow';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Details.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/report/Details';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Inbox.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/report/Inbox';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\report\Report.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/report/Report';
 
 /* including package Admin */
 $Admin-resource-root: '' !default;

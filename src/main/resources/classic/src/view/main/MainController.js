@@ -78,7 +78,6 @@ Ext.define('Admin.view.main.MainController', {
 
     onNavigationTreeSelectionChange: function (tree, node) {
         var to = node && (node.get('routeId') || node.get('viewType'));
-
         if (to) {
             this.redirectTo(to);
         }
@@ -115,7 +114,11 @@ Ext.define('Admin.view.main.MainController', {
             navigationList.canMeasure = false;
 
             // Start this layout first since it does not require a layout
-            refs.senchaLogo.animate({dynamic: true, to: {width: new_width}});
+         
+            //refs.senchaLogo.animate({dynamic: true, to: {width: new_width}});
+
+            refs.senchaLogo.animate({dynamic: true, to: {width: 240}});
+
 
             // Directly adjust the width config and then run the main wrap container layout
             // as the root layout (it and its chidren). This will cause the adjusted size to

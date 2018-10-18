@@ -26,11 +26,13 @@ Ext.define('Aria.view.salary.SalaryEditWindow', {
         }, {
             xtype: 'datefield',
             fieldLabel: '开始日期',
+            editable:false,
             name:'salaryStarTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '结束日期',
+            editable:false,
             name:'salaryEndTime',
             format: 'Y/m/d H:i:s'
         }]

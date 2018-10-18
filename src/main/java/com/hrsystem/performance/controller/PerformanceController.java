@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import com.hrsystem.log.ControllerLogs;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CreationHelper;
@@ -97,6 +98,7 @@ public class PerformanceController {
 	 * @return
 	 */
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
+	@ControllerLogs(description = "绩效考核插入")
 	public String insertPerformance(HttpSession session,@RequestBody PerformanceDTO performanceDTO) {		
 		try {
 			String userId = SessionUtil.getUserName(session);
@@ -123,6 +125,7 @@ public class PerformanceController {
 		}
 	}
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
+	@ControllerLogs(description = "绩效考核更新")
 	public String update(@PathVariable("id") Long myId,@RequestBody Performance dto) 
 	{
 		try {
@@ -140,6 +143,7 @@ public class PerformanceController {
 	 * @return
 	 */
 	@DeleteMapping(value="{id}")
+	@ControllerLogs(description = "绩效考核删除单条")
 	public String deletePerformanceById(@PathVariable Long id) {
 		try {
 			//performanceService.deletePerformance(id);
@@ -151,8 +155,23 @@ public class PerformanceController {
 			return "success:删除失败";
 		}
 	}
-
+	
+	@PostMapping("/deletes")
+	@ControllerLogs(description = "绩效考核批量删除")
+	public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
+	{
+		try {
+			if(ids!=null) {
+				performanceService.deleteAll(ids);
+			}
+			return new ExtAjaxResponse(true,"批量删除成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"批量删除失败！");
+		}
+	}
+	
 	@GetMapping
+	@ControllerLogs(description = "绩效考核查询")
 	public Page<PerformanceRelateDTO> getPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{
 	   Page<Performance> page;
@@ -169,6 +188,7 @@ public class PerformanceController {
 	}
 	/*查看参与的绩效考核*/
 	@RequestMapping("/myPage")
+	@ControllerLogs(description = "查看个人绩效")
 	public Page<PerformanceRelateDTO> getMyPage(PerformanceQueryDTO performanceQueryDTO,HttpSession session,ExtjsPageRequest pageRequest)
 	{
 		Page<Performance> page;
@@ -182,6 +202,7 @@ public class PerformanceController {
 	}
 	/*导出excel文档*/
 	@RequestMapping("/downloadExcel")
+	@ControllerLogs(description = "导出Excel")
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response)throws IOException
 	{
 		//创建工作簿
@@ -256,6 +277,7 @@ public class PerformanceController {
 	 * @return
 	 */
 	@RequestMapping(value = "/start")
+	@ControllerLogs(description = "绩效考核工作流启动")
     public @ResponseBody ExtAjaxResponse start(@RequestParam(name="id") Long performanceId,HttpSession session) {
     	try {
     		String userId = SessionUtil.getUserName(session);
@@ -278,6 +300,7 @@ public class PerformanceController {
 	 * @return
 	 */
 	@RequestMapping(value = "/tasks")
+	@ControllerLogs(description = "查询待处理流程任务")
     public @ResponseBody Page<PerformanceDTO> findTodoTasks(HttpSession session,ExtjsPageRequest pageable) {
 		Page<PerformanceDTO> page = new PageImpl<PerformanceDTO>(new ArrayList<PerformanceDTO>(), pageable.getPageable(), 0);
     	try {
@@ -293,6 +316,7 @@ public class PerformanceController {
      * 签收任务
      */
     @RequestMapping(value = "claim/{id}")
+	@ControllerLogs(description = "签收任务")
     public @ResponseBody ExtAjaxResponse claim(@PathVariable("id") String taskId, HttpSession session) {
     	try{
     		performanceService.claim(taskId, SessionUtil.getUserName(session));
@@ -309,6 +333,7 @@ public class PerformanceController {
      * @return
      */
     @RequestMapping(value = "complete/{taskId}")
+	@ControllerLogs(description = "完成任务")
     public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, Long id, WorkflowVariable var) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();

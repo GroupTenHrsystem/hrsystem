@@ -9,8 +9,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
     ],
 
     title: '薪资查询',
-   layout: 'fit',
-
+    layout: 'fit',
     profiles: {
         classic: {
             width: 700,
@@ -103,6 +102,28 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                                         reference:'searchFieldValue',
                                     }]
                             },
+                        },{
+                            text: '用户名',
+                            id: 'staffNameCheck',
+                            checked: false,       
+                            menu: {
+                                items: [{ 
+                                        hideOnClick : false,
+                                        xtype: 'textfield',
+                                        reference:'staffNameValue',
+                                    }]
+                            },
+                        },{
+                            text: '薪资标准',
+                            id: 'salaryStandardCheck',
+                            checked: false,       
+                            menu: {
+                                items: [{ 
+                                        hideOnClick : false,
+                                        xtype: 'textfield',
+                                        reference:'salaryStandardValue',
+                                    }]
+                            },
                         }, {
                             text: '开始日期',
                             id: 'salaryStarTimeCheck',
@@ -110,32 +131,44 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                             menu: {
                                     id: 'dateMainMenu',
                                     showSeparator: true,
-                                    items: [{
-                                        text: '范围开始',
-                                        id: 'salaryStarTimeStartCheck',
-                                        checked: false,      
-                                        menu: {
-                                            hideOnClick : false,
-                                            xtype: 'datemenu',
-                                            reference:'searchDataFieldValue',
-                                        }
-                                    },{
-                                        text: '范围结束',
-                                        id: 'salaryStarTimeEndCheck',
-                                        checked: false, 
-                                        menu: {
-                                            hideOnClick : false,
-                                            xtype: 'datemenu',
-                                            reference:'searchDataFieldValue2',
-                                        }
-                                    },'-', {
-                                        text: '具体日期',
-                                        id: 'salaryStarTimeDetailCheck',
-                                        checked: false, 
-                                        menu: {
-                                            hideOnClick : false,
-                                            xtype: 'datemenu',
-                                            reference:'searchDataFieldValue3',
+                                    items: [
+                                        {text: '范围开始',id: 'salaryStarTimeStartCheck',checked: false,      
+                                            menu: {
+                                                hideOnClick : false,xtype: 'datemenu',reference:'searchDataFieldValue',
+                                            }
+                                        },
+                                        {text: '范围结束',id: 'salaryStarTimeEndCheck',checked: false, 
+                                            menu: {
+                                                hideOnClick : false,xtype: 'datemenu',reference:'searchDataFieldValue2',
+                                            }
+                                        },'-', 
+                                        {text: '具体日期',id: 'salaryStarTimeDetailCheck',checked: false, 
+                                            menu: {
+                                                hideOnClick : false,xtype: 'datemenu',reference:'searchDataFieldValue3',
+                                            }
+                                    }]
+                            }
+                        }, {
+                            text: '结束日期',
+                            id: 'salaryEndTimeCheck',
+                            checked: false, 
+                            menu: {
+                                    id: 'dateMainMenu2',
+                                    showSeparator: true,
+                                    items: [
+                                        {text: '范围开始',id: 'salaryEndTimeStartCheck',checked: false,      
+                                            menu: {
+                                                hideOnClick : false,xtype: 'datemenu',reference:'searchDataFieldValue4',
+                                            }
+                                        },
+                                        {text: '范围结束', id: 'salaryEndTimeEndCheck',checked: false, 
+                                            menu: {
+                                                hideOnClick : false,xtype: 'datemenu',reference:'searchDataFieldValue5',
+                                            }
+                                        },'-', 
+                                        {text: '具体日期',id: 'salaryEndTimeDetailCheck',checked: false, 
+                                            menu: {
+                                                hideOnClick : false,xtype: 'datemenu',reference:'searchDataFieldValue6',
                                         }
                                     }]
                             }
@@ -151,20 +184,24 @@ Ext.define('Admin.view.salary.SalaryPanel', {
 
     header: {
         itemPosition: 1, 
+        style:"background-color:#FF8000;",
         items: [
             {
                 xtype: 'button',
                 iconCls: 'fa fa-search-plus',
+                style:"background-color:black;border-color: white;",
                 handler: 'openSearchWindow' 
             }, {
                 xtype: 'button',
                 tooltip: 'Add a new row',
                 iconCls: 'fa fa-plus',
+                style:"background-color:black;border-color: white;",
                 handler: 'openAddWindow'    
             }, {
                 xtype: 'button',
                 tooltip: 'Remove the selected item',
                 iconCls:'fa fa-trash',
+                style:"background-color:black;border-color: white;",
                 handler: 'deleteMoreRows'   
             }, {
                 ui: 'default-toolbar',

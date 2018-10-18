@@ -20,6 +20,20 @@
             selModel:{type:'checkboxmodel',checkOnly:true},
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'key',hidden:true},
+                {header: '简历状态',dataIndex: 'processStatus',width: 60,sortable: true,
+                	renderer: function(val) {
+                            if (val =='NEW') {
+                                return '<span style="color:green;">新建</span>';
+                            } else if (val =='APPROVAL') {
+                                return '<span style="color:blue;">审批中...</span>';
+                            } else if (val =='COMPLETE') {
+                                return '<span style="color:orange;">完成审批</span>';
+                            }else{
+                                return '<span style="color:red;">取消申请</span>';
+                            }
+                            return val;
+                        }
+                },
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'name',text: '姓名',flex: 1},
                 {xtype: 'gridcolumn',width: 100,cls: 'content-column',dataIndex: 'sex',text: '性别'},
                 {xtype: 'datecolumn',width:100,cls: 'content-column',dataIndex: 'birthday',text: '出生日期'},
@@ -36,12 +50,29 @@
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'referer',text: '推荐人',hidden:true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'attachment',text: '附件',hidden:true},
                 {xtype: 'datecolumn',cls: 'content-column',width:200,dataIndex: 'applyTime',text: '应聘时间',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'restatus',text: '简历状态'},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: 'Actions',tooltip: 'edit ',
+                {xtype: 'actioncolumn',cls: 'content-column', width: 160,dataIndex: 'bool',text: 'Actions',tooltip: 'edit ',
                     items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'openDisableButton'}
+                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,tooltip: '简历修改',handler: 'openEditWindow'},
+                        {xtype: 'button',iconCls: 'x-fa fa-close'	,tooltip: '删除',handler: 'deleteOneRow'},
+                        {
+			                xtype: 'button',iconCls: 'x-fa fa-star',tooltip: '简历审批',
+			                getClass: function(v, meta, rec) {
+			                    if (rec.get('processInstanceId')!="") {
+			                        return 'x-hidden';
+			                    }
+			                    return 'x-fa fa-star';
+			                },
+			                handler: 'startResumeProcess'
+			            },{
+			                xtype: 'button',iconCls: 'x-fa fa-ban',tooltip: '取消简历审批',
+			                getClass: function(v, meta, rec) {
+			                    if (rec.get('processInstanceId')=="") {
+			                        return 'x-hidden';
+			                    }
+			                    return 'x-fa fa-ban';
+			                },
+			                handler: 'cancelResumeProcess'
+			            }
                     ]
                 }
             ],

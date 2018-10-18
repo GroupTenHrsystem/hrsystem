@@ -30,11 +30,12 @@ public class Recruit {
 	
 	private Long planNum;
 	private float salary;
+	private String contact;  //联系方式
 	
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date startTime;
 	
-	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date endTime;
 	
 	private String editName;

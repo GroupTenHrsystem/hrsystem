@@ -1,8 +1,15 @@
 package com.hrsystem.resume.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,12 +19,16 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hrsystem.activiti.util.WorkflowVariable;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
+import com.hrsystem.common.SessionUtil;
 import com.hrsystem.resume.entity.Resume;
+import com.hrsystem.resume.entity.ResumeDTO;
 import com.hrsystem.resume.entity.ResumeQueryDTO;
 import com.hrsystem.resume.service.IResumeService;
 
@@ -92,14 +103,79 @@ public class ResumeController {
 		}
 	}	
 	
-	@Test
-	public void testResume() {
-		try {
-			
-			System.out.println(resumeService.count());
+/*-------------------------------------流程引擎web层------------------------------------------*/
 	
-		} catch (Exception e) {
-		}
-	}
+	/**
+	 * 启动流程
+	 * @param leaveId	请假信息Id
+	 * @param session	通过会话获取登录用户(请假人)
+	 * @return
+	 */
+	@RequestMapping(value = "/start")
+    public @ResponseBody ExtAjaxResponse start(@RequestParam(name="id") Long resumeId,HttpSession session) {
+    	try {
+    		String userId = SessionUtil.getUserName(session);
+    		//System.out.println(resumeId);
+    		Map<String, Object> variables = new HashMap<String, Object>();
+    		variables.put("deptLeader", "financeManager");
+    		variables.put("hrClerk", "hrManager");
+    		variables.put("applyUserId", userId);
+    		resumeService.startWorkflow(userId,resumeId, variables);
+    		return new ExtAjaxResponse(true,"操作成功!");
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	        return new ExtAjaxResponse(false,"操作失败!");
+	    }
+    }
+	
+	/**
+	 * 查询待处理流程任务
+	 * @param pageable	分页对象
+	 * @param session	通过会话获取登录用户(请假人)
+	 * @return
+	 */
+	@RequestMapping(value = "/tasks")
+    public @ResponseBody Page<ResumeDTO> findTodoTasks(HttpSession session, ExtjsPageRequest pageable) {
+		Page<ResumeDTO> page = new PageImpl<ResumeDTO>(new ArrayList<ResumeDTO>(), pageable.getPageable(), 0);
+    	try {
+    		page = resumeService.findTodoTasks(SessionUtil.getUserName(session), pageable.getPageable());
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	    }
+    	
+    	return page;
+    }
+	
+	/**
+     * 签收任务
+     */
+    @RequestMapping(value = "claim/{id}")
+    public @ResponseBody ExtAjaxResponse claim(@PathVariable("id") String taskId, HttpSession session) {
+    	try{
+    		resumeService.claim(taskId, SessionUtil.getUserName(session));
+	    	return new ExtAjaxResponse(true,"任务签收成功!");
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	        return new ExtAjaxResponse(false,"任务签收失败!");
+	    }
+    }
+    
+    /**
+     * 完成任务
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "complete/{taskId}")
+    public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, WorkflowVariable var,Long id) {
+    	try{
+    		Map<String, Object> variables = var.getVariableMap();
+    		resumeService.complete(taskId, variables,id);
+	    	return new ExtAjaxResponse(true,"审批成功!");
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	        return new ExtAjaxResponse(false,"审批失败!");
+	    }
+    }
+	
 	
 }

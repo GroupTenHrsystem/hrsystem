@@ -27,13 +27,15 @@
                 {xtype: 'datecolumn',cls: 'content-column',width:200,dataIndex: 'startTime',text: '开始时间',flex: 1},
                 {xtype: 'datecolumn',cls: 'content-column',width:200,dataIndex: 'endTime',text: '截止时间',hidden:true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'editName',text: '发布人'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'postdesc',text: '职位描述',hidden:true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'contact',text: '联系方式'},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'postdesc',text: '职位描述'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'demand',text: '要求',hidden:true},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: 'Actions',tooltip: 'edit ',
+                {xtype: 'actioncolumn',cls: 'content-column', width: 160,dataIndex: 'bool',text: 'Actions',tooltip: 'edit ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'openDisableButton'}
+                        {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'openDisableButton'},
+                		{xtype: 'button',iconCls: 'x-fa fa-search-plus',handler: 'openBiggerWindow'}
                     ]
                 }
             ],
@@ -85,10 +87,6 @@
 		        text: 'Search',
 		        iconCls: 'fa fa-search',
 		        handler:'quickSearch'
-		    }, '-',{
-		        text: 'Search More',
-		        iconCls: 'fa fa-search-plus',
-		        handler: 'openSearchWindow'	
 			}, '->',{
 		        text: '新增',
 		        tooltip: 'Add a new row',

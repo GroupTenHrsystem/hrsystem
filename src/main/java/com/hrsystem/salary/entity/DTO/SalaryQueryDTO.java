@@ -15,7 +15,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hrsystem.common.sign.GreaterThanEqual;
+import com.hrsystem.common.sign.Join;
 import com.hrsystem.common.sign.LessThanEqual;
+import com.hrsystem.common.sign.Like;
 import com.hrsystem.common.sign.Name;
 import com.hrsystem.salary.entity.Salary;
 
@@ -65,6 +67,7 @@ public class SalaryQueryDTO {
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	private Date createTimeStart; 
 	
+	private Boolean status = true;
 	@Name("createTime")
 	@LessThanEqual  
 	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
@@ -72,4 +75,10 @@ public class SalaryQueryDTO {
 	
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date createTime;
+	
+	@Join("staff")
+	private String staffName;
+	
+	@Join("salaryStandard")
+	private String name;
 }
