@@ -103,7 +103,6 @@ $include-admin-view-performanceapprove-performanceapproveviewcontroller: dynamic
 $include-admin-view-performanceapprove-performanceapproveviewmodel: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapprovewindow: dynamic(true);;
 $include-admin-view-performanceapprove-task-deptleaderaudit: dynamic(true);;
-$include-admin-view-performanceapprove-task-modifyapply: dynamic(true);;
 $include-admin-view-performanceapprove-task-reportback: dynamic(true);;
 $include-admin-view-performanceapprove-task-selfaudit: dynamic(true);;
 $include-admin-view-performancetemplet-performancetemplet: dynamic(true);;

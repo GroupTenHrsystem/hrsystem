@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.BeanUtils;
@@ -98,7 +99,11 @@ public class PaymentService implements IPaymentService{
 	            if (workflow.getBusinessKey() == null) {
 	                continue;
 	            }
-	            Payment payment = paymentRepository.findById(businessKey).get();
+	            Optional<Payment> optional = paymentRepository.findById(businessKey);
+	            Payment payment = new Payment();
+	            if(optional.isPresent()) {
+	            	payment = optional.get();
+	            }         
 	            if(payment!=null){
 	            	PaymentDTO paymentDTO = new PaymentDTO();
 	            	BeanUtils.copyProperties(payment, paymentDTO);

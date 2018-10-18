@@ -104,7 +104,7 @@
     onClickPaymentmanagerAuditFormSubmitButton: function(btn) {
     	var form = btn.up('form');
     	var values = form.getValues();
-    	var url = 'leave/complete/' + values.taskId;
+    	var url = 'payment/complete/' + values.taskId;
     	var variables = [{
 			key: 'paymentmanagerPass',
 			value: values.paymentmanagerPass,//获取表单选择的value

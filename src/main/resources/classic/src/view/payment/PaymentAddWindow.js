@@ -43,7 +43,6 @@
 	        name      : 'price',
 	        fieldLabel: '报销金额',
 	        minValue: 0,
-	        maxValue: 100,
 	        allowDecimals: true,
 	        decimalPrecision: 1,
 	        step: 5
