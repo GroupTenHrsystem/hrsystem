@@ -261,6 +261,31 @@
                 viewType: 'scheduling',
                 leaf: true
             },{
+            	text: '报销模块',
+                iconCls: 'x-fa fa-address-card',
+                expanded: false,
+                selectable: false,
+            	children: [
+	                {
+	                    text: '报销管理',
+		                iconCls: 'x-fa fa-address-card',
+                		viewType: 'paymentCenterPanel',
+		                leaf: true
+	                },
+	                {
+	                    text: '报销审批',
+	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    viewType: 'paymentApproveCenterPanel',
+	                    leaf: true
+	                },
+	                {
+	                    text: '流程定义模块',
+		                iconCls: 'x-fa fa-address-card',
+		                viewType: 'processDefinitionCenterPanel',
+		                leaf: true
+	                }
+	            ]
+            },{
                	text: '工作汇报',
                 iconCls: 'x-fa fa-address-card',
                 rowCls: 'nav-tree-badge nav-tree-badge-new',
