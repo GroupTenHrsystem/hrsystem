@@ -12,14 +12,14 @@
 	layout: 'fit',
 	items: [{
 		xtype: 'gridpanel',
-		title: 'PaymentGrid Results',
+		title: '报销管理',
 		//routeId: 'user',
 		bind: '{paymentLists}',
 		scrollable: false,
 		selModel: {type: 'checkboxmodel'},
 		columns: [
 			 {header: 'id',dataIndex:'id',width: 60,sortable: true,hidden:true}
-			,{header: 'processStatus',dataIndex: 'processStatus',width: 60,sortable: true,
+			,{header: '状态',dataIndex: 'processStatus',width: 160,sortable: true,
 	            renderer: function(val) {
 		            if (val =='NEW') {
 			            return '<span style="color:green;">新建</span>';
@@ -33,10 +33,10 @@
 			        return val;
 	            }
 			}
-			,{header: 'userId',dataIndex: 'userId',width: 60,sortable: true}
-			,{header: 'price',dataIndex: 'price',width: 220,sortable: true}
-			,{header: 'reason',dataIndex: 'reason',width: 220,sortable: true}
-			,{xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
+			,{header: '发起人',dataIndex: 'userId',width: 160,sortable: true}
+			,{header: '金额',dataIndex: 'price',width: 220,sortable: true}
+			,{header: '报销理由',dataIndex: 'reason',width: 220,sortable: true}
+			,{xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '操作',tooltip: 'edit ',
 				items: [
 					{xtype: 'button', iconCls: 'x-fa fa-pencil',handler: 'openEditWindow'},
 					{xtype: 'button',iconCls: 'x-fa fa-close',handler: 'deleteOneRow'},
@@ -63,43 +63,46 @@
 			}
 		],
 		tbar: [{
-			xtype: 'combobox',
-			reference:'searchFieldName',
+	            xtype: 'combobox',
+	           	reference:'searchFieldName',
+	            hideLabel: true,
+	            store:Ext.create("Ext.data.Store", {
+				    fields: ["name", "value"],
+				    data: [
+				      	{ name: '状态', value: 'processStatus' },
+						{ name: '金额', value: 'price' },
+						{ name: '报销理由', value: 'reason' }
+				    ]
+				}),
+	            displayField: 'name',
+	            valueField:'value',
+	            value:'请选择',
+	            editable: false,//不可编辑
+	            queryMode: 'local',
+	            triggerAction: 'all',
+	            emptyText: 'Select a state...',
+	            width: 135
+	    }, '-',{
+			xtype: 'textfield',
 			hideLabel: true,
-			store:Ext.create("Ext.data.Store", {
-				fields: ["name", "value"],
-				data: [{ name: '请假时间', value: 'leaveTime' }]
-			}),
-			displayField: 'name',
-			valueField:'value',
-			value:'leaveTime',
-			editable: false,
-			queryMode: 'local',
-			triggerAction: 'all',
-			emptyText: 'Select a state...',
-			width: 135,
-			listeners:{
-				select: 'searchComboboxSelectChuang'
-			}
-		}, '-',{
-			xtype: 'datefield',
-			hideLabel: true,
-			//hidden:true,
-			format: 'Y/m/d H:i:s',
 			reference:'searchDataFieldValue',
 			fieldLabel: 'From',
 			name: 'from_date'
 		},'-',{
-			text: 'Search',
+			text: '查找',
 			iconCls: 'fa fa-search',
 			handler: 'quickSearch'
-		}, '->',{
-			text: 'Add',
+		}, '-',{
+                text: '清空',
+                iconCls: 'fa fa-eraser',
+                handler: 'clearText' 
+       }, '->',{
+			text: '添加',
 			tooltip: 'Add a new row',
 			iconCls: 'fa fa-plus',
 			handler: 'openAddWindow'	
 		},'-',{
-			text: 'Removes',
+			text: '删除',
 			tooltip: 'Remove the selected item',
 			iconCls:'fa fa-trash',
 			itemId: 'paymentGridPanelRemove',

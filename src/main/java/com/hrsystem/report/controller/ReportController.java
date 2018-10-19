@@ -1,5 +1,7 @@
 package com.hrsystem.report.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,10 @@ import com.hrsystem.common.SessionUtil;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.log.ControllerLogs;
 import com.hrsystem.report.entity.Report;
+import com.hrsystem.report.entity.DTO.ReportDTO;
 import com.hrsystem.report.entity.DTO.ReportQueryDTO;
 import com.hrsystem.report.service.IReportService;
+
 
 /**
 *@项目名称: hrsystem
@@ -37,7 +41,7 @@ public class ReportController {
 	private IReportService reportService;
 	
 	@GetMapping
-	@ControllerLogs(description = "查询全部工作汇报")
+	@ControllerLogs(description = "查询该用户的工作汇报")
 	public Page<Report> getPage(HttpSession session, ReportQueryDTO reportQueryDTO, ExtjsPageRequest pageRequest) 
 	{
 		String userId = SessionUtil.getUserName(session);
@@ -46,6 +50,14 @@ public class ReportController {
 			return reportService.findAll(SpecificationBuilder.buildSpecification(reportQueryDTO), pageRequest.getPageable());
 		}
 		return null;
+	}
+	
+	@RequestMapping("/reportAll")
+	@ControllerLogs(description = "查看全部工作汇报")
+	public Page<ReportDTO> reportAll(ReportQueryDTO reportQueryDTO, ExtjsPageRequest pageRequest) 
+	{
+		Page<Report> page = reportService.findAll(SpecificationBuilder.buildSpecification(reportQueryDTO), pageRequest.getPageable());
+		return ReportDTO.toReportDTO(page, pageRequest.getPageable());
 	}
 	
 	@PostMapping("/save")

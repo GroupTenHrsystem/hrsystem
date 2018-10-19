@@ -41,8 +41,5 @@ public class Department {
 		return "Department [id=" + id + ", departmentName=" + departmentName + ", introduce=" + introduce
 				+ ", expanded=" + expanded + "]";
 	}
-    
-	
-	
 }
  

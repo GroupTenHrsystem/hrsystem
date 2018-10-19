@@ -40,13 +40,13 @@
                     {
                         text: '组织架构管理',
                         iconCls: 'x-fa fa-exclamation-triangle',
-                        viewType: 'page404',
+                        viewType: 'department',
                         leaf: true
                     },
                     {
                         text: '职位管理',
                         iconCls: 'x-fa fa-lightbulb-o',
-                        viewType: 'passwordreset',
+                        viewType: 'role',
                         leaf: true
                     }
                 ]
@@ -57,34 +57,21 @@
                 selectable: false,
             	children: [
 	                {
-	                    text: '人事档案登记',
+	                    text: '档案登记与变更',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
-		                //viewType: ',
+		                viewType:'archives',
 		                leaf: true
 	                },
 	                {
 	                    text: '人事档案复核',
 	                    iconCls: 'x-fa fa-exclamation-triangle',
-	                    //viewType: 'page404',
+	                    viewType: 'archivesCheck',
 	                    leaf: true
 	                },
 	                {
 	                    text: '人事档案查询',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
-	                    leaf: true
-	                },
-	                {
-	                    text: '人事变动',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
-	                    leaf: true
-	                },
-	                {
-	                    text: '人事档案删除',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
+	                    viewType: 'archivesAll',
 	                    leaf: true
 	                }
 	            ]
@@ -128,25 +115,31 @@
 	                {
 	                    text: '培训计划录入',
 		                iconCls: 'x-fa fa-address-card',
-                		//viewType: '',
+                		viewType: 'training',
 		                leaf: true
 	                },
 	                {
 	                    text: '培训人员报名',
 	                    iconCls: 'x-fa fa-exclamation-triangle',
-	                    //viewType: '',
+	                    viewType: 'enroll',
 	                    leaf: true
 	                },
 	                {
 	                    text: '培训复核',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
+	                    viewType: 'trainingAll',
+	                    leaf: true
+	                },
+	               	{
+	                    text: '报名复核',
+	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    viewType: 'enrollAll',
 	                    leaf: true
 	                },
 	                {
 	                    text: '培训反馈表',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
+	                    viewType: 'feedback',
 	                    leaf: true
 	                }
 	            ]
@@ -203,21 +196,18 @@
             		{
 	                    text: '绩效模板',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performanceTemplet',
 		                leaf: true
 	                },
 	                {
 	                    text: '绩效考核',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performance',
 		                leaf: true
 	                },
 	                {
 	                	text: '待考核',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
 		                viewType: 'performanceApproveCenterPanel',
 		                leaf: true
 	                },
@@ -268,15 +258,27 @@
            	},{
                	text: '日程安排模块',
                 iconCls: 'x-fa fa-address-card',
-                rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'scheduling',
                 leaf: true
             },{
                	text: '工作汇报',
                 iconCls: 'x-fa fa-address-card',
-                rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'report',
-                leaf: true
+                 expanded: false,
+                selectable: false,
+            	children: [
+	                {
+	                    text: '工作汇报',
+		                iconCls: 'x-fa fa-address-card',
+		                viewType: 'report',
+		                leaf: true
+	                },
+	                {
+	                    text: '查询全部',
+	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    viewType: 'reportAll',
+	                    leaf: true
+	                }
+	            ]
             },{
                 text: 'Login',
                 iconCls: 'x-fa fa-check',

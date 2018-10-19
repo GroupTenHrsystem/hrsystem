@@ -70,7 +70,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                             },
                             handler: 'openEditWindow'
                         },
-                        {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
+                        // {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
                       //  {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'},
                         {
                             xtype: 'button',iconCls: 'x-fa fa-star',tooltip: '开始绩效考核',
@@ -152,15 +152,15 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 fieldLabel: 'To',
                 name: 'to_date'
          },'-',{
-		        text: 'Search',
+		        text: '查询',
 		        iconCls: 'fa fa-search',
 		        handler: 'quickSearch'
 		    }, '-',{
-		        text: 'Search More',
+		        text: '查询更多',
 		        iconCls: 'fa fa-search-plus',
 		        handler: 'openSearchWindow'	
 			},'-',{
-                text: 'Clear Text',
+                text: '清空',
                 iconCls: 'fa fa-eraser',
                 handler: 'clearText' 
                
@@ -173,12 +173,12 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 hrefTarget:'_self'
 		        //handler:  'gridExcel' 
 		    },'-',{
-                text: 'Add',
+                text: '添加',
                 tooltip: 'Add a new row',
                 iconCls: 'fa fa-plus',
                 handler: 'openAddWindow'    
             },'-',{
-		        text: 'Removes',
+		        text: '删除',
 		        tooltip: 'Remove the selected item',
 		        iconCls:'fa fa-trash',
 		        handler: 'deleteMoreRows'	

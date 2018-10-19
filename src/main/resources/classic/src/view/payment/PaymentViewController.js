@@ -45,10 +45,37 @@
 	},
 	/*Quick Search*/	
 	quickSearch:function(btn){
-		
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
+		var store =	btn.up('gridpanel').getStore();
+		Ext.apply(store.proxy.extraParams, 
+				{
+					processStatus:"",
+				//	cycle:"",
+					price:"",
+					reason:""
+			});		
+		if(searchField==='processStatus'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {processStatus:searchDataFieldValue});
+		}
+		if(searchField==='price'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {price:searchDataFieldValue});
+		}
+		if(searchField==='reason'){
+			var fieldValue = searchField.getValue;
+			Ext.apply(store.proxy.extraParams, {reason:searchDataFieldValue});
+		}
+		store.load({params:{start:0, limit:20, page:1}});
 	},
+
+	clearText:function(btn){
+		this.lookupReference('searchDataFieldValue').setValue("");	
+	},
+
 	submitSearchForm:function(btn){
-	
+
 	},
 	/*Delete One Row*/	
 	deleteOneRow:function(grid, rowIndex, colIndex){
@@ -69,7 +96,7 @@
 		var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
 		if (selModel.hasSelection()) {
-			Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
+			Ext.Msg.confirm("警告", "确定要删除吗？将只能删除新建的任务", function (button) {
 				if (button == "yes") {
 					var rows = selModel.getSelection();
 					var selectIds = []; //要删除的id

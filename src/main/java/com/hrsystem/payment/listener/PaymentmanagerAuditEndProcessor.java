@@ -18,7 +18,7 @@ import com.hrsystem.payment.service.IPaymentService;
 @Transactional
 public class PaymentmanagerAuditEndProcessor implements TaskListener {
 
-	private static final long serialVersionUID = -8360605214753688651L;
+	private static final long serialVersionUID = -8360605214753688653L;
 
 	@Autowired
     private IPaymentService paymentService;

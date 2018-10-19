@@ -1,9 +1,9 @@
 ﻿Ext.define('Admin.view.paymentApprove.PaymentApproveGrid', {
     extend: 'Ext.grid.Panel',
 	xtype:'paymentApproveGrid',
-	title: 'tiele',		//需要修改
+	title: '报销审批',		
 	iconCls: 'fa-arrow-circle-o-up',
-	bind: '{paymentApproveStore}',//调用组件4
+	bind: '{paymentApproveStore}',
 	columns: [{
 			xtype: 'actioncolumn',
 			items: [{
@@ -37,11 +37,11 @@
 			cls: 'content-column',
 			width: 120,
 			dataIndex: 'bool',
-			text: 'Actions',
+			text: '操作',
 			tooltip: 'edit '
 		}
 		,{header: 'id' 			,dataIndex: 'id',width: 60,sortable: true	,hidden:true}
-		,{header: 'processStatus',dataIndex: 'processStatus',width: 60,sortable: true,
+		,{header: '状态',dataIndex: 'processStatus',width: 60,sortable: true,
             renderer: function(val) {
 	            if (val =='NEW') {
 		            return '<span style="color:green;">新建</span>';
@@ -55,20 +55,20 @@
 		        return val;
             }
 		}
-		,{header: 'userId'  		,dataIndex: 'userId',width: 60,sortable: true}
-		,{header: 'startTime' 	,dataIndex: 'startTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
-		,{header: 'endTime' 			,dataIndex: 'endTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
-		,{header: 'reason' 		,dataIndex: 'reason',width: 80,sortable: true}
-		,{header: 'price' 		,dataIndex: 'price',width: 80,sortable: true}
-		,{header: 'processInstanceId' ,dataIndex: 'processInstanceId',width: 80,sortable: true}
-		,{header: 'taskId'  		,dataIndex: 'taskId',width: 80,sortable: true}
-		,{header: 'taskName'  		,dataIndex: 'taskName',width: 80,sortable: true}
-		,{header: 'taskCreateTime'  ,dataIndex: 'taskCreateTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
-		,{header: 'assignee'  		,dataIndex: 'assignee',width: 80,sortable: true}
-		,{header: 'taskDefinitionKey',dataIndex: 'taskDefinitionKey',width: 80,sortable: true}
-		,{header: 'processDefinitionId'	,dataIndex: 'processDefinitionId',width: 80,sortable: true}
-		,{header: 'suspended'  		,dataIndex: 'suspended',width: 80,sortable: true}
-		,{header: 'version'  		,dataIndex: 'version',width: 60,sortable: true}
+		,{header: '发起者'  		,dataIndex: 'userId',width: 60,sortable: true}
+		,{header: '开始时间' 	,dataIndex: 'startTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
+		,{header: '结束时间' 			,dataIndex: 'endTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
+		,{header: '理由' 		,dataIndex: 'reason',width: 80,sortable: true}
+		,{header: '金额' 		,dataIndex: 'price',width: 80,sortable: true}
+		// ,{header: 'processInstanceId' ,dataIndex: 'processInstanceId',width: 80,sortable: true}
+		// ,{header: 'taskId'  		,dataIndex: 'taskId',width: 80,sortable: true}
+		,{header: '任务名字'  		,dataIndex: 'taskName',width: 80,sortable: true}
+		,{header: '任务创建时间'  ,dataIndex: 'taskCreateTime',width: 150,sortable: true,renderer: Ext.util.Format.dateRenderer('Y/m/d H:i:s')}
+		,{header: '接受人'  		,dataIndex: 'assignee',width: 80,sortable: true}
+		// ,{header: 'taskDefinitionKey',dataIndex: 'taskDefinitionKey',width: 80,sortable: true}
+		// ,{header: 'processDefinitionId'	,dataIndex: 'processDefinitionId',width: 80,sortable: true}
+		// ,{header: 'suspended'  		,dataIndex: 'suspended',width: 80,sortable: true}
+		// ,{header: 'version'  		,dataIndex: 'version',width: 60,sortable: true}
 	],
 	dockedItems: [{
 	    xtype: 'pagingtoolbar',

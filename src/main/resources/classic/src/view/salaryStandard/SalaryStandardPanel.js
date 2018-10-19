@@ -86,24 +86,24 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
                 fieldLabel: 'To',
                 name: 'to_date'
          },'-',{
-		        text: 'Search',
+		        text: '查询',
 		        iconCls: 'fa fa-search',
 		        handler: 'quickSearch'
 		    }, '-',{
-		        text: 'Search More',
+		        text: '查询更多',
 		        iconCls: 'fa fa-search-plus',
 		        handler: 'openSearchWindow'	
 			},'-',{
-                text: 'Clear Text',
+                text: '清空',
                 iconCls: 'fa fa-eraser',
                 handler: 'clearText' 
             }, '->',{
-		        text: 'Add',
+		        text: '添加',
 		        tooltip: 'Add a new row',
 		        iconCls: 'fa fa-plus',
 		        handler: 'openAddWindow'	
 		    },'-',{
-		        text: 'Removes',
+		        text: '删除',
 		        tooltip: 'Remove the selected item',
 		        iconCls:'fa fa-trash',
 		        handler: 'deleteMoreRows'	

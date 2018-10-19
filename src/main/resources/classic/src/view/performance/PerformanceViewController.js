@@ -110,7 +110,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	/*Quick Search*/
 	quickSearch:function(btn){
-	var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
 		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
 		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();
@@ -212,12 +212,14 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 				var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
         if (selModel.hasSelection()) {
-            Ext.Msg.confirm("警告", "不能删除审批中的任务,确定要删除吗？", function (button) {
+            Ext.Msg.confirm("警告", "确定要删除吗？将只能删除新建的任务", function (button) {
                 if (button == "yes") {
                     var rows = selModel.getSelection();
                     var selectIds = []; //要删除的id
                     Ext.each(rows, function (row) {
-                        selectIds.push(row.data.id);
+                    	if(row.data.processStatus=="NEW"){
+                        	selectIds.push(row.data.id);
+                    	}
                     });
                   	Ext.Ajax.request({ 
 						url : '/performance/deletes', 

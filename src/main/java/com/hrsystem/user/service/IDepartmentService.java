@@ -33,4 +33,6 @@ public interface IDepartmentService {
 //	 public List<Department> getDepartmentByDepartmentTempletId(Long id);
 
 	public List<Department> findNoParent();
+	
+//	public long count(Long parentId);
 }

@@ -132,11 +132,6 @@ public class SalaryController {
 	@ControllerLogs(description = "查看薪资")
 	public Page<SalaryDTO> getPage(SalaryQueryDTO salaryQueryDTO,ExtjsPageRequest pageRequest)
 	{
-//		System.out.println(salaryQueryDTO);
-//		if(salaryQueryDTO.getStaffName() != null) {
-//			Page<Salary> page = salaryService.getSalaryByStaffName(salaryQueryDTO.getStaffName(), pageRequest.getPageable());
-//			return SalaryDTO.toSalaryDTO(page, pageRequest.getPageable());
-//		}else {
 			Page<Salary> page = salaryService.findAll(SpecificationBuilder.buildSpecification(salaryQueryDTO), pageRequest.getPageable());
 			return SalaryDTO.toSalaryDTO(page, pageRequest.getPageable());
 		//}	
