@@ -18,6 +18,7 @@ public class Role {
 	private Long id;
 	private String position;
 	private Long limite;	
+	private Boolean status = true;
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Department department;
     

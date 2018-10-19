@@ -1,7 +1,7 @@
 Ext.define('Aria.view.role.RoleAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.roleAddWindow',
-    height: 700,
+    height: 300,
     minHeight: 100,
     minWidth: 300,
     width: 500,
@@ -27,85 +27,41 @@ Ext.define('Aria.view.role.RoleAddWindow', {
             readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: 'Employe Num',
-            name:'employeNum'
+            fieldLabel: 'Position',
+            name:'position'
         }, {
             xtype: 'textfield',
-            fieldLabel: 'Staff Name',
-            name:'staffName'
+            fieldLabel: 'Limite',
+            name:'limite'
         },
         {
-            xtype: 'radiogroup',
-            id: 'sex',
-            fieldLabel: 'Sex',
-            layout: {
-                autoFlex: false
-            },
-
-            defaults: {
-                name: 'ccType',
-                margin: '0 15 0 0'
-            },
-
-            items: [{
-                boxLabel: 'man',
-                name      : 'sex',
-                inputValue: 'man',
-                checked: true
-            }, {
-                boxLabel: 'woman',
-                name      : 'sex',
-                inputValue: 'woman'
-            }]
-        },{
-            xtype: 'textfield',
-            fieldLabel: 'Idcard',
-            name:'idcard'
-        }, {
-            xtype: 'textfield',
-            fieldLabel: 'Email',
-            name:'email'
-        }, {
-            xtype: 'textfield',
-            fieldLabel: 'Password',
-            name:'password'
-        },{
-            xtype: 'textfield',
-            fieldLabel: 'Address',
-            name:'address'
-        },{
-            xtype: 'textfield',
-            fieldLabel: 'NativePlace',
-            name:'nativePlace'
-        },{
-            xtype: 'textfield',
-            fieldLabel: 'Phone',
-            name:'phone'
-        },{
-            xtype: 'datefield',
-            fieldLabel: 'Birthday',
-            name:'birthday',
-            format: 'Y/m/d'
-        },{
-            xtype: "combobox",
-            name: "status",
-            fieldLabel: "Status",
-            store: [['实习', '实习'], ['入职', '入职'],['等待入职', '等待入职']],
-            editable: false,
-            displayField: "Status",
-            valueField: "Value",
-            emptyText: "--请选择--",
-            queryMode: "local"
-        }, {
-            xtype: 'datefield',
-            fieldLabel: 'Employment Date',
-            name:'employmentDate',
-            format: 'Y/m/d'
-        }, {
-            xtype: 'datefield',
-            fieldLabel: 'Leave Date',
-            name:'leaveDate',
-            format: 'Y/m/d'
+        	xtype: 'treepicker',
+            allowBlank:false, 
+            displayField: 'departmentName',
+            autoScroll:true,
+            scrollable: true,
+            width:400,
+            name:'departmentId',
+            minPickerHeight: 400,
+            fieldLabel: '选择部门',
+            flex: 1,
+            //必须这样创建store
+            store:Ext.create("Ext.data.TreeStore",{
+                    fields: ['id','departmentName'],
+                    root: {
+                        departmentName: '请选择部门',
+                        id:'-1',
+                        expanded: true
+                    },
+                    rootVisible: false,
+                    proxy: {
+                        type: 'ajax',
+                        url: '/department/findNoParent',
+                        reader: {
+                            type: 'json'
+                        }
+                    }
+                })
         }]
     }],
    

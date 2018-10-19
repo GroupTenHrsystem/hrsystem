@@ -16,6 +16,7 @@ public class RoleQueryDTO {
 	private Long limite;	
 //	private Long departmentId;
 
+	private Boolean status = true;
 	@Join("department")
 	private String departmentName; 
 }
