@@ -8,13 +8,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
-@Table(name = "OA_ARCHIVES")
+@Table(name = "t_archives")
 public class Archives implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+
 	//使用的数据字段
-	private int archivesId;
+
+	private Long id;
+	private Long archivesId;
 	private String ssCard;
 	private String bankCard;
 	private String education;
@@ -25,14 +28,19 @@ public class Archives implements Serializable{
 	private String remark;
 	private String attach;
 	private String arstatus;
-	
 	@Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)	
-	public int getArchiveId() {
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Long getArchivesId() {
 		return archivesId;
 	}
-	public void setArchiveId(int archiveId) {
-		this.archivesId = archiveId;
+	public void setArchivesId(Long archivesId) {
+		this.archivesId = archivesId;
 	}
 	public String getSsCard() {
 		return ssCard;
@@ -94,8 +102,7 @@ public class Archives implements Serializable{
 	public void setArstatus(String arstatus) {
 		this.arstatus = arstatus;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	
+	
 	
 }

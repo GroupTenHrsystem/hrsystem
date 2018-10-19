@@ -41,15 +41,6 @@ public class Department {
 		return "Department [id=" + id + ", departmentName=" + departmentName + ", introduce=" + introduce
 				+ ", expanded=" + expanded + "]";
 	}
-<<<<<<< HEAD
-	
-	
-	
-     
-=======
-    
-	
-	
->>>>>>> refs/remotes/origin/master
+
 }
  
