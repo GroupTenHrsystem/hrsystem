@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -14,34 +16,54 @@ import org.springframework.data.jpa.domain.Specification;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hrsystem.activiti.domain.ProcessStatus;
+import com.hrsystem.common.sign.Like;
 
 import lombok.Data;
 
 @Data
 public class ResumeQueryDTO {
-
+	@Like
 	private String name;  
+	@Like
 	private String sex; 
 	
 	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date birthday;   //出生年月
+	@Like
 	private String nativePlace;   //籍贯
+	@Like
 	private String major;   //专业
+	@Like
 	private String politicsStatus;  //政治面貌
+	@Like
 	private String graduateSchool;  //毕业学校
+	@Like
 	private String email;    //邮箱
+	@Like
 	private String phone;    //手机
+	@Like
 	private String employBranch;  //求职意向
+	@Like
 	private String experience;   //工作经历
+	@Like
 	private String selfEvaluation;  //自我评价
+	
 	private boolean ifrefer;   //是否推荐
+	@Like
 	private String referer;   //推荐人
+	@Like
 	private String attachment;   //附件
 	
 	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date applyTime;  
-	private String restatus;   
+	@Like
+	private String restatus;  
+	
+	@Enumerated(EnumType.STRING)
+	private ProcessStatus processStatus; 
 
+	
+	
 	@SuppressWarnings({ "serial"})
 	public static Specification<Resume> getWhereClause(final ResumeQueryDTO resumeQueryDTO) {
 		return new Specification<Resume>() {
