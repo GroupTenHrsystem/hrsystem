@@ -14,7 +14,10 @@ Ext.define('Admin.view.scheduling.Scheduling', {
     items: [{
             xtype: 'container',
             margin: '0 20 20 0',
-            items: [{xtype:'schedulingPanel'}]
+            items: [{
+                xtype:'schedulingPanel',
+                id:'schedulingPanel'
+            }]
         }]
 
 });

@@ -59,7 +59,6 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	          	record.save();
 
 	          	setTimeout(store.load(),"500");
-	          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
 	          	win.close();
 		}
 
@@ -131,10 +130,6 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 			var fieldValue = searchField.getValue;
 			Ext.apply(store.proxy.extraParams, {performanceName:searchValue});
 		}
-		// if(searchField==='cycle'){
-		// 	var fieldValue = searchField.getValue;
-		// 	Ext.apply(store.proxy.extraParams, {cycle:searchValue});
-		// }
 		if(searchField==='startTime'){
 			Ext.apply(store.proxy.extraParams,{
 				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
