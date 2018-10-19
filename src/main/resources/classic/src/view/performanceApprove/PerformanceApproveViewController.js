@@ -58,11 +58,6 @@
         	var win = this.setCurrentView(view,taskDefinitionKey,'结果确认');
         	win.down('form').getForm().loadRecord(record);
         }
-        else if (taskDefinitionKey == 'modifyApply') {
-        	//申请人调整申请：可以编写到工具类中
-        	var win = this.setCurrentView(view,taskDefinitionKey,'调整');
-        	win.down('form').getForm().loadRecord(record);
-        }
     },
     //3.封装审批表单数据,并以Ajax提交到后台完成任务的流程变量封装对象中。
 	complete: function(url, variables,form){
@@ -166,34 +161,6 @@
             value: values.resultReason,//获取表单选择的value
             type: 'S'
         }];
-        this.complete(url,variables,form);
-    },
-    //调整
-    onClickModifyApplyFormSubmitButton: function(btn) {
-        var form = btn.up('form');
-    	var values = form.getValues();
-    	var url = 'performance/complete/' + values.taskId;
-    	var variables = [{
-			key: 'reApply',
-			value: values.reApply,//获取表单选择的value
-			type: 'B'
-		},{
-			key: 'leaveType',
-			value: values.leaveType,//获取表单选择的value
-			type: 'S'
-		},{
-			key: 'startTime',
-			value: values.startTime,//获取表单选择的value
-			type: 'D'
-		},{
-			key: 'endTime',
-			value: values.endTime,//获取表单选择的value
-			type: 'D'
-		},{
-			key: 'reason',
-			value: values.reason,//获取表单选择的value
-			type: 'S'
-		}];
         this.complete(url,variables,form);
     },
     //流程跟踪
