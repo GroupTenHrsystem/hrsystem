@@ -6,7 +6,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
-import org.junit.Test;
+import org.hibernate.annotations.Where;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.activiti.util.WorkflowVariable;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
@@ -45,12 +46,17 @@ public class ResumeController {
 		return resumeService.findAll(ResumeQueryDTO.getWhereClause(resumeQueryDTO), pageRequest.getPageable());
 	}
 	
+	@GetMapping("/employ")
+	public Page<Resume> getPage2(ExtjsPageRequest pageRequest){
+		return resumeService.findAll("COMPLETE", pageRequest.getPageable());
+	}
+	
 	@GetMapping(value="{id}")
 	public Resume getOne(@PathVariable("id") Long id) 
 	{
 		return resumeService.findById(id).get();
 	}
-	
+
 	@DeleteMapping(value="{id}")
 	public ExtAjaxResponse delete(@PathVariable("id") Long id) 
 	{
@@ -101,7 +107,18 @@ public class ResumeController {
 		} catch (Exception e) {
 			return new ExtAjaxResponse(true,"保存失败！");
 		}
-	}	
+	}
+
+	@PostMapping(value="/employ",consumes=MediaType.APPLICATION_JSON_VALUE)
+	public ExtAjaxResponse saveIntoUser(@RequestBody Resume resume) 
+	{
+		try {
+			resumeService.saveIntoUser(resume);
+			return new ExtAjaxResponse(true,"保存成功！");
+		} catch (Exception e) {
+			return new ExtAjaxResponse(true,"保存失败！");
+		}
+	}
 	
 /*-------------------------------------流程引擎web层------------------------------------------*/
 	
@@ -176,6 +193,5 @@ public class ResumeController {
 	        return new ExtAjaxResponse(false,"审批失败!");
 	    }
     }
-	
-	
+
 }

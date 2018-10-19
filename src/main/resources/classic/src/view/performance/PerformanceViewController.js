@@ -59,7 +59,6 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	          	record.save();
 
 	          	setTimeout(store.load(),"500");
-	          //	Ext.data.StoreManager.lookup('performanceGridStore').load();
 	          	win.close();
 		}
 
@@ -131,10 +130,6 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 			var fieldValue = searchField.getValue;
 			Ext.apply(store.proxy.extraParams, {performanceName:searchValue});
 		}
-		// if(searchField==='cycle'){
-		// 	var fieldValue = searchField.getValue;
-		// 	Ext.apply(store.proxy.extraParams, {cycle:searchValue});
-		// }
 		if(searchField==='startTime'){
 			Ext.apply(store.proxy.extraParams,{
 				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
@@ -212,12 +207,14 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 				var grid = btn.up('gridpanel');
 		var selModel = grid.getSelectionModel();
         if (selModel.hasSelection()) {
-            Ext.Msg.confirm("警告", "不能删除审批中的任务,确定要删除吗？", function (button) {
+            Ext.Msg.confirm("警告", "确定要删除吗？将只能删除新建的任务", function (button) {
                 if (button == "yes") {
                     var rows = selModel.getSelection();
                     var selectIds = []; //要删除的id
                     Ext.each(rows, function (row) {
-                        selectIds.push(row.data.id);
+                    	if(row.data.processStatus=="NEW"){
+                        	selectIds.push(row.data.id);
+                    	}
                     });
                   	Ext.Ajax.request({ 
 						url : '/performance/deletes', 

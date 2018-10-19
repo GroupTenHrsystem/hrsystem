@@ -129,8 +129,6 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
             listeners:{
             select:function(combo,record,index){
                     var departmentId=record.get('id');
-                    //testfunction()//对应的处理函数
-                    console.log(departmentId);
                     var staff = Ext.getCmp("staff");    //获取staff Combo组件
                     staff.getStore().removeAll(); // 清空已加载列表
                     staff.reset();    // 清空已存在结果
@@ -196,11 +194,11 @@ Ext.define('Aria.view.performance.PerformanceAddWindow', {
         dock: 'bottom',
         items: [{
             xtype: 'button',
-            text: 'Submit',
+            text: '提交',
             handler: 'submitAddForm'
         },{
             xtype: 'button',
-            text: 'Close',
+            text: '关闭',
             handler: function(btn) {
                 btn.up('window').close();
             }

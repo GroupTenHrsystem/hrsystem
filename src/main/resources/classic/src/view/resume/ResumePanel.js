@@ -27,7 +27,7 @@
                             } else if (val =='APPROVAL') {
                                 return '<span style="color:blue;">审批中...</span>';
                             } else if (val =='COMPLETE') {
-                                return '<span style="color:orange;">完成审批</span>';
+                                return '<span style="color:orange;">二面通过</span>';
                             }else{
                                 return '<span style="color:red;">取消申请</span>';
                             }

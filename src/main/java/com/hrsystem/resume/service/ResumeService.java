@@ -22,6 +22,8 @@ import com.hrsystem.activiti.service.IWorkflowService;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.entity.ResumeDTO;
 import com.hrsystem.resume.repository.ResumeRepository;
+import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.repository.StaffRepository;
 
 @Service
 @Transactional
@@ -29,6 +31,9 @@ public class ResumeService implements IResumeService{
 	
 	@Autowired
 	private ResumeRepository resumeRepository;
+	
+	@Autowired
+	private StaffRepository staffRepository;
 	
 	@Autowired
 	private IWorkflowService workflowService;
@@ -161,11 +166,28 @@ public class ResumeService implements IResumeService{
 		resumeRepository.save(resume);
 		
 		workflowService.complete(taskId, variables);
-	}
+	}	
 
 	@Override
 	public Page<Resume> findResume(String userId, Pageable pageable) {
 		return resumeRepository.findResume(userId, pageable);
 	}
-		
+
+	@Override
+	public void saveIntoUser(Resume resume) {
+		Staff staff = new Staff();
+		staff.setStaffName(resume.getName());
+		staff.setPassword(resume.getName());
+		staff.setEmail(resume.getEmail());
+		staff.setNativePlace(resume.getNativePlace());
+		staff.setEmploymentDate(resume.getApplyTime());
+		resume.setProcessStatus(ProcessStatus.ONFILE);
+		staffRepository.save(staff);
+		resumeRepository.save(resume);
+	}
+
+	@Override
+	public Page<Resume> findAll(String processStatus, Pageable pageable) {
+		return resumeRepository.findAll(processStatus, pageable);
+	}		
 }

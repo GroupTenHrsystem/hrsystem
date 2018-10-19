@@ -127,9 +127,10 @@
 			}
 		});
 	},	
+
 	/*Cancel Resume Process*/	
 	cancelResumeProcess:function(grid, rowIndex, colIndex){
-		Ext.Msg.alert("Title","Cancel resume Process");
+		Ext.Msg.alert("Title","Cancel Leave Process");
 	}	
 
 });

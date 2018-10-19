@@ -331,10 +331,11 @@ Ext.define('Ext.calendar.form.AbstractForm', {
                             params : data,
                             success: function(response, options) {
                                     values.id=response.responseText; 
-                                    me.fireSave(me.produceEventData(values));
-                                   // window.location.reload();
+                                   //me.getView().getStore().reload();
                             }
                         });
+            this.getView().getStore().load();
+            this.close();
         }
     }
 });

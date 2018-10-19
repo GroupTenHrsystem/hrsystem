@@ -49,11 +49,7 @@ public class PaymentService implements IPaymentService{
 	@Override
 	public void deleteAll(Long[] ids) {
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
-		
-		List<Payment> payment = (List<Payment>) paymentRepository.findAllById(idLists);
-		if(payment!=null) {
-			paymentRepository.deleteAll(payment);
-		}
+		paymentRepository.updateAll(idLists);
 	}
 
 	@Override

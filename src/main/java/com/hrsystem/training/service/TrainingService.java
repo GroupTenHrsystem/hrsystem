@@ -7,11 +7,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.hrsystem.archives.domain.Archives;
+import com.hrsystem.common.BeanUtils;
 import com.hrsystem.training.domain.Training;
 import com.hrsystem.training.repository.TrainingRepository;
 
@@ -49,7 +52,8 @@ public class TrainingService implements ITrainingService{
 
 	@Override
 	public Page<Training> findAll(Specification<Training> spec, Pageable pageable) {
-		
+		// TODO Auto-generated method stub
+		System.out.println("mkyyajj");
 		return trainingRepository.findAll(spec, pageable);
 	}
 
@@ -62,4 +66,32 @@ public class TrainingService implements ITrainingService{
 			trainingRepository.deleteAll(trainings);
 		}
 	}
+	@Override
+	public Training findTrainingById(Long id) {
+		// TODO Auto-generated method stub
+		 Optional<Training> training = trainingRepository.findById(id);
+		    if (!training.isPresent()) {
+		        return null;
+		    }
+		    return training.get();
+	}
+
+	@Override
+	public void insertTraining(Training training) {
+		// TODO Auto-generated method stub
+		trainingRepository.save(training);     
+	}
+
+	@Override
+	public void deleteTraining(Long id) {
+		// TODO Auto-generated method stub
+		trainingRepository.deleteById(id);
+	}
+	
+	@Override
+	public Page<Training> findTrainingByArstatusPass(Specification<Training> spec, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return trainingRepository.findTrainingByArstatusPass(spec, pageable);
+	}
+ 
 }

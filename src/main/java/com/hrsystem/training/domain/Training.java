@@ -1,20 +1,26 @@
 package com.hrsystem.training.domain;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name = "OA_TRAINING")
-public class Training {
-	private int courseId;
-	private double courseCode;
+@Table(name = "t_training")
+public class Training implements Serializable{
+	private Long id;
+	private String courseCode;
 	private String courseName;
 	private String courseLecturer;
 	private String personLiable;
@@ -27,18 +33,20 @@ public class Training {
 	private Date courseAirtime;
 	@JsonFormat(pattern="yyyy/MM/dd",timezone="GMT+8")
 	private Date courseEndtime;
+
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int getCourseId() {
-		return courseId;
+	public Long getid() {
+		return id;
 	}
-	public void setCourseId(int courseId) {
-		this.courseId = courseId;
+	public void setid(Long id) {
+		this.id = id;
 	}
-	public double getCourseCode() {
+	public String getCourseCode() {
 		return courseCode;
 	}
-	public void setCourseCode(double courseCode) {
+	public void setCourseCode(String courseCode) {
 		this.courseCode = courseCode;
 	}
 	public String getCourseName() {
@@ -83,16 +91,23 @@ public class Training {
 	public void setCourseAuditTime(Date courseAuditTime) {
 		this.courseAuditTime = courseAuditTime;
 	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "courseAirtime")
+    @JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	public Date getCourseAirtime() {
 		return courseAirtime;
 	}
 	public void setCourseAirtime(Date courseAirtime) {
 		this.courseAirtime = courseAirtime;
 	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "courseEndtime")
+    @JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
 	public Date getCourseEndtime() {
 		return courseEndtime;
 	}
 	public void setCourseEndtime(Date courseEndtime) {
 		this.courseEndtime = courseEndtime;
 	}
+
 }

@@ -1,5 +1,7 @@
 package com.hrsystem.training.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,32 +9,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "OA_FEEDBACK")
-public class Feedback {
-	private int feedbackId;
-	private int employeeId;
-	private int courseId;
+@Table(name = "t_feedback")
+public class Feedback implements Serializable{
+	private Long id;
+	private String feedbackId;
+	private String employeeId;
+	private String courseId;
 	private String courseHarvest;
 	private String courseEvaluate;
 	private String courseOpinion;
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int getFeedbackId() {
+	public Long getid() {
+		return id;
+	}
+	public void setid(Long id) {
+		this.id = id;
+	}
+	public String getFeedbackId() {
 		return feedbackId;
 	}
-	public void setFeedbackId(int feedbackId) {
+	public void setFeedbackId(String feedbackId) {
 		this.feedbackId = feedbackId;
 	}
-	public int getEmployeeId() {
+	public String getEmployeeId() {
 		return employeeId;
 	}
-	public void setEmployeeId(int employeeId) {
+	public void setEmployeeId(String employeeId) {
 		this.employeeId = employeeId;
 	}
-	public int getCourseId() {
+	public String getCourseId() {
 		return courseId;
 	}
-	public void setCourseId(int courseId) {
+	public void setCourseId(String courseId) {
 		this.courseId = courseId;
 	}
 	public String getCourseHarvest() {
