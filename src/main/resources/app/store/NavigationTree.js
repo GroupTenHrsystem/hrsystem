@@ -52,34 +52,21 @@
                 selectable: false,
             	children: [
 	                {
-	                    text: '人事档案登记',
+	                    text: '档案登记与变更',
 		                iconCls: 'x-fa fa-address-card',
-		                rowCls: 'nav-tree-badge nav-tree-badge-new',
-		                //viewType: ',
+		                viewType:'archives',
 		                leaf: true
 	                },
 	                {
 	                    text: '人事档案复核',
 	                    iconCls: 'x-fa fa-exclamation-triangle',
-	                    //viewType: 'page404',
+	                    viewType: 'archivesCheck',
 	                    leaf: true
 	                },
 	                {
 	                    text: '人事档案查询',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
-	                    leaf: true
-	                },
-	                {
-	                    text: '人事变动',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
-	                    leaf: true
-	                },
-	                {
-	                    text: '人事档案删除',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: 'passwordreset',
+	                    viewType: 'archivesAll',
 	                    leaf: true
 	                }
 	            ]
@@ -129,25 +116,31 @@
 	                {
 	                    text: '培训计划录入',
 		                iconCls: 'x-fa fa-address-card',
-                		//viewType: '',
+                		viewType: 'training',
 		                leaf: true
 	                },
 	                {
 	                    text: '培训人员报名',
 	                    iconCls: 'x-fa fa-exclamation-triangle',
-	                    //viewType: '',
+	                    viewType: 'enroll',
 	                    leaf: true
 	                },
 	                {
 	                    text: '培训复核',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
+	                    viewType: 'trainingAll',
+	                    leaf: true
+	                },
+	               	{
+	                    text: '报名复核',
+	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    viewType: 'enrollAll',
 	                    leaf: true
 	                },
 	                {
 	                    text: '培训反馈表',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
+	                    viewType: 'feedback',
 	                    leaf: true
 	                }
 	            ]

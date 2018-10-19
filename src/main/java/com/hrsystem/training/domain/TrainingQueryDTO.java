@@ -16,23 +16,20 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class TrainingQueryDTO {
-	private double courseCode;
+	
+	private String courseCode;
 	private String courseName;
 	private String courseLecturer;
 	private String personLiable;
-	private String courseAuditor;
 	private String courseAuditStatus;
-	private String courseAuditResult;
-	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
-	private Date courseAuditTime;
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date courseAirtime;
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date courseEndtime;
-	public double getCourseCode() {
+	public String getCourseCode() {
 		return courseCode;
 	}
-	public void setCourseCode(double courseCode) {
+	public void setCourseCode(String courseCode) {
 		this.courseCode = courseCode;
 	}
 	public String getCourseName() {
@@ -53,29 +50,11 @@ public class TrainingQueryDTO {
 	public void setPersonLiable(String personLiable) {
 		this.personLiable = personLiable;
 	}
-	public String getCourseAuditor() {
-		return courseAuditor;
-	}
-	public void setCourseAuditor(String courseAuditor) {
-		this.courseAuditor = courseAuditor;
-	}
 	public String getCourseAuditStatus() {
 		return courseAuditStatus;
 	}
 	public void setCourseAuditStatus(String courseAuditStatus) {
 		this.courseAuditStatus = courseAuditStatus;
-	}
-	public String getCourseAuditResult() {
-		return courseAuditResult;
-	}
-	public void setCourseAuditResult(String courseAuditResult) {
-		this.courseAuditResult = courseAuditResult;
-	}
-	public Date getCourseAuditTime() {
-		return courseAuditTime;
-	}
-	public void setCourseAuditTime(Date courseAuditTime) {
-		this.courseAuditTime = courseAuditTime;
 	}
 	public Date getCourseAirtime() {
 		return courseAirtime;
@@ -96,38 +75,26 @@ public class TrainingQueryDTO {
 			public Predicate toPredicate(Root<Training> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
 			
 				List<Predicate> predicate = new ArrayList<>();
-				if (StringUtils.isNotBlank(trainingQueryDTO.getCourseName())) {
+				if (StringUtils.isNotBlank(trainingQueryDTO.getCourseCode())) {
+					predicate.add(criteriaBuilder.equal(root.get("courseCode").as(String.class),
+							 trainingQueryDTO.getCourseCode() ));
+				}
+				if (StringUtils.isNotBlank(trainingQueryDTO.getCourseName())){
 					predicate.add(criteriaBuilder.equal(root.get("courseName").as(String.class),
-							"%" + trainingQueryDTO.getCourseName() + "%"));
+							trainingQueryDTO.getCourseName()));
 				}
-				if (0!=trainingQueryDTO.getCourseCode()) {
-					predicate.add(criteriaBuilder.equal(root.get("courseCode").as(double.class),
-							trainingQueryDTO.getCourseCode()));
-				}
-				if (null!=trainingQueryDTO.getCourseLecturer()) {
+				if(StringUtils.isNotBlank(trainingQueryDTO.getCourseLecturer())) {
 					predicate.add(criteriaBuilder.equal(root.get("courseLecturer").as(String.class),
 							trainingQueryDTO.getCourseLecturer()));
 				}
-				if (null!=trainingQueryDTO.getPersonLiable()) {
+				if (StringUtils.isNotBlank(trainingQueryDTO.getPersonLiable())) {
 					predicate.add(criteriaBuilder.equal(root.get("personLiable").as(String.class),
 							trainingQueryDTO.getPersonLiable()));
-				}
-				if (null!=trainingQueryDTO.getCourseAuditor()) {
-					predicate.add(criteriaBuilder.equal(root.get("courseAuditor").as(String.class),
-							trainingQueryDTO.getCourseAuditor()));
-				}
-				if (null!=trainingQueryDTO.getCourseAuditStatus()) {
+				}			
+				if (StringUtils.isNotBlank(trainingQueryDTO.getCourseAuditStatus())) {
 					predicate.add(criteriaBuilder.equal(root.get("courseAuditStatus").as(String.class),
 							trainingQueryDTO.getCourseAuditStatus()));
-				}
-				if (null!=trainingQueryDTO.getCourseAuditResult()) {
-					predicate.add(criteriaBuilder.equal(root.get("courseAuditResult").as(String.class),
-							trainingQueryDTO.getCourseAuditResult()));
-				}
-				if (null!=trainingQueryDTO.getCourseAuditTime()) {
-					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("courseAuditTime").as(Date.class),
-							trainingQueryDTO.getCourseAuditTime()));
-				}
+				}			
 				if (null!=trainingQueryDTO.getCourseAirtime()) {
 					predicate.add(criteriaBuilder.lessThanOrEqualTo(root.get("courseAirtime").as(Date.class),
 							trainingQueryDTO.getCourseAirtime()));
