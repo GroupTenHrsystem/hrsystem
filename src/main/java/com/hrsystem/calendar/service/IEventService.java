@@ -1,4 +1,5 @@
 package com.hrsystem.calendar.service;
+import java.util.List;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
@@ -26,4 +27,6 @@ public interface IEventService {
 	 public void deleteAll(Long[] ids);
 	 
 	 public Page<Event> findAll(Specification<Event> spec, Pageable pageable);
+	 
+	 public List<Event> findAll(Specification<Event> spec);
 }

@@ -144,7 +144,44 @@
 	                }
 	            ]
             },{
-            	text: '薪资管理模块',
+            	text: '考勤管理模块',
+                iconCls: 'x-fa fa-address-card',
+                expanded: false,
+                selectable: false,
+            	children: [
+	                {
+	                    text: '签到签退',
+		                iconCls: 'x-fa fa-address-card',
+                		//viewType: '',
+		                leaf: true
+	                },
+	                {
+	                    text: '请假管理',
+		                iconCls: 'x-fa fa-address-card',
+		                viewType: 'leaveCenterPanel',
+		                leaf: true
+	                },
+	                {
+	                    text: '请假审批',
+		                iconCls: 'x-fa fa-address-card',
+		                viewType: 'leaveApproveCenterPanel',
+		                leaf: true
+	                },
+	                {
+	                    text: '请假统计',
+	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    //viewType: '',
+	                    leaf: true
+	                },
+	                {
+	                    text: '考勤情况查看',
+	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    //viewType: '',
+	                    leaf: true
+	                }
+	            ]
+           	},{
+            	text: '资金管理模块',
                 iconCls: 'x-fa fa-address-card',
                 expanded: false,
                 selectable: false,
@@ -210,52 +247,9 @@
 		                iconCls: 'x-fa fa-address-card',
 		                viewType: 'performanceApproveCenterPanel',
 		                leaf: true
-	                },
-	                {
-	                    text: '流程定义模块',
-		                iconCls: 'x-fa fa-address-card',
-		                viewType: 'processDefinitionCenterPanel',
-		                leaf: true
 	                }		
             	]
             },{
-            	text: '考勤管理模块',
-                iconCls: 'x-fa fa-address-card',
-                expanded: false,
-                selectable: false,
-            	children: [
-	                {
-	                    text: '签到签退',
-		                iconCls: 'x-fa fa-address-card',
-                		//viewType: '',
-		                leaf: true
-	                },
-	                {
-	                    text: '请假管理',
-		                iconCls: 'x-fa fa-address-card',
-		                viewType: 'leaveCenterPanel',
-		                leaf: true
-	                },
-	                {
-	                    text: '请假审批',
-		                iconCls: 'x-fa fa-address-card',
-		                viewType: 'leaveApproveCenterPanel',
-		                leaf: true
-	                },
-	                {
-	                    text: '请假统计',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
-	                    leaf: true
-	                },
-	                {
-	                    text: '考勤情况查看',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
-	                    leaf: true
-	                }
-	            ]
-           	},{
                	text: '日程安排模块',
                 iconCls: 'x-fa fa-address-card',
                 viewType: 'scheduling',

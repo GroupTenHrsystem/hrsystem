@@ -59,4 +59,10 @@ public class EventService implements IEventService{
 		return eventRepository.findAll(spec, pageable);
 	}
 
+	@Override
+	public List<Event> findAll(Specification<Event> spec) {
+		// TODO Auto-generated method stub
+		return eventRepository.findAll(spec);
+	}
+
 }

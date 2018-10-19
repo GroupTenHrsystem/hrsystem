@@ -13,7 +13,7 @@ Ext.define('Admin.view.scheduling.Scheduling', {
     },
     items: [{
             xtype: 'container',
-            margin: '0 20 20 0',
+            style:'margin: 25px;',
             items: [{
                 xtype:'schedulingPanel',
                 id:'schedulingPanel'

@@ -37,6 +37,7 @@ import com.hrsystem.calendar.entity.Event;
 import com.hrsystem.calendar.entity.DTO.EventQueryDTO;
 import com.hrsystem.calendar.service.EventService;
 import com.hrsystem.common.ExtResultJson;
+import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 
 
 @RestController
@@ -129,14 +130,14 @@ public class CalendarContreller
 			ExtResultJson<Event> json = new ExtResultJson<Event>(new ArrayList<Event>());
 			Pageable pageable = PageRequest.of(0, 25);
 			if(eventQueryDTO.getCalendar()==1L) {
-				Page<Event> page = eventService.findAll(EventQueryDTO.getWhereClause(eventQueryDTO), pageable);
-				json.setLists(page.getContent());
+				List<Event> list = eventService.findAll(SpecificationBuilder.buildSpecification(eventQueryDTO));
+				json.setLists(list);
 			}else if(eventQueryDTO.getCalendar()==2L) {
-				Page<Event> page = eventService.findAll(EventQueryDTO.getWhereClause(eventQueryDTO), pageable);			
-				json.setLists(page.getContent());
+				List<Event> list = eventService.findAll(SpecificationBuilder.buildSpecification(eventQueryDTO));			
+				json.setLists(list);
 			}else {
-				Page<Event> page = eventService.findAll(EventQueryDTO.getWhereClause(eventQueryDTO), pageable);
-				json.setLists(page.getContent());
+				List<Event> list = eventService.findAll(SpecificationBuilder.buildSpecification(eventQueryDTO));
+				json.setLists(list);
 			}
 			return json;
 		}
