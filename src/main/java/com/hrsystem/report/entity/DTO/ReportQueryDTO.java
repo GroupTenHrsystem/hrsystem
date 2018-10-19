@@ -10,8 +10,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hrsystem.common.sign.GreaterThanEqual;
 import com.hrsystem.common.sign.Join;
+import com.hrsystem.common.sign.LessThanEqual;
 import com.hrsystem.common.sign.Like;
+import com.hrsystem.common.sign.Name;
 import com.hrsystem.user.entity.Staff;
 
 import lombok.Data;
@@ -37,6 +40,16 @@ public class ReportQueryDTO {
 	
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
 	private Date time;
+	
+	@Name("time")
+	@GreaterThanEqual 
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss")
+	private Date timeStart;
+	
+	@Name("salaryEndTime")
+	@LessThanEqual  
+	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss") 
+	private Date timeEnd;
 	
 	private Boolean status = true;
 			

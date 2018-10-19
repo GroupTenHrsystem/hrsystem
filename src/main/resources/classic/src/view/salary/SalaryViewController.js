@@ -151,14 +151,13 @@ Ext.define('Admin.view.salary.SalaryViewController', {
 		var searchDataFieldValue6 = this.lookupReference('searchDataFieldValue6').query('datepicker')[0].getValue();
 		var store =	btn.up('gridpanel').getStore();
 		store.getProxy().setExtraParams({});
-		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
-		Ext.apply(store.proxy.extraParams, 
-				{
-					salarySum:"",
-					//staffName:"",name:"",
-					salaryStarTimeStart:"",salaryStarTimeEnd:"",salaryStarTime:"",
-					salaryEndTimeStart:"",salaryEndTimeEnd:"",salaryEndTime:""
-			});
+		// Ext.apply(store.proxy.extraParams, 
+		// 		{
+		// 			salarySum:"",
+		// 			//staffName:"",name:"",
+		// 			salaryStarTimeStart:"",salaryStarTimeEnd:"",salaryStarTime:"",
+		// 			salaryEndTimeStart:"",salaryEndTimeEnd:"",salaryEndTime:""
+		// 	});
 		if(Ext.getCmp('salarySumCheck').checked){
 			Ext.apply(store.proxy.extraParams, {salarySum:searchValue});
 		}

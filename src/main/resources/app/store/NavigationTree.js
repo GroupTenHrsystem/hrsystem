@@ -284,8 +284,22 @@
             },{
                	text: '工作汇报',
                 iconCls: 'x-fa fa-address-card',
-                viewType: 'report',
-                leaf: true
+                 expanded: false,
+                selectable: false,
+            	children: [
+	                {
+	                    text: '工作汇报',
+		                iconCls: 'x-fa fa-address-card',
+		                viewType: 'report',
+		                leaf: true
+	                },
+	                {
+	                    text: '查询全部',
+	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    viewType: 'reportAll',
+	                    leaf: true
+	                }
+	            ]
             },{
                 text: 'Login',
                 iconCls: 'x-fa fa-check',

@@ -8,6 +8,8 @@ Ext.define('Admin.view.email.Inbox', {
 
     autoLoad: true,
 
+    minHeight: 650,
+
     viewConfig: {
         preserveScrollOnRefresh: true,
         preserveScrollOnReload: true

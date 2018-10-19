@@ -24,6 +24,6 @@ Ext.define('Admin.store.report.ReportGridStroe', {
 
     sorters: {
         direction: 'DESC',
-        property: 'id'
+        property: 'time'
     }
 });
