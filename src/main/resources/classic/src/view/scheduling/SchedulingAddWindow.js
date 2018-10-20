@@ -9,6 +9,7 @@ Ext.define('Aria.view.salaryStandard.SchedulingdAddWindow', {
     width: 500,
     scrollable: true,
     title: '添加类型',
+    iconCls: 'fa fa-calendar',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',

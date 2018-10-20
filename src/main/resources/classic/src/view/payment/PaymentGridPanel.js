@@ -10,6 +10,7 @@
 		'Ext.grid.column.Date'
 	],
 	layout: 'fit',
+    minHeight: 700,
 	items: [{
 		xtype: 'gridpanel',
 		title: '报销管理',
@@ -35,7 +36,7 @@
 			}
 			,{header: '发起人',dataIndex: 'userId',width: 160,sortable: true}
 			,{header: '金额',dataIndex: 'price',width: 220,sortable: true}
-			,{header: '报销理由',dataIndex: 'reason',width: 220,sortable: true}
+			,{header: '报销理由',dataIndex: 'reason',flex: 1,sortable: true}
 			,{xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '操作',tooltip: 'edit ',
 				items: [
 					{xtype: 'button', iconCls: 'x-fa fa-pencil',handler: 'openEditWindow'},

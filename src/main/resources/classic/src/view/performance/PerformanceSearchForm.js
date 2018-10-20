@@ -18,14 +18,14 @@ Ext.define('Aria.view.performance.PerformanceSearchForm', {
 							{items:[
 									{xtype: 'textfield',fieldLabel:'id',name:'id',hidden:true,readOnly:true},
 									{xtype: 'textfield',fieldLabel:'processStatus',name:'processStatus',hidden:true,readOnly:true},	
-						    		{xtype: 'datefield',fieldLabel:'开始时间开始',name:'startTimeStart',format: 'Y/m/d H:i:s'},
-									{xtype: 'datefield',fieldLabel: '结束时间开始',name:'endTimeStart',format: 'Y/m/d H:i:s'},
+						    		{xtype: 'datefield',fieldLabel:'开始时间开始',name:'startTimeStart',editable:false,format: 'Y/m/d H:i:s'},
+									{xtype: 'datefield',fieldLabel: '结束时间开始',name:'endTimeStart',editable:false,format: 'Y/m/d H:i:s'},
 						    	]
 						    },
 
 							{items:[
-								{xtype: 'datefield',fieldLabel:' 开始时间结束',name:'startTimeEnd',format: 'Y/m/d H:i:s'},
-								{xtype: 'datefield',fieldLabel: '结束时间结束',name:'endTimeEnd',format: 'Y/m/d H:i:s'},
+								{xtype: 'datefield',fieldLabel:' 开始时间结束',name:'startTimeEnd',editable:false,format: 'Y/m/d H:i:s'},
+								{xtype: 'datefield',fieldLabel: '结束时间结束',name:'endTimeEnd',editable:false,format: 'Y/m/d H:i:s'},
 							]}
 					]
 				}]

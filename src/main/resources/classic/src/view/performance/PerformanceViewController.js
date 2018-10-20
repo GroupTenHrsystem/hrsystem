@@ -65,9 +65,8 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	/* Clear Text */
 	clearText:function(btn){
-		this.lookupReference('searchFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue2').setValue("");		
+		var form = Ext.getCmp('performanceAddForm');
+		form.reset()
 	},
     /*Edit*/
 	openEditWindow:function(grid, rowIndex, colIndex){

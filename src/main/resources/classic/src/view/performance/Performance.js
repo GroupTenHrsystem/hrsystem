@@ -12,7 +12,6 @@ Ext.define('Admin.view.performance.Performance', {
         align: 'stretch'
     },
     items: [
-    // {xtype:'performancePanel'}
 	{
             xtype: 'container',
             style:'margin: 25px;',

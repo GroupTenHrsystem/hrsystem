@@ -12,7 +12,7 @@ Ext.define('Admin.view.scheduling.schedulingPanel', {
     height: 710,
 
     title: '日程安排',
-
+    iconCls: 'fa fa-calendar',
     viewModel: {
         data: {
             value: new Date()

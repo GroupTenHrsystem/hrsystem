@@ -1,7 +1,8 @@
 ﻿Ext.define('Admin.view.performanceApprove.PerformanceApproveGrid', {
     extend: 'Ext.grid.Panel',
 	xtype:'performanceApproveGrid',
-	title: '待考核',		
+	title: '待考核',
+	iconCls: 'fa fa-align-right fa-spin',	
 	iconCls: 'fa-arrow-circle-o-up',
 	bind: '{performanceApproveStore}',
 	columns: [{

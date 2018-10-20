@@ -11,13 +11,15 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.grid.column.Date',
         'Ext.view.MultiSelector',
     ],
-    layout: 'fit',
+    layout: 'fit', 
+    minHeight: 400,
     deferredRender: false,
     items: [
     {
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '发起的绩效',
+            iconCls: 'fa fa-adjust fa-spin',
             //routeId: 'user',
             viewModel: {type: 'performanceViewModel'},
             selModel: {type: 'checkboxmodel'},
@@ -107,82 +109,24 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 groupHeaderTpl: '{columnName}: {name} ({rows.length} 条记录{[values.rows.length > 1 ? "s" : ""]})'
             }],
 
-   //          tbar: [{
-	  //           xtype: 'combobox',
-   //              reference:'searchFieldName',
-	  //           hideLabel: true,
-	  //           store:Ext.create("Ext.data.Store", {
-			// 	    fields: ["name", "value"],
-			// 	    data: [
-			// 	      	{ name: '绩效考核名字', value: 'performanceName' },
-			// 			{ name: '开始时间', value: 'startTime' },
-   //                      { name: '结束时间', value: 'endTime' },
-   //                    //  { name: '考核周期', value: 'cycle' }
-			// 	    ]
-			// 	}),
-	  //           displayField: 'name',
-	  //           valueField:'value',
-	  //           value:'请选择',
-	  //           editable: false,
-	  //           queryMode: 'local',
-	  //           triggerAction: 'all',
-	  //           emptyText: 'Select a state...',
-	  //           width: 135,
-   //              listeners:{
-   //                  select: 'searchComboboxSelectChuang'
-   //              }
-	  //       }, '-',{
-   //          	xtype:'textfield',
-   //              reference:'searchFieldValue',
-   //          	name:'performancePanelSearchField'
-		 //    }, '-',{
-   //              xtype: 'datefield',
-   //              hideLabel: true,
-   //              hidden:true,
-   //              format: 'Y/m/d H:i:s',
-   //              reference:'searchDataFieldValue',
-   //              fieldLabel: 'From',
-   //              name: 'from_date'
-   //          }, {
-   //              xtype: 'datefield',
-   //              hideLabel: true,
-   //              hidden:true,
-   //              format: 'Y/m/d H:i:s',
-   //              reference:'searchDataFieldValue2',
-   //              fieldLabel: 'To',
-   //              name: 'to_date'
-   //       },'-',{
-		 //        text: '查询',
-		 //        iconCls: 'fa fa-search',
-		 //        handler: 'quickSearch'
-		 //    }, '-',{
-		 //        text: '查询更多',
-		 //        iconCls: 'fa fa-search-plus',
-		 //        handler: 'openSearchWindow'	
-			// },'-',{
-   //              text: '清空',
-   //              iconCls: 'fa fa-eraser',
-   //              handler: 'clearText' 
-               
-                           
-   //          }, '->',{
-		 //        text: 'excel',
-		 //        tooltip: 'excel',
-		 //        iconCls: 'fa fa-plus',
-   //              href:'/performance/downloadExcel',
-   //              hrefTarget:'_self'
-		 //        //handler:  'gridExcel' 
-		 //    },'-',{
-   //              text: '添加',
-   //              tooltip: 'Add a new row',
-   //              iconCls: 'fa fa-plus',
-   //              handler: 'openAddWindow'    
-   //          },'-',{
-		 //        text: '删除',
-		 //        tooltip: 'Remove the selected item',
-		 //        iconCls:'fa fa-trash',
-		 //        handler: 'deleteMoreRows'	
-		 //    }],			
+            tbar: [ '->',{
+		        text: 'excel',
+		        tooltip: 'excel',
+		        iconCls: 'fa fa-plus',
+                href:'/performance/downloadExcel',
+                hrefTarget:'_self'
+		        //handler:  'gridExcel' 
+		    },'-',{
+                text: '添加',
+                tooltip: 'Add a new row',
+                iconCls: 'fa fa-plus',
+                handler: 'openAddWindow'    
+            },'-',{
+		        text: '删除',
+		        tooltip: 'Remove the selected item',
+		        iconCls:'fa fa-trash',
+		        handler: 'deleteMoreRows'	
+		    }],			
             dockedItems: [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',
@@ -194,6 +138,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '参与的绩效',
+            iconCls: 'fa fa-arrows fa-spin',
             collapsible: true,
             // html: 'KitchenSink.DummyText.longText'
             viewModel: {type: 'myPerformanceViewModel'},

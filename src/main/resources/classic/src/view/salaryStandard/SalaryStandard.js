@@ -7,6 +7,36 @@ Ext.define('Admin.view.salaryStandard.SalaryStandard', {
   //bodyStyle :'overflow-x:scroll;overflow-y:scroll',
     controller: 'salaryStandardViewController',
     viewModel: {type: 'salaryStandardViewModel'},
-    layout: 'fit',
-    items: [{xtype:'salaryStandardPanel'}]
+    //layout: 'fit',
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
+    items: [
+    //{xtype:'salaryStandardPanel'}
+            {
+                xtype: 'container',
+                style:'margin: 25px;',
+                itemId: 'navigationPanel',
+
+                layout: {
+                    type: 'vbox',
+                    align: 'stretch'
+                },
+
+                width: '30%',
+                minWidth: 1140,
+                maxWidth: 1140,
+
+                defaults: {
+                    margin: '0 20 20 0'
+                },
+
+                items: [
+                    {
+                        xtype: 'salaryStandardPanel'
+                    }
+                ]
+            }
+    ]
 });

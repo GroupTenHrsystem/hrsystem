@@ -3,6 +3,8 @@ Ext.define('Admin.view.salary.SalaryAnalysis', {
 	xtype: 'salaryAnalysis',
     controller: 'salaryViewController',
     layout: 'fit',
+    title:'薪资分析',
+    iconCls: 'fa fa-line-chart',
     tbar: [
         {
             xtype: 'button',

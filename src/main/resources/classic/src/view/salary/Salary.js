@@ -8,6 +8,36 @@ Ext.define('Admin.view.salary.Salary', {
     controller: 'salaryViewController',
     viewModel: {type: 'salaryViewModel'},
     	
-    layout: 'fit',
-    items: [{xtype:'salaryPanel'}]
+    // layout: 'fit',
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
+    items: [
+    //{xtype:'salaryPanel'}
+    {
+            xtype: 'container',
+            style:'margin: 25px;',
+            itemId: 'navigationPanel',
+
+            layout: {
+                type: 'vbox',
+                align: 'stretch'
+            },
+
+            width: '30%',
+            minWidth: 1140,
+            maxWidth: 1140,
+
+            defaults: {
+                margin: '0 20 20 0'
+            },
+
+            items: [
+                {
+                    xtype: 'salaryPanel'
+                }
+            ]
+        }
+    ]
 });
