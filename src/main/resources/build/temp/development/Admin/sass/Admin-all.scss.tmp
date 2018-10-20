@@ -1,9 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-<<<<<<< HEAD
 $image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
-=======
-$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
->>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -11,6 +7,7 @@ $include-admin-model-archives-archivesallmodel: dynamic(true);;
 $include-admin-model-archives-archivesaltermodel: dynamic(true);;
 $include-admin-model-archives-archivescheckmodel: dynamic(true);;
 $include-admin-model-archives-archivesmodel: dynamic(true);;
+$include-admin-model-attendance-attendancemodel: dynamic(true);;
 $include-admin-model-employ-employmodel: dynamic(true);;
 $include-admin-model-leave-leavemodel: dynamic(true);;
 $include-admin-model-leaveapprove-leaveapprovemodel: dynamic(true);;
@@ -45,6 +42,7 @@ $include-admin-store-archives-archivesallgridstroe: dynamic(true);;
 $include-admin-store-archives-archivesaltergridstroe: dynamic(true);;
 $include-admin-store-archives-archivescheckgridstroe: dynamic(true);;
 $include-admin-store-archives-archivesgridstroe: dynamic(true);;
+$include-admin-store-attendance-attendancegridstore: dynamic(true);;
 $include-admin-store-department-departmentgridstore: dynamic(true);;
 $include-admin-store-employ-employgridstroe: dynamic(true);;
 $include-admin-store-leave-leavestroe: dynamic(true);;
@@ -92,6 +90,10 @@ $include-admin-view-archives-archivespanel: dynamic(true);;
 $include-admin-view-archives-archivessearchwindow: dynamic(true);;
 $include-admin-view-archives-archivesviewcontroller: dynamic(true);;
 $include-admin-view-archives-archivesviewmodel: dynamic(true);;
+$include-admin-view-attendance-attendance: dynamic(true);;
+$include-admin-view-attendance-attendancepanel: dynamic(true);;
+$include-admin-view-attendance-attendanceviewcontroller: dynamic(true);;
+$include-admin-view-attendance-attendanceviewmodel: dynamic(true);;
 $include-admin-view-authentication-authenticationcontroller: dynamic(true);;
 $include-admin-view-authentication-authenticationmodel: dynamic(true);;
 $include-admin-view-authentication-dialog: dynamic(true);;
@@ -116,13 +118,10 @@ $include-admin-view-email-menu: dynamic(true);;
 $include-admin-view-email-menuviewmodel: dynamic(true);;
 $include-admin-view-email-report: dynamic(true);;
 $include-admin-view-email-reportcontroller: dynamic(true);;
-<<<<<<< HEAD
-=======
 $include-admin-view-employ-employ: dynamic(true);;
 $include-admin-view-employ-employpanel: dynamic(true);;
 $include-admin-view-employ-employviewcontroller: dynamic(true);;
 $include-admin-view-employ-employviewmodel: dynamic(true);;
->>>>>>> refs/remotes/origin/master
 $include-admin-view-leave-leaveaddwindow: dynamic(true);;
 $include-admin-view-leave-leavecenterpanel: dynamic(true);;
 $include-admin-view-leave-leaveeditwindow: dynamic(true);;
@@ -253,6 +252,9 @@ $include-aria-view-archives-archivescheckeditwindow: dynamic(true);;
 $include-aria-view-archives-archivescheckeditwindowfail: dynamic(true);;
 $include-aria-view-archives-archiveseditwindow: dynamic(true);;
 $include-aria-view-archives-archiveseditwindowdelete: dynamic(true);;
+$include-aria-view-attendance-attendanceaddwindow: dynamic(true);;
+$include-aria-view-attendance-attendanceeditwindow: dynamic(true);;
+$include-aria-view-attendance-attendancesearchwindow: dynamic(true);;
 $include-aria-view-department-departmentaddwindow: dynamic(true);;
 $include-aria-view-department-departmenteditwindow: dynamic(true);;
 $include-aria-view-employ-employeditwindow: dynamic(true);;

@@ -49,7 +49,6 @@ public class RoleController {
 	@GetMapping
 	public Page<RoleDTO> getPage(RoleQueryDTO roleQueryDTO , ExtjsPageRequest pageRequest) 
 	{
-		System.out.println(roleQueryDTO.getLimite());
 		Specification buildSpecification = SpecificationBuilder.buildSpecification(roleQueryDTO);
 		Page<Role> page =roleService.findAll(buildSpecification, pageRequest.getPageable());
 		

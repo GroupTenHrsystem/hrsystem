@@ -152,7 +152,7 @@
 	                {
 	                    text: '签到签退',
 		                iconCls: 'x-fa fa-address-card',
-                		//viewType: '',
+                		viewType: 'sign',
 		                leaf: true
 	                },
 	                {
@@ -176,7 +176,7 @@
 	                {
 	                    text: '考勤情况查看',
 	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
+	                    viewType: 'attendance',
 	                    leaf: true
 	                }
 	            ]
