@@ -8,7 +8,9 @@ Ext.define('Admin.view.salary.SalaryPanel', {
         'Ext.grid.plugin.Exporter'
     ],
 
-    title: '薪资查询',
+    title: '薪资查询',   
+    minHeight: 700,
+    iconCls: 'fa fa-rmb fa-spin',
     layout: 'fit',
     profiles: {
         classic: {

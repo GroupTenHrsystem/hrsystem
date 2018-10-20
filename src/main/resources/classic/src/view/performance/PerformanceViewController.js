@@ -65,9 +65,8 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	},
 	/* Clear Text */
 	clearText:function(btn){
-		this.lookupReference('searchFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue2').setValue("");		
+		var form = Ext.getCmp('performanceAddForm');
+		form.reset()
 	},
     /*Edit*/
 	openEditWindow:function(grid, rowIndex, colIndex){
@@ -151,7 +150,8 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 	submitSearchForm:function(btn){
 		var store =	Ext.data.StoreManager.lookup('performanceGridStroe');
 		var win = btn.up('window');
-		var form = win.down('form');
+
+		var form = Ext.getCmp('performanceAddForm');
 		var values  = form.getValues();
 		Ext.apply(store.proxy.extraParams, {
 					performanceName:"",
@@ -186,7 +186,7 @@ Ext.define('Admin.view.performance.PerformanceViewController', {
 			});
 		}
 		store.load({params:{start:0, limit:20, page:1}});
-		win.close();
+		//win.close();
 	},
 	/*Delete*/	
 	deleteOneRow:function(grid, rowIndex, colIndex){

@@ -12,11 +12,13 @@ Ext.define('Admin.view.salaryStandard.SalaryStandardPanel', {
         'Ext.view.MultiSelector'
     ],
     layout: 'fit',
+    minHeight: 700,
     //bodyStyle :'overflow-x:scroll;overflow-y:scroll',
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '薪资标准管理',
+            iconCls: 'fa fa-money',
             selModel: {type: 'checkboxmodel'},
             bind: '{salaryStandardLists}',
             //bodyStyle :'overflow-x:scroll;overflow-y:scroll',

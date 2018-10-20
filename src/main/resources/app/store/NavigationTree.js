@@ -12,7 +12,7 @@
         children: [
             {
                 text: '流程定义模块',
-                iconCls: 'x-fa fa-address-card',
+                iconCls: 'fa fa-files-o',
                 viewType: 'processDefinitionCenterPanel',
                 leaf: true
            	},{
@@ -182,44 +182,44 @@
 	            ]
            	},{
             	text: '资金管理模块',
-                iconCls: 'x-fa fa-address-card',
+                iconCls: 'fa fa-cc-visa',
                 expanded: false,
                 selectable: false,
             	children: [
 	                {
 	                    text: '薪资标准管理',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'fa fa-cc-paypal',
                 		viewType: 'salaryStandard',
 		                leaf: true
 	                },
 	                {
 	                    text: '薪资查询',
-	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    iconCls: '	fa fa-cc-jcb',
 	                    viewType: 'salary',
 	                    leaf: true
 	                },
 	                {
 	                    text: '薪资分析',
-	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    iconCls: 'fa fa-paypal',
 	                    viewType: 'salaryAnalysis',
 	                    leaf: true
 	                },
 	                {
 	                    text: '报销管理',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'fa fa-dollar',
                 		viewType: 'paymentCenterPanel',
 		                leaf: true
 	                },
 	                {
 	                text: '报销审批',
-	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    iconCls: 'fa fa-money',
 	                    viewType: 'paymentApproveCenterPanel',
 	                    leaf: true
 	            	}
 	            ]
             },{
             	text: '绩效管理模块',
-                iconCls: 'x-fa fa-address-card',
+                iconCls: 'fa fa-area-chart',
                 expanded: false,
                 selectable: false,
             	children: [
@@ -232,50 +232,50 @@
 		            // },
             		{
 	                    text: '绩效模板',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'fa fa-bar-chart',
 		                viewType: 'performanceTemplet',
 		                leaf: true
 	                },
 	                {
 	                    text: '绩效考核',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'fa fa-line-chart',
 		                viewType: 'performance',
 		                leaf: true
 	                },
 	                {
 	                	text: '待考核',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'fa fa-pie-chart',
 		                viewType: 'performanceApproveCenterPanel',
 		                leaf: true
 	                }		
             	]
             },{
                	text: '日程安排模块',
-                iconCls: 'x-fa fa-address-card',
+                iconCls: 'fa fa-table',
                 viewType: 'scheduling',
                 leaf: true
             },{
                	text: '工作汇报',
-                iconCls: 'x-fa fa-address-card',
+                iconCls: 'fa fa-cab',
                  expanded: false,
                 selectable: false,
             	children: [
 	                {
 	                    text: '工作汇报',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'fa fa-car',
 		                viewType: 'report',
 		                leaf: true
 	                },
 	                {
 	                    text: '查询全部',
-	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    iconCls: 'fa fa-ship',
 	                    viewType: 'reportAll',
 	                    leaf: true
 	                }
 	            ]
             },{
                 text: 'Login',
-                iconCls: 'x-fa fa-check',
+                iconCls: 'fa fa-rocket',
                 viewType: 'login',
                 visible:false,
                 leaf: true

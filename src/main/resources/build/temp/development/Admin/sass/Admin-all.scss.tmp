@@ -1,5 +1,9 @@
 $app-name:  dynamic( 'Admin' );
+<<<<<<< HEAD
 $image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+=======
+$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+>>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -163,6 +167,7 @@ $include-admin-view-paymentapprove-task-paymentmanageraudit: dynamic(true);;
 $include-admin-view-performance-myperformanceviewmodel: dynamic(true);;
 $include-admin-view-performance-performance: dynamic(true);;
 $include-admin-view-performance-performancepanel: dynamic(true);;
+$include-admin-view-performance-performancesearchpanel: dynamic(true);;
 $include-admin-view-performance-performanceviewcontroller: dynamic(true);;
 $include-admin-view-performance-performanceviewmodel: dynamic(true);;
 $include-admin-view-performanceapprove-performanceapprovecenterpanel: dynamic(true);;
@@ -263,6 +268,7 @@ $include-aria-view-order-ordereditwindow: dynamic(true);;
 $include-aria-view-order-ordersearchwindow: dynamic(true);;
 $include-aria-view-performance-performanceaddwindow: dynamic(true);;
 $include-aria-view-performance-performanceeditwindow: dynamic(true);;
+$include-aria-view-performance-performancesearchform: dynamic(true);;
 $include-aria-view-performance-performancesearchwindow: dynamic(true);;
 $include-aria-view-performancetemplet-performancetempletaddwindow: dynamic(true);;
 $include-aria-view-performancetemplet-performancetempleteditwindow: dynamic(true);;
@@ -287,6 +293,7 @@ $include-aria-view-salary-salarysearchwindow: dynamic(true);;
 $include-aria-view-salarystandard-salarystandardaddwindow: dynamic(true);;
 $include-aria-view-salarystandard-salarystandardeditwindow: dynamic(true);;
 $include-aria-view-salarystandard-salarystandardsearchwindow: dynamic(true);;
+$include-aria-view-salarystandard-schedulingdaddwindow: dynamic(true);;
 $include-aria-view-training-enrolladdwindow: dynamic(true);;
 $include-aria-view-training-enrollalleditwindow: dynamic(true);;
 $include-aria-view-training-enrollalleditwindowno: dynamic(true);;

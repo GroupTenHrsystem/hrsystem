@@ -9,7 +9,9 @@ Ext.define('Admin.view.reportAll.ReportAllPanel', {
     ],
 
     title: '工作汇报查询',
+    iconCls: 'fa fa-search',
     layout: 'fit',
+    minHeight: 700,
     profiles: {
         classic: {
             width: 700,

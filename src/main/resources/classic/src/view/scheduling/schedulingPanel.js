@@ -12,7 +12,7 @@ Ext.define('Admin.view.scheduling.schedulingPanel', {
     height: 710,
 
     title: '日程安排',
-
+    iconCls: 'fa fa-calendar',
     viewModel: {
         data: {
             value: new Date()
@@ -68,29 +68,6 @@ Ext.define('Admin.view.scheduling.schedulingPanel', {
             value: '{value}',
             store: '{calStore}'
         },
-        listeners: {
-           eventadd: function(view, context) {
-                    console.log('Event ' + context.event.data.title+ ' was added');
-                   alter('Event');
-                    //Ext.Ajax.request({url: '/add'});
-            },
-            eventedit:function(view, context) {//更新无法监听?
-                     console.log('Event ' + context.event.data.id+ ' was updated');
-                     alter('Event');
-            },
-            eventdrop: function(view, context) {
-                console.log("Event "+context.event.data.id + ' was delete');
-                alter('Event');
-                //Ext.Ajax.request({url: '/delete'});
-            }
-        },
-        timezoneOffset: 0,
-        store: {
-            // autoLoad: true,
-            // proxy: {
-            //     type: 'ajax',
-            //     url: '/KitchenSink/CalendarFull'
-            // }
-        }
+        timezoneOffset: 0
     }]
 });

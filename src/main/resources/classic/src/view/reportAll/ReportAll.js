@@ -8,6 +8,39 @@ Ext.define('Admin.view.reportAll.ReportAll', {
     controller: 'reportAllViewController',
     viewModel: {type: 'reportAllViewModel'},
     	
-    layout: 'fit',
-    items: [{xtype:'reportAllPanel'}]
+    // layout: 'fit',
+    
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
+
+    items: [
+    // {xtype:'reportAllPanel'},
+
+    {
+            xtype: 'container',
+            style:'margin: 25px;',
+            itemId: 'navigationPanel',
+
+            layout: {
+                type: 'vbox',
+                align: 'stretch'
+            },
+
+            width: '30%',
+            minWidth: 1140,
+            maxWidth: 1140,
+
+            defaults: {
+                margin: '0 20 20 0'
+            },
+
+            items: [
+                {
+                    xtype: 'reportAllPanel'
+                }
+            ]
+        }
+    ]
 });

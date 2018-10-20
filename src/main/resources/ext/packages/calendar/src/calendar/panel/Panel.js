@@ -173,15 +173,23 @@ Ext.define('Ext.calendar.panel.Panel', {
         createButton: {
             xtype: 'button',
             cls: Ext.baseCSSPrefix + 'calendar-panel-create-button',
-            text: 'Create'
+            style:'background-color: #A6A8AA;',
+            text: '添加事件'
         },
 
+        addTypeButton: {
+            xtype: 'button',
+            cls: Ext.baseCSSPrefix + 'calendar-panel-create-button',
+            style:'background-color: #A6A8AA;',
+            text: '添加类型'
+        },
         /**
          * @cfg {String} createButtonPosition
          * The position for the create button. Can be "sideBar" or "titleBar".
          */
         createButtonPosition: 'sideBar',
 
+        addTypeButtonPosition: 'sideBar',
         /**
          * @cfg {Object} dateTitle
          * The config for the date title.
@@ -463,6 +471,16 @@ Ext.define('Ext.calendar.panel.Panel', {
      * @hide
      */
 
+ /**
+     * @method getCreateButton
+     * @hide
+     */
+
+    /**
+     * @method setCreateButton
+     * @hide
+     */
+
     /**
      * @method getNextButton
      * @hide
@@ -654,6 +672,15 @@ Ext.define('Ext.calendar.panel.Panel', {
             }, cfg);
         },
 
+        createAddTypeButton: function(cfg) {
+            cfg = cfg || {};
+            cfg = Ext.apply(cfg, this.getAddTypeButton());
+            return Ext.apply({
+                handler: 'onAddTap',
+                scope: this
+            }, cfg);
+        },
+
         createContainerWithChildren: function(defaults, cfg, items) {
             cfg = Ext.apply({}, cfg);
 
@@ -782,6 +809,11 @@ Ext.define('Ext.calendar.panel.Panel', {
             this.getView().showAddForm();
         },
 
+        onAddTap: function() {
+            this.up('panel').add(Ext.widget('schedulingdAddWindow')).show();
+            //this.getView().showAddForm();
+        },
+     
         onNextTap: function() {
             this.moveNext();
         },

@@ -13,10 +13,12 @@ Ext.define('Admin.view.performanceTemplet.PerformanceTempletPanel', {
     //controller: 'searchresults',
    // viewModel: {type: 'orderViewModel'},
     layout: 'fit',
+    minHeight: 700,
     items: [{
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '绩效模板管理',
+            iconCls: 'fa fa-align-right fa-spin',
             //routeId: 'user',
             selModel: {type: 'checkboxmodel'},
             bind: '{performanceTempletLists}',

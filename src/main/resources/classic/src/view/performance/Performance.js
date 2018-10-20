@@ -7,7 +7,37 @@ Ext.define('Admin.view.performance.Performance', {
     
     controller: 'performanceViewController',
    
-    	
-    layout: 'fit',
-    items: [{xtype:'performancePanel'}]
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
+    items: [
+	{
+            xtype: 'container',
+            style:'margin: 25px;',
+            itemId: 'navigationPanel',
+
+            layout: {
+                type: 'vbox',
+                align: 'stretch'
+            },
+
+            width: '30%',
+            minWidth: 1140,
+            maxWidth: 1140,
+
+            defaults: {
+                margin: '0 20 20 0'
+            },
+
+            items: [
+                {
+                    xtype: 'performanceSearchPanel'
+                },
+                {
+                     xtype: 'performancePanel'
+                }
+            ]
+        }
+    ]
 });

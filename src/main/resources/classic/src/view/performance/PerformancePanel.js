@@ -11,13 +11,15 @@ Ext.define('Admin.view.performance.PerformancePanel', {
         'Ext.grid.column.Date',
         'Ext.view.MultiSelector',
     ],
-    layout: 'fit',
+    layout: 'fit', 
+    minHeight: 400,
     deferredRender: false,
     items: [
     {
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '发起的绩效',
+            iconCls: 'fa fa-adjust fa-spin',
             //routeId: 'user',
             viewModel: {type: 'performanceViewModel'},
             selModel: {type: 'checkboxmodel'},
@@ -45,17 +47,17 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                             return val;
                         }
                 },
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',width: 90},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'startTime',text: '考核开始时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'endTime',text: '考核结束时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'applyTime',text: '发起时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'completeTime',text: '完成时间',formatter: 'date("Y/m/d")'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',text: '自评分数' ,dataIndex: 'selfScore',sortable: true},  
-                {xtype: 'gridcolumn',cls: 'content-column',text: '自评细节' ,dataIndex: 'selfScoreReason',sortable: true,hidden:true},    
-                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分' ,dataIndex: 'deptLeaderScore',sortable: true},
-                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',sortable: true,hidden:true},  
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',width: 80},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',width: 80},
+                {xtype: 'gridcolumn',cls: 'content-column',text: '自评分数' ,dataIndex: 'selfScore',width: 30,sortable: true},  
+                {xtype: 'gridcolumn',cls: 'content-column',text: '自评细节' ,dataIndex: 'selfScoreReason',width: 30,sortable: true,hidden:true},    
+                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分' ,dataIndex: 'deptLeaderScore',width: 30,sortable: true},
+                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',width: 30,sortable: true,hidden:true},  
                 {xtype: 'gridcolumn',cls: 'content-column',text: '最终分数' ,dataIndex: 'resultScore',sortable: true},  
                 {xtype: 'gridcolumn',cls: 'content-column',text: '申诉理由' ,dataIndex: 'confirmResult',width: 80,sortable: true}, 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
@@ -107,65 +109,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 groupHeaderTpl: '{columnName}: {name} ({rows.length} 条记录{[values.rows.length > 1 ? "s" : ""]})'
             }],
 
-            tbar: [{
-	            xtype: 'combobox',
-                reference:'searchFieldName',
-	            hideLabel: true,
-	            store:Ext.create("Ext.data.Store", {
-				    fields: ["name", "value"],
-				    data: [
-				      	{ name: '绩效考核名字', value: 'performanceName' },
-						{ name: '开始时间', value: 'startTime' },
-                        { name: '结束时间', value: 'endTime' },
-                      //  { name: '考核周期', value: 'cycle' }
-				    ]
-				}),
-	            displayField: 'name',
-	            valueField:'value',
-	            value:'请选择',
-	            editable: false,
-	            queryMode: 'local',
-	            triggerAction: 'all',
-	            emptyText: 'Select a state...',
-	            width: 135,
-                listeners:{
-                    select: 'searchComboboxSelectChuang'
-                }
-	        }, '-',{
-            	xtype:'textfield',
-                reference:'searchFieldValue',
-            	name:'performancePanelSearchField'
-		    }, '-',{
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue',
-                fieldLabel: 'From',
-                name: 'from_date'
-            }, {
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue2',
-                fieldLabel: 'To',
-                name: 'to_date'
-         },'-',{
-		        text: '查询',
-		        iconCls: 'fa fa-search',
-		        handler: 'quickSearch'
-		    }, '-',{
-		        text: '查询更多',
-		        iconCls: 'fa fa-search-plus',
-		        handler: 'openSearchWindow'	
-			},'-',{
-                text: '清空',
-                iconCls: 'fa fa-eraser',
-                handler: 'clearText' 
-               
-                           
-            }, '->',{
+            tbar: [ '->',{
 		        text: 'excel',
 		        tooltip: 'excel',
 		        iconCls: 'fa fa-plus',
@@ -194,6 +138,7 @@ Ext.define('Admin.view.performance.PerformancePanel', {
             xtype: 'gridpanel',
             cls: 'user-grid',
             title: '参与的绩效',
+            iconCls: 'fa fa-arrows fa-spin',
             collapsible: true,
             // html: 'KitchenSink.DummyText.longText'
             viewModel: {type: 'myPerformanceViewModel'},
