@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -35,6 +36,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hrsystem.calendar.entity.Calendar;
 import com.hrsystem.calendar.entity.Event;
 import com.hrsystem.calendar.entity.DTO.EventQueryDTO;
+import com.hrsystem.calendar.service.CalendarService;
 import com.hrsystem.calendar.service.EventService;
 import com.hrsystem.common.ExtResultJson;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
@@ -44,49 +46,35 @@ import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 @RequestMapping("/calendar")
 public class CalendarContreller 
 {
-	
+	@Autowired
+	private CalendarService calendarService;
 	@Autowired
 	private EventService eventService;
 	//查找日历类型
 	@RequestMapping("/findCalendars")
 	public  ExtResultJson<Calendar> findCalendar()
 	{
-		List<Calendar>  clist = new ArrayList<Calendar>();
+		List<Calendar> clist = calendarService.findAll(null);
+		Iterator iter = clist.iterator();
+		while(iter.hasNext()){
+			Calendar calendar = (Calendar)iter.next();
+			calendar.setAssignedColor("#"+calendar.getAssignedColor());
+		}
 		
-
-		Calendar c1 = new Calendar();
-		c1.setId(1L);
-		c1.setTitle("开会");
-		c1.setDescription("");
-		c1.setColor("");
-		c1.setAssignedColor("#F44336");
-		c1.setHidden(false);
-		c1.setEditable(true);
-	
-		Calendar c2 = new Calendar();
-		c2.setId(2L);
-		c2.setTitle("Personal");
-		c2.setDescription("");
-		c2.setColor("");
-		c2.setAssignedColor("#3F51B5");
-		c2.setHidden(false);
-		c2.setEditable(true);
-				
-		Calendar c3 = new Calendar();
-		c3.setId(3L);
-		c3.setTitle("Test");
-		c3.setDescription("");
-		c3.setColor("");
-		c3.setAssignedColor("#DEFF88");
-		c3.setHidden(false);
-		c3.setEditable(true);
-
-		clist.add(c1);
-		clist.add(c2);
-		clist.add(c3);
 		return new ExtResultJson<Calendar>(clist);
 		
 	}
+	
+	@RequestMapping("/save")
+	public String save(Calendar calendar) {
+		try {
+			calendarService.save(calendar);
+			return "success:true";
+		} catch (Exception e) {
+			return "success:false";
+		}
+	}
+	
 	@RequestMapping("/delete")
 		public String delete(@RequestParam(name="id") Long id) 
 		{

@@ -33,20 +33,4 @@ public class EventQueryDTO {
 	@Name("calendarId")
 	private Long calendar;
 	
-//	@SuppressWarnings({"serial"})
-//	public static Specification<Event> getWhereClause(final EventQueryDTO eventQueryDTO) {
-//		return new Specification<Event>() {
-//			@Override
-//			public Predicate toPredicate(Root<Event> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
-//			
-//				List<Predicate> predicate = new ArrayList<>();
-//				if (null!=eventQueryDTO.getCalendar()) {
-//					predicate.add(criteriaBuilder.equal(root.get("calendarId").as(Long.class),
-//							eventQueryDTO.getCalendar()));
-//				}
-//				Predicate[] pre = new Predicate[predicate.size()];
-//				return query.where(predicate.toArray(pre)).getRestriction();
-//			}
-//		};
-//	}
 }

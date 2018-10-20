@@ -119,6 +119,18 @@ Ext.define('Ext.calendar.panel.AbstractPanel', {
                 });
             }
 
+             if (me.getAddTypeButtonPosition() === 'sideBar') {
+                items.push({
+                    xtype: 'container',
+                    margin: '0 0 10 0',
+                    layout: {
+                        type: 'hbox',
+                        pack: 'center'
+                    },
+                    items: me.createAddTypeButton()
+                });
+            }
+
             items.push(me.createCalendarList());
 
             if (me.getSwitcherPosition() === 'sideBar') {

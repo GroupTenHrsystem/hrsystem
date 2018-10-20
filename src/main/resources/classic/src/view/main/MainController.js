@@ -185,5 +185,41 @@ Ext.define('Admin.view.main.MainController', {
                 }
             }
         });
-    }
+    },
+
+    onChange: function(picker) {
+        if (window.console && window.console.log) {
+                console.log(picker.getId() + '.color: ' + picker.getValue());
+        }
+    },
+
+    submitAddForm:function(btn){
+        var win    = btn.up('window');
+        var form = win.down('form');
+        if(!form.isValid()){
+            Ext.Msg.alert("错误", "请填写正确数据")
+        }else{
+            var values  =form.getValues();
+             Ext.Ajax.request({ 
+                        url : '/calendar/save', 
+                        method : 'post', 
+                        params : { 
+                            title: values.title,
+                            assignedColor: values.color,
+                        }, 
+                        success: function(response, options) {
+                                Ext.Msg.alert('提示', '操作成功', function() {
+                                    // var contentPanel = Ext.getCmp('contentPanel');
+                                    // var grid = contentPanel.down('grid');
+                                    // grid.getStore().reload();
+                                    //store.reload();
+                                });
+                            }
+                    });
+           // this.getView().getStore().load();
+            Ext.getCmp('schedulingPanel').down('calendar').getStore().load();
+            console.log(Ext.getCmp('schedulingPanel').down('calendar'));
+            win.close();
+        }
+    },
 });
