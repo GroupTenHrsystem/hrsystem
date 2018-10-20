@@ -1,25 +1,26 @@
 Ext.define('Admin.view.role.RoleViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.roleViewController',
-//    /*Add*/
-//	openAddWindow:function(grid, rowIndex, colIndex){
-//			grid.up('user').add(Ext.widget('userAddWindow')).show();
-//	},
-//	submitAddForm:function(btn){
-//		var win    = btn.up('window');
-//		var form = win.down('form');
-//		var record = Ext.create('Admin.model.user.UserModel');
-//		var values  =form.getValues();//获取form数据
-//           	record.set(values);
-//          	record.save();
-//          	Ext.data.StoreManager.lookup('userGridStore').load();
-//          	win.close();
-//	},
+    /*Add*/
+	openAddWindow:function(grid, rowIndex, colIndex){
+			grid.up('role').add(Ext.widget('roleAddWindow')).show();
+	},
+	submitAddForm:function(btn){
+		var win    = btn.up('window');
+		var form = win.down('form');
+		
+		var record = Ext.create('Admin.model.role.RoleModel');
+		var values  =form.getValues();//获取form数据
+           	record.set(values);
+          	record.save();  
+          	console.log(record);
+          	Ext.data.StoreManager.lookup('roleGridStore').reload();
+          	win.close();
+	},
 	/* Clear Text */
 	clearText:function(btn){
 		this.lookupReference('searchFieldValue').setValue("");
 		this.lookupReference('searchDataFieldValue').setValue("");
-		this.lookupReference('searchDataFieldValue2').setValue("");
 		
 	},
 //    /*Edit*/
@@ -73,31 +74,15 @@ Ext.define('Admin.view.role.RoleViewController', {
 		}
 		store.load({params:{start:0, limit:20, page:1}});
 	},
-//	/*Search More*/	
-//	openSearchWindow:function(toolbar, rowIndex, colIndex){
-//		toolbar.up('grid').up('container').add(Ext.widget('userSearchWindow')).show();
-//	},
-//	submitSearchForm:function(btn){
-//		var store =	Ext.data.StoreManager.lookup('userGridStore');
-//		var win = btn.up('window');
-//		var form = win.down('form');
-//		var values  = form.getValues();
-//		Ext.apply(store.proxy.extraParams, {staffName:"",createTimeStart:"",createTimeEnd:""});
-//		Ext.apply(store.proxy.extraParams,{
-//			staffName:values.staffName,
-//			createTimeStart:Ext.util.Format.date(values.createTimeStart, 'Y/m/d'),
-//			createTimeEnd:Ext.util.Format.date(values.createTimeEnd, 'Y/m/d')
-//		});
-//		store.load({params:{start:0, limit:20, page:1}});
-//		win.close();
-//	},
-//	/*Delete*/	
-//	deleteOneRow:function(grid, rowIndex, colIndex){
-//		Ext.Msg.confirm('提示信息','确认要删除这条信息吗？',function(op){
-//		if(op == 'yes'){
-//			var store = grid.getStore();
-//			var record = store.getAt(rowIndex);
-//			store.remove(record);//GET //http://localhost:8081/order/112
+	/*Delete*/	
+	deleteOneRow:function(grid, rowIndex, colIndex){
+		Ext.Msg.confirm('提示信息','确认要删除这条信息吗？',function(op){
+		if(op == 'yes'){
+			var store = grid.getStore();
+			var record = store.getAt(rowIndex);
+			console.log(record.data);
+			console.log(store.data);
+			store.remove(record);//GET //http://localhost:8081/order/112
 //			store.sync({ 
 //		    success: function (proxy, operations) { 
 //		     // pop success message 
@@ -108,50 +93,50 @@ Ext.define('Admin.view.role.RoleViewController', {
 //		     store.rejectChanges(); 
 //		    } 
 //		}); 
-//			//store.sync();
-//		}else{
-//			//alert("取消了");
-//		}
-//	})
-//
-//		
-//	},
-//	/*Delete More Rows*/	
-//	deleteMoreRows:function(btn, rowIndex, colIndex){
-//				var grid = btn.up('gridpanel');
-//		var selModel = grid.getSelectionModel();
-//        if (selModel.hasSelection()) {
-//            Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
-//                if (button == "yes") {
-//                    var rows = selModel.getSelection();
-//                    var selectIds = []; //要删除的id
-//                    Ext.each(rows, function (row) {
-//                        selectIds.push(row.data.id);
-//                    });
-//                  	Ext.Ajax.request({ 
-//						url : '/Staff/deletes', 
-//						method : 'post', 
-//						params : { 
-//							//ids[] :selectIds
-//							ids :selectIds
-//						}, 
-//						success: function(response, options) {
-//			                var json = Ext.util.JSON.decode(response.responseText);
-//				            if(json.success){
-//				            	Ext.Msg.alert('操作成功', json.msg, function() {
-//				                    grid.getStore().reload();
-//				                });
-//					        }else{
-//					        	 Ext.Msg.alert('操作失败', json.msg);
-//					        }
-//			            }
-//					});
-//                }
-//            });
-//        }else {
-//            Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
-//        }
-//	},
+			//store.sync();
+		}else{
+			//alert("取消了");
+		}
+	})
+
+		
+	},
+	/*Delete More Rows*/	
+	deleteMoreRows:function(btn, rowIndex, colIndex){
+				var grid = btn.up('gridpanel');
+		var selModel = grid.getSelectionModel();
+        if (selModel.hasSelection()) {
+            Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
+                if (button == "yes") {
+                    var rows = selModel.getSelection();
+                    var selectIds = []; //要删除的id
+                    Ext.each(rows, function (row) {
+                        selectIds.push(row.data.id);
+                    });
+                  	Ext.Ajax.request({ 
+						url : '/Role/deletes', 
+						method : 'post', 
+						params : { 
+							//ids[] :selectIds
+							ids :selectIds
+						}, 
+						success: function(response, options) {
+			                var json = Ext.util.JSON.decode(response.responseText);
+				            if(json.success){
+				            	Ext.Msg.alert('操作成功', json.msg, function() {
+				                    grid.getStore().reload();
+				                });
+					        }else{
+					        	 Ext.Msg.alert('操作失败', json.msg);
+					        }
+			            }
+					});
+                }
+            });
+        }else {
+            Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
+        }
+	}
 //	/*Disable*/	
 //	onDisableButton:function(grid, rowIndex, colIndex){
 //		Ext.Msg.alert("Title","Click Disable Button");

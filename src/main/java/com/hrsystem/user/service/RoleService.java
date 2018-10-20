@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.hrsystem.performance.entity.Performance;
 import com.hrsystem.user.entity.Role;
+import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.entity.DTO.RoleDTO;
 import com.hrsystem.user.repository.RoleRepository;
 
@@ -58,11 +59,17 @@ public class RoleService implements IRoleService {
 		return roleRepository.findAll(spec, pageable);
 	}
 
-	@Override
-	public List<RoleDTO> findDepartmentAndRole() {
-		// TODO Auto-generated method stub
-		return roleRepository.findDepartmentAndRole();
-	}
+//	@Override
+//	public List<Staff> findStaffByRole(Long positionId) {
+//		// TODO Auto-generated method stub
+//		return roleRepository.findStaffByRole(positionId);
+//	}
+
+//	@Override
+//	public List<RoleDTO> findDepartmentAndRole() {
+//		// TODO Auto-generated method stub
+//		return roleRepository.findDepartmentAndRole();
+//	}
 
 //	@Override
 //	public List<Role> getRoleByRoleTempletId(Long id) {

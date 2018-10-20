@@ -1,5 +1,9 @@
 $app-name:  dynamic( 'Admin' );
+<<<<<<< HEAD
+$image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+=======
 $image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+>>>>>>> refs/remotes/origin/master
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -112,10 +116,13 @@ $include-admin-view-email-menu: dynamic(true);;
 $include-admin-view-email-menuviewmodel: dynamic(true);;
 $include-admin-view-email-report: dynamic(true);;
 $include-admin-view-email-reportcontroller: dynamic(true);;
+<<<<<<< HEAD
+=======
 $include-admin-view-employ-employ: dynamic(true);;
 $include-admin-view-employ-employpanel: dynamic(true);;
 $include-admin-view-employ-employviewcontroller: dynamic(true);;
 $include-admin-view-employ-employviewmodel: dynamic(true);;
+>>>>>>> refs/remotes/origin/master
 $include-admin-view-leave-leaveaddwindow: dynamic(true);;
 $include-admin-view-leave-leavecenterpanel: dynamic(true);;
 $include-admin-view-leave-leaveeditwindow: dynamic(true);;

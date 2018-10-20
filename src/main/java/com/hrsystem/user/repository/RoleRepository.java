@@ -7,11 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 import com.hrsystem.user.entity.Role;
+import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.entity.DTO.RoleDTO;
 
 @Repository
 public interface RoleRepository extends PagingAndSortingRepository<Role, Long>,JpaSpecificationExecutor<Role>{
 
-	@Query(value="SELECT a.id as id,a.position as position,a.limite as limite ,b.id as departmentId,b.department_name as departmentName FROM hrsystem.t_role as a join hrsystem.t_department as b on a.department_id = b.id",nativeQuery=true) 
-	public List<RoleDTO> findDepartmentAndRole();
+//	@Query(value="SELECT * FROM hrsystem.t_staff a where a.department_id =?1",nativeQuery=true) 
+//	public List<Staff> findStaffByRole(Long positionId);
 }
