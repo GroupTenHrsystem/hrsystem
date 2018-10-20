@@ -45,17 +45,17 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                             return val;
                         }
                 },
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceName',text: '绩效考核名字',width: 90},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'startTime',text: '考核开始时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'endTime',text: '考核结束时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'applyTime',text: '发起时间',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',dataIndex: 'completeTime',text: '完成时间',formatter: 'date("Y/m/d")'},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',text: '自评分数' ,dataIndex: 'selfScore',sortable: true},  
-                {xtype: 'gridcolumn',cls: 'content-column',text: '自评细节' ,dataIndex: 'selfScoreReason',sortable: true,hidden:true},    
-                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分' ,dataIndex: 'deptLeaderScore',sortable: true},
-                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',sortable: true,hidden:true},  
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'staffName',text: '被考核用户',width: 80},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'performanceTempletName',text: '考核模板',width: 80},
+                {xtype: 'gridcolumn',cls: 'content-column',text: '自评分数' ,dataIndex: 'selfScore',width: 30,sortable: true},  
+                {xtype: 'gridcolumn',cls: 'content-column',text: '自评细节' ,dataIndex: 'selfScoreReason',width: 30,sortable: true,hidden:true},    
+                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分' ,dataIndex: 'deptLeaderScore',width: 30,sortable: true},
+                {xtype: 'gridcolumn',cls: 'content-column',text: '领导评分细节' ,dataIndex: 'deptLeaderScoreReason',width: 30,sortable: true,hidden:true},  
                 {xtype: 'gridcolumn',cls: 'content-column',text: '最终分数' ,dataIndex: 'resultScore',sortable: true},  
                 {xtype: 'gridcolumn',cls: 'content-column',text: '申诉理由' ,dataIndex: 'confirmResult',width: 80,sortable: true}, 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
@@ -107,82 +107,82 @@ Ext.define('Admin.view.performance.PerformancePanel', {
                 groupHeaderTpl: '{columnName}: {name} ({rows.length} 条记录{[values.rows.length > 1 ? "s" : ""]})'
             }],
 
-            tbar: [{
-	            xtype: 'combobox',
-                reference:'searchFieldName',
-	            hideLabel: true,
-	            store:Ext.create("Ext.data.Store", {
-				    fields: ["name", "value"],
-				    data: [
-				      	{ name: '绩效考核名字', value: 'performanceName' },
-						{ name: '开始时间', value: 'startTime' },
-                        { name: '结束时间', value: 'endTime' },
-                      //  { name: '考核周期', value: 'cycle' }
-				    ]
-				}),
-	            displayField: 'name',
-	            valueField:'value',
-	            value:'请选择',
-	            editable: false,
-	            queryMode: 'local',
-	            triggerAction: 'all',
-	            emptyText: 'Select a state...',
-	            width: 135,
-                listeners:{
-                    select: 'searchComboboxSelectChuang'
-                }
-	        }, '-',{
-            	xtype:'textfield',
-                reference:'searchFieldValue',
-            	name:'performancePanelSearchField'
-		    }, '-',{
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue',
-                fieldLabel: 'From',
-                name: 'from_date'
-            }, {
-                xtype: 'datefield',
-                hideLabel: true,
-                hidden:true,
-                format: 'Y/m/d H:i:s',
-                reference:'searchDataFieldValue2',
-                fieldLabel: 'To',
-                name: 'to_date'
-         },'-',{
-		        text: '查询',
-		        iconCls: 'fa fa-search',
-		        handler: 'quickSearch'
-		    }, '-',{
-		        text: '查询更多',
-		        iconCls: 'fa fa-search-plus',
-		        handler: 'openSearchWindow'	
-			},'-',{
-                text: '清空',
-                iconCls: 'fa fa-eraser',
-                handler: 'clearText' 
+   //          tbar: [{
+	  //           xtype: 'combobox',
+   //              reference:'searchFieldName',
+	  //           hideLabel: true,
+	  //           store:Ext.create("Ext.data.Store", {
+			// 	    fields: ["name", "value"],
+			// 	    data: [
+			// 	      	{ name: '绩效考核名字', value: 'performanceName' },
+			// 			{ name: '开始时间', value: 'startTime' },
+   //                      { name: '结束时间', value: 'endTime' },
+   //                    //  { name: '考核周期', value: 'cycle' }
+			// 	    ]
+			// 	}),
+	  //           displayField: 'name',
+	  //           valueField:'value',
+	  //           value:'请选择',
+	  //           editable: false,
+	  //           queryMode: 'local',
+	  //           triggerAction: 'all',
+	  //           emptyText: 'Select a state...',
+	  //           width: 135,
+   //              listeners:{
+   //                  select: 'searchComboboxSelectChuang'
+   //              }
+	  //       }, '-',{
+   //          	xtype:'textfield',
+   //              reference:'searchFieldValue',
+   //          	name:'performancePanelSearchField'
+		 //    }, '-',{
+   //              xtype: 'datefield',
+   //              hideLabel: true,
+   //              hidden:true,
+   //              format: 'Y/m/d H:i:s',
+   //              reference:'searchDataFieldValue',
+   //              fieldLabel: 'From',
+   //              name: 'from_date'
+   //          }, {
+   //              xtype: 'datefield',
+   //              hideLabel: true,
+   //              hidden:true,
+   //              format: 'Y/m/d H:i:s',
+   //              reference:'searchDataFieldValue2',
+   //              fieldLabel: 'To',
+   //              name: 'to_date'
+   //       },'-',{
+		 //        text: '查询',
+		 //        iconCls: 'fa fa-search',
+		 //        handler: 'quickSearch'
+		 //    }, '-',{
+		 //        text: '查询更多',
+		 //        iconCls: 'fa fa-search-plus',
+		 //        handler: 'openSearchWindow'	
+			// },'-',{
+   //              text: '清空',
+   //              iconCls: 'fa fa-eraser',
+   //              handler: 'clearText' 
                
                            
-            }, '->',{
-		        text: 'excel',
-		        tooltip: 'excel',
-		        iconCls: 'fa fa-plus',
-                href:'/performance/downloadExcel',
-                hrefTarget:'_self'
-		        //handler:  'gridExcel' 
-		    },'-',{
-                text: '添加',
-                tooltip: 'Add a new row',
-                iconCls: 'fa fa-plus',
-                handler: 'openAddWindow'    
-            },'-',{
-		        text: '删除',
-		        tooltip: 'Remove the selected item',
-		        iconCls:'fa fa-trash',
-		        handler: 'deleteMoreRows'	
-		    }],			
+   //          }, '->',{
+		 //        text: 'excel',
+		 //        tooltip: 'excel',
+		 //        iconCls: 'fa fa-plus',
+   //              href:'/performance/downloadExcel',
+   //              hrefTarget:'_self'
+		 //        //handler:  'gridExcel' 
+		 //    },'-',{
+   //              text: '添加',
+   //              tooltip: 'Add a new row',
+   //              iconCls: 'fa fa-plus',
+   //              handler: 'openAddWindow'    
+   //          },'-',{
+		 //        text: '删除',
+		 //        tooltip: 'Remove the selected item',
+		 //        iconCls:'fa fa-trash',
+		 //        handler: 'deleteMoreRows'	
+		 //    }],			
             dockedItems: [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',
