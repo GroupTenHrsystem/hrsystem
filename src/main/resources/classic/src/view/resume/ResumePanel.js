@@ -23,15 +23,25 @@
                 {header: '简历状态',dataIndex: 'processStatus',width: 60,sortable: true,
                 	renderer: function(val) {
                             if (val =='NEW') {
-                                return '<span style="color:green;">新建</span>';
-                            } else if (val =='APPROVAL') {
-                                return '<span style="color:blue;">审批中...</span>';
-                            } else if (val =='COMPLETE') {
-                                return '<span style="color:orange;">二面通过</span>';
-                            }else{
-                                return '<span style="color:red;">取消申请</span>';
-                            }
-                            return val;
+		            return '<span style="color:green;">新建</span>';
+		        } else if (val =='APPROVAL') {
+		            return '<span style="color:blue;">审批中...</span>';
+		        } else if (val =='COMPLETE') {
+		            return '<span style="color:orange;">二面通过</span>';
+		        }else if (val =='FIRSTPASS') {
+		            return '<span style="color:orange;">一面通过</span>';
+		        }else if (val =='FIRSTAIL') {
+		            return '<span style="color:orange;">一面失败</span>';
+		        } else if (val =='LASTFAIL') {
+		            return '<span style="color:orange;">二面失败</span>';
+		        } else if (val =='FIRSTARRANGE') {
+		            return '<span style="color:orange;">一面安排中...</span>';
+		        }else if (val =='LASTARRANGE') {
+		            return '<span style="color:orange;">二面安排中</span>';
+		        }else{
+		        	return '<span style="color:red;">取消申请</span>';
+		        }
+		        return val;
                         }
                 },
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'name',text: '姓名',flex: 1},

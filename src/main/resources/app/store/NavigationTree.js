@@ -94,7 +94,13 @@
 	                    leaf: true
 	                },
 	                {
-	                    text: '面试管理',
+	                    text: '面试安排',
+	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    viewType: 'resumeArrangePanel',
+	                    leaf: true
+	                },
+	                {
+	                    text: '面试结果审核录入',
 	                    iconCls: 'x-fa fa-lightbulb-o',
 	                    viewType: 'resumeApprovePanel',
 	                    leaf: true

@@ -48,7 +48,17 @@
 		        } else if (val =='APPROVAL') {
 		            return '<span style="color:blue;">审批中...</span>';
 		        } else if (val =='COMPLETE') {
-		            return '<span style="color:orange;">完成审批</span>';
+		            return '<span style="color:orange;">二面通过</span>';
+		        }else if (val =='FIRSTPASS') {
+		            return '<span style="color:orange;">一面通过</span>';
+		        }else if (val =='FIRSTAIL') {
+		            return '<span style="color:orange;">一面失败</span>';
+		        } else if (val =='LASTFAIL') {
+		            return '<span style="color:orange;">二面失败</span>';
+		        } else if (val =='FIRSTARRANGE') {
+		            return '<span style="color:orange;">一面安排中...</span>';
+		        }else if (val =='LASTARRANGE') {
+		            return '<span style="color:orange;">二面安排中</span>';
 		        }else{
 		        	return '<span style="color:red;">取消申请</span>';
 		        }

@@ -30,10 +30,10 @@ import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
-*@作者: HyperMuteki
+*@作者: 
 *@文件名称: HrSystemInitUsersAndGroupsDB.java
   *@Date: 2018年10月09日
-*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved. 
+*@Copyright: 2018 https://github.com/ Inc. All rights reserved. 
 */
 //@Component
 public class HrSystemInitUsersAndGroupsDB {

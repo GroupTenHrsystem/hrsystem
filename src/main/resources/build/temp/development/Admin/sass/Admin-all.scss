@@ -1,9 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-<<<<<<< HEAD
-$image-search-path: 'E:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
-=======
-$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
->>>>>>> refs/remotes/origin/master
+$image-search-path: 'D:/workspace-sts-3.9.5.RELEASE/hrsystem/src/main/resources/build/development/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -28,6 +24,7 @@ $include-admin-model-recruit-recruitmodel: dynamic(true);;
 $include-admin-model-report-reportmodel: dynamic(true);;
 $include-admin-model-reportall-reportallmodel: dynamic(true);;
 $include-admin-model-resume-resumemodel: dynamic(true);;
+$include-admin-model-resumearrange-resumearrangemodel: dynamic(true);;
 $include-admin-model-resumeapprove-resumeapprovemodel: dynamic(true);;
 $include-admin-model-role-rolemodel: dynamic(true);;
 $include-admin-model-salary-salaryanalysismodel: dynamic(true);;
@@ -64,6 +61,7 @@ $include-admin-store-recruit-recruitgridstroe: dynamic(true);;
 $include-admin-store-report-reportgridstroe: dynamic(true);;
 $include-admin-store-reportall-reportallgridstroe: dynamic(true);;
 $include-admin-store-resume-resumegridstroe: dynamic(true);;
+$include-admin-store-resumearrange-resumearrangestore: dynamic(true);;
 $include-admin-store-resumeapprove-resumeapprovestore: dynamic(true);;
 $include-admin-store-role-rolegridstore: dynamic(true);;
 $include-admin-store-salary-salaryanalysisstroe: dynamic(true);;
@@ -207,11 +205,18 @@ $include-admin-view-resume-resume: dynamic(true);;
 $include-admin-view-resume-resumepanel: dynamic(true);;
 $include-admin-view-resume-resumeviewcontroller: dynamic(true);;
 $include-admin-view-resume-resumeviewmodel: dynamic(true);;
+$include-admin-view-resumearrange-resumearrangepanel: dynamic(true);;
+$include-admin-view-resumearrange-resumearrangeviewmodel: dynamic(true);;
+$include-admin-view-resumearrange-resumearrangewindow: dynamic(true);;
+$include-admin-view-resumearrange-resumearrangegrid: dynamic(true);;
+$include-admin-view-resumearrange-resumearrangeviewcontroller: dynamic(true);;
+$include-admin-view-resumearrange-task-firstarrange: dynamic(true);;
 $include-admin-view-resumeapprove-resumeapprovepanel: dynamic(true);;
 $include-admin-view-resumeapprove-resumeapproveviewmodel: dynamic(true);;
 $include-admin-view-resumeapprove-resumeapprovewindow: dynamic(true);;
 $include-admin-view-resumeapprove-resumeapprovegrid: dynamic(true);;
 $include-admin-view-resumeapprove-resumeapproveviewcontroller: dynamic(true);;
+$include-admin-view-resumeapprove-task-lastarrange: dynamic(true);;
 $include-admin-view-resumeapprove-task-resumechose: dynamic(true);;
 $include-admin-view-role-role: dynamic(true);;
 $include-admin-view-role-rolepanel: dynamic(true);;

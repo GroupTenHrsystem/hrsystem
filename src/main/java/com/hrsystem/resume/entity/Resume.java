@@ -67,6 +67,13 @@ public class Resume {
 	private Double lastAuditScore;  //二面分数
 	private String lastBackReason;  //二面退回原因
 	
+	private String firstarr;  //一面面试官
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss")
+	private Date firstTime;   //一面时间
+	private String lastarr;   //二面面试官
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss")
+	private Date lastTime;   //二面时间
+	
 	@Column(name="is_deleted_")
 	private boolean isDeleted;    //  默认为false   true为已删除
 

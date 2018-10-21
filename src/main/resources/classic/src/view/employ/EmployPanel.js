@@ -54,7 +54,7 @@
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,tooltip: '简历修改',handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,tooltip: '删除',handler: 'deleteOneRow'},
-            			{xtype: 'button',iconCls: 'x-fa fa-close'	,tooltip: '存档',handler: 'saveIntoUser'}
+            {xtype: 'button',iconCls: 'x-fa fa-close'	,tooltip: '存档',handler: 'openSaveWindow'}
                     ]
                 }
             ],

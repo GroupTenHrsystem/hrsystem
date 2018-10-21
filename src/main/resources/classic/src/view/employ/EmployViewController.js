@@ -2,6 +2,10 @@
     extend: 'Ext.app.ViewController',
     alias: 'controller.employViewController',
 
+	/* Add */
+	openSaveWindow:function(grid, rowIndex, colIndex){
+			var win = grid.up('employ').add(Ext.widget('employSaveWindow')).show();
+	},
 		
 	/*Edit*/
 	openEditWindow:function(grid, rowIndex, colIndex){
@@ -78,39 +82,6 @@
 	/*quickSearch*/
 	quickSearch:function(btn){
 		alert("quickSearch");
-	},
-		
-	/*存档*/	
-	saveIntoUser:function(grid, rowIndex, colIndex){
-		 Ext.MessageBox.confirm('提示', '确定要将该简历存入员工表吗？',
-  			function(btn, text){
-            	if(btn=='yes'){
-            	/*	var store = grid.getStore();
-					var record = store.getAt(rowIndex);
-					Ext.Ajax.request({
-						url:'resume/employ',
-						method:'post',
-				 		params:{
-							resume:record				 		
-				 		},
-						success: function(response, options) {
-			                var json = Ext.util.JSON.decode(response.responseText);
-				            if(json.success){
-				            	Ext.Msg.alert('操作成功', json.msg, function() {
-				                    grid.getStore().reload();
-				                });
-					        }else{
-					        	 Ext.Msg.alert('操作失败', json.msg);
-					        }
-			            }
-					});*/
-					//record.saveIntoUser();
-					Ext.data.StoreManager.lookup('employGridStroe');
-				//	win.close();
-				}
-        	}
-        , this);
-	}
-		
+	}		
 
 });
