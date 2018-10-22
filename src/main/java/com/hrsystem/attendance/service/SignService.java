@@ -2,6 +2,7 @@ package com.hrsystem.attendance.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,10 +65,24 @@ public class SignService implements ISignService {
 		return signRepository.findAll(spec, pageable);
 	}
 
-//	@Override
-//	public List<Sign> getSignList(Long id) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public List<Sign> findSignByName(String name) {
+		// TODO Auto-generated method stub
+		return signRepository.findSignByName(name);
+	}
+
+	@Override
+	public List<Sign> findStarTime(String star_time) {
+		// TODO Auto-generated method stub
+		return signRepository.findStarTime(star_time);
+	}
+
+	@Override
+	public List<Sign> findExtraStarTime(String extra_star_time) {
+		// TODO Auto-generated method stub
+		return signRepository.findExtraStarTime(extra_star_time);
+	}
+
+	
 
 }

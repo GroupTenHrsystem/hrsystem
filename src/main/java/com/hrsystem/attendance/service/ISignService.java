@@ -1,5 +1,6 @@
 package com.hrsystem.attendance.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -24,6 +25,11 @@ public interface ISignService {
 	 
 	 public Page<Sign> findAll(Specification<Sign> spec, Pageable pageable);
 	 
-//	 public List<Sign> getSignList(Long id);
+	 public List<Sign> findSignByName(String name);
+	 
+	 
+	 public List<Sign> findStarTime(String star_time);
+	 
+	 public List<Sign> findExtraStarTime(String extra_star_time);
 //	 public List<Staff> getStaffByStaffTempletId(Long id);
 }

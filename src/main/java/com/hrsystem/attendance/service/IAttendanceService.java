@@ -24,6 +24,6 @@ public interface IAttendanceService {
 	 
 	 public Page<Attendance> findAll(Specification<Attendance> spec, Pageable pageable);
 	 
-//	 public List<Attendance> getAttendanceList(Long id);
+	 public List<Attendance> findAttendanceByName(String name);
 //	 public List<Staff> getStaffByStaffTempletId(Long id);
 }
