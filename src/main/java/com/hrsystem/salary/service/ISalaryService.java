@@ -2,7 +2,10 @@ package com.hrsystem.salary.service;
 
 import com.hrsystem.salary.entity.DTO.SalaryDTO;
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -33,4 +36,6 @@ public interface ISalaryService {
 	 public Page<Salary> findAll(Specification<Salary> spec, Pageable pageable);
 	 
 	 public List<Salary> getSalaryByStaffName(String userId);
+
+	 public void DownloadExcel(Specification<Salary> spec,HttpServletResponse response) throws IOException;
 }

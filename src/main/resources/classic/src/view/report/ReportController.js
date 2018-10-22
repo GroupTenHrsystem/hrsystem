@@ -106,7 +106,13 @@ Ext.define('Admin.view.email.ReportController', {
           this.onBackBtnClick();
         }
     },
-
+     /*    刷新  */
+    onRefuseBtnClick:function(bt) {        
+        var form    = bt.up('form');
+        var contentPanel = Ext.getCmp('contentPanel');
+        var grid = contentPanel.down('grid');
+        grid.getStore().reload();
+    },
     onDeleteBtnClick:function(bt) {
         var form    = bt.up('form');
         var contentPanel = Ext.getCmp('contentPanel');

@@ -20,7 +20,7 @@
             selModel:{type:'checkboxmodel',checkOnly:true},
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'key',hidden:true},
-                {header: '简历状态',dataIndex: 'processStatus',width: 60,sortable: true,
+                {header: '简历状态',dataIndex: 'processStatus',width: 60,flex: 1,sortable: true,
                 	renderer: function(val) {
                             if (val =='NEW') {
                                 return '<span style="color:green;">新建</span>';
@@ -54,22 +54,11 @@
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,tooltip: '简历修改',handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,tooltip: '删除',handler: 'deleteOneRow'},
-            			{xtype: 'button',iconCls: 'x-fa fa-close'	,tooltip: '存档',handler: 'saveIntoUser'}
+                    	{xtype: 'button',iconCls: 'x-fa fa-search-plus'	,tooltip: '面试详细',handler: 'openshowDetailsWindow'},
+            			{xtype: 'button',iconCls: 'x-fa fa-sign-in'	,tooltip: '存档',handler: 'openSaveWindow'}
                     ]
                 }
-            ],
-            tbar: [{
-		        text: 'Search',
-		        iconCls: 'fa fa-search',
-		        handler:'quickSearch'
-		    }, '-',{
-		        text: 'Removes',
-		        tooltip: 'Remove the selected item',
-		        iconCls:'fa fa-trash',
-		       	handler:'deleteMoreRows',
-		        itemId:'employGridPanelRemove',
-		        disabled: true
-		    }],	
+            ],	
             dockedItems: [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',

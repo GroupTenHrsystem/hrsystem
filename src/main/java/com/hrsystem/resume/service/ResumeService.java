@@ -1,5 +1,7 @@
 package com.hrsystem.resume.service;
 
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -152,16 +154,47 @@ public class ResumeService implements IResumeService{
     * @param variables 流程变量
     * @return
     */
+	@SuppressWarnings("deprecation")
 	@Override
 	public void complete(String taskId, Map<String, Object> variables, Long id) {
 		Resume resume = resumeRepository.findById(id).get();
 		if(variables.containsKey("firstAuditScore")) {
 			resume.setFirstAuditScore(Double.parseDouble(String.valueOf(variables.get("firstAuditScore"))));
 			resume.setFirstBackReason(String.valueOf(variables.get("firstBackReason")));
-		}if(variables.containsKey("lastAuditScore")) {
+			if(variables.get("firstPass").equals(true)) {
+				resume.setProcessStatus(ProcessStatus.FIRSTPASS);
+			}else {
+				resume.setProcessStatus(ProcessStatus.FIRSTAIL);
+				resume.setCompleteTime(new Date());
+			}
+		}else if(variables.containsKey("penScore")){
+			resume.setPenScore(Double.parseDouble(String.valueOf(variables.get("penScore"))));
+			if(!variables.get("deptLeaderPass").equals(true)) {
+				resume.setProcessStatus(ProcessStatus.PENFAIL);
+				resume.setCompleteTime(new Date());
+			}
+		}else if(variables.containsKey("lastAuditScore")) {
 			resume.setLastAuditScore(Double.parseDouble(String.valueOf(variables.get("lastAuditScore"))));
 			resume.setLastBackReason(String.valueOf(variables.get("lastBackReason")));
+			if(variables.get("lastPass").equals(true)) {
+				resume.setProcessStatus(ProcessStatus.COMPLETE);
+			}else {
+				resume.setProcessStatus(ProcessStatus.LASTFAIL);
+			}
 			resume.setCompleteTime(new Date());
+		}else if(variables.containsKey("firstarr")) {
+			resume.setFirstarr(String.valueOf(variables.get("firstarr")));
+			resume.setProcessStatus(ProcessStatus.FIRSTARRANGE);
+			//System.out.println("123"+variables.get("firstTime"));
+			//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			//Date date = sdf.format(String.valueOf(variables.get("firstTime")));
+			//resume.setFirstTime(date);
+		}
+		if(variables.containsKey("lastarr")) {
+			resume.setLastarr(String.valueOf(variables.get("lastarr")));
+			resume.setProcessStatus(ProcessStatus.LASTARRANGE);
+			//SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			//resume.setLastTime(f.parse(String.valueOf(variables.get("lastTime"))));
 		}
 		resumeRepository.save(resume);
 		
@@ -180,14 +213,18 @@ public class ResumeService implements IResumeService{
 		staff.setPassword(resume.getName());
 		staff.setEmail(resume.getEmail());
 		staff.setNativePlace(resume.getNativePlace());
-		staff.setEmploymentDate(resume.getApplyTime());
+		staff.setStatus("实习");
+		//staff.setEmploymentDate(resume.getApplyTime());
 		resume.setProcessStatus(ProcessStatus.ONFILE);
 		staffRepository.save(staff);
 		resumeRepository.save(resume);
 	}
 
 	@Override
-	public Page<Resume> findAll(String processStatus, Pageable pageable) {
-		return resumeRepository.findAll(processStatus, pageable);
-	}		
+	public Page<Resume> findAll(String processStatus, Specification<Resume> spec, Pageable pageable) {
+		return resumeRepository.findAll(processStatus, spec, pageable);
+	}
+
+
+		
 }

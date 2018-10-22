@@ -47,9 +47,7 @@
 				    fields: ["name", "value"],
 				    data: [
 				      	{ name: '部门名称', value: 'departmentname' },
-						{ name: '职位', value: 'position' },
-						{ name: '创建时间', value: 'startTime' },
-						{ name: '结束时间', value: 'endTime' }
+						{ name: '职位', value: 'position' }
 				    ]
 				}),
 	            displayField: 'name',//展示的字段
@@ -59,31 +57,12 @@
 	            queryMode: 'local',
 	            triggerAction: 'all',
 	            emptyText: 'Select a state...',
-	            width: 135,
-	            listeners:{
-            		select:'searchComboboxSelectChuang'
-            	}
+	            width: 135
 	        }, '-',{
             	xtype:'textfield',
             	reference:'searchFieldValue',
             	name:'recruitPanelSearchField'
             }, '-', {
-	   	 	    xtype:'datefield',
-	        	format: 'Y/m/d H:i:s',
-	        	hideLabel: true,
-	        	reference:'searchDataFieldValue',
-	        	hidden :true,
-	        	fieldLabel: 'From',
-	        	name:'from_data'
-       	 	}, '-', {
-	   	 	    xtype:'datefield',
-	        	format: 'Y/m/d H:i:s',
-	        	hideLabel: true,
-	        	reference:'searchDataFieldValue2',
-	        	hidden :true,
-	        	fieldLabel: 'To',
-	        	name:'to_data'
-		    },'-',{
 		        text: 'Search',
 		        iconCls: 'fa fa-search',
 		        handler:'quickSearch'

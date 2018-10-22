@@ -1,4 +1,4 @@
-package com.hrsystem.activiti.config;
+package com.hrsystem;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -25,16 +25,29 @@ import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.service.ISalaryService;
 import com.hrsystem.salary.service.ISalaryStandardService;
 import com.hrsystem.user.entity.Department;
+import com.hrsystem.user.entity.Role;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IDepartmentService;
+import com.hrsystem.user.service.IRoleService;
 import com.hrsystem.user.service.IStaffService;
 /**
 *@项目名称: hrsystem
-*@作者: HyperMuteki
+*@作者: 
 *@文件名称: HrSystemInitUsersAndGroupsDB.java
   *@Date: 2018年10月09日
-*@Copyright: 2018 https://github.com/HyperMuteki Inc. All rights reserved. 
+*@Copyright: 2018 https://github.com/ Inc. All rights reserved. 
 */
+
+/*
+ * 
+ * 
+ * 
+ * 初始化各种数据
+ * 
+ * 
+ * 
+ * 
+ * */
 //@Component
 public class HrSystemInitUsersAndGroupsDB {
 		@Autowired
@@ -51,6 +64,8 @@ public class HrSystemInitUsersAndGroupsDB {
 		private IDepartmentService departmentService;
 		@Autowired 
 		private ISalaryStandardService salaryStandardService;
+		@Autowired
+		private IRoleService roleService;
 		 @Bean
 		    InitializingBean usersAndGroupsInitializer(final IdentityService identityService) {
 		        return new InitializingBean() {
@@ -72,27 +87,56 @@ public class HrSystemInitUsersAndGroupsDB {
 		    	        Date DateEnd=rightNow1.getTime();
 		    	        
 		        		Group group =identityService.newGroup("admin"); // 实例化组实体
+		        		Role role = new Role();
+		        		role.setPosition("admin");
 		        		group.setType("security-role");
 		        		group.setName("管理员");
 		        		
 		        		Group group2 =identityService.newGroup("generalManager"); // 实例化组实体
+		        		Role role2 = new Role();
+		        		role2.setPosition("generalManager");
 		        		group2.setName("总经理");
+		        		
 		        		Group group3 =identityService.newGroup("secretary"); // 实例化组实体
+		        		Role role3 = new Role();
+		        		role3.setPosition("secretary");
+		        		role3.setRole(role2); //领导是generalManager
 		        		group3.setName("总经理秘书");
 
 		        		Group group4 =identityService.newGroup("hrManager"); // 实例化组实体
+		        		Role role4 = new Role();
+		        		role4.setPosition("hrManager");
+		        		role4.setRole(role2);//领导是generalManager
 		        		group4.setName("人事经理");
+		        		
 		        		Group group5 =identityService.newGroup("hrClerk"); // 实例化组实体
+		        		Role role5 = new Role();
+		        		role5.setPosition("hrClerk");
+		        		role5.setRole(role4);//领导是hrManager
 		        		group5.setName("人事文员");
 
 		        		Group group6 =identityService.newGroup("marketingManager"); // 实例化组实体
+		        		Role role6 = new Role();
+		        		role6.setPosition("marketingManager");
+		        		role6.setRole(role2);//领导是generalManager
 		        		group6.setName("市场经理");
+		        		
 		        		Group group7 =identityService.newGroup("marketingClerk"); // 实例化组实体
+		        		Role role7 = new Role();
+		        		role7.setPosition("marketingClerk");
+		        		role7.setRole(role6);//领导是marketingManager
 		        		group7.setName("市场文员");
 
 		        		Group group8 =identityService.newGroup("financeManager"); // 实例化组实体
+		        		Role role8 = new Role();
+		        		role8.setPosition("financeManager");
+		        		role8.setRole(role2);//领导是marketingManage
 		        		group8.setName("财务经理");
+		        		
 		        		Group group9 =identityService.newGroup("financeClerk"); // 实例化组实体
+		        		Role role9 = new Role();
+		        		role9.setPosition("financeClerk");
+		        		role9.setRole(role8);//领导是financeManager
 		        		group9.setName("财务文员");
 
 		        		identityService.saveGroup(group);
@@ -104,6 +148,17 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.saveGroup(group7);
 		        		identityService.saveGroup(group8);
 		        		identityService.saveGroup(group9);
+		        		
+		        		roleService.insertRole(role);
+		        		roleService.insertRole(role2);
+		        		roleService.insertRole(role3);
+		        		roleService.insertRole(role4);
+		        		roleService.insertRole(role5);
+		        		roleService.insertRole(role6);
+		        		roleService.insertRole(role7);
+		        		roleService.insertRole(role8);
+		        		roleService.insertRole(role9);
+		        		
 		        		//创建部门，建立部门与部门的关联
 		        		Department department0 = new Department();
 		    			department0.setDepartmentName("总部");
@@ -158,6 +213,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		User admin = identityService.newUser("admin");
 		        		Staff adminStaff = new Staff();
 		        		adminStaff.setStaffName("admin");
+		        		adminStaff.setRole(role);
 		        		staffService.insertStaff(adminStaff);
 		        		admin.setPassword("admin");
 		                identityService.saveUser(admin);
@@ -168,6 +224,10 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 Staff staff = new Staff();
 		                	 staff.setStaffName("user"+i);
 		                	 staff.setDepartment(department1);
+		                	 if(i == 1)
+		                		 staff.setRole(role2);
+		                	 else
+		                		 staff.setRole(role3);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 
@@ -178,6 +238,10 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 Staff staff = new Staff();
 		                	 staff.setStaffName("user"+i);
 		                	 staff.setDepartment(department2);
+		                	 if(i == 5)
+		                		 staff.setRole(role4);
+		                	 else
+		                		 staff.setRole(role5);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 
@@ -188,6 +252,10 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 Staff staff = new Staff();
 		                	 staff.setStaffName("user"+i);
 		                	 staff.setDepartment(department3);
+		                	 if(i == 11)
+		                		 staff.setRole(role6);
+		                	 else
+		                		 staff.setRole(role7);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 		                     
@@ -199,6 +267,10 @@ public class HrSystemInitUsersAndGroupsDB {
 		                	 Staff staff = new Staff();
 		                	 staff.setStaffName("user"+i);
 		                	 staff.setDepartment(department4);
+		                	 if(i == 14)
+		                		 staff.setRole(role8);
+		                	 else
+		                		 staff.setRole(role8);
 		                	 staffService.insertStaff(staff);
 		                     identityService.saveUser(user);
 
@@ -215,7 +287,7 @@ public class HrSystemInitUsersAndGroupsDB {
 		        		identityService.createMembership("user8", "hrClerk");
 		        		identityService.createMembership("user9", "hrClerk");
 		        		identityService.createMembership("user10", "hrClerk");
-		        		
+
 		        		identityService.createMembership("user11", "marketingManager");
 		        		identityService.createMembership("user12", "marketingClerk");
 		        		identityService.createMembership("user13", "marketingClerk");

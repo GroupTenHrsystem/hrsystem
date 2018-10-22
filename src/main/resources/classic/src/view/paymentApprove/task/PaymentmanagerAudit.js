@@ -53,7 +53,7 @@ Ext.define('Admin.view.paymentapprove.task.PaymentmanagerAudit', {
         xtype     : 'textareafield',
         grow      : true,
         name      : 'backReason',//修改
-        fieldLabel: '驳回理由',
+        fieldLabel: '理由',
         anchor    : '100%'
     }],
 

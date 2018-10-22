@@ -52,7 +52,7 @@ public class Resume {
 	private String referer;   //推荐人
 	private String attachment;   //附件
 	@JsonFormat(pattern="yyyy/MM/dd")
-	private Date applyTime;  
+	private Date applyTime;   
 	
 	//工作流
 	@Enumerated(EnumType.STRING)
@@ -60,12 +60,19 @@ public class Resume {
 	private String userId;    //启动流程的用户ID
 	private String processInstanceId;  //流程实例ID
 	
-	private Date completeTime;
-	private String resumeBackReason;
+	private Date completeTime;    //面试审批流程完成时间
+	private Double penScore;   //笔试分数
 	private Double firstAuditScore;  //一面分数
 	private String firstBackReason;  //一面退回原因
 	private Double lastAuditScore;  //二面分数
 	private String lastBackReason;  //二面退回原因
+	
+	private String firstarr;  //一面面试官
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss")
+	private Date firstTime;   //一面时间
+	private String lastarr;   //二面面试官
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss")
+	private Date lastTime;   //二面时间
 	
 	@Column(name="is_deleted_")
 	private boolean isDeleted;    //  默认为false   true为已删除

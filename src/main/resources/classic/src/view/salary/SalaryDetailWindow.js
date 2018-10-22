@@ -28,13 +28,6 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
             hidden: true,
             readOnly: true
         }, 
-        // {
-        //     xtype: 'datefield',
-        //     fieldLabel: '发放日期',
-        //     name:'salaryStarTime',
-        //     format: 'Y/m/d',
-        //     readOnly: true
-        // }, 
         {
             xtype: 'displayfield',
             fieldLabel: '基本工资',

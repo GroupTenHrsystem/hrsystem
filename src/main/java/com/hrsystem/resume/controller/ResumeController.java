@@ -10,7 +10,9 @@ import org.hibernate.annotations.Where;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,6 +38,7 @@ import com.hrsystem.resume.service.IResumeService;
 //@Component
 @RestController
 @RequestMapping("/resume")
+@Transactional
 public class ResumeController {
 
 	@Autowired
@@ -47,8 +50,9 @@ public class ResumeController {
 	}
 	
 	@GetMapping("/employ")
-	public Page<Resume> getPage2(ExtjsPageRequest pageRequest){
-		return resumeService.findAll("COMPLETE", pageRequest.getPageable());
+	public Page<Resume> getPage2(ResumeQueryDTO resumeQueryDTO,ExtjsPageRequest pageRequest){
+		return resumeService.findAll("COMPLETE", ResumeQueryDTO.getWhereClause(resumeQueryDTO),pageRequest.getPageable());
+		//return resumeService.findAll(ResumeQueryDTO.getWhereClause(resumeQueryDTO), pageRequest.getPageable());
 	}
 	
 	@GetMapping(value="{id}")

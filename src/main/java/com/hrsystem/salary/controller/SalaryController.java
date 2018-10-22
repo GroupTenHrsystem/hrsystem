@@ -1,11 +1,14 @@
 package com.hrsystem.salary.controller;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.hrsystem.log.ControllerLogs;
@@ -148,5 +151,13 @@ public class SalaryController {
 		}else {
 			return null;
 		}
+	}
+	
+	/*导出excel文档*/
+	@RequestMapping("/downloadExcel")
+	@ControllerLogs(description = "导出Excel")
+	public void downloadExcel(HttpServletRequest request, HttpServletResponse response)throws IOException
+	{
+		salaryService.DownloadExcel(null,response);
 	}
 }
