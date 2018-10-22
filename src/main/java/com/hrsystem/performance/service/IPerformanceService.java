@@ -1,4 +1,5 @@
 package com.hrsystem.performance.service;
+import java.io.IOException;
 /**
 *@项目名称: hrsystem
 *@作者: HyperMuteki
@@ -10,6 +11,8 @@ package com.hrsystem.performance.service;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,9 +33,13 @@ public interface IPerformanceService {
 	 
 	 public Page<Performance> findAll(Specification<Performance> spec, Pageable pageable);
 	 
+	 public List<Performance> findAll(Specification<Performance> spec);
+	 
 	 public List<Performance> getPerformanceByPerformanceTempletId(Long id);
 	 
 	 public Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable);
+	 
+	 public void DownloadExcel(Specification<Performance> spec,HttpServletResponse response) throws IOException;
 	//流程业务
 	//1.启动流程
 	public void startWorkflow(String userId,Long performanceId, Map<String, Object> variables);//findOne(Long id);

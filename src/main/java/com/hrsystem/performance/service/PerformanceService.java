@@ -1,4 +1,6 @@
 package com.hrsystem.performance.service;
+import java.io.IOException;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 /**
@@ -12,12 +14,23 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletResponse;
+
 import com.hrsystem.log.ServiceLogs;
 import org.activiti.engine.runtime.ProcessInstance;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -91,6 +104,87 @@ public class PerformanceService implements IPerformanceService{
 	@ServiceLogs(description = "通过用户名找绩效")
 	public Page<Performance> getMyPerformanceByStaffName(String userId, Pageable pageable){
 		return performanceRepository.getMyPerformanceByStaffName(userId, pageable);
+	}
+	
+	@Override
+	@ServiceLogs(description = "导出excel")
+	public void DownloadExcel(Specification<Performance> spec,HttpServletResponse response) throws IOException {
+		//创建工作簿
+				XSSFWorkbook wb = new XSSFWorkbook();
+				//创建sheet
+				XSSFSheet sheet = wb.createSheet();
+				//设置列宽 	sheet.setColumnWidth(0, 252*width+323);//width=35
+				sheet.setColumnWidth(1, 256*14+184);
+				sheet.setColumnWidth(2, 256*20+184);
+				sheet.setColumnWidth(3, 256*20+184);
+				sheet.setColumnWidth(4, 256*20+184);
+				sheet.setColumnWidth(5, 256*20+184);
+				// 单元格样式
+				XSSFCellStyle style =  wb.createCellStyle();
+
+				//从数据库查找绩效
+				List<Performance> performancePage = performanceRepository.findAll(spec);
+				Iterator<Performance> iterator = performancePage.iterator();
+				System.out.println(performancePage.size());
+				int rowSum = 2 + (int)performancePage.size();
+				//初始化单元格
+				for (int i = 0; i < rowSum; i++) { //需要n行表格
+					Row row =	sheet.createRow(i); //创建行
+					for (int j = 0; j < 13; j++) {//需要列数
+						row.createCell(j).setCellStyle(style);
+					}
+				}
+
+				//合并单元格
+				sheet.addMergedRegion(new CellRangeAddress(0, 1, 0, 0));//合并单元格，cellRangAddress四个参数，第一个起始行，第二终止行，第三个起始列，第四个终止列
+				sheet.addMergedRegion(new CellRangeAddress(0, 0, 1, 5));
+				//填入数据
+				XSSFRow row = sheet.getRow(0); //获取第一行
+				row.getCell(1).setCellValue("绩效考核"); //在第一行中创建一个单元格并赋值
+				XSSFRow row1 = sheet.getRow(1); //获取第二行，为每一列添加字段上
+				row1.getCell(1).setCellValue("绩效考核名字");
+				row1.getCell(2).setCellValue("绩效开始时间");
+				row1.getCell(3).setCellValue("绩效结束时间");
+				row1.getCell(4).setCellValue("发起时间");
+				row1.getCell(5).setCellValue("完成时间");
+				row1.getCell(6).setCellValue("被考核用户");
+				row1.getCell(7).setCellValue("考核模板");
+				row1.getCell(8).setCellValue("自评");
+				row1.getCell(9).setCellValue("他评");
+				row1.getCell(10).setCellValue("最终分数");
+
+		        Performance result;
+				XSSFRow currentRow;
+				CellStyle cellStyle = wb.createCellStyle();		//单元格样式
+				CreationHelper creationHelper = wb.getCreationHelper();
+				cellStyle.setDataFormat(creationHelper.createDataFormat().getFormat("yyyy-MM-dd  hh:mm:ss"));
+				int i = 2;
+				//保留两位小数
+				DecimalFormat df = new DecimalFormat("#.00");
+		        while(iterator.hasNext()){
+					currentRow = sheet.getRow(i);
+					result = (Performance) iterator.next();
+					currentRow.getCell(0).setCellValue(i - 1);
+					currentRow.getCell(1).setCellValue(result.getPerformanceName());
+					currentRow.getCell(2).setCellStyle(cellStyle);
+					currentRow.getCell(2).setCellValue(result.getStartTime());
+					currentRow.getCell(3).setCellStyle(cellStyle);
+					currentRow.getCell(3).setCellValue(result.getEndTime());
+					currentRow.getCell(4).setCellValue(result.getApplyTime());
+					currentRow.getCell(4).setCellStyle(cellStyle);
+					currentRow.getCell(5).setCellValue(result.getCompleteTime());
+					currentRow.getCell(5).setCellStyle(cellStyle);
+					currentRow.getCell(6).setCellValue(result.getStaff().getStaffName());
+					currentRow.getCell(7).setCellValue(result.getPerformanceTemplet().getName());
+					currentRow.getCell(8).setCellValue(result.getSelfScore());
+					currentRow.getCell(9).setCellValue(result.getDeptLeaderScore());
+					if(result.getResultScore()!=null)
+					currentRow.getCell(10).setCellValue(Double.parseDouble(df.format(result.getResultScore())));
+		            ++i;
+		        }
+				response.setHeader("Content-disposition", "attachment; filename=" + java.net.URLEncoder.encode("绩效考核.xlsx", "UTF-8"));//默认Excel名称
+				response.flushBuffer();
+				wb.write(response.getOutputStream());
 	}
 	/*----------------------------------------------流程业务--------------------------------------------*/
 	 /**
@@ -202,5 +296,11 @@ public class PerformanceService implements IPerformanceService{
 		performanceRepository.save(performance);
 		
 		workflowService.complete(taskId, variables);
+	}
+
+	@Override
+	public List<Performance> findAll(Specification<Performance> spec) {
+		// TODO Auto-generated method stub
+		return performanceRepository.findAll(spec);
 	}
 }
