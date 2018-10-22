@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 
 @Data
@@ -21,5 +24,7 @@ public class Role {
 	private Boolean status = true;
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Department department;
-    
+	@JsonIgnore
+	@ManyToOne(cascade = CascadeType.REFRESH)	//领导
+	private Role role;
 }

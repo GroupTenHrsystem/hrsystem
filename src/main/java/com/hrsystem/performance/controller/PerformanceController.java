@@ -33,6 +33,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,6 +62,7 @@ import com.hrsystem.performance.entity.DTO.PerformanceRelateDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
 import com.hrsystem.user.entity.Department;
+import com.hrsystem.user.entity.Role;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
@@ -74,6 +76,7 @@ import com.hrsystem.user.service.IStaffService;
 */
 @RestController
 @RequestMapping("/performance")
+@Transactional
 public class PerformanceController {
 	@Autowired
 	private IPerformanceService performanceService;
@@ -283,7 +286,8 @@ public class PerformanceController {
     		String userId = SessionUtil.getUserName(session);
     		Map<String, Object> variables = new HashMap<String, Object>();
     		Performance performance = performanceService.findPerformanceById(performanceId);
-    		variables.put("deptLeader", "financeManager");
+    		Role role = staffService.findStaffByName(userId).getRole().getRole();
+    		variables.put("deptLeader", role.getPosition());
     		variables.put("applyUserId", performance.getStaff().getStaffName());
     		performanceService.startWorkflow(userId,performanceId, variables);
     		return new ExtAjaxResponse(true,"操作成功!");
