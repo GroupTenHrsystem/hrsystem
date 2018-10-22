@@ -1,12 +1,12 @@
-Ext.define('Aria.view.employ.EmploySaveWindow', {
+﻿Ext.define('Aria.view.employ.EmploySaveWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.employSaveWindow',
-    height: 200,
+    height: 300,
     minHeight: 100,
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: 'Add Order Window',
+    title: '应聘者存档',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -25,28 +25,28 @@ Ext.define('Aria.view.employ.EmploySaveWindow', {
             readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: 'Order Number',
-            name:'orderNumber'
+            fieldLabel: '员工工号',
+            name:'employeNum'
+        }, {
+        	xtype: 'textfield',
+            fieldLabel: '实习部门',
+            name:'departmentName'
         }, {
             xtype: 'datefield',
-            fieldLabel: 'Create Time',
-            name:'createTime',
+            fieldLabel: '入职时间',
+            name:'employmentDate',
             format: 'Y/m/d H:i:s'
         }]
     }],
-   
-    dockedItems: {
-        dock: 'bottom',
-        items: [{
-            xtype: 'button',
-            text: 'Submit',
-            handler: 'orderAddFormSubmit'
-        },{
-            xtype: 'button',
-            text: 'Close',
-            handler: function(btn) {
-                btn.up('window').close();
-            }
-        }]
-    }
+    buttons: ['->',{
+	    xtype: 'button',
+	    text: '提交',
+	    handler: 'saveIntoStaffFormSubmit'
+	},{
+	    xtype: 'button',
+	    text: '取消',
+	    handler: function(btn) {
+	        btn.up('window').close();
+   		 }
+	},'->']
 });

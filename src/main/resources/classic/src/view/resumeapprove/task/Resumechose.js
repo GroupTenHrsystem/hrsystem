@@ -35,7 +35,7 @@ Ext.define('Admin.view.resumeapprove.task.Resumechose', {
         readOnly: true
     },{
 		xtype: 'radiogroup',
-		fieldLabel: '简历审批',
+		fieldLabel: '笔试是否通过',
 		defaults: {
 			flex: 1
 		},
@@ -50,11 +50,16 @@ Ext.define('Admin.view.resumeapprove.task.Resumechose', {
 			boxLabel: '不通过'
 		}]
     },{
-        xtype     : 'textareafield',
+        xtype     : 'numberfield',
         grow      : true,
-        name      : 'resumeBackReason',//修改
-        fieldLabel: '审批理由',
-        anchor    : '100%'
+        name      : 'penScore',
+        fieldLabel: '笔试分数',
+        //anchor    : '100%'
+        minValue: 0,
+        maxValue: 100,
+        allowDecimals: true,
+        decimalPrecision: 1,
+        step: 5
     }],
 
    	bbar: [{

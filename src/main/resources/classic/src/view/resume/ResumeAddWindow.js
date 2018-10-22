@@ -24,7 +24,7 @@
             	items:[
 					{items:[
 					{xtype: 'textfield',fieldLabel:'id',name:'id',hidden:true,readOnly:true},
-					{xtype: 'textfield',fieldLabel:'姓名44',name:'name'},
+					{xtype: 'textfield',fieldLabel:'姓名',name:'name'},
 					{xtype: 'textfield',fieldLabel:'性别',name:'sex'},
 		    		{xtype: 'textfield',fieldLabel:'毕业学校',name:'graduateSchool'},
 		    		{xtype: 'textfield',fieldLabel:'政治面貌',name:'politicsStatus'},

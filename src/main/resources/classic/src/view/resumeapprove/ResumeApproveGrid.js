@@ -41,25 +41,27 @@
 			tooltip: 'edit '
 		}
 		,{header: 'id' 			,dataIndex: 'id',width: 60,sortable: true	,hidden:true}
-		,{header: '简历状态',dataIndex: 'processStatus',width: 60,sortable: true,
+		,{header: '简历状态',dataIndex: 'processStatus',width: 60,flex: 1,sortable: true,
             renderer: function(val) {
 	            if (val =='NEW') {
 		            return '<span style="color:green;">新建</span>';
-		        } else if (val =='APPROVAL') {
-		            return '<span style="color:blue;">审批中...</span>';
-		        } else if (val =='COMPLETE') {
+		        }else if (val =='COMPLETE') {
 		            return '<span style="color:orange;">二面通过</span>';
 		        }else if (val =='FIRSTPASS') {
-		            return '<span style="color:orange;">一面通过</span>';
+		            return '<span style="color:orange;">一面通过,等待二面安排中..</span>';
+		        }else if (val =='PENFAIL') {
+		            return '<span style="color:orange;">笔试未通过</span>';
 		        }else if (val =='FIRSTAIL') {
 		            return '<span style="color:orange;">一面失败</span>';
 		        } else if (val =='LASTFAIL') {
 		            return '<span style="color:orange;">二面失败</span>';
 		        } else if (val =='FIRSTARRANGE') {
-		            return '<span style="color:orange;">一面安排中...</span>';
+		            return '<span style="color:orange;">一面已安排，一面结果审批中..</span>';
 		        }else if (val =='LASTARRANGE') {
-		            return '<span style="color:orange;">二面安排中</span>';
-		        }else{
+		            return '<span style="color:orange;">二面已安排，二面结果审批中..</span>';
+		        } else if (val =='APPROVAL') {
+		            return '<span style="color:blue;">审批中...</span>';
+		        } else{
 		        	return '<span style="color:red;">取消申请</span>';
 		        }
 		        return val;

@@ -77,31 +77,31 @@
 	            ]
 	        },{
             	text: '招聘管理模块',
-                iconCls: 'x-fa fa-address-card',
+                iconCls: 'x-fa fa-address-book-o',
                 expanded: false,
                 selectable: false,
             	children: [
 	                {
 	                    text: '招聘信息发布',
-		                iconCls: 'x-fa fa-address-card',
+		                iconCls: 'x-fa fa-bullhorn',
                 		viewType: 'recruit',
 		                leaf: true
 	                },
 	                {
 	                    text: '简历管理',
-	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    iconCls: 'x-fa fa-building-o',
 	                    viewType: 'resume',
 	                    leaf: true
 	                },
 	                {
 	                    text: '面试安排',
-	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    iconCls: 'x-fa fa-user-secret',
 	                    viewType: 'resumeArrangePanel',
 	                    leaf: true
 	                },
 	                {
-	                    text: '面试结果审核录入',
-	                    iconCls: 'x-fa fa-lightbulb-o',
+	                    text: '笔试面试结果录入',
+	                    iconCls: 'x-fa fa-server',
 	                    viewType: 'resumeApprovePanel',
 	                    leaf: true
 	                },
@@ -276,6 +276,32 @@
 	                    text: '查询全部',
 	                    iconCls: 'fa fa-ship',
 	                    viewType: 'reportAll',
+	                    leaf: true
+	                }
+	            ]
+	        },{	
+                text: '数据分析',
+                iconCls: 'x-fa fa-address-card',
+                 expanded: false,
+                selectable: false,
+            	children: [
+            		{
+	                    text: '用户信息分析',
+		                iconCls: 'x-fa fa-address-card',
+		                rowCls: 'nav-tree-badge nav-tree-badge-new',
+		                viewType: 'user',
+		                leaf: true
+	                },
+	                {
+	                    text: '人资分析',
+		                iconCls: 'x-fa fa-pie-chart',
+		                viewType: 'pieChart',
+		                leaf: true
+	                },
+	                {
+	                    text: '工资分析',
+	                    iconCls: 'x-fa fa-exclamation-triangle',
+	                    viewType: 'lineChart',
 	                    leaf: true
 	                }
 	            ]

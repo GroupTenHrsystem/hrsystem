@@ -30,6 +30,20 @@
 		setTimeout(store.load(),"500");
 		win.close();
 	},
+	
+	/* show details */
+	openshowDetailsWindow:function(grid, rowIndex, colIndex){
+        var record = grid.getStore().getAt(rowIndex);
+		if (record ) {
+			if(record.data.processStatus=="COMPLETE"){
+				var win = grid.up('container').add(Ext.widget('employShowDetailsWindow'));
+				win.show();
+				win.down('form').getForm().loadRecord(record);
+			}else{
+					Ext.Msg.alert('提示', "只可以修改'新建'状态的信息！");
+			}
+		}
+	},
 			
 	/*Delete*/	
 	deleteOneRow:function(grid, rowIndex, colIndex){
@@ -43,45 +57,16 @@
         	}
         , this);
 	},
-	/*Delete More Rows*/	
-	deleteMoreRows:function(btn, rowIndex, colIndex){
-		var grid = btn.up('gridpanel');
-		var selModel = grid.getSelectionModel();
-        if (selModel.hasSelection()) {
-            Ext.Msg.confirm("警告", "确定要删除吗？", function (button) {
-                if (button == "yes") {
-                    var rows = selModel.getSelection();
-                    var selectIds = []; 
-                    Ext.each(rows, function (row) {
-                        selectIds.push(row.data.id);
-                    });
-                  	Ext.Ajax.request({ 
-						url : '/resume/deletes', 
-						method : 'post', 
-						params : { 
-							ids :selectIds
-						}, 
-						success: function(response, options) {
-			                var json = Ext.util.JSON.decode(response.responseText);
-				            if(json.success){
-				            	Ext.Msg.alert('操作成功', json.msg, function() {
-				                    grid.getStore().reload();
-				                });
-					        }else{
-					        	 Ext.Msg.alert('操作失败', json.msg);
-					        }
-			            }
-					});
-                }
-            });
-        }else {
-            Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
-        }
+		
+	saveIntoStaffFormSubmit:function(btn){
+		var form = btn.up('window').down('form');
+		var record = Ext.create('Admin.model.employ.EmployModel');
+		var values = form.getValues();
+		record.set(values);
+		//record.save();
+		record.saveIntoUser();
+		Ext.data.StoreManager.lookup('employGridStroe').load();
+		btn.up('window').close();
 	},
-	
-	/*quickSearch*/
-	quickSearch:function(btn){
-		alert("quickSearch");
-	}		
 
 });
