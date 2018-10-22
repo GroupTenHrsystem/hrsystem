@@ -35,8 +35,9 @@ Ext.define('Admin.view.email.Menu', {
 
         {
             routeId: '',
-            iconCls: 'x-fa fa-exclamation-circle',
-            text: '修改'
+            iconCls: 'fa fa-refresh',
+            text: '刷新',
+            handler:'onRefuseBtnClick'
         },
 
         {
