@@ -23,6 +23,8 @@ public interface IRoleService {
 	 
 	 public Page<Role> findAll(Specification<Role> spec, Pageable pageable);
 	 
+	 public List<Long> findByPosition(String position);
+	 
 //	 public List<Role> getRoleByRoleTempletId(Long id);
 //	 public List<Staff> findStaffByRole(Long positionId);
 }

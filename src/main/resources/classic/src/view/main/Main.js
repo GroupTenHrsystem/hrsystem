@@ -101,7 +101,25 @@
                     itemId: 'navigationTreeList',
                     style:'background-color: #272727',
                     ui: 'nav',
-                    store: 'NavigationTree',
+                    store:Ext.create("Ext.data.TreeStore",{
+                        fields: [{
+                            name: 'text'
+                        }],
+
+                        root: {
+                            expanded: true,
+                        },
+
+                        proxy: {
+                            type: 'ajax',
+                            url: '/navigationTree/findNoParent',
+                            reader: {
+                                type: 'json'
+                            }
+                        }
+
+                }),
+
                     width: 250,
                     expanderFirst: false,
                     expanderOnly: false,

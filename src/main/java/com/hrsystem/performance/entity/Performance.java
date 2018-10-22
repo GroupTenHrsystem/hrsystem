@@ -36,7 +36,7 @@ import lombok.Data;
 //	使用了@NamedEntityGraph注解，findAll合为一条HQL，避免JPA N+1 问题
 public class Performance implements Serializable {
 		@Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @GeneratedValue(strategy = GenerationType.IDENTITY) 
 		private Long id;
 		private String performanceName;
 		@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")

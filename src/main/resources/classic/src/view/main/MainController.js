@@ -209,16 +209,11 @@ Ext.define('Admin.view.main.MainController', {
                         }, 
                         success: function(response, options) {
                                 Ext.Msg.alert('提示', '操作成功', function() {
-                                    // var contentPanel = Ext.getCmp('contentPanel');
-                                    // var grid = contentPanel.down('grid');
-                                    // grid.getStore().reload();
-                                    //store.reload();
                                 });
                             }
                     });
            // this.getView().getStore().load();
             Ext.getCmp('schedulingPanel').down('calendar').getStore().load();
-            console.log(Ext.getCmp('schedulingPanel').down('calendar'));
             win.close();
         }
     },

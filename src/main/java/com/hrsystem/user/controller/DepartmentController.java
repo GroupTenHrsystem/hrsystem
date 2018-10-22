@@ -41,7 +41,6 @@ public class DepartmentController {
 	//所有部门组成的树
     @RequestMapping(value = "/findNoParent")
     public List<Department> getFindNoParentList(){
-    	System.out.println("111111111111111");
 		return departmentService.findNoParent();
     }
     //获得所有部门

@@ -1,5 +1,6 @@
 package com.hrsystem.performance.controller;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,6 +63,7 @@ import com.hrsystem.performance.entity.DTO.PerformanceRelateDTO;
 import com.hrsystem.performance.service.IPerformanceService;
 import com.hrsystem.performance.service.IPerformanceTempletService;
 import com.hrsystem.user.entity.Department;
+import com.hrsystem.user.entity.Role;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IStaffService;
@@ -74,6 +77,7 @@ import com.hrsystem.user.service.IStaffService;
 */
 @RestController
 @RequestMapping("/performance")
+@Transactional
 public class PerformanceController {
 	@Autowired
 	private IPerformanceService performanceService;
@@ -205,66 +209,7 @@ public class PerformanceController {
 	@ControllerLogs(description = "导出Excel")
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response)throws IOException
 	{
-		//创建工作簿
-		XSSFWorkbook wb = new XSSFWorkbook();
-		//创建sheet
-		XSSFSheet sheet = wb.createSheet();
-		//设置列宽 	sheet.setColumnWidth(0, 252*width+323);//width=35
-		sheet.setColumnWidth(1, 256*14+184);
-		sheet.setColumnWidth(2, 256*20+184);
-		sheet.setColumnWidth(3, 256*20+184);
-		// 单元格样式
-		XSSFCellStyle style =  wb.createCellStyle();
-
-		//从数据库查找绩效
-		Pageable pageable = PageRequest.of(0, 25);
-		Page<Performance> performancePage = performanceService.findAll(null,pageable);
-		Iterator<Performance> iterator = performancePage.iterator();
-		System.out.println(performancePage.getTotalElements());
-		int rowSum = 2 + (int)performancePage.getTotalElements();
-		//初始化单元格
-		for (int i = 0; i < rowSum; i++) { //需要6行表格
-			Row row =	sheet.createRow(i); //创建行
-			for (int j = 0; j < 10; j++) {//需要6列
-				row.createCell(j).setCellStyle(style);
-			}
-		}
-
-		//合并单元格
-		sheet.addMergedRegion(new CellRangeAddress(0, 1, 0, 0));//合并单元格，cellRangAddress四个参数，第一个起始行，第二终止行，第三个起始列，第四个终止列
-		sheet.addMergedRegion(new CellRangeAddress(0, 0, 1, 5));
-		//tian入数据
-		XSSFRow row = sheet.getRow(0); //获取第一行
-		row.getCell(1).setCellValue("绩效考核"); //在第一行中创建一个单元格并赋值
-		XSSFRow row1 = sheet.getRow(1); //获取第二行，为每一列添加字段上
-		row1.getCell(1).setCellValue("绩效考核名字");
-		row1.getCell(2).setCellValue("开始时间");
-		row1.getCell(3).setCellValue("结束时间");
-		row1.getCell(4).setCellValue("考核周期");
-		row1.getCell(5).setCellValue("待归档人数");
-
-        Performance result;
-		XSSFRow currentRow;
-		CellStyle cellStyle = wb.createCellStyle();		//单元格样式
-		CreationHelper creationHelper = wb.getCreationHelper();
-		cellStyle.setDataFormat(creationHelper.createDataFormat().getFormat("yyyy-MM-dd  hh:mm:ss"));
-		int i = 2;
-        while(iterator.hasNext()){
-			currentRow = sheet.getRow(i);
-			result = (Performance) iterator.next();
-			currentRow.getCell(0).setCellValue(i - 1);
-			currentRow.getCell(1).setCellValue(result.getPerformanceName());
-			currentRow.getCell(2).setCellStyle(cellStyle);
-			currentRow.getCell(2).setCellValue(result.getStartTime());
-			currentRow.getCell(3).setCellStyle(cellStyle);
-			currentRow.getCell(3).setCellValue(result.getEndTime());
-			//currentRow.getCell(4).setCellValue(result.getCycle());
-		//	currentRow.getCell(5).setCellValue(result.getStaff().size());
-            ++i;
-        }
-		response.setHeader("Content-disposition", "attachment; filename=" + java.net.URLEncoder.encode("等死.xlsx", "UTF-8"));//默认Excel名称
-		response.flushBuffer();
-		wb.write(response.getOutputStream());
+		performanceService.DownloadExcel(null,response);
 	}
 	
 	
@@ -283,7 +228,8 @@ public class PerformanceController {
     		String userId = SessionUtil.getUserName(session);
     		Map<String, Object> variables = new HashMap<String, Object>();
     		Performance performance = performanceService.findPerformanceById(performanceId);
-    		variables.put("deptLeader", "financeManager");
+    		Role role = staffService.findStaffByName(userId).getRole().getRole();
+    		variables.put("deptLeader", role.getPosition());
     		variables.put("applyUserId", performance.getStaff().getStaffName());
     		performanceService.startWorkflow(userId,performanceId, variables);
     		return new ExtAjaxResponse(true,"操作成功!");

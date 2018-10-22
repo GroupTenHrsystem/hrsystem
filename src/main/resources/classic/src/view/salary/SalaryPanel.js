@@ -180,6 +180,13 @@ Ext.define('Admin.view.salary.SalaryPanel', {
                 xtype: 'button',
                 iconCls: 'fa fa-search',
                 handler: 'quickSearch'
+        },'->',{
+            xtype: 'button',
+            iconCls: 'fa fa-file-text-o',
+            tooltip: 'excel',
+            text:'导出全部',
+            href:'/salary/downloadExcel',
+            hrefTarget:'_self'
         }]
     },
 

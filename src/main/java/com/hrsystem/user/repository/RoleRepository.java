@@ -15,4 +15,8 @@ public interface RoleRepository extends PagingAndSortingRepository<Role, Long>,J
 
 //	@Query(value="SELECT * FROM hrsystem.t_staff a where a.department_id =?1",nativeQuery=true) 
 //	public List<Staff> findStaffByRole(Long positionId);
+	
+	@Query(value="SELECT * FROM hrsystem.t_role WHERE position = ?1",nativeQuery=true)
+	public List<Long> findByPosition(String position);
+	
 }

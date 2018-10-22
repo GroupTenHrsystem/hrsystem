@@ -59,6 +59,12 @@ public class RoleService implements IRoleService {
 		return roleRepository.findAll(spec, pageable);
 	}
 
+	@Override
+	public List<Long> findByPosition(String position) {
+		// TODO Auto-generated method stub
+		return roleRepository.findByPosition(position);
+	}
+
 //	@Override
 //	public List<Staff> findStaffByRole(Long positionId) {
 //		// TODO Auto-generated method stub
