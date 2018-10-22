@@ -51,16 +51,6 @@
 		                },
 		                handler: 'startPaymentProcess'
 		            }
-		            // ,{
-		            //     xtype: 'button',iconCls: 'x-fa fa-ban',tooltip: '取消请假',
-		            //     getClass: function(v, meta, rec) {
-		            //         if (rec.get('processInstanceId')=="") {
-		            //             return 'x-hidden';
-		            //         }
-		            //         return 'x-fa fa-ban';
-		            //     },
-		            //     handler: 'cancelPaymentProcess'
-		            // }
 				]
 			}
 		],

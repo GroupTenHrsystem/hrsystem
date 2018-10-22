@@ -1,9 +1,12 @@
 package com.hrsystem.salary.service;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
+
+import javax.servlet.http.HttpServletResponse;
 
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
@@ -16,6 +19,15 @@ import com.hrsystem.salary.entity.SalaryStandard;
 import com.hrsystem.salary.repository.SalaryStandardRepository;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.repository.StaffRepository;
+
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -181,5 +193,75 @@ public class SalaryService implements ISalaryService{
 	@ServiceLogs(description = "通过用户名查找薪资")
 	public List<Salary> getSalaryByStaffName(String userId){
 		return salaryRepository.getSalaryByStaffName(userId);
+	}
+	@Override
+	public void DownloadExcel(Specification<Salary> spec, HttpServletResponse response) throws IOException {
+		// TODO Auto-generated method stub
+		//创建工作簿
+		XSSFWorkbook wb = new XSSFWorkbook();
+		//创建sheet
+		XSSFSheet sheet = wb.createSheet();
+		//设置列宽 	sheet.setColumnWidth(0, 252*width+323);//width=35
+		sheet.setColumnWidth(1, 256*14+184);
+		sheet.setColumnWidth(2, 256*20+184);
+		sheet.setColumnWidth(3, 256*20+184);
+		sheet.setColumnWidth(4, 256*20+184);
+		sheet.setColumnWidth(5, 256*20+184);
+		// 单元格样式
+		XSSFCellStyle style =  wb.createCellStyle();
+
+		//从数据库查找绩效
+		List<Salary> salaryList = salaryRepository.findAll(spec);
+		Iterator<Salary> iterator = salaryList.iterator();
+		System.out.println(salaryList.size());
+		int rowSum = 2 + (int)salaryList.size();
+		//初始化单元格
+		for (int i = 0; i < rowSum; i++) { //需要n行表格
+			Row row =	sheet.createRow(i); //创建行
+			for (int j = 0; j < 13; j++) {//需要列数
+				row.createCell(j).setCellStyle(style);
+			}
+		}
+
+		//合并单元格
+		sheet.addMergedRegion(new CellRangeAddress(0, 1, 0, 0));//合并单元格，cellRangAddress四个参数，第一个起始行，第二终止行，第三个起始列，第四个终止列
+		sheet.addMergedRegion(new CellRangeAddress(0, 0, 1, 5));
+		//填入数据
+		XSSFRow row = sheet.getRow(0); //获取第一行
+		row.getCell(1).setCellValue("绩效考核"); //在第一行中创建一个单元格并赋值
+		XSSFRow row1 = sheet.getRow(1); //获取第二行，为每一列添加字段上
+		row1.getCell(1).setCellValue("员工名字");
+		row1.getCell(2).setCellValue("创建日期");
+		row1.getCell(3).setCellValue("开始日期");
+		row1.getCell(4).setCellValue("结束日期");
+		row1.getCell(5).setCellValue("薪资标准");
+		row1.getCell(6).setCellValue("工资");
+
+		Salary result;
+		XSSFRow currentRow;
+		CellStyle cellStyle = wb.createCellStyle();		//单元格样式
+		CreationHelper creationHelper = wb.getCreationHelper();
+		cellStyle.setDataFormat(creationHelper.createDataFormat().getFormat("yyyy-MM-dd  hh:mm:ss"));
+		int i = 2;
+		//保留两位小数
+		DecimalFormat df = new DecimalFormat("#.00");
+        while(iterator.hasNext()){
+			currentRow = sheet.getRow(i);
+			result = (Salary) iterator.next();
+			currentRow.getCell(0).setCellValue(i - 1);
+			currentRow.getCell(1).setCellValue(result.getStaff().getStaffName());
+			currentRow.getCell(2).setCellStyle(cellStyle);
+			currentRow.getCell(2).setCellValue(result.getCreateTime());
+			currentRow.getCell(3).setCellStyle(cellStyle);
+			currentRow.getCell(3).setCellValue(result.getSalaryStarTime());
+			currentRow.getCell(4).setCellStyle(cellStyle);
+			currentRow.getCell(4).setCellValue(result.getSalaryEndTime());
+			currentRow.getCell(5).setCellValue(result.getSalaryStandard().getName());
+			currentRow.getCell(6).setCellValue(result.getSalarySum());
+            ++i;
+        }
+		response.setHeader("Content-disposition", "attachment; filename=" + java.net.URLEncoder.encode("薪资.xlsx", "UTF-8"));//默认Excel名称
+		response.flushBuffer();
+		wb.write(response.getOutputStream());
 	}
 }
