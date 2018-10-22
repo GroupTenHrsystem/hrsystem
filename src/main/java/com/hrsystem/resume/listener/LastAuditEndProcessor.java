@@ -32,8 +32,6 @@ public class LastAuditEndProcessor implements TaskListener {
         ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().processInstanceId(processInstanceId).singleResult();
         Resume resume = resumeService.findOne(new Long(processInstance.getBusinessKey()));
         resume.setCompleteTime(new Date()); 
-        resume.setProcessStatus(ProcessStatus.COMPLETE);
-        //leaveService.save(leave);
+        //resume.setProcessStatus(ProcessStatus.COMPLETE);
     }
-	
 }

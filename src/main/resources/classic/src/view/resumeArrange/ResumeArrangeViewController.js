@@ -34,8 +34,8 @@
     	//选中点击的行
         var taskDefinitionKey = record.get('taskDefinitionKey');
         if (taskDefinitionKey == 'resumechose') {
-            //简历筛选
-            var win = this.setCurrentView(view,taskDefinitionKey, '简历筛选');
+            //笔试分数录入
+            var win = this.setCurrentView(view,taskDefinitionKey, '笔试分数录入');
             win.down('form').getForm().loadRecord(record);
         } else if (taskDefinitionKey == 'firstarrange') {
         	//一面安排
@@ -47,7 +47,7 @@
         	win.down('form').getForm().loadRecord(record);
         } 
     },
-    //简历审批
+    //笔试分数录入
     onClickDeptleaderAuditFormSubmitButton: function(btn) {
     	var form = btn.up('form');
     	var values = form.getValues();
@@ -57,9 +57,9 @@
 			value: values.deptLeaderPass,//获取表单选择的value
 			type: 'B'
 		},{
-			key: 'resumeBackReason',
-			value: values.resumeBackReason,//获取表单选择的value
-			type: 'S'
+			key: 'penScore',
+			value: values.penScore,//获取表单选择的value
+			type: 'F'
 		}];
         this.complete(url,variables,form);
     },

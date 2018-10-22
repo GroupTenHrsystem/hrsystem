@@ -22,7 +22,7 @@ public class ResumeDTO {
 	private ProcessStatus processStatus;  //流程状态
 	private String userId;  
 	
-	private String resumeBackReason;
+	private Double penScore;   //笔试分数
 	private Double firstAuditScore;  //一面分数
 	private String firstBackReason;  //一面退回原因
 	private Double lastAuditScore;  //二面分数

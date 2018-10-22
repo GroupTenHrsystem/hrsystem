@@ -87,46 +87,15 @@
 	quickSearch:function(btn){
 		var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
-		var searchDataFieldValue = this.lookupReference('searchDataFieldValue').getValue();
-		var searchDataFieldValue2 = this.lookupReference('searchDataFieldValue2').getValue();
 		var store =	btn.up('gridpanel').getStore();
-		Ext.apply(store.proxy.extraParams, {departmentname:"",position:"",startTimeStart:"",startTimeEnd:"",endTimeStart:"",endTimeEnd:""});
+		Ext.apply(store.proxy.extraParams, {departmentname:"",position:""});
 		if(searchField==='departmentname'){
 			Ext.apply(store.proxy.extraParams, {departmentname:searchValue});
 		}
 		if(searchField==='position'){
 			Ext.apply(store.proxy.extraParams, {position:searchValue});
 		}
-		if(searchField==='startTime'){
-			Ext.apply(store.proxy.extraParams,{
-				startTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d'),
-				startTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d')
-			});
-		}
-		if(searchField==='endTime'){
-			Ext.apply(store.proxy.extraParams,{
-				endTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d'),
-				endTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d')
-			});
-		}
 		store.load({params:{start:0, limit:20, page:1}});
-	},
-
-	searchComboboxSelectChuang:function(combo,record,index){
-		//alert(record.data.name);
-		var searchField = this.lookupReference('searchFieldName').getValue();
-		if(searchField==='startTime' || searchField==='endTime'){
-			this.lookupReference('searchFieldValue').hide();
-			this.lookupReference('searchDataFieldValue').setValue(null);
-			this.lookupReference('searchDataFieldValue2').setValue(null);
-			this.lookupReference('searchDataFieldValue').show();
-			this.lookupReference('searchDataFieldValue2').show();
-		}else{
-			this.lookupReference('searchFieldValue').setValue(null);
-			this.lookupReference('searchFieldValue').show();
-			this.lookupReference('searchDataFieldValue').hide();
-			this.lookupReference('searchDataFieldValue2').hide();
-		}
 	},
 		
 	/*Bigger*/

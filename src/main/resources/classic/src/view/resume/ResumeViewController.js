@@ -91,20 +91,25 @@
 	
 	/*quickSearch*/
 	quickSearch:function(btn){
-		alert("quickSearch");
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchValue = this.lookupReference('searchFieldValue').getValue();
+		var store =	btn.up('gridpanel').getStore();
+		Ext.apply(store.proxy.extraParams, {name:"",major:"",politicsStatus:"",processStatus:""});
+		if(searchField==='name'){
+			Ext.apply(store.proxy.extraParams, {name:searchValue});
+		}
+		if(searchField==='major'){
+			Ext.apply(store.proxy.extraParams, {major:searchValue});
+		}
+		if(searchField==='politicsStatus'){
+			Ext.apply(store.proxy.extraParams, {politicsStatus:searchValue});
+		}
+		if(searchField==='processStatus'){
+			Ext.apply(store.proxy.extraParams, {processStatus:searchValue});
+		}
+		store.load({params:{start:0, limit:20, page:1}});
 	},
 		
-	/* Search More*/
-	openSearchWindow:function(toolbar, rowIndex, colIndex){
-		toolbar.up('panel').up('container').add(Ext.widget('recruitSearchWindow')).show();
-	},	
-	submitSearchForm:function(btn){
-		alert("Search More");
-	},
-	
-	searchComboboxSelectChuang:function(combo,record,index){
-		alert(record.data.name);
-	},
 		
 	/*Start Resume Process*/	
 	startResumeProcess:function(grid, rowIndex, colIndex){

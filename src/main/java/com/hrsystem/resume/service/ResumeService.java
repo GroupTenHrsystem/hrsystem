@@ -165,11 +165,20 @@ public class ResumeService implements IResumeService{
 				resume.setProcessStatus(ProcessStatus.FIRSTPASS);
 			}else {
 				resume.setProcessStatus(ProcessStatus.FIRSTAIL);
+				resume.setCompleteTime(new Date());
+			}
+		}else if(variables.containsKey("penScore")){
+			resume.setPenScore(Double.parseDouble(String.valueOf(variables.get("penScore"))));
+			if(!variables.get("deptLeaderPass").equals(true)) {
+				resume.setProcessStatus(ProcessStatus.PENFAIL);
+				resume.setCompleteTime(new Date());
 			}
 		}else if(variables.containsKey("lastAuditScore")) {
 			resume.setLastAuditScore(Double.parseDouble(String.valueOf(variables.get("lastAuditScore"))));
 			resume.setLastBackReason(String.valueOf(variables.get("lastBackReason")));
-			if(!variables.get("lastPass").equals(true)) {
+			if(variables.get("lastPass").equals(true)) {
+				resume.setProcessStatus(ProcessStatus.COMPLETE);
+			}else {
 				resume.setProcessStatus(ProcessStatus.LASTFAIL);
 			}
 			resume.setCompleteTime(new Date());
@@ -204,14 +213,18 @@ public class ResumeService implements IResumeService{
 		staff.setPassword(resume.getName());
 		staff.setEmail(resume.getEmail());
 		staff.setNativePlace(resume.getNativePlace());
-		staff.setEmploymentDate(resume.getApplyTime());
+		staff.setStatus("实习");
+		//staff.setEmploymentDate(resume.getApplyTime());
 		resume.setProcessStatus(ProcessStatus.ONFILE);
 		staffRepository.save(staff);
 		resumeRepository.save(resume);
 	}
 
 	@Override
-	public Page<Resume> findAll(String processStatus, Pageable pageable) {
-		return resumeRepository.findAll(processStatus, pageable);
-	}		
+	public Page<Resume> findAll(String processStatus, Specification<Resume> spec, Pageable pageable) {
+		return resumeRepository.findAll(processStatus, spec, pageable);
+	}
+
+
+		
 }

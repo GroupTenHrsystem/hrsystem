@@ -75,10 +75,13 @@ public class ResumeQueryDTO {
 				if (StringUtils.isNotBlank(resumeQueryDTO.getName())) {
 					predicate.add(criteriaBuilder.like(root.get("name").as(String.class),
 							"%" + resumeQueryDTO.getName() + "%"));
+				}if (StringUtils.isNotBlank(resumeQueryDTO.getMajor())) {
+					predicate.add(criteriaBuilder.like(root.get("major").as(String.class),
+							"%" + resumeQueryDTO.getMajor() + "%"));
 				}
-				if (StringUtils.isNotBlank(resumeQueryDTO.getEmail())) {
-					predicate.add(criteriaBuilder.like(root.get("email").as(String.class),
-							"%" + resumeQueryDTO.getEmail() + "%"));
+				if (StringUtils.isNotBlank(resumeQueryDTO.getPoliticsStatus())) {
+					predicate.add(criteriaBuilder.like(root.get("politicsStatus").as(String.class),
+							"%" + resumeQueryDTO.getPoliticsStatus() + "%"));
 				}
 				if (StringUtils.isNotBlank(resumeQueryDTO.getPhone())) {
 					predicate.add(criteriaBuilder.like(root.get("phone").as(String.class),
@@ -88,25 +91,9 @@ public class ResumeQueryDTO {
 					predicate.add(criteriaBuilder.like(root.get("nativePlace").as(String.class),
 							"%" + resumeQueryDTO.getNativePlace() + "%"));
 				}
-				if (null!=resumeQueryDTO.getApplyTime()) {
-					predicate.add(criteriaBuilder.greaterThanOrEqualTo(root.get("applyTime").as(Date.class),
-							resumeQueryDTO.getApplyTime()));
-				}
-				if (StringUtils.isNotBlank(resumeQueryDTO.getAttachment())) {
-					predicate.add(criteriaBuilder.like(root.get("attachment").as(String.class),
-							"%" + resumeQueryDTO.getAttachment() + "%"));
-				}
-				if (StringUtils.isNotBlank(resumeQueryDTO.getExperience())) {
-					predicate.add(criteriaBuilder.like(root.get("experience").as(String.class),
-							"%" + resumeQueryDTO.getExperience() + "%"));
-				}
 				if (StringUtils.isNotBlank(resumeQueryDTO.getRestatus())) {
 					predicate.add(criteriaBuilder.like(root.get("restatus").as(String.class),
 							"%" + resumeQueryDTO.getRestatus() + "%"));
-				}
-				if (StringUtils.isNotBlank(resumeQueryDTO.getReferer())) {
-					predicate.add(criteriaBuilder.like(root.get("referer").as(String.class),
-							"%" + resumeQueryDTO.getReferer() + "%"));
 				}
 				
 				Predicate[] pre = new Predicate[predicate.size()];

@@ -22,7 +22,7 @@ public interface IResumeService {
 	public void saveIntoUser(Resume resume);
 	
 	public Page<Resume> findAll(Specification<Resume> spec,Pageable pageable);
-	public Page<Resume> findAll(String processStatus ,Pageable pageable);
+	public Page<Resume> findAll(String processStatus ,Specification<Resume> spec,Pageable pageable);
 	public Page<Resume> findResume(String userId,Pageable pageable);
 	
 	//流程业务
