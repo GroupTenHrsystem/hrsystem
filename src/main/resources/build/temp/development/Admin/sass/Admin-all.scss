@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-$image-search-path: 'D:/workspace-sts-3.9.5.RELEASE/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -268,6 +268,7 @@ $include-aria-view-attendance-attendancesearchwindow: dynamic(true);;
 $include-aria-view-department-departmentaddwindow: dynamic(true);;
 $include-aria-view-department-departmenteditwindow: dynamic(true);;
 $include-aria-view-employ-employeditwindow: dynamic(true);;
+$include-aria-view-employ-employsavewindow: dynamic(true);;
 $include-aria-view-order-orderaddwindow: dynamic(true);;
 $include-aria-view-order-ordereditwindow: dynamic(true);;
 $include-aria-view-order-ordersearchwindow: dynamic(true);;

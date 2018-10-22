@@ -13,6 +13,21 @@ Ext.define('Admin.view.scheduling.schedulingPanel', {
 
     title: '日程安排',
     iconCls: 'fa fa-calendar',
+    header: {
+        itemPosition: 1, 
+        style:"background-color:#FF8000;",
+        items: [
+            {
+                xtype: 'button',
+                iconCls: 'fa fa-refresh',
+                style:"background-color:#ADADAD;border-color: black;",
+                handler: function(){
+                     Ext.getCmp('schedulingPanel').down('calendar').getStore().load();
+                 }
+            }
+        ]
+    },
+
     viewModel: {
         data: {
             value: new Date()
