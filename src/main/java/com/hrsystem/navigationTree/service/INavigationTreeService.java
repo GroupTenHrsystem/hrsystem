@@ -17,4 +17,5 @@ public interface INavigationTreeService {
 	
 	public List<NavigationTree> findNoParent();
 	
+	public void save(NavigationTree navigationTree);
 }

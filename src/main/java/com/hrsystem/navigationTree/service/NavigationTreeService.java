@@ -26,4 +26,10 @@ public class NavigationTreeService implements INavigationTreeService{
 		// TODO Auto-generated method stub
 		return navigationTreeRepository.findNoParent();
 	}
+
+	@Override
+	public void save(NavigationTree navigationTree) {
+		// TODO Auto-generated method stub
+		navigationTreeRepository.save(navigationTree);
+	}
 }

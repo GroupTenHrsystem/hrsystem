@@ -38,10 +38,10 @@ public class NavigationTree {
 		private Boolean leaf;
 		private Boolean expanded;
 		private Boolean selectable;
-		
+		private Boolean visible = true;
 		@JsonIgnore
-		@ManyToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+		@ManyToOne(cascade = CascadeType.MERGE)
 		private NavigationTree superNode;
-		@OneToMany(cascade=CascadeType.ALL,mappedBy="superNode")
+		@OneToMany(cascade = CascadeType.MERGE,mappedBy="superNode")
 		private List<NavigationTree> children =new ArrayList<NavigationTree>();
 }
