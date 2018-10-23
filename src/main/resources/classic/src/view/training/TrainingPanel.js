@@ -30,9 +30,14 @@ Ext.define('Admin.view.training.TrainingPanel', {
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'courseAuditStatus',text: '审核状态',flex: 1},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'courseAirtime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'courseEndtime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '修改',tooltip: '修改按钮 ',
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '作废',tooltip: '作废 ',
                     items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'}
+                    	{xtype: 'button', iconCls: 'x-fa fa-close' ,handler: 'openEditWindow'}
+                    ]
+                },
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '清除通过记录',tooltip: '清除记录 ',
+                    items: [
+                    	{xtype: 'button', iconCls: 'x-fa fa-close' ,handler: 'deleteOneRow'}
                     ]
                 }
             ],

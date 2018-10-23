@@ -26,9 +26,14 @@ Ext.define('Admin.view.training.EnrollPanel', {
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'courseId',text: '培训编号',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'employeeId',text: '培训员工编号',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'auditStatus',text: '审核状态',flex: 1},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '修改',tooltip: '修改按钮 ',
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '作废',tooltip: '修改按钮 ',
                     items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'}
+                        {xtype: 'button', iconCls: 'x-fa fa-close' ,handler: 'openEditWindow'}
+                    ]
+                },
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '清除记录',tooltip: '清除记录 ',
+                    items: [
+                    	{xtype: 'button', iconCls: 'x-fa fa-close' ,handler: 'deleteOneRow'}
                     ]
                 }
             ],

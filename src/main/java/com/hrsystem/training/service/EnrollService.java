@@ -95,7 +95,10 @@ public class EnrollService implements IEnrollService{
 		// TODO Auto-generated method stub
 		return enrollRepository.findEnrollByArstatusPass(spec, pageable);
 	}
-
-	
+	@Override
+	public Page<Enroll> findEnrollByArstatusEmployeeId(Long courseId, Specification<Enroll> spec, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return enrollRepository.findEnrollByArstatusEmployeeId(courseId ,spec, pageable);
+	}	
 }
 

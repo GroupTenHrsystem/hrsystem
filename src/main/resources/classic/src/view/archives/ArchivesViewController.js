@@ -18,12 +18,17 @@ Ext.define('Admin.view.archives.ArchivesViewController', {
 		var loadin = Ext.getCmp('uploadinput').getValue();
 			console.log(loadin);
 			values.attach = loadin;
+			if(win.down('form').isValid()){
 	       	record.set(values);
 	      	record.save();
 	      	store.load();
 	      	
 	      //	Ext.data.StoreManager.lookup('performanceTempletGridStore').load();
 	      	win.close();
+	      	}else{
+
+           		Ext.Msg.alert("错误", "有数据未填");
+           		}
 	      	//window.location.reload(); //整个页面刷新
 	},
 
@@ -37,6 +42,7 @@ Ext.define('Admin.view.archives.ArchivesViewController', {
 				Ext.Msg.alert('Success', action.result.msg,function(){
 					Ext.data.StoreManager.lookup('archivesGridStroe').load();
 					//form.getViewModel().getStore('processDefinitionStroe').load();
+					win.close();
 				});       
 			}, 
 			failure: function(form, action){
@@ -64,11 +70,17 @@ Ext.define('Admin.view.archives.ArchivesViewController', {
 		var store = Ext.data.StoreManager.lookup('archivesGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	values.arstatus ="待审核";
-    	record.set(values);
-    	
-    	store.load();
-        win.close();
+    	if(values.arstatus!="作废"){
+    		console.log(values.arstatus);
+	    	values.arstatus ="待审核";
+	    	record.set(values);
+	    	console.log(values.arstatus);
+	    	store.load();
+	        win.close();
+	        }
+    	else{console.log(values.arstatus);
+    		Ext.Msg.alert("错误", "不能修改作废！");
+    		}
 	},
 	
 	openEditWindowDelete:function(grid, rowIndex, colIndex){
@@ -86,11 +98,17 @@ Ext.define('Admin.view.archives.ArchivesViewController', {
 		var store = Ext.data.StoreManager.lookup('archivesGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	values.arstatus ="作废";
-    	record.set(values);
+    	if(values.arstatus!="审核通过"){
+	    values.arstatus ="作废";
+	    record.set(values);
+	    	
+	    store.load();
+	    win.close();
+	    }
+    	else{
+		Ext.Msg.alert("错误", "不能作废审核通过！");
+		}
     	
-    	store.load();
-        win.close();
 	},
 	
 	
@@ -361,6 +379,7 @@ Ext.define('Admin.view.archives.ArchivesViewController', {
 					attach:"",
 					arstatus:""
 			});
+
 		Ext.apply(store.proxy.extraParams,{
 			archivesId:values.archivesId,
 			ssCard:values.ssCard,

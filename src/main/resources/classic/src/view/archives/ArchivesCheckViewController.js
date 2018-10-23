@@ -41,7 +41,7 @@ Ext.define('Admin.view.archives.ArchivesCheckViewController', {
 		});
        	}else{
 
-       		Ext.Msg.alert("皮皮东", "有数据未填");
+       		Ext.Msg.alert("警告", "有数据未填");
        		}
         
 	},
@@ -161,10 +161,14 @@ Ext.define('Admin.view.archives.ArchivesCheckViewController', {
 	        async: false,
 	        cache:false,
 			
-			success: function(response, options) {
+	        success: function(response, options) {
+				if(values.arstatus!="待审核"){
+					 Ext.Msg.alert("错误", "只能审核待审核！");
+				}
+				else{
 				store.load();
 				win.close();
-				
+				}
             }
 		});
 		
@@ -204,9 +208,13 @@ Ext.define('Admin.view.archives.ArchivesCheckViewController', {
 	        cache:false,
 			
 			success: function(response, options) {
+				if(values.arstatus!="待审核"){
+					 Ext.Msg.alert("错误", "只能审核待审核！");
+				}
+				else{
 				store.load();
 				win.close();
-				
+				}
             }
 		});
 		
@@ -258,55 +266,102 @@ Ext.define('Admin.view.archives.ArchivesCheckViewController', {
 	},
 	quickSearch:function(btn){
 		var searchField = this.lookupReference('searchFieldName').getValue();
-		var searchValue = this.lookupReference('searchFieldValue').getValue();		
+		var searchValue = this.lookupReference('searchFieldValue').getValue();
+		var searchField2 = this.lookupReference('searchFieldName2').getValue();
+		var searchValue2 = this.lookupReference('searchFieldValue2').getValue();	
+		var searchField3 = this.lookupReference('searchFieldName3').getValue();
+		var searchValue3 = this.lookupReference('searchFieldValue3').getValue();	
+		var searchField4 = this.lookupReference('searchFieldName4').getValue();
+		var searchValue4 = this.lookupReference('searchFieldValue4').getValue();	
+		var searchField5 = this.lookupReference('searchFieldName5').getValue();
+		var searchValue5 = this.lookupReference('searchFieldValue5').getValue();
+		var searchField6 = this.lookupReference('searchFieldName6').getValue();
+		var searchValue6 = this.lookupReference('searchFieldValue6').getValue();
+		var searchField7 = this.lookupReference('searchFieldName7').getValue();
+		var searchValue7 = this.lookupReference('searchFieldValue7').getValue();	
+		var searchField8 = this.lookupReference('searchFieldName8').getValue();
+		var searchValue8 = this.lookupReference('searchFieldValue8').getValue();	
+		var searchField9 = this.lookupReference('searchFieldName9').getValue();
+		var searchValue9 = this.lookupReference('searchFieldValue9').getValue();	
+		var searchField10 = this.lookupReference('searchFieldName10').getValue();
+		var searchValue10 = this.lookupReference('searchFieldValue10').getValue();
+		var searchField11 = this.lookupReference('searchFieldName11').getValue();
+		var searchValue11 = this.lookupReference('searchFieldValue11').getValue();
 		var store =	btn.up('gridpanel').getStore();
-		Ext.Ajax.request({
-            url: '/archives/check',
-            method: 'get',
-            params:{archivesId:searchValue},
-            
-            
-            success: function(data) {
-            	console.log(data.responseText);
-            	var json=eval("("+data.responseText+")");
-            	var content=json.content;
-            	console.log(content);
-            	console.log(data.content);
-            	Ext.Msg.confirm("警告", str ,function (button) {
-    	            
-    	        });
-            	for (var i = 0; i < content.length; i++) {
-            		var str="";
-					str+="archivesId: "+content[i].archivesId+"<br>";
-					str+="ssCard: "+content[i].ssCard+"<br>";
-					str+="bankCard: "+content[i].bankCard+"<br>";
-					str+="education: "+content[i].education+"<br>";
-					str+="major: "+content[i].major+"<br>";
-					str+="graduateSchool: "+content[i].graduateSchool+"<br>";
-					str+="record: "+content[i].record+"<br>";
-					str+="family: "+content[i].family+"<br>";
-					str+="remark: "+content[i].remark+"<br>";
-					str+="attach: "+content[i].attach+"<br>";
-					str+="arstatus: "+content[i].arstatus+"<br>";
-					console.log(str);
-					Ext.Msg.alert(content[i].archivesId+"号档案信息", str );
-				}
-            	
-//        		Ext.apply(store.proxy.extraParams, 
-//        				{
-//        					archivesId:""
-//        				});
-//        		
-//        		if(searchField==='archivesId'){
-//        			var fieldValue = searchField.getValue;
-//        			console.log(782);
-//        			Ext.apply(store.proxy.extraParams, {archivesId:searchValue});			
-//        		}
-        		
-        
-            }
-        	});		
-
+		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
+		Ext.apply(store.proxy.extraParams, 
+				{
+					archivesId:"",
+					ssCard:"",
+					bankCard:"",
+					education:"",
+					major:"",
+					graduateSchool:"",
+					record:"",
+					family:"",
+					remark:"",
+					attach:"",
+					arstatus:""
+				});
+		
+		if(searchField==='archivesId'){
+			var fieldValue = searchField.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {archivesId:searchValue});			
+		}
+		if(searchField2==='ssCard'){
+			var fieldValue2 = searchField2.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {ssCard:searchValue2});			
+		}
+		if(searchField3==='bankCard'){
+			var fieldValue3 = searchField.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {bankCard:searchValue3});			
+		}
+		if(searchField4==='education'){
+			var fieldValue4 = searchField4.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {education:searchValue4});			
+		}
+		if(searchField5==='major'){
+			var fieldValue5 = searchField5.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {major:searchValue5});			
+		}
+		if(searchField6==='graduateSchool'){
+			var fieldValue6 = searchField6.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {graduateSchool:searchValue6});			
+		}
+		if(searchField7==='record'){
+			var fieldValue = searchField7.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {record:searchValue7});			
+		}
+		if(searchField8==='family'){
+			var fieldValue8 = searchField.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {family:searchValue8});			
+		}
+		if(searchField9==='remark'){
+			var fieldValue9 = searchField9.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {remark:searchValue9});			
+		}
+		if(searchField10==='attach'){
+			var fieldValue10 = searchField10.getValue;
+			console.log(782);
+			Ext.apply(store.proxy.extraParams, {attach:searchValue10});			
+		}
+		
+		if(searchField11==='arstatus'){
+			var fieldValue11 = searchField.getValue11;
+			console.log(783);
+			Ext.apply(store.proxy.extraParams, {arstatus:searchValue11});			
+		}
+		
+		store.load({params:{start:0, limit:20, page:1}});
 	},
 	/*Disable*/	
 	onDisableButton:function(grid, rowIndex, colIndex){
@@ -324,6 +379,7 @@ Ext.define('Admin.view.archives.ArchivesCheckViewController', {
 		var win = btn.up('window');
 		var form = win.down('form');
 		var values  = form.getValues();
+		values.arstatus="待审核";
 		Ext.apply(store.proxy.extraParams, {
 					archivesId:"",
 					ssCard:"",

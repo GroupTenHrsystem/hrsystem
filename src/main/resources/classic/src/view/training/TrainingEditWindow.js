@@ -6,7 +6,7 @@ Ext.define('Aria.view.training.TrainingEditWindow', {
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: '修改培训',
+    title: '培训作废',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -26,29 +26,35 @@ Ext.define('Aria.view.training.TrainingEditWindow', {
         }, {
             xtype: 'textfield',
             fieldLabel: '培训编号',
-            name:'courseCode'
+            name:'courseCode',
+            readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '培训名称',
-            name:'courseName'
+            name:'courseName',
+            readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '培训讲师',
-            name:'courseLecturer'
+            name:'courseLecturer',
+            readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '负责人',
-            name:'personLiable'
+            name:'personLiable',
+            readOnly: true
         }, {
             xtype: 'datefield',
             fieldLabel: '开始时间',
             name:'courseAirtime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d H:i:s',
+            readOnly: true
         }, {
             xtype: 'datefield',
             fieldLabel: '结束时间',
             name:'courseEndtime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d H:i:s',
+            readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: 'Arstatus',
@@ -58,18 +64,15 @@ Ext.define('Aria.view.training.TrainingEditWindow', {
         }]
     }],
    
-    dockedItems: {
-        dock: 'bottom',
-        items: [{
-            xtype: 'button',
-            text: '提交',
-            handler: 'submitEditForm'
-        },{
-            xtype: 'button',
-            text: '关闭',
-            handler: function(btn) {
-                btn.up('window').close();
-            }
-        }]
-    }
+    buttons: ['->',{
+        xtype: 'button',
+        text: '提交',
+        handler: 'submitEditForm'
+    },{
+        xtype: 'button',
+        text: '关闭',
+        handler: function(btn) {
+            btn.up('window').close();
+        }
+    },'->']
 });

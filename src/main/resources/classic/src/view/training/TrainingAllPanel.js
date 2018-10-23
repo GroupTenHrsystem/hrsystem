@@ -31,9 +31,9 @@ Ext.define('Admin.view.training.TrainingAllPanel', {
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'courseAirtime',text: '开始时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'courseEndtime',text: '结束时间',formatter: 'date("Y/m/d H:i:s")'},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'courseAuditor',text: '审核人',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'courseAuditResult',text: '审核结果',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'courseAuditResult',text: '审核说明',flex: 1},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'courseAuditTime',text: '审核时间',formatter: 'date("Y/m/d H:i:s")'},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '修改',tooltip: '修改按钮 ',
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '审核',tooltip: '审核按钮 ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-save' ,handler: 'openEditWindow'},
                         {xtype: 'button', iconCls: 'x-fa fa-close'	,handler: 'openEditWindowNo'}
@@ -137,13 +137,7 @@ Ext.define('Admin.view.training.TrainingAllPanel', {
                 text: '清空输入框',
                 iconCls: 'fa fa-eraser',
                 handler: 'clearText' 
-            },'-',{
-		        text: '删除培训',
-		        tooltip: 'Remove the selected item',
-		        iconCls:'fa fa-trash',
-		        //disabled: true,
-		        handler: 'deleteMoreRows'	
-		    }],			
+            }],			
             dockedItems: [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',

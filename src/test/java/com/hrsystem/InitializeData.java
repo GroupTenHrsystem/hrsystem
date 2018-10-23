@@ -426,7 +426,7 @@ public class InitializeData {
 	        	 navigationTree9.setText("人事档案复核");
 	        	 navigationTree9.setIconCls("x-fa fa-address-card");
 	        	 navigationTree9.setLeaf(true);
-	        	 navigationTree9.setViewType("archives");
+	        	 navigationTree9.setViewType("archivesCheck");
 	        	 navigationTree9.setSuperNode(navigationTree7);
 	        	 
 	        	 NavigationTree navigationTree10 = new NavigationTree();

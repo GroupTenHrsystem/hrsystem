@@ -63,19 +63,16 @@ Ext.define('Aria.view.training.TrainingAddWindow', {
             hidden: true
         }]
     }],
-   
-    dockedItems: {
-        dock: 'bottom',
-        items: [{
-            xtype: 'button',
-            text: '提交',
-            handler: 'submitAddForm'
-        },{
-            xtype: 'button',
-            text: '关闭',
-            handler: function(btn) {
-                btn.up('window').close();
-            }
-        }]
-    }
+    buttons: ['->',{
+        xtype: 'button',
+        text: '提交',
+        handler: 'submitAddForm'
+    },{
+        xtype: 'button',
+        text: '关闭',
+        handler: function(btn) {
+            btn.up('window').close();
+        }
+    },'->']
+    
 });

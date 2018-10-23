@@ -6,7 +6,7 @@
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: '审核',
+    title: '审核不通过记录',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
