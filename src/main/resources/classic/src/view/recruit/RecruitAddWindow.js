@@ -1,14 +1,12 @@
 ﻿Ext.define('Aria.view.recruit.RecruitAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.recruitAddWindow',
-    x:-600,
-    y:100,
-    height: 500,
+    height: 650,
     minHeight: 100,
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: '招聘发布',
+    title: '招聘发布5656',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -26,9 +24,35 @@
             hidden: true,
             readOnly: true
         }, {
-            xtype: 'textfield',
-            fieldLabel: '部门名称',
-            name:'departmentname'
+        	xtype: 'textfield',
+		    fieldLabel: '职位',
+		    name:'departmentName'
+            /*xtype: 'treepicker',
+            allowBlank:false, 
+            displayField: 'departmentName',
+            autoScroll:true,
+            scrollable: true,
+            width:400,
+            minPickerHeight: 400,
+            fieldLabel: '选择部门',
+            flex: 1,
+            //必须这样创建store
+            store:Ext.create("Ext.data.TreeStore",{
+                    fields: ['id','departmentName'],
+                    root: {
+                        departmentName: '请选择部门',
+                        id:'-1',
+                        expanded: true
+                    },
+                    rootVisible: false,
+                    proxy: {
+                        type: 'ajax',
+                        url: '/department/findNoParent',
+                        reader: {
+                            type: 'json'
+                        }
+                    }
+                })*/
     	}, {
 		    xtype: 'textfield',
 		    fieldLabel: '职位',

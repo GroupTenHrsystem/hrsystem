@@ -3,7 +3,7 @@
     alias: 'widget.employShowDetailsWindow',
     x:50,
     y:100,
-    height: 400,
+    height: 380,
     minHeight: 100,
     minWidth: 300,
     width: 500,
@@ -55,7 +55,6 @@
             fieldLabel: '面试审批流程完成时间',
             name:'completeTime',
             format: 'Y/m/d H:i:s',
-            hidden: true,
             readOnly: true
         }]
     }]

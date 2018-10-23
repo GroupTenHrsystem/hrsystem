@@ -18,6 +18,9 @@ public interface ResumeRepository extends PagingAndSortingRepository<Resume, Lon
 	@Query("from Resume resume where resume.userId = ?1")
 	public Page<Resume> findResume(String userId,Pageable pageable);
 	
-	@Query(value="SELECT * FROM hrsystem.t_resume where process_status = ?1", nativeQuery=true)
+	@Query(value="SELECT * FROM hrsystem.t_resume where process_status = 'COMPLETE' OR process_status = 'ONFILE'", nativeQuery=true)
 	public Page<Resume> findAll(String processStatus ,Specification<Resume> spec,Pageable pageable);
+	
+	@Query(value="SELECT * FROM hrsystem.t_resume where major = ?1", nativeQuery=true)
+	public long count(String major);
 }

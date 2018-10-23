@@ -58,5 +58,11 @@ public class ResumeAndRecruitTests {
 		} catch (Exception e) {
 		}
 	}
+	
+	@Test
+	public void testcount() {
+		System.out.println(recruitService.count());
+		//System.out.println(recruitService.count("本科"));
+	}
 
 }

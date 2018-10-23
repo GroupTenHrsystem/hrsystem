@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.hrsystem.resume.entity.ResumeDTO;
+import com.hrsystem.resume.entity.ResumeIntoStaffDTO;
 import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.resume.entity.Resume;
 
@@ -19,11 +20,13 @@ public interface IResumeService {
 	public void deleteById(Long id);
 	public void deleteAll(Long[] ids);
 	
-	public void saveIntoUser(Resume resume);
+	public void saveIntoUser(ResumeIntoStaffDTO resumeIntoStaffDTO);
 	
 	public Page<Resume> findAll(Specification<Resume> spec,Pageable pageable);
 	public Page<Resume> findAll(String processStatus ,Specification<Resume> spec,Pageable pageable);
 	public Page<Resume> findResume(String userId,Pageable pageable);
+	
+	public long count(String major);
 	
 	//流程业务
 	//1.启动流程

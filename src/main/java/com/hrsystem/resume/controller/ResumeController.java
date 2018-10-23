@@ -32,6 +32,7 @@ import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.common.SessionUtil;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.entity.ResumeDTO;
+import com.hrsystem.resume.entity.ResumeIntoStaffDTO;
 import com.hrsystem.resume.entity.ResumeQueryDTO;
 import com.hrsystem.resume.service.IResumeService;
 
@@ -53,6 +54,11 @@ public class ResumeController {
 	public Page<Resume> getPage2(ResumeQueryDTO resumeQueryDTO,ExtjsPageRequest pageRequest){
 		return resumeService.findAll("COMPLETE", ResumeQueryDTO.getWhereClause(resumeQueryDTO),pageRequest.getPageable());
 		//return resumeService.findAll(ResumeQueryDTO.getWhereClause(resumeQueryDTO), pageRequest.getPageable());
+	}
+	
+	@GetMapping("/employ/count")
+	public long count(){
+		return resumeService.count("本科");
 	}
 	
 	@GetMapping(value="{id}")
@@ -88,7 +94,7 @@ public class ResumeController {
 	}
 	
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse update(@PathVariable("id") Long myId,@RequestBody Resume dto) 
+	public ExtAjaxResponse update(@PathVariable("id") Long myId,Resume dto) 
 	{
 		try {
 			Resume entity = resumeService.findById(myId).get();
@@ -103,7 +109,7 @@ public class ResumeController {
 	}
 	
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse save(@RequestBody Resume resume) 
+	public ExtAjaxResponse save(Resume resume) 
 	{
 		try {
 			resumeService.save(resume);
@@ -113,12 +119,11 @@ public class ResumeController {
 		}
 	}
 
-	@PostMapping(value="/employ",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse saveIntoUser(@RequestBody Resume resume) 
+	@PostMapping("/employ")
+	public ExtAjaxResponse saveIntoUser(ResumeIntoStaffDTO resumeIntoStaffDTO) 
 	{
 		try {
-			System.out.println("111111");
-			resumeService.saveIntoUser(resume);
+			resumeService.saveIntoUser(resumeIntoStaffDTO);
 			return new ExtAjaxResponse(true,"保存成功！");
 		} catch (Exception e) {
 			return new ExtAjaxResponse(true,"保存失败！");
