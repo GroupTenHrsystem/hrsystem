@@ -56,9 +56,13 @@ public class ResumeController {
 		//return resumeService.findAll(ResumeQueryDTO.getWhereClause(resumeQueryDTO), pageRequest.getPageable());
 	}
 	
-	@GetMapping("/employ/count")
-	public long count(){
-		return resumeService.count("本科");
+	@GetMapping("/getEduation")
+	public void getEduationPage(){
+		Long boshi = resumeService.count("博士");
+		Long shuoshi = resumeService.count("硕士");
+		Long benke = resumeService.count("本科");
+		System.out.println(boshi);
+		//return resumeService.count("博士");
 	}
 	
 	@GetMapping(value="{id}")
@@ -94,7 +98,7 @@ public class ResumeController {
 	}
 	
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse update(@PathVariable("id") Long myId,Resume dto) 
+	public ExtAjaxResponse update(@PathVariable("id") Long myId,@RequestBody Resume dto) 
 	{
 		try {
 			Resume entity = resumeService.findById(myId).get();
@@ -109,7 +113,7 @@ public class ResumeController {
 	}
 	
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse save(Resume resume) 
+	public ExtAjaxResponse save(@RequestBody Resume resume) 
 	{
 		try {
 			resumeService.save(resume);

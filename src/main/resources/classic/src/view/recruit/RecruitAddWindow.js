@@ -24,10 +24,10 @@
             hidden: true,
             readOnly: true
         }, {
-        	xtype: 'textfield',
-		    fieldLabel: '职位',
-		    name:'departmentName'
-            /*xtype: 'treepicker',
+        	//xtype: 'textfield',
+		    //fieldLabel: '职位',
+		    //name:'departmentName'
+            xtype: 'treepicker',
             allowBlank:false, 
             displayField: 'departmentName',
             autoScroll:true,
@@ -52,7 +52,7 @@
                             type: 'json'
                         }
                     }
-                })*/
+                })
     	}, {
 		    xtype: 'textfield',
 		    fieldLabel: '职位',
