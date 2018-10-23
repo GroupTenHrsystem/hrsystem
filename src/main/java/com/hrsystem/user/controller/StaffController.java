@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hrsystem.attendance.entity.Attendance;
+import com.hrsystem.attendance.service.IAttendanceService;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
@@ -27,7 +29,7 @@ import com.hrsystem.performance.entity.DTO.PerformanceDTO;
 import com.hrsystem.training.domain.Training;
 import com.hrsystem.training.domain.TrainingQueryDTO;
 import com.hrsystem.user.entity.Staff;
-import com.hrsystem.user.entity.DTO.StaffDTO;
+import com.hrsystem.user.entity.DTO.StaffQueryDTO;
 import com.hrsystem.user.service.IStaffService;
 
 @RestController
@@ -35,6 +37,9 @@ import com.hrsystem.user.service.IStaffService;
 public class StaffController {
 	@Autowired
 	private IStaffService  staffService;
+	
+	@Autowired
+	private IAttendanceService  attendanceService;
 	
 //	/**
 //	 * 1、查
@@ -46,7 +51,7 @@ public class StaffController {
 //		return staffService.findStaffById(id);
 //	}
 	@GetMapping
-	public Page<Staff> getPage(StaffDTO staffDTO , ExtjsPageRequest pageRequest) 
+	public Page<Staff> getPage(StaffQueryDTO staffDTO , ExtjsPageRequest pageRequest) 
 	{
 		Specification buildSpecification = SpecificationBuilder.buildSpecification(staffDTO);
 		return staffService.findAll(buildSpecification, pageRequest.getPageable());
@@ -64,7 +69,11 @@ public class StaffController {
 	public String insertStaff(@RequestBody Staff staff) {		
 		try {
 			staffService.insertStaff(staff);
-			System.out.println(staff.getSex());
+			Attendance attendance=new Attendance();
+			attendance.setId(staff.getId());
+			attendance.setEmployeName(staff.getStaffName());
+			attendanceService.insertAttendance(attendance);
+			
 			return "success:添加成功";
 		} catch (Exception e) {
 			return "success:添加失败";

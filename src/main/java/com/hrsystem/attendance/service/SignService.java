@@ -83,6 +83,18 @@ public class SignService implements ISignService {
 		return signRepository.findExtraStarTime(extra_star_time);
 	}
 
+	@Override
+	public List<Sign> findEndTime(String end_time) {
+		// TODO Auto-generated method stub
+		return signRepository.findEndTime(end_time);
+	}
+
+	@Override
+	public List<Sign> findExtraEndTime(String extra_e_time) {
+		// TODO Auto-generated method stub
+		return signRepository.findExtraEndTime(extra_e_time);
+	}
+
 	
 
 }

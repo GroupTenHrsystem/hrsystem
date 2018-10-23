@@ -13,7 +13,7 @@ import com.hrsystem.attendance.service.IAttendanceService;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.user.entity.Staff;
-import com.hrsystem.user.entity.DTO.StaffDTO;
+import com.hrsystem.user.entity.DTO.StaffQueryDTO;
 
 @RestController
 @RequestMapping("/Attendance")
