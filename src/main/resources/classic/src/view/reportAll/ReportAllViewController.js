@@ -27,14 +27,11 @@ Ext.define('Admin.view.reportAll.ReportAllViewController', {
 	openDetailWindow:function(grid, rowIndex, colIndex){
 		var record = grid.getStore().getAt(rowIndex);
 		//获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
-		console.log(record.get('id'));
-		//rocord.data.staff.setValue(333);
-		// var obj = {"id":1,"salarySum":2};
-		//record.data['salarySum'] = 2;
-		console.log(record);
 		if (record ) {
-			var win = grid.up('salary').add(Ext.widget('salaryDetailWindow'));
+			var win = grid.up('reportAllPanel').add(Ext.widget('reportAllDetailWindow'));
 			win.show();
+			Ext.getCmp('messages').getToolbar().hide();
+			Ext.getCmp("messages").setReadOnly(true);  
 			win.down('form').getForm().loadRecord(record);
 		}
 	},

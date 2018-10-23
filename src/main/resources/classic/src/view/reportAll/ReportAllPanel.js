@@ -80,9 +80,6 @@ Ext.define('Admin.view.reportAll.ReportAllPanel', {
                 },
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: 'Actions',tooltip: 'edit ',
                     items: [
-                        {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-close'   ,handler: 'deleteOneRow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-ban'     ,handler: 'onDisableButton'},
                         {xtype: 'button', iconCls: 'x-fa fa-file' ,handler: 'openDetailWindow'}
                     ]
                 }

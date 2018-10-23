@@ -1,6 +1,8 @@
 Ext.define('Aria.view.salary.SalaryEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.salaryEditWindow',
+    x: 50,  
+    y: 100,
     height: 400,
     minHeight: 100,
     minWidth: 300,
