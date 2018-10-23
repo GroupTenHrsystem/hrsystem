@@ -31,7 +31,11 @@
     <sequenceFlow id="flow7" name="同意" sourceRef="exclusivegateway6" targetRef="ireportBack">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${hrPass}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow8" sourceRef="ireportBack" targetRef="endevent1"></sequenceFlow>
+    <sequenceFlow id="flowcount" sourceRef="ireportBack" targetRef="endevent1">
+      <extensionElements>
+        <activiti:executionListener event="complete" delegateExpression="${flowcountEndProcessor}"></activiti:executionListener>
+      </extensionElements>
+    </sequenceFlow>
     <sequenceFlow id="flow9" name="不同意" sourceRef="exclusivegateway6" targetRef="modifyApply">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!hrPass}]]></conditionExpression>
     </sequenceFlow>
@@ -105,7 +109,7 @@
           <omgdc:Bounds height="14.0" width="24.0" x="-22.0" y="-17.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
+      <bpmndi:BPMNEdge bpmnElement="flowcount" id="BPMNEdge_flowcount">
         <omgdi:waypoint x="642.0" y="135.0"></omgdi:waypoint>
         <omgdi:waypoint x="642.0" y="283.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>

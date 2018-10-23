@@ -174,12 +174,6 @@
 		                leaf: true
 	                },
 	                {
-	                    text: '请假统计',
-	                    iconCls: 'x-fa fa-lightbulb-o',
-	                    //viewType: '',
-	                    leaf: true
-	                },
-	                {
 	                    text: '考勤情况查看',
 	                    iconCls: 'x-fa fa-lightbulb-o',
 	                    viewType: 'attendance',
