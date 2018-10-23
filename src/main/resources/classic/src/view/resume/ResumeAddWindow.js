@@ -34,7 +34,21 @@
 					{items:[
 					{xtype: 'datefield',fieldLabel:'出生日期',name:'birthday',format: 'Y/m/d'},
 					{xtype: 'textfield',fieldLabel:'籍贯',name:'nativePlace'},
-		    		{xtype: 'textfield',fieldLabel:'专业',name:'major'},
+		    		{	xtype: 'combobox',
+		    			fieldLabel:'专业',
+		    			name:'major',
+			    		store:Ext.create("Ext.data.Store",{
+			    			fields:["name","value"],
+				    		data:[
+				    			{name:'本科',value:'本科'},
+				    			{name:'博士',value:'博士'},
+				    			{name:'专科',value:'专科'},
+				    			{name:'硕士',value:'硕士'},
+				    			{name:'教授',value:'教授'},
+				    			{name:'专科以下',value:'专科以下'}
+				    		]
+			    		})
+		    		},
 		    		{xtype: 'textfield',fieldLabel:'邮箱',name:'email'}
 				]}
 				//	{items:[

@@ -27,7 +27,7 @@
             readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: '员工工号111',
+            fieldLabel: '员工工号',
             name:'employeNum'
         }, {
         	xtype: 'textfield',
