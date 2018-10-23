@@ -60,4 +60,10 @@ public class AttendanceService implements IAttendanceService {
 		return attendanceRepository.findAll(spec, pageable);
 	}
 
+	@Override
+	public List<Attendance> findAttendanceByName(String name) {
+		// TODO Auto-generated method stub
+		return attendanceRepository.findAttendanceByName(name);
+	}
+
 }
