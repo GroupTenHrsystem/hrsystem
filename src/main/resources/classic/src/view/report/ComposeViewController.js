@@ -40,8 +40,6 @@ Ext.define('Admin.view.email.ComposeViewController', {
 					        }
 			            }
 					});
-
-
 	        win.close();
 		}
     }
