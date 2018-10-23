@@ -49,12 +49,40 @@ public class FinanceNavigationTreeBean {
 	        	 navigationTree11.setSelectable(false);
 	        	 navigationTree11.setExpanded(false);
 	        	 
-			        	 NavigationTree navigationTree12 = new NavigationTree();
-			        	 navigationTree12.setText("招聘信息发布");
-			        	 navigationTree12.setIconCls("x-fa fa-address-card");
-			        	 navigationTree12.setLeaf(true);
-			        	 navigationTree12.setViewType("recruit");
-			        	 navigationTree12.setSuperNode(navigationTree11);	 
+	        	 NavigationTree navigationTree12 = new NavigationTree();
+	        	 navigationTree12.setText("招聘信息发布");
+	        	 navigationTree12.setIconCls("x-fa fa-address-card");
+	        	 navigationTree12.setLeaf(true);
+	        	 navigationTree12.setViewType("recruit");
+	        	 navigationTree12.setSuperNode(navigationTree11);
+	        	 
+		        	 NavigationTree navigationTree13 = new NavigationTree();
+		        	 navigationTree13.setText("简历管理");
+		        	 navigationTree13.setIconCls("x-fa fa-exclamation-triangle");
+		        	 navigationTree13.setLeaf(true);
+		        	 navigationTree13.setViewType("resume");
+		        	 navigationTree13.setSuperNode(navigationTree11);
+		        	 
+		        	 NavigationTree navigationTree14 = new NavigationTree();
+		        	 navigationTree14.setText("面试安排");
+		        	 navigationTree14.setIconCls("x-fa fa-exclamation-triangle");
+		        	 navigationTree14.setLeaf(true);
+		        	 navigationTree14.setViewType("resumeArrangePanel");
+		        	 navigationTree14.setSuperNode(navigationTree11);
+		        	 
+		        	 NavigationTree navigationTree15 = new NavigationTree();
+		        	 navigationTree15.setText("面试结果审核录入");
+		        	 navigationTree15.setIconCls("x-fa fa-lightbulb-o");
+		        	 navigationTree15.setLeaf(true);
+		        	 navigationTree15.setViewType("resumeApprovePanel");
+		        	 navigationTree15.setSuperNode(navigationTree11);
+		        	 
+		        	 NavigationTree navigationTree16 = new NavigationTree();
+		        	 navigationTree16.setText("录用管理");
+		        	 navigationTree16.setIconCls("x-fa fa-lightbulb-o");
+		        	 navigationTree16.setLeaf(true);
+		        	 navigationTree16.setViewType("employ");
+		        	 navigationTree16.setSuperNode(navigationTree11);	 
 	        	 
 	        	 NavigationTree navigationTree17 = new NavigationTree();
 	        	 navigationTree17.setText("培训管理模块");
@@ -267,6 +295,10 @@ public class FinanceNavigationTreeBean {
 			      navigationTreeService.save(navigationTree4);
 			      navigationTreeService.save(navigationTree11);
 			      navigationTreeService.save(navigationTree12);
+			      navigationTreeService.save(navigationTree13);
+			      navigationTreeService.save(navigationTree14);
+			      navigationTreeService.save(navigationTree15);
+			      navigationTreeService.save(navigationTree16);
 			      navigationTreeService.save(navigationTree17);
 			      navigationTreeService.save(navigationTree19);
 			      navigationTreeService.save(navigationTree19_5);

@@ -1,6 +1,8 @@
 ﻿Ext.define('Aria.view.resume.ResumeEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.resumeEditWindow',
+    x:50,
+    y:100,
     height: 500,
     minHeight: 100,
     minWidth: 300,

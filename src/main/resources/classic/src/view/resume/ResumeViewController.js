@@ -136,6 +136,24 @@
 	/*Cancel Resume Process*/	
 	cancelResumeProcess:function(grid, rowIndex, colIndex){
 		Ext.Msg.alert("Title","Cancel Leave Process");
-	}	
+	},
+		
+	/* 文件上传 */	
+	onClickresumeUploadButton: function (btn) {
+		var form = btn.up('window').down('form');;
+		form.getForm().submit({       
+			url:'/resumeupload',
+			method : 'POST',
+			waitMsg: '正在上传，请耐心等待....',
+			success: function(form, action){    
+				Ext.Msg.alert('Success', action.result.msg,function(){
+					btn.up('window').close();
+				});       
+			}, 
+			failure: function(form, action){
+				Ext.Msg.alert('Error', action.result.msg);
+			}
+		});
+    }
 
 });

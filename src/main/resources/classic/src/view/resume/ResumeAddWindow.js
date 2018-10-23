@@ -1,7 +1,8 @@
 ﻿Ext.define('Aria.view.resume.ResumeAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.resumeAddWindow',
-
+	x:50,
+	y:100,
     minHeight: 300,
     minWidth: 610,
     width: 800,
@@ -87,11 +88,13 @@
 		},{
 			xtype:'container',
 	        layout:'hbox',
+	        margin:'5 0 5 0',
 	        items:[{
 					xtype: 'checkbox',
 				    boxLabel: '是否推荐',
 					name:'ifrefer',
-					reference:'ifrefer'
+					reference:'ifrefer',
+					inputValue:'true'
 				},{
 					xtype: 'textfield',
 					fieldLabel: '推荐人',
@@ -101,6 +104,24 @@
 						disabled:'{!ifrefer.checked}'
 					}
 		    }]
+		},{
+			xtype:'container',
+			layout:'fit',
+			margin:'5 0 5 0',
+			items:[{
+				xtype: 'filefield',
+            	fieldLabel: '附件:',
+            	name:'attachment',
+            	labelSeparator: '',
+            	buttonConfig: {
+                    xtype: 'filebutton',
+                   //name:'attachment',
+                    glyph:'',
+                    iconCls: 'x-fa fa-cloud-upload',
+                    text: '上传附件'
+                    //handler: 'onClickresumeUploadButton'	
+            	}
+			}]
 		},{
 			xtype: 'container',
 	        layout:'fit',

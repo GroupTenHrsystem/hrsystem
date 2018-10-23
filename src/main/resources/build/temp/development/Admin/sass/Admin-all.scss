@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-$image-search-path: 'D:/hrsystem/src/main/resources/build/development/Admin/classic/resources';
+$image-search-path: 'D:/workspace-sts/hrsystem/src/main/resources/build/development/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-model-base: dynamic(true);;
@@ -208,6 +208,7 @@ $include-admin-view-reportall-reportallviewcontroller: dynamic(true);;
 $include-admin-view-reportall-reportallviewmodel: dynamic(true);;
 $include-admin-view-resume-resume: dynamic(true);;
 $include-admin-view-resume-resumepanel: dynamic(true);;
+$include-admin-view-resume-resumeuploadwindow: dynamic(true);;
 $include-admin-view-resume-resumeviewcontroller: dynamic(true);;
 $include-admin-view-resume-resumeviewmodel: dynamic(true);;
 $include-admin-view-resumearrange-resumearrangepanel: dynamic(true);;

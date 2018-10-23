@@ -60,11 +60,31 @@
 		
 	saveIntoStaffFormSubmit:function(btn){
 		var form = btn.up('window').down('form');
-		var record = Ext.create('Admin.model.employ.EmployModel');
+		//var record = Ext.create('Admin.model.employ.EmployModel');
 		var values = form.getValues();
-		record.set(values);
+		//record.set(values);
 		//record.save();
-		record.saveIntoUser();
+		Ext.Ajax.request({
+			url : 'resume/employ',   //+value.get('id'),
+			method : 'post',
+			params : {
+				id : values.id,
+				employeNum : values.employeNum,	
+				departmentName : values.departmentName,	
+				employmentDate : values.employmentDate					
+			},
+			success: function(response, options) {
+                var json = Ext.util.JSON.decode(response.responseText);
+	            if(json.success){
+	            	Ext.Msg.alert('操作成功', json.msg, function() {
+	                    grid.getStore().reload();
+	                    //store.reload();
+	                });
+		        }else{
+		        	 Ext.Msg.alert('操作失败', json.msg);
+		        }
+            }
+		});
 		Ext.data.StoreManager.lookup('employGridStroe').load();
 		btn.up('window').close();
 	},

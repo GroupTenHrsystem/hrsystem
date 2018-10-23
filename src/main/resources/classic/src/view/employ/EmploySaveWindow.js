@@ -1,6 +1,8 @@
 ﻿Ext.define('Aria.view.employ.EmploySaveWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.employSaveWindow',
+    x:50,
+   	y:100,
     height: 300,
     minHeight: 100,
     minWidth: 300,
@@ -25,7 +27,7 @@
             readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: '员工工号',
+            fieldLabel: '员工工号111',
             name:'employeNum'
         }, {
         	xtype: 'textfield',
