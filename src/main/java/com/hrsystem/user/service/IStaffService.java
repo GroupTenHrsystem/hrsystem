@@ -26,4 +26,5 @@ public interface IStaffService {
 	 
 	 public List<Staff> getStaffList(Long id);
 //	 public List<Staff> getStaffByStaffTempletId(Long id);
+	 
 }
