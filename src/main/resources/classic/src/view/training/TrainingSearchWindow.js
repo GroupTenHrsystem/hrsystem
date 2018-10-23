@@ -51,19 +51,16 @@ Ext.define('Aria.view.training.TrainingSearchWindow', {
             format: 'Y/m/d H:i:s'
         }]
     }],
-   
-    dockedItems: {
-        dock: 'bottom',
-        items: [{
-            xtype: 'button',
-            text: '提交',
-            handler: 'submitSearchForm'
-        },{
-            xtype: 'button',
-            text: '关闭',
-            handler: function(btn) {
-                btn.up('window').close();
-            }
-        }]
-    }
+    buttons: ['->',{
+        xtype: 'button',
+        text: '提交',
+        handler: 'submitSearchForm'
+    },{
+        xtype: 'button',
+        text: '关闭',
+        handler: function(btn) {
+            btn.up('window').close();
+        }
+    },'->']
+
 });

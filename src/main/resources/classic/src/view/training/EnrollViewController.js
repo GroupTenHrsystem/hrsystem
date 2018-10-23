@@ -41,10 +41,16 @@ Ext.define('Admin.view.training.EnrollViewController', {
 		var store = Ext.data.StoreManager.lookup('enrollGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
+    	if(values.auditStatus!="报名通过"){
+    	values.auditStatus ="作废";
     	record.set(values);
     	
     	store.load();
         win.close();
+    	}
+    	else{
+    		Ext.Msg.alert("错误", "不允许报名审核通过!!!!!");
+        }
 	},
 	
 	/*Quick Search*/

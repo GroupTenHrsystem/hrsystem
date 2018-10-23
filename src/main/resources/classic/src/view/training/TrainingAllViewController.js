@@ -150,11 +150,20 @@ Ext.define('Admin.view.training.TrainingAllViewController', {
 		var store = Ext.data.StoreManager.lookup('trainingAllGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	values.courseAuditStatus ="审核不通过";
-    	record.set(values);
-    	
-    	store.load();
-        win.close();
+    	if(values.courseAuditStatus !="待审核"){
+    		Ext.Msg.alert("错误", "只能审核待审核!!!!!");	 
+    	}
+    	else{  	
+	    	if(win.down('form').isValid()){
+	    		values.courseAuditStatus ="审核不通过";
+	        	record.set(values);        	
+	        	store.load();
+	            win.close();
+	        }
+	        else{
+	           	Ext.Msg.alert("错误", "有数据未填");
+	        }
+    	}
 	},
 	
 	/*通过*/
@@ -163,11 +172,21 @@ Ext.define('Admin.view.training.TrainingAllViewController', {
 		var store = Ext.data.StoreManager.lookup('trainingAllGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	values.courseAuditStatus ="审核通过";
-    	record.set(values);
+    	if(values.courseAuditStatus !="待审核"){
+    		Ext.Msg.alert("错误", "只能审核待审核!!!!!");	 
+    	}
+    	else{  	
+	    	if(win.down('form').isValid()){
+	    		values.courseAuditStatus ="审核通过";
+	        	record.set(values);        	
+	        	store.load();
+	            win.close();
+	        }
+	        else{
+	           	Ext.Msg.alert("错误", "有数据未填");
+	        }
+    	}
     	
-    	store.load();
-        win.close();
 	},
 	
 	/*Delete*/	
