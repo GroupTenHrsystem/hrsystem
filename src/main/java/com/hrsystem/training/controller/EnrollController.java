@@ -1,5 +1,8 @@
 package com.hrsystem.training.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
@@ -17,9 +20,11 @@ import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.training.domain.Enroll;
 import com.hrsystem.training.domain.EnrollQueryDTO;
+import com.hrsystem.training.domain.Feedback;
 import com.hrsystem.training.domain.Training;
 import com.hrsystem.training.domain.TrainingQueryDTO;
 import com.hrsystem.training.service.IEnrollService;
+import com.hrsystem.user.entity.Staff;
 
 @RestController
 @RequestMapping("/enroll")
@@ -72,16 +77,21 @@ public class EnrollController {
 	 @PostMapping("/deletes")
 		public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
 		{
-			try {
-				if(ids!=null) {
-					enrollService.deleteAll(ids);
+		 for (Long id : ids) {
+				Enroll entity = enrollService.findEnrollById(id);
+				if(entity.getAuditStatus().equals("作废")) {
+					//archivesService.deleteById(id);
+					continue;
+				} else {
+					return new ExtAjaxResponse(true,"只能删除作废的报名");
 				}
-				return new ExtAjaxResponse(true,"批量删除成功！");
-			} catch (Exception e) {
-				return new ExtAjaxResponse(true,"批量删除失败！");
 			}
+		 		enrollService.deleteAll(ids);
+			return new ExtAjaxResponse(true,"操作成功！");
 		}
-	 
+
+
+	    
 	@GetMapping
 	public Page<Enroll> getPage(EnrollQueryDTO enrollQueryDTO,ExtjsPageRequest pageRequest) 
 	{
@@ -92,4 +102,12 @@ public class EnrollController {
 		System.out.println("炸了啊");
 		return enrollService.findEnrollByArstatusPass(EnrollQueryDTO.getWhereClause(enrollQueryDTO), pageRequest.getPageable());
 	}
+	
+	@GetMapping("/enrollfind")
+	public Page<Enroll> getEnrollByArstatusPassfind(EnrollQueryDTO enrollQueryDTO,ExtjsPageRequest pageRequest) {
+		System.out.println("炸了啊");
+		System.out.println(enrollQueryDTO.getCourseId());
+		return enrollService.findEnrollByArstatusEmployeeId(enrollQueryDTO.getCourseId(),EnrollQueryDTO.getWhereClause(enrollQueryDTO), pageRequest.getPageable());
+	}
+	
 }

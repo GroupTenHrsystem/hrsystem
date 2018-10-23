@@ -82,14 +82,20 @@ public class TrainingController {
 	 @PostMapping("/deletes")
 		public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
 		{
-			try {
-				if(ids!=null) {
-					trainingService.deleteAll(ids);
+
+			for (Long id : ids) {
+				Training entity = trainingService.findTrainingById(id);
+				if(entity.getCourseAuditStatus().equals("作废")) {
+					//archivesService.deleteById(id);
+					continue;
+				} else {
+					return new ExtAjaxResponse(true,"只能删除作废培训");
 				}
-				return new ExtAjaxResponse(true,"批量删除成功！");
-			} catch (Exception e) {
-				return new ExtAjaxResponse(true,"批量删除失败！");
 			}
+			trainingService.deleteAll(ids);
+			return new ExtAjaxResponse(true,"操作成功！");
+			
+			
 		}
 	 
 	@GetMapping

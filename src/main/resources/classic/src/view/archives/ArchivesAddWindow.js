@@ -1,7 +1,7 @@
 ﻿Ext.define('Admin.view.archives.ArchivesAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.archivesAddWindow',
-    height: 700,
+    height: 600,
     minHeight: 350,
     minWidth: 300,
     width: 500,
@@ -26,6 +26,7 @@
         }, {
             xtype: 'textfield',
             fieldLabel: '档案编号',
+            allowBlank:false, 
             name:'archivesId'
         },{
             xtype: 'textfield',
@@ -84,7 +85,7 @@
 	        labelWidth: 80,
 			id:'uploadinput',
 	        name:'attach',
-	        emptyText: 'Select an zip/bpmn/bpmn.20.xml file!', 
+	        emptyText: '在C盘fakepath中选择!', 
 	        fieldLabel: '附件选择:',
 	        labelSeparator: '',
 	        buttonConfig: {

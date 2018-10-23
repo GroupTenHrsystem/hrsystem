@@ -11,11 +11,16 @@ Ext.define('Admin.view.training.FeedbackViewController', {
 		var record = Ext.create('Admin.model.training.FeedbackModel');
 		var values  =form.getValues();//获取form数据
 		var store = Ext.data.StoreManager.lookup('feedbackGridStroe');
+		if(win.down('form').isValid()){
            	record.set(values);
           	record.save();
           	store.load();
           //	Ext.data.StoreManager.lookup('performanceTempletGridStore').load();
-          	win.close();
+          	win.close();}
+    	else{
+
+       		Ext.Msg.alert("错误", "有数据未填");
+       		}
 	},
 	/* Clear Text */
 	clearText:function(btn){

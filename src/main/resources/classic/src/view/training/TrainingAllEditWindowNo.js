@@ -27,31 +27,36 @@ Ext.define('Aria.view.training.TrainingAllEditWindowNo', {
             xtype: 'datefield',
             fieldLabel: '审核时间',
             name:'courseAuditTime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d H:i:s',
+            allowBlank:false
         }, {
             xtype: 'textfield',
             fieldLabel: '审核人',
-            name:'courseAuditor'
+            name:'courseAuditor',
+            allowBlank:false
         }, {
             xtype: 'textfield',
-            fieldLabel: '审核结果',
+            fieldLabel: '审核说明',
             name:'courseAuditResult'
+        },{
+            xtype: 'textfield',
+            fieldLabel: 'Arstatus',
+            name:'courseAuditStatus',
+            value:'待审核',
+            hidden: true
         }]
     }],
    
-    dockedItems: {
-        dock: 'bottom',
-        items: [{
-            xtype: 'button',
-            text: '提交',
-            handler: 'submitEditFormYes1'
-        },{
-            xtype: 'button',
-            text: '关闭',
-            handler: function(btn) {
-                btn.up('window').close();
-            }
-        }]
-    }
+    buttons: ['->',{
+	    xtype: 'button',
+	    text: '提交',
+	    handler: 'submitEditFormYes1'
+	},{
+	    xtype: 'button',
+	    text: '关闭',
+	    handler: function(btn) {
+	        btn.up('window').close();
+	    }
+	},'->']
 });
 

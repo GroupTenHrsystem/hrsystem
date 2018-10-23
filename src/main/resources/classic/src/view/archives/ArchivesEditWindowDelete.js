@@ -4,7 +4,7 @@
     height: 200,
     minHeight: 100,
     minWidth: 300,
-    width: 500,
+    width: 300,
     scrollable: true,
     title: '作废档案',
     closable: true,
@@ -23,6 +23,11 @@
             name:'id',
             hidden: true,
             readOnly: true
+        },{
+            xtype: 'textfield',
+            fieldLabel: 'Arstatus',
+            name:'arstatus',
+            hidden: true
         }]
     }],
    buttons: ['->',{

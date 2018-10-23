@@ -1,7 +1,7 @@
 ﻿Ext.define('Aria.view.archives.ArchivesEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.archivesEditWindow',
-    height: 700,
+    height: 600,
     minHeight: 100,
     minWidth: 300,
     width: 500,
@@ -64,6 +64,12 @@
             xtype: 'textfield',
             fieldLabel: '附件',
             name:'attach',
+        },{
+            xtype: 'textfield',
+            fieldLabel: 'Arstatus',
+            name:'arstatus',
+            value:'待审核',
+            hidden: true
         }]
     }],
    buttons: ['->',{

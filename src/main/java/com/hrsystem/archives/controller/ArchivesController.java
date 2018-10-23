@@ -131,32 +131,36 @@ public class ArchivesController {
 	}
 	
 	@PutMapping("/checklalala")
-	public String update1(@Param("id") Long myId,Archives archives) 
-	{	
-		
-		try {
-			Archives entity = archivesService.findArchivesById(archives.getId());
-			entity.setArstatus("审核通过");
-			BeanUtils.copyProperties(archives, entity);//使用自定义的BeanUtils			
-			archivesService.insertArchives(entity);
-			return "success:true";
-		} catch (Exception e) {
-			return "success:false";
+	public ExtAjaxResponse update1(@Param("id") Long myId,Archives archives) 
+	{								
+		Archives entity = archivesService.findArchivesById(archives.getId());
+		System.out.println(entity.getArstatus());
+		if(entity.getArstatus().equals("待审核")) {
+		entity.setArstatus("审核通过");
+		BeanUtils.copyProperties(archives, entity);//使用自定义的BeanUtils			
+		archivesService.insertArchives(entity);
+		return new ExtAjaxResponse(true,"操作成功");
 		}
+		else {
+			return new ExtAjaxResponse(true,"只能审核待审核档案");
+		}
+		 
 	}
 	@PutMapping("/checknopass")
-	public String update2(@Param("id") Long myId,Archives archives) 
+	public ExtAjaxResponse update2(@Param("id") Long myId,Archives archives) 
 	{	
 		
-		try {
+		
 			Archives entity = archivesService.findArchivesById(archives.getId());
+			if(entity.getArstatus().equals("待审核")) {
 			entity.setArstatus("审核不通过");
 			BeanUtils.copyProperties(archives, entity);//使用自定义的BeanUtils			
 			archivesService.insertArchives(entity);
-			return "success:true";
-		} catch (Exception e) {
-			return "success:false";
-		}
+			return new ExtAjaxResponse(true,"操作成功！");
+			}
+			else {
+				return new ExtAjaxResponse(true,"只能审核待审核档案");
+			}
 	}
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String update(@PathVariable("id") Long myId,@RequestBody Archives dto) 

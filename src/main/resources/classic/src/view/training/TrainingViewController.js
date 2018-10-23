@@ -41,10 +41,17 @@ Ext.define('Admin.view.training.TrainingViewController', {
 		var store = Ext.data.StoreManager.lookup('trainingGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	record.set(values);
-    	
-    	store.load();
-        win.close();
+    	if(values.courseAuditStatus!="审核通过"){
+    		
+    		values.courseAuditStatus ="作废";
+        	record.set(values);
+        	
+        	store.load();
+            win.close();
+    	}
+    	else{
+    		Ext.Msg.alert("错误", "不允许作废审核通过!!!!!");
+        }
 	},
 	
 	/*Quick Search*/
@@ -89,7 +96,7 @@ Ext.define('Admin.view.training.TrainingViewController', {
 
 	/*Delete*/	
 	deleteOneRow:function(grid, rowIndex, colIndex){
-		Ext.Msg.confirm('提示信息','确认要删除这条信息吗？',function(op){
+		Ext.Msg.confirm('警告','确认要彻底删除这条信息吗!!!!!!!',function(op){
 		if(op == 'yes'){
 			var store = grid.getStore();
 			var record = store.getAt(rowIndex);
