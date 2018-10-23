@@ -27,8 +27,8 @@ Ext.define('Admin.view.training.EnrollAllPanel', {
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'employeeId',text: '培训员工编号',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'auditStatus',text: '审核状态',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'auditor',text: '审核人',flex: 1},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'auditResult',text: '审核结果',flex: 1},
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '修改',tooltip: '修改按钮 ',
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'auditResult',text: '审核说明',flex: 1},
+                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '审核',tooltip: '审核按钮 ',
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-save' ,handler: 'openEditWindow'},
                         {xtype: 'button', iconCls: 'x-fa fa-close'	,handler: 'openEditWindowNo'}
@@ -106,13 +106,7 @@ Ext.define('Admin.view.training.EnrollAllPanel', {
                 text: '清空输入框',
                 iconCls: 'fa fa-eraser',
                 handler: 'clearText' 
-            },'-',{
-		        text: '删除报名',
-		        tooltip: 'Remove the selected item',
-		        iconCls:'fa fa-trash',
-		        //disabled: true,
-		        handler: 'deleteMoreRows'	
-		    }],			
+            }],			
             dockedItems: [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',

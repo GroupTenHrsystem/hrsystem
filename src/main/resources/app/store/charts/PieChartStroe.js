@@ -6,14 +6,12 @@ Ext.define('Admin.store.charts.PieChartStroe', {
 	fields:['name','data'],
 		
 	data: [
-        { 'name': '北京',   'data': 10 },
-        { 'name': '天津',   'data':  5},
-        { 'name': '上海',   'data':  8 },
-        { 'name': '深圳',   'data':  7 },
-        { 'name': '广州',   'data':  6 },
-        { 'name': '济南',   'data':  5 },
-        { 'name': '郑州',   'data':  4 },
-        { 'name': '石家庄',   'data':  3 }
+        { 'name': '本科',   'data': 10 },
+        { 'name': '博士',   'data':  5},
+        { 'name': '硕士',   'data':  8 },
+        { 'name': '专科',   'data':  7 },
+        { 'name': '教授',   'data':  6 },
+        { 'name': '本科以下',   'data':  5 },
     ],
     proxy: {
         type: 'memory',

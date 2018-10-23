@@ -122,11 +122,22 @@ Ext.define('Admin.view.training.EnrollAllViewController', {
 		var store = Ext.data.StoreManager.lookup('enrollAllGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	values.auditStatus ="报名不通过";
-    	record.set(values);
-    	
-    	store.load();
-        win.close();
+    	if(values.auditStatus!="待审核"){
+	    	Ext.Msg.alert("错误", "只能审核待审核!!!!!");	    	
+    	}
+    	else{
+    		if(win.down('form').isValid()){
+	    		values.auditStatus ="报名不通过";
+	    		record.set(values);
+	    	
+	    		store.load();
+	    		win.close();
+	    		}
+	    	else{
+	
+	       		Ext.Msg.alert("错误", "有数据未填");
+	       		}
+        }
 	},
 	
 	/*报名通过*/
@@ -135,11 +146,23 @@ Ext.define('Admin.view.training.EnrollAllViewController', {
 		var store = Ext.data.StoreManager.lookup('enrollAllGridStroe');
     	var values  = win.down('form').getValues();//获取form数据
     	var record = store.getById(values.id);//获取id获取store中的数据
-    	values.auditStatus ="报名通过";
-    	record.set(values);
-    	
-    	store.load();
-        win.close();
+    	if(values.auditStatus!="待审核"){
+	    	Ext.Msg.alert("错误", "只能审核待审核!!!!!");
+	    	
+    	}
+    	else{
+    		if(win.down('form').isValid()){
+	    		values.auditStatus ="报名通过";
+	    		record.set(values);
+	    	
+	    		store.load();
+	    		win.close();
+	    		}
+	    	else{
+	
+	       		Ext.Msg.alert("错误", "有数据未填");
+	       		}
+        }
 	},
 	
 	/*Delete*/	

@@ -1,6 +1,8 @@
 ﻿Ext.define('Admin.view.payment.PaymentAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.paymentAddWindow',
+    x: 50,  
+    y: 100,
     height: 350,
     minHeight: 350,
     minWidth: 300,

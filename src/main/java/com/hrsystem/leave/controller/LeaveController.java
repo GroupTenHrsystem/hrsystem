@@ -124,8 +124,8 @@ public class LeaveController {
     	try {
     		String userId = SessionUtil.getUserName(session);
     		Map<String, Object> variables = new HashMap<String, Object>();
-    		variables.put("deptLeader", "financeManager");
-    		variables.put("hrClerk", "hrManager");
+    		variables.put("deptLeader", "financeClerk");
+    		variables.put("hrClerk", "financeManager");
     		variables.put("applyUserId", userId);
     		leaveService.startWorkflow(userId,leaveId, variables);
     		return new ExtAjaxResponse(true,"操作成功!");

@@ -6,7 +6,7 @@ Ext.define('Aria.view.training.EnrollEditWindow', {
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: '修改报名信息',
+    title: '作废报名信息',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -26,32 +26,32 @@ Ext.define('Aria.view.training.EnrollEditWindow', {
         }, {
             xtype: 'textfield',
             fieldLabel: '培训编号',
-            name:'courseId'
+            name:'courseId',
+            readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '培训员工编号',
-            name:'employeeId'
+            name:'employeeId',
+            readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: 'Arstatus',
             name:'auditStatus',
             value:'待审核',
-            hidden: true
+            hidden: true,
+            readOnly: true
         }]
     }],
+    buttons: ['->',{
+        xtype: 'button',
+        text: '提交',
+        handler: 'submitEditForm'
+    },{
+        xtype: 'button',
+        text: '关闭',
+        handler: function(btn) {
+            btn.up('window').close();
+        }
+    },'->']
    
-    dockedItems: {
-        dock: 'bottom',
-        items: [{
-            xtype: 'button',
-            text: '提交',
-            handler: 'submitEditForm'
-        },{
-            xtype: 'button',
-            text: '关闭',
-            handler: function(btn) {
-                btn.up('window').close();
-            }
-        }]
-    }
 });

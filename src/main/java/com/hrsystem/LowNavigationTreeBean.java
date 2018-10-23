@@ -32,12 +32,13 @@ import com.hrsystem.user.entity.Staff;
 //@Component
 public class LowNavigationTreeBean {
 	@Bean
-	InitializingBean NavigationTreeInitializer(final INavigationTreeService navigationTreeService) {
+	InitializingBean LowNavigationTreeInitializer(final INavigationTreeService navigationTreeService) {
 	     return new InitializingBean() {
 		         public void afterPropertiesSet() throws Exception {
 		        	 
 		        	 NavigationTree navigationTree2 = new NavigationTree();
 		        	 navigationTree2.setText("系统管理模块");
+		        	 navigationTree2.setStatus(3);
 		        	 navigationTree2.setIconCls("x-fa fa-address-card");
 		        	 navigationTree2.setSelectable(false);
 		        	 navigationTree2.setExpanded(false);
@@ -51,6 +52,7 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree11 = new NavigationTree();
 		        	 navigationTree11.setText("招聘管理模块");
+		        	 navigationTree11.setStatus(3);
 		        	 navigationTree11.setIconCls("x-fa fa-address-card");
 		        	 navigationTree11.setSelectable(false);
 		        	 navigationTree11.setExpanded(false);
@@ -64,6 +66,7 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree17 = new NavigationTree();
 		        	 navigationTree17.setText("培训管理模块");
+		        	 navigationTree17.setStatus(3);
 		        	 navigationTree17.setIconCls("x-fa fa-address-card");
 		        	 navigationTree17.setSelectable(false);
 		        	 navigationTree17.setExpanded(false);
@@ -99,6 +102,7 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree22 = new NavigationTree();
 		        	 navigationTree22.setText("考勤管理模块");
+		        	 navigationTree22.setStatus(3);
 		        	 navigationTree22.setIconCls("x-fa fa-address-card");
 		        	 navigationTree22.setSelectable(false);
 		        	 navigationTree22.setExpanded(false);
@@ -140,6 +144,7 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree28 = new NavigationTree();
 		        	 navigationTree28.setText("资金管理模块");
+		        	 navigationTree28.setStatus(3);
 		        	 navigationTree28.setIconCls("fa fa-cc-visa");
 		        	 navigationTree28.setSelectable(false);
 		        	 navigationTree28.setExpanded(false);
@@ -169,6 +174,7 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree34 = new NavigationTree();
 		        	 navigationTree34.setText("绩效管理模块");
+		        	 navigationTree34.setStatus(3);
 		        	 navigationTree34.setIconCls("fa fa-area-chart");
 		        	 navigationTree34.setSelectable(false);
 		        	 navigationTree34.setExpanded(false);
@@ -182,12 +188,14 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree38 = new NavigationTree();
 		        	 navigationTree38.setText("日程安排模块");
+		        	 navigationTree38.setStatus(3);
 		        	 navigationTree38.setIconCls("fa fa-table");
 		        	 navigationTree38.setLeaf(true);
 		        	 navigationTree38.setViewType("scheduling");
 		        	 
 		        	 NavigationTree navigationTree39 = new NavigationTree();
 		        	 navigationTree39.setText("工作汇报");
+		        	 navigationTree39.setStatus(3);
 		        	 navigationTree39.setIconCls("fa fa-cab");
 		        	 navigationTree39.setSelectable(false);
 		        	 navigationTree39.setExpanded(false);
@@ -201,7 +209,8 @@ public class LowNavigationTreeBean {
 				        	 
 				        	 
 		        	 NavigationTree navigationTree42 = new NavigationTree();
-		        	 navigationTree42.setText("Login");
+		        	 navigationTree42.setText("登出");
+		        	 navigationTree42.setStatus(3);
 		        	 navigationTree42.setIconCls("fa fa-rocket");
 		        	 navigationTree42.setLeaf(true);
 		        	 navigationTree42.setViewType("login");
@@ -209,6 +218,7 @@ public class LowNavigationTreeBean {
 		        	 
 		        	 NavigationTree navigationTree43 = new NavigationTree();
 		        	 navigationTree43.setText("数据分析");
+		        	 navigationTree43.setStatus(3);
 		        	 navigationTree43.setIconCls("fa fa-rocket");
 		        	 navigationTree43.setSelectable(false);
 		        	 navigationTree43.setExpanded(false);
@@ -259,11 +269,11 @@ public class LowNavigationTreeBean {
 				      navigationTreeService.save(navigationTree38);
 				      navigationTreeService.save(navigationTree39);
 				      navigationTreeService.save(navigationTree40);
-				      navigationTreeService.save(navigationTree42);
 				      navigationTreeService.save(navigationTree43);
 				      navigationTreeService.save(navigationTree44);
 				      navigationTreeService.save(navigationTree45);
 				      navigationTreeService.save(navigationTree46);
+				      navigationTreeService.save(navigationTree42);
 		         }
 	        };
 	}

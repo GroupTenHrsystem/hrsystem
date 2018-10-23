@@ -8,7 +8,7 @@ Ext.define('Aria.view.salaryStandard.SalaryStandardAddWindow', {
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: '添加绩效考核信息',
+    title: '添加薪资模板信息',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',

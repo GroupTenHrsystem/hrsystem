@@ -80,7 +80,7 @@
 			queryMode: 'local',
 			displayField: 'name',
 			valueField: 'value',
-			allowBlank: false
+            hidden: true
 		}]
     }],
 	buttons: ['->',{

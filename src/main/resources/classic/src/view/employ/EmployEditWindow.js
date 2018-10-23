@@ -1,6 +1,8 @@
 ﻿Ext.define('Aria.view.employ.EmployEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.employEditWindow',
+    x:50,
+   	y:100,
     height: 500,
     minHeight: 100,
     minWidth: 300,

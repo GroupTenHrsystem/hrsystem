@@ -20,8 +20,14 @@
             success: function(response, options) {
             	var json = Ext.util.JSON.decode(response.responseText);
 	            if(json.success){
-	            	me.redirectTo('report', true);
 	            	Ext.getCmp('loginUserName').setText(json.map.userName);
+                    Ext.getCmp('navigationTreeList').getStore().getRootNode().removeAll();
+                    Ext.getCmp('navigationTreeList').getStore().reload({
+                        callback:function(){ 
+                                me.redirectTo('report', true);
+                            } 
+                    });
+                    
 	            	//Ext.getCmp('loginUserImage').getEl().dom.src = json.map.loginUserImage;
 	            
 		        }else{
@@ -29,6 +35,7 @@
 		        }
             }
         });
+        
 	},
     onLoginAsButton: function() {
         this.redirectTo('login', true);

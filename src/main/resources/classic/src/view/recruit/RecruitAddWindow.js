@@ -1,6 +1,8 @@
 ﻿Ext.define('Aria.view.recruit.RecruitAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.recruitAddWindow',
+    x:-600,
+    y:100,
     height: 500,
     minHeight: 100,
     minWidth: 300,

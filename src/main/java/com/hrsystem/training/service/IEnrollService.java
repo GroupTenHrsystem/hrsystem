@@ -26,4 +26,5 @@ public interface IEnrollService {
 	 
 	public void deleteEnroll(Long id) ;
 	public Page<Enroll> findEnrollByArstatusPass(Specification<Enroll> spec, Pageable pageable);
+	public Page<Enroll> findEnrollByArstatusEmployeeId(Long courseId,Specification<Enroll> spec, Pageable pageable);
 }

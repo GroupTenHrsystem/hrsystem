@@ -5,7 +5,8 @@
     modal: true,
 
     layout: 'fit',
-
+    x: 50,  
+    y: 100,
     width: 500,
     height: 600,
 

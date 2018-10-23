@@ -98,6 +98,7 @@
                 {
                     xtype: 'treelist',
                     reference: 'navigationTreeList',
+                    id:'navigationTreeList',
                     itemId: 'navigationTreeList',
                     style:'background-color: #272727',
                     ui: 'nav',
@@ -115,8 +116,9 @@
                             url: '/navigationTree/findNoParent',
                             reader: {
                                 type: 'json'
-                            }
-                        }
+                            } 
+                        },
+                        autoLoad:false
 
                 }),
 

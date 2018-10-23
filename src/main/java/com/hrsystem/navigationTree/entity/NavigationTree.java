@@ -39,6 +39,7 @@ public class NavigationTree {
 		private Boolean expanded;
 		private Boolean selectable;
 		private Boolean visible = true;
+		private Integer status;		//0只有登录、1是财务、2是管理员、3是普通员工
 		@JsonIgnore
 		@ManyToOne(cascade = CascadeType.MERGE)
 		private NavigationTree superNode;
