@@ -163,7 +163,7 @@ Ext.define('Admin.view.reportAll.ReportAllPanel', {
 
     header: {
         itemPosition: 1, 
-        style:"background-color:#FF8000;",
+        style:"background-color:#293a5a;",
         items: [
             // {
             //     xtype: 'button',
