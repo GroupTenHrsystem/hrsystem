@@ -1,8 +1,10 @@
 package com.hrsystem.attendance.controller;
 
-import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.servlet.http.HttpSession;
 
@@ -10,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,11 +21,11 @@ import com.hrsystem.attendance.entity.Sign;
 import com.hrsystem.attendance.entity.DTO.SignDTO;
 import com.hrsystem.attendance.service.IAttendanceService;
 import com.hrsystem.attendance.service.ISignService;
+import com.hrsystem.attendance.util.JudgeState;
 import com.hrsystem.common.ExtAjaxResponse;
 import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.common.SessionUtil;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
-import com.hrsystem.user.entity.Staff;
 
 @RestController
 @RequestMapping("/Sign")
@@ -57,7 +58,9 @@ public class SignController {
 		@RequestMapping(value = "/signIn")
 		public ExtAjaxResponse  signIn(@RequestParam(name="starTime") String starTime,HttpSession session) 
 		{
-
+			
+		        
+		        
 			try {
 			List<Sign> signFind =signService.findStarTime(starTime);//签到
 			
@@ -68,29 +71,49 @@ public class SignController {
 			if(size1==0) {
 			if(size==0) {                                                   //没有加班签到，也没签到
 				Sign sign = new Sign();
-				sign.setStarTime(new Date());
+				Date date=new Date();
+				sign.setStarTime(date);
 				String name=SessionUtil.getUserName(session);
 				sign.setName(name);
+				JudgeState judgeState=new JudgeState();
+				if(judgeState.judgeDelate(date)) {                         //判断是否迟到
+					sign.setState("正常");					
+				}else {
+					sign.setState("迟到");
+					List<Attendance>atten =attendanceService.findAttendanceByName(name);
+					for (Attendance attendance : atten) {
+						attendance.setDelateCount(attendance.getDelateCount()+1);
+						attendanceService.insertAttendance(attendance);
+					}
+					
+				}
 				signService.insertSign(sign);
 			}else {                                                          //没加班签到，有签到
-				for (Sign sign : signFind) {
-					sign.setStarTime(new Date());
-					signService.insertSign(sign);
-				}
+				return new ExtAjaxResponse(false,"已签到");
 			}
 			}else {
 				if(size==0) {                                                  //有加班签到，没签到
 					for (Sign sign : signFind1) {
-					sign.setStarTime(new Date());
+						Date date =new  Date();
+					sign.setStarTime(date);
 					String name=SessionUtil.getUserName(session);
 					sign.setName(name);
+					JudgeState judgeState=new JudgeState();
+					if(judgeState.judgeDelate(date)) {                         //判断是否迟到
+						sign.setState("正常");					
+					}else {
+						sign.setState("迟到");
+						List<Attendance>atten =attendanceService.findAttendanceByName(name);
+						for (Attendance attendance : atten) {
+							attendance.setDelateCount(attendance.getDelateCount()+1);
+							attendanceService.insertAttendance(attendance);
+						}
+						
+					}
 					signService.insertSign(sign);
 					}
 				}else {                                                        //有加班签到，有签到
-					for (Sign sign : signFind) {
-						sign.setStarTime(new Date());
-						signService.insertSign(sign);
-					}
+					return new ExtAjaxResponse(false,"已签到");
 				}
 			}
 			return new ExtAjaxResponse(true,"签到成功！");
@@ -105,17 +128,49 @@ public class SignController {
 
 			try {
 			List<Sign> signFind =signService.findStarTime(endTime);
+			List<Sign> signFind1 =signService.findEndTime(endTime);
 			Integer size = signFind.size();
+			Integer size1 = signFind1.size();
 			if(size==0) {
 				return new ExtAjaxResponse(true,"没签到，签退失败！");
 
 			}else {
+				if(size1==0) {
 				for (Sign sign : signFind) {
-					sign.setEndTime(new Date());
+					Date date =new Date();
+					sign.setEndTime(date);
+					JudgeState judgeState=new JudgeState();
+					if(judgeState.judgeLeaveEarly(date)) {                         //判断是否早退
+						sign.setState("正常");					
+					}else {
+						sign.setState("早退");
+						String name=SessionUtil.getUserName(session);
+						List<Attendance>atten =attendanceService.findAttendanceByName(name);
+						for (Attendance attendance : atten) {
+							attendance.setLeaveEarlyCount(attendance.getLeaveEarlyCount()+1);
+							attendanceService.insertAttendance(attendance);
+						}		
+					}
+					String name=SessionUtil.getUserName(session);
+					List<Sign>sign1 =signService.findSignByName(name);
+					for (Sign sign2 : sign1) {
+						long totleTime =judgeState.judgeTotalTime(sign2.getStarTime(),sign2.getEndTime());
+						List<Attendance>atten =attendanceService.findAttendanceByName(name);
+						for (Attendance attendance : atten) {
+							attendance.setTotalTime(attendance.getTotalTime()+totleTime);
+							attendanceService.insertAttendance(attendance);
+						}
+						
+					}
 					signService.insertSign(sign);
 				}
+				
 				return new ExtAjaxResponse(true,"签退成功！");
+			}else {
+				return new ExtAjaxResponse(false,"已签退");
 			}
+				}
+			
 						} catch (Exception e) {
 				return new ExtAjaxResponse(true,"失败！");
 			}
@@ -140,10 +195,7 @@ public class SignController {
 				signService.insertSign(sign);
 
 			}else {                                                        //没签到，有加班签到
-				for (Sign sign : signFind) {
-					sign.setExtraStarTime(new Date());
-					signService.insertSign(sign);
-				}
+				return new ExtAjaxResponse(false,"已签到");
 			}
 			}else {
 				if(size==0) {                                               //有签到，没加班签到
@@ -155,10 +207,7 @@ public class SignController {
 					signService.insertSign(sign);
 					}
 				}else {                                                      //有签到，有加班签到
-					for (Sign sign : signFind) {
-						sign.setExtraStarTime(new Date());
-						signService.insertSign(sign);
-					}
+					return new ExtAjaxResponse(false,"已签到");
 				}
 			}
 			return new ExtAjaxResponse(true,"加班签到成功！");
@@ -173,19 +222,53 @@ public class SignController {
 
 			try {
 			List<Sign> signFind =signService.findExtraStarTime(extraEndTime);
+			List<Sign> signFind1 =signService.findExtraEndTime(extraEndTime);
 			Integer size = signFind.size();
+			Integer size1 = signFind1.size();
 			if(size==0) {
 				return new ExtAjaxResponse(true,"没签到，签退失败！");
 
 			}else {
+				if(size1==0) {
 				for (Sign sign : signFind) {
 					sign.setExtraEndTime(new Date());
 					signService.insertSign(sign);
 				}
+				JudgeState judgeState =new JudgeState();
+				String name=SessionUtil.getUserName(session);
+				List<Sign>sign1 =signService.findSignByName(name);
+				for (Sign sign2 : sign1) {
+					long totleTime =judgeState.judgeTotalTime(sign2.getExtraStarTime(),sign2.getExtraEndTime());
+					List<Attendance>atten =attendanceService.findAttendanceByName(name);
+					for (Attendance attendance : atten) {
+						attendance.setExtraTime(attendance.getExtraTime()+totleTime);
+						attendanceService.insertAttendance(attendance);
+					}
+					
+				}
 				return new ExtAjaxResponse(true,"签退成功！");
+			}else {
+				return new ExtAjaxResponse(false,"已签退！");
 			}
+				}
 						} catch (Exception e) {
 				return new ExtAjaxResponse(true,"失败！");
 			}
 		}
+		
+		
+		
+		
+		
+		
+//		
+//		@RequestMapping(value = "/test")
+//		public void  test() 
+//		{
+//			JudgeState judgeState=new JudgeState();
+//			
+//			judgeState.judgeTotalTime();
+//
+//			
+//		}
 }

@@ -17,7 +17,9 @@ Ext.define('Admin.model.user.UserModel', {
 	    {type: 'date',name: 'birthday', dateFormat:'Y/m/d'},
 	    {type: 'string',name: 'status'},
 	    {type: 'date',name: 'employmentDate', dateFormat:'Y/m/d'},
-	    {type: 'date',name: 'leaveDate', dateFormat:'Y/m/d'}
+	    {type: 'date',name: 'leaveDate', dateFormat:'Y/m/d'},
+	    {type: 'int',name: 'roleId'},
+	    {type: 'string',name: 'roleName'}
 	],
 	proxy: {
 		type: 'rest',

@@ -1,6 +1,8 @@
 Ext.define('Aria.view.performanceTemplet.PerformanceTempletEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.performanceTempletEditWindow',
+    x: 50,  
+    y: 100,
     height: 400,
     minHeight: 100,
     minWidth: 300,

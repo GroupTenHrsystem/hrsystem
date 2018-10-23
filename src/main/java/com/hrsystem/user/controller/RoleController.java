@@ -30,7 +30,7 @@ import com.hrsystem.user.entity.Role;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.entity.DTO.RoleDTO;
 import com.hrsystem.user.entity.DTO.RoleQueryDTO;
-import com.hrsystem.user.entity.DTO.StaffDTO;
+import com.hrsystem.user.entity.DTO.StaffQueryDTO;
 import com.hrsystem.user.service.IDepartmentService;
 import com.hrsystem.user.service.IRoleService;
 

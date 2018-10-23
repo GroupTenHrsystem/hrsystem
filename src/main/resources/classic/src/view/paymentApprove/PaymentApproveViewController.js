@@ -75,7 +75,7 @@
                     Ext.Msg.alert('操作成功', json.msg, function() {
                     	form.up('window').close();
                         //grid.getStore().reload();
-                        Ext.data.StoreManager.lookup('leaveApproveStore').load();
+                        Ext.data.StoreManager.lookup('paymentApproveStore').load();
                     });
                 } else {
                     Ext.Msg.alert('操作失败', json.msg);

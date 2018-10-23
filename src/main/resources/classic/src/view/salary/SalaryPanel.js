@@ -193,7 +193,7 @@ Ext.define('Admin.view.salary.SalaryPanel', {
 
     header: {
         itemPosition: 1, 
-        style:"background-color:#FF8000;",
+        style:"background-color:#293a5a;",
         items: [
             {
                 xtype: 'button',

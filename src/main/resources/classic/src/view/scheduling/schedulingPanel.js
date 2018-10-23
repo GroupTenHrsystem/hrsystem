@@ -15,7 +15,7 @@ Ext.define('Admin.view.scheduling.schedulingPanel', {
     iconCls: 'fa fa-calendar',
     header: {
         itemPosition: 1, 
-        style:"background-color:#FF8000;",
+        style:"background-color:#293a5a;",
         items: [
             {
                 xtype: 'button',

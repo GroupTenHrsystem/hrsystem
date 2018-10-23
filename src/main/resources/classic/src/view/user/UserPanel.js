@@ -33,6 +33,8 @@ Ext.define('Admin.view.user.UserPanel', {
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'password',text: 'Password',flex: 1,hidden:true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'address',text: 'Address',flex: 1,hidden:true},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'nativePlace',text: 'NativePlace',flex: 1,hidden:true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'roleId',text: 'RoleId',flex: 1,hidden:true},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'roleName',text: 'RoleName',flex: 1},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'birthday',text: 'Birthday',formatter: 'date("Y/m/d")',hidden:true},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'employmentDate',text: 'Employment Date',formatter: 'date("Y/m/d")'},
                 {xtype: 'datecolumn',cls: 'content-column',width: 200,dataIndex: 'leaveDate',text: 'Leave Date',formatter: 'date("Y/m/d")'},
