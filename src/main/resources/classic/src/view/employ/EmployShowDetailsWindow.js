@@ -1,6 +1,8 @@
 ﻿Ext.define('Aria.view.employ.EmployShowDetailsWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.employShowDetailsWindow',
+    x:50,
+    y:100,
     height: 400,
     minHeight: 100,
     minWidth: 300,
@@ -26,28 +28,35 @@
         }, {
             xtype: 'textfield',
             fieldLabel: '姓名',
-            name:'name'
+            name:'name',
+            readOnly: true
 		}, {
 		    xtype: 'textfield',
 		    fieldLabel: '一面面试官',
-		    name:'firstarr'
+		    name:'firstarr',
+		    readOnly: true
 		}, {
 		    xtype: 'textfield',
 		    fieldLabel: '一面评价',
-		    name:'firstBackReason'
+		    name:'firstBackReason',
+		    readOnly: true
 		}, {
 		    xtype: 'textfield',
 		    fieldLabel: '二面面试官',
-		    name:'lastarr'
+		    name:'lastarr',
+		    readOnly: true
 		}, {
 		    xtype: 'textfield',
 		    fieldLabel: '二面评价',
-		    name:'lastBackReason'
+		    name:'lastBackReason',
+		    readOnly: true
 		}, {
 		    xtype: 'datefield',
             fieldLabel: '面试审批流程完成时间',
             name:'completeTime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d H:i:s',
+            hidden: true,
+            readOnly: true
         }]
     }]
 });

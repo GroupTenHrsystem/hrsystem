@@ -117,6 +117,7 @@ public class ResumeController {
 	public ExtAjaxResponse saveIntoUser(@RequestBody Resume resume) 
 	{
 		try {
+			System.out.println("111111");
 			resumeService.saveIntoUser(resume);
 			return new ExtAjaxResponse(true,"保存成功！");
 		} catch (Exception e) {
@@ -138,8 +139,8 @@ public class ResumeController {
     		String userId = SessionUtil.getUserName(session);
     		//System.out.println(resumeId);
     		Map<String, Object> variables = new HashMap<String, Object>();
-    		variables.put("deptLeader", "financeManager");
-    		variables.put("hrClerk", "hrManager");
+    		variables.put("deptLeader", "financeClerk");
+    		variables.put("hrClerk", "financeManager");
     		variables.put("applyUserId", userId);
     		resumeService.startWorkflow(userId,resumeId, variables);
     		return new ExtAjaxResponse(true,"操作成功!");
