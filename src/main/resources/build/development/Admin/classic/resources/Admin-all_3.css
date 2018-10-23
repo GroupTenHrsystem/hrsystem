@@ -146,18 +146,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-green-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-green-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-green-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-green-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-green-small-cell > .x-grid-cell-inner {
@@ -434,9 +434,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-soft-green-large {
     background-image: none;
     background-color: #9cc96b;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-green-large .x-btn-arrow-el {
@@ -454,7 +454,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-green-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-green-large {
@@ -464,9 +464,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-green-large {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-green-large,
@@ -478,9 +478,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-green-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-green-large {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-green-large {
@@ -704,18 +704,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-green-large:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-green-large:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-green-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-green-large:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-green-large-cell > .x-grid-cell-inner {
@@ -992,9 +992,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-soft-green-toolbar-small {
     background-image: none;
     background-color: #9cc96b;
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-green-toolbar-small .x-btn-arrow-el {
@@ -1012,7 +1012,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-green-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #ff8000;
+    border: 1px solid #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-green-toolbar-small {
@@ -1022,9 +1022,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-green-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-green-toolbar-small,
@@ -1036,9 +1036,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-green-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-green-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-green-toolbar-small {
@@ -1262,18 +1262,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-green-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-green-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-green-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-green-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-green-toolbar-small-cell > .x-grid-cell-inner {
@@ -1550,9 +1550,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-soft-red-small {
     background-image: none;
     background-color: #e44959;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-red-small .x-btn-arrow-el {
@@ -1570,7 +1570,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-red-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-red-small {
@@ -1580,9 +1580,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-red-small {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-red-small,
@@ -1594,9 +1594,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-red-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-red-small {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-red-small {
@@ -1820,18 +1820,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-red-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-red-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-red-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-red-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-red-small-cell > .x-grid-cell-inner {
@@ -2108,9 +2108,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-soft-red-toolbar-small {
     background-image: none;
     background-color: #e44959;
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-red-toolbar-small .x-btn-arrow-el {
@@ -2128,7 +2128,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-red-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #ff8000;
+    border: 1px solid #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-red-toolbar-small {
@@ -2138,9 +2138,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-red-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-red-toolbar-small,
@@ -2152,9 +2152,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-red-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-red-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-red-toolbar-small {
@@ -2378,18 +2378,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-red-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-red-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-red-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-red-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-red-toolbar-small-cell > .x-grid-cell-inner {
@@ -2666,9 +2666,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-soft-purple-small {
     background-image: none;
     background-color: #925e8b;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-purple-small .x-btn-arrow-el {
@@ -2686,7 +2686,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-purple-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-purple-small {
@@ -2696,9 +2696,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-purple-small {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-purple-small,
@@ -2710,9 +2710,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-purple-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-purple-small {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-purple-small {
@@ -2936,18 +2936,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-purple-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-purple-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-purple-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-purple-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-purple-small-cell > .x-grid-cell-inner {
@@ -3224,9 +3224,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-soft-purple-toolbar-small {
     background-image: none;
     background-color: #925e8b;
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-soft-purple-toolbar-small .x-btn-arrow-el {
@@ -3244,7 +3244,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-soft-purple-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #ff8000;
+    border: 1px solid #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-soft-purple-toolbar-small {
@@ -3254,9 +3254,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-soft-purple-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-soft-purple-toolbar-small,
@@ -3268,9 +3268,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-soft-purple-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-soft-purple-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-soft-purple-toolbar-small {
@@ -3494,18 +3494,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-soft-purple-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-soft-purple-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-soft-purple-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-soft-purple-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-soft-purple-toolbar-small-cell > .x-grid-cell-inner {
@@ -3782,9 +3782,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-gray-small {
     background-image: none;
     background-color: #949495;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-gray-small .x-btn-arrow-el {
@@ -3802,7 +3802,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-gray-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-gray-small {
@@ -3812,9 +3812,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-gray-small {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-gray-small,
@@ -3826,9 +3826,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-gray-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-gray-small {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-gray-small {
@@ -4052,18 +4052,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-gray-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-gray-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-gray-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-gray-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-gray-small-cell > .x-grid-cell-inner {
@@ -4340,9 +4340,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-gray-large {
     background-image: none;
     background-color: #949495;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-gray-large .x-btn-arrow-el {
@@ -4360,7 +4360,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-gray-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-gray-large {
@@ -4370,9 +4370,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-gray-large {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-gray-large,
@@ -4384,9 +4384,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-gray-large,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-gray-large {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-gray-large {
@@ -4610,18 +4610,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-gray-large:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-gray-large:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-gray-large:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-gray-large:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-gray-large-cell > .x-grid-cell-inner {
@@ -4898,9 +4898,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-gray-toolbar-small {
     background-image: none;
     background-color: #949495;
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-gray-toolbar-small .x-btn-arrow-el {
@@ -4918,7 +4918,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-gray-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #ff8000;
+    border: 1px solid #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-gray-toolbar-small {
@@ -4928,9 +4928,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-gray-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-gray-toolbar-small,
@@ -4942,9 +4942,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-gray-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-gray-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-gray-toolbar-small {
@@ -5168,18 +5168,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-gray-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-gray-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-gray-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-gray-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-gray-toolbar-small-cell > .x-grid-cell-inner {
@@ -5456,9 +5456,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-green-small {
     background-image: none;
     background-color: #16b603;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-green-small .x-btn-arrow-el {
@@ -5476,7 +5476,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-green-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-green-small {
@@ -5486,9 +5486,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-green-small {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-green-small,
@@ -5500,9 +5500,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-green-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-green-small {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-green-small {
@@ -5726,18 +5726,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-green-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-green-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-green-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-green-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-green-small-cell > .x-grid-cell-inner {
@@ -6014,9 +6014,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-green-toolbar-small {
     background-image: none;
     background-color: #16b603;
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-green-toolbar-small .x-btn-arrow-el {
@@ -6034,7 +6034,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-green-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #ff8000;
+    border: 1px solid #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-green-toolbar-small {
@@ -6044,9 +6044,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-green-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-green-toolbar-small,
@@ -6058,9 +6058,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-green-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-green-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-green-toolbar-small {
@@ -6284,18 +6284,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-green-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-green-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-green-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-green-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-green-toolbar-small-cell > .x-grid-cell-inner {
@@ -6572,9 +6572,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-blue-small {
     background-image: none;
     background-color: #167abc;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-blue-small .x-btn-arrow-el {
@@ -6592,7 +6592,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-blue-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-blue-small {
@@ -6602,9 +6602,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-blue-small {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-blue-small,
@@ -6616,9 +6616,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-blue-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-blue-small {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-blue-small {
@@ -6842,18 +6842,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-blue-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-blue-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-blue-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-blue-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-blue-small-cell > .x-grid-cell-inner {
@@ -7130,9 +7130,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-blue-toolbar-small {
     background-image: none;
     background-color: #167abc;
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-blue-toolbar-small .x-btn-arrow-el {
@@ -7150,7 +7150,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-blue-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #ff8000;
+    border: 1px solid #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-blue-toolbar-small {
@@ -7160,9 +7160,9 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-blue-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-blue-toolbar-small,
@@ -7174,9 +7174,9 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-blue-toolbar-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-blue-toolbar-small {
-    -webkit-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    -moz-box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
-    box-shadow: #ff8000 0 1px 0px 0 inset, #ff8000 0 -1px 0px 0 inset, #ff8000 -1px 0 0px 0 inset, #ff8000 1px 0 0px 0 inset;
+    -webkit-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    -moz-box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
+    box-shadow: #293a5a 0 1px 0px 0 inset, #293a5a 0 -1px 0px 0 inset, #293a5a -1px 0 0px 0 inset, #293a5a 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-blue-toolbar-small {
@@ -7400,18 +7400,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-blue-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-blue-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-blue-toolbar-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-blue-toolbar-small:after {
     border-width: 1px;
-    border-color: #ff8000;
+    border-color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-blue-toolbar-small-cell > .x-grid-cell-inner {
@@ -7512,7 +7512,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2463 */
 .x-btn-header-small {
-    border-color: #ed7700;
+    border-color: #263654;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2470 */
 .x-btn-button-header-small {
@@ -7671,9 +7671,9 @@
 .x-keyboard-mode .x-btn-focus.x-btn-header-small {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    -moz-box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
-    box-shadow: #f3dac0 0 1px 0px 0 inset, #f3dac0 0 -1px 0px 0 inset, #f3dac0 -1px 0 0px 0 inset, #f3dac0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
+    box-shadow: #c8ccd2 0 1px 0px 0 inset, #c8ccd2 0 -1px 0px 0 inset, #c8ccd2 -1px 0 0px 0 inset, #c8ccd2 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2793 */
 .x-btn-header-small .x-btn-arrow-el {
@@ -7691,33 +7691,33 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2810 */
 .x-keyboard-mode .x-btn-header-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #f3dac0;
+    border: 1px solid #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2817 */
 .x-btn-over.x-btn-header-small {
-    border-color: #da6e00;
+    border-color: #23324d;
     background-image: none;
     background-color: transparent;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2845 */
 .x-keyboard-mode .x-btn-focus.x-btn-over.x-btn-header-small {
-    -webkit-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
-    box-shadow: #efd8c0 0 1px 0px 0 inset, #efd8c0 0 -1px 0px 0 inset, #efd8c0 -1px 0 0px 0 inset, #efd8c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    -moz-box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
+    box-shadow: #c8cbd1 0 1px 0px 0 inset, #c8cbd1 0 -1px 0px 0 inset, #c8cbd1 -1px 0 0px 0 inset, #c8cbd1 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2874 */
 .x-btn.x-btn-menu-active.x-btn-header-small,
 .x-btn.x-btn-pressed.x-btn-header-small {
-    border-color: #b25900;
+    border-color: #1d283f;
     background-image: none;
     background-color: transparent;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2904 */
 .x-keyboard-mode .x-btn-focus.x-btn-menu-active.x-btn-header-small,
 .x-keyboard-mode .x-btn-focus.x-btn-pressed.x-btn-header-small {
-    -webkit-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    -moz-box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
-    box-shadow: #e6d3c0 0 1px 0px 0 inset, #e6d3c0 0 -1px 0px 0 inset, #e6d3c0 -1px 0 0px 0 inset, #e6d3c0 1px 0 0px 0 inset;
+    -webkit-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    -moz-box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
+    box-shadow: #c6c9ce 0 1px 0px 0 inset, #c6c9ce 0 -1px 0px 0 inset, #c6c9ce -1px 0 0px 0 inset, #c6c9ce 1px 0 0px 0 inset;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:2933 */
 .x-btn.x-btn-disabled.x-btn-header-small {
@@ -7941,18 +7941,18 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3233 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-header-small:after {
     border-width: 1px;
-    border-color: #f3dac0;
+    border-color: #c8ccd2;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3249 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-header-small:after {
     border-width: 1px;
-    border-color: #efd8c0;
+    border-color: #c8cbd1;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3267 */
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-header-small:after,
 .x-keyboard-mode .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-header-small:after {
     border-width: 1px;
-    border-color: #e6d3c0;
+    border-color: #c6c9ce;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
 .x-button-header-small-cell > .x-grid-cell-inner {
@@ -7986,7 +7986,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/authentication/Dialog.scss:5 */
 .auth-dialog .auth-profile-wrap {
-    background: #ff8000;
+    background: #293a5a;
     color: #fff;
     line-height: 24px;
 }
@@ -8023,7 +8023,7 @@
 .auth-dialog .register-page-back-button .x-frame-mc .x-btn-inner-default-small {
     padding: 0;
     height: 20px;
-    color: #ff8000;
+    color: #293a5a;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/authentication/Dialog.scss:39 */
 .auth-dialog .register-page-back-button .x-btn-inner-default-small:hover,
@@ -8094,7 +8094,7 @@
 /* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/authentication/Dialog.scss:95 */
 .auth-dialog .link-forgot-password {
     line-height: 32px;
-    color: #ff8000;
+    color: #293a5a;
     text-decoration: none;
     margin-left: 5px;
 }
@@ -8139,7 +8139,7 @@
     content: " ";
     width: 100%;
     height: 1px;
-    background-color: #ff8000;
+    background-color: #293a5a;
     position: absolute;
     left: 0;
     top: 9px;
@@ -8490,7 +8490,7 @@
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/report/Details.scss:72 */
 .x-panel-header-new {
-    background-color: #ff8000;
+    background-color: #293a5a;
     border-color: #000;
 }
 /* D:/workspace-sts/hrsystem/src/main/resources/classic/src/view/report/Inbox.scss:5 */
