@@ -116,8 +116,9 @@
                             url: '/navigationTree/findNoParent',
                             reader: {
                                 type: 'json'
-                            }
-                        }
+                            } 
+                        },
+                        autoLoad:false
 
                 }),
 

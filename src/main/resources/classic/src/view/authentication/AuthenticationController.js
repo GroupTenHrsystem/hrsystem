@@ -21,6 +21,7 @@
             	var json = Ext.util.JSON.decode(response.responseText);
 	            if(json.success){
 	            	Ext.getCmp('loginUserName').setText(json.map.userName);
+                    Ext.getCmp('navigationTreeList').getStore().getRootNode().removeAll();
                     Ext.getCmp('navigationTreeList').getStore().reload({
                         callback:function(){ 
                                 me.redirectTo('report', true);
