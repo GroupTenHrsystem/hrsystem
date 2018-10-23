@@ -19,6 +19,6 @@ import com.hrsystem.navigationTree.entity.NavigationTree;
 */
 @Repository
 public interface NavigationTreeRepository extends PagingAndSortingRepository<NavigationTree, Long>,JpaSpecificationExecutor<NavigationTree>{
-	@Query(value="SELECT * FROM hrsystem.t_navigation_tree WHERE super_node_id is NULL",nativeQuery=true)
-	public List<NavigationTree> findNoParent();
+	@Query(value="SELECT * FROM hrsystem.t_navigation_tree WHERE super_node_id is NULL AND  status = ?1",nativeQuery=true)
+	public List<NavigationTree> findNoParent(Integer status);
 }

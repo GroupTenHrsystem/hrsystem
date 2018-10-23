@@ -22,9 +22,9 @@ public class NavigationTreeService implements INavigationTreeService{
 	private NavigationTreeRepository navigationTreeRepository;
 
 	@Override
-	public List<NavigationTree> findNoParent() {
+	public List<NavigationTree> findNoParent(Integer status) {
 		// TODO Auto-generated method stub
-		return navigationTreeRepository.findNoParent();
+		return navigationTreeRepository.findNoParent(status);
 	}
 
 	@Override

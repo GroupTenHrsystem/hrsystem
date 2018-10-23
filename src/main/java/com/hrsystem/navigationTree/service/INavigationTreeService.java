@@ -15,7 +15,7 @@ import com.hrsystem.navigationTree.entity.NavigationTree;
 */
 public interface INavigationTreeService {
 	
-	public List<NavigationTree> findNoParent();
+	public List<NavigationTree> findNoParent(Integer status);
 	
 	public void save(NavigationTree navigationTree);
 }

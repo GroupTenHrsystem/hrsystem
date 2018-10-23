@@ -98,6 +98,7 @@
                 {
                     xtype: 'treelist',
                     reference: 'navigationTreeList',
+                    id:'navigationTreeList',
                     itemId: 'navigationTreeList',
                     style:'background-color: #272727',
                     ui: 'nav',
