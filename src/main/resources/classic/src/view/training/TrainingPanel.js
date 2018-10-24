@@ -34,11 +34,6 @@ Ext.define('Admin.view.training.TrainingPanel', {
                     items: [
                     	{xtype: 'button', iconCls: 'x-fa fa-close' ,handler: 'openEditWindow'}
                     ]
-                },
-                {xtype: 'actioncolumn',cls: 'content-column', width: 120,text: '清除通过记录',tooltip: '清除记录 ',
-                    items: [
-                    	{xtype: 'button', iconCls: 'x-fa fa-close' ,handler: 'deleteOneRow'}
-                    ]
                 }
             ],
             tbar: [{
