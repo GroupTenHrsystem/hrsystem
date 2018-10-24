@@ -84,7 +84,7 @@
 		        }
             }
 		});
-		Ext.data.StoreManager.lookup('employGridStroe').load();
+		//Ext.data.StoreManager.lookup('employGridStroe').load();
 		btn.up('window').close();
 	}
 

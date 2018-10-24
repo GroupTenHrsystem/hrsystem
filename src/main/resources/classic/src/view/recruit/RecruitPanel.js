@@ -20,7 +20,7 @@
             selModel:{type:'checkboxmodel',checkOnly:true},
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'key',hidden:true},
-                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'departmentname',text: '部门名称',flex: 1},
+                {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'departmentName',text: '部门名称',flex: 1},
                 {xtype: 'gridcolumn',cls: 'content-column',dataIndex: 'position',text: '职位'},
                 {xtype: 'gridcolumn',width: 100,dataIndex: 'planNum',text: '计划人数'},
                 {xtype: 'gridcolumn',width: 100,dataIndex: 'salary',text: '薪资'},
@@ -34,7 +34,6 @@
                     items: [
                         {xtype: 'button', iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                         {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
-                        {xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'openDisableButton'},
                 		{xtype: 'button',iconCls: 'x-fa fa-search-plus',handler: 'openBiggerWindow'}
                     ]
                 }
@@ -46,13 +45,13 @@
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '部门名称', value: 'departmentname' },
+				      	{ name: '部门名称', value: 'departmentName' },
 						{ name: '职位', value: 'position' }
 				    ]
 				}),
 	            displayField: 'name',//展示的字段
 	            valueField:'value',//获取值的字段
-	            value:'departmentname',//设置默认值
+	            value:'departmentName',//设置默认值
 	            editable: false,//不可编辑
 	            queryMode: 'local',
 	            triggerAction: 'all',
@@ -70,7 +69,7 @@
 		        text: '新增',
 		        tooltip: 'Add a new row',
 		        iconCls: 'fa fa-plus',
-				handler: 'openAddWindow'	
+				handler: 'openAWindow'	
 		    },'-',{
 		        text: 'Removes',
 		        tooltip: 'Remove the selected item',

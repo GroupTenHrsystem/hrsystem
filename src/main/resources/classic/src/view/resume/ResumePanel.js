@@ -20,7 +20,7 @@
             selModel:{type:'checkboxmodel',checkOnly:true},
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'key',hidden:true},
-                {header: '简历状态',dataIndex: 'processStatus',width: 60,flex: 1,sortable: true,
+                {header: '简历状态',dataIndex: 'processStatus',flex: 1,sortable: true,
                 	renderer: function(val) {
                             if (val =='NEW') {
 		            return '<span style="color:green;">新建</span>';

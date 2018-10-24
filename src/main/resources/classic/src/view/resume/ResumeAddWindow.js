@@ -24,8 +24,8 @@
             	items:[
 					{items:[
 					{xtype: 'textfield',fieldLabel:'id',name:'id',hidden:true,readOnly:true},
-					{xtype: 'textfield',fieldLabel:'姓名',name:'name'},
-					{xtype: 'combobox',
+					{xtype: 'textfield',fieldLabel:'姓名',allowBlank:false,name:'name'},
+					{xtype: 'combobox',allowBlank:false,
 						fieldLabel:'性别',
 						name:'sex',
 						displayField:'sex',
@@ -38,13 +38,13 @@
 			    			]	
 				    	})
 					},
-		    		{xtype: 'textfield',fieldLabel:'毕业学校',name:'graduateSchool'},
-		    		{xtype: 'textfield',fieldLabel:'政治面貌',name:'politicsStatus'},
+		    		{xtype: 'textfield',fieldLabel:'毕业学校',allowBlank:false,name:'graduateSchool'},
+		    		{xtype: 'textfield',fieldLabel:'政治面貌',allowBlank:false,name:'politicsStatus'},
 		    		{xtype: 'textfield',fieldLabel:'简历状态',name:'processStatus',value:'NEW',hidden:true,readOnly:true}
 				]},
 					{items:[
-					{xtype: 'datefield',fieldLabel:'出生日期',name:'birthday',format: 'Y/m/d'},
-					{xtype: 'textfield',fieldLabel:'籍贯',name:'nativePlace'},
+					{xtype: 'datefield',fieldLabel:'出生日期',allowBlank:false,name:'birthday',format: 'Y/m/d'},
+					{xtype: 'textfield',fieldLabel:'籍贯',allowBlank:false,name:'nativePlace'},
 		    		{	xtype: 'combobox',
 		    			fieldLabel:'专业',
 		    			name:'major',
@@ -80,6 +80,7 @@
            	items:[{
            		xtype: 'textfield',
            		fieldLabel: '联系方式',
+           		allowBlank:false,
 				name:'phone'
 	        }]
 		},{
@@ -90,7 +91,8 @@
            	items:[{
            		xtype: 'textfield',
 				fieldLabel: '求职意向',
-				name:'employBranch'
+				name:'employBranch',
+				allowBlank:false
 	        }]
 		},{
 			xtype: 'container',
@@ -100,7 +102,8 @@
            	items:[{
            		xtype: 'textarea',
 				fieldLabel: '工作经历',
-				name:'experience'
+				name:'experience',
+				allowBlank:false
 	        }]
 		},{
 			xtype: 'container',

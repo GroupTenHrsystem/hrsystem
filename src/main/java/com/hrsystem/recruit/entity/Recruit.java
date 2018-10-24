@@ -24,7 +24,7 @@ public class Recruit {
 	private Long id;
 	
 	//@Enumerated(EnumType.STRING)
-	private String departmentname;
+	private String departmentName;
 	
 	private String position;
 	

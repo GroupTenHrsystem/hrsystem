@@ -343,7 +343,7 @@ public class InitializeData {
 		
 		//招聘信息
 		Recruit recruit = new Recruit();
-		recruit.setDepartmentname("人事部");
+		recruit.setDepartmentName("人事部");
 		recruit.setPosition("经理");
 		recruit.setPlanNum(3L);
 		recruit.setStartTime(new Date());

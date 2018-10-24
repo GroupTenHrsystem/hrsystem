@@ -1,7 +1,9 @@
 ﻿Ext.define('Aria.view.recruit.RecruitEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.recruitEditWindow',
-    height: 500,
+    x:50,
+    y:100,
+    height: 600,
     minHeight: 100,
     minWidth: 300,
     width: 500,
@@ -26,7 +28,7 @@
         }, {
             xtype: 'textfield',
             fieldLabel: '部门名称',
-            name:'departmentname'
+            name:'departmentName'
         }, {
             xtype: 'textfield',
             fieldLabel: '职位',

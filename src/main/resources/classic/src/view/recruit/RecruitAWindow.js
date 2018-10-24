@@ -1,12 +1,14 @@
-﻿Ext.define('Aria.view.recruit.RecruitAddWindow', {
+﻿Ext.define('Aria.view.recruit.RecruitAWindow', {
     extend: 'Ext.window.Window',
-    alias: 'widget.recruitAddWindow',
+    alias: 'widget.recruitAWindow',
+    x:50,
+    y:100,
     height: 650,
     minHeight: 100,
     minWidth: 300,
     width: 500,
     scrollable: true,
-    title: '招聘发布5656',
+    title: '招聘发布',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -24,11 +26,10 @@
             hidden: true,
             readOnly: true
         }, {
-        	//xtype: 'textfield',
-		    //fieldLabel: '职位',
-		    //name:'departmentName'
-            xtype: 'treepicker',
+        	xtype: 'combobox',
+        	//	xtype: 'treepicker',
             allowBlank:false, 
+            name:'departmentName',
             displayField: 'departmentName',
             autoScroll:true,
             scrollable: true,
@@ -53,14 +54,51 @@
                         }
                     }
                 })
-    	}, {
+            /*xtype: 'combo',
+            allowBlank:false, 
+            width:400,
+            store: {
+                type: 'array',
+                fields: [ 'id' ,'departmentName'],
+                autoLoad: true, //启动自动加载
+                proxy: {
+                            type: 'rest',
+                            url: '/department/department',
+                            reader:{
+                                type:'json',
+                                rootProperty:'content',//对应后台返回的结果集名称
+                                totalProperty: 'totalElements'//分页需要知道总记录数
+                            },
+                            writer: {
+                                type: 'json',
+                            },
+                            simpleSortMode: true    //简单排序模式
+                    },
+                autoSync: true
+            },
+            mode:'local' ,
+            editable: false,
+            valueField:'departmentName',
+            displayField: 'departmentName', //显示的field
+            fieldLabel: '部门名称',
+            anchor: '0',
+            queryMode: 'local',
+            selectOnTab: false,
+            name: 'departmentName',
+            emptyText:'请选择...',
+            onReplicate: function () {
+                this.getStore().clearFilter();
+            }*/
+        }, {
 		    xtype: 'textfield',
 		    fieldLabel: '职位',
-		    name:'position'
+		    name:'position',
+		    allowBlank:false
     	}, {
 		    xtype: 'textfield',
 		    fieldLabel: '计划人数',
-		    name:'planNum'
+		    name:'planNum',
+		   	allowBlank:false
     	}, {
 		    xtype: 'textfield',
 		    fieldLabel: '薪资',

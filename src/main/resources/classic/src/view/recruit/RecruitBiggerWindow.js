@@ -27,7 +27,7 @@
 	    }, {
         	xtype: 'textfield',
 	        fieldLabel: '部门名称',
-	        name:'departmentname',
+	        name:'departmentName',
 			cls:'x-form-textfield-noborder',
 			labelWidth:70,
 			margin:'5 0 0 0',
