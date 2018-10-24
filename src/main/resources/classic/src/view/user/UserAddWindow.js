@@ -1,11 +1,11 @@
 Ext.define('Aria.view.user.UserAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.userAddWindow',
-    height: 700,
+    height: 730,
     minHeight: 100,
     minWidth: 300,
     width: 500,
-    x:270,
+    x:350,
     y:20,
     scrollable: true,
     title: 'Add User Window',
@@ -81,6 +81,10 @@ Ext.define('Aria.view.user.UserAddWindow', {
             xtype: 'textfield',
             fieldLabel: 'Phone',
             name:'phone'
+        },{
+            xtype: 'textfield',
+            fieldLabel: 'roleName',
+            name:'roleName'
         },{
             xtype: 'datefield',
             fieldLabel: 'Birthday',

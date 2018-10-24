@@ -23,7 +23,9 @@ import com.hrsystem.activiti.domain.WorkflowDTO;
 import com.hrsystem.activiti.service.IWorkflowService;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.entity.ResumeDTO;
+import com.hrsystem.resume.entity.ResumeIntoStaffDTO;
 import com.hrsystem.resume.repository.ResumeRepository;
+import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.repository.StaffRepository;
 
@@ -207,22 +209,31 @@ public class ResumeService implements IResumeService{
 	}
 
 	@Override
-	public void saveIntoUser(Resume resume) {
+	public void saveIntoUser(ResumeIntoStaffDTO resumeIntoStaffDTO) {
+		Resume resume = resumeRepository.findById(resumeIntoStaffDTO.getId()).get();
+		resume.setProcessStatus(ProcessStatus.ONFILE);
 		Staff staff = new Staff();
+		//Department department
 		staff.setStaffName(resume.getName());
 		staff.setPassword(resume.getName());
 		staff.setEmail(resume.getEmail());
 		staff.setNativePlace(resume.getNativePlace());
 		staff.setStatus("实习");
-		//staff.setEmploymentDate(resume.getApplyTime());
+		staff.setEmploymentDate(resumeIntoStaffDTO.getEmploymentDate());
 		resume.setProcessStatus(ProcessStatus.ONFILE);
 		staffRepository.save(staff);
 		resumeRepository.save(resume);
+		System.out.println("125");
 	}
 
 	@Override
 	public Page<Resume> findAll(String processStatus, Specification<Resume> spec, Pageable pageable) {
 		return resumeRepository.findAll(processStatus, spec, pageable);
+	}
+
+	@Override
+	public long count(String major) {
+		return resumeRepository.count(major);
 	}
 
 

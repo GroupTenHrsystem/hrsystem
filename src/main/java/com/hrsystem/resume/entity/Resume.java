@@ -60,6 +60,7 @@ public class Resume {
 	private String userId;    //启动流程的用户ID
 	private String processInstanceId;  //流程实例ID
 	
+	@JsonFormat(pattern="yyyy/MM/dd HH:mm:ss")
 	private Date completeTime;    //面试审批流程完成时间
 	private Double penScore;   //笔试分数
 	private Double firstAuditScore;  //一面分数
