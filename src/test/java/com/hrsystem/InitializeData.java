@@ -577,7 +577,7 @@ public class InitializeData {
 	        	 navigationTree29.setSuperNode(navigationTree28);
 	        	 
 	        	 NavigationTree navigationTree30 = new NavigationTree();
-	        	 navigationTree30.setText("薪资查询");
+	        	 navigationTree30.setText("薪资管理");
 	        	 navigationTree30.setIconCls("fa fa-cc-jcb");
 	        	 navigationTree30.setLeaf(true);
 	        	 navigationTree30.setViewType("salary");
@@ -723,7 +723,7 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree23);
 	      navigationTreeService.save(navigationTree24);
 	      navigationTreeService.save(navigationTree25);
-	      navigationTreeService.save(navigationTree26);
+	 //     navigationTreeService.save(navigationTree26);
 	      navigationTreeService.save(navigationTree27);
 	      navigationTreeService.save(navigationTree28);
 	      navigationTreeService.save(navigationTree29);
@@ -906,7 +906,7 @@ public class InitializeData {
 	        	 navigationTree29.setSuperNode(navigationTree28);
 	        	 
 	        	 NavigationTree navigationTree30 = new NavigationTree();
-	        	 navigationTree30.setText("薪资查询");
+	        	 navigationTree30.setText("薪资管理");
 	        	 navigationTree30.setIconCls("fa fa-cc-jcb");
 	        	 navigationTree30.setLeaf(true);
 	        	 navigationTree30.setViewType("salary");
@@ -1036,7 +1036,7 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree23);
 	      navigationTreeService.save(navigationTree24);
 	      navigationTreeService.save(navigationTree25);
-	      navigationTreeService.save(navigationTree26);
+	      //navigationTreeService.save(navigationTree26);
 	      navigationTreeService.save(navigationTree27);
 	      navigationTreeService.save(navigationTree28);
 	      navigationTreeService.save(navigationTree29);
@@ -1291,7 +1291,7 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree23);
 	      navigationTreeService.save(navigationTree24);
 	      navigationTreeService.save(navigationTree25);
-	      navigationTreeService.save(navigationTree26);
+	    //  navigationTreeService.save(navigationTree26);
 	      navigationTreeService.save(navigationTree27);
 	      navigationTreeService.save(navigationTree28);
 	      navigationTreeService.save(navigationTree31);

@@ -38,7 +38,14 @@ public class SalaryDTO {
             private Double house;
             //绩效
             private Double performancesSalary;
+            
 
+			private Double subsidy;			//补贴
+            private Double delateCount;      //迟到
+        	private Double leaveEarlyCount;  //早退
+        	private Double absenTime;        //旷工
+        	
+        	
             private Long staffIds[];                //员工列表
             private Long salaryStandardId;          //薪资标准id
             private String staffName;               //员工名字
