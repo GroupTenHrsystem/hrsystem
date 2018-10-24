@@ -55,6 +55,7 @@
             fieldLabel: '面试审批流程完成时间',
             name:'completeTime',
             format: 'Y/m/d H:i:s',
+            hidden: true,
             readOnly: true
         }]
     }]

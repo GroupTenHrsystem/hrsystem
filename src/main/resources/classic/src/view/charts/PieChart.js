@@ -17,7 +17,7 @@ Ext.define('Admin.view.charts.PieChart', {
         	position:'right'
         },
         store: Ext.create("Admin.store.charts.PieChartStroe"),
-        series: [{
+	    series: [{
             type: 'pie',
             xField:'data',
            	donut:true,

@@ -3,17 +3,22 @@
     alias: 'controller.recruitViewController',
     
     /*Add*/
-	openAddWindow:function(toolbar, rowIndex, colIndex){
-		toolbar.up('panel').up('container').add(Ext.widget('recruitAddWindow')).show();
+	openAWindow:function(toolbar, rowIndex, colIndex){
+		toolbar.up('panel').up('container').add(Ext.widget('recruitAWindow')).show();
 	},
 	submitAddForm:function(btn){
-		var form = btn.up('window').down('form');
-		var record = Ext.create('Admin.model.recruit.RecruitModel');
-		var values = form.getValues();
-		record.set(values);
-		record.save();
-		Ext.data.StoreManager.lookup('recruitGridStroe').load();
-		btn.up('window').close();
+		var win    = btn.up('window');
+		var form = win.down('form');
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请填写正确数据");
+		}else{
+			var record = Ext.create('Admin.model.recruit.RecruitModel');
+			var values  =form.getValues();
+           	record.set(values);
+          	record.save();
+			Ext.data.StoreManager.lookup('recruitGridStroe').load();
+          	win.close();
+		}
 	},
 		
 	/*Edit*/
@@ -88,9 +93,9 @@
 		var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
 		var store =	btn.up('gridpanel').getStore();
-		Ext.apply(store.proxy.extraParams, {departmentname:"",position:""});
-		if(searchField==='departmentname'){
-			Ext.apply(store.proxy.extraParams, {departmentname:searchValue});
+		Ext.apply(store.proxy.extraParams, {departmentName:"",position:""});
+		if(searchField==='departmentName'){
+			Ext.apply(store.proxy.extraParams, {departmentName:searchValue});
 		}
 		if(searchField==='position'){
 			Ext.apply(store.proxy.extraParams, {position:searchValue});

@@ -24,9 +24,11 @@ import com.hrsystem.activiti.service.IWorkflowService;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.entity.ResumeDTO;
 import com.hrsystem.resume.entity.ResumeIntoStaffDTO;
+import com.hrsystem.resume.entity.ResumeQueryDTO;
 import com.hrsystem.resume.repository.ResumeRepository;
 import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Staff;
+import com.hrsystem.user.repository.DepartmentRepository;
 import com.hrsystem.user.repository.StaffRepository;
 
 @Service
@@ -38,6 +40,8 @@ public class ResumeService implements IResumeService{
 	
 	@Autowired
 	private StaffRepository staffRepository;
+	@Autowired
+	private DepartmentRepository departmentRepository;
 	
 	@Autowired
 	private IWorkflowService workflowService;
@@ -213,7 +217,9 @@ public class ResumeService implements IResumeService{
 		Resume resume = resumeRepository.findById(resumeIntoStaffDTO.getId()).get();
 		resume.setProcessStatus(ProcessStatus.ONFILE);
 		Staff staff = new Staff();
-		//Department department
+		Department department = new Department();
+		department.setDepartmentName(resumeIntoStaffDTO.getDepartmentName());
+		staff.setDepartment(department);
 		staff.setStaffName(resume.getName());
 		staff.setPassword(resume.getName());
 		staff.setEmail(resume.getEmail());
@@ -221,6 +227,7 @@ public class ResumeService implements IResumeService{
 		staff.setStatus("实习");
 		staff.setEmploymentDate(resumeIntoStaffDTO.getEmploymentDate());
 		resume.setProcessStatus(ProcessStatus.ONFILE);
+		departmentRepository.save(department);
 		staffRepository.save(staff);
 		resumeRepository.save(resume);
 		System.out.println("125");
@@ -233,7 +240,9 @@ public class ResumeService implements IResumeService{
 
 	@Override
 	public long count(String major) {
-		return resumeRepository.count(major);
+		ResumeQueryDTO resumeQueryDTO = new ResumeQueryDTO();
+		resumeQueryDTO.setMajor(major);	
+		return resumeRepository.count(ResumeQueryDTO.getWhereClause(resumeQueryDTO));
 	}
 
 

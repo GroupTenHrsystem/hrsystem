@@ -18,19 +18,19 @@
       </extensionElements>
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!firstPass}]]></conditionExpression>
     </sequenceFlow>
-    <userTask id="firstAudit" name="一面" activiti:candidateGroups="${hrClerk}"></userTask>
-    <userTask id="resumechose" name="笔试分数录入" activiti:candidateGroups="${deptLeader}"></userTask>
+    <userTask id="firstAudit" name="一面" activiti:candidateGroups="${hrClerk},admin"></userTask>
+    <userTask id="resumechose" name="笔试分数录入" activiti:candidateGroups="${deptLeader},admin"></userTask>
     <sequenceFlow id="flow10" sourceRef="startevent1" targetRef="resumechose"></sequenceFlow>
     <sequenceFlow id="flow13" sourceRef="resumechose" targetRef="exclusivegateway5"></sequenceFlow>
-    <userTask id="firstarrange" name="一面安排" activiti:candidateGroups="${deptLeader}"></userTask>
+    <userTask id="firstarrange" name="一面安排" activiti:candidateGroups="${deptLeader},admin"></userTask>
     <sequenceFlow id="flow14" name="通过" sourceRef="exclusivegateway5" targetRef="firstarrange">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${deptLeaderPass}]]></conditionExpression>
     </sequenceFlow>
-    <userTask id="lastarrange" name="二面安排" activiti:candidateGroups="${hrClerk}"></userTask>
+    <userTask id="lastarrange" name="二面安排" activiti:candidateGroups="${hrClerk},admin"></userTask>
     <sequenceFlow id="flow16" name="通过" sourceRef="exclusivegateway6" targetRef="lastarrange">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${firstPass}]]></conditionExpression>
     </sequenceFlow>
-    <userTask id="lastAudit" name="二面" activiti:candidateGroups="${hrClerk}">
+    <userTask id="lastAudit" name="二面" activiti:candidateGroups="${hrClerk},admin">
       <extensionElements>
         <activiti:taskListener event="complete" delegateExpression="${lastAuditEndProcessor}"></activiti:taskListener>
       </extensionElements>

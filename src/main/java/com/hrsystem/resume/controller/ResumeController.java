@@ -2,6 +2,7 @@ package com.hrsystem.resume.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -35,6 +36,7 @@ import com.hrsystem.resume.entity.ResumeDTO;
 import com.hrsystem.resume.entity.ResumeIntoStaffDTO;
 import com.hrsystem.resume.entity.ResumeQueryDTO;
 import com.hrsystem.resume.service.IResumeService;
+import com.hrsystem.salary.entity.Salary;
 
 //@Component
 @RestController
@@ -56,13 +58,18 @@ public class ResumeController {
 		//return resumeService.findAll(ResumeQueryDTO.getWhereClause(resumeQueryDTO), pageRequest.getPageable());
 	}
 	
-	@GetMapping("/getEduation")
-	public void getEduationPage(){
-		Long boshi = resumeService.count("博士");
-		Long shuoshi = resumeService.count("硕士");
-		Long benke = resumeService.count("本科");
-		System.out.println(boshi);
+	@RequestMapping("/getEduation")
+	public Map<String, Long> getEduationPage(){
+		Map<String, Long> map =  new HashMap<String,Long>(); 
+		map.put("博士",resumeService.count("博士"));
+		map.put("硕士",resumeService.count("硕士"));
+		map.put("本科",resumeService.count("本科"));
+		map.put("教授",resumeService.count("教授"));
+		map.put("专科",resumeService.count("专科"));
+		map.put("专科以下",resumeService.count("专科以下"));
+		//System.out.println(boshi);
 		//return resumeService.count("博士");
+		return map;
 	}
 	
 	@GetMapping(value="{id}")

@@ -5,7 +5,7 @@
 	],
     fields: [
 	    {type: 'int',name: 'id'},
-	    {type: 'string',name: 'departmentname'},
+	    {type: 'string',name: 'departmentName'},
 	    {type: 'string',name: 'position'},
 	    {type: 'int',name: 'planNum'},
 	    {type: 'float',name: 'salary'},
