@@ -40,6 +40,7 @@ import com.hrsystem.calendar.service.CalendarService;
 import com.hrsystem.calendar.service.EventService;
 import com.hrsystem.common.ExtResultJson;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
+import com.hrsystem.log.ControllerLogs;
 
 
 @RestController
@@ -52,6 +53,7 @@ public class CalendarContreller
 	private EventService eventService;
 	//查找日历类型
 	@RequestMapping("/findCalendars")
+	@ControllerLogs(description = "找日历事件")
 	public  ExtResultJson<Calendar> findCalendar()
 	{
 		List<Calendar> clist = calendarService.findAll(null);
@@ -66,6 +68,7 @@ public class CalendarContreller
 	}
 	
 	@RequestMapping("/save")
+	@ControllerLogs(description = "保存日历事件")
 	public String save(Calendar calendar) {
 		try {
 			calendarService.save(calendar);
@@ -76,6 +79,7 @@ public class CalendarContreller
 	}
 	
 	@RequestMapping("/delete")
+	@ControllerLogs(description = "删除日历事件")
 		public String delete(@RequestParam(name="id") Long id) 
 		{
 		try {
@@ -97,6 +101,7 @@ public class CalendarContreller
 	 * @return
 	 */
 	 @PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
+		@ControllerLogs(description = "保存日历类型")
 		public String save(@RequestBody Event event) 
 		{
 			try {
@@ -110,6 +115,7 @@ public class CalendarContreller
 		}
 	 
 	 @RequestMapping("/findEvents")
+		@ControllerLogs(description = "查找日历类型")
 		public  ExtResultJson<Event> findEvents(
 				EventQueryDTO eventQueryDTO,
 				@DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'") Date startDate,

@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.hrsystem.activiti.domain.ProcessStatus;
 import com.hrsystem.activiti.domain.WorkflowDTO;
 import com.hrsystem.activiti.service.IWorkflowService;
+import com.hrsystem.log.ServiceLogs;
 import com.hrsystem.payment.entity.Payment;
 import com.hrsystem.payment.entity.PaymentDTO;
 import com.hrsystem.payment.repository.PaymentRepository;
@@ -34,11 +35,13 @@ public class PaymentService implements IPaymentService{
 	private IWorkflowService workflowService;
 	
 	@Override
+	@ServiceLogs(description = "保存报销")
 	public void save(Payment payment) {
 		paymentRepository.save(payment);
 	}
 
 	@Override
+	@ServiceLogs(description = "id查报销")
 	public void delete(Long id) {
 		Payment payment = paymentRepository.findById(id).get();
 		if(payment!=null){
@@ -47,24 +50,28 @@ public class PaymentService implements IPaymentService{
 	}
 
 	@Override
+	@ServiceLogs(description = "删除全部")
 	public void deleteAll(Long[] ids) {
 		List<Long> idLists = new ArrayList<Long>(Arrays.asList(ids));
 		paymentRepository.updateAll(idLists);
 	}
 
 	@Override
+	@ServiceLogs(description = "id找")
 	@Transactional(readOnly=true)
 	public Payment findOne(Long id) {
 		return paymentRepository.findById(id).get();
 	}
 
 	@Override
+	@ServiceLogs(description = "报销找全部")
 	@Transactional(readOnly=true)
 	public Page<Payment> findAll(Specification<Payment> spec, Pageable pageable) {
 		return paymentRepository.findAll(spec, pageable);
 	}
 
 	@Override
+	@ServiceLogs(description = "报销流程开始")
 	public void startWorkflow(String userId, Long paymentId, Map<String, Object> variables) {
 		//1.声明流程实例
 			ProcessInstance processInstance = null;
@@ -84,6 +91,7 @@ public class PaymentService implements IPaymentService{
 	}
 
 	@Override
+	@ServiceLogs(description = "找报销流程")
 	public Page<PaymentDTO> findTodoTasks(String userId, Pageable pageable) {
 		List<PaymentDTO> results = null;
 		List<WorkflowDTO> workflowLists = workflowService.findTodoTasks(userId);
@@ -112,11 +120,13 @@ public class PaymentService implements IPaymentService{
 	}
 
 	@Override
+	@ServiceLogs(description = "审批报销")
 	public void claim(String taskId, String userId) {
 		workflowService.claim(taskId, userId);
 	}
 
 	@Override
+	@ServiceLogs(description = "完成审批")
 	public void complete(String taskId, Map<String, Object> variables, Long id) {
 		Payment payment = paymentRepository.findById(id).get();
 		if(variables.containsKey("price")) {

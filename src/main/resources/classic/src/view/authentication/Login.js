@@ -12,7 +12,7 @@ Ext.define('Admin.view.authentication.Login', {
 
     //title: 'Let\'s Log In',
    // defaultFocus: 'authdialog', // Focus the Auth Form to force field focus as well
-
+style:'background: #f5f2dc',
     items: [
         {
             xtype: 'authdialog',

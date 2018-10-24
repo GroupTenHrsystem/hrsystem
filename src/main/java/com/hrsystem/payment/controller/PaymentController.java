@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hrsystem.common.SessionUtil;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
+import com.hrsystem.log.ControllerLogs;
 import com.hrsystem.payment.entity.Payment;
 import com.hrsystem.payment.entity.PaymentDTO;
 import com.hrsystem.payment.entity.PaymentQueryDTO;
@@ -44,6 +45,7 @@ public class PaymentController {
 	private IPaymentService paymentService;
 	
 	@PostMapping
+	@ControllerLogs(description = "保存审批")
     public ExtAjaxResponse save(HttpSession session,@RequestBody Payment payment) {
 		
     	try {
@@ -61,6 +63,7 @@ public class PaymentController {
     }
 	
 	@PutMapping(value="{id}")
+	@ControllerLogs(description = "更新审批")
     public @ResponseBody ExtAjaxResponse update(@PathVariable("id") Long id,@RequestBody Payment payment) {
     	try {
     		Payment entity = paymentService.findOne(id);
@@ -76,6 +79,7 @@ public class PaymentController {
     }
 	
 	@DeleteMapping(value="{id}")
+	@ControllerLogs(description = "删除审批")
     public @ResponseBody ExtAjaxResponse delete(@PathVariable("id") Long id) {
     	try {
     		Payment entity = paymentService.findOne(id);
@@ -90,6 +94,7 @@ public class PaymentController {
     }
 	
 	@PostMapping("/deletes")
+	@ControllerLogs(description = "多行删除审批")
 	public ExtAjaxResponse deleteRows(@RequestParam(name="ids") Long[] ids) 
 	{
 		try {
@@ -103,6 +108,7 @@ public class PaymentController {
 	}
 	
 	@GetMapping
+	@ControllerLogs(description = "通过Userid找审批")
     public Page<Payment> findPaymentByUserId(PaymentQueryDTO paymentQueryDTO,HttpSession session,ExtjsPageRequest pageable) 
 	{
 		Page<Payment> page;
@@ -119,6 +125,7 @@ public class PaymentController {
 	
 	
 	@RequestMapping(value = "/start")
+	@ControllerLogs(description = "开始报销")
     public @ResponseBody ExtAjaxResponse start(@RequestParam(name="id") Long paymentId,HttpSession session,double price) {
     	try {
     		Payment entity = paymentService.findOne(paymentId);
@@ -139,6 +146,7 @@ public class PaymentController {
     }
 	
 	@RequestMapping(value = "/tasks")
+	@ControllerLogs(description = "查找报销任务")
     public @ResponseBody Page<PaymentDTO> findTodoTasks(HttpSession session,ExtjsPageRequest pageable) {
 		Page<PaymentDTO> page = new PageImpl<PaymentDTO>(new ArrayList<PaymentDTO>(), pageable.getPageable(), 0);
     	try {
@@ -151,6 +159,7 @@ public class PaymentController {
     }
 	
 	@RequestMapping(value = "claim/{id}")
+	@ControllerLogs(description = "审批报销")
     public @ResponseBody ExtAjaxResponse claim(@PathVariable("id") String taskId, HttpSession session) {
     	try{
     		paymentService.claim(taskId, SessionUtil.getUserName(session));
@@ -162,6 +171,7 @@ public class PaymentController {
     }
 	 
 	@RequestMapping(value = "complete/{taskId}")
+	@ControllerLogs(description = "完成报销")
     public @ResponseBody ExtAjaxResponse complete(@PathVariable("taskId") String taskId, WorkflowVariable var,Long id) {
     	try{
     		Map<String, Object> variables = var.getVariableMap();
