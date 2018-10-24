@@ -228,7 +228,8 @@ public class PerformanceController {
     		String userId = SessionUtil.getUserName(session);
     		Map<String, Object> variables = new HashMap<String, Object>();
     		Performance performance = performanceService.findPerformanceById(performanceId);
-    		variables.put("deptLeader", performance.getStaff().getRole().getPosition());
+    		System.out.println(performance.getStaff().getRole().getRole().getPosition());
+    		variables.put("deptLeader", performance.getStaff().getRole().getRole().getPosition());
     		variables.put("applyUserId", performance.getStaff().getStaffName());
     		performanceService.startWorkflow(userId,performanceId, variables);
     		return new ExtAjaxResponse(true,"操作成功!");
