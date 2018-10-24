@@ -1284,8 +1284,8 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree12);
 	      navigationTreeService.save(navigationTree17);
 	      navigationTreeService.save(navigationTree19);
-	      navigationTreeService.save(navigationTree19_5);
-	      navigationTreeService.save(navigationTree20);
+	    //  navigationTreeService.save(navigationTree19_5);
+	   //   navigationTreeService.save(navigationTree20);
 	      navigationTreeService.save(navigationTree21);
 	      navigationTreeService.save(navigationTree22);
 	      navigationTreeService.save(navigationTree23);
