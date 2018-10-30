@@ -198,6 +198,7 @@ public class InitializeData {
 			 	SalaryStandard salaryStandard = new SalaryStandard();
 			 	salaryStandard.setName("薪资标准"+i);
 			 	salaryStandard.setBasis(3000D*i);			//基本工资
+			 	salaryStandard.setAbsence(0.05);
 			 	salaryStandard.setCreateTime(newDate);		//创建时间
 			 	salaryStandard.setSubsidy(300D);			//补贴
 			 	salaryStandard.setOvertime(50D);			//加班费

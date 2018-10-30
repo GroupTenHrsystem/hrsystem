@@ -115,14 +115,19 @@ public class SalaryService implements ISalaryService{
 			Iterator attendanceIter = attendance.iterator();
 			while(attendanceIter.hasNext()) {
 				Attendance attendanceTemp=(Attendance)attendanceIter.next();
-				if(attendanceTemp.getDelateCount() != null)	//迟到次数
-					delateCount += Double.parseDouble(df.format(attendanceTemp.getDelateCount() * salaryStandard.getAbsence()));
-				if(attendanceTemp.getLeaveEarlyCount() != null)	//早退次数
-					leaveEarlyCount += Double.parseDouble(df.format(attendanceTemp.getLeaveEarlyCount() * salaryStandard.getAbsence()));
-				if(attendanceTemp.getAbsenTime() != null)	//旷工次数
-					absenTime += Double.parseDouble(df.format(attendanceTemp.getAbsenTime() * salaryStandard.getAbsence()));
+				if(attendanceTemp.getDelateCount() != 0L)	//迟到次数
+					System.out.println(attendanceTemp.getDelateCount());
+				System.out.println(salaryStandard.getAbsence());
+					delateCount = attendanceTemp.getDelateCount() * salaryStandard.getAbsence();
+				System.out.println(delateCount);
+				if(attendanceTemp.getLeaveEarlyCount() != 0L)	//早退次数
+					leaveEarlyCount = attendanceTemp.getLeaveEarlyCount().doubleValue() * salaryStandard.getAbsence();
+				if(attendanceTemp.getAbsenTime() != 0L)	//旷工次数
+					absenTime = attendanceTemp.getAbsenTime().doubleValue() * salaryStandard.getAbsence();
 			}
-			
+			delateCount = Double.parseDouble(df.format(delateCount));
+			leaveEarlyCount = Double.parseDouble(df.format(leaveEarlyCount));
+			absenTime = Double.parseDouble(df.format(absenTime));
 			salarySum = salarySum - delateCount - leaveEarlyCount - absenTime;
 			
 			/*
