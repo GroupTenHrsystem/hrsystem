@@ -100,6 +100,7 @@ public class RoleController {
 					
 					Role role=roleService.findRoleById(id);
 					role.setStatus(false);
+					role.setDepartment(null);
 					roleService.insertRole(role);
 				
 				}
