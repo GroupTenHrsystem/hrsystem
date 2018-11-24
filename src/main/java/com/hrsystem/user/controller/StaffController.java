@@ -1,7 +1,11 @@
 package com.hrsystem.user.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
+import org.activiti.engine.IdentityService;
+import org.activiti.engine.identity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
@@ -48,6 +52,9 @@ public class StaffController {
 	@Autowired
 	private IAttendanceService  attendanceService;
 	
+	@Autowired
+	private IdentityService identityService;
+	
 //	/**
 //	 * 1、查
 //	 * @param id
@@ -74,15 +81,37 @@ public class StaffController {
 	
 	//2、增
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String insertStaff(@RequestBody Staff staff) {		
+	public String insertStaff(@RequestBody StaffDTO staffDTO) {		
 		try {
 //			roleService.findByPosition(staff.getr)
+			System.out.println("1111112222222");
+			System.out.println(staffDTO.getRoleName());
+			Staff staff=new Staff();
+			BeanUtils.copyProperties(staffDTO, staff);
+			System.out.println(staff);
+			List<Role> role =roleService.findByPosition(staffDTO.getRoleName());
+			System.out.println(staffDTO.getRoleName());
+			for (Role long1 : role) {
+				staff.setRole(long1);
+			}		
 			staffService.insertStaff(staff);
+			System.out.println("123124");
 			Attendance attendance=new Attendance();
 			attendance.setId(staff.getId());
 			attendance.setEmployeName(staff.getStaffName());
+			attendance.setAbsenTime(0L);
+			attendance.setDelateCount(0L);
+			attendance.setExtraTime(0L);
+			attendance.setLeaveCount(0L);
+			attendance.setLeaveEarlyCount(0L);
+			attendance.setTotalTime(0L);
 			attendanceService.insertAttendance(attendance);
-			
+			System.out.println(attendance.getEmployeName());
+			User admin = identityService.newUser(staffDTO.getStaffName());
+			admin.setPassword(staffDTO.getPassword());
+	        identityService.saveUser(admin);
+	        identityService.createMembership(staffDTO.getStaffName(), staffDTO.getRoleName());
+	        System.out.println("success:添加成功");
 			return "success:添加成功";
 		} catch (Exception e) {
 			return "success:添加失败";
@@ -116,12 +145,18 @@ public class StaffController {
 	}
 	//改
 	@PutMapping(value="{id}",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse update(@PathVariable("id") Long myId,@RequestBody Staff dto) 
+	public ExtAjaxResponse update(@PathVariable("id") Long myId,@RequestBody StaffDTO dto) 
 	{
 		try {
+			System.out.println(dto.getEmploymentDate());
 			Staff entity = staffService.findStaffById(myId);
 			if(entity!=null) {
 				BeanUtils.copyProperties(dto, entity);//使用自定义的BeanUtils
+				List<Role> role =roleService.findByPosition(dto.getRoleName());
+				for (Role long1 : role) {
+					entity.setRole(long1);
+					System.out.println(entity.getRole().getPosition());
+				}
 				staffService.insertStaff(entity);
 			}
 			return new ExtAjaxResponse(true,"更新成功！");

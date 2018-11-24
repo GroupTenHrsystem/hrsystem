@@ -60,9 +60,15 @@ public class RoleService implements IRoleService {
 	}
 
 	@Override
-	public List<Long> findByPosition(String position) {
+	public List<Role> findByPosition(String position) {
 		// TODO Auto-generated method stub
 		return roleRepository.findByPosition(position);
+	}
+
+	@Override
+	public List<Role> findNoParent() {
+		// TODO Auto-generated method stub
+		return roleRepository.findNoParent();
 	}
 
 //	@Override

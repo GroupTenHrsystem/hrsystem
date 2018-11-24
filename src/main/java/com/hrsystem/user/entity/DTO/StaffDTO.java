@@ -33,17 +33,17 @@ public class StaffDTO {
 	private String email;
 	private String phone;
 	private String password;
-
+	 @JsonFormat(pattern="yyyy/MM/dd",timezone="GMT+8")
 	private Date birthday;
 	private String address;
 	private String nativePlace;
 	private String status;
 	
 
-	@DateTimeFormat(pattern="yyyy/MM/dd") 
-	private Date createTimeStart;
-	@DateTimeFormat(pattern="yyyy/MM/dd") 
-	private Date createTimeEnd;
+	 @JsonFormat(pattern="yyyy/MM/dd",timezone="GMT+8")
+	private Date employmentDate;
+	 @JsonFormat(pattern="yyyy/MM/dd",timezone="GMT+8")
+	private Date leaveDate;
 	
 	private Long roleId;
 	private String roleName;

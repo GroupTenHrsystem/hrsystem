@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
+
+import com.hrsystem.user.entity.Department;
 import com.hrsystem.user.entity.Role;
 import com.hrsystem.user.entity.Staff;
 import com.hrsystem.user.entity.DTO.RoleDTO;
@@ -17,6 +19,9 @@ public interface RoleRepository extends PagingAndSortingRepository<Role, Long>,J
 //	public List<Staff> findStaffByRole(Long positionId);
 	
 	@Query(value="SELECT * FROM hrsystem.t_role WHERE position = ?1",nativeQuery=true)
-	public List<Long> findByPosition(String position);
+	public List<Role> findByPosition(String position);
+	
+	@Query(value="SELECT * FROM hrsystem.t_role ",nativeQuery=true)
+	public List<Role> findNoParent();
 	
 }

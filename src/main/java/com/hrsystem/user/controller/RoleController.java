@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.activiti.engine.IdentityService;
+import org.activiti.engine.identity.Group;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -44,6 +46,8 @@ public class RoleController {
 	@Autowired
 	private IDepartmentService departmentService;
 
+	@Autowired
+	private IdentityService identityService;
 	
 	//查
 	@GetMapping
@@ -78,6 +82,8 @@ public class RoleController {
 				Department department=departmentService.findDepartmentById(role.getDepartmentId());
 				role1.setDepartment(department);
 				roleService.insertRole(role1);
+				Group group =identityService.newGroup(role.getPosition());
+				identityService.saveGroup(group);
 //				System.out.println(role.getSex());
 				return "success:添加成功";
 			} catch (Exception e) {
@@ -118,4 +124,9 @@ public class RoleController {
 				return new ExtAjaxResponse(true,"批量删除失败！");
 			}
 		}
+		//所有部门组成的树
+	    @RequestMapping(value = "/findNoParent")
+	    public List<Role> getFindNoParentList(){
+			return roleService.findNoParent();
+	    }
 }
