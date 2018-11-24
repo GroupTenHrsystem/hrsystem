@@ -15,6 +15,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.hrsystem.attendance.entity.Attendance;
+import com.hrsystem.attendance.service.IAttendanceService;
 import com.hrsystem.navigationTree.entity.NavigationTree;
 import com.hrsystem.navigationTree.service.INavigationTreeService;
 import com.hrsystem.performance.entity.PerformanceTemplet;
@@ -66,6 +68,8 @@ public class InitializeData {
 	private IdentityService identityService;
 	@Autowired
 	private INavigationTreeService navigationTreeService;
+	@Autowired
+	private IAttendanceService attendanceService;
 	
 	@Test
 	public void InitializeData() {
@@ -215,6 +219,16 @@ public class InitializeData {
 		staffService.insertStaff(adminStaff);
 		admin.setPassword("admin");
         identityService.saveUser(admin);
+        Attendance attendance=new Attendance();
+		attendance.setId(adminStaff.getId());
+		attendance.setEmployeName(adminStaff.getStaffName());
+		attendance.setAbsenTime(0L);
+		attendance.setDelateCount(0L);
+		attendance.setExtraTime(0L);
+		attendance.setLeaveCount(0L);
+		attendance.setLeaveEarlyCount(0L);
+		attendance.setTotalTime(0L);
+		attendanceService.insertAttendance(attendance);
       
         for (int i = 1; i <=4; i++) {
         	 User user = identityService.newUser("user"+i);
@@ -228,6 +242,16 @@ public class InitializeData {
         		 staff.setRole(role3);
         	 staffService.insertStaff(staff);
              identityService.saveUser(user);
+             Attendance attendance1=new Attendance();
+     		attendance1.setId(staff.getId());
+     		attendance1.setEmployeName(staff.getStaffName());
+     		attendance1.setAbsenTime(0L);
+     		attendance1.setDelateCount(0L);
+     		attendance1.setExtraTime(0L);
+     		attendance1.setLeaveCount(0L);
+     		attendance1.setLeaveEarlyCount(0L);
+     		attendance1.setTotalTime(0L);
+     		attendanceService.insertAttendance(attendance1);
 
 		}
         for (int i = 5; i <=10; i++) {
@@ -242,6 +266,16 @@ public class InitializeData {
         		 staff.setRole(role5);
         	 staffService.insertStaff(staff);
              identityService.saveUser(user);
+             Attendance attendance1=new Attendance();
+      		attendance1.setId(staff.getId());
+      		attendance1.setEmployeName(staff.getStaffName());
+      		attendance1.setAbsenTime(0L);
+      		attendance1.setDelateCount(0L);
+      		attendance1.setExtraTime(0L);
+      		attendance1.setLeaveCount(0L);
+      		attendance1.setLeaveEarlyCount(0L);
+      		attendance1.setTotalTime(0L);
+      		attendanceService.insertAttendance(attendance1);
 
 		}
         for (int i = 11; i <=13; i++) {
@@ -256,7 +290,16 @@ public class InitializeData {
         		 staff.setRole(role7);
         	 staffService.insertStaff(staff);
              identityService.saveUser(user);
-             
+             Attendance attendance1=new Attendance();
+      		attendance1.setId(staff.getId());
+      		attendance1.setEmployeName(staff.getStaffName());
+      		attendance1.setAbsenTime(0L);
+      		attendance1.setDelateCount(0L);
+      		attendance1.setExtraTime(0L);
+      		attendance1.setLeaveCount(0L);
+      		attendance1.setLeaveEarlyCount(0L);
+      		attendance1.setTotalTime(0L);
+      		attendanceService.insertAttendance(attendance1);
 
 		}
         for (int i = 14; i <=16; i++) {
@@ -271,6 +314,16 @@ public class InitializeData {
         		 staff.setRole(role8);
         	 staffService.insertStaff(staff);
              identityService.saveUser(user);
+             Attendance attendance1=new Attendance();
+      		attendance1.setId(staff.getId());
+      		attendance1.setEmployeName(staff.getStaffName());
+      		attendance1.setAbsenTime(0L);
+      		attendance1.setDelateCount(0L);
+      		attendance1.setExtraTime(0L);
+      		attendance1.setLeaveCount(0L);
+      		attendance1.setLeaveEarlyCount(0L);
+      		attendance1.setTotalTime(0L);
+      		attendanceService.insertAttendance(attendance1);
 
 		}
 		identityService.createMembership("admin", "admin");
