@@ -59,7 +59,9 @@
 		            return '<span style="color:orange;">一面已安排，一面结果审批中..</span>';
 		        }else if (val =='LASTARRANGE') {
 		            return '<span style="color:orange;">二面已安排，二面结果审批中..</span>';
-		        } else if (val =='APPROVAL') {
+		        } else if (val =='ONFILE') {
+		            return '<span style="color:read;">已存档</span>';
+		        }else if (val =='APPROVAL') {
 		            return '<span style="color:blue;">审批中...</span>';
 		        } else{
 		        	return '<span style="color:red;">取消申请</span>';

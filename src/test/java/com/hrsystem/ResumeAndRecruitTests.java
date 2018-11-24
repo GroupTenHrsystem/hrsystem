@@ -45,7 +45,7 @@ public class ResumeAndRecruitTests {
 		try {
 			for (int i = 0; i < 5; i++) {
 				Recruit recruit = new Recruit();
-				recruit.setDepartmentname("人事部");
+				recruit.setDepartmentName("人事部");
 				recruit.setPosition("经理");
 				recruit.setPlanNum(3L);
 				recruit.setStartTime(new Date());
@@ -57,6 +57,12 @@ public class ResumeAndRecruitTests {
 
 		} catch (Exception e) {
 		}
+	}
+	
+	@Test
+	public void testcount() {
+		System.out.println(recruitService.count());
+		//System.out.println(recruitService.count("本科"));
 	}
 
 }

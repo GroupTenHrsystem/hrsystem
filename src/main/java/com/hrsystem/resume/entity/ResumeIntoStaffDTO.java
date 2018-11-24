@@ -15,5 +15,5 @@ public class ResumeIntoStaffDTO {
 	@Like
 	private String departmentName;
 	@JsonFormat(pattern="yyyy/MM/dd")
-	private String employmentDate;
+	private Date employmentDate;
 }

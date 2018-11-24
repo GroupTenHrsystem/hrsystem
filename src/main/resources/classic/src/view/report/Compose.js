@@ -66,20 +66,20 @@ Ext.define('Admin.view.report.Compose', {
     bbar: {
         overflowHandler: 'menu',
         items: [
-            {
-                xtype: 'filefield',
-                width: 400,
-                labelWidth: 80,
-                fieldLabel: '附件:',
-                labelSeparator: '',
-                buttonConfig: {
-                    xtype: 'filebutton',
-                    glyph:'',
-                    iconCls: 'x-fa fa-cloud-upload',
-                    style:'background-color:black',
-                    text: '上传附件'
-                }
-            },
+            // {
+            //     xtype: 'filefield',
+            //     width: 400,
+            //     labelWidth: 80,
+            //     fieldLabel: '附件:',
+            //     labelSeparator: '',
+            //     buttonConfig: {
+            //         xtype: 'filebutton',
+            //         glyph:'',
+            //         iconCls: 'x-fa fa-cloud-upload',
+            //         style:'background-color:black',
+            //         text: '上传附件'
+            //     }
+            // },
             '->',
             {
                 xtype: 'button',

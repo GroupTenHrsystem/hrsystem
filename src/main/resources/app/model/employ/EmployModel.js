@@ -22,6 +22,7 @@
 	    {type: 'date',name: 'applyTime', dateFormat:'Y/m/d'},
 	    {type:'string',name:'userId'},
 	    {type:'string',name:'processStatus'},
+		{type:'date',name:'completeTime', dateFormat:'Y/m/d'},
 	    {type:'string',name:'processInstanceId'}
 	],
 	proxy: {

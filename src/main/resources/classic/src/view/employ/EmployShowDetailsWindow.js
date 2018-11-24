@@ -3,7 +3,7 @@
     alias: 'widget.employShowDetailsWindow',
     x:50,
     y:100,
-    height: 400,
+    height: 380,
     minHeight: 100,
     minWidth: 300,
     width: 500,

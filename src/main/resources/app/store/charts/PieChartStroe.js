@@ -1,7 +1,5 @@
 Ext.define('Admin.store.charts.PieChartStroe', {
     extend: 'Ext.data.Store',
-    //storeId: 'salarySum',
-    //model: 'Admin.model.salary.SalaryAnalysisModel',
    
 	fields:['name','data'],
 		
@@ -13,19 +11,20 @@ Ext.define('Admin.store.charts.PieChartStroe', {
         { 'name': '教授',   'data':  6 },
         { 'name': '本科以下',   'data':  5 },
     ],
-    proxy: {
-        type: 'memory',
-        //url: '~api/search/users'	//mvc url  xxx.json
+    /*proxy: {
+        type: 'ajax',
+        url: '/resume/getEduation',
 	    reader:{
-	    	type:'json',
-	    	rootProperty:'lists'
-	    }
-    },
+            type:'json',
+            rootProperty:'content'
+        },
+        writer: {
+            type: 'json'
+        },
+        simpleSortMode: true 
+    },*/
 
-    autoLoad: 'true',
-
-    sorters: {
-        direction: 'ASC',
-        property: 'fullname'
-    }
+    autoLoad: true,
+    autoSync: true,
+    remoteSort: true
 });

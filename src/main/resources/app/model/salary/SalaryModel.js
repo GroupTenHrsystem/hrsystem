@@ -19,6 +19,10 @@ Ext.define('Admin.model.salary.SalaryModel', {
 		{type: 'float',name: 'injury',dateFormat:'0.00'},
 		{type: 'float',name: 'house',dateFormat:'0.00'},
 		{type: 'float',name: 'performancesSalary',dateFormat:'0.00'},
+		{type: 'float',name: 'subsidy',dateFormat:'0.00'},
+		{type: 'float',name: 'delateCount',dateFormat:'0.00'},
+		{type: 'float',name: 'leaveEarlyCount',dateFormat:'0.00'},
+		{type: 'float',name: 'absenTime',dateFormat:'0.00'},
 	],
 	proxy: {
 		type: 'rest',

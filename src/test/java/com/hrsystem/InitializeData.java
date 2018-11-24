@@ -343,7 +343,7 @@ public class InitializeData {
 		
 		//招聘信息
 		Recruit recruit = new Recruit();
-		recruit.setDepartmentname("人事部");
+		recruit.setDepartmentName("人事部");
 		recruit.setPosition("经理");
 		recruit.setPlanNum(3L);
 		recruit.setStartTime(new Date());
@@ -577,7 +577,7 @@ public class InitializeData {
 	        	 navigationTree29.setSuperNode(navigationTree28);
 	        	 
 	        	 NavigationTree navigationTree30 = new NavigationTree();
-	        	 navigationTree30.setText("薪资查询");
+	        	 navigationTree30.setText("薪资管理");
 	        	 navigationTree30.setIconCls("fa fa-cc-jcb");
 	        	 navigationTree30.setLeaf(true);
 	        	 navigationTree30.setViewType("salary");
@@ -723,7 +723,7 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree23);
 	      navigationTreeService.save(navigationTree24);
 	      navigationTreeService.save(navigationTree25);
-	      navigationTreeService.save(navigationTree26);
+	 //     navigationTreeService.save(navigationTree26);
 	      navigationTreeService.save(navigationTree27);
 	      navigationTreeService.save(navigationTree28);
 	      navigationTreeService.save(navigationTree29);
@@ -906,7 +906,7 @@ public class InitializeData {
 	        	 navigationTree29.setSuperNode(navigationTree28);
 	        	 
 	        	 NavigationTree navigationTree30 = new NavigationTree();
-	        	 navigationTree30.setText("薪资查询");
+	        	 navigationTree30.setText("薪资管理");
 	        	 navigationTree30.setIconCls("fa fa-cc-jcb");
 	        	 navigationTree30.setLeaf(true);
 	        	 navigationTree30.setViewType("salary");
@@ -1036,7 +1036,7 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree23);
 	      navigationTreeService.save(navigationTree24);
 	      navigationTreeService.save(navigationTree25);
-	      navigationTreeService.save(navigationTree26);
+	      //navigationTreeService.save(navigationTree26);
 	      navigationTreeService.save(navigationTree27);
 	      navigationTreeService.save(navigationTree28);
 	      navigationTreeService.save(navigationTree29);
@@ -1284,14 +1284,14 @@ public class InitializeData {
 	      navigationTreeService.save(navigationTree12);
 	      navigationTreeService.save(navigationTree17);
 	      navigationTreeService.save(navigationTree19);
-	      navigationTreeService.save(navigationTree19_5);
-	      navigationTreeService.save(navigationTree20);
+	    //  navigationTreeService.save(navigationTree19_5);
+	   //   navigationTreeService.save(navigationTree20);
 	      navigationTreeService.save(navigationTree21);
 	      navigationTreeService.save(navigationTree22);
 	      navigationTreeService.save(navigationTree23);
 	      navigationTreeService.save(navigationTree24);
 	      navigationTreeService.save(navigationTree25);
-	      navigationTreeService.save(navigationTree26);
+	    //  navigationTreeService.save(navigationTree26);
 	      navigationTreeService.save(navigationTree27);
 	      navigationTreeService.save(navigationTree28);
 	      navigationTreeService.save(navigationTree31);

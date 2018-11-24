@@ -20,7 +20,7 @@
             selModel:{type:'checkboxmodel',checkOnly:true},
             columns: [
                 {xtype: 'gridcolumn',width: 40,dataIndex: 'id',text: 'key',hidden:true},
-                {header: '简历状态',dataIndex: 'processStatus',width: 60,flex: 1,sortable: true,
+                {header: '简历状态',dataIndex: 'processStatus',flex: 1,sortable: true,
                 	renderer: function(val) {
                             if (val =='NEW') {
 		            return '<span style="color:green;">新建</span>';
@@ -40,7 +40,9 @@
 		            return '<span style="color:orange;">二面已安排，二面结果审批中..</span>';
 		        }else if (val =='APPROVAL') {
 		            return '<span style="color:blue;">审批中...</span>';
-		        } else{
+		        } else if (val =='ONFILE') {
+		            return '<span style="color:red;">已存档</span>';
+		        }else{
 		        	return '<span style="color:red;">取消申请</span>';
 		        }
 		        return val;

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.hrsystem.calendar.entity.Calendar;
 import com.hrsystem.calendar.entity.Event;
 import com.hrsystem.calendar.repository.CalendarRepository;
+import com.hrsystem.log.ServiceLogs;
 
 /**
 *@项目名称: hrsystem
@@ -25,12 +26,14 @@ public class CalendarService implements ICalendarService{
 	@Autowired
 	CalendarRepository calendarRepository;
 	@Override
+	@ServiceLogs(description = "查全部日期事件list")
 	public List<Calendar> findAll(Specification<Calendar> spec) {
 		// TODO Auto-generated method stub
 		return calendarRepository.findAll(spec);
 	}
 
 	@Override
+	@ServiceLogs(description = "保存日期事件")
 	public void save(Calendar calendar) {
 		// TODO Auto-generated method stub
 		calendarRepository.save(calendar);

@@ -2,6 +2,7 @@ package com.hrsystem.resume.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -32,8 +33,10 @@ import com.hrsystem.common.ExtjsPageRequest;
 import com.hrsystem.common.SessionUtil;
 import com.hrsystem.resume.entity.Resume;
 import com.hrsystem.resume.entity.ResumeDTO;
+import com.hrsystem.resume.entity.ResumeIntoStaffDTO;
 import com.hrsystem.resume.entity.ResumeQueryDTO;
 import com.hrsystem.resume.service.IResumeService;
+import com.hrsystem.salary.entity.Salary;
 
 //@Component
 @RestController
@@ -53,6 +56,20 @@ public class ResumeController {
 	public Page<Resume> getPage2(ResumeQueryDTO resumeQueryDTO,ExtjsPageRequest pageRequest){
 		return resumeService.findAll("COMPLETE", ResumeQueryDTO.getWhereClause(resumeQueryDTO),pageRequest.getPageable());
 		//return resumeService.findAll(ResumeQueryDTO.getWhereClause(resumeQueryDTO), pageRequest.getPageable());
+	}
+	
+	@RequestMapping("/getEduation")
+	public Map<String, Long> getEduationPage(){
+		Map<String, Long> map =  new HashMap<String,Long>(); 
+		map.put("博士",resumeService.count("博士"));
+		map.put("硕士",resumeService.count("硕士"));
+		map.put("本科",resumeService.count("本科"));
+		map.put("教授",resumeService.count("教授"));
+		map.put("专科",resumeService.count("专科"));
+		map.put("专科以下",resumeService.count("专科以下"));
+		//System.out.println(boshi);
+		//return resumeService.count("博士");
+		return map;
 	}
 	
 	@GetMapping(value="{id}")
@@ -113,12 +130,11 @@ public class ResumeController {
 		}
 	}
 
-	@PostMapping(value="/employ",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public ExtAjaxResponse saveIntoUser(@RequestBody Resume resume) 
+	@PostMapping("/employ")
+	public ExtAjaxResponse saveIntoUser(ResumeIntoStaffDTO resumeIntoStaffDTO) 
 	{
 		try {
-			System.out.println("111111");
-			resumeService.saveIntoUser(resume);
+			resumeService.saveIntoUser(resumeIntoStaffDTO);
 			return new ExtAjaxResponse(true,"保存成功！");
 		} catch (Exception e) {
 			return new ExtAjaxResponse(true,"保存失败！");

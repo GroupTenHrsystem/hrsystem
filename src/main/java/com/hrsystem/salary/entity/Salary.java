@@ -51,6 +51,13 @@ public class Salary {
 	//绩效
 	private Double performancesSalary;
 	
+
+	private Double subsidy;			//补贴
+    private Double delateCount;      //迟到
+	private Double leaveEarlyCount;  //早退
+	private Double absenTime;        //旷工
+	
+	
 	private Boolean status = true;
 	@JsonIgnore
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)

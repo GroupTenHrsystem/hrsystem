@@ -35,23 +35,28 @@ Ext.define('Aria.view.salary.SalaryDetailWindow', {
         }, {
             xtype: 'displayfield',
             fieldLabel: '补贴',
-            //name:'salarySum',
+            name:'subsidy',
             //value: '300'
-        }, {
+        },{
             xtype: 'displayfield',
-            fieldLabel: '加班',
-            //name:'salarySum',
+            fieldLabel: '迟到',
+            name:'delateCount',
+            //value: '300'
+        },{
+            xtype: 'displayfield',
+            fieldLabel: '早退',
+            name:'leaveEarlyCount',
+            //value: '300'
+        },{
+            xtype: 'displayfield',
+            fieldLabel: '旷工',
+            name:'absenTime',
             //value: '300'
         }, {
             xtype: 'displayfield',
             fieldLabel: '绩效',
             name:'performancesSalary',
             //value: '1000'
-        }, {
-            xtype: 'displayfield',
-            fieldLabel: '缺勤',
-            //name:'salarySum',
-            //value: '-50'
         }, {
             xtype: 'displayfield',
             fieldLabel: '合计',

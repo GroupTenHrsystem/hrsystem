@@ -188,7 +188,7 @@ Ext.define('Aria.view.training.FeedbackAddWindow', {
             id:'courseId',
             store: {
                 type: 'array',
-                fields: [ 'id' ,'employeeId'],
+                fields: [ 'employeeId' ,'employeeId'],
            //     autoLoad: true, //启动自动加载
                 proxy: {
                             type: 'rest',
@@ -205,7 +205,7 @@ Ext.define('Aria.view.training.FeedbackAddWindow', {
                     },
              //   autoSync: true
             },
-            valueField:'id',
+            valueField:'employeeId',
             displayField: 'employeeId',
             name:'employeeId',
             filterPickList: true,

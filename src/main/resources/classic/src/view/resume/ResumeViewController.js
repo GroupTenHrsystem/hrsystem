@@ -7,14 +7,18 @@
 		toolbar.up('panel').up('container').add(Ext.widget('resumeAddWindow')).show();
 	},
 	submitAddForm:function(btn){
-		var win = btn.up('window');
+		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.resume.ResumeModel');
-		var values = form.getValues();  //获取form数据
-		record.set(values);
-		record.save();
-		Ext.data.StoreManager.lookup('resumeGridStroe');
-		win.close();
+		if(!form.isValid()){
+			Ext.Msg.alert("错误", "请正确填写所有信息！");
+		}else{
+			var record = Ext.create('Admin.model.resume.ResumeModel');
+			var values = form.getValues();  //获取form数据
+			record.set(values);
+			record.save();
+			Ext.data.StoreManager.lookup('resumeGridStroe');
+			win.close();
+		}
 	},
 		
 	/*Edit*/
@@ -37,7 +41,7 @@
 		console.log(values);
 		var record = store.getById(values.id);
 		record.set(values);  
-		setTimeout(store.load(),"500");
+		//setTimeout(store.load(),"500");
 		win.close();
 	},
 			

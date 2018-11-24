@@ -1,8 +1,7 @@
 ﻿Ext.define('Aria.view.resume.ResumeAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.resumeAddWindow',
-	x:50,
-	y:100,
+
     minHeight: 300,
     minWidth: 610,
     width: 800,
@@ -25,30 +24,44 @@
             	items:[
 					{items:[
 					{xtype: 'textfield',fieldLabel:'id',name:'id',hidden:true,readOnly:true},
-					{xtype: 'textfield',fieldLabel:'姓名',name:'name'},
-					{xtype: 'textfield',fieldLabel:'性别',name:'sex'},
-		    		{xtype: 'textfield',fieldLabel:'毕业学校',name:'graduateSchool'},
-		    		{xtype: 'textfield',fieldLabel:'政治面貌',name:'politicsStatus'},
+					{xtype: 'textfield',fieldLabel:'姓名',allowBlank:false,name:'name'},
+					{xtype: 'combobox',allowBlank:false,
+						fieldLabel:'性别',
+						name:'sex',
+						displayField:'sex',
+		    			valueField:'value',
+			    		store:Ext.create("Ext.data.Store",{
+			    			fields:["sex","value"],
+			    			data:[
+			    				{sex:'男',value:'男'},
+			    				{sex:'女',value:'女'}
+			    			]	
+				    	})
+					},
+		    		{xtype: 'textfield',fieldLabel:'毕业学校',allowBlank:false,name:'graduateSchool'},
+		    		{xtype: 'textfield',fieldLabel:'政治面貌',allowBlank:false,name:'politicsStatus'},
 		    		{xtype: 'textfield',fieldLabel:'简历状态',name:'processStatus',value:'NEW',hidden:true,readOnly:true}
 				]},
 					{items:[
-					{xtype: 'datefield',fieldLabel:'出生日期',name:'birthday',format: 'Y/m/d'},
-					{xtype: 'textfield',fieldLabel:'籍贯',name:'nativePlace'},
+					{xtype: 'datefield',fieldLabel:'出生日期',allowBlank:false,name:'birthday',format: 'Y/m/d'},
+					{xtype: 'textfield',fieldLabel:'籍贯',allowBlank:false,name:'nativePlace'},
 		    		{	xtype: 'combobox',
 		    			fieldLabel:'专业',
 		    			name:'major',
+		    			displayField:'major',
+		    			valueField:'value',
 			    		store:Ext.create("Ext.data.Store",{
-			    			fields:["name","value"],
-				    		data:[
-				    			{name:'本科',value:'本科'},
-				    			{name:'博士',value:'博士'},
-				    			{name:'专科',value:'专科'},
-				    			{name:'硕士',value:'硕士'},
-				    			{name:'教授',value:'教授'},
-				    			{name:'专科以下',value:'专科以下'}
-				    		]
-			    		})
-		    		},
+			    			fields:["major","value"],
+			    			data:[
+			    				{major:'本科',value:'本科'},
+			    				{major:'博士',value:'博士'},
+			    				{major:'专科',value:'专科'},
+			    				{major:'硕士',value:'硕士'},
+			    				{major:'教授',value:'教授'},
+			    				{major:'专科以下',value:'专科以下'},
+			    			]	
+				    	})
+			    	},
 		    		{xtype: 'textfield',fieldLabel:'邮箱',name:'email'}
 				]}
 				//	{items:[
@@ -67,6 +80,7 @@
            	items:[{
            		xtype: 'textfield',
            		fieldLabel: '联系方式',
+           		allowBlank:false,
 				name:'phone'
 	        }]
 		},{
@@ -77,7 +91,8 @@
            	items:[{
            		xtype: 'textfield',
 				fieldLabel: '求职意向',
-				name:'employBranch'
+				name:'employBranch',
+				allowBlank:false
 	        }]
 		},{
 			xtype: 'container',
@@ -87,7 +102,8 @@
            	items:[{
            		xtype: 'textarea',
 				fieldLabel: '工作经历',
-				name:'experience'
+				name:'experience',
+				allowBlank:false
 	        }]
 		},{
 			xtype: 'container',

@@ -8,6 +8,8 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.hrsystem.attendance.entity.Attendance;
+import com.hrsystem.attendance.repository.AttendanceRepository;
 import com.hrsystem.common.BeanUtils;
 import com.hrsystem.common.specificationBuilder.SpecificationBuilder;
 import com.hrsystem.log.ServiceLogs;
@@ -59,7 +61,9 @@ public class SalaryService implements ISalaryService{
 	StaffRepository staffRepository;
 	@Autowired
 	PerformanceRepository performanceRepository;
-
+	@Autowired
+	AttendanceRepository attendanceRepository;
+	
 	@ServiceLogs(description = "通过id找薪资")
 	public Salary findSalaryById(Long id) {
 		// TODO Auto-generated method stub
@@ -102,6 +106,34 @@ public class SalaryService implements ISalaryService{
 			Double salarySum = performancesSalary + basis;
 
 			/*
+			 * 考勤工资计算
+			 */
+			Double delateCount = 0.0;      //迟到
+			Double leaveEarlyCount = 0.0;  //早退
+			Double absenTime = 0.0;        //旷工
+			List<Attendance> attendance = attendanceRepository.findAttendanceByName(optional.getStaffName());
+			Iterator attendanceIter = attendance.iterator();
+			while(attendanceIter.hasNext()) {
+				Attendance attendanceTemp=(Attendance)attendanceIter.next();
+				if(attendanceTemp.getDelateCount() != null)	//迟到次数
+					delateCount += Double.parseDouble(df.format(attendanceTemp.getDelateCount() * salaryStandard.getAbsence()));
+				if(attendanceTemp.getLeaveEarlyCount() != null)	//早退次数
+					leaveEarlyCount += Double.parseDouble(df.format(attendanceTemp.getLeaveEarlyCount() * salaryStandard.getAbsence()));
+				if(attendanceTemp.getAbsenTime() != null)	//旷工次数
+					absenTime += Double.parseDouble(df.format(attendanceTemp.getAbsenTime() * salaryStandard.getAbsence()));
+			}
+			
+			salarySum = salarySum - delateCount - leaveEarlyCount - absenTime;
+			
+			/*
+			 * 
+			 * 补贴
+			 * 
+			 */
+			
+			salarySum += Double.parseDouble(df.format(salaryStandard.getSubsidy()));
+			
+			/*
 			 *	扣除五险一金
 			 *
 			 */
@@ -140,6 +172,9 @@ public class SalaryService implements ISalaryService{
 				salary.setCreateTime(newDate);
 				salary.setStaff(optional);
 				salary.setSalaryStandard(salaryStandard);
+				salary.setAbsenTime(absenTime);
+				salary.setLeaveEarlyCount(leaveEarlyCount);
+				salary.setDelateCount(delateCount);
 				salary.setPension(pension);
 				salary.setMedicare(medicare);
 				salary.setMaternity(maternity);
@@ -148,6 +183,7 @@ public class SalaryService implements ISalaryService{
 				salary.setHouse(house);
 				salary.setPerformancesSalary(performancesSalary);
 				salary.setSalarySum(salarySum);
+				salary.setSubsidy(salaryStandard.getSubsidy());
 				salaryRepository.save(salary);
 			}
 		}

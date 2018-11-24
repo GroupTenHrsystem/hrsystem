@@ -25,7 +25,7 @@ import lombok.Data;
 public class RecruitQueryDTO 
 {
 	@Like
-	private String departmentname;
+	private String departmentName;
 	
 	@Like
 	private String position;

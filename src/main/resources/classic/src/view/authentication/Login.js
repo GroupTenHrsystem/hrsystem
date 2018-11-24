@@ -10,9 +10,9 @@ Ext.define('Admin.view.authentication.Login', {
         'Ext.button.Button'
     ],
 
-    title: 'Let\'s Log In',
-    defaultFocus: 'authdialog', // Focus the Auth Form to force field focus as well
-
+    //title: 'Let\'s Log In',
+   // defaultFocus: 'authdialog', // Focus the Auth Form to force field focus as well
+style:'background: #f5f2dc',
     items: [
         {
             xtype: 'authdialog',
@@ -30,18 +30,19 @@ Ext.define('Admin.view.authentication.Login', {
             defaults : {
                 margin : '5 0'
             },
-
+            style:'background: #f5f2dc',
             items: [
                 {
                     xtype: 'label',
-                    text: 'Sign into your account'
+                    html: '<center><h1> 登录 </h1></center>'
+                        
                 },
                 {
                     xtype: 'textfield',
-                    cls: 'auth-textbox',
+                    cls: 'auth-textbox', 
                     name: 'userid',
                     bind: '{userid}',
-                    height: 55,
+                    height: 40,
                     hideLabel: true,
                     allowBlank : false,
                     emptyText: 'user id',
@@ -50,11 +51,15 @@ Ext.define('Admin.view.authentication.Login', {
                             cls: 'trigger-glyph-noop auth-email-trigger'
                         }
                     }
+                }, {
+                    xtype: 'label',
+                    html: ' '
+                        
                 },
                 {
                     xtype: 'textfield',
                     cls: 'auth-textbox',
-                    height: 55,
+                    height: 40,
                     hideLabel: true,
                     emptyText: 'Password',
                     inputType: 'password',
@@ -78,10 +83,6 @@ Ext.define('Admin.view.authentication.Login', {
                             height: 30,
                             bind: '{persist}',
                             boxLabel: 'Remember me'
-                        },
-                        {
-                            xtype: 'box',
-                            html: '<a href="#passwordreset" class="link-forgot-password"> Forgot Password ?</a>'
                         }
                     ]
                 },
@@ -89,45 +90,13 @@ Ext.define('Admin.view.authentication.Login', {
                     xtype: 'button',
                     reference: 'loginButton',
                     scale: 'large',
-                    ui: 'soft-green',
+                    ui: 'soft-blue',
                     iconAlign: 'right',
-                    iconCls: 'x-fa fa-angle-right',
+                    //iconCls: 'x-fa fa-angle-right',
                     text: 'Login',
                     formBind: true,
                     listeners: {
                         click: 'onLoginButton'
-                    }
-                },
-                {
-                    xtype: 'box',
-                    html: '<div class="outer-div"><div class="seperator">OR</div></div>',
-                    margin: '10 0'
-                },
-                {
-                    xtype: 'button',
-                    scale: 'large',
-                    ui: 'facebook',
-                    iconAlign: 'right',
-                    iconCls: 'x-fa fa-facebook',
-                    text: 'Login with Facebook',
-                    listeners: {
-                        click: 'onFaceBookLogin'
-                    }
-                },
-                {
-                    xtype: 'box',
-                    html: '<div class="outer-div"><div class="seperator">OR</div></div>',
-                    margin: '10 0'
-                },
-                {
-                    xtype: 'button',
-                    scale: 'large',
-                    ui: 'gray',
-                    iconAlign: 'right',
-                    iconCls: 'x-fa fa-user-plus',
-                    text: 'Create Account',
-                    listeners: {
-                        click: 'onNewAccount'
                     }
                 }
             ]
